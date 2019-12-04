@@ -1,0 +1,1 @@
+### Aufgrund der Dateigrößenbeschränkung von GitHub, konnten hier nicht alle Tabellen hochgeladen werden. Ein kompletter Überblick befindet sich hier: https://cloud.uni-koblenz-landau.de/s/G9kZCSQ6yncfHxz
