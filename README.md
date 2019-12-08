@@ -2,8 +2,10 @@
 
 ## Ordner  
 - Ausarbeitung  
+- Datenset
 - Einführungspräsentation  
 - Literatur  
-- Proposal   
+- Proposal
+- Skripte   
 - Webquellen
 
