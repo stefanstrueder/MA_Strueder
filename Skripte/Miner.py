@@ -3,7 +3,7 @@ import mysql.connector
 import time
 
 #initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "Bifi3131@", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "******", database = "dataset")
 mycursor = target_db.cursor()
 
 #metadata of software

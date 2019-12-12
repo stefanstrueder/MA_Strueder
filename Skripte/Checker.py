@@ -6,7 +6,7 @@ import re
     #return re.search(r"\b{}\b".format(phrase), text, re.IGNORECASE) is not None
 
 #initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "Bifi3131@", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "******", database = "dataset")
 mycursor = target_db.cursor()
 
 #queries to get all rows from table and to insert into new table
