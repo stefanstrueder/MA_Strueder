@@ -37,7 +37,7 @@ CREATE TABLE `irssi_metrics` (
 
 LOCK TABLES `irssi_metrics` WRITE;
 /*!40000 ALTER TABLE `irssi_metrics` DISABLE KEYS */;
-INSERT INTO `irssi_metrics` VALUES ('irssi','1.0.0','ssl_get_server_tmp_key','2','2'),('irssi','1.0.2','__afl_have_manual_control','1','1'),('irssi','1.0.2','have_config_h','1','1'),('irssi','1.0.2','use_gregex','7','1'),('irssi','1.0.3','use_gregex','1','1'),('irssi','1.0.4','have_capsicum','20','1'),('irssi','1.0.5','ssl_get_server_tmp_key','2','1'),('irssi','1.0.6','term_truecolor','1','1');
+INSERT INTO `irssi_metrics` VALUES ('irssi','1.0.0','ssl_get_server_tmp_key','2','2'),('irssi','1.0.2','__afl_have_manual_control','1','1'),('irssi','1.0.2','have_config_h','1','1'),('irssi','1.0.2','use_gregex','1','1'),('irssi','1.0.3','use_gregex','1','1'),('irssi','1.0.4','have_capsicum','8','1'),('irssi','1.0.5','ssl_get_server_tmp_key','2','1'),('irssi','1.0.6','term_truecolor','1','1');
 /*!40000 ALTER TABLE `irssi_metrics` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-16 13:31:48
+-- Dump completed on 2019-12-16 14:25:19

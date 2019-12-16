@@ -16,7 +16,7 @@ softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irss
 for software in softwares:
 	
 	# Queries to calculate metrics + to insert results into metrics tables
-	query1 = "SELECT release_number, feature, count(feature) AS comm, count(distinct commit_author) AS adev FROM " + software + " WHERE feature != \"none\" GROUP BY release_number, feature"
+	query1 = "SELECT release_number, feature, count(distinct commit_hash) AS comm, count(distinct commit_author) AS adev FROM " + software + " WHERE feature != \"none\" GROUP BY release_number, feature"
 	query2 = "INSERT INTO " + software + "_metrics (name, release_number, feature, comm, adev) VALUES (%s, %s, %s, %s, %s)"
 
 	# Execute query
