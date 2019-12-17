@@ -1,0 +1,67 @@
+\documentclass[bachelor,twoside,intern,palatino]{rgseThesis}
+
+% für "lorem ipsum" Blindtext - sollte bei echten Arbeiten natürlich raus ;-)
+\usepackage{lipsum}
+
+% Angaben für die Titelseite
+
+\author{John Doe}
+% \studiengang{Computervisualistik} % Default ist Informatik, bei Proposals ignoriert
+
+\title{Frying without Fat}
+
+% \supervisor{w}{Dr. Sabine Mustermann} % Default ist Jan Jürjens
+% \supervisorInfo{Muster-Institut} % Default ist Institut für Softwaretechnik
+
+\secondSupervisor{w}{Dr. Karin Nickel}
+\secondSupervisorInfo{Rabbit Burrow Inc.}
+
+\externLogo{6cm}{logos/ist-logo-en} % optional Logo des externen Partners
+\externName{Institut für Softwaretechnik} % optional Untertitel des Logos
+
+
+% Literatur-Datenbank
+\addbibresource{literature.bib}
+
+% Tiefe des Inhaltsverzeichnisses; 1: bis section (empfohlen), 2: bis subsection
+\setcounter{tocdepth}{1} 
+
+\begin{document}
+
+    % Umschalten der Sprache für englische Rubrikbezeichnungen (möglich: english, ngerman)
+    \selectlanguage{english}
+    \pagenumbering{roman}
+
+    % Titelseite und Erklärung
+    \maketitle
+
+    % Kurzfassung
+    \include{content/abstract}
+
+    \tableofcontents
+    \cleardoublepage
+
+    % \listoffigures   % fuer ein eventuelles Abbildungsverzeichnis
+    % \cleardoublepage
+
+    \pagenumbering{arabic}
+
+    % Hier kommt jetzt der eigentliche Text der Arbeit
+    
+    % Du solltest mit \include für die einzelnen Kapitel arbeiten,
+    % damit die Dokumente nicht zu lang werden
+
+    \include{content/introduction}
+
+    \include{content/jabref}
+
+    % Literaturverzeichnis
+    \printbibliography[heading=bibintoc]
+
+\appendix
+
+\chapter{Test 1}
+
+\chapter{Test 2}
+
+\end{document}
