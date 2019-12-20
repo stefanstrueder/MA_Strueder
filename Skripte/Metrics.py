@@ -1,4 +1,4 @@
-# Script to splitt chained features into indivudual rows.
+# Script to calculate metrics based on data from tables.
 # Results will be stored in MySQL database.
 # Usage of external library MySQL Connector.
 # By Stefan Strueder, 2019.
@@ -33,7 +33,7 @@ for software in softwares:
 			mycursor.execute(query2, val)
 			target_db.commit()
 		except:
-			val = (software, row[0], "ERROR", row[2], row[3])
+			val = (software, row[0], "infinity", row[2], row[3])
 			mycursor.execute(query2, val)
 			error_counter = error_counter + 1
 			target_db.commit()

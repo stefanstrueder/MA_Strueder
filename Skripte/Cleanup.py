@@ -1,4 +1,4 @@
-# Script to split chained features into indivudual rows.
+# Script to clean feature names from unwanted characters.
 # Results will be stored in MySQL database.
 # Usage of external library MySQL Connector.
 # By Stefan Strueder, 2019.
@@ -16,20 +16,16 @@ query2 = "INSERT INTO ENTER_NAME (name, release_number, commit_hash, commit_auth
 # Execute query and get all rows
 mycursor.execute(query1)
 result_set = mycursor.fetchall()
-counter = mycursor.rowcount
 
 # Basic counter
-counter_new = 0
+counter = 0
 
-# Execute query and insert resulting data in new database
+# Clean each feature and insert results into new table.
 for row in result_set:
-	feature_line = str(row[13])
-	features = feature_line.split(" , ")
-	for elem in features:
-		val = (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], elem)
-		mycursor.execute(query2, val)
-		target_db.commit()
-		counter_new = counter_new + 1
-		print("done number: " + str(counter_new))
-		
-print(counter_new)
+	feature = str(row[13])
+	feature = feature.replace(")", "").replace(";", "").replace("\"", "").replace("\\n", "").replace("'", "").replace("’","").replace(".","").replace(",","").replace("(","").replace("\s*$|\#if","")
+	val = (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], feature)
+	mycursor.execute(query2, val)
+	target_db.commit()
+	counter = counter + 1
+	print("Sth is happening: " + str(counter))

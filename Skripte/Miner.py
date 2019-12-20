@@ -12,21 +12,21 @@ target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = 
 mycursor = target_db.cursor()
 
 # Metadata of software
-software = "ENTER_HERE"
-release = "ENTER_HERE"
+software = "ENTER_NAME"
+release = "ENTER_NAME"
 
 # SQL query to insert gathered data into db
 sql = "INSERT INTO " + software + " (name, release_number, commit_hash, commit_author, commit_msg, filename, nloc, cycomplexity, lines_added, lines_removed, change_type, diff) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
 # Tag-range to define release (based on tags from Git repo)
-from_tag = "ENTER_HERE"
-to_tag = "ENTER_HERE"
+from_tag = "ENTER_NAME"
+to_tag = "ENTER_NAME"
 
 # Basic counter
 counter = 1
 
 # Gather every commit in master branch in tag-range without merges
-for c in RepositoryMining("ENTER_HERE", from_tag = from_tag, to_tag = to_tag, only_no_merge = True, only_in_branch = "master").traverse_commits():
+for c in RepositoryMining("ENTER_NAME", from_tag = from_tag, to_tag = to_tag, only_no_merge = True, only_in_branch = "master").traverse_commits():
 	for m in c.modifications:
 		val = (software, release, c.hash, c.author.name, str(c.msg).replace("\n", " "), m.filename, str(m.nloc), str(m.complexity), str(m.added), str(m.removed), m.change_type.name, str(m.diff))
 		mycursor.execute(sql, val)
