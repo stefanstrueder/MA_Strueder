@@ -1,0 +1,83 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung und Motivation}{2}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{2}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Forschungsziele und Forschungsfragen}{4}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Forschungsdesign}{5}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Zeitplanung}{6}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{8}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Hintergrund}{9}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{9}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Featurebasierte Softwareentwicklung}{9}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Machine-Learning-Klassifikation}{9}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Fehlervorhersage mittels Machine Learning}{10}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Erstellung eines featurebasierten Datensets}{11}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{11}{section*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Datenauswahl}{11}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{11}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Metriken}{11}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Training von Machine Learning Klassifikatoren (TBD)}{13}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{13}{section*.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Auswahl der Klassifikatoren (TBD)}{13}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Trainingsprozess (TBD)}{13}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluation}{15}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{15}{section*.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{15}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Vergleich der Klassifikatoren}{15}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Vergleichsmetriken}{15}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Ergebnisse (TBD)}{15}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Vergleich zu nicht-featurebasierten Methoden}{15}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Fazit}{17}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{17}{section*.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{17}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Ausblick}{17}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{19}{chapter*.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Test 1}{20}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Test 2}{21}{appendix.B}%

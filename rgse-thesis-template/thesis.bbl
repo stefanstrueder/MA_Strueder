@@ -1,0 +1,292 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Apel2013}{book}{}
+      \name{author}{4}{}{%
+        {{hash=a4f57072771b98df56b8f8205f384d00}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ca905abe1dc0ab0f9307c7b01721b65f}{%
+           family={Batory},
+           familyi={B\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f0fe27e2b5f525a3b4c50ce35e1a7cee}{%
+           family={Kästner},
+           familyi={K\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2a5ae6c3a7deb62e4508c393839b89cc}{%
+           family={Saake},
+           familyi={S\bibinitperiod},
+           given={Gunter},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{051c49bf21dc0ed69a84fb6df6f8b7c0}
+      \strng{fullhash}{ac027c3c5130b8434cdabe7f07d18fc4}
+      \strng{bibnamehash}{051c49bf21dc0ed69a84fb6df6f8b7c0}
+      \strng{authorbibnamehash}{051c49bf21dc0ed69a84fb6df6f8b7c0}
+      \strng{authornamehash}{051c49bf21dc0ed69a84fb6df6f8b7c0}
+      \strng{authorfullhash}{ac027c3c5130b8434cdabe7f07d18fc4}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Feature-Oriented Software Product Lines}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1007/978-3-642-37521-7
+      \endverb
+    \endentry
+    \entry{Challagulla2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4b71d8c88dbc4a5d4e694ef5a596029d}{%
+           family={Challagulla},
+           familyi={C\bibinitperiod},
+           given={Venkata\bibnamedelimb Udaya\bibnamedelima B.},
+           giveni={V\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ae3845d490b32b759c84b0e77cd5f1de}{%
+           family={Bastani},
+           familyi={B\bibinitperiod},
+           given={Farokh\bibnamedelima B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2cef7011363a5910e674a448edec6cac}{%
+           family={Yen},
+           familyi={Y\bibinitperiod},
+           given={I.\bibnamedelimi Ling},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=3fe43ecae7b29d481be602917a8a6eb0}{%
+           family={Paul},
+           familyi={P\bibinitperiod},
+           given={Raymond\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd6c5bca2de2738cc576bca6b7c35483}
+      \strng{fullhash}{bc481a1b38f1063ce6eb2d3eaa5fe9ff}
+      \strng{bibnamehash}{bd6c5bca2de2738cc576bca6b7c35483}
+      \strng{authorbibnamehash}{bd6c5bca2de2738cc576bca6b7c35483}
+      \strng{authornamehash}{bd6c5bca2de2738cc576bca6b7c35483}
+      \strng{authorfullhash}{bc481a1b38f1063ce6eb2d3eaa5fe9ff}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Automated reliability assessment is essential for systems that entail dynamic adaptation based on runtime mission-specific requirements. One approach along this direction is to monitor and assess the system using machine learning-based software defect prediction techniques. Due to the dynamic nature of software data collected, Instance-based learning algorithms are proposed for the above purposes. To evaluate the accuracy of these methods, the paper presents an empirical analysis of four different real-time software defect data sets using different predictor models.The results show that a combination of 1R and Instance-based learning along with Consistency-based subset evaluation technique provides a relatively better consistency in achieving accurate predictions as compared with other models. No direct relationship is observed between the skewness present in the data sets and the prediction accuracy of these models. Principal Component Analysis (PCA) does not show a consistent advantage in improving the accuracy of the predictions. While random reduction of attributes gave poor accuracy results, simple Feature Subset Selection methods performed better than PCA for most prediction models. Based on these results, the paper presents a high-level design of an Intelligent Software Defect Analysis tool (ISDAT) for dynamic monitoring and defect assessment of software modules.}
+      \field{isbn}{0769523471}
+      \field{issn}{02182130}
+      \field{journaltitle}{International Journal on Artificial Intelligence Tools}
+      \field{number}{2}
+      \field{title}{{Empirical assessment of machine learning based software defect prediction techniques}}
+      \field{volume}{17}
+      \field{year}{2008}
+      \field{pages}{389\bibrangedash 400}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1142/S0218213008003947
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/stefa/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Challagulla et al.{\_}2008.pdf:pdf
+      \endverb
+      \keyw{Data analysis,Software defect prediction}
+    \endentry
+    \entry{Chapman2000}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6e42f1026173c2e52fdda7fdd636f359}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f37a206983a831906b78d21c7d52eaad}{%
+           family={Clinton},
+           familyi={C\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7c25b09dcdc549eef103243260ef9097}{%
+           family={Kerber},
+           familyi={K\bibinitperiod},
+           given={Randy},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ad3964a47e85a21d4e37e96bdc189722}{%
+           family={Khabaza},
+           familyi={K\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0837e07a12ac06f6572ab8dbb4dbdc8b}{%
+           family={Reinartz},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3a4e3f5f408e7cfa7e86f42b4a99fe8b}{%
+           family={Shearer},
+           familyi={S\bibinitperiod},
+           given={Colin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=93c4571a5818e3fd7fe299eb7352e55d}{%
+           family={Wirth},
+           familyi={W\bibinitperiod},
+           given={R{ü}diger},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4568ace118615d389c03c0583880045}
+      \strng{fullhash}{d560794ae5df2373c2ca62a2e9265a57}
+      \strng{bibnamehash}{e4568ace118615d389c03c0583880045}
+      \strng{authorbibnamehash}{e4568ace118615d389c03c0583880045}
+      \strng{authornamehash}{e4568ace118615d389c03c0583880045}
+      \strng{authorfullhash}{d560794ae5df2373c2ca62a2e9265a57}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This document describes the CRISP-DM process model and contains information about the CRISP-DM methodology, the CRISP-DM reference model, the CRISP-DM user guide, and the CRISP-DM reports, as well as an appendix with additional related information. This document and information herein are the exclusive property of the partners of the CRISP-DM consortium: NCR Systems Engineering Copenhagen (USA and Denmark), DaimlerChrysler AG (Germany), SPSS Inc. (USA), and OHRA Verzekeringen en Bank Groep B.V. (The Netherlands).}
+      \field{isbn}{9780769532677}
+      \field{issn}{0957-4174}
+      \field{journaltitle}{CRISP-DM Consortium}
+      \field{title}{{CRISP-DM 1.0}}
+      \field{year}{2000}
+      \field{pages}{76}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/ICETET.2008.239
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/stefa/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Chapman et al. - 2000 - Crisp-Dm 1.0.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Son2019}{article}{}
+      \name{author}{6}{}{%
+        {{hash=df9880c659b76550e312665f160e756a}{%
+           family={Son},
+           familyi={S\bibinitperiod},
+           given={Le},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c6e57e1e17489e56bd2a74a05baa6b51}{%
+           family={Pritam},
+           familyi={P\bibinitperiod},
+           given={Nakul},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ceab705968f15e5bc4482b5a828d8e4a}{%
+           family={Khari},
+           familyi={K\bibinitperiod},
+           given={Manju},
+           giveni={M\bibinitperiod}}}%
+        {{hash=48199b4eef9fc39a76c3283255f56af2}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Raghvendra},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1a212f2e9c44a24be579f309ee79ea5d}{%
+           family={Phuong},
+           familyi={P\bibinitperiod},
+           given={Pham},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c13fce3eef37ff9cfe92bad25af59a97}{%
+           family={Thong},
+           familyi={T\bibinitperiod},
+           given={Pham},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{MDPI} {AG}}%
+      }
+      \strng{namehash}{cdef20b2c2e7e70dd2d398b22880a0d2}
+      \strng{fullhash}{ec328ad9da4fb67b2124ef563e6de449}
+      \strng{bibnamehash}{cdef20b2c2e7e70dd2d398b22880a0d2}
+      \strng{authorbibnamehash}{cdef20b2c2e7e70dd2d398b22880a0d2}
+      \strng{authornamehash}{cdef20b2c2e7e70dd2d398b22880a0d2}
+      \strng{authorfullhash}{ec328ad9da4fb67b2124ef563e6de449}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Symmetry}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Empirical Study of Software Defect Prediction: A Systematic Mapping}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{212}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/sym11020212
+      \endverb
+    \endentry
+    \entry{Thuem2014}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d37a977a0f05c75ccc2786607cead2dd}{%
+           family={Thüm},
+           familyi={T\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a4f57072771b98df56b8f8205f384d00}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f0fe27e2b5f525a3b4c50ce35e1a7cee}{%
+           family={Kästner},
+           familyi={K\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=06b07cf2af3ca3ab3f2a0bf24a156426}{%
+           family={Schaefer},
+           familyi={S\bibinitperiod},
+           given={Ina},
+           giveni={I\bibinitperiod}}}%
+        {{hash=2a5ae6c3a7deb62e4508c393839b89cc}{%
+           family={Saake},
+           familyi={S\bibinitperiod},
+           given={Gunter},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery ({ACM})}%
+      }
+      \strng{namehash}{06ea4b4f7a22e950ece558161e6db35c}
+      \strng{fullhash}{c30c56b4e24e80a416445529a5faa4ab}
+      \strng{bibnamehash}{06ea4b4f7a22e950ece558161e6db35c}
+      \strng{authorbibnamehash}{06ea4b4f7a22e950ece558161e6db35c}
+      \strng{authornamehash}{06ea4b4f7a22e950ece558161e6db35c}
+      \strng{authorfullhash}{c30c56b4e24e80a416445529a5faa4ab}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Computing Surveys}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{A Classification and Survey of Analysis Strategies for Software Product Lines}
+      \field{volume}{47}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1145/2580950
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
