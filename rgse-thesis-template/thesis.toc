@@ -42,13 +42,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Datenauswahl}{11}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{12}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Metriken}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Metriken}{12}{section.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Training von Machine Learning Klassifikatoren (TBD)}{13}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{13}{section*.24}%
+\contentsline {paragraph}{Ausblick:}{13}{section*.28}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Auswahl der Klassifikatoren (TBD)}{13}{section.4.1}%
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Evaluation}{15}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{15}{section*.25}%
+\contentsline {paragraph}{Ausblick:}{15}{section*.29}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{15}{section.5.1}%
 \defcounter {refsection}{0}\relax 
@@ -70,13 +70,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fazit}{17}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{17}{section*.26}%
+\contentsline {paragraph}{Ausblick:}{17}{section*.30}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{17}{section.6.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Ausblick}{17}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{19}{chapter*.27}%
+\contentsline {chapter}{Literatur}{19}{chapter*.31}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Test 1}{20}{appendix.A}%
 \defcounter {refsection}{0}\relax 
