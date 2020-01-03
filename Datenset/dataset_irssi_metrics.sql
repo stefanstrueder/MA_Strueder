@@ -27,7 +27,8 @@ CREATE TABLE `irssi_metrics` (
   `release_number` varchar(255) DEFAULT NULL,
   `feature` varchar(255) DEFAULT NULL,
   `comm` varchar(255) DEFAULT NULL,
-  `adev` varchar(255) DEFAULT NULL
+  `adev` varchar(255) DEFAULT NULL,
+  `ddev` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,7 +38,7 @@ CREATE TABLE `irssi_metrics` (
 
 LOCK TABLES `irssi_metrics` WRITE;
 /*!40000 ALTER TABLE `irssi_metrics` DISABLE KEYS */;
-INSERT INTO `irssi_metrics` VALUES ('irssi','1.0.0','ssl_get_server_tmp_key','2','2'),('irssi','1.0.2','__afl_have_manual_control','1','1'),('irssi','1.0.2','have_config_h','1','1'),('irssi','1.0.2','use_gregex','1','1'),('irssi','1.0.3','use_gregex','1','1'),('irssi','1.0.4','have_capsicum','8','1'),('irssi','1.0.5','ssl_get_server_tmp_key','2','1'),('irssi','1.0.6','term_truecolor','1','1');
+INSERT INTO `irssi_metrics` VALUES ('irssi','1.0.0','not openssl_no_ec','2','2','2'),('irssi','1.0.5','not openssl_no_ec','1','1','3'),('irssi','1.0.0','not suppress_printf_fallback','1','1','1'),('irssi','1.0.0','ssl_get_server_tmp_key','2','2','2'),('irssi','1.0.5','ssl_get_server_tmp_key','2','1','3'),('irssi','1.0.2','__afl_have_manual_control','1','1','1'),('irssi','1.0.2','have_config_h','1','1','1'),('irssi','1.0.2','not __hilight_text_h','1','1','1'),('irssi','1.0.2','not __ignore_h','1','1','1'),('irssi','1.0.2','not __regex_h','1','1','1'),('irssi','1.0.2','not use_gregex','1','1','1'),('irssi','1.0.2','use_gregex','1','1','1'),('irssi','1.0.3','use_gregex','1','1','2'),('irssi','1.0.4','have_capsicum','8','1','1'),('irssi','1.0.4','not __capsicum_h','2','1','1'),('irssi','1.0.4','not __fe_capsicum_h','1','1','1'),('irssi','1.0.4','not __network_openssl_h','1','1','1'),('irssi','1.0.5','not __fe_channels_h','1','1','1'),('irssi','1.0.6','term_truecolor','1','1','1');
 /*!40000 ALTER TABLE `irssi_metrics` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-19 20:30:38
+-- Dump completed on 2020-01-03 13:12:41
