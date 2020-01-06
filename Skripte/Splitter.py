@@ -21,7 +21,7 @@ counter = mycursor.rowcount
 # Basic counter
 counter_new = 0
 
-# Execute query and insert resulting data in new database
+# Perform splitting and insert resulting data in new database
 for row in result_set:
 	feature_line = str(row[13])
 	features = feature_line.split(" , ")

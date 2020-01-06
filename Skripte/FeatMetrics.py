@@ -1,4 +1,4 @@
-# Script to calculate metrics based on data from tables.
+# Script to calculate comm and adev feature metrics based on data from tables.
 # Results will be stored in MySQL database.
 # Usage of external library MySQL Connector.
 # By Stefan Strueder, 2019.
@@ -12,21 +12,17 @@ mycursor = target_db.cursor()
 # List of involved software projects 
 softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
-# Execute for each project
+# Calculate comm and adev metrics for each feature in each release
 for software in softwares:
 	
-	# Queries to calculate metrics + to insert results into metrics tables
 	query1 = "SELECT release_number, feature, count(distinct commit_hash) AS comm, count(distinct commit_author) AS adev FROM " + software + " WHERE feature != \"none\" GROUP BY release_number, feature"
-	query2 = "INSERT INTO " + software + "_metrics (name, release_number, feature, comm, adev) VALUES (%s, %s, %s, %s, %s)"
+	query2 = "INSERT INTO " + software + "_feat_metrics (name, release_number, feature, comm, adev) VALUES (%s, %s, %s, %s, %s)"
 
-	# Execute query
 	mycursor.execute(query1)
 	result_set = mycursor.fetchall()
-	
-	# Basic counter
+
 	error_counter = 0
 
-	# Store results in metrics tables
 	for row in result_set:
 		try:
 			val = (software, row[0], row[1], row[2], row[3])

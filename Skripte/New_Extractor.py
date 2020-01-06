@@ -1,6 +1,7 @@
-# New script to extract features from diffs.
+# Script to extract features from diffs.
 # Results will be stored in MySQL database.
 # Usage of external library MySQL Connector.
+# Usage of library re to use regular expressions.
 # By Stefan Strueder, 2019.
 
 import mysql.connector
