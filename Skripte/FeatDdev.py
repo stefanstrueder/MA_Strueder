@@ -12,7 +12,7 @@ mycursor = target_db.cursor()
 # List of involved software projects 
 softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
-# Execute ddev metric for each feature in each release
+# Calculate ddev metric for each feature in each release
 for software in softwares:
 	
 	query1 = "SELECT DISTINCT feature FROM " + software + "_feat_metrics"
