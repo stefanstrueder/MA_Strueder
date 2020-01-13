@@ -117,6 +117,9 @@
 \def\@secondSupervisorInfo{}
 \newcommand{\secondSupervisorInfo}[1]{\def\@secondSupervisorInfo{#1}}
 
+\def\@thirdSupervisorInfo{}
+\newcommand{\thirdSupervisorInfo}[1]{\def\@thirdSupervisorInfo{#1}}
+
 \def\@externLogo{}
 \newcommand{\externLogo}[2]{\def\@externLogo{\includegraphics[width={#1},valign=t]{{#2}}}}
 
@@ -224,6 +227,7 @@
          {\ifthenelse{\equal{\@secondSupervisorGender}{w}}{Zweitgutachterin:}{Zweitgutachter:}}  
          & \@secondSupervisor \\
          & \@secondSupervisorInfo \\
+		 & \@thirdSupervisorInfo \\
      }
     \end{tabular}
 

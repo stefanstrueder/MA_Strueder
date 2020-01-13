@@ -1,0 +1,110 @@
+\documentclass[master,twoside,extern,palatino]{rgseThesis}
+
+% für "lorem ipsum" Blindtext - sollte bei echten Arbeiten natürlich raus ;-)
+\usepackage{arydshln}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+% Angaben für die Titelseite
+
+\author{Stefan Hermann Strüder}
+% \studiengang{Computervisualistik} % Default ist Informatik, bei Proposals ignoriert
+
+\title{Featurebasierte Fehlererkennung mittels Methoden des Machine Learnings}
+
+% \supervisor{w}{Dr. Sabine Mustermann} % Default ist Jan Jürjens
+% \supervisorInfo{Muster-Institut} % Default ist Institut für Softwaretechnik
+
+\secondSupervisor{m}{Dr. Daniel Strüber}
+\secondSupervisorInfo{Chalmers University of Technology, Göteborg (Schweden)}
+\thirdSupervisorInfo{Radboud-Universität, Nijmegen (Niederlande)}
+
+\externLogo{6cm}{logos/chalmers} % optional Logo des externen Partners
+\externName{Department of Computer Science and Engineering} % optional Untertitel des Logos
+
+
+% Literatur-Datenbank
+\addbibresource{literature.bib}
+
+% Tiefe des Inhaltsverzeichnisses; 1: bis section (empfohlen), 2: bis subsection
+\setcounter{tocdepth}{2} 
+
+\begin{document}
+
+    % Umschalten der Sprache für englische Rubrikbezeichnungen (möglich: english, ngerman)
+    \selectlanguage{ngerman}
+    \pagenumbering{roman}
+
+    % Titelseite und Erklärung
+    \maketitle
+
+    % Kurzfassung
+    \include{content/abstract}
+    
+    % Kurzfassung
+    \include{content/note}
+
+    \tableofcontents
+    \cleardoublepage
+
+    \listoffigures   % fuer ein eventuelles Abbildungsverzeichnis
+    % \cleardoublepage
+
+    \pagenumbering{arabic}
+
+    % Hier kommt jetzt der eigentliche Text der Arbeit
+    
+    % Du solltest mit \include für die einzelnen Kapitel arbeiten,
+    % damit die Dokumente nicht zu lang werden
+
+    \include{content/introduction}
+
+    \include{content/background}
+    
+    \include{content/dataset}
+    
+    \include{content/classifier}
+    
+    \include{content/evaluation}
+    
+    \include{content/conclusion}
+
+
+    % Literaturverzeichnis
+    \printbibliography[heading=bibintoc]
+
+\appendix
+
+\chapter{Links der für die Erstellung des Datensets verwendeten Software-Projekte}
+\label{appendix1}
+
+\begin{table}[H]
+\label{tab:urls}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lll}
+\multicolumn{1}{l|}{}         & \textbf{Link zur Website}                                               & \textbf{Link zum Repository}                                              \\ \hline
+\multicolumn{1}{l|}{Blender}  & \url{https://www.blender.org/}                         & \url{https://github.com/sobotka/blender}                 \\
+\multicolumn{1}{l|}{Busybox}  & \url{https://busybox.net/}                             & \url{https://git.busybox.net/busybox/}                   \\
+\multicolumn{1}{l|}{Emacs}    & \url{https://www.gnu.org/software/emacs/}              & \url{https://github.com/emacs-mirror/emacs}              \\
+\multicolumn{1}{l|}{GIMP}     & \url{https://www.gimp.org/}                            & \url{https://gitlab.gnome.org/GNOME/gimp}                \\
+\multicolumn{1}{l|}{Gnumeric} & \url{http://www.gnumeric.org/}                         & \url{https://gitlab.gnome.org/GNOME/gnumeric}            \\
+\multicolumn{1}{l|}{gnuplot}  & \url{http://gnuplot.info/}                             & \url{https://github.com/gnuplot/gnuplot}                 \\
+\multicolumn{1}{l|}{Irssi}    & \url{https://irssi.org/}                               & \url{https://github.com/irssi/irssi}                     \\
+\multicolumn{1}{l|}{libxml2}  & \url{http://www.xmlsoft.org/}                          & \url{https://gitlab.gnome.org/GNOME/libxml2}             \\
+\multicolumn{1}{l|}{lighttpd} & \url{https://www.lighttpd.net/}                        & \url{https://git.lighttpd.net/lighttpd/lighttpd1.4.git/} \\
+\multicolumn{1}{l|}{MPSolve}  & \url{https://numpi.dm.unipi.it/software/mpsolve}       & \url{https://github.com/robol/MPSolve}                   \\
+\multicolumn{1}{l|}{Parrot}   & \url{http://parrot.org/}                               & \url{https://github.com/parrot/parrot}                   \\
+\multicolumn{1}{l|}{Vim}      & \url{https://www.vim.org/}                             & \url{https://github.com/vim/vim}                         \\
+\multicolumn{1}{l|}{xfig}     & \url{https://sourceforge.net/projects/mcj/} & \url{https://sourceforge.net/p/mcj/xfig/ci/master/tree/} \\ \hline
+\multicolumn{3}{c}{Websites zuletzt abgerufen am 13. Januar 2020.}                                                                                                                 
+\end{tabular}%
+}
+\end{table}
+
+\chapter{Test 2}
+
+Lorem ipsum
+
+\end{document}

@@ -65,4 +65,26 @@
   mendeley-groups = {MA,Masterarbeit,Masterarbeit/Methodik},
 }
 
+@InProceedings{Ceylan2006,
+  author    = {Evren Ceylan and F. Onur Kutlubay and Ayse B. Bener},
+  title     = {Software Defect Identification Using Machine Learning Techniques},
+  booktitle = {32nd {EUROMICRO} Conference on Software Engineering and Advanced Applications ({EUROMICRO}{\textquotesingle}06)},
+  year      = {2006},
+  publisher = {{IEEE}},
+  month     = {aug},
+  doi       = {10.1109/euromicro.2006.56},
+}
+
+@Book{Alpaydin2010,
+  author          = {Alpaydin, Ethem},
+  title           = {{Introduction to Machine Learning}},
+  year            = {2010},
+  edition         = {Second Edi},
+  publisher       = {The MIT Press},
+  isbn            = {9780262012430},
+  address         = {Cambridge, Massachusetts},
+  file            = {:D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/ML/Alpaydin{\_}Introduction to Machine Learning{\_}2010.pdf:pdf},
+  mendeley-groups = {Masterarbeit},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

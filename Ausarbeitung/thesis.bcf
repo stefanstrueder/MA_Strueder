@@ -2129,19 +2129,26 @@
     <bcf:datasource type="file" datatype="bibtex">literature.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="5">Son2019</bcf:citekey>
-    <bcf:citekey order="6">Challagulla2008</bcf:citekey>
-    <bcf:citekey order="7">Thuem2014</bcf:citekey>
-    <bcf:citekey order="8">Apel2013</bcf:citekey>
-    <bcf:citekey order="9">Thuem2014</bcf:citekey>
+    <bcf:citekey order="8">Son2019</bcf:citekey>
+    <bcf:citekey order="9">Challagulla2008</bcf:citekey>
     <bcf:citekey order="10">Thuem2014</bcf:citekey>
-    <bcf:citekey order="11">Chapman2000</bcf:citekey>
-    <bcf:citekey order="12">Chapman2000</bcf:citekey>
-    <bcf:citekey order="13">Chapman2000</bcf:citekey>
+    <bcf:citekey order="11">Apel2013</bcf:citekey>
+    <bcf:citekey order="12">Thuem2014</bcf:citekey>
+    <bcf:citekey order="13">Thuem2014</bcf:citekey>
     <bcf:citekey order="14">Chapman2000</bcf:citekey>
     <bcf:citekey order="15">Chapman2000</bcf:citekey>
-    <bcf:citekey order="16">Ceylan2006</bcf:citekey>
-    <bcf:citekey order="17">Ceylan2006</bcf:citekey>
+    <bcf:citekey order="16">Chapman2000</bcf:citekey>
+    <bcf:citekey order="17">Chapman2000</bcf:citekey>
+    <bcf:citekey order="18">Chapman2000</bcf:citekey>
+    <bcf:citekey order="19">Ceylan2006</bcf:citekey>
+    <bcf:citekey order="20">Ceylan2006</bcf:citekey>
+    <bcf:citekey order="21">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="22">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="23">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="24">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="25">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="26">Queiroz2016</bcf:citekey>
+    <bcf:citekey order="27">Queiroz2016</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

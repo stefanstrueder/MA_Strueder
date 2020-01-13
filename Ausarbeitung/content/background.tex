@@ -1,0 +1,61 @@
+% !TEX root = ../thesis.tex
+
+\chapter{Hintergrund}
+
+\paragraph{Ausblick:}
+Zum besseren Verständnis der weiteren Verlaufs dieser Arbeit, dient dieses Kapitel zur Einführung in die zugrundeliegenden Themen. Dazu wird zunächst die featurebasierte Softwareentwicklung erläutert, ehe dann der Themenbereich des Machine Learnings vorgestellt wird. Dazu werden die Klassifikation und die Fehlervorhersage mittels Machine Learning erläutert. Unterstützt werden die Abschnitte von Grafiken zum besseren Verständnis der Zusammenhänge.
+\\
+\hrule
+
+\section{Featurebasierte Softwareentwicklung}
+
+\section{Machine-Learning-Klassifikation}
+
+\textbf{ÜBERARBEITEN!}
+
+Die Machine-Learning-Klassifikation unterliegt dem Teilgebiet des \emph{überwachten Machine Learnings} (englisch: supervised Machine Learning). Die nachfolgende \autoref{fig:ml} präsentiert den allgemeinen Prozess des überwachten Machine Learnings auf vereinfachter Weise anhand eines Beispiels. Anhand dieser werden die wichtigsten Informationen zum genannten Themengebiet erläutert. 
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering,margin=2cm}
+    \includegraphics[width=\textwidth]{images/ML}
+    \caption{Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)}\label{fig:ml}
+\end{figure}
+
+Das in der Abbildung gezeigte Beispiel zeigt den Prozess der Entwicklung und Anwendung eines Klassifikators zur Erkennung von geometrischen Formen.
+Der Prozess beginnt mit der Erstellung eines Datensets, welches als Input für die Anlernung des Klassifikators dient.
+
+\textbf{ÜBERARBEITEN!}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/Prozess}
+    \caption{Angewendeter Prozess zur Durchführung der Klassfikation nach \cite{Ceylan2006}}\label{fig:process}
+\end{figure}
+
+\section{Fehlervorhersage mittels Machine Learning}
+
+Die nachfolgenden drei Abbildungen zeigen den von Queiroz et at. \cite{Queiroz2016} angewandten Prozess zur Entwicklung und Anwendung eines featurebasierten Klassifikators im Rahmen des überwachten Machine Learnings. Die gezeigten Darstellungen orientieren sich sowohl gestalterisch als auch inhaltlich an den in \autoref{fig:ml} gezeigten allgemeinen Prozess des überwachten Machine Learnings. Ferner dient dieser Prozess als grundlegender Prozess für diese Arbeit.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \includegraphics[width=\textwidth]{images/ML1}
+    \caption{Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite{Queiroz2016}}\label{fig:ml1}
+\end{figure}
+
+Die Datenbasis des Datensets bilden Commits des UNIX-Toolkits BusyBox\footnote{\url{https://busybox.net/}}, dessen Quellcode frei verfügbar in einem Git-Repository\footnote{\url{https://git.busybox.net/busybox/}} eingesehen und von dort geklont werden kann.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/ML2}
+    \caption{Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite{Queiroz2016}}\label{fig:ml2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/ML3}
+    \caption{Teil 3: Featurebasierter Prozess des überwachten Machine Learnings nach \cite{Queiroz2016}}\label{fig:ml3}
+\end{figure}
+
+\cleardoublepage
