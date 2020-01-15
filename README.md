@@ -20,6 +20,12 @@
 - Skripte   
   - Datenset
   - ML
+    - Erste Analyse
+      - DT (decision trees)
+      - kNN (k-nearest-neighbors)
+      - NB (naive bayes)
+      - NN (neuronale Netze)
+      - SVM (support vector machines)
 - Webquellen
   - GitHub Mining
   - Metriken
