@@ -1,4 +1,4 @@
-# Script to perform SDG based regression classification.
+# Script to perform classification based on artificial neural networks.
 # Results will be prompted as plot.
 # Usage of external library matplotlib.
 # Usage of external library MySQL Connector.
@@ -8,7 +8,7 @@
 from sklearn import metrics
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import SGDClassifier
+from sklearn.neural_network import MLPClassifier
 import matplotlib.pyplot as plt
 import mysql.connector
 
@@ -60,7 +60,7 @@ scores_list = []
 # Perform classification for each ratio
 for ratio in ratios:
 	X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
-	model = SGDClassifier(loss = "log", penalty = "elasticnet", max_iter = 10000, shuffle = True)
+	model = MLPClassifier(max_iter = 10000)
 	model.fit(X_train, Y_train)
 	
 	# predicted = model.predict([[5,3,4,256,38,2,111,222,23,14,59]])
@@ -77,6 +77,3 @@ plt.title("Plot for classificator accuracy with all 11 attributes")
 plt.xlabel("Accuracy")
 plt.ylabel("Ratio")
 plt.show()
-
-
-
