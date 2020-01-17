@@ -73,10 +73,8 @@ for ratio in ratios:
 
 # Plot accuracy results
 plt.plot(ratios,scores_list)
+plt.xticks(np.linspace(0.15, 0.35, 5, endpoint = True))
 plt.title("Plot for classificator accuracy with all 11 attributes")
-plt.xlabel("Accuracy")
-plt.ylabel("Ratio")
+plt.ylabel("Accuracy")
+plt.xlabel("Ratio")
 plt.show()
-
-
-

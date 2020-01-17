@@ -78,6 +78,3 @@ plt.title("Plot for classificator accuracy with all 11 attributes")
 plt.xlabel("Accuracy")
 plt.ylabel("Ratio")
 plt.show()
-
-
-
