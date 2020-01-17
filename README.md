@@ -25,6 +25,7 @@
       - kNN (k-nearest-neighbors)
       - NB (naive bayes)
       - NN (neuronale Netze)
+	  - RC (ridge classifier)
       - RF (random forest)
       - SGD (stochastic gradient descent)
       - SVM (support vector machines)
