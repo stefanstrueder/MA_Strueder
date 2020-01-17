@@ -25,7 +25,8 @@
       - kNN (k-nearest-neighbors)
       - NB (naive bayes)
       - NN (neuronale Netze)
-	  - SGD (stochastic gradient descent)
+      - RF (random forest)
+      - SGD (stochastic gradient descent)
       - SVM (support vector machines)
 - Webquellen
   - GitHub Mining
