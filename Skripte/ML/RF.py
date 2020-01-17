@@ -1,4 +1,4 @@
-# Script to perform classification based on artificial neural networks.
+# Script to perform random forest classification.
 # Results will be prompted as plot.
 # Usage of external library matplotlib.
 # Usage of external library MySQL Connector.
@@ -8,17 +8,17 @@
 from sklearn import metrics
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-from sklearn.neural_network import MLPClassifier
-from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import mysql.connector
+import numpy as np
 
 # Initialize connection to mysql database
 target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
 mycursor = target_db.cursor()
 
 # Set dataset source
-source = "file"
+source = "feat"
 
 # SQL query to be executed
 query1 = "SELECT * FROM dataset." + source + "_final"
@@ -61,13 +61,9 @@ scores_list = []
 # Perform classification for each ratio
 for ratio in ratios:
 	X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
-	scaler = StandardScaler()
-	scaler.fit(X_train)
-	X_train = scaler.transform(X_train)
-	X_test = scaler.transform(X_test)
-	model = MLPClassifier(hidden_layer_sizes = (13, 13, 13), max_iter = 500, random_state = 0)
+	model = RandomForestClassifier(n_estimators = 200, random_state = 0)	
 	model.fit(X_train, Y_train)
-	
+
 	# predicted = model.predict([[5,3,4,256,38,2,111,222,23,14,59]])
 	# print(predicted)
 
@@ -76,6 +72,7 @@ for ratio in ratios:
 	scores_list.append(metrics.accuracy_score(Y_test,y_pred))
 	print("Accuracy for ratio " + str(ratio) + ": " + str(score))
 
+# Plot accuracy results
 plt.plot(ratios,scores_list)
 plt.title("Plot for classificator accuracy with all 11 attributes")
 plt.xlabel("Accuracy")
