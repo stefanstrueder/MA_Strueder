@@ -16,7 +16,7 @@ Attributes:   12
               addl
               reml
               label
-Test mode:    split 30.0% train, remainder test
+Test mode:    split 70.0% train, remainder test
 
 === Classifier model (full training set) ===
 
@@ -94,33 +94,33 @@ reml
 
 
 
-Time taken to build model: 0.04 seconds
+Time taken to build model: 0.07 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.09 seconds
+Time taken to test model on test split: 0.05 seconds
 
 === Summary ===
 
-Correctly Classified Instances       11640               85.7964 %
-Incorrectly Classified Instances      1927               14.2036 %
-Kappa statistic                          0.3267
-Mean absolute error                      0.2208
-Root mean squared error                  0.3501
-Relative absolute error                 79.8095 %
-Root relative squared error             94.9311 %
-Total Number of Instances            13567     
+Correctly Classified Instances        5025               86.4293 %
+Incorrectly Classified Instances       789               13.5707 %
+Kappa statistic                          0.3918
+Mean absolute error                      0.1925
+Root mean squared error                  0.3459
+Relative absolute error                 70.4208 %
+Root relative squared error             94.139  %
+Total Number of Instances             5814     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,284    0,031    0,641      0,284    0,394      0,361    0,741     0,478     defective
-                 0,969    0,716    0,875      0,969    0,920      0,361    0,741     0,927     clean
-Weighted Avg.    0,858    0,605    0,837      0,858    0,834      0,361    0,741     0,854     
+                 0,364    0,040    0,637      0,364    0,463      0,412    0,756     0,517     defective
+                 0,960    0,636    0,887      0,960    0,922      0,412    0,756     0,931     clean
+Weighted Avg.    0,864    0,540    0,847      0,864    0,848      0,412    0,756     0,864     
 
 === Confusion Matrix ===
 
-     a     b   <-- classified as
-   626  1576 |     a = defective
-   351 11014 |     b = clean
+    a    b   <-- classified as
+  340  595 |    a = defective
+  194 4685 |    b = clean
 

@@ -16,7 +16,7 @@ Attributes:   12
               addl
               reml
               label
-Test mode:    split 25.0% train, remainder test
+Test mode:    split 75.0% train, remainder test
 
 === Classifier model (full training set) ===
 
@@ -29,22 +29,22 @@ Number of Leaves  : 	1
 Size of the tree : 	1
 
 
-Time taken to build model: 3.16 seconds
+Time taken to build model: 3.49 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.04 seconds
+Time taken to test model on test split: 0.01 seconds
 
 === Summary ===
 
-Correctly Classified Instances       66023               98.825  %
-Incorrectly Classified Instances       785                1.175  %
+Correctly Classified Instances       22009               98.8325 %
+Incorrectly Classified Instances       260                1.1675 %
 Kappa statistic                          0     
-Mean absolute error                      0.0229
-Root mean squared error                  0.1078
-Relative absolute error                 99.8135 %
-Root relative squared error            100.0001 %
-Total Number of Instances            66808     
+Mean absolute error                      0.0231
+Root mean squared error                  0.1074
+Relative absolute error                 99.9382 %
+Root relative squared error            100      %
+Total Number of Instances            22269     
 
 === Detailed Accuracy By Class ===
 
@@ -56,6 +56,6 @@ Weighted Avg.    0,988    0,988    ?          0,988    ?          ?        0,500
 === Confusion Matrix ===
 
      a     b   <-- classified as
- 66023     0 |     a = clean
-   785     0 |     b = defective
+ 22009     0 |     a = clean
+   260     0 |     b = defective
 

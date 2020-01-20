@@ -16,7 +16,7 @@ Attributes:   12
               addl
               reml
               label
-Test mode:    split 35.0% train, remainder test
+Test mode:    split 65.0% train, remainder test
 
 === Classifier model (full training set) ===
 
@@ -102,25 +102,25 @@ Time taken to test model on test split: 0.04 seconds
 
 === Summary ===
 
-Correctly Classified Instances       10844               86.0772 %
-Incorrectly Classified Instances      1754               13.9228 %
-Kappa statistic                          0.3531
-Mean absolute error                      0.2044
-Root mean squared error                  0.3476
-Relative absolute error                 74.1453 %
-Root relative squared error             94.148  %
-Total Number of Instances            12598     
+Correctly Classified Instances        5857               86.3482 %
+Incorrectly Classified Instances       926               13.6518 %
+Kappa statistic                          0.391 
+Mean absolute error                      0.1876
+Root mean squared error                  0.3461
+Relative absolute error                 68.4434 %
+Root relative squared error             93.8679 %
+Total Number of Instances             6783     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,311    0,032    0,652      0,311    0,421      0,384    0,749     0,492     defective
-                 0,968    0,689    0,878      0,968    0,921      0,384    0,749     0,929     clean
-Weighted Avg.    0,861    0,582    0,841      0,861    0,840      0,384    0,749     0,858     
+                 0,361    0,039    0,641      0,361    0,462      0,412    0,753     0,514     defective
+                 0,961    0,639    0,886      0,961    0,922      0,412    0,753     0,929     clean
+Weighted Avg.    0,863    0,541    0,846      0,863    0,847      0,412    0,753     0,862     
 
 === Confusion Matrix ===
 
-     a     b   <-- classified as
-   638  1413 |     a = defective
-   341 10206 |     b = clean
+    a    b   <-- classified as
+  398  703 |    a = defective
+  223 5459 |    b = clean
 

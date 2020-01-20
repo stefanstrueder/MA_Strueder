@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat
+Instances:    19381
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+       -29.1152 (normalized) comm
+ +     -29.1152 (normalized) adev
+ +      -2.5197 (normalized) ddev
+ +      -0.3384 (normalized) exp
+ +     -22.539  (normalized) oexp
+ +     -21.841  (normalized) modd
+ +       0.1059 (normalized) mods
+ +      -0.4931 (normalized) nloc
+ +       0.0543 (normalized) cyco
+ +       3.3989 (normalized) addl
+ +       4.6584 (normalized) reml
+ +       1.13  
+
+Time taken to build model: 1.22 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       16663               85.976  %
+Incorrectly Classified Instances      2718               14.024  %
+Kappa statistic                          0.2449
+Mean absolute error                      0.1402
+Root mean squared error                  0.3745
+Relative absolute error                 51.042  %
+Root relative squared error            101.0414 %
+Total Number of Instances            19381     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,170    0,005    0,880      0,170    0,285      0,350    0,583     0,286     defective
+                 0,995    0,830    0,859      0,995    0,922      0,350    0,583     0,859     clean
+Weighted Avg.    0,860    0,694    0,863      0,860    0,818      0,350    0,583     0,765     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+   542  2644 |     a = defective
+    74 16121 |     b = clean
+

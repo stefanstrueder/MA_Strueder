@@ -1,0 +1,53 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 10 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     dataset_feat
+Instances:    19381
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 10 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       17099               88.2256 %
+Incorrectly Classified Instances      2282               11.7744 %
+Kappa statistic                          0.528 
+Mean absolute error                      0.1501
+Root mean squared error                  0.2874
+Relative absolute error                 54.6364 %
+Root relative squared error             77.5512 %
+Total Number of Instances            19381     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,527    0,048    0,684      0,527    0,596      0,534    0,903     0,680     defective
+                 0,952    0,473    0,911      0,952    0,931      0,534    0,903     0,976     clean
+Weighted Avg.    0,882    0,403    0,874      0,882    0,876      0,534    0,903     0,927     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  1680  1506 |     a = defective
+   776 15419 |     b = clean
+

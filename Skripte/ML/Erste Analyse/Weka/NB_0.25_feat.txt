@@ -16,7 +16,7 @@ Attributes:   12
               addl
               reml
               label
-Test mode:    split 25.0% train, remainder test
+Test mode:    split 75.0% train, remainder test
 
 === Classifier model (full training set) ===
 
@@ -98,29 +98,29 @@ Time taken to build model: 0.04 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.1 seconds
+Time taken to test model on test split: 0.02 seconds
 
 === Summary ===
 
-Correctly Classified Instances       12452               85.6632 %
-Incorrectly Classified Instances      2084               14.3368 %
-Kappa statistic                          0.3122
-Mean absolute error                      0.2478
-Root mean squared error                  0.3588
-Relative absolute error                 89.2636 %
-Root relative squared error             97.2791 %
-Total Number of Instances            14536     
+Correctly Classified Instances        4193               86.5428 %
+Incorrectly Classified Instances       652               13.4572 %
+Kappa statistic                          0.4009
+Mean absolute error                      0.189 
+Root mean squared error                  0.345 
+Relative absolute error                 69.0898 %
+Root relative squared error             93.6834 %
+Total Number of Instances             4845     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,269    0,029    0,639      0,269    0,378      0,350    0,735     0,471     defective
-                 0,971    0,731    0,873      0,971    0,919      0,350    0,734     0,925     clean
-Weighted Avg.    0,857    0,617    0,835      0,857    0,831      0,350    0,734     0,851     
+                 0,371    0,039    0,647      0,371    0,472      0,421    0,756     0,521     defective
+                 0,961    0,629    0,888      0,961    0,923      0,421    0,755     0,929     clean
+Weighted Avg.    0,865    0,533    0,849      0,865    0,850      0,421    0,755     0,863     
 
 === Confusion Matrix ===
 
-     a     b   <-- classified as
-   634  1726 |     a = defective
-   358 11818 |     b = clean
+    a    b   <-- classified as
+  291  493 |    a = defective
+  159 3902 |    b = clean
 
