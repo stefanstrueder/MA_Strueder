@@ -29,6 +29,7 @@
       - RF (random forest)
       - SGD (stochastic gradient descent)
       - SVM (support vector machines)
+	  - Weka (Output-Logs des Weka-Tools
 - Webquellen
   - GitHub Mining
   - Metriken
