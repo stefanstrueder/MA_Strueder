@@ -7,8 +7,11 @@
 
 from sklearn import metrics
 from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
 from sklearn import svm
+from sklearn.feature_selection import RFECV
+from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import mysql.connector
 import numpy as np
@@ -18,7 +21,7 @@ target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = 
 mycursor = target_db.cursor()
 
 # Set dataset source
-source = "file"
+source = "feat"
 
 # SQL query to be executed
 query1 = "SELECT * FROM dataset." + source + "_final"
@@ -31,17 +34,17 @@ result_set = mycursor.fetchall()
 features = []
 labels = []
 
-# Create lists for classifier
+# Create lists for classifier (excluded features according to rfecv algorithm)
 for row in result_set:
 	value_list = []
 	
 	value_list.append(int(row[0]))
 	value_list.append(int(row[1]))
-	value_list.append(int(row[2]))
-	value_list.append(int(row[3]))
+	#value_list.append(int(row[2]))
+	#value_list.append(int(row[3]))
 	value_list.append(int(row[4]))
-	value_list.append(int(row[5]))
-	value_list.append(int(row[6]))
+	#value_list.append(int(row[5]))
+	#value_list.append(int(row[6]))
 	value_list.append(int(row[7]))
 	value_list.append(int(row[8]))
 	value_list.append(int(row[9]))
@@ -55,17 +58,14 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratios
-ratios = [0.15, 0.20, 0.25, 0.30, 0.35]
+ratios = [0.20]
 scores_list = []
 
 # Perform classification for each ratio
 for ratio in ratios:
 	X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
-	model = svm.SVC()
+	model = svm.LinearSVC(random_state = 0, max_iter = 20000)
 	model.fit(X_train, Y_train)
-	
-	# predicted = model.predict([[5,3,4,256,38,2,111,222,23,14,59]])
-	# print(predicted)
 
 	y_pred = model.predict(X_test)
 	score = metrics.accuracy_score(Y_test,y_pred)
@@ -79,3 +79,21 @@ plt.title("Plot for classificator accuracy with all 11 attributes")
 plt.ylabel("Accuracy")
 plt.xlabel("Ratio")
 plt.show()
+
+## Plot optimal attributes for each ratio (uncomment this to use)
+# for ratio in ratios:
+	# X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
+	# model = DecisionTreeClassifier(random_state = 0, max_features = "sqrt")
+	# rfecv = RFECV(estimator = model, step = 1, cv = StratifiedKFold(2), scoring = "accuracy")
+	# rfecv.fit(X_train, Y_train)
+	
+	# print("Optimal number of features : %d" % rfecv.n_features_)
+	# test = str(np.where(rfecv.support_ == False)[0])
+	
+	# Plot number of features VS. cross-validation scores
+	# plt.figure()
+	# plt.title("Optimal number of features : " + str(rfecv.n_features_) + ". Drop feature(s): " + test)
+	# plt.xlabel("Number of features selected")
+	# plt.ylabel("Cross validation score (nb of correct classifications)")
+	# plt.plot(range(1, len(rfecv.grid_scores_) + 1), rfecv.grid_scores_)
+	# plt.show()

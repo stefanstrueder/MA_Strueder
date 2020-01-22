@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -batch-size 200
 Relation:     dataset_file-weka.filters.supervised.instance.SMOTE-C0-K10-P3000.0-S1
 Instances:    120277
 Attributes:   12
@@ -24,13 +24,13 @@ RandomForest
 
 Bagging with 100 iterations and base learner
 
-weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities -batch-size 200
 
-Time taken to build model: 126.99 seconds
+Time taken to build model: 107.95 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 2.52 seconds
+Time taken to test model on test split: 2.35 seconds
 
 === Summary ===
 

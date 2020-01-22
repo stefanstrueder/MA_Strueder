@@ -18,7 +18,7 @@ target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = 
 mycursor = target_db.cursor()
 
 # Set dataset source
-source = "file"
+source = "feat"
 
 # SQL query to be executed
 query1 = "SELECT * FROM dataset." + source + "_final"
@@ -55,7 +55,7 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratios
-ratios = [0.15, 0.20, 0.25, 0.30, 0.35]
+ratios = [0.15]
 scores_list = []
 
 # Perform classification for each ratio
@@ -67,9 +67,6 @@ for ratio in ratios:
 	X_test = scaler.transform(X_test)
 	model = MLPClassifier(hidden_layer_sizes = (13, 13, 13), max_iter = 500, random_state = 0)
 	model.fit(X_train, Y_train)
-	
-	# predicted = model.predict([[5,3,4,256,38,2,111,222,23,14,59]])
-	# print(predicted)
 
 	y_pred = model.predict(X_test)
 	score = metrics.accuracy_score(Y_test,y_pred)

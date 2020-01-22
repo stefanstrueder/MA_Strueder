@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -batch-size 200
 Relation:     dataset_file
 Instances:    89077
 Attributes:   12
@@ -24,9 +24,9 @@ RandomForest
 
 Bagging with 100 iterations and base learner
 
-weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities -batch-size 200
 
-Time taken to build model: 49.14 seconds
+Time taken to build model: 73.74 seconds
 
 === Stratified cross-validation ===
 === Summary ===
