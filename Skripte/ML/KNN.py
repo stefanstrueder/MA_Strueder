@@ -79,7 +79,7 @@ for k in k_range:
 	print("Accuracy for k = " + str(k) + ": " + str(scores[k]))
 
 # Plot accuracy results
-plt.plot(ratios,scores_list)
+plt.plot(ratio,scores_list)
 plt.xticks(np.linspace(0.15, 0.35, 5, endpoint = True))
 plt.title("Plot for classificator accuracy with all 11 attributes")
 plt.ylabel("Accuracy")

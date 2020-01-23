@@ -12,6 +12,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import mysql.connector
+import numpy as np
 
 # Initialize connection to mysql database
 target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
