@@ -1,6 +1,6 @@
 === Run information ===
 
-Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.functions.SGD -F 5 -T 0.01 -R 1 -E DEFAULT -- -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.functions.SGD -F 5 -T 0.01 -R 1 -E DEFAULT -- -F 1 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
 Search:       weka.attributeSelection.BestFirst -D 1 -N 5
 Relation:     dataset_feat
 Instances:    19381
@@ -28,25 +28,24 @@ Search Method:
 	Start set: no attributes
 	Search direction: forward
 	Stale search after 5 node expansions
-	Total number of subsets evaluated: 75
-	Merit of best subset found:    0.861
+	Total number of subsets evaluated: 68
+	Merit of best subset found:    0.858
 
 Attribute Subset Evaluator (supervised, Class (nominal): 12 label):
 	Wrapper Subset Evaluator
 	Learning scheme: weka.classifiers.functions.SGD
-	Scheme options: -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1 
+	Scheme options: -F 1 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1 
 	Subset evaluation: classification accuracy
 	Number of folds for accuracy estimation: 5
 
-Selected attributes: 1,2,3,4,5,6,7,8,9,10 : 10
+Selected attributes: 1,2,3,5,6,7,8,10,11 : 9
                      comm
                      adev
                      ddev
-                     exp
                      oexp
                      modd
                      mods
                      nloc
-                     cyco
                      addl
+                     reml
 

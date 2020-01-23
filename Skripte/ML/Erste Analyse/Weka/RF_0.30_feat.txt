@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -batch-size 200
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 200 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
 Relation:     dataset_feat
 Instances:    19381
 Attributes:   12
@@ -22,37 +22,37 @@ Test mode:    split 70.0% train, remainder test
 
 RandomForest
 
-Bagging with 100 iterations and base learner
+Bagging with 200 iterations and base learner
 
-weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities -batch-size 200
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
 
-Time taken to build model: 7.52 seconds
+Time taken to build model: 26.21 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.31 seconds
+Time taken to test model on test split: 0.84 seconds
 
 === Summary ===
 
-Correctly Classified Instances        5376               92.4665 %
-Incorrectly Classified Instances       438                7.5335 %
+Correctly Classified Instances        5375               92.4493 %
+Incorrectly Classified Instances       439                7.5507 %
 Kappa statistic                          0.7064
-Mean absolute error                      0.1178
-Root mean squared error                  0.2385
-Relative absolute error                 43.0681 %
-Root relative squared error             64.9225 %
+Mean absolute error                      0.1176
+Root mean squared error                  0.2377
+Relative absolute error                 43.0143 %
+Root relative squared error             64.6873 %
 Total Number of Instances             5814     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,705    0,033    0,803      0,705    0,751      0,708    0,950     0,839     defective
-                 0,967    0,295    0,945      0,967    0,956      0,708    0,950     0,988     clean
-Weighted Avg.    0,925    0,253    0,922      0,925    0,923      0,708    0,950     0,964     
+                 0,707    0,034    0,800      0,707    0,751      0,708    0,952     0,843     defective
+                 0,966    0,293    0,945      0,966    0,956      0,708    0,952     0,989     clean
+Weighted Avg.    0,924    0,251    0,922      0,924    0,923      0,708    0,952     0,965     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
-  659  276 |    a = defective
-  162 4717 |    b = clean
+  661  274 |    a = defective
+  165 4714 |    b = clean
 

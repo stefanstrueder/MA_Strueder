@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.lazy.IBk -K 25 -W 0 -X -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
 Relation:     dataset_feat
 Instances:    19381
 Attributes:   12
@@ -24,11 +24,11 @@ IB1 instance-based classifier
 using 1 nearest neighbour(s) for classification
 
 
-Time taken to build model: 0.01 seconds
+Time taken to build model: 0 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 52.84 seconds
+Time taken to test model on test split: 5.02 seconds
 
 === Summary ===
 

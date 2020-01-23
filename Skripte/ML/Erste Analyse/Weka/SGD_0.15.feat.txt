@@ -1,6 +1,6 @@
 === Run information ===
 
-Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Scheme:       weka.classifiers.functions.SGD -F 1 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
 Relation:     dataset_feat
 Instances:    19381
 Attributes:   12
@@ -20,50 +20,50 @@ Test mode:    split 85.0% train, remainder test
 
 === Classifier model (full training set) ===
 
-Loss function: Hinge loss (SVM)
+Loss function: Log loss (logistic regression)
 
 label = 
 
-       -29.1152 (normalized) comm
- +     -29.1152 (normalized) adev
- +      -2.5197 (normalized) ddev
- +      -0.3384 (normalized) exp
- +     -22.539  (normalized) oexp
- +     -21.841  (normalized) modd
- +       0.1059 (normalized) mods
- +      -0.4931 (normalized) nloc
- +       0.0543 (normalized) cyco
- +       3.3989 (normalized) addl
- +       4.6584 (normalized) reml
- +       1.13  
+       -26.9328 (normalized) comm
+ +     -26.9328 (normalized) adev
+ +     -16.439  (normalized) ddev
+ +       2.6333 (normalized) exp
+ +     -33.9922 (normalized) oexp
+ +     -21.7491 (normalized) modd
+ +       1.1116 (normalized) mods
+ +      -6.6034 (normalized) nloc
+ +       2.0638 (normalized) cyco
+ +      10.9791 (normalized) addl
+ +       2.1162 (normalized) reml
+ +       1.8027
 
-Time taken to build model: 1.28 seconds
+Time taken to build model: 3.57 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.01 seconds
+Time taken to test model on test split: 0 seconds
 
 === Summary ===
 
-Correctly Classified Instances        2530               87.0313 %
-Incorrectly Classified Instances       377               12.9687 %
-Kappa statistic                          0.2782
-Mean absolute error                      0.1297
-Root mean squared error                  0.3601
-Relative absolute error                 47.9561 %
-Root relative squared error             99.0798 %
+Correctly Classified Instances        2522               86.7561 %
+Incorrectly Classified Instances       385               13.2439 %
+Kappa statistic                          0.2873
+Mean absolute error                      0.2233
+Root mean squared error                  0.3207
+Relative absolute error                 82.5756 %
+Root relative squared error             88.2401 %
 Total Number of Instances             2907     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,193    0,004    0,898      0,193    0,318      0,381    0,595     0,300     defective
-                 0,996    0,807    0,869      0,996    0,928      0,381    0,595     0,869     clean
-Weighted Avg.    0,870    0,681    0,874      0,870    0,833      0,381    0,595     0,780     
+                 0,213    0,011    0,782      0,213    0,335      0,364    0,807     0,538     defective
+                 0,989    0,787    0,871      0,989    0,926      0,364    0,807     0,952     clean
+Weighted Avg.    0,868    0,665    0,857      0,868    0,834      0,364    0,807     0,887     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
-   88  367 |    a = defective
-   10 2442 |    b = clean
+   97  358 |    a = defective
+   27 2425 |    b = clean
 
