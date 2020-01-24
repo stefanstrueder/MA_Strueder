@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.KStar -B 20 -M a
+Relation:     dataset_feat
+Instances:    19381
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+KStar Beta Verion (0.1b).
+Copyright (c) 1995-97 by Len Trigg (trigg@cs.waikato.ac.nz).
+Java port to Weka by Abdelaziz Mahoui (am14@cs.waikato.ac.nz).
+
+KStar options : -B 20 -M a 
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       17524               90.4185 %
+Incorrectly Classified Instances      1857                9.5815 %
+Kappa statistic                          0.6283
+Mean absolute error                      0.1054
+Root mean squared error                  0.2814
+Relative absolute error                 38.3672 %
+Root relative squared error             75.9185 %
+Total Number of Instances            19381     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,632    0,042    0,746      0,632    0,684      0,631    0,911     0,762     defective
+                 0,958    0,368    0,930      0,958    0,944      0,631    0,910     0,977     clean
+Weighted Avg.    0,904    0,315    0,900      0,904    0,901      0,631    0,910     0,942     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  2013  1173 |     a = defective
+   684 15511 |     b = clean
+
