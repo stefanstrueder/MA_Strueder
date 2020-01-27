@@ -87,7 +87,11 @@ plt.show()
 ## Plot optimal attributes for each ratio (uncomment this to use)
 # for ratio in ratios:
 	# X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
-	# model = DecisionTreeClassifier(random_state = 0, max_features = "sqrt")
+	# scaler = StandardScaler()
+	# scaler.fit(X_train)
+	# X_train = scaler.transform(X_train)
+	# X_test = scaler.transform(X_test)
+	# model = svm.LinearSVC(random_state = 0, max_iter = 20000)
 	# rfecv = RFECV(estimator = model, step = 1, cv = StratifiedKFold(2), scoring = "accuracy")
 	# rfecv.fit(X_train, Y_train)
 	
