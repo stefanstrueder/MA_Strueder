@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     dataset_file-weka.filters.supervised.instance.SMOTE-C0-K10-P3000.0-S1-weka.filters.unsupervised.attribute.Remove-R1-6,8,10-11
+Instances:    120277
+Attributes:   3
+              mods
+              cyco
+              label
+Test mode:    split 65.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                   Class
+Attribute          clean defective
+                  (0.73)    (0.27)
+===================================
+mods
+  mean          1627.4288 1476.7548
+  std. dev.       913.791  736.4531
+  weight sum        88037     32240
+  precision        0.1865    0.1865
+
+cyco
+  mean            50.9483  115.0209
+  std. dev.      197.4412   255.161
+  weight sum        88037     32240
+  precision        0.2628    0.2628
+
+
+
+Time taken to build model: 0.18 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.14 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       31091               73.8556 %
+Incorrectly Classified Instances     11006               26.1444 %
+Kappa statistic                          0.0795
+Mean absolute error                      0.3573
+Root mean squared error                  0.4378
+Relative absolute error                 91.1338 %
+Root relative squared error             99.0448 %
+Total Number of Instances            42097     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,977    0,920    0,745      0,977    0,846      0,134    0,621     0,825     clean
+                 0,080    0,023    0,563      0,080    0,141      0,134    0,621     0,377     defective
+Weighted Avg.    0,739    0,681    0,697      0,739    0,658      0,134    0,621     0,705     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 30190   699 |     a = clean
+ 10307   901 |     b = defective
+
