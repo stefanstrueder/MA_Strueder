@@ -1,0 +1,1 @@
+## Der Klassifikator für RF überschreitet die maximale Dateigröße für GitHub und kann hier heruntergeladen werden: https://liveunikoblenz-my.sharepoint.com/:u:/g/personal/stefanstrueder_live_uni-koblenz_de/EWDVZj-x3H9FmJpPEzNik4oBlitC2pIaQ4iFUXrZpESLXQ?e=TsX6KK
