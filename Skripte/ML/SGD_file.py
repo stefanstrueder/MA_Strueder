@@ -1,4 +1,4 @@
-# Script to perform SDG based regression classification on file-level.
+# Script to perform SDG based regression classification.
 # Results will be prompted as plot.
 # Usage of external library matplotlib.
 # Usage of external library MySQL Connector.
@@ -17,14 +17,14 @@ import numpy as np
 import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
 source = "file"
 
 # SQL query to be executed
-query1 = "SELECT * FROM dataset." + source + "_final_smoted"
+query1 = "SELECT * FROM " + source + "_final_smoted"
 
 # Execute query and save results
 mycursor.execute(query1)
@@ -38,17 +38,17 @@ labels = []
 for row in result_set:
 	value_list = []
 	
-	#value_list.append(int(row[0]))
-	#value_list.append(int(row[1]))
-	#value_list.append(int(row[2]))
-	value_list.append(float(row[3]))
-	#value_list.append(int(row[4]))
-	#value_list.append(int(row[5]))
-	#value_list.append(int(row[6]))
-	#value_list.append(int(row[7]))
-	#value_list.append(int(row[8]))
-	#value_list.append(int(row[9]))
-	#value_list.append(int(row[10]))
+	#value_list.append(float(row[0]))
+	#value_list.append(float(row[1]))
+	#value_list.append(float(row[2]))
+	#value_list.append(float(row[3]))
+	#value_list.append(float(row[4]))
+	#value_list.append(float(row[5]))
+	#value_list.append(float(row[6]))
+	#value_list.append(float(row[7]))
+	#value_list.append(float(row[8]))
+	value_list.append(float(row[9]))
+	#value_list.append(float(row[10]))
 	features.append(value_list)
 	labels.append(row[11])
 
@@ -58,13 +58,13 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratios
-ratios = [0.25]
+ratios = [0.20]
 scores_list = []
 
 # Perform classification for each ratio
 for ratio in ratios:
 	X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
-	model = SGDClassifier(loss = "modified_huber", penalty = "l2", max_iter = 10000, shuffle = True, random_state = 0)
+	model = SGDClassifier(loss = "log", penalty = "elasticnet", max_iter = 10000, shuffle = True, random_state = 0)
 	model.fit(X_train, Y_train)
 	
 	filename = "sgd_model_file_smoted.pkl"
@@ -84,7 +84,7 @@ plt.ylabel("Accuracy")
 plt.xlabel("Ratio")
 plt.show()
 
-## Plot optimal attributes for each ratio (uncomment this to use)
+# # Plot optimal attributes for each ratio (uncomment this to use)
 # for ratio in ratios:
 	# X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
 	# model = SGDClassifier(loss = "log", penalty = "l2", max_iter = 10000, shuffle = True, random_state = 0)
@@ -94,7 +94,7 @@ plt.show()
 	# print("Optimal number of features : %d" % rfecv.n_features_)
 	# test = str(np.where(rfecv.support_ == False)[0])
 	
-	# Plot number of features VS. cross-validation scores
+	# # Plot number of features VS. cross-validation scores
 	# plt.figure()
 	# plt.title("Optimal number of features : " + str(rfecv.n_features_) + ". Drop feature(s): " + test)
 	# plt.xlabel("Number of features selected")

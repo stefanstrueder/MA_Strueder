@@ -13,9 +13,10 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import mysql.connector
 import numpy as np
+import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
@@ -56,7 +57,7 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratios
-ratios = [0.15]
+ratios = [0.30]
 scores_list = []
 
 # Perform classification for each ratio
@@ -68,6 +69,10 @@ for ratio in ratios:
 	X_test = scaler.transform(X_test)
 	model = MLPClassifier(hidden_layer_sizes = (13, 13, 13), max_iter = 500, random_state = 0)
 	model.fit(X_train, Y_train)
+	
+	filename = "nn_model.pkl"
+	with open(filename, 'wb') as file:
+		pickle.dump(model, file)
 
 	y_pred = model.predict(X_test)
 	score = metrics.accuracy_score(Y_test,y_pred)

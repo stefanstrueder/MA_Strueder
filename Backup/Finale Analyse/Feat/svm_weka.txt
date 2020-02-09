@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibLINEAR -S 2 -C 1.0 -E 0.001 -B 1.0 -L 0.1 -I 20000
+Relation:     dataset_feat-weka.filters.unsupervised.attribute.Remove-R2-5,7-11
+Instances:    19381
+Attributes:   3
+              comm
+              modd
+              label
+Test mode:    split 85.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+LibLINEAR wrapper
+
+Model bias=1.0 nr_class=2 nr_feature=3 solverType=L2R_L2LOSS_SVC
+
+Model for class clean
+
+         0.17 * comm
++        0.01 * modd
+-        1.01 * 1.0
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        2548               87.6505 %
+Incorrectly Classified Instances       359               12.3495 %
+Kappa statistic                          0.3706
+Mean absolute error                      0.1235
+Root mean squared error                  0.3514
+Relative absolute error                 45.6664 %
+Root relative squared error             96.6856 %
+Total Number of Instances             2907     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,290    0,015    0,786      0,290    0,424      0,429    0,638     0,339     defective
+                 0,985    0,710    0,882      0,985    0,931      0,429    0,638     0,882     clean
+Weighted Avg.    0,877    0,601    0,867      0,877    0,851      0,429    0,638     0,797     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  132  323 |    a = defective
+   36 2416 |    b = clean
+

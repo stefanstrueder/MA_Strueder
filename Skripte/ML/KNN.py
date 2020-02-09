@@ -12,16 +12,17 @@ from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import mysql.connector
 import numpy as np
+import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
 source = "feat"
 
 # SQL query to be executed
-query1 = "SELECT * FROM dataset." + source + "_final"
+query1 = "SELECT * FROM " + source + "_final"
 
 # Execute query and save results
 mycursor.execute(query1)
@@ -55,13 +56,13 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratio
-ratio = 0.15
+ratio = 0.25
 
 # Perform dataset splitting
 X_train, X_test, Y_train, Y_test = train_test_split(features, labels_encoded, test_size = ratio)
 
 # Set k range
-k_range = [1]
+k_range = [2]
 
 # Initialize empty lists
 scores = {}
@@ -72,6 +73,10 @@ for k in k_range:
 
 	model = KNeighborsClassifier(n_neighbors = k)
 	model.fit(X_train, Y_train)
+	
+	filename = "knn_model.pkl"
+	with open(filename, 'wb') as file:
+		pickle.dump(model, file)
 
 	y_pred = model.predict(X_test)
 	scores[k] = metrics.accuracy_score(Y_test,y_pred)

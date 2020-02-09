@@ -1,4 +1,4 @@
-# Script to perform decision tree classification on file-level.
+# Script to perform decision tree classification.
 # Results will be prompted as plot.
 # Usage of external library matplotlib.
 # Usage of external library MySQL Connector.
@@ -17,14 +17,14 @@ import numpy as np
 import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
 source = "file"
 
 # SQL query to be executed
-query1 = "SELECT * FROM dataset." + source + "_final_smoted"
+query1 = "SELECT * FROM " + source + "_final_smoted"
 
 # Execute query and save results
 mycursor.execute(query1)
@@ -38,17 +38,17 @@ labels = []
 for row in result_set:
 	value_list = []
 	
-	value_list.append(float(row[0]))
-	#value_list.append(int(row[1]))
-	#value_list.append(int(row[2]))
-	#value_list.append(int(row[3]))
-	#value_list.append(int(row[4]))
-	#value_list.append(int(row[5]))
-	#value_list.append(int(row[6]))
-	#value_list.append(int(row[7]))
-	#value_list.append(int(row[8]))
-	value_list.append(float(row[9]))
-	#value_list.append(int(row[10]))
+	#value_list.append(float(row[0]))
+	#value_list.append(float(row[1]))
+	value_list.append(float(row[2]))
+	value_list.append(float(row[3]))
+	#value_list.append(float(row[4]))
+	#value_list.append(float(row[5]))
+	#value_list.append(float(row[6]))
+	#value_list.append(float(row[7]))
+	#value_list.append(float(row[8]))
+	#value_list.append(float(row[9]))
+	#value_list.append(float(row[10]))
 	features.append(value_list)
 	labels.append(row[11])
 

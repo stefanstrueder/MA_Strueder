@@ -2,8 +2,8 @@
 
 Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.bayes.NaiveBayes -F 5 -T 0.01 -R 1 -E DEFAULT --
 Search:       weka.attributeSelection.BestFirst -D 1 -N 5
-Relation:     dataset_feat
-Instances:    19381
+Relation:     dataset_feat_h
+Instances:    15090
 Attributes:   12
               comm
               adev
@@ -25,14 +25,14 @@ Evaluation mode:    10-fold cross-validation
 
 number of folds (%)  attribute
           10(100 %)    1 comm
-           1( 10 %)    2 adev
+           7( 70 %)    2 adev
            0(  0 %)    3 ddev
-           9( 90 %)    4 exp
-           9( 90 %)    5 oexp
+           5( 50 %)    4 exp
+           8( 80 %)    5 oexp
           10(100 %)    6 modd
-           7( 70 %)    7 mods
+           2( 20 %)    7 mods
            3( 30 %)    8 nloc
-           3( 30 %)    9 cyco
-           7( 70 %)   10 addl
-           1( 10 %)   11 reml
+           7( 70 %)    9 cyco
+           6( 60 %)   10 addl
+           2( 20 %)   11 reml
 

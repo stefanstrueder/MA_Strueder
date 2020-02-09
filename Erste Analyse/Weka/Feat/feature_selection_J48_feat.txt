@@ -2,8 +2,8 @@
 
 Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 5 -T 0.01 -R 1 -E DEFAULT -- -C 0.25 -M 2
 Search:       weka.attributeSelection.BestFirst -D 1 -N 5
-Relation:     dataset_feat
-Instances:    19381
+Relation:     dataset_feat_h
+Instances:    15090
 Attributes:   12
               comm
               adev
@@ -28,8 +28,8 @@ Search Method:
 	Start set: no attributes
 	Search direction: forward
 	Stale search after 5 node expansions
-	Total number of subsets evaluated: 68
-	Merit of best subset found:    0.904
+	Total number of subsets evaluated: 70
+	Merit of best subset found:    0.888
 
 Attribute Subset Evaluator (supervised, Class (nominal): 12 label):
 	Wrapper Subset Evaluator
@@ -38,11 +38,12 @@ Attribute Subset Evaluator (supervised, Class (nominal): 12 label):
 	Subset evaluation: classification accuracy
 	Number of folds for accuracy estimation: 5
 
-Selected attributes: 1,4,6,7,9,10 : 6
+Selected attributes: 1,2,4,7,9,10,11 : 7
                      comm
+                     adev
                      exp
-                     modd
                      mods
                      cyco
                      addl
+                     reml
 

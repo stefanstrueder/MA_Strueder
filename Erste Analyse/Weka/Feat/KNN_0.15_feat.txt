@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.lazy.IBk -K 25 -W 0 -X -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
-Relation:     dataset_feat
-Instances:    19381
+Relation:     dataset_feat_h
+Instances:    15090
 Attributes:   12
               comm
               adev
@@ -24,33 +24,33 @@ IB1 instance-based classifier
 using 1 nearest neighbour(s) for classification
 
 
-Time taken to build model: 0.01 seconds
+Time taken to build model: 0.02 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 52.84 seconds
+Time taken to test model on test split: 15.05 seconds
 
 === Summary ===
 
-Correctly Classified Instances        2609               89.7489 %
-Incorrectly Classified Instances       298               10.2511 %
-Kappa statistic                          0.6068
-Mean absolute error                      0.1025
-Root mean squared error                  0.3199
-Relative absolute error                 37.917  %
-Root relative squared error             88.0184 %
-Total Number of Instances             2907     
+Correctly Classified Instances        1960               86.6107 %
+Incorrectly Classified Instances       303               13.3893 %
+Kappa statistic                          0.5864
+Mean absolute error                      0.1339
+Root mean squared error                  0.3659
+Relative absolute error                 41.7478 %
+Root relative squared error             89.9859 %
+Total Number of Instances             2263     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,657    0,058    0,678      0,657    0,667      0,607    0,872     0,566     defective
-                 0,942    0,343    0,937      0,942    0,939      0,607    0,872     0,960     clean
-Weighted Avg.    0,897    0,298    0,896      0,897    0,897      0,607    0,872     0,899     
+                 0,922    0,347    0,910      0,922    0,916      0,587    0,865     0,943     clean
+                 0,653    0,078    0,689      0,653    0,670      0,587    0,865     0,590     defective
+Weighted Avg.    0,866    0,291    0,864      0,866    0,865      0,587    0,865     0,870     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
-  299  156 |    a = defective
-  142 2310 |    b = clean
+ 1652  139 |    a = clean
+  164  308 |    b = defective
 

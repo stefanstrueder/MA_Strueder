@@ -1,77 +1,74 @@
 === Run information ===
 
 Scheme:       weka.classifiers.bayes.NaiveBayes 
-Relation:     dataset_feat-weka.filters.unsupervised.attribute.Remove-R2-3,5,7,9-11
-Instances:    19381
+Relation:     dataset_feat_h-weka.filters.unsupervised.attribute.Remove-R2-3,5,7-9,11
+Instances:    15090
 Attributes:   5
               comm
               exp
               modd
-              nloc
+              addl
               label
-Test mode:    split 85.0% train, remainder test
+Test mode:    10-fold cross-validation
 
 === Classifier model (full training set) ===
 
 Naive Bayes Classifier
 
-                      Class
-Attribute         defective        clean
-                     (0.16)       (0.84)
-=========================================
+                       Class
+Attribute              clean     defective
+                      (0.81)        (0.19)
+===========================================
 comm
-  mean                5.8891       0.1988
-  std. dev.          28.1205       1.6312
-  weight sum            3186        16195
-  precision           9.7875       9.7875
+  mean                  0.257        6.2998
+  std. dev.            1.6312       29.2177
+  weight sum            12149          2941
+  precision            9.7875        9.7875
 
 exp
-  mean           400665.5407 9267538.4596
-  std. dev.     3406206.331138140314.9009
-  weight sum            3186        16195
-  precision       78758.6632   78758.6632
+  mean          12310750.9571    252711.813
+  std. dev.     43581061.3025  1660032.7884
+  weight sum            12149          2941
+  precision        83611.8171    83611.8171
 
 modd
-  mean                9.1704       0.3085
-  std. dev.          50.7892       2.3726
-  weight sum            3186        16195
-  precision          13.0783      13.0783
+  mean                 0.3985        9.8241
+  std. dev.            2.6922       52.6907
+  weight sum            12149          2941
+  precision            13.193        13.193
 
-nloc
-  mean             2320.1902     3164.954
-  std. dev.         2788.663    5039.5619
-  weight sum            3186        16195
-  precision          10.9244      10.9244
+addl
+  mean              3455.7554      403.0365
+  std. dev.         6739.3759      952.1135
+  weight sum            12149          2941
+  precision           40.6645       40.6645
 
 
 
-Time taken to build model: 0.06 seconds
+Time taken to build model: 0.05 seconds
 
-=== Evaluation on test split ===
-
-Time taken to test model on test split: 0.03 seconds
-
+=== Stratified cross-validation ===
 === Summary ===
 
-Correctly Classified Instances        2545               87.5473 %
-Incorrectly Classified Instances       362               12.4527 %
-Kappa statistic                          0.4061
-Mean absolute error                      0.1519
-Root mean squared error                  0.3402
-Relative absolute error                 56.158  %
-Root relative squared error             93.5945 %
-Total Number of Instances             2907     
+Correctly Classified Instances       12769               84.619  %
+Incorrectly Classified Instances      2321               15.381  %
+Kappa statistic                          0.3791
+Mean absolute error                      0.3353
+Root mean squared error                  0.4111
+Relative absolute error                106.8344 %
+Root relative squared error            103.7854 %
+Total Number of Instances            15090     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,349    0,027    0,707      0,349    0,468      0,439    0,773     0,524     defective
-                 0,973    0,651    0,890      0,973    0,929      0,439    0,773     0,935     clean
-Weighted Avg.    0,875    0,553    0,861      0,875    0,857      0,439    0,773     0,871     
+                 0,972    0,673    0,857      0,972    0,911      0,422    0,729     0,912     clean
+                 0,327    0,028    0,737      0,327    0,453      0,422    0,729     0,506     defective
+Weighted Avg.    0,846    0,547    0,833      0,846    0,821      0,422    0,729     0,833     
 
 === Confusion Matrix ===
 
-    a    b   <-- classified as
-  159  296 |    a = defective
-   66 2386 |    b = clean
+     a     b   <-- classified as
+ 11806   343 |     a = clean
+  1978   963 |     b = defective
 

@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
-Relation:     dataset_file-weka.filters.supervised.instance.SMOTE-C0-K10-P3000.0-S1
-Instances:    120277
+Relation:     dataset_file_h-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    120276
 Attributes:   12
               comm
               adev
@@ -24,20 +24,20 @@ Loss function: Hinge loss (SVM)
 
 label = 
 
-        -3.5916 (normalized) comm
- +      -1.7654 (normalized) adev
- +      -0.1579 (normalized) ddev
- +      -0.2484 (normalized) exp
- +      -5.8343 (normalized) oexp
- +       6.3681 (normalized) modd
- +       0.0173 (normalized) mods
- +       0.0519 (normalized) nloc
- +       0.6145 (normalized) cyco
- +       1.7406 (normalized) addl
- +      -1.2933 (normalized) reml
- -       0.94  
+        -4.2392 (normalized) comm
+ +      -3.0636 (normalized) adev
+ +      -0.1373 (normalized) ddev
+ +      -0.4285 (normalized) exp
+ +      -5.907  (normalized) oexp
+ +       8.3469 (normalized) modd
+ +      -0.0084 (normalized) mods
+ +       0.0482 (normalized) nloc
+ +       0.6448 (normalized) cyco
+ +       2.415  (normalized) addl
+ +      -1.76   (normalized) reml
+ -       0.95  
 
-Time taken to build model: 15.12 seconds
+Time taken to build model: 16.82 seconds
 
 === Evaluation on test split ===
 
@@ -45,25 +45,25 @@ Time taken to test model on test split: 0.02 seconds
 
 === Summary ===
 
-Correctly Classified Instances       13288               73.6504 %
-Incorrectly Classified Instances      4754               26.3496 %
+Correctly Classified Instances       13237               73.3718 %
+Incorrectly Classified Instances      4804               26.6282 %
 Kappa statistic                         -0.0001
-Mean absolute error                      0.2635
-Root mean squared error                  0.5133
-Relative absolute error                 67.4514 %
-Root relative squared error            116.5223 %
-Total Number of Instances            18042     
+Mean absolute error                      0.2663
+Root mean squared error                  0.516 
+Relative absolute error                 67.9803 %
+Root relative squared error            116.7506 %
+Total Number of Instances            18041     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 1,000    1,000    0,737      1,000    0,848      -0,004   0,500     0,737     clean
-                 0,000    0,000    0,000      0,000    0,000      -0,004   0,500     0,263     defective
-Weighted Avg.    0,737    0,737    0,543      0,737    0,625      -0,004   0,500     0,612     
+                 1,000    1,000    0,734      1,000    0,846      -0,004   0,500     0,734     clean
+                 0,000    0,000    0,000      0,000    0,000      -0,004   0,500     0,266     defective
+Weighted Avg.    0,734    0,734    0,538      0,734    0,621      -0,004   0,500     0,609     
 
 === Confusion Matrix ===
 
      a     b   <-- classified as
- 13288     1 |     a = clean
-  4753     0 |     b = defective
+ 13237     1 |     a = clean
+  4803     0 |     b = defective
 

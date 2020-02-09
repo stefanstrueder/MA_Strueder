@@ -15,16 +15,17 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import mysql.connector
 import numpy as np
+import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
 source = "feat"
 
 # SQL query to be executed
-query1 = "SELECT * FROM dataset." + source + "_final"
+query1 = "SELECT * FROM " + source + "_final"
 
 # Execute query and save results
 mycursor.execute(query1)
@@ -41,14 +42,14 @@ for row in result_set:
 	value_list.append(int(row[0]))
 	value_list.append(int(row[1]))
 	value_list.append(int(row[2]))
-	value_list.append(int(row[3]))
+	#value_list.append(int(row[3]))
 	value_list.append(int(row[4]))
 	value_list.append(int(row[5]))
 	value_list.append(int(row[6]))
 	value_list.append(int(row[7]))
-	value_list.append(int(row[8]))
+	#value_list.append(int(row[8]))
 	value_list.append(int(row[9]))
-	#value_list.append(int(row[10]))
+	value_list.append(int(row[10]))
 	features.append(value_list)
 	labels.append(row[11])
 
@@ -58,7 +59,7 @@ labels_encoded = encoder.fit_transform(labels)
 le_name_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 
 # Set split ratios
-ratios = [0.20]
+ratios = [0.25]
 scores_list = []
 
 # Perform classification for each ratio
@@ -70,6 +71,10 @@ for ratio in ratios:
 	X_test = scaler.transform(X_test)
 	model = RidgeClassifier(random_state = 0)
 	model.fit(X_train, Y_train)
+	
+	filename = "rc_model.pkl"
+	with open(filename, 'wb') as file:
+		pickle.dump(model, file)
 
 	y_pred = model.predict(X_test)
 	score = metrics.accuracy_score(Y_test,y_pred)

@@ -1,7 +1,7 @@
 === Run information ===
 
 Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -batch-size 200
-Relation:     dataset_file-weka.filters.supervised.instance.SMOTE-C0-K10-P3000.0-S1
+Relation:     dataset_file_h-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
 Instances:    120277
 Attributes:   12
               comm

@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
-Relation:     dataset_file-weka.filters.supervised.instance.SMOTE-C0-K10-P3000.0-S1
-Instances:    120277
+Relation:     dataset_file_h-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    120276
 Attributes:   12
               comm
               adev
@@ -25,64 +25,64 @@ Coefficients...
                Class
 Variable       clean
 ====================
-comm           0.007
-adev           0.001
-ddev          0.0051
+comm          0.0082
+adev          0.0038
+ddev          0.0039
 exp                0
 oexp               0
-modd         -0.0116
+modd          -0.015
 mods          0.0002
 nloc              -0
 cyco         -0.0013
-addl         -0.0006
+addl         -0.0007
 reml          0.0007
-Intercept     0.8465
+Intercept      0.853
 
 
 Odds Ratios...
                Class
 Variable       clean
 ====================
-comm           1.007
-adev           1.001
-ddev          1.0051
+comm          1.0083
+adev          1.0039
+ddev          1.0039
 exp                1
 oexp               1
-modd          0.9884
+modd          0.9851
 mods          1.0002
 nloc               1
 cyco          0.9987
-addl          0.9994
+addl          0.9993
 reml          1.0007
 
 
-Time taken to build model: 1.86 seconds
+Time taken to build model: 2.33 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.03 seconds
+Time taken to test model on test split: 0.06 seconds
 
 === Summary ===
 
-Correctly Classified Instances       22141               73.634  %
-Incorrectly Classified Instances      7928               26.366  %
-Kappa statistic                          0.0361
-Mean absolute error                      0.3798
-Root mean squared error                  0.4339
-Relative absolute error                 97.0356 %
-Root relative squared error             98.3456 %
+Correctly Classified Instances       22053               73.3413 %
+Incorrectly Classified Instances      8016               26.6587 %
+Kappa statistic                          0.0396
+Mean absolute error                      0.3808
+Root mean squared error                  0.4359
+Relative absolute error                 96.9792 %
+Root relative squared error             98.2997 %
 Total Number of Instances            30069     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,988    0,963    0,740      0,988    0,846      0,082    0,625     0,829     clean
-                 0,037    0,012    0,527      0,037    0,070      0,082    0,625     0,382     defective
-Weighted Avg.    0,736    0,711    0,684      0,736    0,641      0,082    0,625     0,711     
+                 0,989    0,961    0,737      0,989    0,844      0,092    0,620     0,826     clean
+                 0,039    0,011    0,564      0,039    0,073      0,092    0,620     0,383     defective
+Weighted Avg.    0,733    0,705    0,690      0,733    0,637      0,092    0,620     0,707     
 
 === Confusion Matrix ===
 
      a     b   <-- classified as
- 21843   267 |     a = clean
-  7661   298 |     b = defective
+ 21737   244 |     a = clean
+  7772   316 |     b = defective
 

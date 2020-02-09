@@ -2,8 +2,8 @@
 
 Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 5 -T 0.01 -R 1 -E DEFAULT -- -C 0.25 -M 2
 Search:       weka.attributeSelection.BestFirst -D 1 -N 5
-Relation:     dataset_feat
-Instances:    19381
+Relation:     dataset_feat_h
+Instances:    15090
 Attributes:   12
               comm
               adev
@@ -25,14 +25,14 @@ Evaluation mode:    10-fold cross-validation
 
 number of folds (%)  attribute
           10(100 %)    1 comm
-           5( 50 %)    2 adev
-           0(  0 %)    3 ddev
-           3( 30 %)    4 exp
-           5( 50 %)    5 oexp
-           3( 30 %)    6 modd
+           4( 40 %)    2 adev
+           1( 10 %)    3 ddev
+           5( 50 %)    4 exp
+           4( 40 %)    5 oexp
+           1( 10 %)    6 modd
           10(100 %)    7 mods
-           8( 80 %)    8 nloc
-           9( 90 %)    9 cyco
+           7( 70 %)    8 nloc
+           8( 80 %)    9 cyco
           10(100 %)   10 addl
-           7( 70 %)   11 reml
+           3( 30 %)   11 reml
 

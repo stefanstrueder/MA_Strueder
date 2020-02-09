@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibLINEAR -S 2 -C 1.0 -E 0.001 -B 1.0 -L 0.1 -I 20000
+Relation:     dataset_feat
+Instances:    19381
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibLINEAR wrapper
+
+Model bias=1.0 nr_class=2 nr_feature=12 solverType=L2R_L2LOSS_SVC
+
+Model for class clean
+
+         0    * comm
++        0    * adev
+-        0    * ddev
++        0    * exp
++        0    * oexp
++        0    * modd
+-        0    * mods
+-        0    * nloc
+-        0    * cyco
+-        0    * addl
+-        0    * reml
+-        0    * 1.0
+
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       15686               80.9349 %
+Incorrectly Classified Instances      3695               19.0651 %
+Kappa statistic                          0.0432
+Mean absolute error                      0.1907
+Root mean squared error                  0.4366
+Relative absolute error                 69.3894 %
+Root relative squared error            117.8099 %
+Total Number of Instances            19381     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,078    0,047    0,247      0,078    0,119      0,052    0,516     0,171     defective
+                 0,953    0,922    0,840      0,953    0,893      0,052    0,516     0,840     clean
+Weighted Avg.    0,809    0,778    0,743      0,809    0,766      0,052    0,516     0,730     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+   249  2937 |     a = defective
+   758 15437 |     b = clean
+

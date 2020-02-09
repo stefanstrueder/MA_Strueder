@@ -1,4 +1,4 @@
-# Script to perform SVM classification on file-level.
+# Script to perform SVM classification.
 # Results will be prompted as plot.
 # Usage of external library matplotlib.
 # Usage of external library MySQL Connector.
@@ -18,14 +18,14 @@ import numpy as np
 import pickle
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_without_h")
 mycursor = target_db.cursor()
 
 # Set dataset source
 source = "file"
 
 # SQL query to be executed
-query1 = "SELECT * FROM dataset." + source + "_final_smoted"
+query1 = "SELECT * FROM " + source + "_final_smoted"
 
 # Execute query and save results
 mycursor.execute(query1)
@@ -69,7 +69,7 @@ for ratio in ratios:
 	scaler.fit(X_train)
 	X_train = scaler.transform(X_train)
 	X_test = scaler.transform(X_test)
-	model = svm.LinearSVC(random_state = 0, max_iter = 150000)
+	model = svm.LinearSVC(random_state = 0, max_iter = 20000)
 	model.fit(X_train, Y_train)
 	
 	filename = "svm_model_file_smoted.pkl"

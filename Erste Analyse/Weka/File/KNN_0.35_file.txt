@@ -1,7 +1,7 @@
 === Run information ===
 
 Scheme:       weka.classifiers.lazy.IBk -K 10 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
-Relation:     dataset_file
+Relation:     dataset_file_h
 Instances:    89077
 Attributes:   12
               comm

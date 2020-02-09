@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_file_h
+Instances:    89076
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 85.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        -0.0078 (normalized) comm
+ +      -0.0078 (normalized) adev
+ +       0.0046 (normalized) ddev
+ +      -0.0084 (normalized) exp
+ +      -0.0809 (normalized) oexp
+ +       0.0137 (normalized) modd
+ +       0.0036 (normalized) mods
+ +       0.0041 (normalized) nloc
+ +       0.0131 (normalized) cyco
+ +       0.0079 (normalized) addl
+ +       0.0023 (normalized) reml
+ -       1.01  
+
+Time taken to build model: 8.52 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.25 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       13211               98.8773 %
+Incorrectly Classified Instances       150                1.1227 %
+Kappa statistic                          0     
+Mean absolute error                      0.0112
+Root mean squared error                  0.106 
+Relative absolute error                 49.3916 %
+Root relative squared error            100.5648 %
+Total Number of Instances            13361     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,989      1,000    0,994      ?        0,500     0,989     clean
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,011     defective
+Weighted Avg.    0,989    0,989    ?          0,989    ?          ?        0,500     0,978     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13211     0 |     a = clean
+   150     0 |     b = defective
+
