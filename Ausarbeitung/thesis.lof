@@ -32,13 +32,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{13}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{13}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{14}{figure.caption.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Teil 3: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{14}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Teil 3: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{14}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{20}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Formel zur Berechnung der Euklidischen Distanz (n = Anzahl der Attribute)\relax }}{21}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit 4 Input-Neuronen, 5 Hidden-Neuronen und 2 Output-Neuronen\relax }}{22}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{22}{figure.caption.43}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

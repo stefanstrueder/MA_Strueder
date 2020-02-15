@@ -11,9 +11,9 @@
 \BOOKMARK [1][-]{section.3.1}{Datenauswahl}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Konstruktion des Datensets}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.3}{Metriken}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Training von Machine-Learning-Klassifikatoren \(TBD\)}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Auswahl der Klassifikatoren \(TBD\)}{chapter.4}% 15
-\BOOKMARK [1][-]{section.4.2}{Trainingsprozess \(TBD\)}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.4}{Training und Test der Machine-Learning-Klassifikatoren}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Auswahl der Werkzeuge und Klassifikationsalgorithmen}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{Analyse des Testprozesses}{chapter.4}% 16
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 17
 \BOOKMARK [1][-]{section.5.1}{Herausforderungen und Limitationen}{chapter.5}% 18
 \BOOKMARK [1][-]{section.5.2}{Vergleich der Klassifikatoren}{chapter.5}% 19
@@ -23,6 +23,6 @@
 \BOOKMARK [0][-]{chapter.6}{Fazit}{}% 23
 \BOOKMARK [1][-]{section.6.1}{Zusammenfassung und Erkenntnisse}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter*.34}{Literatur}{}% 26
-\BOOKMARK [0][-]{appendix.A}{Weblinks der f\374r die Erstellung des Datensets verwendeten Software-Projekte}{}% 27
+\BOOKMARK [0][-]{chapter*.49}{Literatur}{}% 26
+\BOOKMARK [0][-]{appendix.A}{Links der f\374r die Erstellung des Datensets verwendeten Software-Projekte}{}% 27
 \BOOKMARK [0][-]{appendix.B}{Test 2}{}% 28

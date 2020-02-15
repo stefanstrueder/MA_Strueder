@@ -9,14 +9,99 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 \section{Datenauswahl}
 
-Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren. 
+Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits von 13 featurebasierten Software-Projekten erstellt. Die Auswahl der Software-Projekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2016}. Die für diese Arbeit verwendeten Software-Projekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in Tabelle XX aufgeführt.
 
+\begin{table}
+\centering
+\caption{Übersicht der verwendeten Software-Projekten\protect\footnotemark{}}
+\label{tab:tools}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|c|c|l|c|c|} 
+\cline{2-3}\cline{5-6}
+\multicolumn{1}{l|}{} & \textbf{Zweck}       & \textbf{Datenquelle}  &                      & \textbf{Zweck}       & \textbf{Datenquelle}     \\ 
+\hline
+\textbf{Blender}      & 3D-Modellierungstool & GitHub-Mirror         & \textbf{libxml2}     & XML-Parser           & GitLab-Repository        \\ 
+\hline
+\textbf{Busybox}      & UNIX-Toolkit         & Git-Repository        & \textbf{lighttpd}    & Webserver            & Git-Repository           \\ 
+\hline
+\textbf{Emacs}        & Texteditor           & GitHub-Mirror         & \textbf{MPSolve}     & Polynomlöser         & GitHub-Repository        \\ 
+\hline
+\textbf{GIMP}         & Bildbearbeitung      & GitLab-Repository     & \textbf{Parrot}      & virtuelle Maschine   & GitHub-Repository        \\ 
+\hline
+\textbf{Gnumeric}     & Tabellenkalkulation  & GitLab-Repository     & \textbf{Vim}         & Texteditor           & GitHub-Repository        \\ 
+\hline
+\textbf{gnuplot}      & Plotting-Tool        & GitHub-Mirror         & \textbf{xfig}        & Grafikeditor         & Sourceforge-Repository~  \\ 
+\hline
+\textbf{Irssi}        & IRC-Client           & GitHub-Repository     & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}     \\
+\cline{1-3}
+\end{tabular}
+}
+\end{table}
+\footnotetext{Links zu den Websites der Softwareprojekte und deren Repositories können im \hyperref[appendix1]{Anhang} eingesehen werden.}
 
+Zum Erhalt der Commit-Daten der Software-Projekte wurde die Python-Library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} verwendet \cite{Spadini2018}. Diese ermöglicht eine einfache Datenextraktion von Git-Repositories zum Erhalt von Commits, Commit-Nachrichten, Entwicklern, Diffs und mehr. Ein beispielhafter Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits (Autor, Name der veränderten Dateien, Typ der Veränderung und jeweilige zyklomatische Komplexität der Dateien) ist in Listing 3.1 aufgeführt. 
 
+\begin{lstlisting}[language=Python, caption=Beispielhafter PyDriller-Code zur Ausgabe von Metadaten von Commits, frame=single]
+for commit in RepositoryMining("link_to_repo").traverse_commits(): 
+	for m in commit.modifications: 
+		print( 
+		     "Author {}".format(commit.author.name), 
+		     " modified {}".format(m.filename), 
+		     " with a change type of {}".format(m.change_type.name), 
+		     " and the complexity is {}".format(m.complexity) 
+		)
+\end{lstlisting}
 
+Als Input der Python-Scripte zum Erhalt der Commit-Daten dienten jeweils die URLs zu den Git-Repositories der Software-Projekte. Weiterhin wurden die Daten in Commits je Release aufgeteilt. Durchgeführt wurde dies durch die Angabe von Release-Tags, basierend auf der Tag-Struktur von Git-Repositories, im PyDriller-Code. Für jede veränderte Datei innerhalb eines Commits und eines Releases wurden die folgenden Metadaten mit Hilfe von PyDriller abgerufen:
 
-\begin{table}[H]
-\caption[Caption for LOF]{Übersicht der zur Erstellung des Datensets verwendeten Softwareprojekten\protect\footnotemark{} mit zugehörigen Werten}
+\begin{multicols}{2}
+\begin{itemize}
+\item Commit-Hash (eindeutiger Bezeichner des zugehörigen Commits)
+\item Autor des zugehörigen Commits
+\item zugehörige Commit-Nachricht
+\item Name der veränderten Datei
+\item Lines-of-Code der veränderten Datei
+\item zyklomatische Komplexität der veränderten Datei
+\item Anzahl der hinzugefügten Zeilen zur Datei
+\item Anzahl der entfernten Zeilen von der Datei
+\item Art der Änderung (ADD, REM, MOD)\footnote{Diese Information fand in der weiteren Erstellung des Datensets keine Verwendung.}
+\item Diff der Veränderung
+\end{itemize}
+\end{multicols}
+
+Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. für jedes Software-Projekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Software-Projekts und die zugehörigen Release-Nummern gespeichert wurden. In Tabelle XX kann eingesehen werden wie viele Releases und Commits je Software-Projekt abgerufen wurden.
+
+\begin{table}
+\centering
+\caption{Übersicht der Anzahl der Releases und Commits je Software-Projekt}
+\label{tab:tools}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|c|c|l|c|c|} 
+\cline{2-3}\cline{5-6}
+\multicolumn{1}{l|}{} & \textbf{\#Releases}  & \textbf{\#Commits}  &                      & \multicolumn{1}{l|}{\textbf{\#Releases}~} & \textbf{\#Commits}~   \\ 
+\hline
+\textbf{Blender}      & 11                   & 19119               & \textbf{libxml2}     & 10                                        & 732                   \\ 
+\hline
+\textbf{Busybox}      & 14                   & 4984                & \textbf{lighttpd}    & 6                                         & 2597                  \\ 
+\hline
+\textbf{Emacs}        & 7                    & 12805               & \textbf{MPSolve}     & 8                                         & 668                   \\ 
+\hline
+\textbf{GIMP}         & 14                   & 7240                & \textbf{Parrot}      & 7                                         & 16245                 \\ 
+\hline
+\textbf{Gnumeric}     & 8                    & 6025                & \textbf{Vim}         & 7                                         & 9849                  \\ 
+\hline
+\textbf{gnuplot}      & 5                    & 6619                & \textbf{xfig}        & 7                                         & 18                    \\ 
+\hline
+\textbf{Irssi}        & 7                    & 253                 & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}  \\
+\cline{1-3}
+\end{tabular}
+}
+\end{table}
+
+\textbf{HIER}
+
+\begin{table}[]
+\caption[Caption for LOF]{Übersicht der zur Erstellung des Datensets verwendeten Software-Projekten mit zugehörigen Werten}
 \label{tab:tools}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lccccccc}
@@ -37,11 +122,10 @@ Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die G
 \end{tabular}%
 }
 \end{table}
-\footnotetext{Links zu den Websites der Softwareprojekte und deren Repositories können im \hyperref[appendix1]{Anhang} eingesehen werden.}
 
 \section{Konstruktion des Datensets}
 
-\begin{table}[H]
+\begin{table}[]
 \caption{Übersicht des Schemas der Haupttabellen des Datensets}
 \label{tab:schema1}
 \resizebox{\textwidth}{!}{%
@@ -76,7 +160,7 @@ filepath             & einem Commit zugehörige Dateipfade                      
 
 \textbf{Ergänzen!!!!}
 
-\begin{table}[H]
+\begin{table}[]
 \caption{Übersicht des Schemas der Metrics-Tabellen des Datensets}
 \label{tab:schema2}
 \resizebox{\textwidth}{!}{%

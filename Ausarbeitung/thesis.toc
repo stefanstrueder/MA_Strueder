@@ -38,46 +38,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Erstellung eines featurebasierten Datensets}{15}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{15}{section*.26}%
+\contentsline {paragraph}{Ausblick:}{15}{section*.27}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Datenauswahl}{15}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{17}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Metriken}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Metriken}{17}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Training von Machine-Learning-Klassifikatoren (TBD)}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Training und Test der Machine-Learning-Klassifikatoren}{19}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{17}{section*.31}%
+\contentsline {paragraph}{Ausblick:}{19}{section*.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Auswahl der Klassifikatoren (TBD)}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Auswahl der Werkzeuge und Klassifikationsalgorithmen}{19}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Trainingsprozess (TBD)}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Analyse des Testprozesses}{23}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{25}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{19}{section*.32}%
+\contentsline {paragraph}{Ausblick:}{25}{section*.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{25}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Vergleich der Klassifikatoren}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Vergleich der Klassifikatoren}{25}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Vergleichsmetriken}{19}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Vergleichsmetriken}{25}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Ergebnisse (TBD)}{19}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Ergebnisse (TBD)}{25}{subsection.5.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Vergleich zu nicht-featurebasierten Methoden}{19}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Vergleich zu nicht-featurebasierten Methoden}{25}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{21}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Fazit}{27}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{21}{section*.33}%
+\contentsline {paragraph}{Ausblick:}{27}{section*.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{27}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Ausblick}{21}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Ausblick}{27}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{23}{chapter*.34}%
+\contentsline {chapter}{Literatur}{29}{chapter*.49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Weblinks der für die Erstellung des Datensets verwendeten Software-Projekte}{24}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Software-Projekte}{30}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Test 2}{25}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Test 2}{31}{appendix.B}%
