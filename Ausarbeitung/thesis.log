@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  15 FEB 2020 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  16 FEB 2020 12:01
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -765,7 +765,10 @@ Package: arydshln 2019/02/21 v1.76
 \adl@everyvbox=\toks29
 \adl@LTpagetotal=\dimen194
 )
-("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\courier.sty
+"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+) ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count416
 \float@exts=\toks30
@@ -933,23 +936,23 @@ LaTeX Warning: Label `tab:tools' multiply defined.
 ) (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 66
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 67
 .
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1ppl.fd"
@@ -1017,7 +1020,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box104
-Package hyperref Info: Link coloring OFF on input line 66.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1033,9 +1036,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count446
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
  (thesis.out) (thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
@@ -1075,32 +1078,32 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 66.
-Package biblatex Info: Reference segment=0 on input line 66.
+Package biblatex Info: Reference section=0 on input line 67.
+Package biblatex Info: Reference segment=0 on input line 67.
 \c@lstlisting=\count447
 <logos/uko-logo.pdf, id=115, 564.1075pt x 90.3375pt>
 File: logos/uko-logo.pdf Graphic file (type pdf)
 <use logos/uko-logo.pdf>
-Package pdftex.def Info: logos/uko-logo.pdf  used on input line 73.
+Package pdftex.def Info: logos/uko-logo.pdf  used on input line 74.
 (pdftex.def)             Requested size: 170.71652pt x 27.33853pt.
 <logos/chalmers.png, id=116, 978.65625pt x 233.87375pt>
 File: logos/chalmers.png Graphic file (type png)
 <use logos/chalmers.png>
-Package pdftex.def Info: logos/chalmers.png  used on input line 73.
+Package pdftex.def Info: logos/chalmers.png  used on input line 74.
 (pdftex.def)             Requested size: 170.71652pt x 40.79646pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 73
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 74
 .
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1110,12 +1113,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 -logo.pdf> <./logos/chalmers.png>] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 73--73
+Underfull \hbox (badness 10000) in alignment at lines 74--74
 [][][] 
  []
 
@@ -1198,24 +1201,24 @@ Overfull \hbox (2.92424pt too wide) in paragraph at lines 16--17
 
 
 ]
-<images/SPL.png, id=261, 755.82375pt x 291.33844pt>
+<images/SPL.png, id=263, 755.82375pt x 291.33844pt>
 File: images/SPL.png Graphic file (type png)
 <use images/SPL.png>
 Package pdftex.def Info: images/SPL.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24408pt x 175.47566pt.
  [3 <./images/SPL.png>] [4]
-<images/CRISP-DM1.png, id=281, 520.94624pt x 335.00156pt>
+<images/CRISP-DM1.png, id=283, 520.94624pt x 335.00156pt>
 File: images/CRISP-DM1.png Graphic file (type png)
 <use images/CRISP-DM1.png>
 Package pdftex.def Info: images/CRISP-DM1.png  used on input line 76.
 (pdftex.def)             Requested size: 455.24408pt x 292.75247pt.
-<images/CRISP-DM.png, id=287, 1312.15219pt x 178.41656pt>
+<images/CRISP-DM.png, id=289, 1312.15219pt x 178.41656pt>
 File: images/CRISP-DM.png Graphic file (type png)
 <use images/CRISP-DM.png>
 Package pdftex.def Info: images/CRISP-DM.png  used on input line 84.
 (pdftex.def)             Requested size: 455.24408pt x 61.89952pt.
  [5 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>] [6] [7]
-<images/Zeit.png, id=313, 828.84656pt x 415.5525pt>
+<images/Zeit.png, id=315, 828.84656pt x 415.5525pt>
 File: images/Zeit.png Graphic file (type png)
 <use images/Zeit.png>
 Package pdftex.def Info: images/Zeit.png  used on input line 214.
@@ -1232,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/ML.png, id=331, 828.84656pt x 397.485pt>
+<images/ML.png, id=333, 828.84656pt x 397.485pt>
 File: images/ML.png Graphic file (type png)
 <use images/ML.png>
 Package pdftex.def Info: images/ML.png  used on input line 21.
@@ -1245,7 +1248,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<images/Prozess.png, id=337, 353.06906pt x 416.30531pt>
+<images/Prozess.png, id=339, 353.06906pt x 416.30531pt>
 File: images/Prozess.png Graphic file (type png)
 <use images/Prozess.png>
 Package pdftex.def Info: images/Prozess.png  used on input line 32.
@@ -1264,7 +1267,7 @@ LaTeX Warning: Citation 'Queiroz2016' on page 12 undefined on input line 38.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/ML.png> <./images/Prozess.png>]
-<images/ML1.png, id=345, 950.04938pt x 330.48468pt>
+<images/ML1.png, id=347, 950.04938pt x 330.48468pt>
 File: images/ML1.png Graphic file (type png)
 <use images/ML1.png>
 Package pdftex.def Info: images/ML1.png  used on input line 43.
@@ -1284,7 +1287,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Underfull \vbox (badness 5359) has occurred while \output is active []
 
  [13 <./images/ML1.png>]
-<images/ML2.png, id=358, 685.05937pt x 368.1253pt>
+<images/ML2.png, id=360, 685.05937pt x 368.1253pt>
 File: images/ML2.png Graphic file (type png)
 <use images/ML2.png>
 Package pdftex.def Info: images/ML2.png  used on input line 67.
@@ -1302,7 +1305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--68
 -chi-ne Lear-nings nach
  []
 
-<images/ML3.png, id=359, 963.6pt x 322.95656pt>
+<images/ML3.png, id=361, 963.6pt x 322.95656pt>
 File: images/ML3.png Graphic file (type png)
 <use images/ML3.png>
 Package pdftex.def Info: images/ML3.png  used on input line 73.
@@ -1365,25 +1368,35 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 5
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
+) [16]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 103.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 128.
+               Default added (so using `tbp') on input line 134.
 
-[16]
+<images/Features.png, id=399, 963.6pt x 517.18219pt>
+File: images/Features.png Graphic file (type png)
+<use images/Features.png>
+Package pdftex.def Info: images/Features.png  used on input line 136.
+(pdftex.def)             Requested size: 455.24408pt x 244.3383pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 146.
+               Default added (so using `tbp') on input line 144.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 163.
+               Default added (so using `tbp') on input line 162.
 
-[17] [18])
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 179.
+
+[17] [18 <./images/Features.png>] [19] [20
+
+])
 \openout2 = `content/classifier.aux'.
 
  (content/classifier.tex
@@ -1400,16 +1413,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
  []
 
 
-LaTeX Warning: Citation 'scikit' on page 19 undefined on input line 12.
+LaTeX Warning: Citation 'scikit' on page 21 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'scikit' on page 19 undefined on input line 12.
+LaTeX Warning: Citation 'scikit' on page 21 undefined on input line 12.
 
 
-LaTeX Warning: Citation 'Queiroz2016' on page 19 undefined on input line 14.
+LaTeX Warning: Citation 'Queiroz2016' on page 21 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'Weka2016' on page 19 undefined on input line 14.
+LaTeX Warning: Citation 'Weka2016' on page 21 undefined on input line 14.
 
 
 Overfull \hbox (31.11688pt too wide) in paragraph at lines 14--15
@@ -1421,139 +1434,122 @@ ra-fi-schen Be-nut-ze-ro-ber-flä-che [[]].
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 19.
 
-[19
-
+[21
 
 
 
 ]
 
-LaTeX Warning: Citation 'Rokach2005' on page 20 undefined on input line 41.
+LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Rokach2005' on page 20 undefined on input line 41.
+LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Rokach2005' on page 20 undefined on input line 41.
+LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Rokach2005' on page 20 undefined on input line 41.
+LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 
 
-LaTeX Warning: Citation 'Rokach2005' on page 20 undefined on input line 41.
+LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 43.
 
-<images/DT.png, id=421, 416.30531pt x 386.94562pt>
+<images/DT.png, id=434, 416.30531pt x 386.94562pt>
 File: images/DT.png Graphic file (type png)
 <use images/DT.png>
 Package pdftex.def Info: images/DT.png  used on input line 45.
 (pdftex.def)             Requested size: 227.62204pt x 211.56903pt.
 
-LaTeX Warning: Citation 'Alam2013' on page 20 undefined on input line 49.
+LaTeX Warning: Citation 'Alam2013' on page 22 undefined on input line 49.
 
 
-LaTeX Warning: Citation 'Alam2013' on page 20 undefined on input line 49.
+LaTeX Warning: Citation 'Alam2013' on page 22 undefined on input line 49.
 
 
-LaTeX Warning: Citation 'Alam2013' on page 20 undefined on input line 49.
+LaTeX Warning: Citation 'Alam2013' on page 22 undefined on input line 49.
 
-[20 <./images/DT.png>]
+[22 <./images/DT.png>]
 
-LaTeX Warning: Citation 'Zhang2016' on page 21 undefined on input line 52.
+LaTeX Warning: Citation 'Zhang2016' on page 23 undefined on input line 52.
 
 
-LaTeX Warning: Citation 'Zhang2016' on page 21 undefined on input line 52.
+LaTeX Warning: Citation 'Zhang2016' on page 23 undefined on input line 52.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 54.
 
-<images/EUKLID.png, id=429, 146.04562pt x 45.92157pt>
+<images/EUKLID.png, id=442, 146.04562pt x 45.92157pt>
 File: images/EUKLID.png Graphic file (type png)
 <use images/EUKLID.png>
 Package pdftex.def Info: images/EUKLID.png  used on input line 56.
 (pdftex.def)             Requested size: 182.09485pt x 57.26166pt.
 
-LaTeX Warning: Citation 'Linder2004' on page 21 undefined on input line 61.
+LaTeX Warning: Citation 'Linder2004' on page 23 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'OShea2015' on page 21 undefined on input line 61.
+LaTeX Warning: Citation 'OShea2015' on page 23 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'Linder2004' on page 21 undefined on input line 61.
+LaTeX Warning: Citation 'Linder2004' on page 23 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'OShea2015' on page 21 undefined on input line 61.
+LaTeX Warning: Citation 'OShea2015' on page 23 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'Linder2004' on page 21 undefined on input line 61.
+LaTeX Warning: Citation 'Linder2004' on page 23 undefined on input line 61.
 
 
-LaTeX Warning: Citation 'Linder2004' on page 21 undefined on input line 63.
+LaTeX Warning: Citation 'Linder2004' on page 23 undefined on input line 63.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 65.
 
-<images/ANN.png, id=430, 569.12625pt x 542.025pt>
+<images/ANN.png, id=443, 569.12625pt x 542.025pt>
 File: images/ANN.png Graphic file (type png)
 <use images/ANN.png>
 Package pdftex.def Info: images/ANN.png  used on input line 67.
 (pdftex.def)             Requested size: 273.14922pt x 260.1525pt.
 
-LaTeX Warning: Citation 'Raschka2014' on page 21 undefined on input line 74.
+LaTeX Warning: Citation 'Raschka2014' on page 23 undefined on input line 74.
 
 
-LaTeX Warning: Citation 'Raschka2014' on page 21 undefined on input line 74.
+LaTeX Warning: Citation 'Raschka2014' on page 23 undefined on input line 74.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 76.
 
-<images/NB.png, id=431, 837.1275pt x 342.5297pt>
+<images/NB.png, id=444, 837.1275pt x 342.5297pt>
 File: images/NB.png Graphic file (type png)
 <use images/NB.png>
 Package pdftex.def Info: images/NB.png  used on input line 78.
 (pdftex.def)             Requested size: 318.66946pt x 130.38737pt.
-[21 <./images/EUKLID.png>] [22 <./images/ANN.png> <./images/NB.png>]
+[23 <./images/EUKLID.png>] [24 <./images/ANN.png> <./images/NB.png>]
 
-LaTeX Warning: Citation 'Peng2002' on page 23 undefined on input line 85.
-
-
-LaTeX Warning: Citation 'Peng2002' on page 23 undefined on input line 85.
+LaTeX Warning: Citation 'Peng2002' on page 25 undefined on input line 85.
 
 
-LaTeX Warning: Citation 'Bottou2010' on page 23 undefined on input line 90.
+LaTeX Warning: Citation 'Peng2002' on page 25 undefined on input line 85.
 
 
-LaTeX Warning: Citation 'Tzotsos2006' on page 23 undefined on input line 94.
+LaTeX Warning: Citation 'Bottou2010' on page 25 undefined on input line 90.
 
-[23] [24
+
+LaTeX Warning: Citation 'Tzotsos2006' on page 25 undefined on input line 94.
+
+[25] [26
 
 ])
 \openout2 = `content/evaluation.aux'.
 
  (content/evaluation.tex
 Kapitel 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--8
-
- []
-
-[25
-
-
-
-] [26
-
-])
-\openout2 = `content/conclusion.aux'.
-
- (content/conclusion.tex
-Kapitel 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
@@ -1566,33 +1562,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 ] [28
 
 ])
-Overfull \hbox (0.57513pt too wide) in paragraph at lines 108--108
-\T1/ppl/m/n/10.95 duct Li-nes. In: \T1/ppl/m/it/10.95 ACM Com-pu-ting Sur-veys
- \T1/ppl/m/n/10.95 47.1 (Ju-ni 2014), S. 145. \T1/ppl/m/sc/10.95 doi\T1/ppl/m/
-n/10.95 : []$\T1/pcr/m/n/10.95 10 . 1145 / 2580950$[]\T1/ppl/m/n/10.95 . 
+\openout2 = `content/conclusion.aux'.
+
+ (content/conclusion.tex
+Kapitel 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
  []
 
 [29
 
 
+
+] [30
+
+])
+Overfull \hbox (0.57513pt too wide) in paragraph at lines 109--109
+\T1/ppl/m/n/10.95 duct Li-nes. In: \T1/ppl/m/it/10.95 ACM Com-pu-ting Sur-veys
+ \T1/ppl/m/n/10.95 47.1 (Ju-ni 2014), S. 145. \T1/ppl/m/sc/10.95 doi\T1/ppl/m/
+n/10.95 : []$\T1/pcr/m/n/10.95 10 . 1145 / 2580950$[]\T1/ppl/m/n/10.95 . 
+ []
+
+[31
+
+
 ]
 Anhang A.
-[30
+[32
 
 ]
 Anhang B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-[31
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
+[33
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
  (thesis.aux (content/abstract.aux) (content/note.aux)
 (content/introduction.aux) (content/background.aux) (content/dataset.aux)
 (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D6CAD7CE8C5192B06D1B1518D41FFB8E;1957.
+(rerunfilecheck)             Checksum: F30DA8E261C7FE83BC6BC6EAAE521661;1957.
 
 
 LaTeX Warning: There were undefined references.
@@ -1610,10 +1622,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21284 strings out of 481565
- 360719 string characters out of 2914179
- 1253205 words of memory out of 3000000
- 35922 multiletter control sequences out of 15000+200000
+ 21305 strings out of 481565
+ 361168 string characters out of 2914179
+ 1253386 words of memory out of 3000000
+ 35936 multiletter control sequences out of 15000+200000
  573567 words of font info for 100 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  63i,18n,100p,1501b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1625,9 +1637,9 @@ s/type1/urw/helvetic/uhvr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/stefa/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/stefa/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (41 pages, 517705 bytes).
+Output written on thesis.pdf (43 pages, 558632 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
- 300 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
 

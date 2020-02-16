@@ -69,7 +69,7 @@ Als Input der Python-Scripte zum Erhalt der Commit-Daten dienten jeweils die URL
 \end{itemize}
 \end{multicols}
 
-Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. für jedes Software-Projekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Software-Projekts und die zugehörigen Release-Nummern gespeichert wurden. In Tabelle XX kann eingesehen werden wie viele Releases und Commits je Software-Projekt abgerufen wurden.
+Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Software-Projekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Software-Projekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In Tabelle XX kann eingesehen werden wie viele Releases je Software-Projekt zum Abruf einbezogen wurden und wie viele Commits daraus resultieren.
 
 \begin{table}
 \centering
@@ -98,7 +98,7 @@ Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenb
 }
 \end{table}
 
-\textbf{HIER}
+Diese \glqq Rohdaten\grqq{} dienen zur weiteren Verarbeitung hinsichtlich der Erstellung des Datensets und der anschließenden Berechnung der Metriken. Eine Erläuterung der weiteren Verarbeitung der Daten folgt im kommenden Abschnitt.
 
 \begin{table}[]
 \caption[Caption for LOF]{Übersicht der zur Erstellung des Datensets verwendeten Software-Projekten mit zugehörigen Werten}
@@ -124,6 +124,22 @@ Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenb
 \end{table}
 
 \section{Konstruktion des Datensets}
+
+Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbeitung und -optimierung. Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die sogenannten Präprozessor-Direktiven \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die pro Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Software-Projekte. Konnte kein Feature identifiziert werden, wird entsprechend \texttt{none} gepseichert.
+
+Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in Abbildung XX gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven in Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in Abbildung XX). Diese "Header-Features", wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
+
+Ebenfalls besteht die Möglichkeit, dass "falsche" Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in Abbildung XX). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \texttt{none} ersetzt.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{images/Features}
+    \caption{Normalfall und unerwünschte Fälle bei der Identifizierung von Features\label{fig:feat}}
+\end{figure}
+
+Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagworten (\textbf{HIER ANGABE ZU LITERATUR AUS RODRIGO}). Bei den Schlagworten handelt es sich um \glqq bug\grqq, \glqq error\grqq, \glqq fail\grqq{} und \glqq fix\grqq. 
+
+\textbf{HIER!}
 
 \begin{table}[]
 \caption{Übersicht des Schemas der Haupttabellen des Datensets}
