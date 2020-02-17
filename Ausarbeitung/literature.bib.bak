@@ -265,4 +265,39 @@
   doi       = {10.1145/3236024.3264598},
 }
 
+@Article{Hunsen2015,
+  author    = {Claus Hunsen and Bo Zhang and Janet Siegmund and Christian Kästner and Olaf Le{\ss}enich and Martin Becker and Sven Apel},
+  title     = {Preprocessor-based variability in open-source and industrial software systems: An empirical study},
+  journal   = {Empirical Software Engineering},
+  year      = {2015},
+  volume    = {21},
+  number    = {2},
+  pages     = {449--482},
+  month     = {apr},
+  doi       = {10.1007/s10664-015-9360-1},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@InProceedings{Liebig2010,
+  author    = {Jörg Liebig and Sven Apel and Christian Lengauer and Christian Kästner and Michael Schulze},
+  title     = {An analysis of the variability in forty preprocessor-based software product lines},
+  booktitle = {Proceedings of the 32nd {ACM}/{IEEE} International Conference on Software Engineering - {ICSE} {\textquotesingle}10},
+  year      = {2010},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/1806799.1806819},
+}
+
+@Article{Sliwerski2005,
+  author    = {Jacek {\'{S}}liwerski and Thomas Zimmermann and Andreas Zeller},
+  title     = {When do changes induce fixes?},
+  journal   = {{ACM} {SIGSOFT} Software Engineering Notes},
+  year      = {2005},
+  volume    = {30},
+  number    = {4},
+  pages     = {1},
+  month     = {jul},
+  doi       = {10.1145/1082983.1083147},
+  publisher = {Association for Computing Machinery ({ACM})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

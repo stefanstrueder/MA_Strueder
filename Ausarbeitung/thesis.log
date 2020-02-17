@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  16 FEB 2020 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  17 FEB 2020 15:55
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1201,24 +1201,24 @@ Overfull \hbox (2.92424pt too wide) in paragraph at lines 16--17
 
 
 ]
-<images/SPL.png, id=263, 755.82375pt x 291.33844pt>
+<images/SPL.png, id=265, 755.82375pt x 291.33844pt>
 File: images/SPL.png Graphic file (type png)
 <use images/SPL.png>
 Package pdftex.def Info: images/SPL.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24408pt x 175.47566pt.
  [3 <./images/SPL.png>] [4]
-<images/CRISP-DM1.png, id=283, 520.94624pt x 335.00156pt>
+<images/CRISP-DM1.png, id=285, 520.94624pt x 335.00156pt>
 File: images/CRISP-DM1.png Graphic file (type png)
 <use images/CRISP-DM1.png>
 Package pdftex.def Info: images/CRISP-DM1.png  used on input line 76.
 (pdftex.def)             Requested size: 455.24408pt x 292.75247pt.
-<images/CRISP-DM.png, id=289, 1312.15219pt x 178.41656pt>
+<images/CRISP-DM.png, id=291, 1312.15219pt x 178.41656pt>
 File: images/CRISP-DM.png Graphic file (type png)
 <use images/CRISP-DM.png>
 Package pdftex.def Info: images/CRISP-DM.png  used on input line 84.
 (pdftex.def)             Requested size: 455.24408pt x 61.89952pt.
  [5 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>] [6] [7]
-<images/Zeit.png, id=315, 828.84656pt x 415.5525pt>
+<images/Zeit.png, id=317, 828.84656pt x 415.5525pt>
 File: images/Zeit.png Graphic file (type png)
 <use images/Zeit.png>
 Package pdftex.def Info: images/Zeit.png  used on input line 214.
@@ -1235,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/ML.png, id=333, 828.84656pt x 397.485pt>
+<images/ML.png, id=335, 828.84656pt x 397.485pt>
 File: images/ML.png Graphic file (type png)
 <use images/ML.png>
 Package pdftex.def Info: images/ML.png  used on input line 21.
@@ -1248,7 +1248,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<images/Prozess.png, id=339, 353.06906pt x 416.30531pt>
+<images/Prozess.png, id=341, 353.06906pt x 416.30531pt>
 File: images/Prozess.png Graphic file (type png)
 <use images/Prozess.png>
 Package pdftex.def Info: images/Prozess.png  used on input line 32.
@@ -1267,7 +1267,7 @@ LaTeX Warning: Citation 'Queiroz2016' on page 12 undefined on input line 38.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/ML.png> <./images/Prozess.png>]
-<images/ML1.png, id=347, 950.04938pt x 330.48468pt>
+<images/ML1.png, id=349, 950.04938pt x 330.48468pt>
 File: images/ML1.png Graphic file (type png)
 <use images/ML1.png>
 Package pdftex.def Info: images/ML1.png  used on input line 43.
@@ -1287,7 +1287,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Underfull \vbox (badness 5359) has occurred while \output is active []
 
  [13 <./images/ML1.png>]
-<images/ML2.png, id=360, 685.05937pt x 368.1253pt>
+<images/ML2.png, id=362, 685.05937pt x 368.1253pt>
 File: images/ML2.png Graphic file (type png)
 <use images/ML2.png>
 Package pdftex.def Info: images/ML2.png  used on input line 67.
@@ -1305,7 +1305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--68
 -chi-ne Lear-nings nach
  []
 
-<images/ML3.png, id=361, 963.6pt x 322.95656pt>
+<images/ML3.png, id=363, 963.6pt x 322.95656pt>
 File: images/ML3.png Graphic file (type png)
 <use images/ML3.png>
 Package pdftex.def Info: images/ML3.png  used on input line 73.
@@ -1377,26 +1377,62 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 134.
 
-<images/Features.png, id=399, 963.6pt x 517.18219pt>
+<images/Features.png, id=401, 963.6pt x 517.18219pt>
 File: images/Features.png Graphic file (type png)
 <use images/Features.png>
 Package pdftex.def Info: images/Features.png  used on input line 136.
 (pdftex.def)             Requested size: 455.24408pt x 244.3383pt.
+[17]
+
+LaTeX Warning: Citation 'Sliwerski2005' on page 18 undefined on input line 142.
+
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 142.
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 142.
+
+
+Overfull \hbox (0.9645pt too wide) in paragraph at lines 142--143
+\T1/ppl/m/n/10.95 Systemen [[]]. Die zwei-te Pha-se um-fasst die Iden-ti-fi-ka-
+ti-on der feh-le-rein-füh-ren-den Com-
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 144.
 
+<images/SZZ.png, id=407, 1297.84875pt x 304.88907pt>
+File: images/SZZ.png Graphic file (type png)
+<use images/SZZ.png>
+Package pdftex.def Info: images/SZZ.png  used on input line 146.
+(pdftex.def)             Requested size: 455.24408pt x 106.94537pt.
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 147.
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 147.
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 150.
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 150.
+
+
+LaTeX Warning: Citation 'Borg2019' on page 18 undefined on input line 150.
+
+[18 <./images/Features.png> <./images/SZZ.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 162.
+               Default added (so using `tbp') on input line 156.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 179.
+               Default added (so using `tbp') on input line 191.
 
-[17] [18 <./images/Features.png>] [19] [20
-
-])
+[19] [20])
 \openout2 = `content/classifier.aux'.
 
  (content/classifier.tex
@@ -1438,6 +1474,7 @@ LaTeX Warning: No positions in optional float specifier.
 
 
 
+
 ]
 
 LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
@@ -1458,7 +1495,7 @@ LaTeX Warning: Citation 'Rokach2005' on page 22 undefined on input line 41.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 43.
 
-<images/DT.png, id=434, 416.30531pt x 386.94562pt>
+<images/DT.png, id=437, 416.30531pt x 386.94562pt>
 File: images/DT.png Graphic file (type png)
 <use images/DT.png>
 Package pdftex.def Info: images/DT.png  used on input line 45.
@@ -1483,7 +1520,7 @@ LaTeX Warning: Citation 'Zhang2016' on page 23 undefined on input line 52.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 54.
 
-<images/EUKLID.png, id=442, 146.04562pt x 45.92157pt>
+<images/EUKLID.png, id=445, 146.04562pt x 45.92157pt>
 File: images/EUKLID.png Graphic file (type png)
 <use images/EUKLID.png>
 Package pdftex.def Info: images/EUKLID.png  used on input line 56.
@@ -1510,7 +1547,7 @@ LaTeX Warning: Citation 'Linder2004' on page 23 undefined on input line 63.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 65.
 
-<images/ANN.png, id=443, 569.12625pt x 542.025pt>
+<images/ANN.png, id=446, 569.12625pt x 542.025pt>
 File: images/ANN.png Graphic file (type png)
 <use images/ANN.png>
 Package pdftex.def Info: images/ANN.png  used on input line 67.
@@ -1525,7 +1562,7 @@ LaTeX Warning: Citation 'Raschka2014' on page 23 undefined on input line 74.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 76.
 
-<images/NB.png, id=444, 837.1275pt x 342.5297pt>
+<images/NB.png, id=447, 837.1275pt x 342.5297pt>
 File: images/NB.png Graphic file (type png)
 <use images/NB.png>
 Package pdftex.def Info: images/NB.png  used on input line 78.
@@ -1622,10 +1659,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21305 strings out of 481565
- 361168 string characters out of 2914179
- 1253386 words of memory out of 3000000
- 35936 multiletter control sequences out of 15000+200000
+ 21313 strings out of 481565
+ 361285 string characters out of 2914179
+ 1253447 words of memory out of 3000000
+ 35943 multiletter control sequences out of 15000+200000
  573567 words of font info for 100 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  63i,18n,100p,1501b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1637,9 +1674,9 @@ s/type1/urw/helvetic/uhvr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/stefa/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/stefa/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (43 pages, 558632 bytes).
+Output written on thesis.pdf (43 pages, 593861 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
+ 594 PDF objects out of 1000 (max. 8388607)
  152 named destinations out of 1000 (max. 500000)
- 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

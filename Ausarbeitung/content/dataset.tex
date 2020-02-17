@@ -137,12 +137,24 @@ Ebenfalls besteht die Möglichkeit, dass "falsche" Features identifiziert werden
     \caption{Normalfall und unerwünschte Fälle bei der Identifizierung von Features\label{fig:feat}}
 \end{figure}
 
-Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagworten (\textbf{HIER ANGABE ZU LITERATUR AUS RODRIGO}). Bei den Schlagworten handelt es sich um \glqq bug\grqq, \glqq error\grqq, \glqq fail\grqq{} und \glqq fix\grqq. 
+Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagworten (\textbf{HIER ANGABE ZU LITERATUR VON RODRIGO}). Bei den Schlagworten handelt es sich um \glqq bug\grqq, \glqq error\grqq, \glqq fail\grqq{} und \glqq fix\grqq. Durchgeführt wurde die Analyse mittels Python-Skripte unter Zuhilfenahme von einfachen Formen des Text Minings. Die Ergebnisse wurden in einer weiteren boole'schen Spalte der MySQL-Tabellen (true = korrektiv, false = nicht korrektiv) gespeichert.
+
+Der Suche nach korrektiven Commits folgt eine Analyse auf fehlereinführende Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser ursprünglich für CVS-Versionskontrollsysteme entwickelte Algorithmus erlaubt es, in zwei Phasen fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Die erste Phase besteht dabei aus der Identifizierung der korrektiven Commits. Dies kann entweder anhand der zuvor beschriebenen Analyse der Commit-Nachrichten geschehen oder durch die Analyse von Bug-Tracking-Systemen \cite{Borg2019}. Die zweite Phase umfasst die Identifikation der fehlereinführenden Commits auf Basis der zuvor erkannten korrektiven Commits. Diese Phase ist in mehrere Schritte unterteilt und wird in Abbildung XX dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{images/SZZ}
+    \caption{Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite{Borg2019})\label{fig:szz}}
+\end{figure}
+
+Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes der zuvor erkannten korrektiven Commits (a) erhält, beginnt mit der Ausführung eines \texttt{git blame} Befehls (b) zur Identifizierung sämtlicher Commits, in denen Veränderungen an den selben Dateien und Codezeilen vorgenommen wurden wie in den korrektiven Commits \cite{Borg2019}. Daraus resultieren mögliche fehlereinführende Commit-Kandidaten (c). Für jeden dieser Commit-Kandidaten wird dann erörtert, ob er fehlereinführend ist (d). Dazu wird zunächst das Datum des Commit-Kandidaten mit dem zugehörigen korrektiven Commits verglichen. Liegt dieses vor dem Datum des korrektiven Commits, so gilt der Kandidat als tatsächlich fehlereinführend \cite{Borg2019}. Liegt das Datum danach, so kann der Kandidat nur fehlereinführend sein, sofern er teilweise den vorhandenen Fehler löst (teilweiser Fix) oder für einen anderen Fehler verantwortlich ist, der nicht dem korrektiven Commit zugehörig ist (Kandidat ist Fehlerursache eines anderen korrektiven Commits) \cite{Borg2019}. Die Ausgabe ist eine Liste von Commit-Hashes von fehlereinführenden Commits für jeden korrektiven Commit. Diese neuen Informationen werden in einer zusätzlichen boole'schen Spalte in den MySQL-Tabellen gespeichert (true = fehlereinführend, false = nicht fehlereinführend). 
+
+Eine Übersicht des Schemas der nun vollständigen initialen  MySQL-Tabellen ist in Tabelle XX aufgeührt.
 
 \textbf{HIER!}
 
 \begin{table}[]
-\caption{Übersicht des Schemas der Haupttabellen des Datensets}
+\caption{Übersicht des Schemas der initialen MySQL-Tabellen}
 \label{tab:schema1}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{ll|ll}
@@ -159,18 +171,18 @@ cycomplexity         & \begin{tabular}[c]{@{}l@{}}Zyklomatische Komplexität\\ d
 }
 \end{table}
 
-\begin{table}[]
-\caption{Übersicht des Schemas der SZZ-Tabellen des Datensets}
-\label{tab:schema3}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll|ll}
-\textbf{Spaltenname} & \textbf{Beschreibung}                                                            & \textbf{Spaltenname} & \textbf{Beschreibung}                                                                     \\ \hline
-name                 & Name des Softwareprojekts                                                        & filename             & einem Commit zugehörige Dateien                                                           \\
-commit\_hash         & \begin{tabular}[c]{@{}l@{}}Commit-Hashes fehlerbehebender\\ Commits\end{tabular} & bug\_introducing     & \begin{tabular}[c]{@{}l@{}}Auflistung der fehlereinführenden\\ Commit-Hashes\end{tabular} \\
-filepath             & einem Commit zugehörige Dateipfade                                               &                      &                                                                                          
-\end{tabular}%
-}
-\end{table}
+%\begin{table}[]
+%\caption{Übersicht des Schemas der SZZ-Tabellen des Datensets}
+%\label{tab:schema3}
+%\resizebox{\textwidth}{!}{%
+%\begin{tabular}{ll|ll}
+%\textbf{Spaltenname} & \textbf{Beschreibung}                                                            & \textbf{Spaltenname} & \textbf{Beschreibung}                                                                     \\ \hline
+%name                 & Name des Softwareprojekts                                                        & filename             & einem Commit zugehörige Dateien                                                           \\
+%commit\_hash         & \begin{tabular}[c]{@{}l@{}}Commit-Hashes fehlerbehebender\\ Commits\end{tabular} & bug\_introducing     & \begin{tabular}[c]{@{}l@{}}Auflistung der fehlereinführenden\\ Commit-Hashes\end{tabular} \\
+%filepath             & einem Commit zugehörige Dateipfade                                               &                      &                                                                                          
+%\end{tabular}%
+%}
+%\end{table}
 
 \section{Metriken}
 
