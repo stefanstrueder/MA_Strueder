@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Training und Test der Machine-Learning-Klassifikatoren}{21}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{21}{section*.35}%
+\contentsline {paragraph}{Ausblick:}{21}{section*.36}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Auswahl der Werkzeuge und Klassifikationsalgorithmen}{21}{section.4.1}%
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Evaluation}{27}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{27}{section*.48}%
+\contentsline {paragraph}{Ausblick:}{27}{section*.49}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{27}{section.5.1}%
 \defcounter {refsection}{0}\relax 
@@ -70,14 +70,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fazit}{29}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{29}{section*.49}%
+\contentsline {paragraph}{Ausblick:}{29}{section*.50}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{29}{section.6.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Ausblick}{29}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{31}{chapter*.50}%
+\contentsline {chapter}{Literatur}{31}{chapter*.51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Software-Projekte}{32}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Software-Projekte}{33}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Test 2}{33}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Test 2}{34}{appendix.B}%

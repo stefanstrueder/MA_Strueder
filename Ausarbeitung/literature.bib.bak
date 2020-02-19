@@ -300,4 +300,13 @@
   publisher = {Association for Computing Machinery ({ACM})},
 }
 
+@InProceedings{Borg2019,
+  author    = {Markus Borg and Oscar Svensson and Kristian Berg and Daniel Hansson},
+  title     = {{SZZ} unleashed: an open implementation of the {SZZ} algorithm - featuring example usage in a study of just-in-time bug prediction for the Jenkins project},
+  booktitle = {Proceedings of the 3rd {ACM} {SIGSOFT} International Workshop on Machine Learning Techniques for Software Quality Evaluation - {MaLTeSQuE} 2019},
+  year      = {2019},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3340482.3342742},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

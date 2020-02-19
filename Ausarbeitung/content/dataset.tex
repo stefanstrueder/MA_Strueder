@@ -3,8 +3,14 @@
 \chapter{Erstellung eines featurebasierten Datensets}
 
 \paragraph{Ausblick:}
-Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute (Features) im Rahmen der Anlernung der Klassifikatoren dienen.
-\\
+Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute (Features) im Rahmen der Anlernung der Klassifikatoren dienen. Eine Gliederung der Kapitel kann Abbildung XX entnommen werden.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/Kap3}
+    \caption{Übersicht zur Gliederung des dritten Kapitels\label{fig:kap3}}
+\end{figure}
+
 \hrule
 
 \section{Datenauswahl}
@@ -129,7 +135,7 @@ Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbei
 
 Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in Abbildung XX gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven in Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in Abbildung XX). Diese "Header-Features", wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
 
-Ebenfalls besteht die Möglichkeit, dass "falsche" Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in Abbildung XX). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \texttt{none} ersetzt.
+Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in Abbildung XX). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \texttt{none} ersetzt.
 
 \begin{figure}[]
     \centering
@@ -149,12 +155,12 @@ Der Suche nach korrektiven Commits folgt eine Analyse auf fehlereinführende Com
 
 Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes der zuvor erkannten korrektiven Commits (a) erhält, beginnt mit der Ausführung eines \texttt{git blame} Befehls (b) zur Identifizierung sämtlicher Commits, in denen Veränderungen an den selben Dateien und Codezeilen vorgenommen wurden wie in den korrektiven Commits \cite{Borg2019}. Daraus resultieren mögliche fehlereinführende Commit-Kandidaten (c). Für jeden dieser Commit-Kandidaten wird dann erörtert, ob er fehlereinführend ist (d). Dazu wird zunächst das Datum des Commit-Kandidaten mit dem zugehörigen korrektiven Commits verglichen. Liegt dieses vor dem Datum des korrektiven Commits, so gilt der Kandidat als tatsächlich fehlereinführend \cite{Borg2019}. Liegt das Datum danach, so kann der Kandidat nur fehlereinführend sein, sofern er teilweise den vorhandenen Fehler löst (teilweiser Fix) oder für einen anderen Fehler verantwortlich ist, der nicht dem korrektiven Commit zugehörig ist (Kandidat ist Fehlerursache eines anderen korrektiven Commits) \cite{Borg2019}. Die Ausgabe ist eine Liste von Commit-Hashes von fehlereinführenden Commits für jeden korrektiven Commit. Diese neuen Informationen werden in einer zusätzlichen boole'schen Spalte in den MySQL-Tabellen gespeichert (true = fehlereinführend, false = nicht fehlereinführend). 
 
-Eine Übersicht des Schemas der nun vollständigen initialen  MySQL-Tabellen ist in Tabelle XX aufgeührt.
+Eine Übersicht des Schemas der nun vollständigen initialen  MySQL-Tabellen (im folgenden Haupttabellen genannt) ist in Tabelle XX aufgeührt. Wie bereits zuvor erwähnt, umfasst diese Tabellle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
 \textbf{HIER!}
 
 \begin{table}[]
-\caption{Übersicht des Schemas der initialen MySQL-Tabellen}
+\caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{ll|ll}
@@ -171,18 +177,7 @@ cycomplexity         & \begin{tabular}[c]{@{}l@{}}Zyklomatische Komplexität\\ d
 }
 \end{table}
 
-%\begin{table}[]
-%\caption{Übersicht des Schemas der SZZ-Tabellen des Datensets}
-%\label{tab:schema3}
-%\resizebox{\textwidth}{!}{%
-%\begin{tabular}{ll|ll}
-%\textbf{Spaltenname} & \textbf{Beschreibung}                                                            & \textbf{Spaltenname} & \textbf{Beschreibung}                                                                     \\ \hline
-%name                 & Name des Softwareprojekts                                                        & filename             & einem Commit zugehörige Dateien                                                           \\
-%commit\_hash         & \begin{tabular}[c]{@{}l@{}}Commit-Hashes fehlerbehebender\\ Commits\end{tabular} & bug\_introducing     & \begin{tabular}[c]{@{}l@{}}Auflistung der fehlereinführenden\\ Commit-Hashes\end{tabular} \\
-%filepath             & einem Commit zugehörige Dateipfade                                               &                      &                                                                                          
-%\end{tabular}%
-%}
-%\end{table}
+Auf Basis der Daten der Haupttabellen können nun die für das Training der Klassifikatoren benötigten Metriken berechnet werden.
 
 \section{Metriken}
 

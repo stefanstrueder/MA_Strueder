@@ -257,7 +257,7 @@
 }
 
 @InProceedings{Spadini2018,
-  author    = {Davide Spadini and Mauricio Aniche and Alberto Bacchelli},
+  author    = {Davide Spadini and Maur{\'{\i}}cio Aniche and Alberto Bacchelli},
   title     = {{PyDriller}: Python framework for mining software repositories},
   booktitle = {Proceedings of the 2018 26th {ACM} Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering - {ESEC}/{FSE} 2018},
   year      = {2018},
@@ -288,7 +288,7 @@
 }
 
 @Article{Sliwerski2005,
-  author    = {Jacek {\'{S}}liwerski and Thomas Zimmermann and Andreas Zeller},
+  author    = {Jacek Sliwerski and Thomas Zimmermann and Andreas Zeller},
   title     = {When do changes induce fixes?},
   journal   = {{ACM} {SIGSOFT} Software Engineering Notes},
   year      = {2005},
