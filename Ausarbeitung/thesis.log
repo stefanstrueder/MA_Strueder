@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  19 FEB 2020 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  21 FEB 2020 15:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -768,6 +768,28 @@ Package: arydshln 2019/02/21 v1.76
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\courier.sty
 "
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ragged2e\ragged2e.
+sty"
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip77
+\RaggedLeftLeftskip=\skip78
+\RaggedRightLeftskip=\skip79
+\CenteringRightskip=\skip80
+\RaggedLeftRightskip=\skip81
+\RaggedRightRightskip=\skip82
+\CenteringParfillskip=\skip83
+\RaggedLeftParfillskip=\skip84
+\RaggedRightParfillskip=\skip85
+\JustifyingParfillskip=\skip86
+\CenteringParindent=\skip87
+\RaggedLeftParindent=\skip88
+\RaggedRightParindent=\skip89
+\JustifyingParindent=\skip90
 ) ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count416
@@ -775,8 +797,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box52
 \@float@everytoks=\toks31
 \@floatcapt=\box53
-)
-("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty"
+) ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.st
+y"
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty
 "
 Package: expl3 2020-01-31 L3 programming layer (loader) 
@@ -829,34 +851,49 @@ File: listings.cfg 2019/09/10 1.8c listings configuration
 ))
 Package: listings 2019/09/10 1.8c (Carsten Heinz)
 
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longtable.st
+y"
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip91
+\LTright=\skip92
+\LTpre=\skip93
+\LTpost=\skip94
+\LTchunksize=\count430
+\LTcapwidth=\dimen199
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@cols=\count431
+\LT@rows=\count432
+\c@LT@tables=\count433
+\c@LT@chunks=\count434
+\LT@p@ftn=\toks33
+)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty
 "
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count430
-\mult@box=\box57
-\multicol@leftmargin=\dimen199
-\c@unbalance=\count431
-\c@collectmore=\count432
-\doublecol@number=\count433
-\multicoltolerance=\count434
-\multicolpretolerance=\count435
-\full@width=\dimen256
-\page@free=\dimen257
-\premulticols=\dimen258
-\postmulticols=\dimen259
-\multicolsep=\skip77
-\multicolbaselineskip=\skip78
-\partial@page=\box58
-\last@line=\box59
-\maxbalancingoverflow=\dimen260
-\mult@rightbox=\box60
-\mult@grightbox=\box61
-\mult@gfirstbox=\box62
-\mult@firstbox=\box63
-\@tempa=\box64
-\@tempa=\box65
-\@tempa=\box66
-\@tempa=\box67
+\c@tracingmulticols=\count435
+\mult@box=\box61
+\multicol@leftmargin=\dimen256
+\c@unbalance=\count436
+\c@collectmore=\count437
+\doublecol@number=\count438
+\multicoltolerance=\count439
+\multicolpretolerance=\count440
+\full@width=\dimen257
+\page@free=\dimen258
+\premulticols=\dimen259
+\postmulticols=\dimen260
+\multicolsep=\skip95
+\multicolbaselineskip=\skip96
+\partial@page=\box62
+\last@line=\box63
+\maxbalancingoverflow=\dimen261
+\mult@rightbox=\box64
+\mult@grightbox=\box65
+\mult@gfirstbox=\box66
+\mult@firstbox=\box67
 \@tempa=\box68
 \@tempa=\box69
 \@tempa=\box70
@@ -890,15 +927,27 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box98
 \@tempa=\box99
 \@tempa=\box100
-\c@minrows=\count436
-\c@columnbadness=\count437
-\c@finalcolumnbadness=\count438
-\last@try=\dimen261
-\multicolovershoot=\dimen262
-\multicolundershoot=\dimen263
-\mult@nat@firstbox=\box101
-\colbreak@box=\box102
-\mc@col@check@num=\count439
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\c@minrows=\count441
+\c@columnbadness=\count442
+\c@finalcolumnbadness=\count443
+\last@try=\dimen262
+\multicolovershoot=\dimen263
+\multicolundershoot=\dimen264
+\mult@nat@firstbox=\box105
+\colbreak@box=\box106
+\mc@col@check@num=\count444
+)
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.
+sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip97
+\multirow@cntb=\count445
+\multirow@dima=\skip98
+\bigstrutjot=\dimen265
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -937,23 +986,23 @@ LaTeX Warning: Label `tab:tools' multiply defined.
 ) (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 68
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 72
 .
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1ppl.fd"
@@ -997,17 +1046,17 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count440
-\scratchdimen=\dimen264
-\scratchbox=\box103
-\nofMPsegments=\count441
-\nofMParguments=\count442
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count443
-\MPscratchDim=\dimen265
-\MPnumerator=\count444
-\makeMPintoPDFobject=\count445
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count446
+\scratchdimen=\dimen266
+\scratchbox=\box107
+\nofMPsegments=\count447
+\nofMParguments=\count448
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count449
+\MPscratchDim=\dimen267
+\MPnumerator=\count450
+\makeMPintoPDFobject=\count451
+\everyMPtoPDFconversion=\toks35
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -1019,9 +1068,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ltcaption.
+sty"
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box104
-Package hyperref Info: Link coloring OFF on input line 68.
+\AtBeginShipoutBox=\box108
+Package hyperref Info: Link coloring OFF on input line 72.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1035,11 +1090,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count446
+\c@section@level=\count452
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
  (thesis.out) (thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
@@ -1079,32 +1134,34 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
  (thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 68.
-Package biblatex Info: Reference segment=0 on input line 68.
-\c@lstlisting=\count447
+Package biblatex Info: Reference section=0 on input line 72.
+Package biblatex Info: Reference segment=0 on input line 72.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 72.
+\c@lstlisting=\count453
 <logos/uko-logo.pdf, id=115, 564.1075pt x 90.3375pt>
 File: logos/uko-logo.pdf Graphic file (type pdf)
 <use logos/uko-logo.pdf>
-Package pdftex.def Info: logos/uko-logo.pdf  used on input line 75.
+Package pdftex.def Info: logos/uko-logo.pdf  used on input line 79.
 (pdftex.def)             Requested size: 170.71652pt x 27.33853pt.
 <logos/chalmers.png, id=116, 978.65625pt x 233.87375pt>
 File: logos/chalmers.png Graphic file (type png)
 <use logos/chalmers.png>
-Package pdftex.def Info: logos/chalmers.png  used on input line 75.
+Package pdftex.def Info: logos/chalmers.png  used on input line 79.
 (pdftex.def)             Requested size: 170.71652pt x 40.79646pt.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 75
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 79
 .
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
 
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1114,12 +1171,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 -logo.pdf> <./logos/chalmers.png>] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 75--75
+Underfull \hbox (badness 10000) in alignment at lines 79--79
 [][][] 
  []
 
@@ -1413,13 +1470,171 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
+
+Overfull \hbox (12.48866pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 DT| 
+ []
+
+
+Overfull \hbox (23.44946pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 KNN| 
+ []
+
+
+Overfull \hbox (13.09096pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (15.4999pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (12.37918pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 RC| 
+ []
+
+
+Overfull \hbox (10.7038pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (19.87988pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (21.31439pt too wide) in paragraph at lines 56--56
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
+
+Overfull \hbox (12.03575pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 J48| 
+ []
+
+
+Overfull \hbox (23.58777pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 KNN| 
+ []
+
+
+Overfull \hbox (11.44441pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 LR| 
+ []
+
+
+Overfull \hbox (13.22926pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (15.6382pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (10.8421pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (20.01819pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (21.4527pt too wide) in paragraph at lines 101--101
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
+
+Overfull \hbox (12.0519pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 DT| 
+ []
+
+
+Overfull \hbox (23.0127pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 KNN| 
+ []
+
+
+Overfull \hbox (12.65419pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (15.06313pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (11.94241pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 RC| 
+ []
+
+
+Overfull \hbox (10.26703pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (19.44312pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (20.87762pt too wide) in paragraph at lines 180--180
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
+
+Overfull \hbox (11.89786pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 DT| 
+ []
+
+
+Overfull \hbox (22.85866pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 KNN| 
+ []
+
+
+Overfull \hbox (10.7153pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 LR| 
+ []
+
+
+Overfull \hbox (12.50015pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (14.90909pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (10.11299pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (19.28908pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (20.72359pt too wide) in paragraph at lines 257--257
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
 [27
 
 
 
-] [28
-
-])
+] [28] [29] [30])
 \openout2 = `content/conclusion.aux'.
 
  (content/conclusion.tex
@@ -1429,33 +1644,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[29
+[31
 
 
 
-] [30
 
-]) [31
+] [32
+
+]) [33
 
 
-] [32]
+] [34]
 Anhang A.
-[33
+[35
 
 ]
 Anhang B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
-[34
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+[36
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (thesis.aux (content/abstract.aux) (content/note.aux)
 (content/introduction.aux) (content/background.aux) (content/dataset.aux)
 (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D578B15B92C306E7C2BFABFFAE1CFC9C;1957.
+(rerunfilecheck)             Checksum: 837C266D9517F7B70DD48A62E6CFC096;1957.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1465,10 +1681,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21390 strings out of 481565
- 363540 string characters out of 2914179
- 1273976 words of memory out of 3000000
- 35999 multiletter control sequences out of 15000+200000
+ 21646 strings out of 481565
+ 368001 string characters out of 2914179
+ 1381211 words of memory out of 3000000
+ 36232 multiletter control sequences out of 15000+200000
  573567 words of font info for 100 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  63i,18n,100p,1921b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1480,9 +1696,9 @@ s/type1/urw/helvetic/uhvr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/stefa/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/stefa/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (44 pages, 654737 bytes).
+Output written on thesis.pdf (46 pages, 661156 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
+ 710 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
