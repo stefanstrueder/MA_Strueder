@@ -53,6 +53,38 @@
       \verb 10.1109/greencom-ithings-cpscom.2013.122
       \endverb
     \endentry
+    \entry{Alpaydin2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8351b0b43ad4aed68fb279505ebd7d01}{%
+           family={Alpaydin},
+           familyi={A\bibinitperiod},
+           given={Ethem},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \strng{fullhash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \strng{bibnamehash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \strng{authorbibnamehash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \strng{authornamehash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \strng{authorfullhash}{8351b0b43ad4aed68fb279505ebd7d01}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Edi}
+      \field{isbn}{9780262012430}
+      \field{title}{{Introduction to Machine Learning}}
+      \field{year}{2010}
+      \verb{file}
+      \verb :D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/ML/Alpaydin{\_}Introduction to Machine Learning{\_}2010.pdf:pdf
+      \endverb
+    \endentry
     \entry{Apel2013}{book}{}
       \name{author}{4}{}{%
         {{hash=a4f57072771b98df56b8f8205f384d00}{%
@@ -732,6 +764,40 @@
       \verb 10.1145/3001867.3001874
       \endverb
     \endentry
+    \entry{Rahman2013}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=03ca7e2809710098a5f59cd1aa02cc64}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Foyzur},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b14eb0759a69e6f4dca80cc529ce30de}{%
+           family={Devanbu},
+           familyi={D\bibinitperiod},
+           given={Premkumar},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \strng{fullhash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \strng{bibnamehash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \strng{authorbibnamehash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \strng{authornamehash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \strng{authorfullhash}{cd2a2afc3ac67d833f1361e62cf2cd74}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 35th International Conference on Software Engineering ({ICSE})}
+      \field{month}{5}
+      \field{title}{How, and why, process metrics are better}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1109/icse.2013.6606589
+      \endverb
+    \endentry
     \entry{Raschka2014}{article}{}
       \name{author}{1}{}{%
         {{hash=bb679961e3f3f4bba79fc1cf3aa7df1c}{%
@@ -799,6 +865,38 @@
       \range{pages}{28}
       \verb{doi}
       \verb 10.1007/0-387-25465-x_9
+      \endverb
+    \endentry
+    \entry{Sammut2017}{book}{}
+      \name{editor}{2}{}{%
+        {{hash=e94495f7b9c258a3a6722a976198d15b}{%
+           family={Sammut},
+           familyi={S\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+        {{hash=021b501817a8d003c9b230aaed364b70}{%
+           family={Webb},
+           familyi={W\bibinitperiod},
+           given={Geoffrey\bibnamedelima I.},
+           giveni={G\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer {US}}%
+      }
+      \strng{namehash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \strng{fullhash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \strng{bibnamehash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \strng{editorbibnamehash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \strng{editornamehash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \strng{editorfullhash}{e7ced06e01b6a1273dcf5a7a3f56d1e4}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Encyclopedia of Machine Learning and Data Mining}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-1-4899-7687-1
       \endverb
     \endentry
     \entry{Sliwerski2005}{article}{}

@@ -3,13 +3,51 @@
 \chapter{Evaluation}
 
 \paragraph{Ausblick:}
-Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikationen. Dies geschieht durch verschiedene Vergleichsmetriken, welche in diesem Kapitel vorgestellt werden. Ebenfalls umfasst dieses Kapitel einen Vergleich der Klassifikatoren zu nicht-featurebasierten Methoden und eine Erläuterung der Herausforderungen und Limitationen, die mit der Erarbeitung der vorangegangenen Kapitel einhergingen.
+Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikationen. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden. Ebenfalls umfasst dieses Kapitel einen Vergleich der Klassifikatoren zu einer nicht-featurebasierten Methode und eine Erläuterung der Herausforderungen und Limitationen, die mit der Erarbeitung der vorangegangenen Kapitel einhergingen.
 \\
 \hrule
 
 \section{Herausforderungen und Limitationen}
 
 \section{Vergleich der Klassifikatoren}
+
+Der Vergleich der Klassifikatoren erfolgt unter Zuhilfenahme von Evaluationsmetriken, die im nachfolgenden Abschnitt vorgestellt werden. Die Diskussion der Ergebnisse der Evaluation erfolgt in Abschnitt 5.2.2.
+
+\subsection{Evaluationsmetriken}
+
+Die zum Vergleich der Klassifikatoren erhobenen Evaluationmetriken entstammen dem Themengebiet des Information Retrieval und gelten als Standardmesswerte für ihren Einsatzzweck \cite{Sammut2017}. Ein Großteil dieser Metriken lässt sich anhand von Werten einer sogenannten Konfusionsmatrix berechnen. Im Falle einer binären Klassifikation, wie in dieser Arbeit, besteht diese Matrix aus vier Gruppen, deren Werte angeben, ob der jeweilige Klassifikator ein Objekt korrekt oder falsch einer der beiden Zielklassen zuordnen konnte \cite{Sammut2017}. Im Zusammenhang mit solchen Matrizen werden die beiden Zielklassen \glqq positiv\grqq{} und \glqq negativ\grqq{} genannt. Für diese Arbeit werden die positive Klasse dem Label \glqq fehlerfrei\grqq und die negative Klasse dem Label \glqq defekt\grqq{} zugeordnet. Die Form einer allgemeinen Konfusionsmatrix ist in Abbildung XX dargestellt.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Confusion}
+    \caption{allgemeine Konfusionsmatrix\label{fig:confu}}
+\end{figure}
+
+Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu den durchgeführten Tests der Klassifikatoren auszugeben. Anhand der Werte der Zuordnungen zu den Gruppen wurden die folgenden Evaluationsmetriken berechnet: 
+
+\begin{itemize}
+\item Treffergenauigkeit (Accuracy)
+\\Dieser Wert misst die Treffergenauigkeit der Vorhersagen des Klassifikators und gibt an, inwieweit dessen Vorhersagen mit der modellierten Realität übereinstimmen \cite{Sammut2017}.
+\\\[Accuracy = \frac{TP+TN}{TP+TN+FP+FN}\]
+\item Echt-Positiv-Rate / Trefferquote (TP-Rate / Recall)
+\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen an. \cite{Alpaydin2010}
+\\\[TP-Rate = \frac{TP}{TP+FN}\]
+\item Falsch-Positiv-Rate (FP-Rate)
+\\Dieser Wert gibt den Anteil der fälschlicherweise als positiv gewerteten Vorhersagen an. \cite{Alpaydin2010}
+\\\[FP-Rate = \frac{FP}{FP+TN}\]
+\item Positiver Vorhersagewert (Precision)
+\\ Dieser Wert gibt die Anzahl der positiven Vorhersagen an, die auch tatsächlich zur positiven Klasse gehören \cite{Sammut2017}.
+\\\[Precision = \frac{TP}{TP+FP}\]
+\item F-Maß (F-Score)
+\\ Dieser Wert berechnet das harmonische Mittel zwischen den Werten Precision und Recall und liegt somit zwischen diesen beiden Werten, jedoch näher am kleineren Wert \cite{Sammut2017}.
+\\\[F-Score = \frac{2TP}{2TP+FP+FN}\]
+\item ROC-Bereich (ROC-Area)
+\\Dieser Wert unterliegt der Messung der ROC-Kurve (ROC =  Receiver operating characteristic, Betriebsverhalten des Empfängers), welche das Verhältnis zwischen der TP-Rate und der FP-Rate modelliert \cite{Sammut2017}. Die ROC-Area, auch AUC (area under curce, Bereich unter der Kurve) genannt, evaluiert den Bereich unter dieser Kurve mit einem Wert zwischen 0 (alle Negativwerte rangieren vor allen Positivwerten) und 1 (alle Positivwerte rangieren vor allen Negativwerten) \cite{Sammut2017}.
+\item PRC-Bereich (PRC-Area)
+\\Dieser Wert unterliegt der Messung der PRC (Precision-Recall-Curve), welche die Werte der Precision und des Recalls gegenüberstellt. Die Messung des Bereiches unter dieser Kurve erfolgt analog zur ROC-Area.
+\end{itemize}
+
+\subsection{Ergebnisse und Diskussion}
 
 \begin{table}
 \centering
@@ -101,7 +139,18 @@ Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten 
 }
 \end{table}
 
-\subsection{Vergleichsmetriken}
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/Final_scikit}
+    \caption{Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\label{fig:final-scikit}}
+\end{figure}
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/Final_weka}
+    \caption{Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\label{fig:final-weka}}
+\end{figure}
 
 \begin{table}
 \centering
@@ -257,8 +306,135 @@ Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten 
 }
 \end{table}
 
-\subsection{Ergebnisse (TBD)}
 
 \section{Vergleich zu nicht-featurebasierten Methoden}
+
+\begin{table}
+\centering
+\caption{Konfusionsmatrizen der Evaluation der Klassifikatoren des klassischen Datensets}
+\label{tab:class-mat}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{>{\centering\hspace{0pt}}p{0.114\linewidth}>{\hspace{0pt}}p{0.345\linewidth}>{\centering\hspace{0pt}}p{0.216\linewidth}>{\centering\hspace{0pt}}p{0.15\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.166\linewidth}|} 
+\cline{2-5}
+\multicolumn{1}{>{\centering\hspace{0pt}}p{0.114\linewidth}|}{} & \textbf{Ermittelt -\textgreater}  & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}   \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}J48}      & Realität fehlerfrei   & 86965                & 1071             & 88036            \\
+                                                                & Realität defekt       & 1691                 & 30549            & 32240            \\
+                                                                & Total                 & 88656                & 31620            & 120276           \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}KNN}      & Realität fehlerfrei   & 86121                & 1915             & 88036            \\
+                                                                & Realität defekt       & 3867                 & 28373            & 32240            \\
+                                                                & Total                 & 89988                & 30288            & 120276           \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}LR}       & Realität fehlerfrei   & 13094                & 134              & 13228            \\
+                                                                & Realität defekt       & 4676                 & 137              & 4813             \\
+                                                                & Total                 & 17770                & 271              & 18041            \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}NB}       & Realität fehlerfrei   & 7232                 & 19102            & 26334            \\
+                                                                & Realität defekt       & 527                  & 9222             & 9749             \\
+                                                                & Total                 & 7759                 & 28324            & 36083            \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}NN}       & Realität fehlerfrei   & 30607                & 153              & 30760            \\
+                                                                & Realität defekt       & 7646                 & 3691             & 11337            \\
+                                                                & Total                 & 38253                & 3844             & 42097            \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}RF}       & Realität fehlerfrei   & 87694                & 342              & 88036            \\
+                                                                & Realität defekt       & 936                  & 31277            & 32213            \\
+                                                                & Total                 & 88630                & 31619            & 120249           \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}SGD}      & Realität fehlerfrei   & 13221                & 7                & 13228            \\
+                                                                & Realität defekt       & 4813                 & 0                & 4813             \\
+                                                                & Total                 & 18034                & 7                & 18041            \\ 
+\hline
+\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}SVM}      & Realität fehlerfrei   & 13228                & 0                & 13228            \\
+                                                                & Realität defekt       & 4813                 & 0                & 4813             \\
+                                                                & Total                 & 18041                & 0                & 18041           
+\end{tabular}
+}
+\end{table}
+
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{images/Klasseval}
+    \caption{Übersicht der Accuracies der jeweilgen Klassifikatoren)\label{fig:class-acc}}
+\end{figure}
+
+
+\begin{table}
+\centering
+\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (WEKA)}
+\label{tab:class-val}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{>{\centering\hspace{0pt}}p{0.137\linewidth}>{\hspace{0pt}}p{0.268\linewidth}>{\centering\hspace{0pt}}p{0.245\linewidth}>{\centering\hspace{0pt}}p{0.179\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.162\linewidth}|} 
+\cline{3-5}
+ & \multicolumn{1}{>{\hspace{0pt}}p{0.268\linewidth}|}{} & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}  \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}DT} & TP-Rate & 0,99 & 0,95 & 0,98 \\
+ & FP-Rate & 0,05 & 0,01 & 0,04 \\
+ & Precision & 0,98 & 0,97 & 0,98 \\
+ & Recall & 0,99 & 0,95 & 0,98 \\
+ & F-Score & 0,98 & 0,96 & 0,98 \\
+ & ROC-Area & 0,98 & 0,98 & 0,98 \\
+ & PRC-Area & 0,99 & 0,96 & 0,98 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}KNN} & TP-Rate & 0,98 & 0,88 & 0,95 \\
+ & FP-Rate & 0,12 & 0,02 & 0,10 \\
+ & Precision & 0,96 & 0,94 & 0,95 \\
+ & Recall & 0,98 & 0,88 & 0,95 \\
+ & F-Score & 0,97 & 0,91 & 0,95 \\
+ & ROC-Area & 0,95 & 0,95 & 0,95 \\
+ & PRC-Area & 0,97 & 0,88 & 0,95 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}LR} & TP-Rate & 0,99 & 0,03 & 0,73 \\
+ & FP-Rate & 0,92 & 0,01 & 0,72 \\
+ & Precision & 0,74 & 0,51 & 0,68 \\
+ & Recall & 0,99 & 0,03 & 0,73 \\
+ & F-Score & 0,85 & 0,05 & 0,63 \\
+ & ROC-Area & 0,72 & 0,72 & 0,72 \\
+ & PRC-Area & 0,88 & 0,44 & 0,77 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}NB} & TP-Rate & 0,28 & 0,95 & 0,46 \\
+ & FP-Rate & 0,05 & 0,73 & 0,24 \\
+ & Precision & 0,93 & 0,33 & 0,77 \\
+ & Recall & 0,28 & 0,95 & 0,46 \\
+ & F-Score & 0,42 & 0,48 & 0,44 \\
+ & ROC-Area & 0,66 & 0,66 & 0,66 \\
+ & PRC-Area & 0,85 & 0,40 & 0,73 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}NN} & TP-Rate & 1,00 & 0,33 & 0,82 \\
+ & FP-Rate & 0,67 & 0,01 & 0,49 \\
+ & Precision & 0,80 & 0,96 & 0,84 \\
+ & Recall & 1,00 & 0,33 & 0,82 \\
+ & F-Score & 0,89 & 0,49 & 0,78 \\
+ & ROC-Area & 0,76 & 0,76 & 0,76 \\
+ & PRC-Area & 0,88 & 0,66 & 0,82 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}RF} & TP-Rate & 1,00 & 0,97 & 0,99 \\
+ & FP-Rate & 0,03 & 0,00 & 0,02 \\
+ & Precision & 0,99 & 0,99 & 0,99 \\
+ & Recall & 1,00 & 0,97 & 0,99 \\
+ & F-Score & 0,99 & 0,98 & 0,99 \\
+ & ROC-Area & 1,00 & 1,00 & 1,00 \\
+ & PRC-Area & 1,00 & 0,99 & 1,00 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}SGD} & TP-Rate & 1,00 & 0,00 & 0,73 \\
+ & FP-Rate & 1,00 & 0,00 & 0,73 \\
+ & Precision & 0,73 & 0,00 & 0,54 \\
+ & Recall & 1,00 & 0,00 & 0,73 \\
+ & F-Score & 0,85 & 0,00 & 0,62 \\
+ & ROC-Area & 0,50 & 0,50 & 0,50 \\
+ & PRC-Area & 0,73 & 0,27 & 0,61 \\ 
+\hline
+\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}SVM} & TP-Rate & 1,00 & 0,00 & 0,73 \\
+ & FP-Rate & 1,00 & 0,00 & 0,73 \\
+ & Precision & 0,73 & ? & ? \\
+ & Recall & 1,00 & 0,00 & 0,73 \\
+ & F-Score & 0,85 & ? & ? \\
+ & ROC-Area & 0,50 & 0,50 & 0,50 \\
+ & PRC-Area & 0,73 & 0,27 & 0,61
+\end{tabular}
+}
+\end{table}
 
 \cleardoublepage

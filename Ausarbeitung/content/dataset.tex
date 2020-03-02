@@ -157,8 +157,6 @@ Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes
 
 Eine Übersicht des Schemas der nun vollständigen initialen  MySQL-Tabellen (im folgenden Haupttabellen genannt) ist in Tabelle XX aufgeührt. Wie bereits zuvor erwähnt, umfasst diese Tabellle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\textbf{HIER!}
-
 \begin{table}[]
 \caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
@@ -181,7 +179,67 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 \section{Metriken}
 
-\textbf{Ergänzen!!!!}
+Wie bereits in Kapitel XX erwähnt wurde, bilden sogenannte Metriken die Attribute zum Training der Machine-Learning-Klassifikatoren. Bei Metriken handelt sich sich um Zahlenwerte, die in Codemetriken und Prozessmetriken aufgeteilt sind und jeweils anhand der vorhandenen Daten des Datensets berechnet werden \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind Anzahl der Veränderungen einer bestimmten Datei oder Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden 11 Metriken errechnet, aufgeteilt in 7 Prozess- und 4 Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet.
+
+Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten bezüglich der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In Abbildung XX wird die Abgrenzung zwischen feature- und dateibasierten Datensets ahhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im vorherigen Abschnitt erläutert wurden (Schritte C - E). Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in Tabelle XX.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=\textwidth]{images/Dataset}
+    \caption{Visualisierung zur Unterscheidung der Datensets\label{fig:dataset}}
+\end{figure}
+
+\textbf{Ergänzen!!!! Feature und File betrachtung}
+
+\begin{table}
+\centering
+\caption{Übersicht der berechneten Metriken}
+\label{tab:metrics}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l|llc} 
+\cline{2-4}
+                             & \textbf{Metrik}                                                                               & \textbf{Beschreibung}                                                                                                                                                                                                                                                                                                                                        & \multicolumn{1}{c|}{\textbf{Quelle} }  \\ 
+\hline
+\multirow{7}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Prozessmetriken}}}}} & Anzahl der~Commits (COMM)                                                                     & Anzahl der Commits, die dem Feature / der Datei in einem Release zugeordnet sind.                                                                                                                                                                                                                                                                            & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\aktiven Entwickler (ADEV)\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die innerhalb eines Releases das Feature /\\die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben.\end{tabular}                                                                                                                                                                                 & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}eindeutige\\Entwickleranzahl (DDEV)\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}kumulierte Anzahl der Entwickler, die innerhalb eines Releases das Feature / \\die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben.\end{tabular}                                                                                                                                                                     & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Erfahrung~aller\\Entwickler (EXP)\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die innerhalb eines Releases\\das Feature /~die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten \\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular} & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Erfahrung des meist \\beteiligten Entwicklers\\(OEXP)\end{tabular} & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, die innerhalb eines Releases das Feature / die Datei \\am häufigsten bearbeitet (geändert, gelöscht oder hinzugefügt) hat.\\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten\\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular}                & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Grad der\\Änderungen (MODD)\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Anzahl der Bearbeitungen (Änderung, Entfernung, Erweiterung) des Features /\\der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                                     & neu                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS)\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features / Dateien innerhalb eines Releases \\(Feature- bzw. dateiübergreifender Wert). Idee: Je mehr Features / \\Dateien in einem Release bearbeitet worden, desto fehleranfälliger scheinen \\diese zu sein. \end{tabular}                                                                             & neu                                    \\ 
+\hline
+\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC)\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                                 & neu                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO)\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                             & neu                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL)\end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu den dem Feature\\zugeordneten Dateien / zur Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                 & neu                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML)\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von den dem Feature\\zugeordneten Dateien /~ von der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                              & neu                                   
+\end{tabular}
+}
+\end{table}
+
+\begin{table}
+\centering
+\caption{Overview of used metrics}
+\label{tab:metrics}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{l|llc} 
+\cline{2-4}
+                             & \textbf{Metric}                                                                            & \textbf{Description}                                                                                                                                                                                                                                                                                        & \multicolumn{1}{c|}{\textbf{Source} }  \\ 
+\hline
+\multirow{7}{*}{\textbf{\rotatebox[origin=c]{90}{Process metrics}}} & Number of commits (COMM)                                                                   & Number of commits associated with the feature/file in a release.                                                                                                                                                                                                                                             & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & Number of active developers (ADEV)                                                         & \begin{tabular}[c]{@{}l@{}}Number of developers who have edited (changed, deleted or added) \\the feature / file within a release\end{tabular}                                                                                                                                                               & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & Number of distinct developers (DDEV)                                                       & \begin{tabular}[c]{@{}l@{}}Cumultative number of developers who have edited (changed, deleted or added) \\the feature / file within a release\end{tabular}                                                                                                                                                   & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & Experience of all develepoers (EXP)                                                        & \begin{tabular}[c]{@{}l@{}}geometric mean of the experience of all developers who have edited \\(changed, deleted or added) the feature / file within a release.~\\Experience is defined as the sum of the changed, deleted or added \\lines in the commits associated with the feature / file.\end{tabular} & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & \begin{tabular}[c]{@{}l@{}}Experience of the most involved developers\\(OEXP)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Experience of the developer who has edited (changed, deleted or added) \\the feature / file most often within a release. Experience is defined as the \\sum of changed, deleted, or added lines in the commits associated with the \\feature/file.\end{tabular}                   & \cite{Rahman2013,Queiroz2016}                                    \\
+                             & Degree of modifications (MODD)                                                             & Number of edits (change, removal, extension) of the feature / file within a release.                                                                                                                                                                                                                         & new                                    \\
+                             & Scope of modifications (MODS)                                                              & \begin{tabular}[c]{@{}l@{}}Number of edited features / files within a release (feature or file overlapping value). \\Idea: The more features / files have been edited in a release, \\the more error-prone they seem to be.\end{tabular}                                                                     & new                                    \\ 
+\hline
+\multirow{4}{*}{\textbf{\rotatebox[origin=c]{90}{Code metrics}}} & Lines of code (NLOC)                                                                       & \begin{tabular}[c]{@{}l@{}}Average number of lines of code of the files associated with the feature /\\~file within a release.\end{tabular}                                                                                                                                                                  & new                                    \\
+                             & Cyclomatic Complexity (CYCO)                                                               & \begin{tabular}[c]{@{}l@{}}Average cyclomatic complexity of the files associated with the feature / \\file within a release.\end{tabular}                                                                                                                                                                    & new                                    \\
+                             & Number of added lines (ADDL)                                                               & \begin{tabular}[c]{@{}l@{}}Average number of lines of code added to the files associated with \\the feature / file within a release.\end{tabular}                                                                                                                                                            & new                                    \\
+                             & Number of removed lines (REML)                                                             & \begin{tabular}[c]{@{}l@{}}Average number of lines of code deleted from the files associated \\with the feature / from the file within a release\end{tabular}                                                                                                                                                & new                                   
+\end{tabular}
+}
+\end{table}
 
 \begin{table}[]
 \caption{Übersicht des Schemas der Metrics-Tabellen des Datensets}
@@ -199,5 +257,7 @@ exp                  & \begin{tabular}[c]{@{}l@{}}Geometrisches Mittel der "Erfa
 \end{tabular}%
 }
 \end{table}
+
+
 
 \cleardoublepage

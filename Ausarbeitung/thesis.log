@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  21 FEB 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  2 MAR 2020 17:33
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -983,6 +983,12 @@ LaTeX Warning: Label `tab:tools' multiply defined.
 
 LaTeX Warning: Label `tab:tools' multiply defined.
 
+
+LaTeX Warning: Label `tab:metrics' multiply defined.
+
+
+LaTeX Warning: Label `tab:metrics' multiply defined.
+
 ) (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
 \openout1 = `thesis.aux'.
 
@@ -1214,14 +1220,20 @@ Package pdftex.def Info: logos/chalmers.png  used on input line 26.
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [10] (thesis.lof)
+ [10] (thesis.lof
+Overfull \hbox (15.20729pt too wide) in paragraph at lines 59--59
+ [][] [][]\T1/ppl/m/n/10.95 Vergleich der Ac-cu-ra-cies je Klas-si-fi-ka-tor vo
+r und nach der An-wen-dung des SMOTE- 
+ []
+
+)
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
  [1
 
 
-]
+] [2]
 \openout2 = `content/introduction.aux'.
 
  (content/introduction.tex
@@ -1237,35 +1249,33 @@ Overfull \hbox (2.92424pt too wide) in paragraph at lines 16--17
 -re-sys-te-me hei-ÿen Software-Produktlinien
  []
 
-[2
+[3
 
 
 ]
-<images/SPL.png, id=275, 755.82375pt x 291.33844pt>
+<images/SPL.png, id=295, 755.82375pt x 291.33844pt>
 File: images/SPL.png Graphic file (type png)
 <use images/SPL.png>
 Package pdftex.def Info: images/SPL.png  used on input line 24.
 (pdftex.def)             Requested size: 455.24408pt x 175.47566pt.
- [3 <./images/SPL.png>] [4]
-<images/CRISP-DM1.png, id=295, 520.94624pt x 335.00156pt>
+ [4 <./images/SPL.png>] [5]
+<images/CRISP-DM1.png, id=314, 520.94624pt x 335.00156pt>
 File: images/CRISP-DM1.png Graphic file (type png)
 <use images/CRISP-DM1.png>
 Package pdftex.def Info: images/CRISP-DM1.png  used on input line 76.
 (pdftex.def)             Requested size: 455.24408pt x 292.75247pt.
-<images/CRISP-DM.png, id=301, 1312.15219pt x 178.41656pt>
+<images/CRISP-DM.png, id=320, 1312.15219pt x 178.41656pt>
 File: images/CRISP-DM.png Graphic file (type png)
 <use images/CRISP-DM.png>
 Package pdftex.def Info: images/CRISP-DM.png  used on input line 84.
 (pdftex.def)             Requested size: 455.24408pt x 61.89952pt.
- [5 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>] [6] [7]
-<images/Zeit.png, id=327, 828.84656pt x 415.5525pt>
+ [6 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>] [7] [8]
+<images/Zeit.png, id=346, 828.84656pt x 415.5525pt>
 File: images/Zeit.png Graphic file (type png)
 <use images/Zeit.png>
 Package pdftex.def Info: images/Zeit.png  used on input line 214.
 (pdftex.def)             Requested size: 455.24408pt x 228.23753pt.
- [8 <./images/Zeit.png>] [9] [10
-
-])
+ [9 <./images/Zeit.png>] [10])
 \openout2 = `content/background.aux'.
 
  (content/background.tex
@@ -1275,7 +1285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/ML.png, id=345, 828.84656pt x 397.485pt>
+<images/ML.png, id=360, 828.84656pt x 397.485pt>
 File: images/ML.png Graphic file (type png)
 <use images/ML.png>
 Package pdftex.def Info: images/ML.png  used on input line 21.
@@ -1287,8 +1297,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+
 ]
-<images/Prozess.png, id=351, 353.06906pt x 416.30531pt>
+<images/Prozess.png, id=366, 353.06906pt x 416.30531pt>
 File: images/Prozess.png Graphic file (type png)
 <use images/Prozess.png>
 Package pdftex.def Info: images/Prozess.png  used on input line 32.
@@ -1297,7 +1308,7 @@ Package pdftex.def Info: images/Prozess.png  used on input line 32.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./images/ML.png> <./images/Prozess.png>]
-<images/ML1.png, id=362, 950.04938pt x 330.48468pt>
+<images/ML1.png, id=377, 950.04938pt x 330.48468pt>
 File: images/ML1.png Graphic file (type png)
 <use images/ML1.png>
 Package pdftex.def Info: images/ML1.png  used on input line 43.
@@ -1311,12 +1322,12 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <./images/ML1.png>]
-<images/ML2.png, id=377, 685.05937pt x 368.1253pt>
+<images/ML2.png, id=392, 685.05937pt x 368.1253pt>
 File: images/ML2.png Graphic file (type png)
 <use images/ML2.png>
 Package pdftex.def Info: images/ML2.png  used on input line 67.
 (pdftex.def)             Requested size: 455.24408pt x 244.63736pt.
-<images/ML3.png, id=380, 963.6pt x 322.95656pt>
+<images/ML3.png, id=395, 963.6pt x 322.95656pt>
 File: images/ML3.png Graphic file (type png)
 <use images/ML3.png>
 Package pdftex.def Info: images/ML3.png  used on input line 73.
@@ -1332,7 +1343,7 @@ Overfull \hbox (18.15205pt too wide) in paragraph at lines 6--7
 er-nung der Machine-Learning-Klassifikatoren
  []
 
-<images/Kap3.png, id=390, 1297.84875pt x 261.22594pt>
+<images/Kap3.png, id=405, 1297.84875pt x 261.22594pt>
 File: images/Kap3.png Graphic file (type png)
 <use images/Kap3.png>
 Package pdftex.def Info: images/Kap3.png  used on input line 10.
@@ -1370,7 +1381,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 140.
 
-<images/Features.png, id=428, 963.6pt x 517.18219pt>
+<images/Features.png, id=443, 963.6pt x 517.18219pt>
 File: images/Features.png Graphic file (type png)
 <use images/Features.png>
 Package pdftex.def Info: images/Features.png  used on input line 142.
@@ -1380,7 +1391,7 @@ Package pdftex.def Info: images/Features.png  used on input line 142.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 150.
 
-<images/SZZ.png, id=438, 1297.84875pt x 304.88907pt>
+<images/SZZ.png, id=453, 1297.84875pt x 304.88907pt>
 File: images/SZZ.png Graphic file (type png)
 <use images/SZZ.png>
 Package pdftex.def Info: images/SZZ.png  used on input line 152.
@@ -1388,13 +1399,45 @@ Package pdftex.def Info: images/SZZ.png  used on input line 152.
 [18 <./images/Features.png> <./images/SZZ.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 162.
+               Default added (so using `tbp') on input line 160.
 
+[19]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 186.
 
-[19] [20])
+<images/Dataset.png, id=477, 1079.53313pt x 347.04657pt>
+File: images/Dataset.png Graphic file (type png)
+<use images/Dataset.png>
+Package pdftex.def Info: images/Dataset.png  used on input line 188.
+(pdftex.def)             Requested size: 455.24408pt x 146.35165pt.
+
+Overfull \vbox (42.52875pt too high) detected at line 216
+ []
+
+
+Overfull \hbox (2.34665pt too wide) in paragraph at lines 216--216
+[][] 
+ []
+
+
+Overfull \vbox (30.97673pt too high) detected at line 216
+ []
+
+
+Overfull \hbox (2.34665pt too wide) in paragraph at lines 216--216
+[][] 
+ []
+
+
+Overfull \vbox (10.98183pt too high) detected at line 241
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 244.
+
+[20 <./images/Dataset.png>] [21] [22])
 \openout2 = `content/classifier.aux'.
 
  (content/classifier.tex
@@ -1414,7 +1457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 19.
 
-[21
+[23
 
 
 
@@ -1424,17 +1467,17 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 43.
 
-<images/DT.png, id=485, 416.30531pt x 386.94562pt>
+<images/DT.png, id=538, 416.30531pt x 386.94562pt>
 File: images/DT.png Graphic file (type png)
 <use images/DT.png>
 Package pdftex.def Info: images/DT.png  used on input line 45.
 (pdftex.def)             Requested size: 227.62204pt x 211.56903pt.
-[22 <./images/DT.png>]
+[24 <./images/DT.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 54.
 
-<images/EUKLID.png, id=499, 146.04562pt x 45.92157pt>
+<images/EUKLID.png, id=552, 146.04562pt x 45.92157pt>
 File: images/EUKLID.png Graphic file (type png)
 <use images/EUKLID.png>
 Package pdftex.def Info: images/EUKLID.png  used on input line 56.
@@ -1443,7 +1486,7 @@ Package pdftex.def Info: images/EUKLID.png  used on input line 56.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 65.
 
-<images/ANN.png, id=506, 569.12625pt x 542.025pt>
+<images/ANN.png, id=559, 569.12625pt x 542.025pt>
 File: images/ANN.png Graphic file (type png)
 <use images/ANN.png>
 Package pdftex.def Info: images/ANN.png  used on input line 67.
@@ -1452,18 +1495,37 @@ Package pdftex.def Info: images/ANN.png  used on input line 67.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 76.
 
-<images/NB.png, id=509, 837.1275pt x 342.5297pt>
+<images/NB.png, id=562, 837.1275pt x 342.5297pt>
 File: images/NB.png Graphic file (type png)
 <use images/NB.png>
 Package pdftex.def Info: images/NB.png  used on input line 78.
 (pdftex.def)             Requested size: 318.66946pt x 130.38737pt.
-[23 <./images/EUKLID.png>] [24 <./images/ANN.png> <./images/NB.png>] [25]
-[26
+[25 <./images/EUKLID.png>] [26 <./images/ANN.png> <./images/NB.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 98.
+
+<images/smoted.png, id=586, 468.24937pt x 694.09312pt>
+File: images/smoted.png Graphic file (type png)
+<use images/smoted.png>
+Package pdftex.def Info: images/smoted.png  used on input line 100.
+(pdftex.def)             Requested size: 364.19664pt x 539.88654pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 104.
+
+<images/Vergleich1.png, id=587, 963.6pt x 542.025pt>
+File: images/Vergleich1.png Graphic file (type png)
+<use images/Vergleich1.png>
+Package pdftex.def Info: images/Vergleich1.png  used on input line 106.
+(pdftex.def)             Requested size: 455.24408pt x 256.07507pt.
+[27] [28 <./images/smoted.png>] [29 <./images/Vergleich1.png>] [30
 
 ])
 \openout2 = `content/evaluation.aux'.
 
- (content/evaluation.tex
+
+(content/evaluation.tex
 Kapitel 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
@@ -1471,170 +1533,315 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
  []
 
 
-Overfull \hbox (12.48866pt too wide) in paragraph at lines 56--56
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 20.
+
+<images/Confusion.png, id=614, 500.62032pt x 325.215pt>
+File: images/Confusion.png Graphic file (type png)
+<use images/Confusion.png>
+Package pdftex.def Info: images/Confusion.png  used on input line 22.
+(pdftex.def)             Requested size: 318.66946pt x 207.02531pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+[31
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+[32 <./images/Confusion.png>]
+Overfull \hbox (12.48866pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (23.44946pt too wide) in paragraph at lines 56--56
+Overfull \hbox (23.44946pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (13.09096pt too wide) in paragraph at lines 56--56
+Overfull \hbox (13.09096pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.4999pt too wide) in paragraph at lines 56--56
+Overfull \hbox (15.4999pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (12.37918pt too wide) in paragraph at lines 56--56
+Overfull \hbox (12.37918pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 RC| 
  []
 
 
-Overfull \hbox (10.7038pt too wide) in paragraph at lines 56--56
+Overfull \hbox (10.7038pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.87988pt too wide) in paragraph at lines 56--56
+Overfull \hbox (19.87988pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (21.31439pt too wide) in paragraph at lines 56--56
+Overfull \hbox (21.31439pt too wide) in paragraph at lines 94--94
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (12.03575pt too wide) in paragraph at lines 101--101
+Overfull \hbox (12.03575pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 J48| 
  []
 
 
-Overfull \hbox (23.58777pt too wide) in paragraph at lines 101--101
+Overfull \hbox (23.58777pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (11.44441pt too wide) in paragraph at lines 101--101
+Overfull \hbox (11.44441pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (13.22926pt too wide) in paragraph at lines 101--101
+Overfull \hbox (13.22926pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.6382pt too wide) in paragraph at lines 101--101
+Overfull \hbox (15.6382pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.8421pt too wide) in paragraph at lines 101--101
+Overfull \hbox (10.8421pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (20.01819pt too wide) in paragraph at lines 101--101
+Overfull \hbox (20.01819pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (21.4527pt too wide) in paragraph at lines 101--101
+Overfull \hbox (21.4527pt too wide) in paragraph at lines 139--139
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (12.0519pt too wide) in paragraph at lines 180--180
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 143.
+
+<images/Final_scikit.png, id=637, 475.02469pt x 693.34032pt>
+File: images/Final_scikit.png Graphic file (type png)
+<use images/Final_scikit.png>
+Package pdftex.def Info: images/Final_scikit.png  used on input line 145.
+(pdftex.def)             Requested size: 364.19664pt x 531.5991pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 149.
+
+<images/Final_weka.png, id=638, 476.53032pt x 690.32906pt>
+File: images/Final_weka.png Graphic file (type png)
+<use images/Final_weka.png>
+Package pdftex.def Info: images/Final_weka.png  used on input line 151.
+(pdftex.def)             Requested size: 364.19664pt x 527.626pt.
+
+Overfull \hbox (12.0519pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (23.0127pt too wide) in paragraph at lines 180--180
+Overfull \hbox (23.0127pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (12.65419pt too wide) in paragraph at lines 180--180
+Overfull \hbox (12.65419pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.06313pt too wide) in paragraph at lines 180--180
+Overfull \hbox (15.06313pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (11.94241pt too wide) in paragraph at lines 180--180
+Overfull \hbox (11.94241pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 RC| 
  []
 
 
-Overfull \hbox (10.26703pt too wide) in paragraph at lines 180--180
+Overfull \hbox (10.26703pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.44312pt too wide) in paragraph at lines 180--180
+Overfull \hbox (19.44312pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.87762pt too wide) in paragraph at lines 180--180
+Overfull \hbox (20.87762pt too wide) in paragraph at lines 229--229
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (11.89786pt too wide) in paragraph at lines 257--257
+Overfull \hbox (11.89786pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (22.85866pt too wide) in paragraph at lines 257--257
+Overfull \hbox (22.85866pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (10.7153pt too wide) in paragraph at lines 257--257
+Overfull \hbox (10.7153pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (12.50015pt too wide) in paragraph at lines 257--257
+Overfull \hbox (12.50015pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (14.90909pt too wide) in paragraph at lines 257--257
+Overfull \hbox (14.90909pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.11299pt too wide) in paragraph at lines 257--257
+Overfull \hbox (10.11299pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.28908pt too wide) in paragraph at lines 257--257
+Overfull \hbox (19.28908pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.72359pt too wide) in paragraph at lines 257--257
+Overfull \hbox (20.72359pt too wide) in paragraph at lines 306--306
  \T1/ppl/m/n/10.95 SVM| 
  []
 
-[27
+
+Overfull \hbox (8.6801pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 J48| 
+ []
 
 
+Overfull \hbox (20.23212pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 KNN| 
+ []
 
-] [28] [29] [30])
+
+Overfull \hbox (8.08876pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 LR| 
+ []
+
+
+Overfull \hbox (9.87361pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (12.28255pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (7.48645pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (16.66254pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (18.09705pt too wide) in paragraph at lines 353--353
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 357.
+
+<images/Klasseval.png, id=639, 888.31876pt x 531.48563pt>
+File: images/Klasseval.png Graphic file (type png)
+<use images/Klasseval.png>
+Package pdftex.def Info: images/Klasseval.png  used on input line 359.
+(pdftex.def)             Requested size: 455.24408pt x 272.37598pt.
+
+Overfull \hbox (6.64386pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 DT| 
+ []
+
+
+Overfull \hbox (17.60466pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 KNN| 
+ []
+
+
+Overfull \hbox (5.4613pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 LR| 
+ []
+
+
+Overfull \hbox (7.24615pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 NB| 
+ []
+
+
+Overfull \hbox (9.65509pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 NN| 
+ []
+
+
+Overfull \hbox (4.859pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 RF| 
+ []
+
+
+Overfull \hbox (14.03508pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 SGD| 
+ []
+
+
+Overfull \hbox (15.46959pt too wide) in paragraph at lines 437--437
+ \T1/ppl/m/n/10.95 SVM| 
+ []
+
+
+LaTeX Warning: Float too large for page by 21.32884pt on input line 438.
+
+[33] [34 <./images/Final_scikit.png>] [35 <./images/Final_weka.png>] [36 <./ima
+ges/Klasseval.png>] [37] [38] [39] [40])
 \openout2 = `content/conclusion.aux'.
 
  (content/conclusion.tex
@@ -1644,24 +1851,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[31
+[41
 
 
 
 
-] [32
+] [42
 
-]) [33
+]) [43
 
 
-] [34]
+] [44]
 Anhang A.
-[35
+[45
 
 ]
 Anhang B.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
-[36
+[46
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
@@ -1671,7 +1878,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 837C266D9517F7B70DD48A62E6CFC096;1957.
+(rerunfilecheck)             Checksum: DD076C085FDCFC9C63357A7C8232AC51;1965.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1681,24 +1888,28 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21646 strings out of 481565
- 368001 string characters out of 2914179
- 1381211 words of memory out of 3000000
- 36232 multiletter control sequences out of 15000+200000
+ 21746 strings out of 481565
+ 369976 string characters out of 2914179
+ 1419515 words of memory out of 3000000
+ 36301 multiletter control sequences out of 15000+200000
  573567 words of font info for 100 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
  63i,18n,100p,1921b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msam10.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/urw/courier/ucrr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/urw/helvetic/uhvr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/stefa/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/stefa/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (46 pages, 661156 bytes).
+cm/cmmi10.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/stefa/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/stefa/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/stefa/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users
+/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C
+:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
+.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino
+/uplri8a.pfb>
+Output written on thesis.pdf (56 pages, 1200929 bytes).
 PDF statistics:
- 710 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 
