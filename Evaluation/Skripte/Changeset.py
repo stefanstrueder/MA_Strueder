@@ -9,8 +9,7 @@ import mysql.connector
 target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
 mycursor = target_db.cursor()
 
-softwares = ["busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
-#softwares = ["blender1", "blender2", "blender3", "blender4"]
+softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
 # Calculate for each software and enter results in new table
 for software in softwares:

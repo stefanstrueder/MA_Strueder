@@ -1,0 +1,83 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung und Motivation}{3}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{3}{section*.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Forschungsziele und Forschungsfragen}{5}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Forschungsdesign}{6}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Zeitplanung}{7}{section.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{9}{section.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Hintergrund}{11}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{11}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Featurebasierte Softwareentwicklung}{11}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Machine-Learning-Klassifikation}{11}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Fehlervorhersage mittels Machine Learning}{13}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Erstellung eines featurebasierten Datensets}{15}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{15}{section*.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Datenauswahl}{15}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{17}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Metriken}{19}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Training und Test der Machine-Learning-Klassifikatoren}{23}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{23}{section*.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Auswahl der Werkzeuge und Klassifikationsalgorithmen}{23}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Analyse des Testprozesses}{27}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluation}{31}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{31}{section*.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{31}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Vergleich der Klassifikatoren}{31}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Evaluationsmetriken}{31}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Ergebnisse und Diskussion}{33}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Vergleich zu nicht-featurebasierten Methoden}{33}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Fazit}{41}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ausblick:}{41}{section*.65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{41}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Ausblick}{41}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{43}{chapter*.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Software-Projekte}{45}{appendix.A}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Test 2}{46}{appendix.B}%

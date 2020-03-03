@@ -9,8 +9,7 @@ import mysql.connector
 target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
 mycursor = target_db.cursor()
 
-softwares = ["busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
-#softwares = ["blender1", "blender2", "blender3", "blender4"]
+softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
 # Calculate metrics for each software project and enter into new table
 for software in softwares:
@@ -84,6 +83,8 @@ for software in softwares:
 	
 	mycursor.execute(query4)
 	result_set4 = mycursor.fetchall()
+	
+	counter = len(result_set4)
 		
 	for elem in result_set4:
 		rel = elem[1]
@@ -93,6 +94,7 @@ for software in softwares:
 		bugf = elem[5]
 		auth = elem[6]
 		key = rel + ":::" + file
+		counter = counter - 1
 		
 		try:
 			index_add = add_meta_list.index(key)
@@ -113,7 +115,7 @@ for software in softwares:
 			query5 = "INSERT INTO " + software + "_metrics_new (name, release_number, filename, revi, refa, bugf, auth, addl, addm, adda, reml, remm, rema, cchl, cchm, ccha) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 			mycursor.execute(query5, val)
 			target_db.commit()
-			print("Sth happened for: " + software)
+			print("Sth happened for: " + software + ": " + str(counter))
 			
 		except:
 			print("ERROR!")

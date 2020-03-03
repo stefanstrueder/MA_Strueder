@@ -1,35 +1,49 @@
 # Featurebasierte Fehlererkennung mittels Methoden des Machine Learnings
 
 ## Ordner  
-- Ausarbeitung  
+- Backup
+  - Datenset
+  - Erste Analyse
+  - Finale Analyse
+  - Klassifikatoren
+  - Skripte
 - Datenset
   - Finale Tabellen
   - Haupttabellen
   - Metrics-Tabellen
+  - Repositories
   - SZZ-Tabellen
-- Einführungspräsentation  
-- Literatur  
+- Dokumente
+  - Ausarbeitung
+  - Einführungspräsentation
+  - Proposal
+  - Zwischenbericht
+- Erste Analyse
+  - scikit
+  - Weka
+- Evaluation
+  - Datenset
+  - Ergebnisse
+  - Skripte
+- Finale Analyse
+  - Feat
+  - File_smoted
+- Klassifikatoren
+  - Feat
+  - File_smoted
+- Literatur
   - Fehlervorhersage
   - GitHub Mining
+  - Klassifikatoren
   - Methodik
+  - Metriken
   - ML
   - SPL allgemein
   - Text Mining Programmcode
   - Variabilität
-- Proposal
-- Skripte   
+- Skripte
   - Datenset
   - ML
-    - Erste Analyse
-      - DT (decision trees)
-      - kNN (k-nearest-neighbors)
-      - NB (naive bayes)
-      - NN (neuronale Netze)
-	  - RC (ridge classifier)
-      - RF (random forest)
-      - SGD (stochastic gradient descent)
-      - SVM (support vector machines)
-	  - Weka (Output-Logs des Weka-Tools
 - Webquellen
   - GitHub Mining
   - Metriken
