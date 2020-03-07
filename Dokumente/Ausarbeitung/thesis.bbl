@@ -353,6 +353,53 @@
       \verb :C$\backslash$:/Users/stefa/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Chapman et al. - 2000 - Crisp-Dm 1.0.pdf:pdf
       \endverb
     \endentry
+    \entry{Chawla2002}{article}{}
+      \name{author}{4}{}{%
+        {{hash=517c300d6831b45e817a12c128e0d3c0}{%
+           family={Chawla},
+           familyi={C\bibinitperiod},
+           given={N.\bibnamedelimi V.},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=8aa8d84745e95ea59fccbcc6d34e77b7}{%
+           family={Bowyer},
+           familyi={B\bibinitperiod},
+           given={K.\bibnamedelimi W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d767a8acee927fe772fe5ec34f93073f}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi O.},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=d66be0948a5085778a35663d6fd6c8cc}{%
+           family={Kegelmeyer},
+           familyi={K\bibinitperiod},
+           given={W.\bibnamedelimi P.},
+           giveni={W\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{AI} Access Foundation}%
+      }
+      \strng{namehash}{25994a8b1023c628464384a919fac03e}
+      \strng{fullhash}{8c67ad2e38d858dfc32312d1f697f6e2}
+      \strng{bibnamehash}{25994a8b1023c628464384a919fac03e}
+      \strng{authorbibnamehash}{25994a8b1023c628464384a919fac03e}
+      \strng{authornamehash}{25994a8b1023c628464384a919fac03e}
+      \strng{authorfullhash}{8c67ad2e38d858dfc32312d1f697f6e2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Artificial Intelligence Research}
+      \field{month}{6}
+      \field{title}{{SMOTE}: Synthetic Minority Over-sampling Technique}
+      \field{volume}{16}
+      \field{year}{2002}
+      \field{pages}{321\bibrangedash 357}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1613/jair.953
+      \endverb
+    \endentry
     \entry{Weka2016}{book}{}
       \name{author}{3}{}{%
         {{hash=14376659b7c222795bf43d1158efbaef}{%
@@ -542,6 +589,44 @@
       \range{pages}{13}
       \verb{doi}
       \verb 10.1057/palgrave.dbm.3240233
+      \endverb
+    \endentry
+    \entry{Moser2008}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=46b22c66989257ac974219396cf311d0}{%
+           family={Moser},
+           familyi={M\bibinitperiod},
+           given={Raimund},
+           giveni={R\bibinitperiod}}}%
+        {{hash=39780bf561ecea3f3fd53ead57031446}{%
+           family={Pedrycz},
+           familyi={P\bibinitperiod},
+           given={Witold},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ba7122735918fedd33253326a25c2e66}{%
+           family={Succi},
+           familyi={S\bibinitperiod},
+           given={Giancarlo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{ACM} Press}%
+      }
+      \strng{namehash}{18cdf0e60be11d280fa2223b6abd5039}
+      \strng{fullhash}{18cdf0e60be11d280fa2223b6abd5039}
+      \strng{bibnamehash}{18cdf0e60be11d280fa2223b6abd5039}
+      \strng{authorbibnamehash}{18cdf0e60be11d280fa2223b6abd5039}
+      \strng{authornamehash}{18cdf0e60be11d280fa2223b6abd5039}
+      \strng{authorfullhash}{18cdf0e60be11d280fa2223b6abd5039}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 13th international conference on Software engineering - {ICSE} '08}
+      \field{title}{A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1145/1368088.1368114
       \endverb
     \endentry
     \entry{OShea2015}{article}{}

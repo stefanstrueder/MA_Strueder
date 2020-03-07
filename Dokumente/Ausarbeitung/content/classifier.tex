@@ -81,7 +81,7 @@ Na\"{\i}ve-Bayes-Klassifikatoren zählen zu den linearen Klassifikatoren und bas
 
 Es existiert zudem eine Mehrzahl an Varianten des Na\"{\i}ve-Bayes-Klassifikators, die verschiedene Annahmen über die Verteilung der Attribute der Eingabemenge machen. Beispiele dafür sind der Gauß'sche-Na\"{\i}ve-Bayes (normalverteilte Attribute), der multinomiale Na\"{\i}ve-Bayes (multinomiale Verteilung der Attribute) sowie der Bernoulli-Na\"{\i}ve-Bayes (unabhängige binäre Attribute).
 
-\subsubsection*{Logistische Regression}
+\subsubsection*{Logistic Regression}
 Logistische Regressions-Klassifikatoren basieren auf dem mathematischen Konzept des Logits, welcher den natürlichen Logarithmus eines Chancenverhältnisses beschreibt \cite{Peng2002}. Am besten geeignet ist dieser Klassifikator für eine Kombination aus kategorischen oder kontinuierlichen Eingabedaten und kategorischen Zielklassen \cite{Peng2002}.
 
 \textbf{HIER}
@@ -95,6 +95,28 @@ Support Vector Machines verfolgen das Ziel, linear separierbare Klassen
 
 \section{Analyse des Testprozesses}
 
+\textbf{KONFIGURATION DER KLASSIFIKATOREN ERLÄUTERN + FINALE KONFIG ALS TABELLE}\\\textbf{SMOTE}
+
+Im weiteren Verlauf dieses Abschnitts und im Rahmen der Evaluation im folgenden Kapitel, werden die Namen der Klassifikatoren auf Abbildungen abgekürzt. Die Abkürzungen können Tabelle XX entnommen werden.
+
+\begin{table}
+\centering
+\caption{Zuordnung der verwendeten Abkürzungen}
+\label{tab:abbs}
+\begin{tabular}{ll|ll}
+\textbf{Abkürzung} & \textbf{Klassifikator} & \textbf{Abkürzung} & \textbf{Klassifikator} \\ 
+\hline
+DT / J48 & Decision Trees & RC & Ridge Classifier \\
+KNN & k-Nearest-Neighbor & RF & Random Forest \\
+LR & Logistic Regression & SGD & Stochastic Grandient Descent \\
+NB & Na\"{\i}ve Bayes & SVM & Support Vector Machines \\
+NN & künstliche neuronale Netze &  & 
+\end{tabular}
+\end{table}
+
+Die Analyse des Testprozesses zeigte zudem, dass das dateibasierte Datenset stark unbalanciert hinsichtlich der Zielklasse ist. Mit einem Wert von etwa 98\% existieren weitaus mehr Einträge, die dem Label \glqq fehlerfrei\grqq{} zugeordnet sind. Balanciertheit, also ein ausgeglichenes Verhältnis (50:50 ist im binären Fall nicht zwingend notwendig) innerhalb der Zielklassen, ist jedoch eine Voraussetzung für das korrekte Erlernen der meisten Klassifikatoren. Eine Nichtbeachtung dieses Problem kann zu einer irreführenden Accuracy führen, da die meisten Datensätze korrekt der überrepräsentierten Klasse zugeordnet werden. Als Lösung dieses Problems wurde der sogenannte SMOTE-Algorithmus auf das dateibasierte Datenset angewendet \cite{Chawla2002}. Der Algorithmus, dessen Akronym für \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique steht, führt ein Oversampling der unterrepräsentierten Klasse durch \cite{Chawla2002}. Anhand von nächste-Nachbarn-Berechnungen auf Basis der Euklidischen Distanz zwischen den Attributwerten der einzelnen Datensätze des Datensets, werden neue synthetische Datensätze hinzugefügt (Oversampling), sodass sich die Anzahl der Datensätze der relevanten Klasse erhöht \cite{Chawla2002}. Im hier durchgeführten Fall wurde der Prozentsatz für die Generierung der synthetischen Datensätze auf 3000 festgelegt, sodass für jeden vorhandenen Datensatz der unterrepräsentierten Klasse 30 zusätzliche synthetische Datensätze erzeugt wurden. So konnte der Anteil der Datensätze mit dem Label \glqq fehlerhaft\grqq{} auf etwa 27\% erhöht werden. In Abbildung XX ist dargestellt, welchen Einfluss die Anwendung des SMOTE-Algorithmus auf die Accuracies der Klassifikatoren des datenbasierten Datensets im Rahmen des Testprozesses hatte. Das mit \glqq vorher\grqq{} deklarierte Diagramm zeigt, dass nahezu alle Klassifikatoren eine Accuracy von nahezu 100\% besitzen, was das zuvor beschriebene Problem widerspiegelt. Das Diagramm, welches die Testergebnisse nach Anwendung des SMOTE-Algorithmus darstellt, weist hingegen wesentlich realistischere Accuracies auf.
+
+
 \begin{figure}[]
     \centering
     \includegraphics[width=0.8\textwidth]{images/smoted}
@@ -106,6 +128,5 @@ Support Vector Machines verfolgen das Ziel, linear separierbare Klassen
     \includegraphics[width=\textwidth]{images/Vergleich1}
     \caption{Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\label{fig:vergl1}}
 \end{figure}
-
 
 \cleardoublepage

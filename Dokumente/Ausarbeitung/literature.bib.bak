@@ -146,6 +146,15 @@
   publisher = {Springer Science and Business Media {LLC}},
 }
 
+@InProceedings{Moser2008,
+  author    = {Raimund Moser and Witold Pedrycz and Giancarlo Succi},
+  title     = {A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction},
+  booktitle = {Proceedings of the 13th international conference on Software engineering - {ICSE} {\textquotesingle}08},
+  year      = {2008},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/1368088.1368114},
+}
+
 @Article{Noble2006,
   author    = {William S Noble},
   title     = {What is a support vector machine?},

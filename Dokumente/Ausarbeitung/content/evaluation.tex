@@ -139,6 +139,53 @@ Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu de
 }
 \end{table}
 
+\begin{figure}
+  \centering
+  \subfloat[][DT (scikit)]{\includegraphics[width=0.25\linewidth]{images/dt_scikit}}
+  \subfloat[][J48 (WEKA)]{\includegraphics[width=0.25\linewidth]{images/j48_weka}}
+  \subfloat[][NN (scikit)]{\includegraphics[width=0.25\linewidth]{images/nn_scikit}}
+  \subfloat[][NN (WEKA)]{\includegraphics[width=0.25\linewidth]{images/nn_weka}}
+  \qquad
+  \subfloat[][KNN (scikit)]{\includegraphics[width=0.25\linewidth]{images/knn_scikit}}
+  \subfloat[][KNN (WEKA)]{\includegraphics[width=0.25\linewidth]{images/knn_weka}}
+  \subfloat[][RF (scikit)]{\includegraphics[width=0.25\linewidth]{images/rf_scikit}}
+  \subfloat[][RF (WEKA)]{\includegraphics[width=0.25\linewidth]{images/rf_weka}}
+  \qquad
+  \subfloat[][RC (scikit)]{\includegraphics[width=0.25\linewidth]{images/rc_scikit}}
+  \subfloat[][LR (WEKA)]{\includegraphics[width=0.25\linewidth]{images/lr_weka}}
+  \subfloat[][SGD (scikit)]{\includegraphics[width=0.25\linewidth]{images/sgd_scikit}}
+  \subfloat[][SGD (WEKA)]{\includegraphics[width=0.25\linewidth]{images/sgd_weka}}
+  \qquad
+  \subfloat[][NB (scikit)]{\includegraphics[width=0.25\linewidth]{images/nb_scikit}}
+  \subfloat[][NB (WEKA)]{\includegraphics[width=0.25\linewidth]{images/nb_weka}}
+  \subfloat[][SVM (scikit)]{\includegraphics[width=0.25\linewidth]{images/svm_scikit}}
+  \subfloat[][SVM (WEKA)]{\includegraphics[width=0.25\linewidth]{images/svm_weka}}
+  \caption{ROC-Kurven der Klassifikatoren des featurebasierten Datensets}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subfloat[][DT (scikit)]{\includegraphics[width=0.25\linewidth]{images/dt_scikit_file}}
+  \subfloat[][J48 (WEKA)]{\includegraphics[width=0.25\linewidth]{images/j48_weka_file}}
+  \subfloat[][NN (scikit)]{\includegraphics[width=0.25\linewidth]{images/nn_scikit_file}}
+  \subfloat[][NN (WEKA)]{\includegraphics[width=0.25\linewidth]{images/nn_weka_file}}
+  \qquad
+  \subfloat[][KNN (scikit)]{\includegraphics[width=0.25\linewidth]{images/knn_scikit_file}}
+  \subfloat[][KNN (WEKA)]{\includegraphics[width=0.25\linewidth]{images/knn_weka_file}}
+  \subfloat[][RF (scikit)]{\includegraphics[width=0.25\linewidth]{images/rf_scikit_file}}
+  \subfloat[][RF (WEKA)]{\includegraphics[width=0.25\linewidth]{images/rf_weka_file}}
+  \qquad
+  \subfloat[][RC (scikit)]{\includegraphics[width=0.25\linewidth]{images/rc_scikit_file}}
+  \subfloat[][LR (WEKA)]{\includegraphics[width=0.25\linewidth]{images/lr_weka_file}}
+  \subfloat[][SGD (scikit)]{\includegraphics[width=0.25\linewidth]{images/sgd_scikit_file}}
+  \subfloat[][SGD (WEKA)]{\includegraphics[width=0.25\linewidth]{images/sgd_weka_file}}
+  \qquad
+  \subfloat[][NB (scikit)]{\includegraphics[width=0.25\linewidth]{images/nb_scikit_file}}
+  \subfloat[][NB (WEKA)]{\includegraphics[width=0.25\linewidth]{images/nb_weka_file}}
+  \subfloat[][SVM (scikit)]{\includegraphics[width=0.25\linewidth]{images/svm_scikit_file}}
+  \subfloat[][SVM (WEKA)]{\includegraphics[width=0.25\linewidth]{images/svm_weka_file}}
+  \caption{ROC-Kurven der Klassifikatoren des dateibasierten Datensets}
+\end{figure}
 
 \begin{figure}[]
     \centering
@@ -309,6 +356,35 @@ Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu de
 
 \section{Vergleich zu nicht-featurebasierten Methoden}
 
+\begin{table}[]
+\centering
+\caption{Übersicht der berechneten Metriken nach \cite{Moser2008}}
+\label{tab:eval-metrics}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lll}
+\hline
+\multicolumn{1}{|l}{\textbf{Name}} & \textbf{Abkürzung} & \multicolumn{1}{l|}{\textbf{Beschreibung}}                                                                                                                                                                       \\ \hline
+REVISIONS                          & revi               & Anzahl der Revisionen (Bearbeitungen) der Datei.                                                                                                                                                                 \\
+REFACTORINGS                       & refa               & \begin{tabular}[c]{@{}l@{}}Anzahl der Fälle, in denen die Datei in einem Refactoring\\ involviert war.  Basierend auf Analyse der Commit-Nachricht\\ auf das Vorhandensein des Begriffs "refactor".\end{tabular} \\
+BUGFIXES                           & bugf               & \begin{tabular}[c]{@{}l@{}}Anzahl der Fälle, in denen die Datei in einer Fehlerbehebung\\ involviert war.\end{tabular}                                                                                           \\
+AUTHORS                            & auth               & \begin{tabular}[c]{@{}l@{}}Anzahl der verschiedenen Autoren, die die Datei in das\\ Repository eingecheckt haben.\end{tabular}                                                                                   \\
+LOC\_ADDED                         & addl               & \begin{tabular}[c]{@{}l@{}}Summe der zur Datei hinzugefügten Codezeilen über\\ alle Revisionen.\end{tabular}                                                                                                     \\
+MAX\_LOC\_ADDED                    & addm               & \begin{tabular}[c]{@{}l@{}}Maximale Anzahl von Codezeilen, die für alle Revisionen\\ hinzugefügt wurden.\end{tabular}                                                                                            \\
+AVE\_LOC\_ADDED                    & adda               & Durchschnittlich hinzugefügte Codezeilen pro Revision.                                                                                                                                                           \\
+LOC\_DELETED                       & reml               & \begin{tabular}[c]{@{}l@{}}Summe der von der Datei entfernten Codezeilen über alle\\ Revisionen.\end{tabular}                                                                                                    \\
+MAX\_LOC\_DELETED                  & remm               & \begin{tabular}[c]{@{}l@{}}Maximale Anzahl von Codezeilen, die für alle Revisionen\\ entfernt wurden.\end{tabular}                                                                                               \\
+AVE\_LOC\_DELETED                  & rema               & Durchschnittlich entfernte Codezeilen pro Revision.                                                                                                                                                              \\
+CODECHURN                          & cchl               & \begin{tabular}[c]{@{}l@{}}Summe von (hinzugefügte Codezeilen - entfernte Codezeilen)\\ über alle Revisionen.\end{tabular}                                                                                       \\
+MAX\_CODECHURN                     & cchl               & Maximaler CODECHURN für alle Revisionen.                                                                                                                                                                         \\
+AVE\_CODECHURN                     & ccha               & Durchschnittlicher CODECHURN pro Revision.                                                                                                                                                                       \\
+MAX\_CHANGESET                     & maxc               & \begin{tabular}[c]{@{}l@{}}Maximale Anzahl von Dateien, die gemeinsam committed\\ wurden.\end{tabular}                                                                                                           \\
+AVE\_CHANGESET                     & avgc               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl von Dateien, die gemeinsam\\ committed wurden.\end{tabular}                                                                                                  \\
+AGE                                & aage               & \begin{tabular}[c]{@{}l@{}}Alter der Datei in Wochen (rückwärts zählend bis zu\\ einem bestimmten Release).\end{tabular}                                                                                         \\
+WEIGHTED\_AGE                      & wage               & $Weighted Age = \frac{\sum_{i=1}^N Age(i)*LOC\_ADDED(i)}{\sum_{i=1}^N LOC\_ADDED(i)}$                                                                                                                                                                                                          
+\end{tabular}%
+}
+\end{table}
+
 \begin{table}
 \centering
 \caption{Konfusionsmatrizen der Evaluation der Klassifikatoren des klassischen Datensets}
@@ -357,7 +433,21 @@ Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu de
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{images/Klasseval}
-    \caption{Übersicht der Accuracies der jeweilgen Klassifikatoren)\label{fig:class-acc}}
+    \caption{Übersicht der Accuracies der jeweilgen Klassifikatoren\label{fig:class-acc}}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \subfloat[][J48]{\includegraphics[width=0.25\linewidth]{images/j48_eval}}
+  \subfloat[][KNN]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
+  \subfloat[][NN]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
+  \subfloat[][RF]{\includegraphics[width=0.25\linewidth]{images/rf_eval}}
+  \qquad
+  \subfloat[][LR]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
+  \subfloat[][NB]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
+  \subfloat[][SGD]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
+  \subfloat[][SVM]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
+  \caption{ROC-Kurven der Klassifikatoren}
 \end{figure}
 
 

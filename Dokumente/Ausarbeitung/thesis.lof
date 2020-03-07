@@ -16,13 +16,13 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Generierung von Software-Produktlinien nach \cite {Thuem2014}\relax }}{4}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Generierung von Software-Produktlinien nach \cite {Thuem2014}\relax }}{3}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces CRISP-DM Prozessmodells nach \cite {Chapman2000}\relax }}{6}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces CRISP-DM Prozessmodells nach \cite {Chapman2000}\relax }}{5}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Phasen des CRISP-DM Prozessmodells nach \cite {Chapman2000} mit Zuordnung der Arbeitsphasen\relax }}{6}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Phasen des CRISP-DM Prozessmodells nach \cite {Chapman2000} mit Zuordnung der Arbeitsphasen\relax }}{5}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Zeitlicher Ablaufplan der Arbeit als Gantt-Chart\relax }}{9}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Zeitlicher Ablaufplan der Arbeit als Gantt-Chart\relax }}{8}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -56,19 +56,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{26}{figure.caption.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus\relax }}{28}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus\relax }}{29}{figure.caption.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{29}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{30}{figure.caption.54}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{32}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{32}{figure.caption.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\relax }}{34}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets\relax }}{34}{figure.caption.59}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\relax }}{35}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets\relax }}{35}{figure.caption.60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Übersicht der Accuracies der jeweilgen Klassifikatoren)\relax }}{36}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\relax }}{36}{figure.caption.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\relax }}{37}{figure.caption.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Übersicht der Accuracies der jeweilgen Klassifikatoren\relax }}{38}{figure.caption.67}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces ROC-Kurven der Klassifikatoren\relax }}{41}{figure.caption.68}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

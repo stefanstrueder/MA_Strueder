@@ -22,8 +22,8 @@ Die Machine-Learning-Klassifikation unterliegt dem Teilgebiet des \emph{überwac
     \caption{Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)}\label{fig:ml}
 \end{figure}
 
-Das in der Abbildung gezeigte Beispiel zeigt den Prozess der Entwicklung und Anwendung eines Klassifikators zur Erkennung von geometrischen Formen.
-Der Prozess beginnt mit der Erstellung eines Datensets, welches als Input für die Anlernung des Klassifikators dient.
+Das in der Abbildung gezeigte Beispiel zeigt den Prozess der Entwicklung und Erlernung eines Klassifikators zur Erkennung von geometrischen Formen.
+Der Prozess beginnt mit der Erstellung eines Datensets, welches als Input für die Erlernung des Klassifikators dient.
 
 \textbf{ÜBERARBEITEN!}
 
@@ -35,7 +35,9 @@ Der Prozess beginnt mit der Erstellung eines Datensets, welches als Input für d
 
 \section{Fehlervorhersage mittels Machine Learning}
 
-Die nachfolgenden drei Abbildungen zeigen den von Queiroz et at. \cite{Queiroz2016} angewandten Prozess zur Entwicklung und Anwendung eines featurebasierten Klassifikators im Rahmen des überwachten Machine Learnings. Die gezeigten Darstellungen orientieren sich sowohl gestalterisch als auch inhaltlich an den in \autoref{fig:ml} gezeigten allgemeinen Prozess des überwachten Machine Learnings. Ferner dient dieser Prozess als grundlegender Prozess für diese Arbeit.
+Der Hintergrund zur Fehlervorhersage mittels Machine Learning wird anhand eines Beispiels aus der Literatur erläutert. Es stammt aus einer wissenschaftlichen Arbeit von Queiroz et al. \cite{Queiroz2016} und widmet sich der Fehlervorsage von Features. Bei dieser ersten Fallstudie handelt es sich um die bisher einzige Arbeit mit Bezug zu Software-Features und stellt somit für diese Masterarbeit eine bedeutende literarische Grundlage dar. Der Ablauf des von Queiroz et al. angewandten Prozesses zur Erstellung eines featurebasierten Datensets und dessen Anwendung zur Erlernung von Klassifikatoren orientiert sich am zuvor vorgestellten allgemeinen Prozess des überwachten Machine Learnings.
+
+Die Erläuterung des Beispiels erfolgt anhand von drei Abbildungen, welche den in der Arbeit von Queiroz et al. vorgestellten Prozess in drei Teilen visualisieren. 
 
 \begin{figure}[H]
     \centering
@@ -44,21 +46,27 @@ Die nachfolgenden drei Abbildungen zeigen den von Queiroz et at. \cite{Queiroz20
     \caption{Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite{Queiroz2016}}\label{fig:ml1}
 \end{figure}
 
-Die Datenbasis des Datensets bilden Commits des UNIX-Toolkits BusyBox\footnote{\url{https://busybox.net/}}, dessen Quellcode frei verfügbar in einem Git-Repository\footnote{\url{https://git.busybox.net/busybox/}} eingesehen und von dort geklont werden kann. Diese Commits wurden wiederum ihren entsprechenden Releases zugeordnet, welche auf der vergebenen Tag-Struktur des Repositories beruhen. Ferner wurden aus den Diffs der Commits die dort bearbeiteten Features extrahiert und anschließend zusammen mit den Release-Informationen in einer MySQL-Datenbank gespeichert. Zusätzlich enthält jeder Datenbankeintrag aggregierte Werte von fünf auf das Feature und den Release bezogenen Prozessmetriken (Erläuterung folgt), sowie das binäre Label, ob ein Feature in einem Release fehlerhaft oder fehlerfrei war. Ein Feature gilt in einem Release als fehlerhaft, sofern in einem Commit des darauffolgenden Releases ein fehlerbehebender Commit festgestellt werden konnte. Dies geschieht über die Analyse der Commit-Nachrichten. Sofern eine Commit-Nachricht die Begriffe "Bug", "Error", "Fail" oder "Fix" enthält, werden die Autoren des Papers den Commit als fehlerbehebend. Wie im Rahmen des überwachten Machine Learning üblich, wird das Datenset in Trainings- und Testdaten in einem Verhältnis von 75:25 geteilt. 
+Die Datenbasis des Datensets bilden Commits des UNIX-Toolkits BusyBox\footnote{\url{https://busybox.net/}}, dessen Quellcode frei verfügbar in einem Git-Repository\footnote{\url{https://git.busybox.net/busybox/}} eingesehen und von dort geklont werden kann. Diese Commits wurden wiederum ihren entsprechenden Releases zugeordnet, welche auf der vergebenen Tag-Struktur des Repositories beruhen. Ferner wurden aus den Diffs der Commits die dort bearbeiteten Features extrahiert und anschließend zusammen mit den Release-Informationen in einer MySQL-Datenbank gespeichert. Zusätzlich enthält jeder Datenbankeintrag aggregierte Werte von fünf auf das Feature und den Release bezogenen Prozessmetriken (Erläuterung folgt) sowie das binäre Label, ob ein Feature in einem Release fehlerhaft oder fehlerfrei war. Ein Feature gilt in einem Release als fehlerhaft, sofern in einem Commit des darauffolgenden Releases ein fehlerbehebender Commit bezüglich des Features festgestellt werden konnte. Dies geschieht über die Analyse der Commit-Nachrichten. Sofern eine Commit-Nachricht die Begriffe \glqq bug\grqq{} (Fehler), \glqq error\grqq{} (schwerwiegender Fehler), \glqq fail\grqq{} (fehlschlagen) oder \glqq fix\grqq{} (beheben) enthält, werten die Autoren des Papers den Commit als fehlerbehebend. Wie im Rahmen des überwachten Machine Learning üblich, wird das Datenset in Trainings- und Testdaten in einem Verhältnis von 75:25 geteilt. 
 
-Die Trainingsdaten werden dann den Klassifikatoren zur Anlernung zur Verfügung gestellt. Als Attribute dienen die fünf bereits erwähnten Prozessmetriken. Die nachfolgende Tabelle gibt einen Überblick über die Beschreibungen dieser.
+\textbf{ALTERNATIVE WEGE (BUGTRACKING, SZZ), SIEHE VERGLEICHSPAPER}
 
-\begin{table}[H]
+Die Trainingsdaten werden dann den Klassifikatoren zur Erlernung zur Verfügung gestellt. Als Attribute dienen die fünf bereits erwähnten Prozessmetriken mit spezifischer Betrachtung von Software-Features. Die nachfolgende Tabelle gibt einen Überblick über die Beschreibungen dieser.
+
+\begin{table}
 \centering
-\caption{Übersicht der verwendeten Prozessmetriken}
+\caption{Übersicht der von \cite{Queiroz2016} verwendeten Prozessmetriken}
 \label{tab:metrics}
-\begin{tabular}{l|l}
-\textbf{Metrik} & \textbf{Beschreibung}                                                                                                                                                                         \\ \hline
-COMM            & \begin{tabular}[c]{@{}l@{}}Anzahl der Commits, die in einem Release dem betreffenden \\ Feature / der betroffenen Datei gewidmet sind\end{tabular}                                            \\
-ADEV            & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die das betreffende Feature / \\ die betreffende Datei in einem Release bearbeitet haben\end{tabular}                                       \\
-DDEV            & \begin{tabular}[c]{@{}l@{}}kummulierte Anzahl der Entwickler, die das betreffende Feature /\\ die betreffende Datei in einem Release bearbeitet haben\end{tabular}                            \\
-EXP             & \begin{tabular}[c]{@{}l@{}}Geometrisches Mittel der "Erfahrung" aller Entwickler, die am \\ betreffenden Feature / an der betreffenden Datei in einem Release\\ gearbeitet haben\end{tabular} \\
-OEXP            & \begin{tabular}[c]{@{}l@{}}"Erfahrung"des Entwicklers, der am meisten zum betreffenden \\ Feature / zur betreffenden Datei in einem Release beigetragen hat\end{tabular}                     
+\begin{tabular}{c|l}
+\multicolumn{1}{c|}{\textbf{Metrik} } & \textbf{Beschreibung}  \\ 
+\hline
+COMM & \begin{tabular}[c]{@{}l@{}}Anzahl der Commits, die in einem Release dem betreffenden \\ Feature gewidmet sind.\end{tabular} \\
+ADEV & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die das betreffende Feature\\in einem Release bearbeitet haben.\end{tabular} \\
+DDEV & \begin{tabular}[c]{@{}l@{}}kummulierte Anzahl der Entwickler, die das betreffende Feature\\in einem Release bearbeitet haben.\end{tabular} \\
+EXP & \begin{tabular}[c]{@{}l@{}}Geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die am \\ betreffenden Feature in einem Release gearbeitet haben.\end{tabular} \\
+OEXP & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, der am meisten zum betreffenden \\ Feature in einem Release beigetragen hat.\end{tabular} \\ 
+\hline
+\multicolumn{2}{c}{\begin{tabular}[c]{@{}c@{}}Erfahrung ist definiert als Summe der geänderten, gelöschten\\oder hinzugefügten Zeilen im zugehörigen Release.\end{tabular}} \\
+\hline
 \end{tabular}
 \end{table}
 
