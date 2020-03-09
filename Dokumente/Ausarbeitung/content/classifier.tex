@@ -15,25 +15,29 @@ Ebenfalls wird der WEKA-Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml
 
 Die Verwendung von zwei Machine-Learning-Werkzeugen ermöglicht einen Vergleich der jeweiligen Implementierungen der verwendeten Klassifikationsalgorithmen in der anschließenden Evaluation. Eine Übersicht über die ausgewählten Klassifikationsalgorithmen befindet sich in Tabelle XX. Kurze Erläuterungen der Algorithmen befinden sich im Anschluss.
 
-
-\begin{table}[]
+\begin{table}
 \centering
 \caption{Zum Training verwendete Klassifikationsalgorithmen}
 \label{tab:classifiers}
-\begin{tabular}{|l|l|}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.497\linewidth}|>{\hspace{0pt}}p{0.499\linewidth}|} 
 \hline
-\textbf{scikit-learn}       & \textbf{WEKA}               \\ \hline
-Decision Trees              & J48-Decision-Trees          \\ \hline
-k-Nearest-Neighbors         & k-Nearest-Neighbors         \\ \hline
-Ridge Classifier            & Logistic Regression         \\ \hline
-Naive Bayes                 & Naive Bayes                 \\ \hline
-künstliche neuronale Netze  & künstliche neuronale Netze  \\ \hline
-Random Forest               & Random Forest               \\ \hline
-Stochastic Gradient Descent & Stochastic Gradient Descent \\ \hline
-Support Vector Machines     & Support Vector Machines     \\ \hline
+\textbf{scikit-learn}  & \textbf{WEKA}  \\ 
+\hline
+Decision Trees & J48-Decision-Trees \\
+k-Nearest-Neighbors & k-Nearest-Neighbors \\
+Ridge Classifier & Logistic Regression \\
+Na\"{\i}ve Bayes & Na\"{\i}ve Bayes \\
+künstliche neuronale Netze & künstliche neuronale Netze \\
+Random Forest & Random Forest \\
+Stochastic Gradient Descent & Stochastic Gradient Descent \\
+Support Vector Machines & Support Vector Machines \\
+\hline
 \end{tabular}
+}
 \end{table}
 
+\label{algorithms}
 \subsubsection*{Decision Trees}
 
 \textbf{Überarbeiten?}
@@ -103,15 +107,19 @@ Im weiteren Verlauf dieses Abschnitts und im Rahmen der Evaluation im folgenden 
 \centering
 \caption{Zuordnung der verwendeten Abkürzungen}
 \label{tab:abbs}
-\begin{tabular}{ll|ll}
-\textbf{Abkürzung} & \textbf{Klassifikator} & \textbf{Abkürzung} & \textbf{Klassifikator} \\ 
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\centering\hspace{0pt}}p{0.15\linewidth}>{\hspace{0pt}}p{0.329\linewidth}|>{\centering\hspace{0pt}}p{0.15\linewidth}>{\hspace{0pt}}p{0.362\linewidth}|} 
+\hline
+\textbf{Abkürzung}  & \textbf{Klassifikator}  & \textbf{Abkürzung}  & \textbf{Klassifikator}  \\ 
 \hline
 DT / J48 & Decision Trees & RC & Ridge Classifier \\
 KNN & k-Nearest-Neighbor & RF & Random Forest \\
 LR & Logistic Regression & SGD & Stochastic Grandient Descent \\
 NB & Na\"{\i}ve Bayes & SVM & Support Vector Machines \\
-NN & künstliche neuronale Netze &  & 
+NN & künstliche neuronale Netze &  &  \\
+\hline
 \end{tabular}
+}
 \end{table}
 
 Die Analyse des Testprozesses zeigte zudem, dass das dateibasierte Datenset stark unbalanciert hinsichtlich der Zielklasse ist. Mit einem Wert von etwa 98\% existieren weitaus mehr Einträge, die dem Label \glqq fehlerfrei\grqq{} zugeordnet sind. Balanciertheit, also ein ausgeglichenes Verhältnis (50:50 ist im binären Fall nicht zwingend notwendig) innerhalb der Zielklassen, ist jedoch eine Voraussetzung für das korrekte Erlernen der meisten Klassifikatoren. Eine Nichtbeachtung dieses Problem kann zu einer irreführenden Accuracy führen, da die meisten Datensätze korrekt der überrepräsentierten Klasse zugeordnet werden. Als Lösung dieses Problems wurde der sogenannte SMOTE-Algorithmus auf das dateibasierte Datenset angewendet \cite{Chawla2002}. Der Algorithmus, dessen Akronym für \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique steht, führt ein Oversampling der unterrepräsentierten Klasse durch \cite{Chawla2002}. Anhand von nächste-Nachbarn-Berechnungen auf Basis der Euklidischen Distanz zwischen den Attributwerten der einzelnen Datensätze des Datensets, werden neue synthetische Datensätze hinzugefügt (Oversampling), sodass sich die Anzahl der Datensätze der relevanten Klasse erhöht \cite{Chawla2002}. Im hier durchgeführten Fall wurde der Prozentsatz für die Generierung der synthetischen Datensätze auf 3000 festgelegt, sodass für jeden vorhandenen Datensatz der unterrepräsentierten Klasse 30 zusätzliche synthetische Datensätze erzeugt wurden. So konnte der Anteil der Datensätze mit dem Label \glqq fehlerhaft\grqq{} auf etwa 27\% erhöht werden. In Abbildung XX ist dargestellt, welchen Einfluss die Anwendung des SMOTE-Algorithmus auf die Accuracies der Klassifikatoren des datenbasierten Datensets im Rahmen des Testprozesses hatte. Das mit \glqq vorher\grqq{} deklarierte Diagramm zeigt, dass nahezu alle Klassifikatoren eine Accuracy von nahezu 100\% besitzen, was das zuvor beschriebene Problem widerspiegelt. Das Diagramm, welches die Testergebnisse nach Anwendung des SMOTE-Algorithmus darstellt, weist hingegen wesentlich realistischere Accuracies auf.

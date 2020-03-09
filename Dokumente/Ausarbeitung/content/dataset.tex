@@ -143,8 +143,9 @@ Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiz
     \caption{Normalfall und unerwünschte Fälle bei der Identifizierung von Features\label{fig:feat}}
 \end{figure}
 
-Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagworten (\textbf{HIER ANGABE ZU LITERATUR VON RODRIGO}). Bei den Schlagworten handelt es sich um \glqq bug\grqq, \glqq error\grqq, \glqq fail\grqq{} und \glqq fix\grqq. Durchgeführt wurde die Analyse mittels Python-Skripte unter Zuhilfenahme von einfachen Formen des Text Minings. Die Ergebnisse wurden in einer weiteren boole'schen Spalte der MySQL-Tabellen (true = korrektiv, false = nicht korrektiv) gespeichert.
+Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagworten \cite{Zimmermann2007}. Bei den Schlagworten handelt es sich um \glqq bug\grqq, \glqq error\grqq, \glqq fail\grqq{} und \glqq fix\grqq. Durchgeführt wurde die Analyse mittels Python-Skripte unter Zuhilfenahme von einfachen Formen des Natural Language Processings. Die Ergebnisse wurden in einer weiteren boole'schen Spalte der MySQL-Tabellen (true = korrektiv, false = nicht korrektiv) gespeichert.
 
+\label{szz-def}
 Der Suche nach korrektiven Commits folgt eine Analyse auf fehlereinführende Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser ursprünglich für CVS-Versionskontrollsysteme entwickelte Algorithmus erlaubt es, in zwei Phasen fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Die erste Phase besteht dabei aus der Identifizierung der korrektiven Commits. Dies kann entweder anhand der zuvor beschriebenen Analyse der Commit-Nachrichten geschehen oder durch die Analyse von Bug-Tracking-Systemen \cite{Borg2019}. Die zweite Phase umfasst die Identifikation der fehlereinführenden Commits auf Basis der zuvor erkannten korrektiven Commits. Diese Phase ist in mehrere Schritte unterteilt und wird in Abbildung XX dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
 
 \begin{figure}[]
@@ -157,21 +158,25 @@ Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes
 
 Eine Übersicht des Schemas der nun vollständigen initialen  MySQL-Tabellen (im folgenden Haupttabellen genannt) ist in Tabelle XX aufgeührt. Wie bereits zuvor erwähnt, umfasst diese Tabellle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\begin{table}[]
+\begin{table}
+\centering
 \caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{ll|ll}
-\textbf{Spaltenname} & \textbf{Beschreibung}                                                                              & \textbf{Spaltenname} & \textbf{Beschreibung}                                                                           \\ \hline
-name                 & Name des Softwareprojekts                                                                          & lines\_added         & \begin{tabular}[c]{@{}l@{}}Anzahl der hinzugefügten Zeilen\\ zur geänderten Datei\end{tabular}  \\
-release\_number      & \begin{tabular}[c]{@{}l@{}}zugehörige Release-Version\\ basierend auf vergebenen Tags\end{tabular} & lines\_removed       & \begin{tabular}[c]{@{}l@{}}Anzahl der entfernten Zeilen\\ von der geänderten Datei\end{tabular} \\
-commit\_hash         & \begin{tabular}[c]{@{}l@{}}eindeutiger Bezeichner eines \\ Commits\end{tabular}                    & change\_type         & Art der Änderung                                                                                \\
-commit\_author       & Autor eines Commits                                                                                & diff                 & Diff der geänderten Datei                                                                       \\
-commit\_msg          & Nachricht eines Commits                                                                            & corrective           & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlerbehebend war\end{tabular}               \\
-filename             & Name der geänderten Datei                                                                          & bug\_introducing     & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlereinführend war\end{tabular}             \\
-nloc                 & \begin{tabular}[c]{@{}l@{}} \glqq Lines of code\grqq{} der geänderten\\ Datei\end{tabular}                     & feature              & \begin{tabular}[c]{@{}l@{}}Namen der zugehörigen Features\\ der geänderten Datei\end{tabular}   \\
-cycomplexity         & \begin{tabular}[c]{@{}l@{}}Zyklomatische Komplexität\\ der geänderten Datei\end{tabular}           &                      &                                                                                                
-\end{tabular}%
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|ll|ll|} 
+\hline
+\textbf{Spaltenname}  & \textbf{Beschreibung}                                                                               & \textbf{Spaltenname}  & \textbf{Beschreibung}                                                                             \\ 
+\hline
+name                  & Name des Softwareprojekts                                                                           & lines\_added          & \begin{tabular}[c]{@{}l@{}}Anzahl der hinzugefügten Zeilen\\ zur geänderten Datei \end{tabular}   \\
+release\_number       & \begin{tabular}[c]{@{}l@{}}zugehörige Release-Version\\ basierend auf vergebenen Tags \end{tabular} & lines\_removed        & \begin{tabular}[c]{@{}l@{}}Anzahl der entfernten Zeilen\\ von der geänderten Datei \end{tabular}  \\
+commit\_hash          & \begin{tabular}[c]{@{}l@{}}eindeutiger Bezeichner eines \\ Commits \end{tabular}                    & change\_type          & Art der Änderung                                                                                  \\
+commit\_author        & Autor eines Commits                                                                                 & diff                  & Diff der geänderten Datei                                                                         \\
+commit\_msg           & Nachricht eines Commits                                                                             & corrective            & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlerbehebend war \end{tabular}                \\
+filename              & Name der geänderten Datei                                                                           & bug\_introducing      & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlereinführend war \end{tabular}              \\
+nloc                  & \begin{tabular}[c]{@{}l@{}} „ Lines of code“ der geänderten\\ Datei \end{tabular}                   & feature               & \begin{tabular}[c]{@{}l@{}}Namen der zugehörigen Features\\ der geänderten Datei \end{tabular}    \\
+cycomplexity          & \begin{tabular}[c]{@{}l@{}}Zyklomatische Komplexität\\ der geänderten Datei \end{tabular}           &                       &                                                                                                   \\
+\hline
+\end{tabular}
 }
 \end{table}
 
@@ -181,12 +186,12 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 Wie bereits in Kapitel XX erwähnt wurde, bilden sogenannte Metriken die Attribute zum Training der Machine-Learning-Klassifikatoren. Bei Metriken handelt sich sich um Zahlenwerte, die in Codemetriken und Prozessmetriken aufgeteilt sind und jeweils anhand der vorhandenen Daten des Datensets berechnet werden \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind Anzahl der Veränderungen einer bestimmten Datei oder Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden 11 Metriken errechnet, aufgeteilt in 7 Prozess- und 4 Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet.
 
-Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten bezüglich der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In Abbildung XX wird die Abgrenzung zwischen feature- und dateibasierten Datensets ahhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im vorherigen Abschnitt erläutert wurden (Schritte C - E). Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in Tabelle XX.
+Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In Abbildung XX wird die Abgrenzung zwischen feature- und dateibasierten Datensets anhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im vorherigen Abschnitt erläutert wurden (Schritte C - E). Die finalen Datensets (G) bestehen aus den jeweils berechneten feature- und dateibezogenen Metriken (E) sowie den Labeln der Zielklasse. Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in Tabelle XX.
 
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{images/Dataset}
-    \caption{Visualisierung zur Unterscheidung der Datensets\label{fig:dataset}}
+    \caption{Visualisierung des Aufbaus und Unterscheidung der Datensets\label{fig:dataset}}
 \end{figure}
 
 \textbf{Ergänzen!!!! Feature und File betrachtung}

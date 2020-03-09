@@ -1240,6 +1240,45 @@
       \verb 10.21037/atm.2016.03.37
       \endverb
     \endentry
+    \entry{Zimmermann2007}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=9bfbc841af43915c12169734f59a4e7b}{%
+           family={Zimmermann},
+           familyi={Z\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=517ecc49a89d36aecaf4fd521819a492}{%
+           family={Premraj},
+           familyi={P\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5e1cda0c07dec7bd29209963590efad4}{%
+           family={Zeller},
+           familyi={Z\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{53f03b50692e85c3455701e51dcc0579}
+      \strng{fullhash}{53f03b50692e85c3455701e51dcc0579}
+      \strng{bibnamehash}{53f03b50692e85c3455701e51dcc0579}
+      \strng{authorbibnamehash}{53f03b50692e85c3455701e51dcc0579}
+      \strng{authornamehash}{53f03b50692e85c3455701e51dcc0579}
+      \strng{authorfullhash}{53f03b50692e85c3455701e51dcc0579}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Third International Workshop on Predictor Models in Software Engineering ({PROMISE}'07: {ICSE} Workshops 2007)}
+      \field{month}{5}
+      \field{title}{Predicting Defects for Eclipse}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1109/promise.2007.10
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
