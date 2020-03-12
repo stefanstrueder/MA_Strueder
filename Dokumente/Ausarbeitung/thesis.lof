@@ -22,57 +22,59 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Phasen des CRISP-DM Prozessmodells nach \cite {Chapman2000} mit Zuordnung der Arbeitsphasen\relax }}{5}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Zeitlicher Ablaufplan der Arbeit als Gantt-Chart\relax }}{8}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Geplanter zeitlicher Ablauf der Arbeit als Gantt-Chart\relax }}{8}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Tatsächlicher Ablauf der Arbeit als Gantt-Chart\relax }}{8}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{12}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{12}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Angewendeter Prozess zur Durchführung der Klassfikation nach \cite {Ceylan2006}\relax }}{12}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Angewendeter Prozess zur Durchführung der Klassfikation nach \cite {Ceylan2006}\relax }}{12}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{13}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{13}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{15}{figure.caption.25}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{17}{figure.caption.27}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung von Features\relax }}{20}{figure.caption.31}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{20}{figure.caption.32}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Visualisierung des Aufbaus und Unterscheidung der Datensets\relax }}{22}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{15}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{26}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{17}{figure.caption.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Formel zur Berechnung der Euklidischen Distanz (n = Anzahl der Attribute)\relax }}{27}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung von Features\relax }}{20}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit 4 Input-Neuronen, 5 Hidden-Neuronen und 2 Output-Neuronen\relax }}{28}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{21}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{28}{figure.caption.47}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus\relax }}{31}{figure.caption.52}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{32}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Visualisierung des Aufbaus und Unterscheidung der Datensets\relax }}{22}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{34}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{26}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets\relax }}{36}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Formel zur Berechnung der Euklidischen Distanz (n = Anzahl der Attribute)\relax }}{27}{figure.caption.44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets\relax }}{37}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit 4 Input-Neuronen, 5 Hidden-Neuronen und 2 Output-Neuronen\relax }}{28}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\relax }}{38}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{28}{figure.caption.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\relax }}{39}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus\relax }}{31}{figure.caption.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Übersicht der Accuracies der jeweilgen Klassifikatoren\relax }}{40}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{32}{figure.caption.54}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces ROC-Kurven der Klassifikatoren\relax }}{43}{figure.caption.67}%
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{34}{figure.caption.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets\relax }}{36}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets\relax }}{37}{figure.caption.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\relax }}{38}{figure.caption.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\relax }}{39}{figure.caption.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Übersicht der Accuracies der jeweilgen Klassifikatoren\relax }}{45}{figure.caption.67}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces ROC-Kurven der Klassifikatoren\relax }}{45}{figure.caption.68}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
