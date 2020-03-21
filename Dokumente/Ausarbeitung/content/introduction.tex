@@ -1,71 +1,96 @@
 % !TEX root = ../thesis.tex
 
 \chapter{Einleitung und Motivation}
+\label{introduction}
 
 \paragraph{Ausblick:}
-Dieses Kapitel dient zur allgemeinen Einführung in diese Masterarbeit. Dazu werden neben einer Einleitung und Motivation in das zugrundeliegende Thema, die grundlegenden Strukturen der Arbeit erläutert. Dazu gehören die Forschungsziele und Forschungsfragen, das verwendete Forschungsdesign, eine Übersicht der angedachten und tatsächlichen Zeitplanung sowie eine Erläuterung des Aufbaus der weiterführenden Teile dieser Arbeit.
+Dieses Kapitel dient zur allgemeinen Einführung in diese Masterarbeit. Dazu werden neben einer Einleitung und Motivation in das zugrundeliegende Thema, die der Arbeit zugrunde liegenden Strukturen erläutert. Dazu gehören die Forschungsziele und Forschungsfragen, das verwendete Forschungsdesign, eine Übersicht der geplanten und tatsächlichen Zeitplanung sowie eine Erläuterung des Aufbaus der weiterführenden Kapitel dieser Arbeit.
 \\
 \hrule
 
-Softwarefehler stellen einen erheblichen Auslöser für finanzielle Schäden und Rufschädigungen von Unternehmen dar. Solche Fehler reichen von kleineren \glqq Bugs\grqq{} bis hin zu schwerwiegenden Sicherheitslücken. Aus diesem Grund herrscht ein großes Interesse daran, einen Entwickler zu warnen, wenn er aktualisierten Softwarecode veröffentlicht, der möglicherweise einen Fehler beinhaltet. 
+Softwarefehler stellen einen erheblichen Auslöser für finanzielle Schäden und Rufschädigungen von Unternehmen dar. Solche Fehler reichen von kleineren \glqq Bugs\grqq{} bis hin zu schwerwiegenden Sicherheitslücken. Aus diesem Grund herrscht ein großes Interesse daran, einen Entwickler zu warnen, wenn er aktualisierten Softwarecode veröffentlicht, der möglicherweise einen oder mehrere Fehler beinhaltet. 
 
-Zu diesem Zweck haben Forscher und Softwareentwickler im vergangenen Jahrzehnt verschiedene Techniken zur Fehlererkennung und Fehlervorhersage entwickelt, die zu einem Großteil auf Methoden und Techniken des \emph{Machine Learnings} basieren. Diese verwenden in der Regel historische Daten von fehlerhaften und fehlerfreien Änderungen an Softwaresystemen in Kombination mit einer sorgfältig zusammengestellten Menge von \emph{Attributen} (in der Regel Features genannt \footnote{Um einem missverständlichen und doppeldeutigen Gebrauch des Feature-Begriffes vorzubeugen, wird für die hier verwendete Beschreibung der Charakteristika von Daten auch im weiteren Verlauf dieser Ausarbeitung der Begriff \glqq Attribute\grqq{} verwendet.}), um einen gegebenen Klassifikator anzulernen beziehungsweise zu trainieren. Dieser dient dann dazu, ein akkurate Vorhersage zu treffen, ob eine neu erfolgte Änderung an einer Software fehlerbehaftet oder frei von Fehlern ist.
+Zu diesem Zweck haben Forscher und Softwareentwickler im vergangenen Jahrzehnt verschiedene Techniken zur Fehlererkennung und Fehlervorhersage entwickelt, die zu einem Großteil auf Methoden und Techniken des \emph{Machine Learnings} basieren \cite{Challagulla2008}. Diese verwenden in der Regel historische Daten von fehlerhaften und fehlerfreien Änderungen an Softwaresystemen in Kombination mit einer sorgfältig zusammengestellten Menge von \emph{Attributen} (in der Regel Features genannt\footnote{Um einem missverständlichen und doppeldeutigen Gebrauch des Feature-Begriffes vorzubeugen, wird für die hier verwendete Beschreibung der Charakteristika von Daten auch im weiteren Verlauf dieser Ausarbeitung der Begriff \glqq Attribute\grqq{} verwendet.}), um einen gegebenen Klassifikator anzulernen beziehungsweise zu trainieren \cite{Alsaeedi2019,Hammouri2018}. Dieser kann dann anschließend verwendet werden, um eine akkurate Vorhersage zu erhalten, ob eine neu erfolgte Änderung an einer Software fehlerhaft oder frei von Fehlern ist.
 
-Die Auswahl an Lernverfahren für Klassifikatoren ist groß. Studien zeigen, aus dem Pool von verfügbaren Verfahren sowohl Entscheidungsbaum-basierte (zum Beispiel J48, CART oder Random Forest) als auch Bayessche Verfahren die meistgenutzten sind \cite{Son2019}. Alternative Lernmethoden sind Regression, k-Nearest-Neighbors oder künstliche neuronale Netze \cite{Challagulla2008}. Anzumerken ist allerdings, dass es keinen Konsens über die beste verfügbare Lernverfahren gibt, da jedes Verfahren unterschiedliche Stärken und Schwächen für bestimmte Anwendungsfälle aufweist.
+Die Auswahl an Lernverfahren für Klassifikatoren ist groß. Studien zeigen, dass aus dem Pool von verfügbaren Verfahren sowohl Entscheidungsbaum-basierte (zum Beispiel J48, CART oder Random Forest) als auch Bayessche Verfahren die meistgenutzten sind \cite{Son2019}. Alternative Lernmethoden sind beispielsweise Regression, k-Nearest-Neighbors oder künstliche neuronale Netze \cite{Challagulla2008}. Anzumerken ist allerdings, dass es keinen Konsens über die beste verfügbare Lernverfahren gibt, da jedes Verfahren unterschiedliche Stärken und Schwächen für bestimmte Anwendungsfälle aufweist.
 
-Das Ziel dieser Arbeit ist die Entwicklung einer solchen Vorhersagetechnik für Softwarefehler basierend auf Software-Features. Diese beschreiben Inkremente der Funktionalität eines Softwaresystems. Die auf diese Weise entwickelten Softwaresysteme heißen Software-Produktlinien und bestehen aus einer Menge von ähnlichen Softwareprodukten. Sie zeichnen sich dadurch aus, dass sie eine gemeinsame Menge von Features sowie eine gemeinsame Codebasis besitzen \cite{Thuem2014}. Durch das Vorhandensein verschiedener Features entlang der Softwareprodukte, kann eine breite Variabilität innerhalb einer Produktlinie erreicht werden. 
-
-Der zentrale Prozess der Entwicklung einer Produktlinie ist in Abbildung XX dargestellt. Aufgeteilt wird dieser Prozess in das Domain Engineering und das Application Engineering. Im Rahmen des Domain Engineerings wird ein sogenanntes Variabilitätsmodell (Variability Model) erzeugt, welches durch die Kombination der wählbaren Features beschrieben wird \cite{Apel2013}. Gängige Implementationstechniken für Features reichen von einfachen Lösungen durch Annotationen basierend auf Laufzeitparametern oder Präprozessor-Anweisungen bis hin zu verfeinerten Lösungen basierend auf erweiterten Programmiermethoden, wie zum Beispiel Aspektorientierung. In Teilen dieser Implementierungstechniken wird jedes Feature wird als wiederverwendbares Domain Artifact modelliert und gekapselt, welches im Prozess des Application Engineerings in Form einer Konfiguration zusammen mit weiteren Features, im Hinblick auf die gewünschte Funktionalität der Software, ausgewählt werden kann. Ein Software Generator erzeugt dann die gewünschten Software Produkte basierend auf den bereits zuvor genannten Implementationstechniken für Features.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/SPL}
-    \caption{Generierung von Software-Produktlinien nach \cite{Thuem2014}\label{fig:spl}}
-\end{figure}
- 
-Das Ziel dieser Arbeit ist die Entwicklung einer auf Machine Learning gestützten Vorhersagetechnik für defekte Software-Features, welche wie in Abbildung XX als Domain Artifacts im Quellcode einer Software wiederzufinden sind. Betrachtet wird dabei die Implementation von Features mittels Präprozessor-Anweisungen, wie \texttt{IFDEF} und \texttt{IFNDEF}. Dieser bisher in wissenschaftlichen Papern nur einmal im Rahmen einer Fallstudie betrachtete Ansatz \cite{Queiroz2016} ist aufgrund mehrerer Gründe chancenreich:
+Das Ziel dieser Arbeit ist die Entwicklung einer solchen Vorhersagetechnik für Softwarefehler basierend auf Software-Features. Diese Features beschreiben Inkremente der Funktionalität eines Softwaresystems. Die auf diese Weise entwickelten Softwaresysteme heißen Software-Produktlinien und bestehen aus einer Menge von ähnlichen Softwareprodukten. Sie zeichnen sich dadurch aus, dass sie eine gemeinsame Menge von Features sowie eine gemeinsame Codebasis besitzen \cite{Thuem2014}. Durch das Vorhandensein verschiedener Features entlang der Softwareprodukte, kann eine breite Variabilität innerhalb einer Produktlinie erreicht werden. Eine detaillierte Einführung in den Themenkomplex von Software-Produktlinien und featurebasierter Softwareentwicklung kann in \hyperref[feat-develop]{Abschnitt 2.1} gefunden werden. Bei der Entwicklung der Vorgersagetechnik wird die Implementation von Features mittels Präprozessor-Anweisungen, wie \texttt{\#IFDEF} und \texttt{\#IFNDEF} (auch Präprozessor-Direktiven genannt) betrachtet. Dieser bisher in wissenschaftlichen Arbeiten nur einmal im Rahmen einer Fallstudie betrachtete Ansatz \cite{Queiroz2016} ist aufgrund mehrerer Gründe chancenreich:
 
 \begin{enumerate}
+\setlength{\itemsep}{-2pt}
 \item Wenn ein bestimmtes Feature in der Vergangenheit mehr oder weniger fehleranfällig war, so ist eine Änderung, die das Feature aktualisiert, wahrscheinlich ebenfalls mehr oder weniger fehleranfällig. 
 \item Features, die mehr oder weniger fehleranfällig scheinen, könnten besondere Eigenschaften haben, die im Rahmen der Fehlervorhersage verwendet werden können.
 \item Code, der viel featuresspezifischen Code enthält (insbesondere die sogenannten Feature-Interaktionen), ist möglicherweise fehleranfälliger als sonstiger Code.
 \end{enumerate}
 
-Das zuvor genannte Ziel der Arbeit setzt sich aus mehreren Teilzielen zusammen. Dazu zählen die Erstellung eines Datensets zum Trainieren von Machine-Learning-Klassifikatoren sowie das Anlernen einer repräsentativen Auswahl an Klassifikatoren mit anschließender vergleichender Evaluation dieser. Zusätzlich werden die featurebasierten Klassifikatoren mit klassischen dateibasierten Klassifikatoren verglichen, dessen Entwicklung aus einer wissenschaftlichen Arbeit entnommen wurde \cite{Moser2008}. Ein genauer Überblick über die Forschungsziele befindet sich im \hyperref[research_objectives]{nächsten Abschnitt}.
+Ein initiales und einfaches Beispiel für einen Softwarefehler innerhalb eines Features ist in \autoref{bug-code} dargestellt. Es ist zu erkennen, dass innerhalb des Codes des Features \texttt{print\_time} die \texttt{printf}-Anweisung einen Schreibfehler enthält, der dazu führt, dass der Featurecode nicht ausgeführt werden kann. Ferner kann fehlerhafter Featurecode dazu führen, dass die gesamte Funktionalität des Features und gegebenenfalls der gesamten Software beeinträchtigt oder verhindert wird.
+
+\begin{lstlisting}[language=Python, caption=Exemplarische Darstellung eines fehlerhaften Features, frame=single, label=bug-code]
+int test() {
+	  #IFDEF print_time
+	  prntf("Current time: %s", time(&now));
+	  #ENDIF
+
+	  printf("Hello World!");
+	  return 0;
+  }
+\end{lstlisting}
+ 
+Das zuvor genannte Ziel der Arbeit setzt sich aus mehreren Teilzielen zusammen. Dazu zählen die \hyperref[dataset]{Erstellung eines Datensets} unter Einbezug des Feature-Aspekts. Dieses Datenset dient wiederum zur \hyperref[training]{Anlernung von einer repräsentativen Auswahl an Klassifikatoren} mit anschließender vergleichender \hyperref[evaluation]{Evaluation} dieser. Zusätzlich werden die featurebasierten Klassifikatoren mit \hyperref[classic-eval]{klassischen dateibasierten Klassifikatoren} verglichen, dessen Entwicklung aus einer wissenschaftlichen Arbeit entnommen wurde \cite{Moser2008}. Ein genauer Überblick über die Forschungsziele befindet sich im \hyperref[research_objectives]{nächsten Abschnitt}.
 
 Sollte sich im Rahmen der Evaluation einer dieser Klassifikatoren als besonders effektiv erweisen, so würde diese Arbeit den Stand der Technik hinsichtlich der Fehlererkennung in Features vorantreiben und Organisationen erlauben, bessere Einblicke in die Fehleranfälligkeit von Änderungen in ihrer durch Variabilität geprägten Codebasis zu erhalten.
 
 \section{Forschungsziele und Forschungsfragen}
 
-Wie bereits in der Einleitung beschrieben, ist das übergeordnete Ziel dieser Arbeit die Entwicklung einer Vorhersagetechnik für Fehler in featurebasierter Software unter Zuhilfenahme von Methoden des Machine Learnings. Dazu ist vorhergesehen, das Augenmerk auf Commits des Versionierungssystems Git zu richten. Ein Commit bezeichnet dabei die zur Verfügungstellung einer aktualisierten Version einer Software. Als Datenbasis für das Trainieren der Klassifikatoren dienen dann fehlerhafte und fehlerfreie Commits von featurebasierter Software. Dies ermöglicht es, für ausstehende oder zukünftige Commits Vorhersagen zu treffen, ob diese Fehler beinhalten, um so das Risiko der Konsequenzen von Softwarefehlern zu senken.
+Wie bereits in der Einleitung beschrieben, ist das übergeordnete Ziel dieser Arbeit die Entwicklung einer Vorhersagetechnik für Fehler in featurebasierter Software unter Zuhilfenahme von Methoden des Machine Learnings. Dazu ist vorhergesehen, das Augenmerk auf Commits des Versionierungssystems Git zu richten. Ein Commit bezeichnet dabei die zur Verfügungstellung einer aktualisierten Version einer Software. Als Datenbasis für das Trainieren der Klassifikatoren dienen dann fehlerhafte und fehlerfreie Commits von featurebasierter Software. Dies ermöglicht es, für ausstehende oder zukünftige Commits akkurate Vorhersagen zu treffen, ob diese Fehler beinhalten, um so das Risiko der Konsequenzen von Softwarefehlern zu senken.
 
-Der Prozess der Entwicklung der Vorhersagetechnik ist in drei zu erreichende Forschungsziele eingeteilt. Jedem Forschungsziel werden Forschungsfragen zugeordnet, deren Aufklärung einen zusätzlichen Teil zur Erfüllung der Ziele beiträgt. Im Folgenden werden die Forschungsziele (RO – „research objective“) mit ihren zugehörigen Forschungsfragen (RQ – „research question“) vorgestellt.
+Der Prozess der Entwicklung der Vorhersagetechnik ist in drei zu erreichende Forschungsziele eingeteilt. Jedem Forschungsziel werden Forschungsfragen zugeordnet, deren Aufklärung einen zusätzlichen Teil zur Erfüllung der Ziele beiträgt. Im Folgenden werden die Forschungsziele (RO – \glqq research objective\grqq) mit ihren zugehörigen Forschungsfragen (RQ – \glqq research question\grqq) vorgestellt. Die Beantwortung der Forschungsfragen erfolgt im weiteren Verlauf der Arbeit. Erkennbar sind die Antworten auf die Fragen an ihrer Einrahmung.
 
 \label{research_objectives}
-\begin{flushleft}
-\textsc{RO1: Erstellung eines Datensets zum Trainieren von relevanten Machine-
-Learning-Klassifikatoren}\medskip\linebreak 
-\emph{RQ1a: Welche Daten kommen für die Erstellung des Datensets in Frage?}\linebreak
-\emph{RQ1b: Wie weit müssen die Daten vorverarbeitet werden, um sie für das Training nutzbar zu machen?}
 
-\textsc{RO2: Identifikation und Training einer Auswahl von relevanten Machine Learning Klassifikatoren basierend auf dem Datenset}\medskip\linebreak 
-\emph{RQ2: Welche Machine-Learning-Klassifikatoren kommen für die gegebene Aufgabe in Frage?}
+\fbox{\parbox{\linewidth}{\textsc{RO1: Erstellung eines Datensets zum Trainieren von relevanten Machine-Learning-Klassifikatoren}
+\begin{itemize}
+ \renewcommand{\labelitemi}{$\Rightarrow$}
+ \setlength{\itemsep}{-2pt}
+ \item RQ1a: Welche Daten kommen für die Erstellung des Datensets in Frage?
+ \item RQ1b: Wie weit müssen die Daten vorverarbeitet werden, um sie für das Training nutzbar zu machen?
+\end{itemize}}}
 
-\textsc{RO3: Evaluierung und Gegenüberstellung der Klassifikatoren sowie Vergleich zu modernen Vorhersagetechniken, die keine Features nutzen}\medskip\linebreak 
-\emph{RQ3a: Welche miteinander vergleichbaren Merkmale besitzen die Klassifikatoren?}\linebreak 
-\emph{RQ3b: Welche Metriken können für den Vergleich verwendet werden?}\linebreak 
-\emph{RQ3c: Welche Vor- und Nachteile besitzt ein Klassifikator?}\linebreak 
-\emph{RQ3d: Wie lassen sich die Klassifikatoren mit weiteren Vorhersagetechniken, die keine Features nutzen, vergleichen?}
-\end{flushleft}
+\fbox{\parbox{\linewidth}{\textsc{RO2: Identifikation und Training einer Auswahl von relevanten Machine-Learning-Klassifikatoren basierend auf dem Datenset}
+\begin{itemize}
+ \renewcommand{\labelitemi}{$\Rightarrow$}
+ \setlength{\itemsep}{-2pt}
+ \item RQ2: Welche Machine-Learning-Klassifikatoren kommen für die gegebene Aufgabe in Frage?
+\end{itemize}}}
+
+\fbox{\parbox{\linewidth}{\textsc{RO3: Evaluation und Gegenüberstellung der Klassifikatoren sowie Vergleich zu modernen Vorhersagetechniken, die keine Features nutzen}
+\begin{itemize}
+ \renewcommand{\labelitemi}{$\Rightarrow$}
+ \setlength{\itemsep}{-2pt}
+ \item RQ3a: Welche miteinander vergleichbaren Merkmale besitzen die Klassifikatoren?
+ \item RQ3b: Welche Metriken können für den Vergleich verwendet werden?
+ \item RQ3c: Welche Vor- und Nachteile besitzt ein Klassifikator?
+ \item RQ3d: Wie lassen sich die Klassifikatoren mit weiteren Vorhersagetechniken, die keine Features nutzen, vergleichen?
+\end{itemize}}}
 
 \label{phases_definition}
 
-Zusätzlich zu den drei genannten Forschungszielen umfasst die Bearbeitung der Masterarbeit eine Vor- und Nachbereitung, sodass sich insgesamt fünf Arbeitsphasen ergeben. Diese werden in den weiteren Unterkapiteln näher erläutert. Als finale Vorhersagetechnik wird jener Klassifikator verwendet, der sich im Rahmen der Gegenüberstellung im Verlauf der Evaluation als am effektivsten erweist.
+Zusätzlich zu den drei genannten Forschungszielen umfasst die Bearbeitung der Masterarbeit eine Vor- und Nachbereitung, sodass sich insgesamt fünf Arbeitsphasen ergeben:
+
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item Vorbereitung
+\item Abschluss des ersten Forschungsziels (\textit{Erstellung des Datensets})
+\item Abschluss des zweiten Forschungsziels (\textit{Training von Machine-Learning-Klassifikatoren})
+\item Abschluss des dritten Forschungsziels (\textit{Evaluation und Vergleich})
+\item Nachbereitung
+\end{itemize}
+
+Diese Arbeitsphasen werden in den kommenden Abschnitten näher erläutert. Als finale Vorhersagetechnik wird jener Klassifikator verwendet, der sich im Rahmen der Gegenüberstellung im Verlauf der Evaluation als am \glqq effektivsten\grqq{} erweist. Die Kriterien für die Beurteilung der Effektivität eines Klassifikators werden im Kapitel \glqq \hyperref[evaluation]{Evaluation}\grqq{} erläutert.
 
 \section{Forschungsdesign}
 
-Die für diese Arbeit gewählte Methodik basiert auf dem Prozessmodell Cross-Industry Standard Process for Data Mining, kurz CRISP-DM, nach \cite{Chapman2000}. Es wird als Vorlage für die Arbeitsphasen zur Erreichung der Forschungsziele dieser Arbeit verwendet. 
-Da sich der überwiegende praktische Teil dieser Arbeit auf Programmierung im Bereich des Machine Learning konzentriert, bildet das CRISP-DM Prozessmodell ein passendes vordefiniertes Vorgehen. Eine grafische Aufarbeitung des Prozessmodells mit seinen sechs zugehörigen Phasen sowie den Verbindungen zwischen diesen ist in Abbildung XX dargestellt. 
+Die für diese Arbeit gewählte Methodik basiert auf dem Prozessmodell \glqq Cross-Industry Standard Process for Data Mining\grqq, kurz CRISP-DM, nach Chapman et al.\cite{Chapman2000}. Es wird als Vorlage für die Arbeitsphasen zur Erreichung der Forschungsziele dieser Arbeit verwendet. Da sich der überwiegende praktische Teil dieser Arbeit auf Programmierung im Bereich des Machine Learning konzentriert, bildet das CRISP-DM Prozessmodell ein passendes vordefiniertes Vorgehen. Eine grafische Aufarbeitung des Prozessmodells mit seinen sechs zugehörigen Phasen sowie den Verbindungen zwischen ihnen ist in \autoref{fig:crisp1} dargestellt. 
 
 \begin{figure}[H]
     \centering
@@ -73,7 +98,7 @@ Da sich der überwiegende praktische Teil dieser Arbeit auf Programmierung im Be
     \caption{CRISP-DM Prozessmodells nach \cite{Chapman2000}}\label{fig:crisp1}
 \end{figure}
 
-Das CRISP-DM-Prozessmodell wurde, wie der Name bereits andeutet, ursprünglich für die Erarbeitung von Data Mining Projekten entwickelt, eignet sich jedoch auch zur Verwendung im Rahmen eines Machine Learning Projektes, da sich die in beiden Bereichen verwendeten Methoden und Prozesse zu einem erheblichen Teil überlagern. Ein Überblick über die sechs Phasen des Prozessmodells ist in \autoref{fig:crisp} dargestellt. Zusätzlich umfasst diese Abbildung die Zuordnung der Arbeitsphasen, die im \hyperref[phases_definition]{vorherigen Abschnitt} definiert wurden. Eine Erläuterung der Phasen des Prozessmodells erfolgt im Anschluss der Abbildung. Einen genauen Überblick über den konkreten Umfang der Arbeitsphasen, aufgeteilt in jeweilige Unterziele und zu erfüllende Aufgaben, bietet der im Anschluss \hyperref[timecourse] {folgende Abschnitt}. 
+Das CRISP-DM-Prozessmodell wurde, wie der ausgeschriebene Name bereits andeutet, ursprünglich für die Erarbeitung von Data Mining Projekten entwickelt, eignet sich jedoch auch zur Verwendung im Rahmen eines Machine Learning Projektes, da sich die in beiden Bereichen verwendeten Methoden und Prozesse zu einem erheblichen Teil überlagern. Ein Überblick über die sechs Phasen des Prozessmodells ist in \autoref{fig:crisp} dargestellt. Zusätzlich umfasst diese Abbildung die Zuordnung der Arbeitsphasen, die im \hyperref[phases_definition]{vorherigen Abschnitt} definiert wurden. Eine Erläuterung der Phasen des Prozessmodells erfolgt im Anschluss der Abbildung. Einen genauen Überblick über den konkreten Umfang der Arbeitsphasen, aufgeteilt in jeweilige Unterziele und zu erfüllende Aufgaben, bietet der im Anschluss \hyperref[timecourse] {folgende Abschnitt}. 
 
 \begin{figure}[H]
     \centering
@@ -82,6 +107,7 @@ Das CRISP-DM-Prozessmodell wurde, wie der Name bereits andeutet, ursprünglich f
 \end{figure}
 
 Die ersten beiden Phasen \emph{Business Understanding} und \emph{Data Understanding} widmen sich der Vorbereitung der Arbeit. Die initiale Phase umfasst dabei die allgemeine Einarbeitung in das zugrundeliegende Thema und der Formulierung der Forschungsziele. Anzumerken ist, dass diese Phase bereits vor der sechsmonatigen Bearbeitungszeit der Arbeit begann und somit das Verfassen des Proposals sowie das Absolvieren der Einführungspräsentation zu dieser Phase gezählt werden können. Die darauffolgende Phase \emph{Data Understanding} dient der Suche und Einsicht von für den weiteren Verlauf der Phasen relevanten Daten und, falls vorhanden, vorgefertigten Datensets (es konnten keine Datensets gefunden werden). Da Commits als Datenbasis zur Erlernung der Klassifikatoren betrachtet werden, wird der überwiegende Teil der Suche nach Daten in Software-Repositories stattfinden, welche dem Versionierungssystem Git zugrunde liegen. Für die weiteren Phasen ist es von besonderer Bedeutung, den Aufbau der Daten sorgfältig zu untersuchen. Die dritte Phase \emph{Data Preparation} kümmert sich um die Erstellung des featurebasierten Datensets und den dort hinführenden Prozessen. Diese Phase ist deckungsgleich mit den Anforderungen des ersten Forschungsziels. Zur Anwendung kommt das im vorherigen Schritt erstellte Datenset in der Phase \emph{Modeling}. In dieser werden die auf Machine-Learning-Algorithmen basierenden Klassifikatoren mithilfe des Datensets trainiert und anschließend getestet, um Anpassungen an den Algorithmen hinsichtlich einer höheren Genauigkeit der Vorhersagen vornehmen zu können. Diese Phase spiegelt somit die Erfüllung des zweiten Forschungsziels wider. Die fünfte Phase umfasst die \emph{Evaluation} der Resultate des zuvor erfolgten Schrittes und deckt somit die Erfüllung des dritten Forschungsziels ab. Die Nachbereitung der Arbeit wird durch die Phase \emph{Deployment} abgedeckt. Diese umfasst die Erstellung bzw. Finalisierung der schriftlichen Ausarbeitung sowie das Erstellen der Abschlusspräsentation und der anschließenden Vorführung dieser im Rahmen des Kolloquiums.
+Ferner können in \autoref{fig:crisp} Rückpfeile zwischen einzelnen Phasen erkannt werden. So können beispielsweise Erkenntnisse im Rahmen der Phase Data Understanding zu offenen Fragestellungen führen, die die Phase des Business Understanding betreffen. Ebenfalls können im Rahmen der Phase Modeling gewonnene Erkenntnisse dazu führen, dass ein Sprung zurück in die vorherige Phase Data Preparation nötig ist, da festgestellt worden ist, dass zusätzliche Bearbeitungsschritte der Daten erforderlich sind. Weiterhin können Erkenntnisse, die im Rahmen der Evaluationsphase gewonnen werden können, zuvor unbekanntes Wissen aus der ersten Phase erläutern.
 
 \section{Zeitplanung}
 \label{timecourse}
@@ -168,7 +194,7 @@ Vergleich mit weiteren Vorhersagetechniken, die nicht auf Features setzen       
 }
 \end{table}
 
-\underline{Phase 5: Nachbereitung (Deployment}
+\underline{Phase 5: Nachbereitung (Deployment)}
 \begin{table}[H]
 \refstepcounter{table}
 \label{tab:phase5}
@@ -189,25 +215,23 @@ Erstellung der Abschlusspräsentation                                           
 }
 \end{table}
 
-* Die Erstellung der Ausarbeitung ist ein laufender Prozess über den gesamten Verlauf der Bearbeitungszeit. Der hier erwähnte siebenwöchige Zeitraum dient unter Anderem zur Korrektur beziehungsweise Verbesserung hinsichtlich des Feedbacks des Betreuers und zur abschließenden Finalisierung.
-
-Der geplante zeitliche Ablauf der Arbeit ist als Gantt-Chart inklusive konkreter Datumsangaben in Abbildung XX dargestellt. Der tatsächliche zeitliche Ablauf wird in Abbildung XX gezeigt.
+Die Erstellung der Ausarbeitung ist ein laufender Prozess über den gesamten Verlauf der Bearbeitungszeit. Der hier erwähnte siebenwöchige Zeitraum dient unter Anderem zur Korrektur beziehungsweise Verbesserung hinsichtlich des Feedbacks des Betreuers und zur abschließenden Finalisierung. Eine Visualisierung des geplanten zeitlichen Verlaufs anhand eines Zeitstrahls als Gantt-Chart inklusive konkreter Datumsangaben ist in \autoref{fig:time-planned} dargestellt. Der tatsächliche zeitliche Ablauf wird in \autoref{fig:time-real} gezeigt.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/Zeit}
-    \caption{Geplanter zeitlicher Ablauf der Arbeit als Gantt-Chart}\label{fig:zeit}
+    \caption{Geplanter zeitlicher Ablauf der Arbeit als Gantt-Chart}\label{fig:time-planned}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/Zeit}
-    \caption{Tatsächlicher Ablauf der Arbeit als Gantt-Chart}\label{fig:zeit}
+    \caption{Tatsächlicher Ablauf der Arbeit als Gantt-Chart (TBD, einsetzen!)}\label{fig:time-real}
 \end{figure}
 
 \section{Aufbau der Arbeit}
 
-Diese Ausarbeitung ist in sechs Kapitel unterteilt. Das erste Kapitel, welches mit diesem Abschnitt abgeschlossen wird, diente zur Einführung in das Thema der Masterarbeit. Ebenso stellte es die theoretischen Rahmenbedingungen der Arbeit vor. Das zweite Kapitel \glqq Hintergrund\grqq{} dient zur Vermittlung von Basiswissen zu den grundlegenden Themenkomplexen dieser Ausarbeitung. Dazu wird zunächst die featurebasierte Softwareentwicklung vorgestellt, ehe dann die Machine-Learning-Klassifikation sowie die darauf aufbauende Fehlervorhersage erläutert werden. Die zwei darauffolgenden Kapitel widmen sich der Auseinandersetzung des praktischen Teils dieser Masterarbeit in Form der Erstellung des featurebasierten Datensets sowie des Trainings der Machine-Learning-Klassifikatoren. Die Gegenüberstellung und Evaluation dieser Klassifikatoren erfolgt im fünften Kapitel inklusive eines Vergleiches zu nicht-featurebasierten Methoden zur Fehlererkennung. Eine abschließende Zusammenfassung sowie ein Ausblick auf weiterführende Projekte, die auf diese Masterarbeit aufbauen können, erfolgen im abschließenden sechsten Kapitel.
+Diese Ausarbeitung ist in sechs Kapitel unterteilt. Das \hyperref[introduction]{erste Kapitel}, welches mit diesem Abschnitt abgeschlossen wird, diente zur Einführung in das Thema der Masterarbeit. Ebenso stellte es die theoretischen Rahmenbedingungen der Arbeit vor. Das zweite Kapitel \glqq \hyperref[background]{Hintergrund}\grqq{} dient zur Vermittlung von Basiswissen zu den grundlegenden Themenkomplexen dieser Ausarbeitung. Dazu wird zunächst die featurebasierte Softwareentwicklung vorgestellt, ehe dann die Machine-Learning-Klassifikation sowie die darauf aufbauende Fehlervorhersage erläutert werden. Die zwei darauffolgenden Kapitel widmen sich der Auseinandersetzung des praktischen Teils dieser Masterarbeit in Form der \hyperref[dataset]{Erstellung des featurebasierten Datensets} sowie des \hyperref[training]{Trainings der Machine-Learning-Klassifikatoren}. Die Gegenüberstellung und Evaluation dieser Klassifikatoren erfolgt im \hyperref[evaluation]{fünften Kapitel} inklusive eines \hyperref[classic-eval]{Vergleiches zu nicht-featurebasierten Methoden zur Fehlererkennung}. Eine abschließende Zusammenfassung sowie ein Ausblick auf weiterführende Projekte, die auf diese Masterarbeit aufbauen können, erfolgen im abschließenden \hyperref[conclusion]{sechsten Kapitel}.
 
 Zusätzlich wird die Ausarbeitung von zahlreichen Abbildungen und Tabellen zur verständlichen Verdeutlichung von Zusammenhängen ergänzt.
 

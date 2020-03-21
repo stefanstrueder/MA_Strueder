@@ -1,60 +1,93 @@
 % !TEX root = ../thesis.tex
 
 \chapter{Evaluation}
+\label{evaluation}
 
 \paragraph{Ausblick:}
-Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikationen. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden. Ebenfalls umfasst dieses Kapitel einen Vergleich der Klassifikatoren zu einer nicht-featurebasierten Methode und eine Erläuterung der Herausforderungen und Limitationen, die mit der Erarbeitung der vorangegangenen Kapitel einhergingen.
+Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikationen. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden und auf Werten von sogenannten Konfusionsmatrizen basieren. Zudem umfasst dieses Kapitel eine Erläuterung von Herausforderungen und Limitationen, die im Laufe der Bearbeitung der Arbeit festgestellt worden sind. Abschließen wird dieses Kapitel ein Vergleich der Klassifikatoren zu einer klassischen dateibasierten Methode, welche aus der wissenschaftlichen Literatur entnommen wurde.
 \\
 \hrule
 
 \section{Herausforderungen und Limitationen}
 
+szz \\
+absprechen mit Daniel
+...
+
 \section{Vergleich der Klassifikatoren}
 
-Der Vergleich der Klassifikatoren erfolgt unter Zuhilfenahme von Evaluationsmetriken, die im nachfolgenden Abschnitt vorgestellt werden. Die Diskussion der Ergebnisse der Evaluation erfolgt in Abschnitt 5.2.2.
+Der Vergleich der Klassifikatoren erfolgt unter Zuhilfenahme von Evaluationsmetriken, die im nachfolgenden Abschnitt vorgestellt werden. Die Diskussion der Ergebnisse der Evaluation erfolgt in \hyperref[results]{Abschnitt 5.2.2}.
 
 \subsection{Evaluationsmetriken}
 \label{eval-metrics}
 
-Die zum Vergleich der Klassifikatoren erhobenen Evaluationmetriken entstammen dem Themengebiet des Information Retrieval und gelten als Standardmesswerte für ihren Einsatzzweck \cite{Sammut2017}. Ein Großteil dieser Metriken lässt sich anhand von Werten einer sogenannten Konfusionsmatrix berechnen. Im Falle einer binären Klassifikation, wie in dieser Arbeit, besteht diese Matrix aus vier Gruppen, deren Werte angeben, ob der jeweilige Klassifikator ein Objekt korrekt oder falsch einer der beiden Zielklassen zuordnen konnte \cite{Sammut2017}. Im Zusammenhang mit solchen Matrizen werden die beiden Zielklassen \glqq positiv\grqq{} und \glqq negativ\grqq{} genannt. Für diese Arbeit werden die positive Klasse dem Label \glqq fehlerfrei\grqq und die negative Klasse dem Label \glqq defekt\grqq{} zugeordnet. Die Form einer allgemeinen Konfusionsmatrix ist in Abbildung XX dargestellt.
+Die zum Vergleich der Klassifikatoren erhobenen Evaluationmetriken entstammen dem Themengebiet des Information Retrieval und gelten als Standardmesswerte für ihren Einsatzzweck \cite{Sammut2017}. Der Großteil dieser Metriken lässt sich anhand von Werten einer sogenannten Konfusionsmatrix berechnen und messen allesamt die Performanz der Vorhersagen von Klassifikatoren. Im Falle einer binären Klassifikation, wie in dieser Arbeit, besteht diese Matrix aus vier Gruppen, deren Werte angeben, ob der jeweilige Klassifikator ein Objekt korrekt oder falsch einer der beiden Zielklassen zuordnen konnte \cite{Sammut2017}. Im Zusammenhang mit solchen Matrizen werden die beiden Zielklassen \glqq positiv\grqq{} und \glqq negativ\grqq{} genannt. Für diese Arbeit werden die positive Klasse dem Label \glqq fehlerfrei\grqq und die negative Klasse dem Label \glqq defekt\grqq{} zugeordnet. Die Form einer allgemeinen Konfusionsmatrix ist in \autoref{fig:confu} dargestellt.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{images/Confusion}
     \caption{allgemeine Konfusionsmatrix\label{fig:confu}}
 \end{figure}
 
-Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu den durchgeführten Tests der Klassifikatoren auszugeben. Anhand der Werte der Zuordnungen zu den Gruppen wurden die folgenden Evaluationsmetriken berechnet: 
+Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu den durchgeführten Tests der Klassifikatoren auszugeben. Anhand der Werte der Zuordnungen zu den zuvor genannten Gruppen wurden die folgenden Evaluationsmetriken berechnet: 
 
 \begin{itemize}
 \item Treffergenauigkeit (Accuracy)
-\\Dieser Wert misst die Treffergenauigkeit der Vorhersagen des Klassifikators und gibt an, inwieweit dessen Vorhersagen mit der modellierten Realität übereinstimmen \cite{Sammut2017}.
+\\Dieser Wert misst die Treffergenauigkeit der Vorhersagen des Klassifikators und gibt an, inwieweit dessen Vorhersagen mit der modellierten Realität übereinstimmen \cite{Sammut2017}. Die Formel zur Berechnung der Accuracy lautet:
 \\\[Accuracy = \frac{TP+TN}{TP+TN+FP+FN}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit die bestmögliche Accuracy dar.
 \item Echt-Positiv-Rate / Trefferquote (TP-Rate / Recall)
-\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen an. \cite{Alpaydin2010}
+\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen an \cite{Alpaydin2010}. Die Formel zur Berechnung der TP-Rate bzw. des Recalls lautet:
 \\\[TP-Rate = \frac{TP}{TP+FN}\]
-\item Falsch-Positiv-Rate (FP-Rate)
-\\Dieser Wert gibt den Anteil der fälschlicherweise als positiv gewerteten Vorhersagen an. \cite{Alpaydin2010}
-\\\[FP-Rate = \frac{FP}{FP+TN}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit die bestmögliche TP-Rate bzw. den bestmöglichen Recall dar. Beide Begriffe werden parallel für die Berechnung der gezeigten Formel verwendet.
 \item Positiver Vorhersagewert (Precision)
-\\ Dieser Wert gibt die Anzahl der positiven Vorhersagen an, die auch tatsächlich zur positiven Klasse gehören \cite{Sammut2017}.
+\\ Dieser Wert gibt die Anzahl der positiven Vorhersagen an, die auch tatsächlich zur positiven Klasse gehören \cite{Sammut2017}. Die Formel zur Bestimmung der Precision lautet:
 \\\[Precision = \frac{TP}{TP+FP}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit die bestmögliche Precision dar.
 \item F-Maß (F-Score)
-\\ Dieser Wert berechnet das harmonische Mittel zwischen den Werten Precision und Recall und liegt somit zwischen diesen beiden Werten, jedoch näher am kleineren Wert \cite{Sammut2017}.
+\\ Dieser Wert berechnet das harmonische Mittel der Werte Precision und Recall und liegt somit zwischen diesen beiden Werten, jedoch näher am kleineren Wert \cite{Sammut2017}. Die Formel zur Berechnung des F-Scores lautet:
 \\\[F-Score = \frac{2TP}{2TP+FP+FN}\]
-\item ROC-Bereich (ROC-Area)
-\\Dieser Wert unterliegt der Messung der ROC-Kurve (ROC =  Receiver operating characteristic, Betriebsverhalten des Empfängers), welche das Verhältnis zwischen der TP-Rate und der FP-Rate modelliert \cite{Sammut2017}. Die ROC-Area, auch AUC (area under curce, Bereich unter der Kurve) genannt, evaluiert den Bereich unter dieser Kurve mit einem Wert zwischen 0 (alle Negativwerte rangieren vor allen Positivwerten) und 1 (alle Positivwerte rangieren vor allen Negativwerten) \cite{Sammut2017}.
-\item PRC-Bereich (PRC-Area)
-\\Dieser Wert unterliegt der Messung der PRC (Precision-Recall-Curve), welche die Werte der Precision und des Recalls gegenüberstellt. Die Messung des Bereiches unter dieser Kurve erfolgt analog zur ROC-Area.
+Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit den bestmöglichen F-Score dar.
 \end{itemize}
 
-\fbox{\parbox{\linewidth}{\textit{RQ3a: WELCHE MITEINANDER VERGLEICHBAREN MERKMALE BESITZEN DIE KLASSIFIKATOREN?\medskip}\\
-Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile steht sondern in mindestens zwei oder mehr Zeilen, denn andernfalls werden wir nicht sehen können ob der Rahmen nur um die erste Zeile geht, oder wie wir wollen sich um den ganzen Absatz zieht.}}
+Darüber hinaus wurden die sogenannten ROC-Kurven (ROC curve) der einzelnen Klassifikatoren ermittelt. Diese Wahrscheinlichkeitskurven bzw. -graphen (ROC = Receiver Operating characteristic, Betriebsverhalten des Empfängers), beschreiben das Verhältnis zwischen der TP-Rate (y-Achse) und der FP-Rate (x-Achse) \cite{Sammut2017,Narkhede2018}. Die Falsch-Positiv-Rate (FP-Rate) gibt dabei den Anteil der fälschlicherweise als positiv gewerteten Vorhersagen an \cite{Alpaydin2010}. Sie wird mittels der folgenden Formel berechnet:
+\\\[FP-Rate = \frac{FP}{FP+TN}\]
 
-\fbox{\parbox{\linewidth}{\textit{RQ3b: WELCHE METRIKEN KÖNNEN FÜR DEN VERGLEICH VERWENDET WERDEN?\medskip}\\
-Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken verwendet, welche auf Basis der Konfusionsmatrizen berechnet werden. Ebenfalls hinzugezogen werden die ROC-Kurven, sowie die ROC- und PRC-Bereiche. Diese Metriken stellen einen Standard für die Messung von Klassifikatoren dar.}}
+Wie bei allen Metriken ist das Ergebnis der FP-Rate ein prozentualer Wert, der bestenfalls möglichst gering ausfallen sollte. Sowohl die TP-Rate als auch die FP-Rate geben nur singuläre Werte an, aus welchen sich keine Graphen herleiten lassen. Jeder Klassifikator errechnet jedoch im Rahmen der Vorhersage eines Datensatzes Wahrscheinlichkeiten, die die Zugehörigkeit zu den Werten der Zielklasse darstellen \cite{KNIMETV2019}. In der Regel wird ein Datensatz der positiven Klasse zugeordnet, wenn die Wahrscheinlichkeit einen Schwellenwert von 0,5\% übersteigt - Datensätze, die diesen Schwellenwert unterschreiten werden wiederum der negativen Klasse zugeordnet \cite{KNIMETV2019}. Wird der Schwellenwert erhöht, so werden weniger Datensätze der positiven Klasse zugeordnet, wohingegen im Falle einer Absenkung des Schwellenwertes mehr Datensätze der positiven Klasse zugeordnet werden \cite{KNIMETV2019}. Für die Erstellung der ROC-Kurven werden somit die Werte der TP-Rate und der FP-Rate unter der Berücksichtigung der Schwellenwerte im Bereich von 0,0 bis 1,0 gegenübergestellt.
+
+Eine weitere Metrik, die in Verbindung mit der ROC-Kurve auftritt, ist der ROC-Bereich (ROC area). Dieser Wert, der anhand der ROC-Kurve berechnet wird und auch AUC-Bereich (AUC = Area Under Curve, Bereich unter der Kurve) genannt wird, gibt an, in wieweit ein Klassifikator in der Lage ist, zwischen den Werten der Zielklassen zu unterscheiden \cite{Narkhede2018}. Je höher dieser Wert ist (1,0 ist das Maximum), desto besser trifft der Klassifikator korrekte Vorhersagen \cite{Narkhede2018}.
+
+Am Beispiel des Schwellenwertes 0,5 wird nun die Interpretation der ROC-Kurve und des ROC-Bereiches vorgenommen. Unterstützt wird dies durch grafische Beispiele, die in \autoref{fig:curves} gezeigt werden. Der Idealfall ist in den (a) und (b) dargestellt. Die Wahrscheinlichkeitskurven der Zielklasse (a) weisen keine Überlappung auf. Die Werte der Zielklasse sind somit allesamt korrekt zugeordnet worden, sodass der Klassifikator korrekt zwischen diesen unterscheiden kann. Die diesem Fall entsprechende ROC-Kurve ist in (b) dargestellt. Der ROC-Bereich beträt in diesem Fall 1,0. Ein \glqq Normalfall\grqq{} ist in (c) und (d) dargestellt. Es ist in (c) zu erkennen, dass die Wahrscheinlichkeitskurven überlappen, sodass falsche Zuordnungen getroffen werden. Die entsprechende ROC-Kurve ist in (d) dargestellt. Der entsprechende ROC-Bereich beträgt im hier gezeigten Fall 0,7. Dies bedeutet, dass 70\% der Zuordnungen richtig getroffen werden. Verbessert werden können die Werte möglicherweise, wenn der Schwellenwert verändert wird. Der \glqq Worst Case\grqq, der bei der Performanzmessung mittels ROC-Kurven auftreten kann, ist in (e) und (f) dargestellt. In (e) ist zu erkennen, dass sich die Wahrscheinlichkeitskurven vollständig überlappen. Es findet somit eine willkürliche Zuordnung statt. Die zugehörige ROC-Kruve (f) entspricht einer Winkelhalbierenden. Ein weiterer Fehlerfall ist in (g) und (h) dargestellt. Die Wahrscheinlichkeitskurven (g) zeigen, dass die Zuordnungen gegenteilig erfolgen und somit der jeweils dem anderen Wert der Zielklasse falsch zugeordnet werden. Der entsprechende ROC-Bereich beträgt 0, da wie in (h) zu sehen ist, keine Fläche unter der Kurve vorhanden ist.
+
+\begin{figure}
+  \centering
+  \subfloat[][Idealfall]{\includegraphics[width=0.5\linewidth]{images/roc_ideal}}
+  \subfloat[][Idealfall]{\includegraphics[width=0.25\linewidth]{images/roc_ideal_curve}}
+  \qquad
+  \subfloat[][\glqq Normalfall\grqq]{\includegraphics[width=0.5\linewidth]{images/roc_normal}}
+  \subfloat[][\glqq Normalfall\grqq]{\includegraphics[width=0.25\linewidth]{images/roc_normal_curve}}
+  \qquad
+  \subfloat[][\glqq Worst Case\grqq]{\includegraphics[width=0.5\linewidth]{images/roc_worst}}
+  \subfloat[][\glqq Worst Case\grqq]{\includegraphics[width=0.25\linewidth]{images/roc_worst_curve}}
+  \qquad
+  \subfloat[][Fehlerfall]{\includegraphics[width=0.5\linewidth]{images/roc_neg}}
+  \subfloat[][Fehlerfall]{\includegraphics[width=0.25\linewidth]{images/roc_neg_curve}}
+  \caption{Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite{Narkhede2018}
++\label{fig:curves}}
+\end{figure}
+
+Alle vorgestellten Metriken werden automatisiert von den Werkzeugen scikit-learn und WEKA berechnet. Ferner besitzen beide Werkzeuge die Fähigkeit, ROC-Kurven mit den entsprechenden ROC-Werten auszugeben. Die im Rahmen der Evaluation der Klassifikatoren ermittelten Werte der Metriken sowie die ROC-Kurven und Werte der ROC-Bereiche werden im folgenden Abschnitt aufgeführt und gedeutet.
+
+\fbox{\parbox{\linewidth}{\textsc{RQ3a: WELCHE MITEINANDER VERGLEICHBAREN MERKMALE BESITZEN DIE KLASSIFIKATOREN?\medskip}\\
+Die Merkmale zum Vergleich stellen Evaluationsmetriken dar, welche anhand der Ergebnisse des Tests der Klassifikatoren errechnet werden und die Performanz der Vorhersagen auf verschiedene Weisen messen. Welche Metriken berechnet berechnet wurden beantwortet Forschungsfrage RQ3b.}}
+
+\fbox{\parbox{\linewidth}{\textsc{RQ3b: WELCHE METRIKEN KÖNNEN FÜR DEN VERGLEICH VERWENDET WERDEN?\medskip}\\
+Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken verwendet, welche auf Basis der Konfusionsmatrizen berechnet werden. Ebenfalls hinzugezogen werden die jeweiligen ROC-Kurven der Klassifikatoren mit ihren ROC-Bereichen. Diese Metriken stellen einen Standard für die Messung von Klassifikatoren dar.}}
 
 \subsection{Ergebnisse und Diskussion}
+\label{results}
+
+Dieser Abschnitt dient zur Präsentation der Ergebnisse der Evaluation der Klassifikatoren anhand der zuvor vorgestellten Evaluationsmetriken. Ferner werden die vorgestellten Ergebnisse innerhalb und zwischen der Datensets verglichen und interpretiert. 
 
 \begin{table}
 \centering
@@ -215,75 +248,51 @@ Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken ver
 \caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (scikit-learn)}
 \label{tab:met-scikit}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.083\linewidth}>{\hspace{0pt}}p{0.164\linewidth}|>{\centering\hspace{0pt}}p{0.158\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.098\linewidth}|>{\centering\hspace{0pt}}p{0.158\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.1\linewidth}|} 
+\begin{tabular}{|>{\centering\hspace{0pt}}p{0.081\linewidth}>{\hspace{0pt}}p{0.158\linewidth}|>{\centering\hspace{0pt}}p{0.166\linewidth}>{\centering\hspace{0pt}}p{0.116\linewidth}>{\centering\hspace{0pt}}p{0.104\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.098\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.083\linewidth}}{} &  & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.368\linewidth}|}{\textbf{Feat-Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.37\linewidth}|}{\textbf{File-Datenset} } \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.081\linewidth}}{}           &           & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.386\linewidth}|}{\textbf{featurebasiertes Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.36\linewidth}|}{\textbf{dateibasiertes Datenset} }  \\ 
 \cline{3-8}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.083\linewidth}}{} &  & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}  & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}  \\ 
+\multicolumn{1}{>{\centering\hspace{0pt}}p{0.081\linewidth}}{} &           & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                       & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                                    \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}DT} & TP-Rate & 0,92 & 0,63 & 0,86 & 0,99 & 0,85 & 0,95 \\
- & FP-Rate & 0,37 & 0,08 & 0,31 & 0,15 & 0,01 & 0,11 \\
- & Precision & 0,91 & 0,68 & 0,86 & 0,95 & 0,97 & 0,95 \\
- & Recall & 0,92 & 0,63 & 0,86 & 0,99 & 0,85 & 0,95 \\
- & F-Score & 0,92 & 0,65 & 0,86 & 0,97 & 0,91 & 0,95 \\
- & ROC-Area & 0,78 & 0,78 & 0,78 & 0,92 & 0,92 & 0,92 \\
- & PRC-Area & 0,76 & 0,50 & 0,71 & 0,72 & 0,86 & 0,76 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}DT}      & Precision & 0,91                 & 0,68             & 0,86                                                     & 0,95                 & 0,97             & 0,95                                                                  \\
+                                                               & Recall    & 0,92                 & 0,63             & 0,86                                                     & 0,99                 & 0,85             & 0,95                                                                  \\
+                                                               & F-Score   & 0,92                 & 0,65             & 0,86                                                     & 0,97                 & 0,91             & 0,95                                                                  \\
+                                                               & ROC-Area  & 0,78                 & 0,78             & 0,78                                                     & 0,92                 & 0,92             & 0,92                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}KNN} & TP-Rate & 0,96 & 0,45 & 0,87 & 0,93 & 0,86 & 0,91 \\
- & FP-Rate & 0,55 & 0,04 & 0,46 & 0,14 & 0,07 & 0,12 \\
- & Precision & 0,88 & 0,74 & 0,86 & 0,95 & 0,81 & 0,91 \\
- & Recall & 0,96 & 0,45 & 0,87 & 0,93 & 0,86 & 0,91 \\
- & F-Score & 0,92 & 0,56 & 0,85 & 0,94 & 0,84 & 0,91 \\
- & ROC-Area & 0,82 & 0,82 & 0,82 & 0,89 & 0,89 & 0,89 \\
- & PRC-Area & 0,79 & 0,44 & 0,72 & 0,69 & 0,74 & 0,71 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}KNN}     & Precision & 0,88                 & 0,74             & 0,86                                                     & 0,95                 & 0,81             & 0,91                                                                  \\
+                                                               & Recall    & 0,96                 & 0,45             & 0,87                                                     & 0,93                 & 0,86             & 0,91                                                                  \\
+                                                               & F-Score   & 0,92                 & 0,56             & 0,85                                                     & 0,94                 & 0,84             & 0,91                                                                  \\
+                                                               & ROC-Area  & 0,82                 & 0,82             & 0,82                                                     & 0,89                 & 0,89             & 0,89                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}NB} & TP-Rate & 0,82 & 0,07 & 0,67 & 0,66 & 0,70 & 0,67 \\
- & FP-Rate & 0,93 & 0,18 & 0,78 & 0,30 & 0,34 & 0,31 \\
- & Precision & 0,78 & 0,10 & 0,65 & 0,86 & 0,43 & 0,74 \\
- & Recall & 0,82 & 0,07 & 0,67 & 0,66 & 0,70 & 0,67 \\
- & F-Score & 0,80 & 0,08 & 0,66 & 0,75 & 0,53 & 0,69 \\
- & ROC-Area & 0,40 & 0,40 & 0,40 & 0,72 & 0,72 & 0,72 \\
- & PRC-Area & 0,82 & 0,19 & 0,69 & 0,68 & 0,38 & 0,59 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}NB}      & Precision & 0,78                 & 0,10             & 0,65                                                     & 0,86                 & 0,43             & 0,74                                                                  \\
+                                                               & Recall    & 0,82                 & 0,07             & 0,67                                                     & 0,66                 & 0,70             & 0,67                                                                  \\
+                                                               & F-Score   & 0,80                 & 0,08             & 0,66                                                     & 0,75                 & 0,53             & 0,69                                                                  \\
+                                                               & ROC-Area  & 0,40                 & 0,40             & 0,40                                                     & 0,72                 & 0,72             & 0,72                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}NN} & TP-Rate & 0,97 & 0,50 & 0,89\textasciitilde{} & 0,96 & 0,73 & 0,90 \\
- & FP-Rate & 0,50 & 0,03 & 0,42 & 0,27 & 0,04 & 0,21 \\
- & Precision & 0,91 & 0,74 & 0,88 & 0,91 & 0,87 & 0,90 \\
- & Recall & 0,97 & 0,50 & 0,89 & 0,96 & 0,73 & 0,90 \\
- & F-Score & 0,94 & 0,60 & 0,88 & 0,93 & 0,79 & 0,90 \\
- & ROC-Area & 0,90 & 0,90 & 0,90 & 0,95 & 0,95 & 0,95 \\
- & PRC-Area & 0,81 & 0,45 & 0,76 & 0,71 & 0,71 & 0,71 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}NN}      & Precision & 0,91                 & 0,74             & 0,88                                                     & 0,91                 & 0,87             & 0,90                                                                  \\
+                                                               & Recall    & 0,97                 & 0,50             & 0,89                                                     & 0,96                 & 0,73             & 0,90                                                                  \\
+                                                               & F-Score   & 0,94                 & 0,60             & 0,88                                                     & 0,93                 & 0,79             & 0,90                                                                  \\
+                                                               & ROC-Area  & 0,90                 & 0,90             & 0,90                                                     & 0,95                 & 0,95             & 0,95                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}RC} & TP-Rate & 0,99 & 0,16 & 0,83 & 0,99 & 0,02 & 0,73 \\
- & FP-Rate & 0,88 & 0,01 & 0,72 & 0,98 & 0,01 & 0,72 \\
- & Precision & 0,83 & 0,83 & 0,83 & 0,73 & 0,50 & 0,67 \\
- & Recall & 0,99 & 0,12 & 0,83 & 0,99 & 0,02 & 0,73 \\
- & F-Score & 0,90 & 0,20 & 0,77 & 0,84 & 0,04 & 0,63 \\
- & ROC-Area & 0,77 & 0,77 & 0,77 & 0,62 & 0,62 & 0,62 \\
- & PRC-Area & 0,81 & 0,26 & 0,70 & 0,73 & 0,27 & 0,61 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}RC}      & Precision & 0,83                 & 0,83             & 0,83                                                     & 0,73                 & 0,50             & 0,67                                                                  \\
+                                                               & Recall    & 0,99                 & 0,12             & 0,83                                                     & 0,99                 & 0,02             & 0,73                                                                  \\
+                                                               & F-Score   & 0,90                 & 0,20             & 0,77                                                     & 0,84                 & 0,04             & 0,63                                                                  \\
+                                                               & ROC-Area  & 0,77                 & 0,77             & 0,77                                                     & 0,62                 & 0,62             & 0,62                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}RF} & TP-Rate & 0,97 & 0,71 & 0,82 & 0,99 & 0,96 & 0,99 \\
- & FP-Rate & 0,29 & 0,03 & 0,24 & 0,04 & 0,01 & 0,03 \\
- & Precision & 0,93 & 0,86 & 0,92 & 0,99 & 0,98 & 0,99 \\
- & Recall & 0,97 & 0,71 & 0,92 & 0,99 & 0,96 & 0,99 \\
- & F-Score & 0,95 & 0,78 & 0,92 & 0,99 & 0,97 & 0,99 \\
- & ROC-Area & 0,96 & 0,96 & 0,96 & 0,98 & 0,98 & 0,98 \\
- & PRC-Area & 0,79 & 0,67 & 0,77 & 0,74 & 0,96 & 0,79 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}RF}      & Precision & 0,93                 & 0,86             & 0,92                                                     & 0,99                 & 0,98             & 0,99                                                                  \\
+                                                               & Recall    & 0,97                 & 0,71             & 0,92                                                     & 0,99                 & 0,96             & 0,99                                                                  \\
+                                                               & F-Score   & 0,95                 & 0,78             & 0,92                                                     & 0,99                 & 0,97             & 0,99                                                                  \\
+                                                               & ROC-Area  & 0,96                 & 0,96             & 0,96                                                     & 0,98                 & 0,98             & 0,98                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}SGD} & TP-Rate & 0,98 & 0,17 & 0,82 & 0,41 & 0,89 & 0,54 \\
- & FP-Rate & 0,83 & 0,02 & 0,67 & 0,11 & 0,59 & 0,54 \\
- & Precision & 0,83 & 0,65 & 0,80 & 0,91 & 0,36 & 0,76 \\
- & Recall & 0,98 & 0,17 & 0,82 & 0,41 & 0,89 & 0,54 \\
- & F-Score & 0,90 & 0,27 & 0,78 & 0,57 & 0,51 & 0,55 \\
- & ROC-Area & 0,58 & 0,58 & 0,58 & 0,68 & 0,68 & 0,68 \\
- & PRC-Area & 0,80 & 0,27 & 0,70 & 0,68 & 0,35 & 0,59 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}SGD}     & Precision & 0,83                 & 0,65             & 0,80                                                     & 0,91                 & 0,36             & 0,76                                                                  \\
+                                                               & Recall    & 0,98                 & 0,17             & 0,82                                                     & 0,41                 & 0,89             & 0,54                                                                  \\
+                                                               & F-Score   & 0,90                 & 0,27             & 0,78                                                     & 0,57                 & 0,51             & 0,55                                                                  \\
+                                                               & ROC-Area  & 0,58                 & 0,58             & 0,58                                                     & 0,68                 & 0,68             & 0,68                                                                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}\Centering{}SVM} & TP-Rate & 0,99 & 0,26 & 0,84 & 0,99 & 0,03 & 0,74 \\
- & FP-Rate & 0,74 & 0,01 & 0,84 & 0,97 & 0,01 & 0,72 \\
- & Precision & 0,85 & 0,81 & 0,84 & 0,74 & 0,50 & 0,68 \\
- & Recall & 0,99 & 0,26 & 0,84 & 0,99 & 0,03 & 0,74 \\
- & F-Score & 0,91 & 0,39 & 0,81 & 0,85 & 0,05 & 0,64 \\
- & ROC-Area & 0,83 & 0,83 & 0,83 & 0,62 & 0,62 & 0,62 \\
- & PRC-Area & 0,80 & 0,35 & 0,71 & 0,73 & 0,27 & 0,61 \\
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}SVM}     & Precision & 0,85                 & 0,81             & 0,84                                                     & 0,74                 & 0,50             & 0,68                                                                  \\
+                                                               & Recall    & 0,99                 & 0,26             & 0,84                                                     & 0,99                 & 0,03             & 0,74                                                                  \\
+                                                               & F-Score   & 0,91                 & 0,39             & 0,81                                                     & 0,85                 & 0,05             & 0,64                                                                  \\
+                                                               & ROC-Area  & 0,83                 & 0,83             & 0,83                                                     & 0,62                 & 0,62             & 0,62                                                                  \\
 \hline
 \end{tabular}
 }
@@ -294,86 +303,65 @@ Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken ver
 \caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (WEKA)}
 \label{tab:met-weka}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.085\linewidth}>{\hspace{0pt}}p{0.168\linewidth}|>{\centering\hspace{0pt}}p{0.152\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 
+\begin{tabular}{|>{\centering\hspace{0pt}}p{0.081\linewidth}>{\hspace{0pt}}p{0.158\linewidth}|>{\centering\hspace{0pt}}p{0.16\linewidth}>{\centering\hspace{0pt}}p{0.118\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}|>{\centering\hspace{0pt}}p{0.15\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.085\linewidth}}{\textbf{} } & \textbf{}  & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.364\linewidth}|}{\textbf{Feat-Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.368\linewidth}|}{\textbf{File-Datenset} } \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.081\linewidth}}{ \textbf{} } & \textbf{}  & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.386\linewidth}|}{\textbf{featurebasiertes Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.36\linewidth}|}{\textbf{dateibasiertes Datenset} }  \\ 
 \cline{3-8}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.085\linewidth}}{} &  & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}  & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}  \\ 
+\multicolumn{1}{>{\centering\hspace{0pt}}p{0.081\linewidth}}{}  &            & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                       & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                                    \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}DT} & TP-Rate & 0,92 & 0,63 & 0,89 & 0,99 & 0,95 & 0,98 \\
- & FP-Rate & 0,37 & 0,05 & 0,31 & 0,05 & 0,01 & 0,04 \\
- & Precision & 0,91 & 0,76 & 0,88 & 0,98 & 0,96 & 0,98 \\
- & Recall & 0,95 & 0,62 & 0,89 & 0,99 & 0,95 & 0,98 \\
- & F-Score & 0,93 & 0,69 & 0,89 & 0,98 & 0,95 & 0,98 \\
- & ROC-Area & 0,89 & 0,89 & 0,89 & 0,98 & 0,98 & 0,98 \\
- & PRC-Area & 0,96 & 0,71 & 0,91 & 0,98 & 0,62 & 0,98 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}DT}       & Precision  & 0,91                 & 0,76             & 0,88                                                     & 0,98                 & 0,96             & 0,98                                                                  \\
+                                                                & Recall     & 0,95                 & 0,62             & 0,89                                                     & 0,99                 & 0,95             & 0,98                                                                  \\
+                                                                & F-Score    & 0,93                 & 0,69             & 0,89                                                     & 0,98                 & 0,95             & 0,98                                                                  \\
+                                                                & ROC-Area   & 0,89                 & 0,89             & 0,89                                                     & 0,98                 & 0,98             & 0,98                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}KNN} & TP-Rate & 0,93 & 0,65 & 0,88 & 0,96 & 0,84 & 0,93 \\
- & FP-Rate & 0,35 & 0,07 & 0,29 & 0,16 & 0,04 & 0,13 \\
- & Precision & 0,92 & 0,69 & 0,72 & 0,94 & 0,88 & 0,93 \\
- & Recall & 0,93 & 0,65 & 0,88 & 0,96 & 0,84 & 0,93 \\
- & F-Score & 0,92 & 0,67 & 0,87 & 0,95 & 0,86 & 0,93 \\
- & ROC-Area & 0,87 & 0,87 & 0,87 & 0,91 & 0,91 & 0,91 \\
- & PRC-Area & 0,95 & 0,59 & 0,88 & 0,95 & 0,80 & 0,91 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}KNN}      & Precision  & 0,92                 & 0,69             & 0,72                                                     & 0,94                 & 0,88             & 0,93                                                                  \\
+                                                                & Recall     & 0,93                 & 0,65             & 0,88                                                     & 0,96                 & 0,84             & 0,93                                                                  \\
+                                                                & F-Score    & 0,92                 & 0,67             & 0,87                                                     & 0,95                 & 0,86             & 0,93                                                                  \\
+                                                                & ROC-Area   & 0,87                 & 0,87             & 0,87                                                     & 0,91                 & 0,91             & 0,91                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}LR} & TP-Rate & 0,97 & 0,34 & 0,85 & 0,99 & 0,04 & 0,74 \\
- & FP-Rate & 0,66 & 0,03 & 0,54 & 0,96 & 0,01 & 0,71 \\
- & Precision & 0,86 & 0,74 & 0,84 & 0,74 & 0,53 & 0,68 \\
- & Recall & 0,92 & 0,34 & 0,85 & 0,99 & 0,04 & 0,74 \\
- & F-Score & 0,91 & 0,47 & 0,83 & 0,85 & 0,07 & 0,64 \\
- & ROC-Area & 0,83 & 0,83 & 0,83 & 0,62 & 0,62 & 0,62 \\
- & PRC-Area & 0,95 & 0,63 & 0,89 & 0,83 & 0,38 & 0,71 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}LR}       & Precision  & 0,86                 & 0,74             & 0,84                                                     & 0,74                 & 0,53             & 0,68                                                                  \\
+                                                                & Recall     & 0,92                 & 0,34             & 0,85                                                     & 0,99                 & 0,04             & 0,74                                                                  \\
+                                                                & F-Score    & 0,91                 & 0,47             & 0,83                                                     & 0,85                 & 0,07             & 0,64                                                                  \\
+                                                                & ROC-Area   & 0,83                 & 0,83             & 0,83                                                     & 0,62                 & 0,62             & 0,62                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}NB} & TP-Rate & 0,92 & 0,33 & 0,85 & 0,98 & 0,08 & 0,74 \\
- & FP-Rate & 0,67 & 0,03 & 0,55 & 0,92 & 0,02 & 0,68 \\
- & Precision & 0,86 & 0,74 & 0,83 & 0,74 & 0,58 & 0,70 \\
- & Recall & 0,97 & 0,33 & 0,85 & 0,98 & 0,08 & 0,74 \\
- & F-Score & 0,91 & 0,45 & 0,82 & 0,88 & 0,14 & 0,65 \\
- & ROC-Area & 0,73 & 0,73 & 0,73 & 0,62 & 0,62 & 0,62 \\
- & PRC-Area & 0,91 & 0,51 & 0,83 & 0,82 & 0,38 & 0,70 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}NB}       & Precision  & 0,86                 & 0,74             & 0,83                                                     & 0,74                 & 0,58             & 0,70                                                                  \\
+                                                                & Recall     & 0,97                 & 0,33             & 0,85                                                     & 0,98                 & 0,08             & 0,74                                                                  \\
+                                                                & F-Score    & 0,91                 & 0,45             & 0,82                                                     & 0,88                 & 0,14             & 0,65                                                                  \\
+                                                                & ROC-Area   & 0,73                 & 0,73             & 0,73                                                     & 0,62                 & 0,62             & 0,62                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}NN} & TP-Rate & 0,93 & 0,59 & 0,86 & 1,00 & 0,00 & 0,73 \\
- & FP-Rate & 0,41 & 0,07 & 0,34 & 1,00 & 0,00 & 0,73 \\
- & Precision & 0,90 & 0,70 & 0,86 & 0,73 & ? & ? \\
- & Recall & 0,93 & 0,59 & 0,86 & 1,00 & 0,00 & 0,73 \\
- & F-Score & 0,91 & 0,64 & 0,86 & 0,85 & ? & ? \\
- & ROC-Area & 0,82 & 0,82 & 0,82 & 0,55 & 0,55 & 0,55 \\
- & PRC-Area & 0,96 & 0,72 & 0,91 & 0,80 & 0,30 & 0,67 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}NN}       & Precision  & 0,90                 & 0,70             & 0,86                                                     & 0,73                 & ?                & ?                                                                     \\
+                                                                & Recall     & 0,93                 & 0,59             & 0,86                                                     & 1,00                 & 0,00             & 0,73                                                                  \\
+                                                                & F-Score    & 0,91                 & 0,64             & 0,86                                                     & 0,85                 & ?                & ?                                                                     \\
+                                                                & ROC-Area   & 0,82                 & 0,82             & 0,82                                                     & 0,55                 & 0,55             & 0,55                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}RF} & TP-Rate & 0,97 & 0,71 & 0,92 & 0,99 & 0,96 & 0,99 \\
- & FP-Rate & 0,29 & 0,03 & 0,24 & 0,04 & 0,01 & 0,03 \\
- & Precision & 0,93 & 0,84 & 0,91 & 0,99 & 0,98 & 0,99 \\
- & Recall & 0,97 & 0,71 & 0,92 & 0,99 & 0,96 & 0,99 \\
- & F-Score & 0,95 & 0,77 & 0,91 & 0,99 & 0,97 & 0,99 \\
- & ROC-Area & 0,96 & 0,96 & 0,96 & 0,99 & 0,99 & 0,99 \\
- & PRC-Area & 0,99 & 0,87 & 0,97 & 1,00 & 0,99 & 1,00 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}RF}       & Precision  & 0,93                 & 0,84             & 0,91                                                     & 0,99                 & 0,98             & 0,99                                                                  \\
+                                                                & Recall     & 0,97                 & 0,71             & 0,92                                                     & 0,99                 & 0,96             & 0,99                                                                  \\
+                                                                & F-Score    & 0,95                 & 0,77             & 0,91                                                     & 0,99                 & 0,97             & 0,99                                                                  \\
+                                                                & ROC-Area   & 0,96                 & 0,96             & 0,96                                                     & 0,99                 & 0,99             & 0,99                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}SGD} & TP-Rate & 0,99 & 0,21 & 0,84 & 1,00 & 0,00 & 0,73 \\
- & FP-Rate & 0,79 & 0,01 & 0,64 & 1,00 & 0,00 & 0,73 \\
- & Precision & 0,84 & 0,84 & 0,84 & 0,73 & 0,00 & 0,538 \\
- & Recall & 0,99 & 0,41 & 0,84 & 1,00 & 0,00 & 0,734 \\
- & F-Score & 0,91 & 0,34 & 0,80 & 0,85 & 0,00 & 0,621 \\
- & ROC-Area & 0,60 & 0,60 & 0,60 & 0,50 & 0,50 & 0,50 \\
- & PRC-Area & 0,84 & 0,33 & 0,74 & 0,73 & 0,27 & 0,61 \\ 
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}SGD}      & Precision  & 0,84                 & 0,84             & 0,84                                                     & 0,73                 & 0,00             & 0,538                                                                 \\
+                                                                & Recall     & 0,99                 & 0,41             & 0,84                                                     & 1,00                 & 0,00             & 0,734                                                                 \\
+                                                                & F-Score    & 0,91                 & 0,34             & 0,80                                                     & 0,85                 & 0,00             & 0,621                                                                 \\
+                                                                & ROC-Area   & 0,60                 & 0,60             & 0,60                                                     & 0,50                 & 0,50             & 0,50                                                                  \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}\Centering{}SVM} & TP-Rate & 1,00 & 0,08 & 0,82 & 1,00 & 0,00 & 0,73 \\
- & FP-Rate & 0,92 & 0,00 & 0,74 & 1,00 & 0,00 & 0,73 \\
- & Precision & 0,82 & 0,93 & 0,84 & 0,73 & ? & ? \\
- & Recall & 1,00 & 0,08 & 0,82 & 1,00 & 0,00 & 0,73 \\
- & F-Score & 0,90 & 0,15 & 0,76 & 0,85 & ? & ? \\
- & ROC-Area & 0,54 & 0,54 & 0,54 & 0,50 & 0,50 & 0,50 \\
- & PRC-Area & 0,82 & 0,25 & 0,71 & 0,73 & 0,27 & 0,61 \\
+\multirow{4}{0.081\linewidth}{\hspace{0pt}\Centering{}SVM}      & Precision  & 0,82                 & 0,93             & 0,84                                                     & 0,73                 & ?                & ?                                                                     \\
+                                                                & Recall     & 1,00                 & 0,08             & 0,82                                                     & 1,00                 & 0,00             & 0,73                                                                  \\
+                                                                & F-Score    & 0,90                 & 0,15             & 0,76                                                     & 0,85                 & ?                & ?                                                                     \\
+                                                                & ROC-Area   & 0,54                 & 0,54             & 0,54                                                     & 0,50                 & 0,50             & 0,50                                                                  \\
 \hline
 \end{tabular}
 }
 \end{table}
 
-\fbox{\parbox{\linewidth}{\textit{RQ3c: WELCHE VOR- UND NACHTEILE BESITZT EIN KLASSIFIKATOR?\medskip}\\
+\fbox{\parbox{\linewidth}{\textsc{RQ3c: WELCHE VOR- UND NACHTEILE BESITZT EIN KLASSIFIKATOR?\medskip}\\
 Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile steht sondern in mindestens zwei oder mehr Zeilen, denn andernfalls werden wir nicht sehen können ob der Rahmen nur um die erste Zeile geht, oder wie wir wollen sich um den ganzen Absatz zieht.}}
 
 \section{Vergleich zu nicht-featurebasierten Methoden}
+\label{classic-eval}
 
-Zum besseren Vergleich der Ergebnisse des Datensets mit neuartiger Fokussierung auf Software-Features, wird nicht nur das unter Zuhilfenahme der gleichen Metriken erstellte dateibasierte Datensets hinzugezogen, sondern zusätzlich ein Datenset, dessen Erstellung aus der wissenschaftlichen Literatur entnommen wurde und sich ebenfalls dem gängigen Weg der dateibasierten Fehlervorhersage widmet. Die von Moser et al. vorgestellte Methode umfasst die Berechnung von 17 Prozessmetriken, welche in Tabelle XX aufgeführt sind. \cite{Moser2008}. Die Grundlage der Berechnungen bildeten die aus den Software-Repositories mittels PyDriller erhaltenen Daten. Zur Berechnung der \texttt{REVISIONS}-Metrik wurden die Commit-Nachrichten, analog zur Identifikation der fehlerbehebenden Commits, auf das Vorhandensein des Schlagwortes \glqq refactor\grqq{} analysiert. Zur Berechnung der Metriken \texttt{AGE} und \texttt{WEIGHTED\_AGE} wurde zudem für jeden Commit das zugehörige Datum der Ausführung abgerufen. Die Berechnung erfolgte entweder direkt mittels SQL-Abrufen oder mithilfe von Python-Skripten. 
+Zum besseren Vergleich der Ergebnisse des Datensets mit neuartiger Fokussierung auf Software-Features, wird nicht nur das unter Zuhilfenahme der gleichen Metriken erstellte dateibasierte Datensets hinzugezogen, sondern zusätzlich ein Datenset, dessen Erstellung aus der wissenschaftlichen Literatur entnommen wurde und sich ebenfalls dem gängigen Weg der dateibasierten Fehlervorhersage widmet. Die von Moser et al. vorgestellte Methode umfasst die Berechnung von 17 Prozessmetriken, welche in \autoref{tab:eval-metrics} aufgeführt sind. \cite{Moser2008}. Die Grundlage der Berechnungen bildeten die aus den Software-Repositories mittels PyDriller erhaltenen Daten. Zur Berechnung der \texttt{REVISIONS}-Metrik wurden die Commit-Nachrichten, analog zur Identifikation der fehlerbehebenden Commits, auf das Vorhandensein des Schlagwortes \glqq refactor\grqq{} analysiert. Zur Berechnung der Metriken \texttt{AGE} und \texttt{WEIGHTED\_AGE} wurde zudem für jeden Commit das zugehörige Datum der Ausführung abgerufen. Die Berechnung erfolgte entweder direkt mittels SQL-Abrufen oder mithilfe von Python-Skripten.
+
+Zur besseren Vergleichbarkeit dieses Ansatzes, wurden die Metriken für ein weiteres Datenset unter Berücksichtigung des Feature-Aspekts berechnet. Dieses Datenset basiert ebenfalls aus den mit PyDriller erhaltenen Rohdaten und beinhaltet nur jede Dateien, in welchen ein Feature entfernt, hinzugefügt oder verändert wurde. Im weiteren Verlauf des Abschnitts wird dieses Datenset als \glqq vorhandenes Datenset\grqq{} bezeichnet.
 
 \begin{table}[]
 \centering
@@ -404,49 +392,51 @@ WEIGHTED\_AGE     & wage               & $Weighted Age = \frac{\sum_{i=1}^N Age(
 }
 \end{table}
 
-\fbox{\parbox{\linewidth}{\textit{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip}\\
-Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile steht sondern in mindestens zwei oder mehr Zeilen, denn andernfalls werden wir nicht sehen können ob der Rahmen nur um die erste Zeile geht, oder wie wir wollen sich um den ganzen Absatz zieht.}}
+\fbox{\parbox{\linewidth}{\textsc{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip}\\
+Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der wissenschaftlichen Literatur zurückgegriffen \cite{Moser2008}. Dieses Datenset basiert auf den mittels PyDriller abgerufenen Daten und umfasst 17 Attribute. Zum besseren Vergleich wurde ein weiteres Datenset erstellt, welches nur jene Dateien umfasst, in denen sich Featurecode befindet.}}
 
 \begin{table}
 \centering
 \caption{Konfusionsmatrizen der Evaluation der Klassifikatoren des klassischen Datensets}
 \label{tab:class-mat}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.114\linewidth}>{\hspace{0pt}}p{0.345\linewidth}|>{\centering\hspace{0pt}}p{0.216\linewidth}>{\centering\hspace{0pt}}p{0.15\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.166\linewidth}|} 
-\cline{2-5}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.114\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}  \\ 
+\begin{tabular}{|>{\centering\hspace{0pt}}p{0.075\linewidth}>{\hspace{0pt}}p{0.229\linewidth}|>{\centering\hspace{0pt}}p{0.143\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}>{\centering\hspace{0pt}}p{0.079\linewidth}|>{\centering\hspace{0pt}}p{0.145\linewidth}>{\centering\hspace{0pt}}p{0.102\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.112\linewidth}|} 
+\cline{3-8}
+\multicolumn{1}{>{\hspace{0pt}}p{0.075\linewidth}}{}            &                                    & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.322\linewidth}|}{\textbf{vorhandenes Datenset}} & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.359\linewidth}|}{\textbf{Datenset nach \cite{Moser2008}}}  \\ 
+\cline{2-8}
+\multicolumn{1}{>{\centering\hspace{0pt}}p{0.075\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                                     & \textbf{Fehlerfrei} & \textbf{Defekt} & \textbf{Total}                                                       \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}J48} & Realität fehlerfrei & 86965 & 1071 & 88036 \\
- & Realität defekt & 1691 & 30549 & 32240 \\
- & Total & 88656 & 31620 & 120276 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}J48}      & Realität fehlerfrei                & 7085                 & 345              & 7430                                               & 86965               & 1071            & 88036                                                                \\
+                                                                & Realität defekt                    & 723                  & 1325             & 2048                                               & 1691                & 30549           & 32240                                                                \\
+                                                                & Total                              & 7808                 & 1670             & 9478                                               & 88656               & 31620           & 120276                                                               \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}KNN} & Realität fehlerfrei & 86121 & 1915 & 88036 \\
- & Realität defekt & 3867 & 28373 & 32240 \\
- & Total & 89988 & 30288 & 120276 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}KNN}      & Realität fehlerfrei                & 6946                 & 484              & 7430                                               & 86121               & 1915            & 88036                                                                \\
+                                                                & Realität defekt                    & 850                  & 1198             & 2048                                               & 3867                & 28373           & 32240                                                                \\
+                                                                & Total                              & 7796                 & 1682             & 9478                                               & 89988               & 30288           & 120276                                                               \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}LR} & Realität fehlerfrei & 13094 & 134 & 13228 \\
- & Realität defekt & 4676 & 137 & 4813 \\
- & Total & 17770 & 271 & 18041 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}LR}       & Realität fehlerfrei                & 7349                 & 81               & 7430                                               & 13094               & 134             & 13228                                                                \\
+                                                                & Realität defekt                    & 1946                 & 102              & 2048                                               & 4676                & 137             & 4813                                                                 \\
+                                                                & Total                              & 9295                 & 183              & 9478                                               & 17770               & 271             & 18041                                                                \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}NB} & Realität fehlerfrei & 7232 & 19102 & 26334 \\
- & Realität defekt & 527 & 9222 & 9749 \\
- & Total & 7759 & 28324 & 36083 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NB}       & Realität fehlerfrei                & 65                   & 1770             & 1835                                               & 7232                & 19102           & 26334                                                                \\
+                                                                & Realität defekt                    & 24                   & 510              & 534                                                & 527                 & 9222            & 9749                                                                 \\
+                                                                & Total                              & 89                   & 2280             & 2369                                               & 7759                & 28324           & 36083                                                                \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}NN} & Realität fehlerfrei & 30607 & 153 & 30760 \\
- & Realität defekt & 7646 & 3691 & 11337 \\
- & Total & 38253 & 3844 & 42097 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NN}       & Realität fehlerfrei                & 1110                 & 4                & 1114                                               & 30607               & 153             & 30760                                                                \\
+                                                                & Realität defekt                    & 204                  & 104              & 308                                                & 7646                & 3691            & 11337                                                                \\
+                                                                & Total                              & 1314                 & 108              & 1422                                               & 38253               & 3844            & 42097                                                                \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}RF} & Realität fehlerfrei & 87694 & 342 & 88036 \\
- & Realität defekt & 936 & 31277 & 32213 \\
- & Total & 88630 & 31619 & 120249 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}RF}       & Realität fehlerfrei                & 7314                 & 116              & 7430                                               & 87694               & 342             & 88036                                                                \\
+                                                                & Realität defekt                    & 583                  & 1465             & 2048                                               & 936                 & 31277           & 32213                                                                \\
+                                                                & Total                              & 7897                 & 1581             & 9478                                               & 88630               & 31619           & 120249                                                               \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}SGD} & Realität fehlerfrei & 13221 & 7 & 13228 \\
- & Realität defekt & 4813 & 0 & 4813 \\
- & Total & 18034 & 7 & 18041 \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SGD}      & Realität fehlerfrei                & 7429                 & 1                & 7430                                               & 13221               & 7               & 13228                                                                \\
+                                                                & Realität defekt                    & 2043                 & 5                & 2048                                               & 4813                & 0               & 4813                                                                 \\
+                                                                & Total                              & 9472                 & 6                & 9478                                               & 18034               & 7               & 18041                                                                \\ 
 \hline
-\multirow{3}{0.114\linewidth}{\hspace{0pt}\Centering{}SVM} & Realität fehlerfrei & 13228 & 0 & 13228 \\
- & Realität defekt & 4813 & 0 & 4813 \\
- & Total & 18041 & 0 & 18041 \\
+\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SVM}      & Realität fehlerfrei                & 1114                 & 0                & 1114                                               & 13228               & 0               & 13228                                                                \\
+                                                                & Realität defekt                    & 308                  & 0                & 308                                                & 4813                & 0               & 4813                                                                 \\
+                                                                & Total                              & 1422                 & 0                & 1422                                               & 18041               & 0               & 18041                                                                \\
 \hline
 \end{tabular}
 }
@@ -456,21 +446,31 @@ Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{images/Klasseval}
-    \caption{Übersicht der Accuracies der jeweilgen Klassifikatoren\label{fig:class-acc}}
+    \caption{Übersicht der Accuracies der jeweiligen Klassifikatoren und Datensets\label{fig:class-acc}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \subfloat[][J48]{\includegraphics[width=0.25\linewidth]{images/j48_eval}}
-  \subfloat[][KNN]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
-  \subfloat[][NN]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
-  \subfloat[][RF]{\includegraphics[width=0.25\linewidth]{images/rf_eval}}
+  \subfloat[][J48 (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/j48_eval_feat}}
+  \subfloat[][J48 nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/j48_eval}}
+  \subfloat[][NN (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/nn_eval_feat}}
+  \subfloat[][NN nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
   \qquad
-  \subfloat[][LR]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
-  \subfloat[][NB]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
-  \subfloat[][SGD]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
-  \subfloat[][SVM]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
-  \caption{ROC-Kurven der Klassifikatoren}
+  \subfloat[][KNN (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/knn_eval_feat}}
+  \subfloat[][KNN nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
+  \subfloat[][RF (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/rf_eval_feat}}
+  \subfloat[][RF nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/rf_eval}}  
+  \qquad
+  \subfloat[][LR (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/lr_eval_feat}}
+  \subfloat[][LR nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
+  \subfloat[][SGD (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/sgd_eval_feat}}
+  \subfloat[][SGD nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
+  \qquad
+  \subfloat[][NB (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/nb_eval_feat}}
+  \subfloat[][NB nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
+  \subfloat[][SVM (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/svm_eval_feat}}
+  \subfloat[][SVM nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
+  \caption{ROC-Kurven der Klassifikatoren und Datensets}
 \end{figure}
 
 
@@ -479,73 +479,51 @@ Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile
 \caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix}
 \label{tab:class-val}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.137\linewidth}>{\hspace{0pt}}p{0.268\linewidth}|>{\centering\hspace{0pt}}p{0.245\linewidth}>{\centering\hspace{0pt}}p{0.179\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.162\linewidth}|} 
-\cline{3-5}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.137\linewidth}}{} &           & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}   \\ 
+\begin{tabular}{|>{\centering\hspace{0pt}}p{0.085\linewidth}>{\hspace{0pt}}p{0.168\linewidth}|>{\centering\hspace{0pt}}p{0.152\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 
+\cline{3-8}
+\multicolumn{1}{>{\hspace{0pt}}p{0.085\linewidth}}{}           &           & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.364\linewidth}|}{\textbf{vorhandenes Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.368\linewidth}|}{\textbf{Datenset nach } }  \\ 
+\cline{3-8}
+\multicolumn{1}{>{\centering\hspace{0pt}}p{0.085\linewidth}}{} &           & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                  & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                            \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}DT}      & TP-Rate   & 0,99                 & 0,95             & 0,98                                 \\
-                                                               & FP-Rate   & 0,05                 & 0,01             & 0,04                                 \\
-                                                               & Precision & 0,98                 & 0,97             & 0,98                                 \\
-                                                               & Recall    & 0,99                 & 0,95             & 0,98                                 \\
-                                                               & F-Score   & 0,98                 & 0,96             & 0,98                                 \\
-                                                               & ROC-Area  & 0,98                 & 0,98             & 0,98                                 \\
-                                                               & PRC-Area  & 0,99                 & 0,96             & 0,98                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}DT}      & Precision & 0,91                 & 0,79             & 0,88                                                & 0,98                 & 0,97             & 0,98                                                          \\
+                                                               & Recall    & 0,95                 & 0,65             & 0,89                                                & 0,99                 & 0,95             & 0,95                                                          \\
+                                                               & F-Score   & 0,93                 & 0,71             & 0,88                                                & 0,98                 & 0,96             & 0,98                                                          \\
+                                                               & ROC-Area  & 0,86                 & 0,86             & 0,86                                                & 0,98                 & 0,98             & 0,98                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}KNN}     & TP-Rate   & 0,98                 & 0,88             & 0,95                                 \\
-                                                               & FP-Rate   & 0,12                 & 0,02             & 0,10                                 \\
-                                                               & Precision & 0,96                 & 0,94             & 0,95                                 \\
-                                                               & Recall    & 0,98                 & 0,88             & 0,95                                 \\
-                                                               & F-Score   & 0,97                 & 0,91             & 0,95                                 \\
-                                                               & ROC-Area  & 0,95                 & 0,95             & 0,95                                 \\
-                                                               & PRC-Area  & 0,97                 & 0,88             & 0,95                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}KNN}     & Precision & 0,89                 & 0,71             & 0,85                                                & 0,96                 & 0,94             & 0,95                                                          \\
+                                                               & Recall    & 0,94                 & 0,59             & 0,86                                                & 0,98                 & 0,88             & 0,95                                                          \\
+                                                               & F-Score   & 0,91                 & 0,64             & 0,85                                                & 0,97                 & 0,91             & 0,95                                                          \\
+                                                               & ROC-Area  & 0,77                 & 0,77             & 0,77                                                & 0,95                 & 0,95             & 0,95                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}LR}      & TP-Rate   & 0,99                 & 0,03             & 0,73                                 \\
-                                                               & FP-Rate   & 0,92                 & 0,01             & 0,72                                 \\
-                                                               & Precision & 0,74                 & 0,51             & 0,68                                 \\
-                                                               & Recall    & 0,99                 & 0,03             & 0,73                                 \\
-                                                               & F-Score   & 0,85                 & 0,05             & 0,63                                 \\
-                                                               & ROC-Area  & 0,72                 & 0,72             & 0,72                                 \\
-                                                               & PRC-Area  & 0,88                 & 0,44             & 0,77                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}LR}      & Precision & 0,79                 & 0,58             & 0,74                                                & 0,74                 & 0,51             & 0,68                                                          \\
+                                                               & Recall    & 0,99                 & 0,05             & 0,79                                                & 0,99                 & 0,03             & 0,73                                                          \\
+                                                               & F-Score   & 0,89                 & 0,09             & 0,71                                                & 0,85                 & 0,05             & 0,63                                                          \\
+                                                               & ROC-Area  & 0,68                 & 0,68             & 0,68                                                & 0,72                 & 0,72             & 0,72                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}NB}      & TP-Rate   & 0,28                 & 0,95             & 0,46                                 \\
-                                                               & FP-Rate   & 0,05                 & 0,73             & 0,24                                 \\
-                                                               & Precision & 0,93                 & 0,33             & 0,77                                 \\
-                                                               & Recall    & 0,28                 & 0,95             & 0,46                                 \\
-                                                               & F-Score   & 0,42                 & 0,48             & 0,44                                 \\
-                                                               & ROC-Area  & 0,66                 & 0,66             & 0,66                                 \\
-                                                               & PRC-Area  & 0,85                 & 0,40             & 0,73                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}NB}      & Precision & 0,73                 & 0,22             & 0,62                                                & 0,93                 & 0,33             & 0,77                                                          \\
+                                                               & Recall    & 0,04                 & 0,96             & 0,24                                                & 0,28                 & 0,95             & 0,46                                                          \\
+                                                               & F-Score   & 0,07                 & 0,36             & 0,13                                                & 0,42                 & 0,48             & 0,44                                                          \\
+                                                               & ROC-Area  & 0,57                 & 0,57             & 0,57                                                & 0,66                 & 0,66             & 0,66                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}NN}      & TP-Rate   & 1,00                 & 0,33             & 0,82                                 \\
-                                                               & FP-Rate   & 0,67                 & 0,01             & 0,49                                 \\
-                                                               & Precision & 0,80                 & 0,96             & 0,84                                 \\
-                                                               & Recall    & 1,00                 & 0,33             & 0,82                                 \\
-                                                               & F-Score   & 0,89                 & 0,49             & 0,78                                 \\
-                                                               & ROC-Area  & 0,76                 & 0,76             & 0,76                                 \\
-                                                               & PRC-Area  & 0,88                 & 0,66             & 0,82                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}NN}      & Precision & 0,85                 & 0,96             & 0,87                                                & 0,80                 & 0,96             & 0,84                                                          \\
+                                                               & Recall    & 1,00                 & 0,34             & 0,85                                                & 1,00                 & 0,33             & 0,82                                                          \\
+                                                               & F-Score   & 0,91                 & 0,50             & 0,82                                                & 0,89                 & 0,49             & 0,78                                                          \\
+                                                               & ROC-Area  & 0,83                 & 0,83             & 0,83                                                & 0,76                 & 0,76             & 0,76                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}RF}      & TP-Rate   & 1,00                 & 0,97             & 0,99                                 \\
-                                                               & FP-Rate   & 0,03                 & 0,00             & 0,02                                 \\
-                                                               & Precision & 0,99                 & 0,99             & 0,99                                 \\
-                                                               & Recall    & 1,00                 & 0,97             & 0,99                                 \\
-                                                               & F-Score   & 0,99                 & 0,98             & 0,99                                 \\
-                                                               & ROC-Area  & 1,00                 & 1,00             & 1,00                                 \\
-                                                               & PRC-Area  & 1,00                 & 0,99             & 1,00                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}RF}      & Precision & 0,93                 & 0,93             & 0,93                                                & 0,99                 & 0,99             & 0,99                                                          \\
+                                                               & Recall    & 0,98                 & 0,72             & 0,93                                                & 1,00                 & 0,97             & 0,99                                                          \\
+                                                               & F-Score   & 0,95                 & 0,81             & 0,92                                                & 0,99                 & 0,98             & 0,99                                                          \\
+                                                               & ROC-Area  & 0,96                 & 0,96             & 0,96                                                & 1,00                 & 1,00             & 1,00                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}SGD}     & TP-Rate   & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & FP-Rate   & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & Precision & 0,73                 & 0,00             & 0,54                                 \\
-                                                               & Recall    & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & F-Score   & 0,85                 & 0,00             & 0,62                                 \\
-                                                               & ROC-Area  & 0,50                 & 0,50             & 0,50                                 \\
-                                                               & PRC-Area  & 0,73                 & 0,27             & 0,61                                 \\ 
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}SGD}     & Precision & 0,78                 & 0,93             & 0,80                                                & 0,73                 & 0,00             & 0,54                                                          \\
+                                                               & Recall    & 1,00                 & 0,00             & 0,78                                                & 1,00                 & 0,00             & 0,73                                                          \\
+                                                               & F-Score   & 0,88                 & 0,01             & 0,69                                                & 0,85                 & 0,00             & 0,62                                                          \\
+                                                               & ROC-Area  & 0,50                 & 0,50             & 0,50                                                & 0,50                 & 0,50             & 0,50                                                          \\ 
 \hline
-\multirow{7}{0.137\linewidth}{\hspace{0pt}\Centering{}SVM}     & TP-Rate   & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & FP-Rate   & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & Precision & 0,73                 & ?                & ?                                    \\
-                                                               & Recall    & 1,00                 & 0,00             & 0,73                                 \\
-                                                               & F-Score   & 0,85                 & ?                & ?                                    \\
-                                                               & ROC-Area  & 0,50                 & 0,50             & 0,50                                 \\
-                                                               & PRC-Area  & 0,73                 & 0,27             & 0,61                                 \\
+\multirow{4}{0.085\linewidth}{\hspace{0pt}\Centering{}SVM}     & Precision & 0,78                 & ?                & ?                                                   & 0,73                 & ?                & ?                                                             \\
+                                                               & Recall    & 1,00                 & 0,00             & 0,78                                                & 1,00                 & 0,00             & 0,73                                                          \\
+                                                               & F-Score   & 0,88                 & ?                & ?                                                   & 0,85                 & ?                & ?                                                             \\
+                                                               & ROC-Area  & 0,50                 & 0,50             & 0,50                                                & 0,50                 & 0,50             & 0,50                                                          \\
 \hline
 \end{tabular}
 }

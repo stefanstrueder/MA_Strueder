@@ -85,6 +85,43 @@
       \verb :D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/ML/Alpaydin{\_}Introduction to Machine Learning{\_}2010.pdf:pdf
       \endverb
     \endentry
+    \entry{Alsaeedi2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=28f07871890d5b25ee0238905ba57d61}{%
+           family={Alsaeedi},
+           familyi={A\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod}}}%
+        {{hash=34965c6d13d07b2af25b5b6557d959bc}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Mohammad\bibnamedelima Zubair},
+           giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific Research Publishing, Inc,}%
+      }
+      \strng{namehash}{e23db58db30396b8c9d49eb060f1e811}
+      \strng{fullhash}{e23db58db30396b8c9d49eb060f1e811}
+      \strng{bibnamehash}{e23db58db30396b8c9d49eb060f1e811}
+      \strng{authorbibnamehash}{e23db58db30396b8c9d49eb060f1e811}
+      \strng{authornamehash}{e23db58db30396b8c9d49eb060f1e811}
+      \strng{authorfullhash}{e23db58db30396b8c9d49eb060f1e811}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Software Engineering and Applications}
+      \field{number}{05}
+      \field{title}{Software Defect Prediction Using Supervised Machine Learning and Ensemble Techniques: A Comparative Study}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{85\bibrangedash 100}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.4236/jsea.2019.125007
+      \endverb
+    \endentry
     \entry{Apel2013}{book}{}
       \name{author}{4}{}{%
         {{hash=a4f57072771b98df56b8f8205f384d00}{%
@@ -168,36 +205,6 @@
       \field{year}{2019}
       \verb{doi}
       \verb 10.1145/3340482.3342742
-      \endverb
-    \endentry
-    \entry{Bottou2010}{incollection}{}
-      \name{author}{1}{}{%
-        {{hash=ac762f2592005edf6bad58f566967c6c}{%
-           family={Bottou},
-           familyi={B\bibinitperiod},
-           given={L{é}on},
-           giveni={L\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Physica-Verlag {HD}}%
-      }
-      \strng{namehash}{ac762f2592005edf6bad58f566967c6c}
-      \strng{fullhash}{ac762f2592005edf6bad58f566967c6c}
-      \strng{bibnamehash}{ac762f2592005edf6bad58f566967c6c}
-      \strng{authorbibnamehash}{ac762f2592005edf6bad58f566967c6c}
-      \strng{authornamehash}{ac762f2592005edf6bad58f566967c6c}
-      \strng{authorfullhash}{ac762f2592005edf6bad58f566967c6c}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of {COMPSTAT}'2010}
-      \field{title}{Large-Scale Machine Learning with Stochastic Gradient Descent}
-      \field{year}{2010}
-      \field{pages}{177\bibrangedash 186}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1007/978-3-7908-2604-3_16
       \endverb
     \endentry
     \entry{Ceylan2006}{inproceedings}{}
@@ -435,6 +442,81 @@
       \field{title}{The WEKA Workbench. Online Appendix for "Data Mining: Practical Machine Learning Tools and Techniques"}
       \field{year}{2016}
     \endentry
+    \entry{Gandhi2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c3fbdd9716d1767634626ad22e2c767f}{%
+           family={Gandhi},
+           familyi={G\bibinitperiod},
+           given={Rohith},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3fbdd9716d1767634626ad22e2c767f}
+      \strng{fullhash}{c3fbdd9716d1767634626ad22e2c767f}
+      \strng{bibnamehash}{c3fbdd9716d1767634626ad22e2c767f}
+      \strng{authorbibnamehash}{c3fbdd9716d1767634626ad22e2c767f}
+      \strng{authornamehash}{c3fbdd9716d1767634626ad22e2c767f}
+      \strng{authorfullhash}{c3fbdd9716d1767634626ad22e2c767f}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{month}{6}
+      \field{title}{Support Vector Machine — Introduction to Machine Learning Algorithms}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47
+      \endverb
+    \endentry
+    \entry{Hammouri2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a0237671138596762e5f84669891aa48}{%
+           family={Hammouri},
+           familyi={H\bibinitperiod},
+           given={Awni},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d0d8f555af917b2e24f5e022cb72ee28}{%
+           family={Hammad},
+           familyi={H\bibinitperiod},
+           given={Mustafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b0294d011cc6afaaa49bd5d18dbcdd71}{%
+           family={Alnabhan},
+           familyi={A\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f65bf731c2e7a3d1313f0a1b2eaaed37}{%
+           family={Alsarayrah},
+           familyi={A\bibinitperiod},
+           given={Fatima},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {The Science}%
+        {Information Organization}%
+      }
+      \strng{namehash}{4752441a5d0c9b48660538d8eb2149a2}
+      \strng{fullhash}{01b9df65cb89f03ae04bcf716034c677}
+      \strng{bibnamehash}{4752441a5d0c9b48660538d8eb2149a2}
+      \strng{authorbibnamehash}{4752441a5d0c9b48660538d8eb2149a2}
+      \strng{authornamehash}{4752441a5d0c9b48660538d8eb2149a2}
+      \strng{authorfullhash}{01b9df65cb89f03ae04bcf716034c677}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{number}{2}
+      \field{title}{Software Bug Prediction using Machine Learning Approach}
+      \field{volume}{9}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.14569/ijacsa.2018.090212
+      \endverb
+    \endentry
     \entry{Hunsen2015}{article}{}
       \name{author}{7}{}{%
         {{hash=5fca906a9cd6f1d5d199439684965639}{%
@@ -497,6 +579,33 @@
       \range{pages}{34}
       \verb{doi}
       \verb 10.1007/s10664-015-9360-1
+      \endverb
+    \endentry
+    \entry{KNIMETV2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f6810ef209b6015e3eb0e83fef8b52e7}{%
+           family={KNIMETV},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \strng{fullhash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \strng{bibnamehash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \strng{authorbibnamehash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \strng{authornamehash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \strng{authorfullhash}{f6810ef209b6015e3eb0e83fef8b52e7}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Video on YouTube}
+      \field{month}{9}
+      \field{title}{What is an ROC Curve?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=kWDHmroVWs8
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=kWDHmroVWs8
       \endverb
     \endentry
     \entry{Liebig2010}{inproceedings}{}
@@ -591,6 +700,40 @@
       \verb 10.1057/palgrave.dbm.3240233
       \endverb
     \endentry
+    \entry{Luber2019}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=95c5b2bb99f983119bb81ec2bf7fa2aa}{%
+           family={Luber},
+           familyi={L\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=47db407ac66669da54b848de91cee6ed}{%
+           family={Litzel},
+           familyi={L\bibinitperiod},
+           given={Nico},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{fullhash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{bibnamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authorbibnamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authornamehash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \strng{authorfullhash}{61996130e4e389bd3dbac2e79b3ef69f}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{month}{11}
+      \field{title}{Was ist eine Support Vector Machine?}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.bigdata-insider.de/was-ist-eine-support-vector-machine-a-880134/
+      \endverb
+      \verb{url}
+      \verb https://www.bigdata-insider.de/was-ist-eine-support-vector-machine-a-880134/
+      \endverb
+    \endentry
     \entry{Moser2008}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=46b22c66989257ac974219396cf311d0}{%
@@ -627,6 +770,35 @@
       \field{year}{2008}
       \verb{doi}
       \verb 10.1145/1368088.1368114
+      \endverb
+    \endentry
+    \entry{Narkhede2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=aad93c2120241219bd624a0715c88921}{%
+           family={Narkhede},
+           familyi={N\bibinitperiod},
+           given={Sarang},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aad93c2120241219bd624a0715c88921}
+      \strng{fullhash}{aad93c2120241219bd624a0715c88921}
+      \strng{bibnamehash}{aad93c2120241219bd624a0715c88921}
+      \strng{authorbibnamehash}{aad93c2120241219bd624a0715c88921}
+      \strng{authornamehash}{aad93c2120241219bd624a0715c88921}
+      \strng{authorfullhash}{aad93c2120241219bd624a0715c88921}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{month}{6}
+      \field{title}{Understanding AUC - ROC Curve}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
       \endverb
     \endentry
     \entry{OShea2015}{article}{}
@@ -917,6 +1089,44 @@
       \endverb
       \keyw{cs.LG}
     \endentry
+    \entry{Ratzinger2008}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ca9c73e5149570ce38f67d4d37737a8c}{%
+           family={Ratzinger},
+           familyi={R\bibinitperiod},
+           given={Jacek},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0f8084ac7a0fd763ba21257aa747d364}{%
+           family={Sigmund},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=373f6ea96d4c5c5d5ea453a2b5df4ead}{%
+           family={Gall},
+           familyi={G\bibinitperiod},
+           given={Harald\bibnamedelima C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{ACM} Press}%
+      }
+      \strng{namehash}{c1f52617385f05934782ac8ce04597b4}
+      \strng{fullhash}{c1f52617385f05934782ac8ce04597b4}
+      \strng{bibnamehash}{c1f52617385f05934782ac8ce04597b4}
+      \strng{authorbibnamehash}{c1f52617385f05934782ac8ce04597b4}
+      \strng{authornamehash}{c1f52617385f05934782ac8ce04597b4}
+      \strng{authorfullhash}{c1f52617385f05934782ac8ce04597b4}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2008 international workshop on Mining software repositories - {MSR} '08}
+      \field{title}{On the relation of refactorings and software defect prediction}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1145/1370750.1370759
+      \endverb
+    \endentry
     \entry{Rokach2005}{incollection}{}
       \name{author}{2}{}{%
         {{hash=e583bae19511d6aca7ecc9e44953ed07}{%
@@ -1123,6 +1333,71 @@
       \verb 10.1145/3236024.3264598
       \endverb
     \endentry
+    \entry{Srinivasan2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6cd8bcce6d2f5cd94064d267f9035af9}{%
+           family={Srinivasan},
+           familyi={S\bibinitperiod},
+           given={Aishwarya\bibnamedelima V},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \strng{fullhash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \strng{bibnamehash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \strng{authorbibnamehash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \strng{authornamehash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \strng{authorfullhash}{6cd8bcce6d2f5cd94064d267f9035af9}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online}
+      \field{month}{9}
+      \field{title}{Stochastic Gradient Descent — Clearly Explained !!}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/stochastic-gradient-descent-clearly-explained-53d239905d31
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/stochastic-gradient-descent-clearly-explained-53d239905d31
+      \endverb
+    \endentry
+    \entry{Stallmann2016}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=bd6fb56c464121692776fae1bca256c5}{%
+           family={Stallmann},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=bd73a18b2c41817f5f553df540c2ab66}{%
+           family={Weinberg},
+           familyi={W\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Free Software Foundation, Inc}%
+      }
+      \strng{namehash}{e24bdb0873dba80929ecec2836700fc9}
+      \strng{fullhash}{e24bdb0873dba80929ecec2836700fc9}
+      \strng{bibnamehash}{e24bdb0873dba80929ecec2836700fc9}
+      \strng{authorbibnamehash}{e24bdb0873dba80929ecec2836700fc9}
+      \strng{authornamehash}{e24bdb0873dba80929ecec2836700fc9}
+      \strng{authorfullhash}{e24bdb0873dba80929ecec2836700fc9}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{For GCC version 6.3.0}
+      \field{title}{The C Preprocessor}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://scicomp.ethz.ch/public/manual/gcc/6.3.0/cpp.pdf
+      \endverb
+      \verb{url}
+      \verb https://scicomp.ethz.ch/public/manual/gcc/6.3.0/cpp.pdf
+      \endverb
+    \endentry
     \entry{Thuem2014}{article}{}
       \name{author}{5}{}{%
         {{hash=d37a977a0f05c75ccc2786607cead2dd}{%
@@ -1176,36 +1451,32 @@
       \verb 10.1145/2580950
       \endverb
     \endentry
-    \entry{Tzotsos2006}{article}{}
+    \entry{IanWitten}{misc}{}
       \name{author}{1}{}{%
-        {{hash=0b7572a0d9b52decba0c9b76ddbd9cf2}{%
-           family={Tzotsos},
-           familyi={T\bibinitperiod},
-           given={Angelos},
-           giveni={A\bibinitperiod}}}%
+        {{hash=8a6712e42c49f65d652e34f990c39c46}{%
+           family={Witten},
+           familyi={W\bibinitperiod},
+           given={Ian\bibnamedelima H.},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
-      \strng{namehash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \strng{fullhash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \strng{bibnamehash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \strng{authorbibnamehash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \strng{authornamehash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \strng{authorfullhash}{0b7572a0d9b52decba0c9b76ddbd9cf2}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \strng{namehash}{8a6712e42c49f65d652e34f990c39c46}
+      \strng{fullhash}{8a6712e42c49f65d652e34f990c39c46}
+      \strng{bibnamehash}{8a6712e42c49f65d652e34f990c39c46}
+      \strng{authorbibnamehash}{8a6712e42c49f65d652e34f990c39c46}
+      \strng{authornamehash}{8a6712e42c49f65d652e34f990c39c46}
+      \strng{authorfullhash}{8a6712e42c49f65d652e34f990c39c46}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Support Vector Machine is a theoretically superior machine learning methodology with great results in classification of high- dimensional datasets and has been found competitive with the best machine learning algorithms. In the past, SVMs have been tested and evaluated only as pixel-based image classifiers. Moving from pixel-based techniques towards object-based representation, the dimensions of remote sensing imagery feature space increases significantly. This results increasing complexity of the classification process, and causes problems to traditional sample-based classification schemes. The objective of this study was to evaluate SVMs for effectiveness and prospects for object-based image classification as a modern computational intelligence method. An SVM approach for multi-class classification was followed, based on primitive image objects produces by a multi-resolution segmentation algorithm. The segmentation algorithm produced primitive objects of variable sizes and shapes. Then, a feature selection step took place in order to provide the features for classification which involved spectral, texture and shape information. Contextual information was not used. Following the feature selection step, a module integrating an SVM classifier and the segmentation algorithm was developed in C++ and based on XML technology for feature representation. For training the SVM, sample image objects, derived from the segmentation procedure were used. The SVM procedure produced the final object classification results which were compared to the Nearest Neighbor classifier results, of the eCognition software, and were found satisfactory. The SVM approach seems very promising for Object Based Image Analysis and future work will focus on the integration SVM classifiers with rule-based classifiers}
-      \field{isbn}{3021077226}
-      \field{journaltitle}{Proceedings of 1st International Conference on Object-based Image Analysis}
-      \field{number}{Negnevitsky}
-      \field{title}{{A Support Vector Machine Approach for Object Based Image}}
-      \field{year}{2006}
-      \field{pages}{4\bibrangedash 5}
-      \range{pages}{2}
-      \verb{file}
-      \verb :D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/Klassifikatoren/A Support Vector Machine Approach for Object Based Image Analysis.pdf:pdf
+      \field{howpublished}{Online-Video}
+      \field{title}{Data Mining with WEKA: Cross-valiadation}
+      \verb{urlraw}
+      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
       \endverb
-      \keyw{computational intelligence,machine learning,multi-scale,object oriented classification,remote sensing}
+      \verb{url}
+      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
+      \endverb
     \endentry
     \entry{Zhang2016}{article}{}
       \name{author}{1}{}{%

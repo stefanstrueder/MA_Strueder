@@ -22,6 +22,18 @@
   mendeley-groups = {Masterarbeit},
 }
 
+@Article{Alsaeedi2019,
+  author    = {Abdullah Alsaeedi and Mohammad Zubair Khan},
+  title     = {Software Defect Prediction Using Supervised Machine Learning and Ensemble Techniques: A Comparative Study},
+  journal   = {Journal of Software Engineering and Applications},
+  year      = {2019},
+  volume    = {12},
+  number    = {05},
+  pages     = {85--100},
+  doi       = {10.4236/jsea.2019.125007},
+  publisher = {Scientific Research Publishing, Inc,},
+}
+
 @Book{Apel2013,
   author    = {Sven Apel and Don Batory and Christian Kästner and Gunter Saake},
   title     = {Feature-Oriented Software Product Lines},
@@ -123,6 +135,35 @@
   edition   = {Fourth Edition},
 }
 
+@Misc{Gandhi2018,
+  author       = {Rohith Gandhi},
+  howpublished = {Online},
+  month        = {June},
+  title        = {Support Vector Machine — Introduction to Machine Learning Algorithms},
+  year         = {2018},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47},
+}
+
+@Misc{GoogleML,
+  author       = {Google},
+  howpublished = {Online},
+  title        = {Machine Learning Crash Course: Classification: ROC Curve and AUC},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc},
+}
+
+@Article{Hammouri2018,
+  author    = {Awni Hammouri and Mustafa Hammad and Mohammad Alnabhan and Fatima Alsarayrah},
+  title     = {Software Bug Prediction using Machine Learning Approach},
+  journal   = {International Journal of Advanced Computer Science and Applications},
+  year      = {2018},
+  volume    = {9},
+  number    = {2},
+  doi       = {10.14569/ijacsa.2018.090212},
+  publisher = {The Science and Information Organization},
+}
+
 @Article{Hunsen2015,
   author    = {Claus Hunsen and Bo Zhang and Janet Siegmund and Christian Kästner and Olaf Le{\ss}enich and Martin Becker and Sven Apel},
   title     = {Preprocessor-based variability in open-source and industrial software systems: An empirical study},
@@ -134,6 +175,16 @@
   month     = {apr},
   doi       = {10.1007/s10664-015-9360-1},
   publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Misc{KNIMETV2019,
+  author       = {KNIMETV},
+  howpublished = {Video on YouTube},
+  month        = sep,
+  title        = {What is an ROC Curve?},
+  year         = {2019},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://www.youtube.com/watch?v=kWDHmroVWs8},
 }
 
 @InProceedings{Liebig2010,
@@ -158,6 +209,16 @@
   publisher = {Springer Science and Business Media {LLC}},
 }
 
+@Misc{Luber2019,
+  author       = {Stefan Luber and Nico Litzel},
+  howpublished = {Online},
+  month        = nov,
+  title        = {Was ist eine Support Vector Machine?},
+  year         = {2019},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://www.bigdata-insider.de/was-ist-eine-support-vector-machine-a-880134/},
+}
+
 @InProceedings{Moser2008,
   author    = {Raimund Moser and Witold Pedrycz and Giancarlo Succi},
   title     = {A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction},
@@ -165,6 +226,16 @@
   year      = {2008},
   publisher = {{ACM} Press},
   doi       = {10.1145/1368088.1368114},
+}
+
+@Misc{Narkhede2018,
+  author       = {Sarang Narkhede},
+  howpublished = {Online},
+  month        = jun,
+  title        = {Understanding AUC - ROC Curve},
+  year         = {2018},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5},
 }
 
 @Article{Noble2006,
@@ -245,6 +316,15 @@
   keywords    = {cs.LG},
 }
 
+@InProceedings{Ratzinger2008,
+  author    = {Jacek Ratzinger and Thomas Sigmund and Harald C. Gall},
+  title     = {On the relation of refactorings and software defect prediction},
+  booktitle = {Proceedings of the 2008 international workshop on Mining software repositories - {MSR} {\textquotesingle}08},
+  year      = {2008},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/1370750.1370759},
+}
+
 @InCollection{Rokach2005,
   author    = {Lior Rokach and Oded Maimon},
   title     = {Decision Trees},
@@ -300,6 +380,24 @@
   doi       = {10.1145/3236024.3264598},
 }
 
+@Misc{Srinivasan2019,
+  author       = {Aishwarya V Srinivasan},
+  howpublished = {Online},
+  month        = sep,
+  title        = {Stochastic Gradient Descent — Clearly Explained !!},
+  year         = {2019},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://towardsdatascience.com/stochastic-gradient-descent-clearly-explained-53d239905d31},
+}
+
+@Manual{Stallmann2016,
+  author       = {Richard M. Stallmann and Zachary Weinberg},
+  edition      = {For GCC version 6.3.0},
+  organization = {Free Software Foundation, Inc},
+  year         = {2016},
+  url          = {https://scicomp.ethz.ch/public/manual/gcc/6.3.0/cpp.pdf},
+}
+
 @Article{Thuem2014,
   author    = {Thomas Thüm and Sven Apel and Christian Kästner and Ina Schaefer and Gunter Saake},
   title     = {A Classification and Survey of Analysis Strategies for Software Product Lines},
@@ -327,6 +425,14 @@
   mendeley-groups = {Masterarbeit/Klassifikatoren},
 }
 
+@Misc{IanWitten,
+  author       = {Ian H. Witten},
+  howpublished = {Online-Video},
+  title        = {Data Mining with WEKA: Cross-valiadation},
+  comment      = {Zuletzt abgerufen am 20.03.2020.},
+  url          = {https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384},
+}
+
 @Article{Zhang2016,
   author    = {Zhongheng Zhang},
   title     = {Introduction to machine learning: k-nearest neighbors},
@@ -338,6 +444,16 @@
   pages     = {218--218},
   doi       = {10.21037/atm.2016.03.37},
   publisher = {{AME} Publishing Company},
+}
+
+@InProceedings{Zimmermann2007,
+  author    = {Thomas Zimmermann and Rahul Premraj and Andreas Zeller},
+  title     = {Predicting Defects for Eclipse},
+  booktitle = {Third International Workshop on Predictor Models in Software Engineering ({PROMISE}{\textquotesingle}07: {ICSE} Workshops 2007)},
+  year      = {2007},
+  month     = {may},
+  publisher = {{IEEE}},
+  doi       = {10.1109/promise.2007.10},
 }
 
 @Book{Sammut2017,
