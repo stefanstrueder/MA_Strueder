@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     dataset_file_h
+Instances:    89076
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 85.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+               Class
+Variable       clean
+====================
+comm          0.0011
+adev          0.0011
+ddev         -0.0027
+exp                0
+oexp               0
+modd          -0.003
+mods          0.0002
+nloc              -0
+cyco         -0.0005
+addl         -0.0001
+reml          0.0001
+Intercept     4.2465
+
+
+Odds Ratios...
+               Class
+Variable       clean
+====================
+comm          1.0011
+adev          1.0011
+ddev          0.9973
+exp                1
+oexp               1
+modd           0.997
+mods          1.0002
+nloc               1
+cyco          0.9995
+addl          0.9999
+reml          1.0001
+
+
+Time taken to build model: 1.3 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       13210               98.8698 %
+Incorrectly Classified Instances       151                1.1302 %
+Kappa statistic                         -0.0001
+Mean absolute error                      0.0228
+Root mean squared error                  0.1058
+Relative absolute error                100.2334 %
+Root relative squared error            100.3888 %
+Total Number of Instances            13361     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,989      1,000    0,994      -0,001   0,574     0,992     clean
+                 0,000    0,000    0,000      0,000    0,000      -0,001   0,574     0,015     defective
+Weighted Avg.    0,989    0,989    0,978      0,989    0,983      -0,001   0,574     0,981     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13210     1 |     a = clean
+   150     0 |     b = defective
+

@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 1 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat
+Instances:    19381
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 65.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Log loss (logistic regression)
+
+label = 
+
+       -26.9328 (normalized) comm
+ +     -26.9328 (normalized) adev
+ +     -16.439  (normalized) ddev
+ +       2.6333 (normalized) exp
+ +     -33.9922 (normalized) oexp
+ +     -21.7491 (normalized) modd
+ +       1.1116 (normalized) mods
+ +      -6.6034 (normalized) nloc
+ +       2.0638 (normalized) cyco
+ +      10.9791 (normalized) addl
+ +       2.1162 (normalized) reml
+ +       1.8027
+
+Time taken to build model: 2.61 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5832               85.9797 %
+Incorrectly Classified Instances       951               14.0203 %
+Kappa statistic                          0.2558
+Mean absolute error                      0.2273
+Root mean squared error                  0.3278
+Relative absolute error                 82.9071 %
+Root relative squared error             88.8883 %
+Total Number of Instances             6783     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,187    0,010    0,786      0,187    0,302      0,339    0,801     0,527     defective
+                 0,990    0,813    0,863      0,990    0,922      0,339    0,801     0,949     clean
+Weighted Avg.    0,860    0,683    0,850      0,860    0,821      0,339    0,801     0,881     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  206  895 |    a = defective
+   56 5626 |    b = clean
+

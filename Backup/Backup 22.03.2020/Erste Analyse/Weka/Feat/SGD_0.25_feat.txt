@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat_h
+Instances:    15090
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        29.1398 (normalized) comm
+ +      29.1398 (normalized) adev
+ +       2.6971 (normalized) ddev
+ +       0.4422 (normalized) exp
+ +      22.4761 (normalized) oexp
+ +      21.5207 (normalized) modd
+ +      -0.166  (normalized) mods
+ +       0.4839 (normalized) nloc
+ +       0.0114 (normalized) cyco
+ +      -3.3346 (normalized) addl
+ +      -5.0668 (normalized) reml
+ -       1     
+
+Time taken to build model: 0.59 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3151               83.5366 %
+Incorrectly Classified Instances       621               16.4634 %
+Kappa statistic                          0.2636
+Mean absolute error                      0.1646
+Root mean squared error                  0.4058
+Relative absolute error                 52.3316 %
+Root relative squared error            102.0706 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,992    0,806    0,834      0,992    0,906      0,360    0,593     0,834     clean
+                 0,194    0,008    0,862      0,194    0,317      0,360    0,593     0,326     defective
+Weighted Avg.    0,835    0,649    0,840      0,835    0,790      0,360    0,593     0,734     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3007   23 |    a = clean
+  598  144 |    b = defective
+

@@ -1,0 +1,38 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 5 -T 0.01 -R 1 -E DEFAULT -- -C 0.25 -M 2
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     dataset_feat_h
+Instances:    15090
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Evaluation mode:    10-fold cross-validation
+
+
+
+=== Attribute selection 10 fold cross-validation (stratified), seed: 1 ===
+
+number of folds (%)  attribute
+          10(100 %)    1 comm
+           4( 40 %)    2 adev
+           1( 10 %)    3 ddev
+           5( 50 %)    4 exp
+           4( 40 %)    5 oexp
+           1( 10 %)    6 modd
+          10(100 %)    7 mods
+           7( 70 %)    8 nloc
+           8( 80 %)    9 cyco
+          10(100 %)   10 addl
+           3( 30 %)   11 reml
+

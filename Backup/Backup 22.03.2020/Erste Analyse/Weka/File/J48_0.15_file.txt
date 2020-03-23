@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     dataset_file_h
+Instances:    89076
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 85.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: clean (89076.0/1040.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 2.39 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       13211               98.8773 %
+Incorrectly Classified Instances       150                1.1227 %
+Kappa statistic                          0     
+Mean absolute error                      0.0227
+Root mean squared error                  0.1054
+Relative absolute error                 99.9445 %
+Root relative squared error             99.9999 %
+Total Number of Instances            13361     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,989      1,000    0,994      ?        0,500     0,989     clean
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,011     defective
+Weighted Avg.    0,989    0,989    ?          0,989    ?          ?        0,500     0,978     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13211     0 |     a = clean
+   150     0 |     b = defective
+

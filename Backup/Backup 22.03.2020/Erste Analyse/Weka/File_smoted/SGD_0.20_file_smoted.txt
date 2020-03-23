@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_file_h-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    120276
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        -4.2392 (normalized) comm
+ +      -3.0636 (normalized) adev
+ +      -0.1373 (normalized) ddev
+ +      -0.4285 (normalized) exp
+ +      -5.907  (normalized) oexp
+ +       8.3469 (normalized) modd
+ +      -0.0084 (normalized) mods
+ +       0.0482 (normalized) nloc
+ +       0.6448 (normalized) cyco
+ +       2.415  (normalized) addl
+ +      -1.76   (normalized) reml
+ -       0.95  
+
+Time taken to build model: 14.3 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.21 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       17600               73.1657 %
+Incorrectly Classified Instances      6455               26.8343 %
+Kappa statistic                         -0.0002
+Mean absolute error                      0.2683
+Root mean squared error                  0.518 
+Relative absolute error                 68.3723 %
+Root relative squared error            116.92   %
+Total Number of Instances            24055     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    1,000    0,732      1,000    0,845      -0,006   0,500     0,732     clean
+                 0,000    0,000    0,000      0,000    0,000      -0,006   0,500     0,268     defective
+Weighted Avg.    0,732    0,732    0,535      0,732    0,618      -0,006   0,500     0,607     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 17600     2 |     a = clean
+  6453     0 |     b = defective
+

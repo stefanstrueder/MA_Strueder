@@ -1,0 +1,159 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     dataset_file_h-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    120277
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    1.5324072430322577
+    Node 2    -1.2234541639729362
+    Node 3    2.411034196895821
+    Node 4    -2.2389368447386016
+    Node 5    1.759694863544242
+    Node 6    -1.4950574765005111
+    Node 7    4.833717500421742
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -1.5324072430322566
+    Node 2    1.2234541639729355
+    Node 3    -2.4110341968958204
+    Node 4    2.238936844738601
+    Node 5    -1.7596948635442424
+    Node 6    1.49505747650051
+    Node 7    -4.833717500421741
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    40.19924454688698
+    Attrib comm    -13.945390815948171
+    Attrib adev    -6.869610121115256
+    Attrib ddev    38.31238274288373
+    Attrib exp    -39.38969285832096
+    Attrib oexp    -39.0712227056728
+    Attrib modd    12.505675652150595
+    Attrib mods    33.55042356517855
+    Attrib nloc    -1.3886880877644345
+    Attrib cyco    74.09561129837276
+    Attrib addl    21.921635744141525
+    Attrib reml    -19.2109186198725
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -19.614430868415997
+    Attrib comm    -38.089084571816706
+    Attrib adev    -40.75520500215996
+    Attrib ddev    40.02641068588577
+    Attrib exp    18.729445456591716
+    Attrib oexp    20.267881509435725
+    Attrib modd    -67.64283905626576
+    Attrib mods    -9.528772516579604
+    Attrib nloc    7.192415070387723
+    Attrib cyco    18.66703695844713
+    Attrib addl    17.040034075966037
+    Attrib reml    15.584324358758469
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    1.766147089758454
+    Attrib comm    6.552637196507965
+    Attrib adev    5.665887578106731
+    Attrib ddev    -20.900590818150143
+    Attrib exp    -2.906929450353952
+    Attrib oexp    -2.9200578195537195
+    Attrib modd    10.290411766161574
+    Attrib mods    81.52591483267412
+    Attrib nloc    188.3274917971686
+    Attrib cyco    -91.4319422460481
+    Attrib addl    -34.75542492755939
+    Attrib reml    -24.951284872332824
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -48.391151374449876
+    Attrib comm    16.61650138130307
+    Attrib adev    15.499560659138645
+    Attrib ddev    -1.5936274282456904
+    Attrib exp    46.089719501519184
+    Attrib oexp    49.1949966226074
+    Attrib modd    0.3810459252756542
+    Attrib mods    3.165651142451577
+    Attrib nloc    39.62224593878306
+    Attrib cyco    -237.74641884686477
+    Attrib addl    -35.64245963677988
+    Attrib reml    59.402178573192906
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    45.34337738445302
+    Attrib comm    5.705071405202434
+    Attrib adev    6.591568507106456
+    Attrib ddev    -15.73395493318125
+    Attrib exp    -41.22690149184858
+    Attrib oexp    -44.969651573758476
+    Attrib modd    27.914673851131774
+    Attrib mods    -47.8106728099625
+    Attrib nloc    -23.329485265107397
+    Attrib cyco    164.29387345656792
+    Attrib addl    32.54842135426812
+    Attrib reml    -24.882658791616446
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -5.3195000697201635
+    Attrib comm    -26.85664991716858
+    Attrib adev    -28.703012148605314
+    Attrib ddev    63.50013465524093
+    Attrib exp    6.546890880225437
+    Attrib oexp    7.602231859860937
+    Attrib modd    -35.70195398596604
+    Attrib mods    104.05226395321684
+    Attrib nloc    5.843180536054094
+    Attrib cyco    11.825522514856411
+    Attrib addl    19.694946971391378
+    Attrib reml    13.691481544269422
+Class clean
+    Input
+    Node 0
+Class defective
+    Input
+    Node 1
+
+
+Time taken to build model: 149.75 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       87751               72.9574 %
+Incorrectly Classified Instances     32526               27.0426 %
+Kappa statistic                          0.1261
+Mean absolute error                      0.3428
+Root mean squared error                  0.4189
+Relative absolute error                 87.3541 %
+Root relative squared error             94.5675 %
+Total Number of Instances           120277     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,937    0,838    0,753      0,937    0,835      0,155    0,717     0,878     clean
+                 0,162    0,063    0,487      0,162    0,243      0,155    0,717     0,440     defective
+Weighted Avg.    0,730    0,630    0,682      0,730    0,677      0,155    0,717     0,761     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 82527  5510 |     a = clean
+ 27016  5224 |     b = defective
+

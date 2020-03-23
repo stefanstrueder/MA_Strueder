@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -batch-size 200
+Relation:     dataset_file
+Instances:    89077
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities -batch-size 200
+
+Time taken to build model: 68.29 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 2.14 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       26421               98.8699 %
+Incorrectly Classified Instances       302                1.1301 %
+Kappa statistic                          0.0609
+Mean absolute error                      0.0224
+Root mean squared error                  0.1051
+Relative absolute error                 97.5351 %
+Root relative squared error             99.1169 %
+Total Number of Instances            26723     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,967    0,989      1,000    0,994      0,133    0,760     0,995     clean
+                 0,033    0,000    0,556      0,033    0,062      0,133    0,760     0,088     defective
+Weighted Avg.    0,989    0,956    0,984      0,989    0,984      0,133    0,760     0,985     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 26411     8 |     a = clean
+   294    10 |     b = defective
+
