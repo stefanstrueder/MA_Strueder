@@ -207,45 +207,6 @@
       \verb 10.1145/3340482.3342742
       \endverb
     \endentry
-    \entry{Ceylan2006}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=b22143b155460c29630c0047de0644e5}{%
-           family={Ceylan},
-           familyi={C\bibinitperiod},
-           given={Evren},
-           giveni={E\bibinitperiod}}}%
-        {{hash=a56457e597ba6fcc7eb49203bbd9b725}{%
-           family={Kutlubay},
-           familyi={K\bibinitperiod},
-           given={F.\bibnamedelimi Onur},
-           giveni={F\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
-        {{hash=e422a4e3fc67c0b204d8ac3fb94ca1f8}{%
-           family={Bener},
-           familyi={B\bibinitperiod},
-           given={Ayse\bibnamedelima B.},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \strng{fullhash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \strng{bibnamehash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \strng{authorbibnamehash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \strng{authornamehash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \strng{authorfullhash}{e7235b3f202fb99c6805ba4ecfa4a1da}
-      \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{32nd {EUROMICRO} Conference on Software Engineering and Advanced Applications ({EUROMICRO}'06)}
-      \field{month}{8}
-      \field{title}{Software Defect Identification Using Machine Learning Techniques}
-      \field{year}{2006}
-      \verb{doi}
-      \verb 10.1109/euromicro.2006.56
-      \endverb
-    \endentry
     \entry{Challagulla2008}{article}{}
       \name{author}{4}{}{%
         {{hash=4b71d8c88dbc4a5d4e694ef5a596029d}{%

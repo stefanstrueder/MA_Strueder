@@ -4,7 +4,7 @@
 \label{dataset}
 
 \paragraph{Ausblick:}
-Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute (Features) im Rahmen der Anlernung der Klassifikatoren dienen. Eine Gliederung der Kapitel kann Abbildung XX entnommen werden.
+Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen der Anlernung der Klassifikatoren dienen. Eine Gliederung der Kapitel kann \autoref{fig:kap3} entnommen werden.
 
 \begin{figure}[H]
     \centering
@@ -18,7 +18,7 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Übersicht der verwendeten Softwareprojekte\protect\footnotemark{}}
 \label{tab:tools}
@@ -77,9 +77,9 @@ Als Input der eigens erstellten Python-Scripte zum Erhalt der Commit-Metadaten d
 \end{itemize}
 \end{multicols}
 
-Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren.
+Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren. Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie der Anzahl der identifizierten Features je Softwareprojekt ist in \autoref{tab:tools-values2} aufgeführt.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Übersicht der Anzahl der Releases und Commits je Softwareprojekt}
 \label{tab:tools-values1}
@@ -106,34 +106,49 @@ Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenb
 }
 \end{table}
 
+\begin{table}[H]
+\centering
+\caption{Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie zur Anzahl der identifizierten Features je Softwareprojekt}
+\label{tab:tools-values2}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.208\linewidth}|>{\centering\hspace{0pt}}p{0.21\linewidth}|>{\centering\hspace{0pt}}p{0.362\linewidth}|>{\centering\arraybackslash\hspace{0pt}}p{0.212\linewidth}|} 
+\cline{2-4}
+\multicolumn{1}{>{\hspace{0pt}}p{0.208\linewidth}|}{} & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
+\hline
+\textbf{Blender}                                      & 8333                  & 1418                         & 1400                  \\ 
+\hline
+\textbf{Busybox}                                      & 1408                  & 142                          & 628                   \\ 
+\hline
+\textbf{Emacs}                                        & 6959                  & 685                          & 718                   \\ 
+\hline
+\textbf{GIMP}                                         & 1703                  & 272                          & 204                   \\ 
+\hline
+\textbf{Gnumeric}                                     & 1591                  & 136                          & 637                   \\ 
+\hline
+\textbf{gnuplot}                                      & 880                   & 1323                         & 558                   \\ 
+\hline
+\textbf{Irssi}                                        & 77                    & 1                            & 9                     \\ 
+\hline
+\textbf{libxml2}                                      & 409                   & 37                           & 200                   \\ 
+\hline
+\textbf{lighttpd}                                     & 1202                  & 555                          & 230                   \\ 
+\hline
+\textbf{MPSolve}                                      & 158                   & 69                           & 54                    \\ 
+\hline
+\textbf{Parrot}                                       & 3437                  & 824                          & 397                   \\ 
+\hline
+\textbf{Vim}                                          & 1033                  & 2571                         & 1158                  \\ 
+\hline
+\textbf{xfig}                                         & 0                     & 0                            & 137                   \\
+\hline
+\end{tabular}
+}
+\end{table}
+
 Diese \glqq Rohdaten\grqq{} dienen zur weiteren Verarbeitung hinsichtlich der Erstellung des Datensets und der anschließenden Berechnung der Metriken. Eine Erläuterung der weiteren Verarbeitung der Daten folgt im kommenden Abschnitt.
 
 \fbox{\parbox{\linewidth}{\textsc{RQ1a: WELCHE DATEN KOMMEN FÜR DIE ERSTELLUNG DES DATENSETS IN FRAGE?\medskip}\\
 Es kommen die Daten von 13 featurebasierten Softwareprojekten zur Verwendung. Mithilfe der Python-Library PyDriller wurden die Metadaten der Commits, aufgeteilt nach Commits pro Release, aus den Git-Repositories extrahiert und in MySQL-Datenbanken gespeichert. Ausgewählt wurden die Softwareprojekte aufgrund einer vorherigen Verwendung in der wissenschaftlichen Literatur \cite{Hunsen2015,Liebig2010,Queiroz2016}.}}
-
-\begin{table}[]
-\caption{Übersicht der zur Erstellung des Datensets verwendeten Softwareprojekten mit zugehörigen Werten}
-\label{tab:tools-values2}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lccccccc}
-                                       & \textbf{Zweck}       & \textbf{Datenquelle}   & \textbf{\#Releases} & \textbf{\#Commits} & \textbf{\#Korrektiv} & \textbf{\#Fehlereinführend} & \textbf{\#Features} \\ \hline
-\multicolumn{1}{l|}{\textbf{Blender}}  & 3D-Modellierungstool & GitHub-Mirror          & 11                  & 19119              & 8333                 & 1418                        & 1400         \\
-\multicolumn{1}{l|}{\textbf{Busybox}}  & UNIX-Toolkit         & Git-Repository         & 14                  & 4984               & 1408                 & 142                         & 628                 \\
-\multicolumn{1}{l|}{\textbf{Emacs}}    & Texteditor           & GitHub-Mirror          & 7                   & 12805              & 6959                 & 685                         & 718                 \\
-\multicolumn{1}{l|}{\textbf{GIMP}}     & Bildbearbeitung      & GitLab-Repository      & 14                  & 7240               & 1703                 & 272                         & 204                \\
-\multicolumn{1}{l|}{\textbf{Gnumeric}} & Tabellenkalkulation  & GitLab-Repository      & 8                   & 6025               & 1591                 & 136                         & 637                 \\
-\multicolumn{1}{l|}{\textbf{gnuplot}}  & Plotting-Tool        & GitHub-Mirror          & 5                   & 6619               & 880                  & 1323                        & 558                 \\
-\multicolumn{1}{l|}{\textbf{Irssi}}    & IRC-Client           & GitHub-Repository      & 7                   & 253                & 77                   & 1                           & 9                  \\
-\multicolumn{1}{l|}{\textbf{libxml2}}  & XML-Parser           & GitLab-Repository      & 10                  & 732                & 409                  & 37                          & 200                 \\
-\multicolumn{1}{l|}{\textbf{lighttpd}} & Webserver            & Git-Repository         & 6                   & 2597               & 1202                 & 555                         & 230                 \\
-\multicolumn{1}{l|}{\textbf{MPSolve}}  & Polynomlöser         & GitHub-Repository      & 8                   & 668                & 158                  & 69                          & 54                 \\
-\multicolumn{1}{l|}{\textbf{Parrot}}   & Virtuelle Maschine   & GitHub-Repository      & 7                   & 16245              & 3437                 & 824                         & 397                 \\
-\multicolumn{1}{l|}{\textbf{Vim}}      & Texteditor           & GitHub-Repository      & 7                   & 9849               & 1033                 & 2571                        & 1158                \\
-\multicolumn{1}{l|}{\textbf{xfig}}     & Grafikeditor         & Sourceforge-Repository & 7                   & 18                 & 0                    & 0                           & 137                
-\end{tabular}%
-}
-\end{table}
-
 
 \section{Konstruktion des Datensets}
 \label{construction}
@@ -144,7 +159,7 @@ Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben de
 
 Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in \autoref{fig:features}). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \glqq \texttt{none}\grqq{} ersetzt.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/Features}
     \caption{Normalfall und unerwünschte Fälle bei der Identifizierung der Features\label{fig:features}}
@@ -155,7 +170,7 @@ Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrekti
 \label{szz-def}
 Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser ursprünglich für CVS-Versionskontrollsysteme entwickelte Algorithmus erlaubt es, in zwei Phasen fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Die erste Phase besteht dabei aus der Identifizierung der korrektiven Commits. Dies kann entweder anhand der zuvor beschriebenen Analyse der Commit-Nachrichten geschehen oder durch die Analyse von Bug-Tracking-Systemen \cite{Borg2019}. Die zweite Phase umfasst die Identifikation der fehlereinführenden Commits auf Basis der zuvor erkannten korrektiven Commits. Diese Phase ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/SZZ}
     \caption{Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite{Borg2019})\label{fig:szz}}
@@ -165,7 +180,7 @@ Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes
 
 Eine Übersicht des Schemas der nun vollständigen initialen MySQL-Tabellen (im folgenden Haupttabellen genannt) ist in \autoref{tab:schema1} aufgeführt. Wie bereits zuvor erwähnt, umfasst diese Tabelle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
@@ -198,7 +213,7 @@ Ein reales Beispiel aus der Haupttabelle des Softwareprojektes Vim, welches die 
 
 Der Ausschnitt des Diffs zeigt zudem, dass der Methodenaufruf \texttt{vim\_memset} mit abweichenden Argumenten ersetzt wurde. Laut zugehöriger Commit-Nachricht führte der ursprüngliche Methodenaufruf zu einem \glqq Memory Access Error\grqq. Dieser Commit wurde als korrektiv identifiziert, da die Commit-Nachricht das Schlagwort \glqq error\grqq enthält. Der entsprechende Eintrag in der Haupttabelle von Vim erhält somit in der Spalte \glqq corrective\grqq{} den Wert \texttt{true}. Mithilfe des SZZ-Algorithmus konnte, unter Angabe des Commit-Hashes des korrektiven Commits, der fehlereinführende Commit\footnote{Link zum Commit im Git-Repository von Vim: \url{https://github.com/vim/vim/commit/33796b39b9f00b42ca57fa00dbbb52316d9d38ff}} (B) der betroffenen Datei ermittelt werden. In dessen Ausschnitt des Diffs ist zu erkennen, dass mit diesem Commit das Feature \texttt{FEAT\_TEXT\_PROP} in der Datei mit dem fehlerhaften Methodenaufruf eingepflegt wurde. Folglich bekommt dieser in der Haupttabelle in der Spalte \glqq bug\_introducing\grqq{} den Wert \texttt{true} zugewiesen.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/Bug_example_real}
     \caption{Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\label{fig:bug-example}}
@@ -231,10 +246,10 @@ Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Release
 
 Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in \autoref{tab:metrics}. Das Datenset besteht aus der konkatenierten Tabelle mit den Metriken der elf Softwareprojekte und kann zur Erlernung der Klassifikatoren genutzt werden. Dieser Vorgang wird im folgenden Kapitel erläutert.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/Dataset}
-    \caption{Visualisierung des Aufbaus und Unterscheidung der Datensets\label{fig:dataset}}
+    \caption{Visualisierung des Aufbaus und der Unterscheidung der Datensets\label{fig:dataset}}
 \end{figure}
 
 \begin{table}
@@ -242,22 +257,34 @@ Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in \aut
 \caption{Übersicht der berechneten Metriken}
 \label{tab:metrics}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{l|llc} 
+\begin{tabular}{|l|l|l|c|} 
 \cline{2-4}
-                             & \textbf{Metrik}                                                                               & \textbf{Beschreibung}                                                                                                                                                                                                                                                                                                                                        & \multicolumn{1}{c|}{\textbf{Quelle} }  \\ 
+\multicolumn{1}{l|}{}       & \textbf{Metrik}                                                                                & \textbf{Beschreibung}                                                                                                                                                                                                                                                                                                                              & \textbf{Quelle}   \\ 
 \hline
-\multirow{7}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Prozessmetriken}}}}} & Anzahl der~Commits (COMM)                                                                     & Anzahl der Commits, die dem Feature / der Datei in einem Release zugeordnet sind.                                                                                                                                                                                                                                                                            & \cite{Rahman2013,Queiroz2016}                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\aktiven Entwickler (ADEV)\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die innerhalb eines Releases das Feature /\\die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben.\end{tabular}                                                                                                                                                                                 & \cite{Rahman2013,Queiroz2016}                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}eindeutige\\Entwickleranzahl (DDEV)\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}kumulierte Anzahl der Entwickler, die innerhalb eines Releases das Feature / \\die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben.\end{tabular}                                                                                                                                                                     & \cite{Rahman2013,Queiroz2016}                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Erfahrung~aller\\Entwickler (EXP)\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die innerhalb eines Releases\\das Feature /~die Datei bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten \\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular} & \cite{Rahman2013,Queiroz2016}                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Erfahrung des meist \\beteiligten Entwicklers\\(OEXP)\end{tabular} & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, die innerhalb eines Releases das Feature / die Datei \\am häufigsten bearbeitet (geändert, gelöscht oder hinzugefügt) hat.\\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten\\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular}                & \cite{Rahman2013,Queiroz2016}                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Grad der\\Änderungen (MODD)\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Anzahl der Bearbeitungen (Änderung, Entfernung, Erweiterung) des Features /\\der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                                     & neu                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS)\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features / Dateien innerhalb eines Releases \\(Feature- bzw. dateiübergreifender Wert). Idee: Je mehr Features / \\Dateien in einem Release bearbeitet worden, desto fehleranfälliger scheinen \\diese zu sein. \end{tabular}                                                                             & neu                                    \\ 
+\multirow{7}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Prozessmetriken}}}}} & Anzahl der Commits (COMM)                                                                      & Anzahl der Commits, die dem Feature in einem Release zugeordnet sind.                                                                                                                                                                                                                                                                              & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\aktiven Entwickler (ADEV) \end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                                 & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}eindeutige\\Entwickleranzahl (DDEV) \end{tabular}                   & \begin{tabular}[c]{@{}l@{}}kumulierte Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                      & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Erfahrung aller\\Entwickler (EXP) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die innerhalb eines \\Releases das Feature bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \\Erfahrung ist definiert als Summe der geänderten, gelöschten oder\\hinzugefügten~Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular} & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Erfahrung des meist \\beteiligten Entwicklers\\(OEXP) \end{tabular} & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, die innerhalb eines Releases das Feature / die Datei \\am häufigsten bearbeitet (geändert, gelöscht oder hinzugefügt) hat.\\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten\\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular}     & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Grad der\\Änderungen (MODD) \end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Anzahl der Bearbeitungen (Änderung, Entfernung, Erweiterung) des Features /\\der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                          & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features / Dateien innerhalb eines Releases \\(feature- bzw. dateiübergreifender Wert). Idee: Je mehr Features / \\Dateien in einem Release bearbeitet worden sind, desto fehleranfälliger scheinen \\diese zu sein. \end{tabular}                                                              & *                 \\ 
 \hline
-\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC)\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                                 & neu                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO)\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                             & neu                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL)\end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu den dem Feature\\zugeordneten Dateien / zur Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                                 & neu                                    \\
-                             & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML)\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von den dem Feature\\zugeordneten Dateien /~ von der Datei innerhalb eines Releases.\end{tabular}                                                                                                                                                                              & neu                                   
+\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                      & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                  & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL) \end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu den dem Feature\\zugeordneten Dateien / zur Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                      & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML) \end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von den dem Feature\\zugeordneten Dateien /\textasciitilde{} von der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                   & *                 \\ 
+\hline
+\multicolumn{4}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* Diese Werte wurden auf Basis der mit PyDriller erhaltenen Metadaten berechnet.}\\\textit{Die Berechnung der Metriken auf Feature-Level erfolgte auf Basis der Metadaten der ihnen zugrunde liegenden Dateien.~}\end{tabular}}                                                                                                                                                                                                               \\
+\hline
 \end{tabular}
 }
 \end{table}

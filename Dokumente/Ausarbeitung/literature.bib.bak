@@ -391,6 +391,7 @@
 }
 
 @Manual{Stallmann2016,
+  title        = {The C Preprocessor},
   author       = {Richard M. Stallmann and Zachary Weinberg},
   edition      = {For GCC version 6.3.0},
   organization = {Free Software Foundation, Inc},

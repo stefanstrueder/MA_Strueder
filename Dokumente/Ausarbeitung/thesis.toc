@@ -34,11 +34,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Machine-Learning-Klassifikation}{13}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Fehlervorhersage mittels Machine Learning}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Fehlervorhersage mittels Machine Learning}{15}{section.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Erstellung eines featurebasierten Datensets}{17}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{17}{section*.28}%
+\contentsline {paragraph}{Ausblick:}{17}{section*.27}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Datenauswahl}{17}{section.3.1}%
 \defcounter {refsection}{0}\relax 
@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Training und Test der Machine-Learning-Klassifikatoren}{27}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{27}{section*.39}%
+\contentsline {paragraph}{Ausblick:}{27}{section*.38}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Auswahl der Werkzeuge und der Klassifikationsalgorithmen}{27}{section.4.1}%
 \defcounter {refsection}{0}\relax 
@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{37}{section*.49}%
+\contentsline {paragraph}{Ausblick:}{37}{section*.48}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Herausforderungen und Limitationen}{37}{section.5.1}%
 \defcounter {refsection}{0}\relax 
@@ -70,13 +70,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fazit}{53}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ausblick:}{53}{section*.65}%
+\contentsline {paragraph}{Ausblick:}{53}{section*.64}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Zusammenfassung und Erkenntnisse}{53}{section.6.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Ausblick}{53}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{55}{chapter*.66}%
+\contentsline {chapter}{Literatur}{55}{chapter*.65}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Softwareprojekte}{58}{appendix.A}%
 \defcounter {refsection}{0}\relax 
