@@ -6,12 +6,11 @@
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_message")
 mycursor = target_db.cursor()
 
 # List of involved software projects 
-softwares = ["busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
-#softwares = ["blender1", "blender2", "blender3", "blender4"]
+softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
 # Execute for each software project and enter into new table
 for software in softwares:
@@ -114,7 +113,7 @@ for software in softwares:
 		else:
 			label = "clean"
 
-		query3 = "INSERT INTO " + software + "_final_new (name, release_number, filename, revi, refa, bugf, auth, addl, addm, adda, reml, remm, rema, cchl, cchm, ccha, maxc, avgc, aage, wage, label) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+		query3 = "INSERT INTO " + software + "_final_new_new (name, release_number, filename, revi, refa, bugf, auth, addl, addm, adda, reml, remm, rema, cchl, cchm, ccha, maxc, avgc, aage, wage, label) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 		val = (software, release, filename, revi_mean, refa_mean, bugf_mean, auth_mean, addl_mean, addm_mean, adda_mean, reml_mean, remm_mean, rema_mean, cchl_mean, cchm_mean, ccha_mean, maxc_mean, avgc_mean, aage_mean, wage_mean, label)
 		
 		mycursor.execute(query3, val)

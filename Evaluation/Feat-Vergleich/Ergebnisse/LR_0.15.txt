@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
-Relation:     dataset_evaluation_feat-weka.filters.supervised.instance.SMOTE-C0-K5-P300.0-S1
-Instances:    9478
+Relation:     dataset_evaluation_feat_message-weka.filters.supervised.instance.SMOTE-C0-K5-P300.0-S1
+Instances:    9784
 Attributes:   18
               revi
               refa
@@ -31,76 +31,76 @@ Coefficients...
                Class
 Variable       clean
 ====================
-revi          0.0397
-refa         -0.3948
-bugf          -0.282
-auth         -0.0997
-addl          0.0001
-addm               0
-adda         -0.0004
-reml         -0.0001
-remm         -0.0001
-rema         -0.0005
-cchl              -0
-cchm          0.0005
-ccha         -0.0012
-maxc         -0.0017
-avgc          0.0034
-aage         -0.0041
-wage          0.0027
-Intercept     1.6017
+revi          0.0513
+refa         -0.6222
+bugf          -0.298
+auth          -0.164
+addl         -0.0001
+addm         -0.0002
+adda         -0.0014
+reml          0.0002
+remm              -0
+rema              -0
+cchl          0.0002
+cchm          0.0004
+ccha         -0.0006
+maxc         -0.0023
+avgc          0.0076
+aage          -0.002
+wage          0.0021
+Intercept     1.3759
 
 
 Odds Ratios...
                Class
 Variable       clean
 ====================
-revi          1.0405
-refa          0.6738
-bugf          0.7543
-auth          0.9051
-addl          1.0001
-addm               1
-adda          0.9996
-reml          0.9999
-remm          0.9999
-rema          0.9995
-cchl               1
-cchm          1.0005
-ccha          0.9988
-maxc          0.9983
-avgc          1.0034
-aage          0.9959
-wage          1.0027
+revi          1.0526
+refa          0.5368
+bugf          0.7423
+auth          0.8488
+addl          0.9999
+addm          0.9998
+adda          0.9986
+reml          1.0002
+remm               1
+rema               1
+cchl          1.0002
+cchm          1.0004
+ccha          0.9994
+maxc          0.9978
+avgc          1.0077
+aage           0.998
+wage          1.0021
 
 
-Time taken to build model: 0.6 seconds
+Time taken to build model: 0.2 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.01 seconds
+Time taken to test model on test split: 0 seconds
 
 === Summary ===
 
-Correctly Classified Instances        1117               78.5513 %
-Incorrectly Classified Instances       305               21.4487 %
-Kappa statistic                          0.0824
-Mean absolute error                      0.3199
-Root mean squared error                  0.403 
-Relative absolute error                 94.3518 %
-Root relative squared error             97.8319 %
-Total Number of Instances             1422     
+Correctly Classified Instances        1101               75      %
+Incorrectly Classified Instances       367               25      %
+Kappa statistic                          0.1046
+Mean absolute error                      0.3515
+Root mean squared error                  0.4183
+Relative absolute error                 92.6026 %
+Root relative squared error             95.3957 %
+Total Number of Instances             1468     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,982    0,925    0,793      0,982    0,878      0,136    0,687     0,877     clean
-                 0,075    0,018    0,535      0,075    0,131      0,136    0,687     0,363     defective
-Weighted Avg.    0,786    0,729    0,737      0,786    0,716      0,136    0,687     0,766     
+                 0,979    0,903    0,756      0,979    0,853      0,168    0,739     0,880     clean
+                 0,097    0,021    0,617      0,097    0,168      0,168    0,739     0,468     defective
+Weighted Avg.    0,750    0,674    0,720      0,750    0,675      0,168    0,739     0,773     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 1094   20 |    a = clean
-  285   23 |    b = defective
+ 1064   23 |    a = clean
+  344   37 |    b = defective
 

@@ -6,12 +6,11 @@
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat_message")
 mycursor = target_db.cursor()
 
 # List of involved software projects 
 softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
-#softwares = ["blender1", "blender2", "blender3", "blender4"]
 
 # Execute for each software project and enter into new table
 for software in softwares:

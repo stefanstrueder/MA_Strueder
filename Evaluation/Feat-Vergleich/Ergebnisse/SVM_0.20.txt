@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
-Relation:     dataset_evaluation_feat-weka.filters.supervised.instance.SMOTE-C0-K5-P300.0-S1
-Instances:    9478
+Relation:     dataset_evaluation_feat_message-weka.filters.supervised.instance.SMOTE-C0-K5-P300.0-S1
+Instances:    9784
 Attributes:   18
               revi
               refa
@@ -37,56 +37,56 @@ BinarySMO
 
 Machine linear: showing attribute weights, not support vectors.
 
-        -0.0003 * (normalized) revi
- +       0      * (normalized) refa
- +       0.0012 * (normalized) bugf
- +      -0.0001 * (normalized) auth
- +      -0.1235 * (normalized) addl
- +       0.0167 * (normalized) addm
- +       0.0584 * (normalized) adda
- +      -0.0623 * (normalized) reml
- +       0.0169 * (normalized) remm
- +      -0.0197 * (normalized) rema
- +      -0.077  * (normalized) cchl
- +      -0.07   * (normalized) cchm
- +       0.0626 * (normalized) ccha
- +       0.0006 * (normalized) maxc
- +      -0.0011 * (normalized) avgc
- +       0.571  * (normalized) aage
- +      -0.5712 * (normalized) wage
- -       0.9873
+        -0.0117 * (normalized) revi
+ +       0.0031 * (normalized) refa
+ +       0.0044 * (normalized) bugf
+ +       0.0035 * (normalized) auth
+ +      -0.6788 * (normalized) addl
+ +       0.7983 * (normalized) addm
+ +       0.5493 * (normalized) adda
+ +      -0.1572 * (normalized) reml
+ +       0.0354 * (normalized) remm
+ +      -0.0507 * (normalized) rema
+ +      -0.5344 * (normalized) cchl
+ +      -0.3833 * (normalized) cchm
+ +       0.35   * (normalized) ccha
+ +       0.0116 * (normalized) maxc
+ +      -0.0504 * (normalized) avgc
+ +       1.2344 * (normalized) aage
+ +      -1.2338 * (normalized) wage
+ -       0.9214
 
-Number of kernel evaluations: 20476074 (61.818% cached)
+Number of kernel evaluations: 18989410 (71.665% cached)
 
 
 
-Time taken to build model: 12.04 seconds
+Time taken to build model: 13.8 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.02 seconds
+Time taken to test model on test split: 0.01 seconds
 
 === Summary ===
 
-Correctly Classified Instances        1473               77.6899 %
-Incorrectly Classified Instances       423               22.3101 %
+Correctly Classified Instances        1459               74.5529 %
+Incorrectly Classified Instances       498               25.4471 %
 Kappa statistic                          0     
-Mean absolute error                      0.2231
-Root mean squared error                  0.4723
-Relative absolute error                 65.2658 %
-Root relative squared error            113.4287 %
-Total Number of Instances             1896     
+Mean absolute error                      0.2545
+Root mean squared error                  0.5045
+Relative absolute error                 67.4372 %
+Root relative squared error            115.8103 %
+Total Number of Instances             1957     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 1,000    1,000    0,777      1,000    0,874      ?        0,500     0,777     clean
-                 0,000    0,000    ?          0,000    ?          ?        0,500     0,223     defective
-Weighted Avg.    0,777    0,777    ?          0,777    ?          ?        0,500     0,653     
+                 1,000    1,000    0,746      1,000    0,854      ?        0,500     0,746     clean
+                 0,000    0,000    ?          0,000    ?          ?        0,500     0,254     defective
+Weighted Avg.    0,746    0,746    ?          0,746    ?          ?        0,500     0,621     
 
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 1473    0 |    a = clean
-  423    0 |    b = defective
+ 1459    0 |    a = clean
+  498    0 |    b = defective
 

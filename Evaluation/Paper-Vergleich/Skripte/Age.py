@@ -9,7 +9,7 @@ import mysql.connector
 import re
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_message")
 mycursor = target_db.cursor()
 
 # Details of software

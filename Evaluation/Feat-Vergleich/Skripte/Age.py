@@ -28,7 +28,7 @@ for software in softwares:
 		key_list.append(key)
 		value_list.append(elem[2])
 		
-	query2 = "SELECT * FROM dataset_evaluation_feat." + software + "_metrics"
+	query2 = "SELECT * FROM dataset_evaluation_feat_message." + software + "_metrics"
 	
 	mycursor.execute(query2)
 	result_set2 = mycursor.fetchall()
@@ -43,7 +43,7 @@ for software in softwares:
 			aage = value_list[index]
 				
 			val = (elem[0], elem[1], elem[2], elem[3], elem[4], elem[5], elem[6], elem[7], elem[8], elem[9], elem[10], elem[11], elem[12], elem[13], elem[14], elem[15], elem[16], elem[17], aage)
-			query3 = "INSERT INTO dataset_evaluation_feat." + software + "_metrics_new (name, release_number, filename, revi, refa, bugf, auth, addl, addm, adda, reml, remm, rema, cchl, cchm, ccha, maxc, avgc, aage) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+			query3 = "INSERT INTO dataset_evaluation_feat_message." + software + "_metrics_new (name, release_number, filename, revi, refa, bugf, auth, addl, addm, adda, reml, remm, rema, cchl, cchm, ccha, maxc, avgc, aage) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 			mycursor.execute(query3, val)
 			target_db.commit()
 			print("Sth happened for: " + software)

@@ -8,10 +8,13 @@ from pydriller import RepositoryMining
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat_message")
 mycursor = target_db.cursor()
 
-softwares = ["ENTER_HERE"]#["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
+softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
+repos = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd1.4", "MPSolve", "parrot", "vim", "xfig"]
+
+i = 0
 
 # Crawl for each software project and enter results in new table
 for software in softwares:
@@ -30,7 +33,7 @@ for software in softwares:
 		hash = str(row[0])
 		id_list.append(hash)
 
-	for commit in RepositoryMining("ENTER_HERE", only_commits = id_list).traverse_commits():
+	for commit in RepositoryMining(repos[i], only_commits = id_list).traverse_commits():
 		date = commit.committer_date
 		hash_list.append(commit.hash)
 		date_list.append(str(date))
@@ -56,3 +59,5 @@ for software in softwares:
 		target_db.commit()
 		length = length - 1
 		print("Entering " + id + " " + software + " " + str(length))
+		
+	i = i + 1

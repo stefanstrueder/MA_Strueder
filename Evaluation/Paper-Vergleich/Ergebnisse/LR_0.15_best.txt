@@ -1,8 +1,8 @@
 === Run information ===
 
 Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
-Relation:     dataset_eval-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
-Instances:    120276
+Relation:     dataset_evaluation_message-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    127054
 Attributes:   18
               revi
               refa
@@ -28,79 +28,79 @@ Test mode:    split 85.0% train, remainder test
 
 Logistic Regression with ridge parameter of 1.0E-8
 Coefficients...
-               Class
-Variable       clean
-====================
-revi           0.009
-refa         -0.1678
-bugf         -0.0679
-auth          -0.068
-addl               0
-addm          0.0003
-adda         -0.0005
-reml              -0
-remm         -0.0003
-rema          0.0009
-cchl              -0
-cchm          0.0001
-ccha         -0.0009
-maxc              -0
-avgc          0.0015
-aage          0.0028
-wage          0.0015
-Intercept     0.7119
+                 Class
+Variable     defective
+======================
+revi           -0.0236
+refa           -0.0824
+bugf            0.1549
+auth            0.1388
+addl                -0
+addm            0.0001
+adda            0.0008
+reml                -0
+remm           -0.0003
+rema            0.0005
+cchl                -0
+cchm           -0.0003
+ccha             0.001
+maxc            0.0006
+avgc           -0.0029
+aage           -0.0028
+wage           -0.0029
+Intercept      -0.6197
 
 
 Odds Ratios...
-               Class
-Variable       clean
-====================
-revi          1.0091
-refa          0.8455
-bugf          0.9344
-auth          0.9343
-addl               1
-addm          1.0003
-adda          0.9995
-reml               1
-remm          0.9997
-rema          1.0009
-cchl               1
-cchm          1.0001
-ccha          0.9991
-maxc               1
-avgc          1.0015
-aage          1.0028
-wage          1.0015
+                 Class
+Variable     defective
+======================
+revi            0.9767
+refa            0.9209
+bugf            1.1676
+auth            1.1489
+addl                 1
+addm            1.0001
+adda            1.0008
+reml                 1
+remm            0.9997
+rema            1.0005
+cchl                 1
+cchm            0.9997
+ccha             1.001
+maxc            1.0006
+avgc            0.9971
+aage            0.9972
+wage            0.9971
 
 
-Time taken to build model: 3.85 seconds
+Time taken to build model: 4.54 seconds
 
 === Evaluation on test split ===
 
-Time taken to test model on test split: 0.35 seconds
+Time taken to test model on test split: 0.3 seconds
 
 === Summary ===
 
-Correctly Classified Instances       13231               73.3385 %
-Incorrectly Classified Instances      4810               26.6615 %
-Kappa statistic                          0.0262
-Mean absolute error                      0.3533
-Root mean squared error                  0.4189
-Relative absolute error                 90.1549 %
-Root relative squared error             94.7106 %
-Total Number of Instances            18041     
+Correctly Classified Instances       13541               71.0515 %
+Incorrectly Classified Instances      5517               28.9485 %
+Kappa statistic                          0.1624
+Mean absolute error                      0.3626
+Root mean squared error                  0.4239
+Relative absolute error                 84.1991 %
+Root relative squared error             91.3492 %
+Total Number of Instances            19058     
 
 === Detailed Accuracy By Class ===
 
                  TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
-                 0,990    0,972    0,737      0,990    0,845      0,067    0,718     0,883     clean
-                 0,028    0,010    0,506      0,028    0,054      0,067    0,718     0,442     defective
-Weighted Avg.    0,733    0,715    0,675      0,733    0,634      0,067    0,718     0,765     
+                 0,175    0,045    0,642      0,175    0,275      0,216    0,771     0,561     defective
+                 0,955    0,825    0,717      0,955    0,819      0,216    0,771     0,888     clean
+Weighted Avg.    0,711    0,580    0,693      0,711    0,648      0,216    0,771     0,786     
 
 === Confusion Matrix ===
 
      a     b   <-- classified as
- 13094   134 |     a = clean
-  4676   137 |     b = defective
+  1046  4934 |     a = defective
+   583 12495 |     b = clean
 

@@ -6,7 +6,7 @@
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_message")
 mycursor = target_db.cursor()
 
 # List of involved software projects 
@@ -15,7 +15,7 @@ softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irss
 # Extract metrics and enter in final table
 for software in softwares:
 	
-	query1 = "SELECT * FROM " + software + "_final_new"
+	query1 = "SELECT * FROM " + software + "_final"
 	
 	mycursor.execute(query1)
 	result_set = mycursor.fetchall()

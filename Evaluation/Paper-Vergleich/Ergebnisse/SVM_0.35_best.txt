@@ -1,0 +1,92 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     dataset_evaluation_message-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    127054
+Attributes:   18
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    split 65.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: defective, clean
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.3794 * (normalized) revi
+ +       0.8601 * (normalized) refa
+ +     -15.8855 * (normalized) bugf
+ +      -8.4042 * (normalized) auth
+ +       2.3528 * (normalized) addl
+ +     -10.0557 * (normalized) addm
+ +     -19.8928 * (normalized) adda
+ +       1.6478 * (normalized) reml
+ +       2.9843 * (normalized) remm
+ +     -10.9483 * (normalized) rema
+ +       1.3224 * (normalized) cchl
+ +      -4.5861 * (normalized) cchm
+ +      -7.9521 * (normalized) ccha
+ +       0.1194 * (normalized) maxc
+ +       0.3684 * (normalized) avgc
+ +       0.4431 * (normalized) aage
+ +      -0.4    * (normalized) wage
+ +       5.092 
+
+Number of kernel evaluations: 954704807 (43.577% cached)
+
+
+
+Time taken to build model: 421.28 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.12 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       31043               69.8082 %
+Incorrectly Classified Instances     13426               30.1918 %
+Kappa statistic                          0.0741
+Mean absolute error                      0.3019
+Root mean squared error                  0.5495
+Relative absolute error                 70.116  %
+Root relative squared error            118.4741 %
+Total Number of Instances            44469     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,073    0,017    0,663      0,073    0,132      0,143    0,528     0,339     defective
+                 0,983    0,927    0,699      0,983    0,817      0,143    0,528     0,699     clean
+Weighted Avg.    0,698    0,642    0,688      0,698    0,603      0,143    0,528     0,586     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  1017 12910 |     a = defective
+   516 30026 |     b = clean
+

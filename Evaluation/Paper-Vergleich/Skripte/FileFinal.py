@@ -6,12 +6,11 @@
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_message")
 mycursor = target_db.cursor()
 
 # List of involved software projects 
-softwares = ["busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
-#softwares = ["blender1", "blender2", "blender3", "blender4"]
+softwares = ["blender", "busybox", "emacs", "gimp", "gnumeric", "gnuplot", "irssi", "libxml2", "lighttpd", "mpsolve", "parrot", "vim", "xfig"]
 
 # Execute for each software project and enter into new table
 for software in softwares:
@@ -22,6 +21,7 @@ for software in softwares:
 	result_set = mycursor.fetchall()
 	
 	counter = 0
+	length = len(result_set)
 	
 	for row in result_set:
 		release = row[1]
@@ -43,6 +43,7 @@ for software in softwares:
 		avgc = row[17]
 		aage = row[18]
 		wage = row[19]
+	
 
 		query2 = "SELECT corrective, bug_introducing FROM " + software + " WHERE release_number = \"" + release + "\" and filename = \"" + filename + "\""
 		mycursor.execute(query2)
@@ -69,3 +70,6 @@ for software in softwares:
 			target_db.commit()
 			counter = counter + 1
 			print("Sth happening for " + software + ": " + str(counter))
+	
+		length = length - 1
+		print("Still left: " + str(length))

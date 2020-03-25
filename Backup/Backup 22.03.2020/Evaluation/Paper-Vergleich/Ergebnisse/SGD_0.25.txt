@@ -1,0 +1,81 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_eval-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    120276
+Attributes:   18
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        -0.9378 (normalized) revi
+ +       0.0866 (normalized) refa
+ +       0.9801 (normalized) bugf
+ +       0.1936 (normalized) auth
+ +      -2.5976 (normalized) addl
+ +      -2.8299 (normalized) addm
+ +       8.3772 (normalized) adda
+ +       0.6001 (normalized) reml
+ +       3.8694 (normalized) remm
+ +      -5.9489 (normalized) rema
+ +      -2.8479 (normalized) cchl
+ +      -0.57   (normalized) cchm
+ +       6.5975 (normalized) ccha
+ +      -0.0025 (normalized) maxc
+ +      -0.1399 (normalized) avgc
+ +      -3.3659 (normalized) aage
+ +       3.3726 (normalized) wage
+ -       3.05  
+
+Time taken to build model: 24.97 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.09 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       21997               73.1551 %
+Incorrectly Classified Instances      8072               26.8449 %
+Kappa statistic                          0.0067
+Mean absolute error                      0.2684
+Root mean squared error                  0.5181
+Relative absolute error                 68.3311 %
+Root relative squared error            116.7652 %
+Total Number of Instances            30069     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,995    0,731      1,000    0,845      0,052    0,502     0,731     clean
+                 0,005    0,000    0,851      0,005    0,010      0,052    0,502     0,272     defective
+Weighted Avg.    0,732    0,727    0,764      0,732    0,620      0,052    0,502     0,608     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 21957     7 |     a = clean
+  8065    40 |     b = defective
+

@@ -2,7 +2,7 @@ import csv
 import mysql.connector
 
 # Initialize connection to mysql database
-target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat")
+target_db = mysql.connector.connect(host = "localhost", user = "root", passwd = "*****", database = "dataset_evaluation_feat_message")
 mycursor = target_db.cursor()
 
 # SQL query to be executed
@@ -12,7 +12,7 @@ query1 = "SELECT * FROM final"
 mycursor.execute(query1)
 result_set = mycursor.fetchall()
 
-with open('dataset_evaluation_feat.csv', mode='w', newline='') as dataset:
+with open('dataset_evaluation_feat_message.csv', mode='w', newline='') as dataset:
 	dataset_writer = csv.writer(dataset, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 	
 	for row in result_set:
