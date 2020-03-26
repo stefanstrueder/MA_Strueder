@@ -1,0 +1,351 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     dataset_feat_message-weka.filters.unsupervised.attribute.Remove-R3,5,7,11
+Instances:    14414
+Attributes:   8
+              comm
+              adev
+              exp
+              modd
+              nloc
+              cyco
+              addl
+              label
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+comm <= 2
+|   nloc <= 64: clean (1966.0/39.0)
+|   nloc > 64
+|   |   cyco <= 0
+|   |   |   comm <= 1
+|   |   |   |   nloc <= 452: clean (413.0/3.0)
+|   |   |   |   nloc > 452
+|   |   |   |   |   nloc <= 1534
+|   |   |   |   |   |   addl <= 1264
+|   |   |   |   |   |   |   nloc <= 1360
+|   |   |   |   |   |   |   |   exp <= 8281: clean (79.0/3.0)
+|   |   |   |   |   |   |   |   exp > 8281
+|   |   |   |   |   |   |   |   |   exp <= 11663: defective (3.0)
+|   |   |   |   |   |   |   |   |   exp > 11663: clean (6.0)
+|   |   |   |   |   |   |   nloc > 1360: defective (2.0)
+|   |   |   |   |   |   addl > 1264: defective (6.0/1.0)
+|   |   |   |   |   nloc > 1534
+|   |   |   |   |   |   nloc <= 5777: clean (615.0/1.0)
+|   |   |   |   |   |   nloc > 5777
+|   |   |   |   |   |   |   exp <= 27882880: clean (231.0)
+|   |   |   |   |   |   |   exp > 27882880: defective (6.0)
+|   |   |   comm > 1
+|   |   |   |   addl <= 350: clean (100.0/7.0)
+|   |   |   |   addl > 350
+|   |   |   |   |   nloc <= 192: defective (5.0)
+|   |   |   |   |   nloc > 192
+|   |   |   |   |   |   exp <= 388: defective (2.0)
+|   |   |   |   |   |   exp > 388: clean (15.0/2.0)
+|   |   cyco > 0
+|   |   |   addl <= 58: clean (3764.0/407.0)
+|   |   |   addl > 58
+|   |   |   |   nloc <= 8064
+|   |   |   |   |   exp <= 5712
+|   |   |   |   |   |   addl <= 499
+|   |   |   |   |   |   |   modd <= 1
+|   |   |   |   |   |   |   |   exp <= 1696
+|   |   |   |   |   |   |   |   |   addl <= 185
+|   |   |   |   |   |   |   |   |   |   nloc <= 76
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 9: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 9
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 127: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 127: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 76
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 44: clean (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 44
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 279: defective (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 279: clean (129.0/34.0)
+|   |   |   |   |   |   |   |   |   addl > 185
+|   |   |   |   |   |   |   |   |   |   addl <= 305
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 386: clean (100.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 386
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 209: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 209: clean (6.0)
+|   |   |   |   |   |   |   |   |   |   addl > 305
+|   |   |   |   |   |   |   |   |   |   |   exp <= 352
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 141: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 141: defective (10.0)
+|   |   |   |   |   |   |   |   |   |   |   exp > 352
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 136: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 136: clean (45.0/5.0)
+|   |   |   |   |   |   |   |   exp > 1696
+|   |   |   |   |   |   |   |   |   cyco <= 9: defective (9.0)
+|   |   |   |   |   |   |   |   |   cyco > 9
+|   |   |   |   |   |   |   |   |   |   addl <= 144
+|   |   |   |   |   |   |   |   |   |   |   addl <= 59: defective (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 59: clean (125.0/38.0)
+|   |   |   |   |   |   |   |   |   |   addl > 144
+|   |   |   |   |   |   |   |   |   |   |   addl <= 165: defective (7.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 165
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 95: defective (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 95
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 159: clean (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 199: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 199: defective (12.0/1.0)
+|   |   |   |   |   |   |   modd > 1
+|   |   |   |   |   |   |   |   cyco <= 16: clean (24.0/3.0)
+|   |   |   |   |   |   |   |   cyco > 16
+|   |   |   |   |   |   |   |   |   modd <= 4
+|   |   |   |   |   |   |   |   |   |   nloc <= 2570
+|   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 2825
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 81
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 59: defective (22.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 59: clean (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 81: defective (51.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 2825: clean (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   comm > 1: defective (223.0/97.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 2570
+|   |   |   |   |   |   |   |   |   |   |   addl <= 212
+|   |   |   |   |   |   |   |   |   |   |   |   comm <= 1: clean (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   modd <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 415: clean (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 415: defective (34.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   modd > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   modd <= 3: clean (17.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   modd > 3: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 212: clean (22.0/1.0)
+|   |   |   |   |   |   |   |   |   modd > 4
+|   |   |   |   |   |   |   |   |   |   exp <= 203
+|   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 129: clean (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 129: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   comm > 1: defective (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   exp > 203: clean (20.0/2.0)
+|   |   |   |   |   |   addl > 499
+|   |   |   |   |   |   |   exp <= 1844
+|   |   |   |   |   |   |   |   cyco <= 93
+|   |   |   |   |   |   |   |   |   cyco <= 5: defective (11.0)
+|   |   |   |   |   |   |   |   |   cyco > 5
+|   |   |   |   |   |   |   |   |   |   nloc <= 403
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 301: clean (5.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 301: defective (12.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 403
+|   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 63
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 37: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 37
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 512: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 512: defective (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 63: clean (16.0)
+|   |   |   |   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 378: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 378: defective (4.0/1.0)
+|   |   |   |   |   |   |   |   cyco > 93
+|   |   |   |   |   |   |   |   |   cyco <= 101: defective (55.0)
+|   |   |   |   |   |   |   |   |   cyco > 101
+|   |   |   |   |   |   |   |   |   |   nloc <= 877
+|   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 206: clean (25.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 206: defective (4.0)
+|   |   |   |   |   |   |   |   |   |   |   comm > 1: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 877
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 1043: defective (38.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 1043
+|   |   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 1551: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 1551: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1317: defective (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 1317
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1401: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 1401: defective (8.0/1.0)
+|   |   |   |   |   |   |   exp > 1844
+|   |   |   |   |   |   |   |   exp <= 2081: clean (39.0)
+|   |   |   |   |   |   |   |   exp > 2081
+|   |   |   |   |   |   |   |   |   cyco <= 819
+|   |   |   |   |   |   |   |   |   |   cyco <= 5: clean (7.0)
+|   |   |   |   |   |   |   |   |   |   cyco > 5
+|   |   |   |   |   |   |   |   |   |   |   addl <= 1333
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 2900: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 2900
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 4578: defective (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 4578: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 1333: defective (30.0/1.0)
+|   |   |   |   |   |   |   |   |   cyco > 819: clean (13.0/1.0)
+|   |   |   |   |   exp > 5712
+|   |   |   |   |   |   cyco <= 514
+|   |   |   |   |   |   |   addl <= 1426
+|   |   |   |   |   |   |   |   cyco <= 18: clean (62.0/1.0)
+|   |   |   |   |   |   |   |   cyco > 18
+|   |   |   |   |   |   |   |   |   addl <= 398
+|   |   |   |   |   |   |   |   |   |   exp <= 19740
+|   |   |   |   |   |   |   |   |   |   |   addl <= 137
+|   |   |   |   |   |   |   |   |   |   |   |   addl <= 72: defective (16.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   addl > 72: clean (150.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 137
+|   |   |   |   |   |   |   |   |   |   |   |   modd <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 280: defective (36.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   addl > 280: clean (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   modd > 1: clean (34.0/12.0)
+|   |   |   |   |   |   |   |   |   |   exp > 19740
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 89
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 87: clean (61.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 87: defective (7.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 89
+|   |   |   |   |   |   |   |   |   |   |   |   addl <= 141
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 27930: clean (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 27930: defective (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   addl > 141: clean (230.0/11.0)
+|   |   |   |   |   |   |   |   |   addl > 398
+|   |   |   |   |   |   |   |   |   |   exp <= 735124
+|   |   |   |   |   |   |   |   |   |   |   addl <= 779
+|   |   |   |   |   |   |   |   |   |   |   |   modd <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 22554: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 22554: clean (31.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   modd > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 30967: clean (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 30967
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 986: defective (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 986: clean (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 779
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 2331: defective (26.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 2331: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   exp > 735124
+|   |   |   |   |   |   |   |   |   |   |   exp <= 1714159: clean (45.0)
+|   |   |   |   |   |   |   |   |   |   |   exp > 1714159: defective (4.0/1.0)
+|   |   |   |   |   |   |   addl > 1426: clean (98.0/2.0)
+|   |   |   |   |   |   cyco > 514
+|   |   |   |   |   |   |   exp <= 651965
+|   |   |   |   |   |   |   |   nloc <= 6799
+|   |   |   |   |   |   |   |   |   addl <= 1668
+|   |   |   |   |   |   |   |   |   |   exp <= 57096
+|   |   |   |   |   |   |   |   |   |   |   addl <= 82: clean (33.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 82
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1923
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 5719
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1032
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 411
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   modd <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 37728: clean (20.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 37728
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 4645: defective (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 4645: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   modd > 1: defective (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 411: defective (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 1032: clean (38.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 5719: defective (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 1923: clean (8.0)
+|   |   |   |   |   |   |   |   |   |   exp > 57096
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 3963
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 3431: clean (30.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 3431
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1130: defective (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 1130: clean (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 3963: clean (94.0/5.0)
+|   |   |   |   |   |   |   |   |   addl > 1668
+|   |   |   |   |   |   |   |   |   |   exp <= 177560: defective (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   exp > 177560: clean (2.0)
+|   |   |   |   |   |   |   |   nloc > 6799
+|   |   |   |   |   |   |   |   |   nloc <= 7177: defective (21.0)
+|   |   |   |   |   |   |   |   |   nloc > 7177: clean (11.0/2.0)
+|   |   |   |   |   |   |   exp > 651965: defective (37.0/9.0)
+|   |   |   |   nloc > 8064
+|   |   |   |   |   exp <= 6875
+|   |   |   |   |   |   comm <= 1: clean (7.0/1.0)
+|   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   modd <= 2
+|   |   |   |   |   |   |   |   addl <= 338: defective (3.0)
+|   |   |   |   |   |   |   |   addl > 338: clean (2.0)
+|   |   |   |   |   |   |   modd > 2: defective (2.0)
+|   |   |   |   |   exp > 6875
+|   |   |   |   |   |   nloc <= 11842: defective (50.0/1.0)
+|   |   |   |   |   |   nloc > 11842: clean (2330.0/2.0)
+comm > 2
+|   comm <= 8
+|   |   addl <= 19: clean (496.0/133.0)
+|   |   addl > 19
+|   |   |   addl <= 1470
+|   |   |   |   modd <= 4
+|   |   |   |   |   comm <= 3
+|   |   |   |   |   |   modd <= 3: clean (272.0/125.0)
+|   |   |   |   |   |   modd > 3
+|   |   |   |   |   |   |   nloc <= 82: clean (9.0)
+|   |   |   |   |   |   |   nloc > 82: defective (105.0/48.0)
+|   |   |   |   |   comm > 3
+|   |   |   |   |   |   addl <= 262
+|   |   |   |   |   |   |   exp <= 15252: clean (102.0/47.0)
+|   |   |   |   |   |   |   exp > 15252: defective (6.0)
+|   |   |   |   |   |   addl > 262: defective (15.0/1.0)
+|   |   |   |   modd > 4
+|   |   |   |   |   nloc <= 2284: defective (416.0/110.0)
+|   |   |   |   |   nloc > 2284
+|   |   |   |   |   |   comm <= 3
+|   |   |   |   |   |   |   exp <= 5643
+|   |   |   |   |   |   |   |   exp <= 903
+|   |   |   |   |   |   |   |   |   exp <= 72
+|   |   |   |   |   |   |   |   |   |   exp <= 6: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   exp > 6: defective (5.0/1.0)
+|   |   |   |   |   |   |   |   |   exp > 72: clean (5.0)
+|   |   |   |   |   |   |   |   exp > 903: defective (3.0)
+|   |   |   |   |   |   |   exp > 5643: clean (7.0)
+|   |   |   |   |   |   comm > 3: defective (237.0/109.0)
+|   |   |   addl > 1470
+|   |   |   |   cyco <= 347: clean (7.0/1.0)
+|   |   |   |   cyco > 347: defective (69.0/1.0)
+|   comm > 8
+|   |   comm <= 31
+|   |   |   nloc <= 6297
+|   |   |   |   addl <= 65
+|   |   |   |   |   cyco <= 1372: defective (159.0/22.0)
+|   |   |   |   |   cyco > 1372
+|   |   |   |   |   |   nloc <= 5027: clean (11.0/1.0)
+|   |   |   |   |   |   nloc > 5027
+|   |   |   |   |   |   |   cyco <= 1717
+|   |   |   |   |   |   |   |   addl <= 43: defective (9.0/1.0)
+|   |   |   |   |   |   |   |   addl > 43
+|   |   |   |   |   |   |   |   |   nloc <= 5673: clean (2.0)
+|   |   |   |   |   |   |   |   |   nloc > 5673: defective (3.0/1.0)
+|   |   |   |   |   |   |   cyco > 1717: clean (13.0/5.0)
+|   |   |   |   addl > 65: defective (212.0/32.0)
+|   |   |   nloc > 6297: defective (41.0/2.0)
+|   |   comm > 31: defective (78.0/2.0)
+
+Number of Leaves  : 	148
+
+Size of the tree : 	295
+
+
+Time taken to build model: 0.43 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3748               86.679  %
+Incorrectly Classified Instances       576               13.321  %
+Kappa statistic                          0.5376
+Mean absolute error                      0.1783
+Root mean squared error                  0.3115
+Relative absolute error                 57.494  %
+Root relative squared error             78.3281 %
+Total Number of Instances             4324     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,946    0,456    0,894      0,946    0,919      0,545    0,883     0,956     clean
+                 0,544    0,054    0,711      0,544    0,617      0,545    0,883     0,656     defective
+Weighted Avg.    0,867    0,377    0,858      0,867    0,860      0,545    0,883     0,897     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3285  188 |    a = clean
+  388  463 |    b = defective
+

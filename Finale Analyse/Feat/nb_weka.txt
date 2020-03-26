@@ -1,0 +1,84 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     dataset_feat_message-weka.filters.unsupervised.attribute.Remove-R3,6-9,11
+Instances:    14414
+Attributes:   6
+              comm
+              adev
+              exp
+              oexp
+              addl
+              label
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                       Class
+Attribute              clean     defective
+                      (0.81)        (0.19)
+===========================================
+comm
+  mean                 0.3191        6.1896
+  std. dev.            2.0258       30.3702
+  weight sum            11679          2735
+  precision            9.9114        9.9114
+
+adev
+  mean                 0.3191        6.1896
+  std. dev.            2.0258       30.3702
+  weight sum            11679          2735
+  precision            9.9114        9.9114
+
+exp
+  mean          12772984.3497   362536.5932
+  std. dev.     44363128.9651  3459500.6991
+  weight sum            11679          2735
+  precision        87076.2784    87076.2784
+
+oexp
+  mean              4886.6562     4261.4309
+  std. dev.         8650.2472    12681.3904
+  weight sum            11679          2735
+  precision          135.3204      135.3204
+
+addl
+  mean              3582.5455      437.8868
+  std. dev.         6841.6261     1036.1553
+  weight sum            11679          2735
+  precision           41.6433       41.6433
+
+
+
+Time taken to build model: 0.09 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3619               83.6957 %
+Incorrectly Classified Instances       705               16.3043 %
+Kappa statistic                          0.3052
+Mean absolute error                      0.2618
+Root mean squared error                  0.3686
+Relative absolute error                 84.4273 %
+Root relative squared error             92.6868 %
+Total Number of Instances             4324     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,982    0,756    0,841      0,982    0,906      0,372    0,736     0,917     clean
+                 0,244    0,018    0,770      0,244    0,371      0,372    0,736     0,479     defective
+Weighted Avg.    0,837    0,610    0,827      0,837    0,801      0,372    0,736     0,831     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3411   62 |    a = clean
+  643  208 |    b = defective
+
