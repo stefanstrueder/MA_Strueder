@@ -1,0 +1,126 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     dataset_feat_message
+Instances:    14414
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 85.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                       Class
+Attribute              clean     defective
+                      (0.81)        (0.19)
+===========================================
+comm
+  mean                 0.3191        6.1896
+  std. dev.            2.0258       30.3702
+  weight sum            11679          2735
+  precision            9.9114        9.9114
+
+adev
+  mean                 0.3191        6.1896
+  std. dev.            2.0258       30.3702
+  weight sum            11679          2735
+  precision            9.9114        9.9114
+
+ddev
+  mean                 1.6006        4.1047
+  std. dev.            2.9282        7.4046
+  weight sum            11679          2735
+  precision            2.4211        2.4211
+
+exp
+  mean          12772984.3497   362536.5932
+  std. dev.     44363128.9651  3459500.6991
+  weight sum            11679          2735
+  precision        87076.2784    87076.2784
+
+oexp
+  mean              4886.6562     4261.4309
+  std. dev.         8650.2472    12681.3904
+  weight sum            11679          2735
+  precision          135.3204      135.3204
+
+modd
+  mean                 0.5083        9.5752
+  std. dev.            3.5689       54.4401
+  weight sum            11679          2735
+  precision            13.193        13.193
+
+mods
+  mean                677.715      389.5349
+  std. dev.          565.3187      377.8203
+  weight sum            11679          2735
+  precision           19.9367       19.9367
+
+nloc
+  mean              4308.5671      2415.361
+  std. dev.         5473.1533     2852.7577
+  weight sum            11679          2735
+  precision           11.2217       11.2217
+
+cyco
+  mean              1541.1478      587.3245
+  std. dev.         2476.2902      730.3543
+  weight sum            11679          2735
+  precision            3.6027        3.6027
+
+addl
+  mean              3582.5455      437.8868
+  std. dev.         6841.6261     1036.1553
+  weight sum            11679          2735
+  precision           41.6433       41.6433
+
+reml
+  mean              1032.3533      331.7611
+  std. dev.         2809.7646     1018.6435
+  weight sum            11679          2735
+  precision           45.4069       45.4069
+
+
+
+Time taken to build model: 0.13 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1770               81.8686 %
+Incorrectly Classified Instances       392               18.1314 %
+Kappa statistic                          0.3431
+Mean absolute error                      0.2681
+Root mean squared error                  0.3919
+Relative absolute error                 83.9113 %
+Root relative squared error             95.5382 %
+Total Number of Instances             2162     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,950    0,667    0,840      0,950    0,892      0,370    0,771     0,919     clean
+                 0,333    0,050    0,643      0,333    0,438      0,370    0,771     0,543     defective
+Weighted Avg.    0,819    0,536    0,798      0,819    0,795      0,370    0,771     0,839     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1617   85 |    a = clean
+  307  153 |    b = defective
+

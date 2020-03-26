@@ -1,0 +1,47 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.bayes.NaiveBayes -F 5 -T 0.01 -R 1 -E DEFAULT --
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     dataset_file_message-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    146046
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 77
+	Merit of best subset found:    0.636
+
+Attribute Subset Evaluator (supervised, Class (nominal): 12 label):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.bayes.NaiveBayes
+	Scheme options: 
+	Subset evaluation: classification accuracy
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 3,6,7,9,10 : 5
+                     ddev
+                     modd
+                     mods
+                     cyco
+                     addl
+

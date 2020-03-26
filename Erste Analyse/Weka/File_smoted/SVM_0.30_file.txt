@@ -1,0 +1,80 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     dataset_file_message-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    146046
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: defective, clean
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -9.3629 * (normalized) comm
+ +      -8.8642 * (normalized) adev
+ +       0.8287 * (normalized) ddev
+ +       3.6157 * (normalized) exp
+ +       2.4887 * (normalized) oexp
+ +      -6.3364 * (normalized) modd
+ +       0.0666 * (normalized) mods
+ +     -12.7102 * (normalized) nloc
+ +     -11.8673 * (normalized) cyco
+ +     -27.413  * (normalized) addl
+ +     -10.1417 * (normalized) reml
+ +       0.9887
+
+Number of kernel evaluations: 695959179 (48.483% cached)
+
+
+
+Time taken to build model: 570.06 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.16 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       27260               62.2176 %
+Incorrectly Classified Instances     16554               37.7824 %
+Kappa statistic                          0.0877
+Mean absolute error                      0.3778
+Root mean squared error                  0.6147
+Relative absolute error                 78.543  %
+Root relative squared error            125.3911 %
+Total Number of Instances            43814     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,109    0,034    0,685      0,109    0,189      0,151    0,538     0,432     defective
+                 0,966    0,891    0,618      0,966    0,754      0,151    0,538     0,617     clean
+Weighted Avg.    0,622    0,547    0,645      0,622    0,527      0,151    0,538     0,543     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+  1923 15668 |     a = defective
+   886 25337 |     b = clean
+

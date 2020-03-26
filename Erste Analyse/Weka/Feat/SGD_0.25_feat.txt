@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat_message
+Instances:    14414
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        22.0888 (normalized) comm
+ +      22.0888 (normalized) adev
+ +       3.3576 (normalized) ddev
+ +      -0.0212 (normalized) exp
+ +      20.337  (normalized) oexp
+ +      15.4358 (normalized) modd
+ +      -0.2421 (normalized) mods
+ +       0.4014 (normalized) nloc
+ +      -0.0704 (normalized) cyco
+ +      -3.0001 (normalized) addl
+ +      -2.7191 (normalized) reml
+ -       1.09  
+
+Time taken to build model: 1.31 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        2969               82.4036 %
+Incorrectly Classified Instances       634               17.5964 %
+Kappa statistic                          0.1968
+Mean absolute error                      0.176 
+Root mean squared error                  0.4195
+Relative absolute error                 56.4636 %
+Root relative squared error            104.9021 %
+Total Number of Instances             3603     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,994    0,860    0,823      0,994    0,900      0,304    0,567     0,823     clean
+                 0,140    0,006    0,863      0,140    0,242      0,304    0,567     0,293     defective
+Weighted Avg.    0,824    0,689    0,831      0,824    0,769      0,304    0,567     0,717     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 2868   16 |    a = clean
+  618  101 |    b = defective
+

@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat_message
+Instances:    14414
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        22.0888 (normalized) comm
+ +      22.0888 (normalized) adev
+ +       3.3576 (normalized) ddev
+ +      -0.0212 (normalized) exp
+ +      20.337  (normalized) oexp
+ +      15.4358 (normalized) modd
+ +      -0.2421 (normalized) mods
+ +       0.4014 (normalized) nloc
+ +      -0.0704 (normalized) cyco
+ +      -3.0001 (normalized) addl
+ +      -2.7191 (normalized) reml
+ -       1.09  
+
+Time taken to build model: 1.25 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3576               82.7012 %
+Incorrectly Classified Instances       748               17.2988 %
+Kappa statistic                          0.2013
+Mean absolute error                      0.173 
+Root mean squared error                  0.4159
+Relative absolute error                 55.79   %
+Root relative squared error            104.5775 %
+Total Number of Instances             4324     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,995    0,857    0,826      0,995    0,902      0,309    0,569     0,826     clean
+                 0,143    0,005    0,865      0,143    0,246      0,309    0,569     0,293     defective
+Weighted Avg.    0,827    0,689    0,834      0,827    0,773      0,309    0,569     0,721     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3454   19 |    a = clean
+  729  122 |    b = defective
+

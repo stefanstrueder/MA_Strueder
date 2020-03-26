@@ -1,0 +1,38 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.bayes.NaiveBayes -F 5 -T 0.01 -R 1 -E DEFAULT --
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     dataset_feat_message
+Instances:    14414
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Evaluation mode:    10-fold cross-validation
+
+
+
+=== Attribute selection 10 fold cross-validation (stratified), seed: 1 ===
+
+number of folds (%)  attribute
+          10(100 %)    1 comm
+           6( 60 %)    2 adev
+           0(  0 %)    3 ddev
+           9( 90 %)    4 exp
+          10(100 %)    5 oexp
+           0(  0 %)    6 modd
+           7( 70 %)    7 mods
+           0(  0 %)    8 nloc
+           5( 50 %)    9 cyco
+           2( 20 %)   10 addl
+           0(  0 %)   11 reml
+

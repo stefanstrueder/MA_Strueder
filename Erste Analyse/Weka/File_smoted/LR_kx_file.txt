@@ -1,0 +1,85 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     dataset_file_message-weka.filters.supervised.instance.SMOTE-C0-K5-P3000.0-S1
+Instances:    146046
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                 Class
+Variable     defective
+======================
+comm            0.0111
+adev            0.0073
+ddev             0.009
+exp                 -0
+oexp                -0
+modd           -0.0044
+mods           -0.0004
+nloc                 0
+cyco             0.001
+addl            0.0013
+reml           -0.0002
+Intercept      -0.0705
+
+
+Odds Ratios...
+                 Class
+Variable     defective
+======================
+comm            1.0112
+adev            1.0073
+ddev             1.009
+exp                  1
+oexp                 1
+modd            0.9957
+mods            0.9996
+nloc                 1
+cyco             1.001
+addl            1.0013
+reml            0.9998
+
+
+Time taken to build model: 3.72 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       93900               64.2948 %
+Incorrectly Classified Instances     52146               35.7052 %
+Kappa statistic                          0.1714
+Mean absolute error                      0.445 
+Root mean squared error                  0.4702
+Relative absolute error                 92.4765 %
+Root relative squared error             95.8534 %
+Total Number of Instances           146046     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,235    0,082    0,660      0,235    0,347      0,215    0,667     0,570     defective
+                 0,918    0,765    0,640      0,918    0,754      0,215    0,667     0,757     clean
+Weighted Avg.    0,643    0,489    0,648      0,643    0,590      0,215    0,667     0,681     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13848 45021 |     a = defective
+  7125 80052 |     b = clean
+
