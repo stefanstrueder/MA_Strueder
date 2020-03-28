@@ -1412,33 +1412,6 @@
       \verb 10.1145/2580950
       \endverb
     \endentry
-    \entry{IanWitten}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=8a6712e42c49f65d652e34f990c39c46}{%
-           family={Witten},
-           familyi={W\bibinitperiod},
-           given={Ian\bibnamedelima H.},
-           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \strng{namehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{fullhash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{bibnamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authorbibnamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authornamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authorfullhash}{8a6712e42c49f65d652e34f990c39c46}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Online-Video}
-      \field{title}{Data Mining with WEKA: Cross-valiadation}
-      \verb{urlraw}
-      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
-      \endverb
-      \verb{url}
-      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
-      \endverb
-    \endentry
     \entry{Zhang2016}{article}{}
       \name{author}{1}{}{%
         {{hash=2063c983a464ccacb561a99c48899267}{%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  23 MAR 2020 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  28 MAR 2020 15:56
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1147,12 +1147,12 @@ Package biblatex Info: Reference segment=0 on input line 73.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 73.
 \c@lstlisting=\count460
-<logos/uko-logo.pdf, id=115, 564.1075pt x 90.3375pt>
+<logos/uko-logo.pdf, id=111, 564.1075pt x 90.3375pt>
 File: logos/uko-logo.pdf Graphic file (type pdf)
 <use logos/uko-logo.pdf>
 Package pdftex.def Info: logos/uko-logo.pdf  used on input line 80.
 (pdftex.def)             Requested size: 170.71652pt x 27.33853pt.
-<logos/chalmers.png, id=116, 978.65625pt x 233.87375pt>
+<logos/chalmers.png, id=112, 978.65625pt x 233.87375pt>
 File: logos/chalmers.png Graphic file (type png)
 <use logos/chalmers.png>
 Package pdftex.def Info: logos/chalmers.png  used on input line 80.
@@ -1229,13 +1229,13 @@ Package pdftex.def Info: logos/chalmers.png  used on input line 25.
 \openout5 = `thesis.toc'.
 
  [10] (thesis.lof
-Overfull \hbox (7.6734pt too wide) in paragraph at lines 55--55
+Overfull \hbox (7.6734pt too wide) in paragraph at lines 51--51
  [][] [][]\T1/ppl/m/n/10.95 Grundsätzlicher Auf-bau ei-nes KNN mit drei Input-L
 ayer-Neuronen, fünf Hidden- 
  []
 
 
-Overfull \hbox (15.20729pt too wide) in paragraph at lines 59--59
+Overfull \hbox (15.20729pt too wide) in paragraph at lines 55--55
  [][] [][]\T1/ppl/m/n/10.95 Vergleich der Ac-cu-ra-cies je Klas-si-fi-ka-tor vo
 r und nach der An-wen-dung des SMOTE- 
  []
@@ -1252,17 +1252,6 @@ r und nach der An-wen-dung des SMOTE-
 
  (content/introduction.tex
 Kapitel 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
-
- []
-
-
-Overfull \hbox (0.75249pt too wide) in paragraph at lines 15--16
-\T1/ppl/m/n/10.95 me-tho-den sind bei-spiels-wei-se Re-gres-si-on, k-Nearest-Ne
-ighbors oder künst-li-che neu-ro-na-le Net-
- []
-
 [2
 
 
@@ -1272,84 +1261,76 @@ sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 28.
+nput line 23.
  [3]
-Underfull \hbox (badness 1314) in paragraph at lines 57--57
-[]\T1/ppl/m/sc/10.95 RO1: Er-stel-lung ei-nes Da-ten-sets zum Trai-nie-ren von 
-re-le-van-ten Machine-
+Underfull \hbox (badness 6876) in paragraph at lines 52--52
+[]\T1/ppl/m/n/10.95 RO1: Er-stel-lung ei-nes Da-ten-sets zum Trai-nie-ren von r
+e-le-van-ten Machine-Learning-
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 57--58
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 52--53
 [][] 
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 64--64
-[]\T1/ppl/m/sc/10.95 RO2: Iden-ti-fi-ka-ti-on und Trai-ning ei-ner Aus-wahl von
- re-le-van-ten Machine-
+Underfull \hbox (badness 6173) in paragraph at lines 59--59
+[]\T1/ppl/m/n/10.95 RO2: Iden-ti-fi-ka-ti-on und Trai-ning ei-ner Aus-wahl von 
+re-le-van-ten Machine-Learning-
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 64--65
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 59--60
 [][] 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 74--75
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 69--70
 [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 8
-2.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 7
+7.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [4]
-<images/CRISP-DM1.png, id=344, 520.94624pt x 335.00156pt>
+<images/CRISP-DM1.png, id=336, 520.94624pt x 335.00156pt>
 File: images/CRISP-DM1.png Graphic file (type png)
 <use images/CRISP-DM1.png>
-Package pdftex.def Info: images/CRISP-DM1.png  used on input line 97.
+Package pdftex.def Info: images/CRISP-DM1.png  used on input line 92.
 (pdftex.def)             Requested size: 273.14922pt x 175.65353pt.
-<images/CRISP-DM.png, id=350, 1312.15219pt x 178.41656pt>
+
+
+LaTeX Warning: Hyper reference `timecourse' on page 5 undefined on input line 9
+6.
+
+<images/CRISP-DM.png, id=341, 1312.15219pt x 178.41656pt>
 File: images/CRISP-DM.png Graphic file (type png)
 <use images/CRISP-DM.png>
-Package pdftex.def Info: images/CRISP-DM.png  used on input line 105.
+Package pdftex.def Info: images/CRISP-DM.png  used on input line 100.
 (pdftex.def)             Requested size: 455.24408pt x 61.89952pt.
- [5 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[5 <./images/CRISP-DM1.png> <./images/CRISP-DM.png>]
 
- [6]
-[7]
-<images/Zeit.png, id=378, 828.84656pt x 415.5525pt>
-File: images/Zeit.png Graphic file (type png)
-<use images/Zeit.png>
-Package pdftex.def Info: images/Zeit.png  used on input line 222.
-(pdftex.def)             Requested size: 455.24408pt x 228.23753pt.
-File: images/Zeit.png Graphic file (type png)
-<use images/Zeit.png>
-Package pdftex.def Info: images/Zeit.png  used on input line 228.
-(pdftex.def)             Requested size: 455.24408pt x 228.23753pt.
+LaTeX Warning: Hyper reference `dataset' on page 6 undefined on input line 109.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./images/Zeit.png>] [9] [10
-
-])
+[6])
 \openout2 = `content/background.aux'.
 
  (content/background.tex
 Kapitel 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/SPL.png, id=408, 755.82375pt x 291.33844pt>
+<images/SPL.png, id=364, 755.82375pt x 291.33844pt>
 File: images/SPL.png Graphic file (type png)
 <use images/SPL.png>
-Package pdftex.def Info: images/SPL.png  used on input line 20.
+Package pdftex.def Info: images/SPL.png  used on input line 19.
 (pdftex.def)             Requested size: 455.24408pt x 175.47566pt.
-[11
+[7
+
 
 
 
@@ -1361,139 +1342,436 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
 ty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [12 <./images/SPL.png>]
-<images/Crosscutting.png, id=455, 497.60907pt x 398.23781pt>
+) [8 <./images/SPL.png>]
+<images/Crosscutting.png, id=411, 497.60907pt x 398.23781pt>
 File: images/Crosscutting.png Graphic file (type png)
 <use images/Crosscutting.png>
-Package pdftex.def Info: images/Crosscutting.png  used on input line 60.
+Package pdftex.def Info: images/Crosscutting.png  used on input line 59.
 (pdftex.def)             Requested size: 273.14922pt x 218.60611pt.
-<images/ML.png, id=461, 825.0825pt x 411.78844pt>
+<images/ML.png, id=417, 825.0825pt x 411.78844pt>
 File: images/ML.png Graphic file (type png)
 <use images/ML.png>
-Package pdftex.def Info: images/ML.png  used on input line 72.
+Package pdftex.def Info: images/ML.png  used on input line 71.
 (pdftex.def)             Requested size: 455.24408pt x 227.20691pt.
-
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
- [13 <./images/Crosscutting.png>] [14 <./images/ML.png>]
-<images/ML1.png, id=479, 950.04938pt x 330.48468pt>
+ [9 <./images/Crosscutting.png>] [10 <./images/ML.png>]
+<images/ML1.png, id=435, 950.04938pt x 330.48468pt>
 File: images/ML1.png Graphic file (type png)
 <use images/ML1.png>
-Package pdftex.def Info: images/ML1.png  used on input line 89.
+Package pdftex.def Info: images/ML1.png  used on input line 88.
 (pdftex.def)             Requested size: 455.24408pt x 158.36357pt.
- [15 <./images/ML1.png>]
-<images/ML2.png, id=502, 685.05937pt x 368.1253pt>
+ [11 <./images/ML1.png>]
+<images/ML2.png, id=457, 685.05937pt x 368.1253pt>
 File: images/ML2.png Graphic file (type png)
 <use images/ML2.png>
-Package pdftex.def Info: images/ML2.png  used on input line 122.
+Package pdftex.def Info: images/ML2.png  used on input line 125.
 (pdftex.def)             Requested size: 364.19664pt x 195.71213pt.
- [16 <./images/ML2.png>])
+
+Underfull \vbox (badness 4181) has occurred while \output is active []
+
+ [12 <./images/ML2.png>] [13] [14
+
+])
 \openout2 = `content/dataset.aux'.
 
  (content/dataset.tex
 Kapitel 3.
-
-Overfull \hbox (18.15205pt too wide) in paragraph at lines 7--8
-\T1/ppl/m/n/10.95 lung des fea-tu-re-ba-sier-ten Da-ten-sets, wel-ches zur An-l
-er-nung der Machine-Learning-Klassifikatoren
- []
-
-<images/Kap3.png, id=515, 1297.84875pt x 261.22594pt>
+<images/Kap3.png, id=484, 1297.84875pt x 261.22594pt>
 File: images/Kap3.png Graphic file (type png)
 <use images/Kap3.png>
-Package pdftex.def Info: images/Kap3.png  used on input line 11.
+Package pdftex.def Info: images/Kap3.png  used on input line 10.
 (pdftex.def)             Requested size: 455.24408pt x 91.62973pt.
-
-Underfull \vbox (badness 2781) has occurred while \output is active []
-
- [17
+[15
 
 
 
+ <./images/Kap3.png>]
+Underfull \hbox (badness 2189) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 11|
+ []
 
- <./images/Kap3.png>] [18]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 151--152
+
+Underfull \hbox (badness 2717) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 10|
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 732|
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 14|
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 6|
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 2.597|
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 7|
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 8|
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 668|
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 14|
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 7|
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 16.245|
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 8|
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 7|
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 9.849|
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 5|
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 7|
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 18|
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 7|
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 106--106
+ []| \T1/ppl/m/n/10.95 253|
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 112--113
 [][] 
  []
 
-[19]
-<images/Features.png, id=568, 963.6pt x 517.18219pt>
+[16]
+<images/Features.png, id=531, 963.6pt x 517.18219pt>
 File: images/Features.png Graphic file (type png)
 <use images/Features.png>
-Package pdftex.def Info: images/Features.png  used on input line 164.
+Package pdftex.def Info: images/Features.png  used on input line 129.
 (pdftex.def)             Requested size: 455.24408pt x 244.3383pt.
- [20 <./images/Features.png>]
-<images/SZZ.png, id=580, 1297.84875pt x 304.88907pt>
+ [17]
+<images/SZZ.png, id=542, 1297.84875pt x 304.88907pt>
 File: images/SZZ.png Graphic file (type png)
 <use images/SZZ.png>
-Package pdftex.def Info: images/SZZ.png  used on input line 175.
+Package pdftex.def Info: images/SZZ.png  used on input line 143.
 (pdftex.def)             Requested size: 455.24408pt x 106.94537pt.
+ [18 <./images/Features.png>]
+Underfull \hbox (badness 3746) in paragraph at lines 187--187
+ []| \T1/ppl/b/n/10.95 #feh-le-rein-füh-rend|
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./images/SZZ.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 205--205
+Underfull \hbox (badness 1142) in paragraph at lines 187--187
+ []| \T1/ppl/b/n/10.95 #Fea-tu-res|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 7.760|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 3.776|
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.400|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.236|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 802|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 628|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 4.269|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 2.532|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 718|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.380|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 854|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 204|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.498|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.191|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 637|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 854|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.215|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 558|
+ []
+
+
+Underfull \hbox (badness 5862) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 52|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 22|
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 9|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 324|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 88|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 200|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.078|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 929|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 230|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 151|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 211|
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 54|
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 3.109|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 3.072|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 397|
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 371|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 696|
+ []
+
+
+Underfull \hbox (badness 3590) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 1.158|
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 0|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 0|
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 187--187
+ []| \T1/ppl/m/n/10.95 137|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 [][][]\T1/ppl/m/n/9 Link zum Com-mit im Git-Repository von Vim: []$\T1/pcr/m/n/
 9 https : / / github . com / vim / vim / commit /
  []
 
-
-Overfull \hbox (6.62746pt too wide) in paragraph at lines 211--212
+[19 <./images/SZZ.png>]
+Overfull \hbox (6.62746pt too wide) in paragraph at lines 239--240
 []\T1/ppl/m/n/10.95 Commit-Nachrich: \T1/pcr/m/n/10.95 patch 8.1.1495: memory a
 ccess \T1/pcr/b/n/10.95 error\T1/pcr/m/n/10.95 . problem: memory
  []
 
 
-Overfull \hbox (12.32045pt too wide) in paragraph at lines 211--212
+Overfull \hbox (12.32045pt too wide) in paragraph at lines 239--240
 \T1/pcr/m/n/10.95 access \T1/pcr/b/n/10.95 error\T1/pcr/m/n/10.95 . solution: u
 se the correct size for clearing the popup
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--214
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
 [][][]\T1/ppl/m/n/9 Link zum Com-mit im Git-Repository von Vim: []$\T1/pcr/m/n/
 9 https : / / github . com / vim / vim / commit /
  []
 
-<images/Bug_example_real.png, id=599, 1018.55531pt x 464.4853pt>
+<images/Bug_example_real.png, id=568, 1018.55531pt x 464.4853pt>
 File: images/Bug_example_real.png Graphic file (type png)
 <use images/Bug_example_real.png>
-Package pdftex.def Info: images/Bug_example_real.png  used on input line 218.
+Package pdftex.def Info: images/Bug_example_real.png  used on input line 246.
 (pdftex.def)             Requested size: 455.24408pt x 207.60605pt.
 
-Underfull \vbox (badness 2671) has occurred while \output is active []
+Underfull \vbox (badness 1117) has occurred while \output is active []
 
- [22]
-[23 <./images/Bug_example_real.png>]
-<images/Dataset.png, id=624, 1380.65813pt x 514.92375pt>
+ [20]
+[21 <./images/Bug_example_real.png>]
+<images/Dataset.png, id=594, 1380.65813pt x 514.92375pt>
 File: images/Dataset.png Graphic file (type png)
 <use images/Dataset.png>
-Package pdftex.def Info: images/Dataset.png  used on input line 251.
+Package pdftex.def Info: images/Dataset.png  used on input line 283.
 (pdftex.def)             Requested size: 455.24408pt x 169.78392pt.
 
-Overfull \vbox (42.52875pt too high) detected at line 289
+Overfull \vbox (42.52875pt too high) detected at line 321
  []
 
 
-Overfull \hbox (2.34665pt too wide) in paragraph at lines 289--289
+Overfull \hbox (2.34665pt too wide) in paragraph at lines 321--321
 [][] 
  []
 
 
-Overfull \vbox (30.97673pt too high) detected at line 289
+Overfull \vbox (30.97673pt too high) detected at line 321
  []
 
 
-Overfull \hbox (2.34665pt too wide) in paragraph at lines 289--289
+Overfull \hbox (2.34665pt too wide) in paragraph at lines 321--321
 [][] 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 293--294
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 325--326
 [][] 
  []
 
-[24 <./images/Dataset.png>] [25] [26
+
+Underfull \vbox (badness 1033) has occurred while \output is active []
+
+ [22 <./images/Dataset.png>] [23] [24
 
 ])
 \openout2 = `content/classifier.aux'.
@@ -1501,720 +1779,971 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 293--294
  (content/classifier.tex
 Kapitel 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Overfull \hbox (4.57315pt too wide) in paragraph at lines 6--8
+\T1/ppl/m/n/10.95 Dieses Ka-pi-tel gibt einen de-tail-lier-ten Ein-blick in das
+ Trai-ning und den Test-pro-zess der Machine-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[27
+[25
 
 
 
 ]
-<images/DT.png, id=679, 416.30531pt x 386.94562pt>
+<images/DT.png, id=648, 416.30531pt x 386.94562pt>
 File: images/DT.png Graphic file (type png)
 <use images/DT.png>
-Package pdftex.def Info: images/DT.png  used on input line 47.
+Package pdftex.def Info: images/DT.png  used on input line 46.
 (pdftex.def)             Requested size: 227.62204pt x 211.56903pt.
- [28 <./images/DT.png>]
-<images/ANN.png, id=701, 596.2275pt x 514.92375pt>
+ [26 <./images/DT.png>]
+<images/ANN.png, id=671, 596.2275pt x 514.92375pt>
 File: images/ANN.png Graphic file (type png)
 <use images/ANN.png>
-Package pdftex.def Info: images/ANN.png  used on input line 65.
+Package pdftex.def Info: images/ANN.png  used on input line 64.
 (pdftex.def)             Requested size: 227.62204pt x 196.58447pt.
- [29 <./images/ANN.png>]
-<images/NB.png, id=719, 837.1275pt x 342.5297pt>
+ [27 <./images/ANN.png>]
+<images/NB.png, id=689, 837.1275pt x 342.5297pt>
 File: images/NB.png Graphic file (type png)
 <use images/NB.png>
-Package pdftex.def Info: images/NB.png  used on input line 74.
+Package pdftex.def Info: images/NB.png  used on input line 73.
 (pdftex.def)             Requested size: 273.14922pt x 111.76509pt.
- [30 <./images/NB.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 96--97
+ [28 <./images/NB.png>]
+
+LaTeX Warning: Hyper reference `dataset' on page 29 undefined on input line 92.
+
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 95--96
 [][] 
  []
 
-[31]
+[29]
+<images/accuracies_file.png, id=718, 874.76813pt x 529.98pt>
+File: images/accuracies_file.png Graphic file (type png)
+<use images/accuracies_file.png>
+Package pdftex.def Info: images/accuracies_file.png  used on input line 124.
+(pdftex.def)             Requested size: 227.62204pt x 137.90475pt.
+<images/accuracies_file_smoted.png, id=719, 875.52094pt x 517.935pt>
+File: images/accuracies_file_smoted.png Graphic file (type png)
+<use images/accuracies_file_smoted.png>
+Package pdftex.def Info: images/accuracies_file_smoted.png  used on input line 
+125.
+(pdftex.def)             Requested size: 227.62204pt x 134.65201pt.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 124.
+               Default added (so using `tbp') on input line 131.
 
-<images/smoted.png, id=749, 468.24937pt x 694.09312pt>
-File: images/smoted.png Graphic file (type png)
-<use images/smoted.png>
-Package pdftex.def Info: images/smoted.png  used on input line 126.
-(pdftex.def)             Requested size: 364.19664pt x 539.88654pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 132.
-
-<images/Vergleich1.png, id=753, 963.6pt x 542.025pt>
+<images/Vergleich1.png, id=721, 878.53218pt x 532.99126pt>
 File: images/Vergleich1.png Graphic file (type png)
 <use images/Vergleich1.png>
-Package pdftex.def Info: images/Vergleich1.png  used on input line 134.
-(pdftex.def)             Requested size: 455.24408pt x 256.07507pt.
-[32] [33 <./images/smoted.png>] [34 <./images/Vergleich1.png>] [35] [36
-
-])
+Package pdftex.def Info: images/Vergleich1.png  used on input line 133.
+(pdftex.def)             Requested size: 455.24408pt x 276.19739pt.
+[30 <./images/accuracies_file.png> <./images/accuracies_file_smoted.png>]
+[31 <./images/Vergleich1.png>] [32])
 \openout2 = `content/evaluation.aux'.
 
-
-(content/evaluation.tex
+ (content/evaluation.tex
 Kapitel 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/Confusion.png, id=788, 500.62032pt x 325.215pt>
+<images/Confusion.png, id=751, 500.62032pt x 325.215pt>
 File: images/Confusion.png Graphic file (type png)
 <use images/Confusion.png>
-Package pdftex.def Info: images/Confusion.png  used on input line 28.
+Package pdftex.def Info: images/Confusion.png  used on input line 27.
 (pdftex.def)             Requested size: 318.66946pt x 207.02531pt.
-[37
+[33
+
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--49
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
-[38 <./images/Confusion.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+[34 <./images/Confusion.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[39]
-<images/roc_ideal.png, id=819, 529.98pt x 229.85875pt>
+[35]
+<images/roc_ideal.png, id=780, 529.98pt x 229.85875pt>
 File: images/roc_ideal.png Graphic file (type png)
 <use images/roc_ideal.png>
-Package pdftex.def Info: images/roc_ideal.png  used on input line 64.
+Package pdftex.def Info: images/roc_ideal.png  used on input line 63.
 (pdftex.def)             Requested size: 227.62204pt x 98.72157pt.
-<images/roc_ideal_curve.png, id=820, 366.36874pt x 333.245pt>
+<images/roc_ideal_curve.png, id=781, 366.36874pt x 333.245pt>
 File: images/roc_ideal_curve.png Graphic file (type png)
 <use images/roc_ideal_curve.png>
-Package pdftex.def Info: images/roc_ideal_curve.png  used on input line 65.
+Package pdftex.def Info: images/roc_ideal_curve.png  used on input line 64.
 (pdftex.def)             Requested size: 113.81102pt x 103.51843pt.
-<images/roc_normal.png, id=821, 508.90125pt x 237.88875pt>
+<images/roc_normal.png, id=782, 508.90125pt x 237.88875pt>
 File: images/roc_normal.png Graphic file (type png)
 <use images/roc_normal.png>
-Package pdftex.def Info: images/roc_normal.png  used on input line 67.
+Package pdftex.def Info: images/roc_normal.png  used on input line 66.
 (pdftex.def)             Requested size: 227.62204pt x 106.40282pt.
-<images/roc_normal_curve.png, id=822, 366.36874pt x 333.245pt>
+<images/roc_normal_curve.png, id=783, 366.36874pt x 333.245pt>
 File: images/roc_normal_curve.png Graphic file (type png)
 <use images/roc_normal_curve.png>
-Package pdftex.def Info: images/roc_normal_curve.png  used on input line 68.
+Package pdftex.def Info: images/roc_normal_curve.png  used on input line 67.
 (pdftex.def)             Requested size: 113.81102pt x 103.51843pt.
-<images/roc_worst.png, id=823, 431.6125pt x 222.8325pt>
+<images/roc_worst.png, id=784, 431.6125pt x 222.8325pt>
 File: images/roc_worst.png Graphic file (type png)
 <use images/roc_worst.png>
-Package pdftex.def Info: images/roc_worst.png  used on input line 70.
+Package pdftex.def Info: images/roc_worst.png  used on input line 69.
 (pdftex.def)             Requested size: 227.62204pt x 117.51584pt.
-<images/roc_worst_curve.png, id=824, 366.36874pt x 333.245pt>
+<images/roc_worst_curve.png, id=785, 366.36874pt x 333.245pt>
 File: images/roc_worst_curve.png Graphic file (type png)
 <use images/roc_worst_curve.png>
-Package pdftex.def Info: images/roc_worst_curve.png  used on input line 71.
+Package pdftex.def Info: images/roc_worst_curve.png  used on input line 70.
 (pdftex.def)             Requested size: 113.81102pt x 103.51843pt.
-<images/roc_neg.png, id=825, 558.085pt x 216.81pt>
+<images/roc_neg.png, id=786, 558.085pt x 216.81pt>
 File: images/roc_neg.png Graphic file (type png)
 <use images/roc_neg.png>
-Package pdftex.def Info: images/roc_neg.png  used on input line 73.
+Package pdftex.def Info: images/roc_neg.png  used on input line 72.
 (pdftex.def)             Requested size: 227.62204pt x 88.4295pt.
-<images/roc_neg_curve.png, id=826, 366.36874pt x 333.245pt>
+<images/roc_neg_curve.png, id=787, 366.36874pt x 333.245pt>
 File: images/roc_neg_curve.png Graphic file (type png)
 <use images/roc_neg_curve.png>
-Package pdftex.def Info: images/roc_neg_curve.png  used on input line 74.
+Package pdftex.def Info: images/roc_neg_curve.png  used on input line 73.
 (pdftex.def)             Requested size: 113.81102pt x 103.51843pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 82--83
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 85--86
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 84--85
 [][] 
  []
 
 
-Overfull \hbox (12.62697pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 DT| 
+Underfull \hbox (badness 1838) in paragraph at lines 139--139
+ []| \T1/ppl/b/n/10.95 WE-KA| 
  []
 
 
-Overfull \hbox (23.58777pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 KNN| 
+Overfull \hbox (12.76164pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 DT|  
  []
 
 
-Overfull \hbox (13.22926pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 NB| 
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 146|
  []
 
 
-Overfull \hbox (15.6382pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 NN| 
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 388|
  []
 
 
-Overfull \hbox (12.51749pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 RC| 
+Overfull \hbox (23.72244pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 KNN|  
  []
 
 
-Overfull \hbox (10.8421pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 RF| 
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 255|
  []
 
 
-Overfull \hbox (20.01819pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 SGD| 
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 392|
  []
 
 
-Overfull \hbox (21.4527pt too wide) in paragraph at lines 136--136
- \T1/ppl/m/n/10.95 SVM| 
+Overfull \hbox (11.57909pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 LR|  
  []
 
 
-Overfull \hbox (12.03575pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 J48| 
+Underfull \hbox (badness 2556) in paragraph at lines 139--139
+ []||
  []
 
 
-Overfull \hbox (23.58777pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 KNN| 
+Underfull \hbox (badness 2556) in paragraph at lines 139--139
+ []||
  []
 
 
-Overfull \hbox (11.44441pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 LR| 
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 737|
  []
 
 
-Overfull \hbox (13.22926pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 NB| 
+Underfull \hbox (badness 2556) in paragraph at lines 139--139
+ []||
  []
 
 
-Overfull \hbox (15.6382pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 NN| 
+Overfull \hbox (13.36394pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 NB|  
  []
 
 
-Overfull \hbox (10.8421pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 RF| 
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 648|
  []
 
 
-Overfull \hbox (20.01819pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 SGD| 
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 643|
  []
 
 
-Overfull \hbox (21.4527pt too wide) in paragraph at lines 183--183
- \T1/ppl/m/n/10.95 SVM| 
+Overfull \hbox (15.77287pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 NN|  
  []
 
-<images/dt_scikit.png, id=829, 411.03563pt x 311.66437pt>
+
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 159|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 315|
+ []
+
+
+Overfull \hbox (12.65216pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 RC|  
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 139--139
+ []||
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 603|
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 139--139
+ []||
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 139--139
+ []||
+ []
+
+
+Overfull \hbox (10.97678pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 RF|  
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 213|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 195|
+ []
+
+
+Overfull \hbox (20.15286pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 SGD|  
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 613|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 720|
+ []
+
+
+Overfull \hbox (21.58737pt too wide) in paragraph at lines 139--139
+\T1/ppl/m/n/10.95 SVM|  
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 722|
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 139--139
+ []| \T1/ppl/m/n/10.95 945|
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 191--191
+ []| \T1/ppl/b/n/10.95 scikit-learn| 
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 191--191
+ []| \T1/ppl/b/n/10.95 WE-KA| 
+ []
+
+
+Overfull \hbox (12.17043pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 J48|  
+ []
+
+
+Overfull \hbox (23.72244pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 KNN|  
+ []
+
+
+Overfull \hbox (11.57909pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 LR|  
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Overfull \hbox (13.36394pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 NB|  
+ []
+
+
+Overfull \hbox (15.77287pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 NN|  
+ []
+
+
+Overfull \hbox (12.65216pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 RC|  
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 191--191
+ []||
+ []
+
+
+Overfull \hbox (10.97678pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 RF|  
+ []
+
+
+Overfull \hbox (20.15286pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 SGD|  
+ []
+
+
+Overfull \hbox (21.58737pt too wide) in paragraph at lines 191--191
+\T1/ppl/m/n/10.95 SVM|  
+ []
+
+<images/dt_scikit.png, id=790, 411.03563pt x 316.18124pt>
 File: images/dt_scikit.png Graphic file (type png)
 <use images/dt_scikit.png>
-Package pdftex.def Info: images/dt_scikit.png  used on input line 188.
-(pdftex.def)             Requested size: 113.81102pt x 86.29527pt.
-<images/j48_weka.png, id=830, 415.5525pt x 314.67563pt>
+Package pdftex.def Info: images/dt_scikit.png  used on input line 196.
+(pdftex.def)             Requested size: 113.81102pt x 87.54593pt.
+<images/j48_weka.png, id=791, 418.56375pt x 319.1925pt>
 File: images/j48_weka.png Graphic file (type png)
 <use images/j48_weka.png>
-Package pdftex.def Info: images/j48_weka.png  used on input line 189.
-(pdftex.def)             Requested size: 113.81102pt x 86.18314pt.
-<images/nn_scikit.png, id=831, 413.29407pt x 311.66437pt>
+Package pdftex.def Info: images/j48_weka.png  used on input line 197.
+(pdftex.def)             Requested size: 113.81102pt x 86.78706pt.
+<images/nn_scikit.png, id=792, 416.30531pt x 316.18124pt>
 File: images/nn_scikit.png Graphic file (type png)
 <use images/nn_scikit.png>
-Package pdftex.def Info: images/nn_scikit.png  used on input line 190.
-(pdftex.def)             Requested size: 113.81102pt x 85.82448pt.
-<images/nn_weka.png, id=832, 413.29407pt x 316.93407pt>
+Package pdftex.def Info: images/nn_scikit.png  used on input line 198.
+(pdftex.def)             Requested size: 113.81102pt x 86.4363pt.
+<images/nn_weka.png, id=793, 422.32782pt x 320.69812pt>
 File: images/nn_weka.png Graphic file (type png)
 <use images/nn_weka.png>
-Package pdftex.def Info: images/nn_weka.png  used on input line 191.
-(pdftex.def)             Requested size: 113.81102pt x 87.27562pt.
-<images/knn_scikit.png, id=833, 411.03563pt x 313.9228pt>
+Package pdftex.def Info: images/nn_weka.png  used on input line 199.
+(pdftex.def)             Requested size: 113.81102pt x 86.42326pt.
+<images/knn_scikit.png, id=794, 415.5525pt x 316.18124pt>
 File: images/knn_scikit.png Graphic file (type png)
 <use images/knn_scikit.png>
-Package pdftex.def Info: images/knn_scikit.png  used on input line 193.
-(pdftex.def)             Requested size: 113.81102pt x 86.92061pt.
-<images/knn_weka.png, id=834, 415.5525pt x 317.68687pt>
+Package pdftex.def Info: images/knn_scikit.png  used on input line 201.
+(pdftex.def)             Requested size: 113.81102pt x 86.5955pt.
+<images/knn_weka.png, id=795, 417.81094pt x 322.95656pt>
 File: images/knn_weka.png Graphic file (type png)
 <use images/knn_weka.png>
-Package pdftex.def Info: images/knn_weka.png  used on input line 194.
-(pdftex.def)             Requested size: 113.81102pt x 87.00786pt.
-<images/rf_scikit.png, id=835, 414.79968pt x 313.17pt>
+Package pdftex.def Info: images/knn_weka.png  used on input line 202.
+(pdftex.def)             Requested size: 113.81102pt x 87.97311pt.
+<images/rf_scikit.png, id=796, 416.30531pt x 318.43968pt>
 File: images/rf_scikit.png Graphic file (type png)
 <use images/rf_scikit.png>
-Package pdftex.def Info: images/rf_scikit.png  used on input line 195.
-(pdftex.def)             Requested size: 113.81102pt x 85.92369pt.
-<images/rf_weka.png, id=836, 414.04688pt x 316.18124pt>
+Package pdftex.def Info: images/rf_scikit.png  used on input line 203.
+(pdftex.def)             Requested size: 113.81102pt x 87.0537pt.
+<images/rf_weka.png, id=797, 419.31656pt x 319.94531pt>
 File: images/rf_weka.png Graphic file (type png)
 <use images/rf_weka.png>
-Package pdftex.def Info: images/rf_weka.png  used on input line 196.
-(pdftex.def)             Requested size: 113.81102pt x 86.90909pt.
-<images/rc_scikit.png, id=837, 414.04688pt x 313.17pt>
+Package pdftex.def Info: images/rf_weka.png  used on input line 204.
+(pdftex.def)             Requested size: 113.81102pt x 86.83553pt.
+<images/rc_scikit.png, id=798, 416.30531pt x 318.43968pt>
 File: images/rc_scikit.png Graphic file (type png)
 <use images/rc_scikit.png>
-Package pdftex.def Info: images/rc_scikit.png  used on input line 198.
-(pdftex.def)             Requested size: 113.81102pt x 86.08139pt.
-<images/lr_weka.png, id=838, 415.5525pt x 314.67563pt>
+Package pdftex.def Info: images/rc_scikit.png  used on input line 206.
+(pdftex.def)             Requested size: 113.81102pt x 87.0537pt.
+<images/lr_weka.png, id=799, 416.30531pt x 322.20375pt>
 File: images/lr_weka.png Graphic file (type png)
 <use images/lr_weka.png>
-Package pdftex.def Info: images/lr_weka.png  used on input line 199.
-(pdftex.def)             Requested size: 113.81102pt x 86.18314pt.
-<images/sgd_scikit.png, id=839, 412.54124pt x 312.41719pt>
+Package pdftex.def Info: images/lr_weka.png  used on input line 207.
+(pdftex.def)             Requested size: 113.81102pt x 88.0827pt.
+<images/sgd_scikit.png, id=800, 416.30531pt x 318.43968pt>
 File: images/sgd_scikit.png Graphic file (type png)
 <use images/sgd_scikit.png>
-Package pdftex.def Info: images/sgd_scikit.png  used on input line 200.
-(pdftex.def)             Requested size: 113.81102pt x 86.18909pt.
-<images/sgd_weka.png, id=840, 414.79968pt x 313.9228pt>
+Package pdftex.def Info: images/sgd_scikit.png  used on input line 208.
+(pdftex.def)             Requested size: 113.81102pt x 87.0537pt.
+<images/sgd_weka.png, id=801, 419.31656pt x 322.20375pt>
 File: images/sgd_weka.png Graphic file (type png)
 <use images/sgd_weka.png>
-Package pdftex.def Info: images/sgd_weka.png  used on input line 201.
-(pdftex.def)             Requested size: 113.81102pt x 86.13023pt.
-<images/nb_scikit.png, id=841, 413.29407pt x 314.67563pt>
+Package pdftex.def Info: images/sgd_weka.png  used on input line 209.
+(pdftex.def)             Requested size: 113.81102pt x 87.44847pt.
+<images/nb_scikit.png, id=802, 419.31656pt x 318.43968pt>
 File: images/nb_scikit.png Graphic file (type png)
 <use images/nb_scikit.png>
-Package pdftex.def Info: images/nb_scikit.png  used on input line 203.
-(pdftex.def)             Requested size: 113.81102pt x 86.6537pt.
-<images/nb_weka.png, id=842, 414.04688pt x 316.93407pt>
+Package pdftex.def Info: images/nb_scikit.png  used on input line 211.
+(pdftex.def)             Requested size: 113.81102pt x 86.42688pt.
+<images/nb_weka.png, id=803, 418.56375pt x 324.46219pt>
 File: images/nb_weka.png Graphic file (type png)
 <use images/nb_weka.png>
-Package pdftex.def Info: images/nb_weka.png  used on input line 204.
-(pdftex.def)             Requested size: 113.81102pt x 87.11603pt.
-<images/svm_scikit.png, id=843, 414.79968pt x 316.93407pt>
+Package pdftex.def Info: images/nb_weka.png  used on input line 212.
+(pdftex.def)             Requested size: 113.81102pt x 88.21986pt.
+<images/svm_scikit.png, id=804, 420.06938pt x 318.43968pt>
 File: images/svm_scikit.png Graphic file (type png)
 <use images/svm_scikit.png>
-Package pdftex.def Info: images/svm_scikit.png  used on input line 205.
-(pdftex.def)             Requested size: 113.81102pt x 86.95644pt.
-<images/svm_weka.png, id=844, 415.5525pt x 314.67563pt>
+Package pdftex.def Info: images/svm_scikit.png  used on input line 213.
+(pdftex.def)             Requested size: 113.81102pt x 86.27626pt.
+<images/svm_weka.png, id=805, 424.58624pt x 316.18124pt>
 File: images/svm_weka.png Graphic file (type png)
 <use images/svm_weka.png>
-Package pdftex.def Info: images/svm_weka.png  used on input line 206.
-(pdftex.def)             Requested size: 113.81102pt x 86.18314pt.
-<images/dt_scikit_file.png, id=845, 412.54124pt x 313.9228pt>
+Package pdftex.def Info: images/svm_weka.png  used on input line 214.
+(pdftex.def)             Requested size: 113.81102pt x 84.75253pt.
+<images/dt_scikit_file.png, id=806, 416.30531pt x 318.43968pt>
 File: images/dt_scikit_file.png Graphic file (type png)
 <use images/dt_scikit_file.png>
-Package pdftex.def Info: images/dt_scikit_file.png  used on input line 212.
-(pdftex.def)             Requested size: 113.81102pt x 86.60446pt.
-<images/j48_weka_file.png, id=846, 417.05812pt x 319.1925pt>
+Package pdftex.def Info: images/dt_scikit_file.png  used on input line 220.
+(pdftex.def)             Requested size: 113.81102pt x 87.0537pt.
+<images/j48_weka_file.png, id=807, 417.05812pt x 324.46219pt>
 File: images/j48_weka_file.png Graphic file (type png)
 <use images/j48_weka_file.png>
-Package pdftex.def Info: images/j48_weka_file.png  used on input line 213.
-(pdftex.def)             Requested size: 113.81102pt x 87.10364pt.
-<images/nn_scikit_file.png, id=847, 415.5525pt x 313.9228pt>
+Package pdftex.def Info: images/j48_weka_file.png  used on input line 221.
+(pdftex.def)             Requested size: 113.81102pt x 88.54167pt.
+<images/nn_scikit_file.png, id=808, 417.81094pt x 319.1925pt>
 File: images/nn_scikit_file.png Graphic file (type png)
 <use images/nn_scikit_file.png>
-Package pdftex.def Info: images/nn_scikit_file.png  used on input line 214.
-(pdftex.def)             Requested size: 113.81102pt x 85.97696pt.
-<images/nn_weka_file.png, id=848, 420.06938pt x 316.93407pt>
+Package pdftex.def Info: images/nn_scikit_file.png  used on input line 222.
+(pdftex.def)             Requested size: 113.81102pt x 86.94778pt.
+<images/nn_weka_file.png, id=809, 421.575pt x 322.20375pt>
 File: images/nn_weka_file.png Graphic file (type png)
 <use images/nn_weka_file.png>
-Package pdftex.def Info: images/nn_weka_file.png  used on input line 215.
-(pdftex.def)             Requested size: 113.81102pt x 85.86833pt.
-<images/knn_scikit_file.png, id=849, 414.04688pt x 315.42844pt>
+Package pdftex.def Info: images/nn_weka_file.png  used on input line 223.
+(pdftex.def)             Requested size: 113.81102pt x 86.98141pt.
+<images/knn_scikit_file.png, id=810, 417.81094pt x 318.43968pt>
 File: images/knn_scikit_file.png Graphic file (type png)
 <use images/knn_scikit_file.png>
-Package pdftex.def Info: images/knn_scikit_file.png  used on input line 217.
-(pdftex.def)             Requested size: 113.81102pt x 86.70216pt.
-<images/knn_weka_file.png, id=850, 418.56375pt x 318.43968pt>
+Package pdftex.def Info: images/knn_scikit_file.png  used on input line 225.
+(pdftex.def)             Requested size: 113.81102pt x 86.74272pt.
+<images/knn_weka_file.png, id=811, 418.56375pt x 319.94531pt>
 File: images/knn_weka_file.png Graphic file (type png)
 <use images/knn_weka_file.png>
-Package pdftex.def Info: images/knn_weka_file.png  used on input line 218.
-(pdftex.def)             Requested size: 113.81102pt x 86.58237pt.
-<images/rf_scikit_file.png, id=851, 411.03563pt x 315.42844pt>
+Package pdftex.def Info: images/knn_weka_file.png  used on input line 226.
+(pdftex.def)             Requested size: 113.81102pt x 86.99174pt.
+<images/rf_scikit_file.png, id=812, 416.30531pt x 321.45094pt>
 File: images/rf_scikit_file.png Graphic file (type png)
 <use images/rf_scikit_file.png>
-Package pdftex.def Info: images/rf_scikit_file.png  used on input line 219.
-(pdftex.def)             Requested size: 113.81102pt x 87.3375pt.
-<images/rf_weka_file.png, id=852, 417.05812pt x 319.1925pt>
+Package pdftex.def Info: images/rf_scikit_file.png  used on input line 227.
+(pdftex.def)             Requested size: 113.81102pt x 87.87689pt.
+<images/rf_weka_file.png, id=813, 420.06938pt x 319.1925pt>
 File: images/rf_weka_file.png Graphic file (type png)
 <use images/rf_weka_file.png>
-Package pdftex.def Info: images/rf_weka_file.png  used on input line 220.
-(pdftex.def)             Requested size: 113.81102pt x 87.10364pt.
-<images/rc_scikit_file.png, id=853, 414.04688pt x 314.67563pt>
+Package pdftex.def Info: images/rf_weka_file.png  used on input line 228.
+(pdftex.def)             Requested size: 113.81102pt x 86.48022pt.
+<images/rc_scikit_file.png, id=814, 417.05812pt x 316.93407pt>
 File: images/rc_scikit_file.png Graphic file (type png)
 <use images/rc_scikit_file.png>
-Package pdftex.def Info: images/rc_scikit_file.png  used on input line 222.
-(pdftex.def)             Requested size: 113.81102pt x 86.49524pt.
-<images/lr_weka_file.png, id=854, 416.30531pt x 318.43968pt>
+Package pdftex.def Info: images/rc_scikit_file.png  used on input line 230.
+(pdftex.def)             Requested size: 113.81102pt x 86.48734pt.
+<images/lr_weka_file.png, id=815, 419.31656pt x 322.95656pt>
 File: images/lr_weka_file.png Graphic file (type png)
 <use images/lr_weka_file.png>
-Package pdftex.def Info: images/lr_weka_file.png  used on input line 223.
-(pdftex.def)             Requested size: 113.81102pt x 87.0537pt.
-<images/sgd_scikit_file.png, id=855, 414.04688pt x 314.67563pt>
+Package pdftex.def Info: images/lr_weka_file.png  used on input line 231.
+(pdftex.def)             Requested size: 113.81102pt x 87.6528pt.
+<images/sgd_scikit_file.png, id=816, 417.05812pt x 316.93407pt>
 File: images/sgd_scikit_file.png Graphic file (type png)
 <use images/sgd_scikit_file.png>
-Package pdftex.def Info: images/sgd_scikit_file.png  used on input line 224.
-(pdftex.def)             Requested size: 113.81102pt x 86.49524pt.
-<images/sgd_weka_file.png, id=856, 414.04688pt x 315.42844pt>
+Package pdftex.def Info: images/sgd_scikit_file.png  used on input line 232.
+(pdftex.def)             Requested size: 113.81102pt x 86.48734pt.
+<images/sgd_weka_file.png, id=817, 421.575pt x 319.94531pt>
 File: images/sgd_weka_file.png Graphic file (type png)
 <use images/sgd_weka_file.png>
-Package pdftex.def Info: images/sgd_weka_file.png  used on input line 225.
-(pdftex.def)             Requested size: 113.81102pt x 86.70216pt.
-<images/nb_scikit_file.png, id=857, 413.29407pt x 316.93407pt>
+Package pdftex.def Info: images/sgd_weka_file.png  used on input line 233.
+(pdftex.def)             Requested size: 113.81102pt x 86.37173pt.
+<images/nb_scikit_file.png, id=818, 416.30531pt x 315.42844pt>
 File: images/nb_scikit_file.png Graphic file (type png)
 <use images/nb_scikit_file.png>
-Package pdftex.def Info: images/nb_scikit_file.png  used on input line 227.
-(pdftex.def)             Requested size: 113.81102pt x 87.27562pt.
-<images/nb_weka_file.png, id=858, 417.05812pt x 317.68687pt>
+Package pdftex.def Info: images/nb_scikit_file.png  used on input line 235.
+(pdftex.def)             Requested size: 113.81102pt x 86.23048pt.
+<images/nb_weka_file.png, id=819, 422.32782pt x 319.94531pt>
 File: images/nb_weka_file.png Graphic file (type png)
 <use images/nb_weka_file.png>
-Package pdftex.def Info: images/nb_weka_file.png  used on input line 228.
-(pdftex.def)             Requested size: 113.81102pt x 86.69276pt.
-<images/svm_scikit_file.png, id=859, 413.29407pt x 315.42844pt>
+Package pdftex.def Info: images/nb_weka_file.png  used on input line 236.
+(pdftex.def)             Requested size: 113.81102pt x 86.2204pt.
+<images/svm_scikit_file.png, id=820, 417.81094pt x 316.18124pt>
 File: images/svm_scikit_file.png Graphic file (type png)
 <use images/svm_scikit_file.png>
-Package pdftex.def Info: images/svm_scikit_file.png  used on input line 229.
-(pdftex.def)             Requested size: 113.81102pt x 86.861pt.
-<images/svm_weka_file.png, id=860, 415.5525pt x 318.43968pt>
+Package pdftex.def Info: images/svm_scikit_file.png  used on input line 237.
+(pdftex.def)             Requested size: 113.81102pt x 86.12752pt.
+<images/svm_weka_file.png, id=821, 420.82219pt x 321.45094pt>
 File: images/svm_weka_file.png Graphic file (type png)
 <use images/svm_weka_file.png>
-Package pdftex.def Info: images/svm_weka_file.png  used on input line 230.
-(pdftex.def)             Requested size: 113.81102pt x 87.21404pt.
+Package pdftex.def Info: images/svm_weka_file.png  used on input line 238.
+(pdftex.def)             Requested size: 113.81102pt x 86.93515pt.
+<images/feat_final_scikit.png, id=822, 883.80188pt x 526.96875pt>
+File: images/feat_final_scikit.png Graphic file (type png)
+<use images/feat_final_scikit.png>
+Package pdftex.def Info: images/feat_final_scikit.png  used on input line 244.
+(pdftex.def)             Requested size: 227.62204pt x 135.71405pt.
+<images/feat_final_weka.png, id=823, 878.53218pt x 518.6878pt>
+File: images/feat_final_weka.png Graphic file (type png)
+<use images/feat_final_weka.png>
+Package pdftex.def Info: images/feat_final_weka.png  used on input line 245.
+(pdftex.def)             Requested size: 227.62204pt x 134.38869pt.
+<images/file_final_scikit.png, id=824, 880.03781pt x 521.69907pt>
+File: images/file_final_scikit.png Graphic file (type png)
+<use images/file_final_scikit.png>
+Package pdftex.def Info: images/file_final_scikit.png  used on input line 251.
+(pdftex.def)             Requested size: 227.62204pt x 134.93803pt.
+<images/file_final_weka.png, id=825, 876.27374pt x 520.94624pt>
+File: images/file_final_weka.png Graphic file (type png)
+<use images/file_final_weka.png>
+Package pdftex.def Info: images/file_final_weka.png  used on input line 252.
+(pdftex.def)             Requested size: 227.62204pt x 135.31564pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 234.
-
-<images/Final_scikit.png, id=861, 475.02469pt x 693.34032pt>
-File: images/Final_scikit.png Graphic file (type png)
-<use images/Final_scikit.png>
-Package pdftex.def Info: images/Final_scikit.png  used on input line 236.
-(pdftex.def)             Requested size: 364.19664pt x 531.5991pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 240.
-
-<images/Final_weka.png, id=862, 476.53032pt x 690.32906pt>
-File: images/Final_weka.png Graphic file (type png)
-<use images/Final_weka.png>
-Package pdftex.def Info: images/Final_weka.png  used on input line 242.
-(pdftex.def)             Requested size: 364.19664pt x 527.626pt.
-
-Overfull \hbox (12.20113pt too wide) in paragraph at lines 298--298
+Overfull \hbox (12.20113pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (23.16193pt too wide) in paragraph at lines 298--298
+Overfull \hbox (23.16193pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (12.80342pt too wide) in paragraph at lines 298--298
+Overfull \hbox (12.80342pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.21236pt too wide) in paragraph at lines 298--298
+Overfull \hbox (15.21236pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (12.09164pt too wide) in paragraph at lines 298--298
+Overfull \hbox (12.09164pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 RC| 
  []
 
 
-Overfull \hbox (10.41626pt too wide) in paragraph at lines 298--298
+Overfull \hbox (10.41626pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.59235pt too wide) in paragraph at lines 298--298
+Overfull \hbox (19.59235pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (21.02686pt too wide) in paragraph at lines 298--298
+Overfull \hbox (21.02686pt too wide) in paragraph at lines 308--308
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (12.20113pt too wide) in paragraph at lines 353--353
+Overfull \hbox (12.20113pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (23.16193pt too wide) in paragraph at lines 353--353
+Overfull \hbox (23.16193pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (11.01857pt too wide) in paragraph at lines 353--353
+Overfull \hbox (11.01857pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (12.80342pt too wide) in paragraph at lines 353--353
+Overfull \hbox (12.80342pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.21236pt too wide) in paragraph at lines 353--353
+Overfull \hbox (15.21236pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.41626pt too wide) in paragraph at lines 353--353
+Overfull \hbox (10.41626pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.59235pt too wide) in paragraph at lines 353--353
+Overfull \hbox (19.59235pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (21.02686pt too wide) in paragraph at lines 353--353
+Overfull \hbox (21.02686pt too wide) in paragraph at lines 363--363
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 357--358
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 367--368
 [][] 
  []
 
 
-Overfull \hbox (5.09938pt too wide) in paragraph at lines 362--363
+Overfull \hbox (5.09938pt too wide) in paragraph at lines 372--373
 \T1/ppl/m/n/10.95 Zum bes-se-ren Ver-gleich der Er-geb-nis-se des Da-ten-sets m
 it neu-ar-ti-ger Fo-kus-sie-rung auf Software-
  []
 
-[40] [41 <./images/roc_ideal.png (PNG copy)> <./images/roc_ideal_curve.png (PNG
+[36] [37 <./images/roc_ideal.png (PNG copy)> <./images/roc_ideal_curve.png (PNG
  copy)> <./images/roc_normal.png (PNG copy)> <./images/roc_normal_curve.png (PN
 G copy)> <./images/roc_worst.png (PNG copy)> <./images/roc_worst_curve.png (PNG
  copy)> <./images/roc_neg.png (PNG copy)> <./images/roc_neg_curve.png (PNG copy
-)>] [42] [43 <./images/dt_scikit.png> <./images/j48_weka.png> <./images/nn_scik
-it.png> <./images/nn_weka.png> <./images/knn_scikit.png> <./images/knn_weka.png
-> <./images/rf_scikit.png> <./images/rf_weka.png> <./images/rc_scikit.png> <./i
-mages/lr_weka.png> <./images/sgd_scikit.png> <./images/sgd_weka.png> <./images/
-nb_scikit.png> <./images/nb_weka.png> <./images/svm_scikit.png> <./images/svm_w
-eka.png>] [44 <./images/dt_scikit_file.png> <./images/j48_weka_file.png> <./ima
-ges/nn_scikit_file.png> <./images/nn_weka_file.png> <./images/knn_scikit_file.p
-ng> <./images/knn_weka_file.png> <./images/rf_scikit_file.png> <./images/rf_wek
-a_file.png> <./images/rc_scikit_file.png> <./images/lr_weka_file.png> <./images
-/sgd_scikit_file.png> <./images/sgd_weka_file.png> <./images/nb_scikit_file.png
-> <./images/nb_weka_file.png> <./images/svm_scikit_file.png> <./images/svm_weka
-_file.png>] [45 <./images/Final_scikit.png>] [46 <./images/Final_weka.png>]
-[47] [48]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 366.
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 396--397
+)>] [38 <./images/dt_scikit.png> <./images/j48_weka.png> <./images/nn_scikit.pn
+g> <./images/nn_weka.png> <./images/knn_scikit.png> <./images/knn_weka.png> <./
+images/rf_scikit.png> <./images/rf_weka.png> <./images/rc_scikit.png> <./images
+/lr_weka.png> <./images/sgd_scikit.png> <./images/sgd_weka.png> <./images/nb_sc
+ikit.png> <./images/nb_weka.png> <./images/svm_scikit.png> <./images/svm_weka.p
+ng>] [39 <./images/dt_scikit_file.png> <./images/j48_weka_file.png> <./images/n
+n_scikit_file.png> <./images/nn_weka_file.png> <./images/knn_scikit_file.png> <
+./images/knn_weka_file.png> <./images/rf_scikit_file.png> <./images/rf_weka_fil
+e.png> <./images/rc_scikit_file.png> <./images/lr_weka_file.png> <./images/sgd_
+scikit_file.png> <./images/sgd_weka_file.png> <./images/nb_scikit_file.png> <./
+images/nb_weka_file.png> <./images/svm_scikit_file.png> <./images/svm_weka_file
+.png> <./images/feat_final_scikit.png> <./images/feat_final_weka.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 406--407
 [][] 
  []
 
 
-Overfull \hbox (12.03575pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 J48| 
+Overfull \hbox (12.03575pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 J48|  
  []
 
 
-Overfull \hbox (23.58777pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 KNN| 
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 394|
  []
 
 
-Overfull \hbox (11.44441pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 LR| 
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 258|
  []
 
 
-Overfull \hbox (13.22926pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 NB| 
+Overfull \hbox (23.58777pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 KNN|  
  []
 
 
-Overfull \hbox (15.6382pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 NN| 
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 928|
  []
 
 
-Overfull \hbox (10.8421pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 RF| 
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 242|
  []
 
 
-Overfull \hbox (20.01819pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 SGD| 
+Overfull \hbox (11.44441pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 LR|  
  []
 
 
-Overfull \hbox (21.4527pt too wide) in paragraph at lines 442--442
- \T1/ppl/m/n/10.95 SVM| 
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 785|
+ []
+
+
+Overfull \hbox (13.22926pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 NB|  
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 28|
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 698|
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 15|
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 43|
+ []
+
+
+Overfull \hbox (15.6382pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 NN|  
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 433|
+ []
+
+
+Overfull \hbox (10.8421pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 RF|  
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 342|
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 79|
+ []
+
+
+Overfull \hbox (20.01819pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 SGD|  
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 841|
+ []
+
+
+Overfull \hbox (21.4527pt too wide) in paragraph at lines 452--452
+\T1/ppl/m/n/10.95 SVM|  
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 452--452
+ []| \T1/ppl/m/n/10.95 613|
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 446.
+               Default added (so using `tbp') on input line 456.
 
-<images/Klasseval.png, id=985, 813.79031pt x 531.48563pt>
+<images/Klasseval.png, id=926, 815.29594pt x 532.23843pt>
 File: images/Klasseval.png Graphic file (type png)
 <use images/Klasseval.png>
-Package pdftex.def Info: images/Klasseval.png  used on input line 448.
-(pdftex.def)             Requested size: 455.24408pt x 297.32175pt.
-<images/j48_eval_feat.png, id=986, 414.04688pt x 313.9228pt>
+Package pdftex.def Info: images/Klasseval.png  used on input line 458.
+(pdftex.def)             Requested size: 455.24408pt x 297.19063pt.
+<images/j48_eval_feat.png, id=927, 418.56375pt x 320.69812pt>
 File: images/j48_eval_feat.png Graphic file (type png)
 <use images/j48_eval_feat.png>
-Package pdftex.def Info: images/j48_eval_feat.png  used on input line 454.
-(pdftex.def)             Requested size: 113.81102pt x 86.28831pt.
-<images/j48_eval.png, id=987, 416.30531pt x 314.67563pt>
+Package pdftex.def Info: images/j48_eval_feat.png  used on input line 464.
+(pdftex.def)             Requested size: 113.81102pt x 87.19643pt.
+<images/j48_eval.png, id=928, 414.79968pt x 319.94531pt>
 File: images/j48_eval.png Graphic file (type png)
 <use images/j48_eval.png>
-Package pdftex.def Info: images/j48_eval.png  used on input line 455.
-(pdftex.def)             Requested size: 113.81102pt x 86.02469pt.
-<images/nn_eval_feat.png, id=990, 421.575pt x 318.43968pt>
+Package pdftex.def Info: images/j48_eval.png  used on input line 465.
+(pdftex.def)             Requested size: 113.81102pt x 87.78262pt.
+<images/nn_eval_feat.png, id=931, 418.56375pt x 320.69812pt>
 File: images/nn_eval_feat.png Graphic file (type png)
 <use images/nn_eval_feat.png>
-Package pdftex.def Info: images/nn_eval_feat.png  used on input line 456.
-(pdftex.def)             Requested size: 113.81102pt x 85.96529pt.
-<images/nn_eval.png, id=991, 417.81094pt x 317.68687pt>
+Package pdftex.def Info: images/nn_eval_feat.png  used on input line 466.
+(pdftex.def)             Requested size: 113.81102pt x 87.19643pt.
+<images/nn_eval.png, id=932, 417.81094pt x 321.45094pt>
 File: images/nn_eval.png Graphic file (type png)
 <use images/nn_eval.png>
-Package pdftex.def Info: images/nn_eval.png  used on input line 457.
-(pdftex.def)             Requested size: 113.81102pt x 86.53764pt.
-<images/knn_eval_feat.png, id=994, 417.05812pt x 319.1925pt>
+Package pdftex.def Info: images/nn_eval.png  used on input line 467.
+(pdftex.def)             Requested size: 113.81102pt x 87.56299pt.
+<images/knn_eval_feat.png, id=935, 419.31656pt x 319.1925pt>
 File: images/knn_eval_feat.png Graphic file (type png)
 <use images/knn_eval_feat.png>
-Package pdftex.def Info: images/knn_eval_feat.png  used on input line 459.
-(pdftex.def)             Requested size: 113.81102pt x 87.10364pt.
-<images/knn_eval.png, id=995, 417.81094pt x 319.1925pt>
+Package pdftex.def Info: images/knn_eval_feat.png  used on input line 469.
+(pdftex.def)             Requested size: 113.81102pt x 86.6312pt.
+<images/knn_eval.png, id=936, 418.56375pt x 323.70938pt>
 File: images/knn_eval.png Graphic file (type png)
 <use images/knn_eval.png>
-Package pdftex.def Info: images/knn_eval.png  used on input line 460.
-(pdftex.def)             Requested size: 113.81102pt x 86.94778pt.
-<images/rf_eval_feat.png, id=998, 415.5525pt x 319.1925pt>
+Package pdftex.def Info: images/knn_eval.png  used on input line 470.
+(pdftex.def)             Requested size: 113.81102pt x 88.01518pt.
+<images/rf_eval_feat.png, id=939, 417.05812pt x 323.70938pt>
 File: images/rf_eval_feat.png Graphic file (type png)
 <use images/rf_eval_feat.png>
-Package pdftex.def Info: images/rf_eval_feat.png  used on input line 461.
-(pdftex.def)             Requested size: 113.81102pt x 87.42023pt.
-<images/rf_eval.png, id=999, 414.79968pt x 316.18124pt>
+Package pdftex.def Info: images/rf_eval_feat.png  used on input line 471.
+(pdftex.def)             Requested size: 113.81102pt x 88.33624pt.
+<images/rf_eval.png, id=940, 420.06938pt x 319.94531pt>
 File: images/rf_eval.png Graphic file (type png)
 <use images/rf_eval.png>
-Package pdftex.def Info: images/rf_eval.png  used on input line 462.
-(pdftex.def)             Requested size: 113.81102pt x 86.74988pt.
-<images/lr_eval_feat.png, id=1002, 417.81094pt x 317.68687pt>
+Package pdftex.def Info: images/rf_eval.png  used on input line 472.
+(pdftex.def)             Requested size: 113.81102pt x 86.68417pt.
+<images/lr_eval_feat.png, id=943, 419.31656pt x 319.1925pt>
 File: images/lr_eval_feat.png Graphic file (type png)
 <use images/lr_eval_feat.png>
-Package pdftex.def Info: images/lr_eval_feat.png  used on input line 464.
-(pdftex.def)             Requested size: 113.81102pt x 86.53764pt.
-<images/lr_eval.png, id=1003, 417.05812pt x 317.68687pt>
+Package pdftex.def Info: images/lr_eval_feat.png  used on input line 474.
+(pdftex.def)             Requested size: 113.81102pt x 86.6312pt.
+<images/lr_eval.png, id=944, 417.81094pt x 321.45094pt>
 File: images/lr_eval.png Graphic file (type png)
 <use images/lr_eval.png>
-Package pdftex.def Info: images/lr_eval.png  used on input line 465.
-(pdftex.def)             Requested size: 113.81102pt x 86.69276pt.
-<images/sgd_eval_feat.png, id=1006, 419.31656pt x 316.93407pt>
+Package pdftex.def Info: images/lr_eval.png  used on input line 475.
+(pdftex.def)             Requested size: 113.81102pt x 87.56299pt.
+<images/sgd_eval_feat.png, id=947, 417.05812pt x 316.18124pt>
 File: images/sgd_eval_feat.png Graphic file (type png)
 <use images/sgd_eval_feat.png>
-Package pdftex.def Info: images/sgd_eval_feat.png  used on input line 466.
-(pdftex.def)             Requested size: 113.81102pt x 86.01825pt.
-<images/sgd_eval.png, id=1007, 414.79968pt x 316.18124pt>
+Package pdftex.def Info: images/sgd_eval_feat.png  used on input line 476.
+(pdftex.def)             Requested size: 113.81102pt x 86.2819pt.
+<images/sgd_eval.png, id=948, 415.5525pt x 319.1925pt>
 File: images/sgd_eval.png Graphic file (type png)
 <use images/sgd_eval.png>
-Package pdftex.def Info: images/sgd_eval.png  used on input line 467.
-(pdftex.def)             Requested size: 113.81102pt x 86.74988pt.
-<images/nb_eval_feat.png, id=1010, 420.06938pt x 316.93407pt>
+Package pdftex.def Info: images/sgd_eval.png  used on input line 477.
+(pdftex.def)             Requested size: 113.81102pt x 87.42023pt.
+<images/nb_eval_feat.png, id=951, 422.32782pt x 314.67563pt>
 File: images/nb_eval_feat.png Graphic file (type png)
 <use images/nb_eval_feat.png>
-Package pdftex.def Info: images/nb_eval_feat.png  used on input line 469.
-(pdftex.def)             Requested size: 113.81102pt x 85.86833pt.
-<images/nb_eval.png, id=1011, 417.05812pt x 317.68687pt>
+Package pdftex.def Info: images/nb_eval_feat.png  used on input line 479.
+(pdftex.def)             Requested size: 113.81102pt x 84.8003pt.
+<images/nb_eval.png, id=952, 422.32782pt x 322.95656pt>
 File: images/nb_eval.png Graphic file (type png)
 <use images/nb_eval.png>
-Package pdftex.def Info: images/nb_eval.png  used on input line 470.
-(pdftex.def)             Requested size: 113.81102pt x 86.69276pt.
-<images/svm_eval_feat.png, id=1014, 417.05812pt x 318.43968pt>
+Package pdftex.def Info: images/nb_eval.png  used on input line 480.
+(pdftex.def)             Requested size: 113.81102pt x 87.03188pt.
+<images/svm_eval_feat.png, id=955, 417.05812pt x 318.43968pt>
 File: images/svm_eval_feat.png Graphic file (type png)
 <use images/svm_eval_feat.png>
-Package pdftex.def Info: images/svm_eval_feat.png  used on input line 471.
+Package pdftex.def Info: images/svm_eval_feat.png  used on input line 481.
 (pdftex.def)             Requested size: 113.81102pt x 86.89821pt.
-<images/svm_eval.png, id=1015, 418.56375pt x 316.93407pt>
+<images/svm_eval.png, id=956, 417.05812pt x 319.1925pt>
 File: images/svm_eval.png Graphic file (type png)
 <use images/svm_eval.png>
-Package pdftex.def Info: images/svm_eval.png  used on input line 472.
-(pdftex.def)             Requested size: 113.81102pt x 86.173pt.
+Package pdftex.def Info: images/svm_eval.png  used on input line 482.
+(pdftex.def)             Requested size: 113.81102pt x 87.10364pt.
 
-Overfull \hbox (11.89786pt too wide) in paragraph at lines 529--529
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[][]|\T1/ppl/m/n/10 Er-geb-nis-se der Eva-lua-ti-ons-me-tri-ken des nicht-featu
+rebasierten Ver-gleichs
+ []
+
+
+Overfull \hbox (11.89786pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (22.85866pt too wide) in paragraph at lines 529--529
+Overfull \hbox (22.85866pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (10.7153pt too wide) in paragraph at lines 529--529
+Overfull \hbox (10.7153pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (12.50015pt too wide) in paragraph at lines 529--529
+Overfull \hbox (12.50015pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (14.90909pt too wide) in paragraph at lines 529--529
+Overfull \hbox (14.90909pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.11299pt too wide) in paragraph at lines 529--529
+Overfull \hbox (10.11299pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.28908pt too wide) in paragraph at lines 529--529
+Overfull \hbox (19.28908pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.72359pt too wide) in paragraph at lines 529--529
+Overfull \hbox (20.72359pt too wide) in paragraph at lines 539--539
  \T1/ppl/m/n/10.95 SVM| 
  []
 
-[49] [50 <./images/Klasseval.png>] [51 <./images/j48_eval_feat.png> <./images/j
-48_eval.png> <./images/nn_eval_feat.png> <./images/nn_eval.png> <./images/knn_e
-val_feat.png> <./images/knn_eval.png> <./images/rf_eval_feat.png> <./images/rf_
-eval.png> <./images/lr_eval_feat.png> <./images/lr_eval.png> <./images/sgd_eval
-_feat.png> <./images/sgd_eval.png> <./images/nb_eval_feat.png> <./images/nb_eva
-l.png> <./images/svm_eval_feat.png> <./images/svm_eval.png>] [52])
+[40] [41 <./images/file_final_scikit.png> <./images/file_final_weka.png> <./ima
+ges/Klasseval.png>] [42 <./images/j48_eval_feat.png> <./images/j48_eval.png> <.
+/images/nn_eval_feat.png> <./images/nn_eval.png> <./images/knn_eval_feat.png> <
+./images/knn_eval.png> <./images/rf_eval_feat.png> <./images/rf_eval.png> <./im
+ages/lr_eval_feat.png> <./images/lr_eval.png> <./images/sgd_eval_feat.png> <./i
+mages/sgd_eval.png> <./images/nb_eval_feat.png> <./images/nb_eval.png> <./image
+s/svm_eval_feat.png> <./images/svm_eval.png>] [43] [44] [45] [46] [47] [48])
 \openout2 = `content/conclusion.aux'.
 
 
 (content/conclusion.tex
 Kapitel 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[53
+[49
 
 
 
 
-] [54
+] [50
 
 ])
 Overfull \hbox (0.1655pt too wide) in paragraph at lines 115--115
@@ -2222,7 +2751,7 @@ Overfull \hbox (0.1655pt too wide) in paragraph at lines 115--115
 algorithms -[] 934a444fca47$[]\T1/ppl/m/n/10.95 . 
  []
 
-[55
+[51
 
 
 ]
@@ -2232,163 +2761,167 @@ Overfull \hbox (0.87683pt too wide) in paragraph at lines 115--115
 95 10 . 1145 / 1370750 . 1370759$[]\T1/ppl/m/n/10.95 . 
  []
 
-[56]
+[52]
 Overfull \hbox (14.26527pt too wide) in paragraph at lines 115--115
 \T1/ppl/m/n/10.95 2019. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : []$\T1/pcr/m/
 n/10.95 https : / / towardsdatascience . com / stochastic -[] gradient -[] desc
 ent -[]
  []
 
-[57]
+[53]
 Anhang A.
-[58
+[54
 
 ]
 Anhang B.
 
-Overfull \hbox (12.0519pt too wide) in paragraph at lines 230--230
+Overfull \hbox (12.0519pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (23.0127pt too wide) in paragraph at lines 230--230
+Overfull \hbox (23.0127pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (12.65419pt too wide) in paragraph at lines 230--230
+Overfull \hbox (12.65419pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (15.06313pt too wide) in paragraph at lines 230--230
+Overfull \hbox (15.06313pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (11.94241pt too wide) in paragraph at lines 230--230
+Overfull \hbox (11.94241pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 RC| 
  []
 
 
-Overfull \hbox (10.26703pt too wide) in paragraph at lines 230--230
+Overfull \hbox (10.26703pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.44312pt too wide) in paragraph at lines 230--230
+Overfull \hbox (19.44312pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.87762pt too wide) in paragraph at lines 230--230
+Overfull \hbox (20.87762pt too wide) in paragraph at lines 236--236
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (11.89786pt too wide) in paragraph at lines 309--309
+Overfull \hbox (11.89786pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (22.85866pt too wide) in paragraph at lines 309--309
+Overfull \hbox (22.85866pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (10.7153pt too wide) in paragraph at lines 309--309
+Overfull \hbox (10.7153pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (12.50015pt too wide) in paragraph at lines 309--309
+Overfull \hbox (12.50015pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (14.90909pt too wide) in paragraph at lines 309--309
+Overfull \hbox (14.90909pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.11299pt too wide) in paragraph at lines 309--309
+Overfull \hbox (10.11299pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.28908pt too wide) in paragraph at lines 309--309
+Overfull \hbox (19.28908pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.72359pt too wide) in paragraph at lines 309--309
+Overfull \hbox (20.72359pt too wide) in paragraph at lines 315--315
  \T1/ppl/m/n/10.95 SVM| 
  []
 
 
-Overfull \hbox (11.89786pt too wide) in paragraph at lines 388--388
+Overfull \hbox (11.89786pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 DT| 
  []
 
 
-Overfull \hbox (22.85866pt too wide) in paragraph at lines 388--388
+Overfull \hbox (22.85866pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 KNN| 
  []
 
 
-Overfull \hbox (10.7153pt too wide) in paragraph at lines 388--388
+Overfull \hbox (10.7153pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 LR| 
  []
 
 
-Overfull \hbox (12.50015pt too wide) in paragraph at lines 388--388
+Overfull \hbox (12.50015pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 NB| 
  []
 
 
-Overfull \hbox (14.90909pt too wide) in paragraph at lines 388--388
+Overfull \hbox (14.90909pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 NN| 
  []
 
 
-Overfull \hbox (10.11299pt too wide) in paragraph at lines 388--388
+Overfull \hbox (10.11299pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 RF| 
  []
 
 
-Overfull \hbox (19.28908pt too wide) in paragraph at lines 388--388
+Overfull \hbox (19.28908pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 SGD| 
  []
 
 
-Overfull \hbox (20.72359pt too wide) in paragraph at lines 388--388
+Overfull \hbox (20.72359pt too wide) in paragraph at lines 394--394
  \T1/ppl/m/n/10.95 SVM| 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 391.
-[59
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+[55
 
-] [60] [61] [62]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 391.
+] [56] [57] [58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (thesis.aux (content/abstract.aux) (content/note.aux)
 (content/introduction.aux) (content/background.aux) (content/dataset.aux)
 (content/classifier.aux) (content/evaluation.aux) (content/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 391.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 391.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: EABF9BA11096FAE9EB7804C2FF916E6C;2023.
+(rerunfilecheck)             Checksum: 82A32E6656BAA64E339225EC047D4CE1;1963.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22601 strings out of 481565
- 387042 string characters out of 2914179
- 1409683 words of memory out of 3000000
- 36970 multiletter control sequences out of 15000+200000
+ 22597 strings out of 481565
+ 387502 string characters out of 2914179
+ 1421463 words of memory out of 3000000
+ 36975 multiletter control sequences out of 15000+200000
  576258 words of font info for 106 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 63i,24n,100p,2417b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,24n,100p,2484b,3182s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmex10.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
@@ -2410,9 +2943,9 @@ a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatin
 o/uplb8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
 palatino/uplr8a.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (73 pages, 2174132 bytes).
+Output written on thesis.pdf (69 pages, 2496301 bytes).
 PDF statistics:
- 1321 PDF objects out of 1440 (max. 8388607)
- 321 named destinations out of 1000 (max. 500000)
- 625 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 310 named destinations out of 1000 (max. 500000)
+ 627 words of extra memory for PDF output out of 10000 (max. 10000000)
 

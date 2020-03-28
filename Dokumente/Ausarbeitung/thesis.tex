@@ -148,12 +148,18 @@ xfig & \url{https://sourceforge.net/projects/mcj/} & \url{https://sourceforge.ne
 }
 \end{table}
 
-\chapter{Detaillierte Ergebnisse der Evaluationsmetriken}
+\chapter{Erweiterte Ergebnisse der Evaluationsmetriken}
 \label{appendix2}
+
+Die nachfolgenden Tabellen enthalten die Ergebnisse der Evaluation mit zusätzlichen Metriken. Die Metrik \glqq PRC-Area\grqq{} ist wie folgt definiert:
+\begin{itemize}
+\item PRC-Bereich (PRC-Area)
+\\Dieser Wert unterliegt der Messung der PRC (Precision-Recall-Curve), welche die Werte der Precision und des Recalls gegenüberstellt. Die Messung und Interpretation des Bereiches unter dieser Kurve erfolgt analog zum ROC-Bereich.
+\end{itemize}
 
 \begin{table}
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (scikit-learn)}
+\caption{Erweiterte Ergebnisse der Evaluationsmetriken von scikit-learn}
 \label{tab:met-scikit-extended}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.083\linewidth}>{\hspace{0pt}}p{0.164\linewidth}|>{\centering\hspace{0pt}}p{0.158\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.098\linewidth}|>{\centering\hspace{0pt}}p{0.158\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.1\linewidth}|} 
@@ -232,7 +238,7 @@ xfig & \url{https://sourceforge.net/projects/mcj/} & \url{https://sourceforge.ne
 
 \begin{table}
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (WEKA)}
+\caption{Erweiterte Ergebnisse der Evaluationsmetriken von WEKA}
 \label{tab:met-weka-extended}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.085\linewidth}>{\hspace{0pt}}p{0.168\linewidth}|>{\centering\hspace{0pt}}p{0.152\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 
@@ -311,7 +317,7 @@ xfig & \url{https://sourceforge.net/projects/mcj/} & \url{https://sourceforge.ne
 
 \begin{table}
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix}
+\caption{Erweiterte Ergebnisse der Evaluationsmetriken des nicht-featurebasierten Vergleichs}
 \label{tab:class-val-extended}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.085\linewidth}>{\hspace{0pt}}p{0.166\linewidth}|>{\centering\hspace{0pt}}p{0.152\linewidth}>{\centering\hspace{0pt}}p{0.11\linewidth}>{\centering\hspace{0pt}}p{0.098\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.114\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.106\linewidth}|} 

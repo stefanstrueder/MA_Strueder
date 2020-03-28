@@ -3,7 +3,6 @@
 \chapter{Training und Test der Machine-Learning-Klassifikatoren}
 \label{training}
 
-\paragraph{Ausblick:}
 Dieses Kapitel gibt einen detaillierten Einblick in das Training und den Testprozess der Machine-Learning-Klassifikatoren. Dazu werden zunächst die Auswahl der verwendeten Werkzeuge und der Klassifikationsalgorithmen erläutert. Anschließend findet eine Analyse der Trainings- und Testprozesse der Klassifikatoren statt. Dies umfasst außerdem die Auflistung der finalen Konfigurationen der jeweiligen Klassifikatoren.
 \\
 \hrule
@@ -16,7 +15,7 @@ Ebenfalls wird der WEKA-Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml
 
 Die Verwendung von zwei Machine-Learning-Werkzeugen ermöglicht einen Vergleich der jeweiligen Implementierungen der verwendeten Klassifikationsalgorithmen in der anschließenden Evaluation. Eine Übersicht über die ausgewählten Klassifikationsalgorithmen je Werkzeug befindet sich in \autoref{tab:classifiers}. Kurze Erläuterungen der Algorithmen befinden sich im Anschluss.
 
-\begin{table}
+\begin{table}[t]
 \centering
 \caption{Zum Training verwendete Klassifikationsalgorithmen}
 \label{tab:classifiers}
@@ -92,14 +91,14 @@ Support Vector Machines verfolgen das Ziel, eine sogenannte \glqq Hyperplane\grq
 
 Alle zuvor vorgestellten Klassifikationsalgorithmen sind bereits in den Werkzeugen scikit-learn und WEKA integriert. Sie erhalten als Eingabe das finale Datenset, dessen Erstellung im \hyperref[dataset]{vorherigen Kapitel} erläutert wurde. Die 13 berechneten Metriken bilden dabei die Attribute, wohingegen die Zielklasse durch die Label \glqq defekt\grqq{} und \glqq fehlerfrei\grqq{} abgebildet wird.
 
-\fbox{\parbox{\linewidth}{\textsc{RQ2: WELCHE MACHINE-LEARNING-KLASSIFIKATOREN KOMMEN FÜR DIE GEGEBENE AUFGABE IN FRAGE?\medskip }\\
+\fbox{\parbox{\linewidth}{RQ2: WELCHE MACHINE-LEARNING-KLASSIFIKATOREN KOMMEN FÜR DIE GEGEBENE AUFGABE IN FRAGE?\medskip\\
 Es werden neun verschiedene Klassifikationsalgorithmen zur Anwendung kommen. Sieben Algorithmen werden sowohl mit scikit-learn als auch mit WEKA verwendet (DT / J48, KNN, NB, NN, RF, SGD, SVM). Jeweils ein Algorithmus ist werkzeugspezifisch (scikit-learn: RC, WEKA: LR), jedoch unterliegen beide Algorithmen dem Konzept der Regression. Das Hauptkriterium für die Auswahl sämtlicher Algorithmen war die vorherige Verwendung im Rahmen der wissenschaftlichen Literatur \cite{Son2019}.}}
 
 \section{Analyse der Trainings- und Testprozesse}
 
 Im weiteren Verlauf dieses Abschnitts und im Rahmen der Evaluation im folgenden Kapitel, werden die Namen der Klassifikatoren auf Abbildungen und in Tabellen abgekürzt. Die Abkürzungen können \autoref{tab:abbs} entnommen werden.
 
-\begin{table}[H]
+\begin{table}[t]
 \centering
 \caption{Zuordnung der verwendeten Abkürzungen}
 \label{tab:abbs}
@@ -120,14 +119,14 @@ NN & künstliche neuronale Netze &  &  \\
 
 Die Analyse des Trainingsprozesses zeigte, dass das dateibasierte Datenset stark unbalanciert hinsichtlich der Zielklasse ist. Mit einem Wert von etwa 98\% existieren weitaus mehr Einträge, die dem Label \glqq fehlerfrei\grqq{} zugeordnet sind. Balanciertheit, also ein ausgeglichenes Verhältnis (50:50 ist im binären Fall nicht zwingend notwendig) innerhalb der Zielklassen, ist jedoch eine Voraussetzung für das korrekte Erlernen der meisten Klassifikatoren. Eine Nichtbeachtung dieses Problem kann zu einer irreführenden Accuracy (Treffergenauigkeit des Klassifikators) führen, da die meisten Datensätze korrekt der überrepräsentierten Klasse zugeordnet werden. Als Lösung dieses Problems wurde der sogenannte SMOTE-Algorithmus auf das dateibasierte Datenset angewendet \cite{Chawla2002}. Der Algorithmus, dessen Akronym für \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique steht, führt ein Oversampling der unterrepräsentierten Klasse durch \cite{Chawla2002}. Anhand von nächste-Nachbarn-Berechnungen auf Basis der Euklidischen Distanz zwischen den Attributwerten der einzelnen Datensätze des Datensets, werden neue synthetische Datensätze hinzugefügt (Oversampling), sodass sich die Anzahl der Datensätze der relevanten Klasse erhöht \cite{Chawla2002}. Im hier durchgeführten Fall wurde der Prozentsatz für die Generierung der synthetischen Datensätze auf 3000 festgelegt, sodass für jeden vorhandenen Datensatz der unterrepräsentierten Klasse 30 zusätzliche synthetische Datensätze erzeugt wurden. So konnte der Anteil der Datensätze mit dem Label \glqq fehlerhaft\grqq{} auf etwa 27\% erhöht werden. In \autoref{fig:smoted} ist dargestellt, welchen Einfluss die Anwendung des SMOTE-Algorithmus auf die Accuracies der Klassifikatoren des datenbasierten Datensets im Rahmen des Testprozesses hatte. Das mit \glqq vorher\grqq{} deklarierte Diagramm zeigt, dass nahezu alle Klassifikatoren eine Accuracy von nahezu 100\% besitzen, was das zuvor beschriebene Problem widerspiegelt und eine unrealistische Situation darstellt. Das Diagramm, welches die Testergebnisse nach Anwendung des SMOTE-Algorithmus darstellt, weist hingegen wesentlich glaubwürdigere Accuracies auf.
 
-
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/smoted}
-    \caption{Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus auf das dateibasierte Datenset\label{fig:smoted}}
+\begin{figure}
+  \centering
+  \subfloat[][vorher]{\includegraphics[width=0.5\linewidth]{images/accuracies_file}}
+  \subfloat[][nachher]{\includegraphics[width=0.5\linewidth]{images/accuracies_file_smoted}}
+  \caption{Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus auf das dateibasierte Datenset\label{fig:smoted}}
 \end{figure}
 
-Der Testprozess diente zur Erarbeitung der korrekten Konfiguration der Klassifikatoren. Dazu zählen das Festlegen von möglichen Parametern, die die Klassifikationsalgorithmen beeinflussen können, das Festlegen des optimalen Verhältnisses zwischen Training- und Testdatenset (Split-Ratio) sowie die Auswahl der effektivsten Kombination der gegebenen elf Attribute. In \autoref{fig:vergl1} ist zunächst dargestellt, welche Accuracies die jeweiligen Klassifikatoren pro Werkzeug und Datenset ohne eine angewendete Konfiguration erreichen. Gemessen wurden jeweils die Accuracies der Klassifikatoren für die Split-Ratios 85:15 (Training : Test), 80:20, 75:25, 70:30 und 65:35. Außerdem wurde für das Werkzeug WEKA die alternative Option zur Durchführung einer \glqq 10-fold-cross-validation\grqq{} berücksichtigt. Bei dieser Variante wird das Datenset in zehn gleich große Datensets aufgeteilt, welche dann jeweils mit einer Split-Ratio von 90:10 zur Anlernung eines Klassifikators dienen \cite{IanWitten}. Die Accuracy dieses Vorgangs wird anschließend als Durchschnitt der Accuracies der 10 Klassifikatoren gewertet \cite{IanWitten}. Die erwähnte Abbildung zeigt pro Klassifikator die höchste Accuracy die mithilfe der fünf Split-Ratios oder mithilfe der 10-fold-cross-validation gemessen werden konnte. 
+Der Testprozess diente zur Erarbeitung der korrekten Konfiguration der Klassifikatoren. Dazu zählen das Festlegen von möglichen Parametern, die die Klassifikationsalgorithmen beeinflussen können, das Festlegen des optimalen Verhältnisses zwischen Training- und Testdatenset (Split-Ratio) sowie die Auswahl der effektivsten Kombination der gegebenen elf Attribute. In \autoref{fig:vergl1} ist zunächst dargestellt, welche Accuracies die jeweiligen Klassifikatoren pro Werkzeug und Datenset ohne eine angewendete Konfiguration erreichen. Gemessen wurden jeweils die Accuracies der Klassifikatoren für die Split-Ratios 85:15 (Training : Test), 80:20, 75:25, 70:30 und 65:35. Die erwähnte Abbildung zeigt pro Klassifikator die höchste Accuracy die mithilfe der fünf Split-Ratios gemessen werden konnte. 
 
 \begin{figure}[]
     \centering
@@ -137,63 +136,63 @@ Der Testprozess diente zur Erarbeitung der korrekten Konfiguration der Klassifik
 
 Zur Auswahl der effektivsten Kombination der Attribute je Klassifikator wurde auf die von scikit-learn und WEKA bereitgestellten Werkzeuge zurückgegriffen. Sowohl scikit-learn als auch WEKA konnten nicht für jeden Klassifikator der beiden Datensets Kombinationen ausgeben. Dies bedingt entweder die Funktionsweise des Klassifikationsalgorithmus, die fehlende Unterstützung der Werkzeuge für einen bestimmten Klassifikator oder eine endlose Durchführung der Ermittlung der Kombination. Eine Übersicht der Konfiguration je Klassifikator des featurebasierten Datensets ist in \autoref{tab:configs_feat} dargestellt. Die Übersicht für das dateibasierte Datenset befindet sich in \autoref{tab:configs_file}.
 
-\begin{table}
+\begin{table}[t]
 \centering
 \caption{Übersicht der Konfigurationen des featurebasierten Datensets}
 \label{tab:configs_feat}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|c|l|l|} 
+\begin{tabular}{|l|l|l|} 
 \hline
-\textbf{Klassifikator}  & \multicolumn{1}{c|}{\textbf{Konfiguration scikit-learn} }                                                                                                                                                                           & \multicolumn{1}{c|}{\textbf{Konfiguration WEKA} }                                                                                                                                                     \\ 
+ \textbf{Klassifikator}  & \textbf{Konfiguration scikit-learn}                                                                                                                                                                                                       & \textbf{Konfiguration WEKA}                                                                                                                                                                          \\ 
 \hline
-DT / J48                & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}max\_features = \glqq sqrt\grqq\\Split-Ratio: 80:20\\Features: alle außer ADEV, DDEV \end{tabular}\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 10-x-v\\Features: alle außer DDEV, OEXP, \\MODD, NLOC \end{tabular}\end{tabular}        \\ 
+DT / J48                 & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}max\_features = \glqq sqrt\grqq\\Split-Ratio: 85:15\\Features: alle außer COMM, DDEV, MODD\end{tabular}\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: alle außer DDEV, OEXP, MODS, REML\end{tabular}\end{tabular}         \\ 
 \hline
-KNN                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 2\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                                             & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 10-x-v \end{tabular}\end{tabular}                                              \\ 
+KNN                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                                                   & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 65:35\end{tabular}\end{tabular}                                               \\ 
 \hline
-LR                      &                                                                                                                                                                                                                                     & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30 \end{tabular}                                                                                              \\ 
+LR                       &                                                                                                                                                                                                                                           & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 65:35\end{tabular}                                                                                              \\ 
 \hline
-NB                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Multinomial-NB\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                                    & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 10-x-v\\Features: COMM, EXP, MODD, ADDL \end{tabular}\end{tabular}                    \\ 
+NB                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Multinomial-NB\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                                          & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: COMM,ADEV, EXP, OEXP, ADDL\end{tabular}\end{tabular}                \\ 
 \hline
-NN                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}hidden\_layer\_sizes = (13,13,13)\\max\_iter = 500\\Split-Ratio: 70:30 \end{tabular}\end{tabular}                                   & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Hidden-Layer = (13,13,13)\\Split-Ratio: 85:15 \end{tabular}\end{tabular}                           \\ 
+NN                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}hidden\_layer\_sizes = (13,13,13)\\StandardScaler\\max\_iter = 500\\Split-Ratio: 85:15\end{tabular}\end{tabular}                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Hidden-Layer = (13,13,13)\\Split-Ratio: 80:20\end{tabular}\end{tabular}                           \\ 
 \hline
-RC                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}StandardScaler\\Split-Ratio: 75:25\\Features: alle außer EXP, CYCO \end{tabular}\end{tabular}                                    &                                                                                                                                                                                                       \\ 
+RC                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}StandardScaler\\Split-Ratio: 75:25\\Features: alle außer REML\end{tabular}\end{tabular}                                                &                                                                                                                                                                                                      \\ 
 \hline
-RF                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}n\_estimators = 200\\max\_features = \glqq sqrt\grqq\\Split-Ratio: 80:20\\Features: alle außer DDEV, MODD, REML \end{tabular}\end{tabular}  & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Iterationen: 200\\Split-Ratio: 10-x-v\\Features: alle außer DDEV, OEXP \end{tabular}\end{tabular}  \\ 
+RF                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}n\_estimators = 200\\max\_features = \glqq sqrt\grqq\\Split-Ratio: 75:25\\Features: alle außer COMM, DDEV, MODD, REML\end{tabular}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Iterationen: 200\\Split-Ratio: 80:20\\Features: alle außer ADEV, OEXP \end{tabular}\end{tabular}  \\ 
 \hline
-SGD                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}loss = \glqq log\grqq\\penality = \glqq elasticnet\grqq\\Split-Ratio: 85:15\\Features: EXP, OEXP \end{tabular}\end{tabular}                        & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: alle außer REML \end{tabular}\end{tabular}                           \\ 
+SGD                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}loss = „log“\\penality = „elasticnet“\\Split-Ratio: 70:30\\Features: EXP, OEXP, ADDL, REML\end{tabular}\end{tabular}                   & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: alle außer REML \end{tabular}\end{tabular}                          \\ 
 \hline
-SVM                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}LinearSVC\\max\_iter = 20000\\StandardScaler\\Split-Ratio: 75:25\\Features: alle außer DDEV, EXP, REML \end{tabular}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: alle außer REML \end{tabular}\end{tabular}                           \\
+SVM                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}LinearSVC\\max\_iter = 20000\\StandardScaler\\Split-Ratio: 65:35\\Features: alle außer DDEV, EXP, REML \end{tabular}\end{tabular}      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 65:35\\Features: alle außer REML \end{tabular}\end{tabular}                          \\
 \hline
 \end{tabular}
 }
 \end{table}
 
-\begin{table}
+\begin{table}[t]
 \centering
 \caption{Übersicht der Konfigurationen des dateibasierten Datensets}
 \label{tab:configs_file}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|c|l|l|} 
+\begin{tabular}{|l|l|l|} 
 \hline
-\textbf{Klassifikator}  & \multicolumn{1}{c|}{\textbf{Konfiguration scikit-learn} }                                                                                                                                                                   & \multicolumn{1}{c|}{\textbf{Konfiguration WEKA} }                                                                                                                            \\ 
+ \textbf{Klassifikator}  & \textbf{Konfiguration scikit-learn}                                                                                                                                                                               & \textbf{Konfiguration WEKA}                                                                                                                                                              \\ 
 \hline
-DT / J48                & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}max\_features = \glqq sqrt\grqq\\Split-Ratio: 85:15\\Features: DDEV, EXP \end{tabular}\end{tabular}                                & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 10-x-v \end{tabular}                                                                    \\ 
+DT / J48                 & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}max\_features = „sqrt“\\Split-Ratio: 75:25\\Features: ADDL\end{tabular}\end{tabular}                           & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 75:25\end{tabular}                                                                                  \\ 
 \hline
-KNN                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 10\\Split-Ratio: 10-x-v \end{tabular}\end{tabular}                    \\ 
+KNN                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 80:20\end{tabular}\end{tabular}                                                            & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}k = 1\\Split-Ratio: 85:15\end{tabular}\end{tabular}                                   \\ 
 \hline
-LR                      &                                                                                                                                                                                                                             & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 85:15 \end{tabular}                                                                     \\ 
+LR                       &                                                                                                                                                                                                                   & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 65:35\end{tabular}                                                                                  \\ 
 \hline
-NB                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Bernoulli-NB\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                                                              & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 70:30\\Features: MODS, CYCO \end{tabular}\end{tabular}       \\ 
+NB                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Bernoulli-NB\\Split-Ratio: 85:15\end{tabular}\end{tabular}                                                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 75:15\\Features: DDEV, MODD, MODS, CYCO, ADDL\end{tabular}\end{tabular}  \\ 
 \hline
-NN                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}hidden\_layer\_sizes = (13,13,13)\\max\_iter = 500\\Split-Ratio: 80:20 \end{tabular}\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Hidden-Layer = (13,13,13)\\Split-Ratio: 75:25 \end{tabular}\end{tabular}  \\ 
+NN                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}hidden\_layer\_sizes = (13,13,13)\\max\_ter = 500\\Split-Ratio: 75:25\end{tabular}\end{tabular}                & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Hidden-Layer = (13,13,13)\\Split-Ratio: 75:25 \end{tabular}\end{tabular}              \\ 
 \hline
-RC                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}StandardScaler\\Split-Ratio: 85:15\\Features: alle außer DDEV \end{tabular}\end{tabular}                                 &                                                                                                                                                                              \\ 
+RC                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}StandardScaler\\Split-Ratio: 80:20\\Features: MODD, MODS, NLOC\end{tabular}\end{tabular}                       &                                                                                                                                                                                          \\ 
 \hline
-RF                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}n\_estimators = 200\\max\_features = \glqq sqrt\grqq\\Split-Ratio: 85:15\\Features: alle außer EXP, OEXP \end{tabular}\end{tabular} & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Iterationen: 200\\Split-Ratio: 85:15 \end{tabular}\end{tabular}           \\ 
+RF                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}n\_stimators = 200\\max\_features = „sqrt“\\Split-Ratio: 80:20\end{tabular}\end{tabular}                       & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Iterationen: 200\\Split-Ratio: 85:15 \end{tabular}\end{tabular}                       \\ 
 \hline
-SGD                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}loss = \glqq log\grqq\\penality = \glqq elasticnet\grqq\\Split-Ratio: 80:20\\Features: ADDL \end{tabular}\end{tabular}                     & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 85:15 \end{tabular}                                                                     \\ 
+SGD                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}loss = „log“\\penality = „elasticnet“\\Split-Ratio: 65:35\\Features: alle außer DDEV\end{tabular}\end{tabular} & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 85:15 \end{tabular}                                                                                 \\ 
 \hline
-SVM                     & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}LinearSVC\\max\_iter = 20000\\StandardScaler\\Split-Ratio: 75:25 \end{tabular}\end{tabular}                               & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 85:15 \end{tabular}                                                                     \\
+SVM                      & \begin{tabular}[c]{@{}l@{}}\begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}LinearSVC\\max\_iter = 20000\\StandardScaler\\Split-Ratio: 65:35\end{tabular}\end{tabular}                     & \begin{tabular}{@{\labelitemi\hspace{\dimexpr\labelsep+0.5\tabcolsep}}l}Split-Ratio: 85:15 \end{tabular}                                                                                 \\
 \hline
 \end{tabular}
 }

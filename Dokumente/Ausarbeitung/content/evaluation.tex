@@ -3,7 +3,6 @@
 \chapter{Evaluation}
 \label{evaluation}
 
-\paragraph{Ausblick:}
 Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikationen. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden und auf Werten von sogenannten Konfusionsmatrizen basieren. Zudem umfasst dieses Kapitel eine Erläuterung von Herausforderungen und Limitationen, die im Laufe der Bearbeitung der Arbeit festgestellt worden sind. Abschließen wird dieses Kapitel ein Vergleich der Klassifikatoren zu einer klassischen dateibasierten Methode, welche aus der wissenschaftlichen Literatur entnommen wurde.
 \\
 \hrule
@@ -37,7 +36,7 @@ Sowohl scitkit-learn als auch WEKA besitzen die Option, Konfisionsmatrizen zu de
 \\\[Accuracy = \frac{TP+TN}{TP+TN+FP+FN}\]
 Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit die bestmögliche Accuracy dar.
 \item Echt-Positiv-Rate / Trefferquote (TP-Rate / Recall)
-\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen an \cite{Alpaydin2010}. Die Formel zur Berechnung der TP-Rate bzw. des Recalls lautet:
+\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen sämtlicher als positiv gewerteter Vorhersagen an \cite{Alpaydin2010}. Die Formel zur Berechnung der TP-Rate bzw. des Recalls lautet:
 \\\[TP-Rate = \frac{TP}{TP+FN}\]
 Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit die bestmögliche TP-Rate bzw. den bestmöglichen Recall dar. Beide Begriffe werden parallel für die Berechnung der gezeigten Formel verwendet.
 \item Positiver Vorhersagewert (Precision)
@@ -53,7 +52,7 @@ Das Ergebnis der Berechnung ist ein prozentualer Wert. 100\% stellen damit den b
 Darüber hinaus wurden die sogenannten ROC-Kurven (ROC curve) der einzelnen Klassifikatoren ermittelt. Diese Wahrscheinlichkeitskurven bzw. -graphen (ROC = Receiver Operating characteristic, Betriebsverhalten des Empfängers), beschreiben das Verhältnis zwischen der TP-Rate (y-Achse) und der FP-Rate (x-Achse) \cite{Sammut2017,Narkhede2018}. Die Falsch-Positiv-Rate (FP-Rate) gibt dabei den Anteil der fälschlicherweise als positiv gewerteten Vorhersagen an \cite{Alpaydin2010}. Sie wird mittels der folgenden Formel berechnet:
 \\\[FP-Rate = \frac{FP}{FP+TN}\]
 
-Wie bei allen Metriken ist das Ergebnis der FP-Rate ein prozentualer Wert, der bestenfalls möglichst gering ausfallen sollte. Sowohl die TP-Rate als auch die FP-Rate geben nur singuläre Werte an, aus welchen sich keine Graphen herleiten lassen. Jeder Klassifikator errechnet jedoch im Rahmen der Vorhersage eines Datensatzes Wahrscheinlichkeiten, die die Zugehörigkeit zu den Werten der Zielklasse darstellen \cite{KNIMETV2019}. In der Regel wird ein Datensatz der positiven Klasse zugeordnet, wenn die Wahrscheinlichkeit einen Schwellenwert von 0,5\% übersteigt - Datensätze, die diesen Schwellenwert unterschreiten werden wiederum der negativen Klasse zugeordnet \cite{KNIMETV2019}. Wird der Schwellenwert erhöht, so werden weniger Datensätze der positiven Klasse zugeordnet, wohingegen im Falle einer Absenkung des Schwellenwertes mehr Datensätze der positiven Klasse zugeordnet werden \cite{KNIMETV2019}. Für die Erstellung der ROC-Kurven werden somit die Werte der TP-Rate und der FP-Rate unter der Berücksichtigung der Schwellenwerte im Bereich von 0,0 bis 1,0 gegenübergestellt.
+Wie bei allen Metriken ist das Ergebnis der FP-Rate ein prozentualer Wert, der bestenfalls möglichst gering ausfallen sollte. Sowohl die TP-Rate als auch die FP-Rate geben nur singuläre Werte an, aus welchen sich keine Graphen herleiten lassen. Jeder Klassifikator errechnet jedoch im Rahmen der Vorhersage eines Datensatzes Wahrscheinlichkeiten, die die Zugehörigkeit zu den Werten der Zielklasse darstellen \cite{KNIMETV2019}. In der Regel wird ein Datenpunkt der positiven Klasse zugeordnet, wenn die Wahrscheinlichkeit einen Schwellenwert von 0,5 übersteigt - Datenpunkte, die diesen Schwellenwert unterschreiten werden wiederum der negativen Klasse zugeordnet \cite{KNIMETV2019}. Wird der Schwellenwert erhöht, so werden weniger Datenpunkte der positiven Klasse zugeordnet, wohingegen im Falle einer Absenkung des Schwellenwertes mehr Datenpunkte der positiven Klasse zugeordnet werden \cite{KNIMETV2019}. Für die Erstellung der ROC-Kurven werden somit die Werte der TP-Rate und der FP-Rate unter der Berücksichtigung der Schwellenwerte im Bereich von 0,0 bis 1,0 gegenübergestellt.
 
 Eine weitere Metrik, die in Verbindung mit der ROC-Kurve auftritt, ist der ROC-Bereich (ROC area). Dieser Wert, der anhand der ROC-Kurve berechnet wird und auch AUC-Bereich (AUC = Area Under Curve, Bereich unter der Kurve) genannt wird, gibt an, in wieweit ein Klassifikator in der Lage ist, zwischen den Werten der Zielklassen zu unterscheiden \cite{Narkhede2018}. Je höher dieser Wert ist (1,0 ist das Maximum), desto besser trifft der Klassifikator korrekte Vorhersagen \cite{Narkhede2018}.
 
@@ -78,10 +77,10 @@ Am Beispiel des Schwellenwertes 0,5 wird nun die Interpretation der ROC-Kurve un
 
 Alle vorgestellten Metriken werden automatisiert von den Werkzeugen scikit-learn und WEKA berechnet. Ferner besitzen beide Werkzeuge die Fähigkeit, ROC-Kurven mit den entsprechenden ROC-Werten auszugeben. Die im Rahmen der Evaluation der Klassifikatoren ermittelten Werte der Metriken sowie die ROC-Kurven und Werte der ROC-Bereiche werden im folgenden Abschnitt aufgeführt und gedeutet.
 
-\fbox{\parbox{\linewidth}{\textsc{RQ3a: WELCHE MITEINANDER VERGLEICHBAREN MERKMALE BESITZEN DIE KLASSIFIKATOREN?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ3a: WELCHE MITEINANDER VERGLEICHBAREN MERKMALE BESITZEN DIE KLASSIFIKATOREN?\medskip\\
 Die Merkmale zum Vergleich stellen Evaluationsmetriken dar, welche anhand der Ergebnisse des Tests der Klassifikatoren errechnet werden und die Performanz der Vorhersagen auf verschiedene Weisen messen. Welche Metriken berechnet berechnet wurden beantwortet Forschungsfrage RQ3b.}}
 
-\fbox{\parbox{\linewidth}{\textsc{RQ3b: WELCHE METRIKEN KÖNNEN FÜR DEN VERGLEICH VERWENDET WERDEN?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ3b: WELCHE METRIKEN KÖNNEN FÜR DEN VERGLEICH VERWENDET WERDEN?\medskip\\
 Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken verwendet, welche auf Basis der Konfusionsmatrizen berechnet werden. Ebenfalls hinzugezogen werden die jeweiligen ROC-Kurven der Klassifikatoren mit ihren ROC-Bereichen. Diese Metriken stellen einen Standard für die Messung von Klassifikatoren dar.}}
 
 \subsection{Ergebnisse und Diskussion}
@@ -89,95 +88,104 @@ Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken ver
 
 Dieser Abschnitt dient zur Präsentation der Ergebnisse der Evaluation der Klassifikatoren anhand der zuvor vorgestellten Evaluationsmetriken. Ferner werden die vorgestellten Ergebnisse innerhalb und zwischen der Datensets verglichen und interpretiert. 
 
-\begin{table}
+\begin{table}[t]
 \centering
-\caption{Konfusionsmatrizen (scikit-learn)}
+\caption{Konfusionsmatrizen des featurebasierten Datensets}
 \label{tab:mat-scikit}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.075\linewidth}>{\hspace{0pt}}p{0.23\linewidth}|>{\centering\hspace{0pt}}p{0.143\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}>{\centering\hspace{0pt}}p{0.079\linewidth}|>{\centering\hspace{0pt}}p{0.145\linewidth}>{\centering\hspace{0pt}}p{0.102\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.095\linewidth}|} 
+\begin{tabular}{|>{\hspace{0pt}}p{0.073\linewidth}>{\hspace{0pt}}p{0.258\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.141\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.098\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.085\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.143\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.1\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.087\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.075\linewidth}}{} &  & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.322\linewidth}|}{\textbf{Feat-Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.341\linewidth}|}{\textbf{File-Datenset} } \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.073\linewidth}}{}            &                                    & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.324\linewidth}|}{\textbf{scikit-learn} } & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.329\linewidth}|}{\textbf{WEKA} }  \\ 
 \cline{2-8}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.075\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}  & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}  \\ 
+\multicolumn{1}{>{\Centering\hspace{0pt}}p{0.073\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                              & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                       \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}DT} & Realität fehlerfrei & 2221 & 185 & 2406 & 13009 & 138 & 13147 \\
- & Realität defekt & 224 & 388 & 612 & 726 & 4169 & 4895 \\
- & Total & 2445 & 573 & 3018 & 13735 & 4307 & 18042 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}DT}                   & Realität fehlerfrei                & 1.627                & 122              & 1.749                                       & 3.285                & 188              & 3.473                                \\
+                                                                & Realität defekt                    & 146                  & 268              & 414                                         & 388                  & 463              & 851                                  \\
+                                                                & Total                              & 1.773                & 390              & 2.163                                       & 3.673                & 651              & 4.324                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}KNN} & Realität fehlerfrei & 2952 & 110 & 3062 & 20398 & 1592 & 21990 \\
- & Realität defekt & 394 & 317 & 711 & 1125 & 6954 & 8079 \\
- & Total & 3346 & 427 & 3773 & 21523 & 8546 & 30069 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}KNN}                  & Realität fehlerfrei                & 2.691                & 241              & 2.932                                       & 3.781                & 276              & 4.057                                \\
+                                                                & Realität defekt                    & 255                  & 417              & 672                                         & 392                  & 596              & 988                                  \\
+                                                                & Total                              & 2.946                & 658              & 3.604                                       & 4.173                & 875              & 5.045                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NB} & Realität fehlerfrei & 2489 & 533 & 3022 & 14618 & 7395 & 22013 \\
- & Realität defekt & 695 & 56 & 751 & 2426 & 5630 & 8056 \\
- & Total & 3184 & 589 & 3773 & 17044 & 13025 & 30069 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}LR}                   & Realität fehlerfrei~ ~~            &                      &                  &                                             & 3.993                & 64               & 4.057                                \\
+                                                                & Realität defekt                    &                      &                  &                                             & 737                  & 251              & 988                                  \\
+                                                                & Total                              &                      &                  &                                             & 4.730                & 315              & 5.045                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NN} & Realität fehlerfrei & 4689 & 168 & 4857 & 16959 & 693 & 17652 \\
- & Realität defekt & 480 & 481 & 961 & 1752 & 4652 & 6404 \\
- & Total & 5169 & 649 & 5818 & 18711 & 5345 & 24056 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}NB}                   & Realität fehlerfrei                & 2.301                & 608              & 2.909                                       & 3.411                & 62               & 3.473                                \\
+                                                                & Realität defekt                    & 648                  & 47               & 695                                         & 643                  & 208              & 851                                  \\
+                                                                & Total                              & 2.949                & 655              & 3.604                                       & 4.054                & 270              & 4.324                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}RC} & Realität fehlerfrei & 3036 & 17 & 3053 & 13073 & 102 & 13175 \\
- & Realität defekt & 637 & 83 & 720 & 4705 & 102 & 4807 \\
- & Total & 3673 & 100 & 3772 & 17778 & 204 & 17982 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}NN}                   & Realität fehlerfrei                & 1.692                & 99               & 1.791                                       & 2.175                & 120              & 2.395                                \\
+                                                                & Realität defekt                    & 159                  & 213              & 372                                         & 315                  & 273              & 588                                  \\
+                                                                & Total                              & 1.851                & 312              & 2.163                                       & 2.490                & 393              & 2.883                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}RF} & Realität fehlerfrei & 2372 & 69 & 2441 & 13296 & 70 & 13366 \\
- & Realität defekt & 165 & 412 & 577 & 188 & 4488 & 4676 \\
- & Total & 2357 & 481 & 3018 & 13484 & 4558 & 18042 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}RC}                   & Realität fehlerfrei                & 2.926                & 8                & 2.934                                       &                      &                  &                                      \\
+                                                                & Realität defekt                    & 603                  & 67               & 670                                         &                      &                  &                                      \\
+                                                                & Total                              & 3.529                & 75               & 3.604                                       &                      &                  &                                      \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SGD} & Realität fehlerfrei & 1792 & 41 & 1833 & 7291 & 10296 & 17587 \\
- & Realität defekt & 356 & 75 & 431 & 717 & 5752 & 6469 \\
- & Total & 1833 & 116 & 2264 & 8008 & 16048 & 24056 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}RF}                   & Realität fehlerfrei                & 2.851                & 99               & 2.950                                       & 2.234                & 61               & 2.295                                \\
+                                                                & Realität defekt                    & 213                  & 441              & 654                                         & 195                  & 393              & 588                                  \\
+                                                                & Total                              & 3.064                & 540              & 3.604                                       & 2.429                & 454              & 2.883                                \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SVM} & Realität fehlerfrei & 2996 & 45 & 3041 & 21948 & 210 & 22158 \\
- & Realität defekt & 541 & 191 & 732 & 7704 & 207 & 7911 \\
- & Total & 3537 & 236 & 3773 & 29652 & 417 & 30069 \\
+\multirow{3}{0.073\linewidth}{\hspace{0pt}SGD}                  & Realität fehlerfrei                & 3.336                & 191              & 3.527                                       & 3.453                & 20               & 3.473                                \\
+                                                                & Realität defekt                    & 613                  & 185              & 798                                         & 720                  & 131              & 851                                  \\
+                                                                & Total                              & 3.949                & 376              & 4.325                                       & 4.173                & 151              & 4.324                                \\ 
+\hline
+\multirow{3}{0.073\linewidth}{\hspace{0pt}SVM}                  & Realität fehlerfrei                & 4.039                & 58               & 4.097                                       & 4.055                & 2                & 4.057                                \\
+                                                                & Realität defekt                    & 722                  & 226              & 948                                         & 945                  & 43               & 988                                  \\
+                                                                & Total                              & 4.761                & 284              & 5.045                                            & 5.000                & 45               & 5.045                                \\
 \hline
 \end{tabular}
 }
 \end{table}
 
-\begin{table}
+
+\begin{table}[t]
 \centering
-\caption{Konfusionsmatrizen (WEKA)}
+\caption{Konfusionsmatrizen des dateibasierten Datensets}
 \label{tab:mat-weka}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.075\linewidth}>{\hspace{0pt}}p{0.225\linewidth}|>{\centering\hspace{0pt}}p{0.141\linewidth}>{\centering\hspace{0pt}}p{0.098\linewidth}>{\centering\hspace{0pt}}p{0.091\linewidth}|>{\centering\hspace{0pt}}p{0.143\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.112\linewidth}|} 
+\begin{tabular}{|>{\hspace{0pt}}p{0.073\linewidth}>{\hspace{0pt}}p{0.241\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.139\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.096\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.098\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.139\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.098\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.1\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.075\linewidth}}{} &  & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.329\linewidth}|}{\textbf{Feat-Datenset} } & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.355\linewidth}|}{\textbf{File-Datenset} } \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.073\linewidth}}{}            &                                      & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.333\linewidth}|}{\textbf{scikit-learn} }                                                                                                                                                                & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.337\linewidth}|}{\textbf{WEKA} }                                                                                                                                                                       \\ 
 \cline{2-8}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.075\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}  & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}  \\ 
+\multicolumn{1}{>{\Centering\hspace{0pt}}p{0.073\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}}   & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.139\linewidth}}{\textbf{Fehlerfrei} } & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.096\linewidth}}{\textbf{Defekt} } & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.098\linewidth}|}{\textbf{Total} } & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.139\linewidth}}{\textbf{Fehlerfrei} } & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.098\linewidth}}{\textbf{Defekt} } & \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.1\linewidth}|}{\textbf{Total} }  \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}J48} & Realität fehlerfrei & 11569 & 580 & 12149 & 86805 & 1231 & 88036 \\
- & Realität defekt & 1094 & 1848 & 2942 & 1745 & 30495 & 32240 \\
- & Total & 12663 & 2428 & 15091 & 88550 & 31726 & 120276 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}J48}                  & Realität fehlerfrei                  & 21.704                                                                             & 121                                                                            & 21.825                                                                         & 21.320                                                                             & 464                                                                            & 21.784                                                                        \\
+                                                                & Realität defekt                      & 1.905                                                                              & 12.782                                                                         & 14.687                                                                         & 693                                                                                & 14.034                                                                         & 14.727                                                                        \\
+                                                                & Total                                & 23.609                                                                             & 12.903                                                                         & 36.512                                                                         & 22.013                                                                             & 14.498                                                                         & 36.511                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}KNN} & Realität fehlerfrei & 11284 & 865 & 12149 & 84426 & 3610 & 88036 \\
- & Realität defekt & 1024 & 1917 & 2941 & 5163 & 27077 & 32240 \\
- & Total & 12308 & 2782 & 15087 & 89589 & 30687 & 120276 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}KNN}                  & Realität fehlerfrei                  & 15.519                                                                             & 1.853                                                                          & 17.372                                                                         & 12.090                                                                             & 1.026                                                                          & 13.116                                                                        \\
+                                                                & Realität defekt                      & 1.026                                                                              & 10.812                                                                         & 11.838                                                                         & 1.137                                                                              & 7.654                                                                          & 8.791                                                                         \\
+                                                                & Total                                & 16.545                                                                             & 12.665                                                                         & 29.210                                                                         & 13.227                                                                             & 8.680                                                                          & 21.907                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}LR} & Realität fehlerfrei & 3554 & 103 & 3657 & 13081 & 157 & 13238 \\
- & Realität defekt & 571 & 299 & 870 & 4625 & 178 & 4803 \\
- & Total & 4125 & 402 & 4527 & 17706 & 335 & 18041 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}LR}                   & Realität fehlerfrei                  &                                                                                    &                                                                                &                                                                                & 28.023                                                                             & 2.570                                                                          & 30.593                                                                        \\
+                                                                & Realität defekt                      &                                                                                    &                                                                                &                                                                                & 15.542                                                                             & 4.981                                                                          & 20.523                                                                        \\
+                                                                & Total                                &                                                                                    &                                                                                &                                                                                & 43.565                                                                             & 7.551                                                                          & 51.116                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NB} & Realität fehlerfrei & 11806 & 343 & 12149 & 25807 & 534 & 26341 \\
- & Realität defekt & 1978 & 963 & 2941 & 8993 & 749 & 9742 \\
- & Total & 13784 & 1306 & 15090 & 34800 & 1283 & 36083 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}NB}                   & Realität fehlerfrei                  & 8.667                                                                              & 4.368                                                                          & 13.035                                                                         & 18.982                                                                             & 2.802                                                                          & 21.784                                                                        \\
+                                                                & Realität defekt                      & 3.212                                                                              & 5.660                                                                          & 8.872                                                                          & 10.369                                                                             & 4.358                                                                          & 14.727                                                                        \\
+                                                                & Total                                & 11.879                                                                             & 10.028                                                                         & 21.907                                                                         & 29.351                                                                             & 7.160                                                                          & 36.511                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NN} & Realität fehlerfrei & 1671 & 120 & 1791 & 21981 & 0 & 21981 \\
- & Realität defekt & 194 & 278 & 472 & 8088 & 0 & 8088 \\
- & Total & 1865 & 398 & 2263 & 30069 & 0 & 30069 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}NN}                   & Realität fehlerfrei                  & 20.904                                                                             & 744                                                                            & 21.648                                                                         & 18.754                                                                             & 3.030                                                                          & 21.784                                                                        \\
+                                                                & Realität defekt                      & 3.522                                                                              & 11.342                                                                         & 14.864                                                                         & 8.619                                                                              & 6.108                                                                          & 14.727                                                                        \\
+                                                                & Total                                & 24.426                                                                             & 12.086                                                                         & 36.512                                                                         & 27.373                                                                             & 9.138                                                                          & 36.511                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}RF} & Realität fehlerfrei & 11741 & 408 & 12149 & 13161 & 77 & 13238 \\
- & Realität defekt & 865 & 2076 & 2941 & 174 & 4629 & 4803 \\
- & Total & 12606 & 2484 & 15090 & 13335 & 4706 & 19841 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}RC}                   & Realität fehlerfrei\textasciitilde{} & 15.874                                                                             & 1.438                                                                          & 17.312                                                                         &                                                                                    &                                                                                &                                                                               \\
+                                                                & Realität defekt                      & 9.152                                                                              & 2.746                                                                          & 11.898                                                                         &                                                                                    &                                                                                &                                                                               \\
+                                                                & Total                                & 25.026                                                                             & 4.184                                                                          & 29.210                                                                         &                                                                                    &                                                                                &                                                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SGD} & Realität fehlerfrei & 3623 & 34 & 3657 & 13237 & 1 & 13238 \\
- & Realität defekt & 686 & 184 & 870 & 4803 & 0 & 4803 \\
- & Total & 4319 & 218 & 4537 & 18040 & 1 & 18041 \\ 
+\multirow{3}{0.073\linewidth}{\hspace{0pt}RF}                   & Realität fehlerfrei                  & 17.189                                                                             & 212                                                                            & 17.401                                                                         & 12.990                                                                             & 126                                                                            & 13.116                                                                        \\
+                                                                & Realität defekt                      & 374                                                                                & 11.435                                                                         & 11.809                                                                         & 275                                                                                & 8.516                                                                          & 8.791                                                                         \\
+                                                                & Total                                & 17.563                                                                             & 11.647                                                                         & 29.210                                                                         & 13.265                                                                             & 8.642                                                                          & 21.907                                                                        \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SVM} & Realität fehlerfrei & 3652 & 5 & 3657 & 13238 & 0 & 13238 \\
- & Realität defekt & 801 & 69 & 870 & 4803 & 0 & 4803 \\
- & Total & 4453 & 74 & 7427 & 18041 & 0 & 18041 \\
+\multirow{3}{0.073\linewidth}{\hspace{0pt}SGD}                  & Realität fehlerfrei                  & 20.600                                                                             & 10.037                                                                         & 30.637                                                                         & 12.698                                                                             & 418                                                                            & 13.116                                                                        \\
+                                                                & Realität defekt                      & 11.187                                                                             & 9.293                                                                          & 20.480                                                                         & 7.760                                                                              & 1.031                                                                          & 8.791                                                                         \\
+                                                                & Total                                & 31.787                                                                             & 19.330                                                                         & 51.117                                                                         & 20.458                                                                             & 1.449                                                                          & 21.907                                                                        \\ 
+\hline
+\multirow{3}{0.073\linewidth}{\hspace{0pt}SVM}                  & Realität fehlerfrei                  & 28.190                                                                             & 2.237                                                                          & 30.427                                                                         & 12.679                                                                             & 437                                                                            & 13.116                                                                        \\
+                                                                & Realität defekt                      & 16.479                                                                             & 4.211                                                                          & 20.690                                                                         & 7.816                                                                              & 975                                                                            & 8.791                                                                         \\
+                                                                & Total                                & 44.669                                                                             & 6.448                                                                          & 51.117                                                                         & 20.495                                                                             & 1.412                                                                          & 21.907                                                                        \\
 \hline
 \end{tabular}
 }
@@ -231,21 +239,23 @@ Dieser Abschnitt dient zur Präsentation der Ergebnisse der Evaluation der Klass
   \caption{ROC-Kurven der Klassifikatoren des dateibasierten Datensets}
 \end{figure}
 
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/Final_scikit}
-    \caption{Vergleich der Accuracies zwischen den Datensets der scikit-Klassifikatoren\label{fig:final-scikit}}
+\begin{figure}
+  \centering
+  \subfloat[][scikit]{\includegraphics[width=0.5\linewidth]{images/feat_final_scikit}}
+  \subfloat[][WEKA]{\includegraphics[width=0.5\linewidth]{images/feat_final_weka}}
+  \caption{Vergleich der Accuracies der featurebasierten Klassifikatoren von scikit-learn und WEKA\label{fig:final-feat}}
 \end{figure}
 
-\begin{figure}[]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/Final_weka}
-    \caption{Vergleich der Accuracies zwischen den Werkzeugen der WEKA-Klassifikatoren\label{fig:final-weka}}
+\begin{figure}
+  \centering
+  \subfloat[][scikit]{\includegraphics[width=0.5\linewidth]{images/file_final_scikit}}
+  \subfloat[][WEKA]{\includegraphics[width=0.5\linewidth]{images/file_final_weka}}
+  \caption{Vergleich der Accuracies der dateibasierten Klassifikatoren von scikit-learn und WEKA\label{fig:final-file}}
 \end{figure}
 
-\begin{table}
+\begin{table}[t]
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (scikit-learn)}
+\caption{Ergebnisse der Evaluationsmetriken von scikit-learn (\textbf{ÜBERARBEITEN})}
 \label{tab:met-scikit}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.081\linewidth}>{\hspace{0pt}}p{0.158\linewidth}|>{\centering\hspace{0pt}}p{0.166\linewidth}>{\centering\hspace{0pt}}p{0.116\linewidth}>{\centering\hspace{0pt}}p{0.104\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.098\linewidth}|} 
@@ -298,9 +308,9 @@ Dieser Abschnitt dient zur Präsentation der Ergebnisse der Evaluation der Klass
 }
 \end{table}
 
-\begin{table}
+\begin{table}[t]
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix (WEKA)}
+\caption{Ergebnisse der Evaluationsmetriken von WEKA (\textbf{ÜBERARBEITEN})}
 \label{tab:met-weka}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.081\linewidth}>{\hspace{0pt}}p{0.158\linewidth}|>{\centering\hspace{0pt}}p{0.16\linewidth}>{\centering\hspace{0pt}}p{0.118\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}|>{\centering\hspace{0pt}}p{0.15\linewidth}>{\centering\hspace{0pt}}p{0.108\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 
@@ -353,7 +363,7 @@ Dieser Abschnitt dient zur Präsentation der Ergebnisse der Evaluation der Klass
 }
 \end{table}
 
-\fbox{\parbox{\linewidth}{\textsc{RQ3c: WELCHE VOR- UND NACHTEILE BESITZT EIN KLASSIFIKATOR?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ3c: WELCHE VOR- UND NACHTEILE BESITZT EIN KLASSIFIKATOR?\medskip\\
 Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile steht sondern in mindestens zwei oder mehr Zeilen, denn andernfalls werden wir nicht sehen können ob der Rahmen nur um die erste Zeile geht, oder wie wir wollen sich um den ganzen Absatz zieht.}}
 
 \section{Vergleich zu nicht-featurebasierten Methoden}
@@ -363,7 +373,7 @@ Zum besseren Vergleich der Ergebnisse des Datensets mit neuartiger Fokussierung 
 
 Zur besseren Vergleichbarkeit dieses Ansatzes, wurden die Metriken für ein weiteres Datenset unter Berücksichtigung des Feature-Aspekts berechnet. Dieses Datenset basiert ebenfalls aus den mit PyDriller erhaltenen Rohdaten und beinhaltet nur jede Dateien, in welchen ein Feature entfernt, hinzugefügt oder verändert wurde. Im weiteren Verlauf des Abschnitts wird dieses Datenset als \glqq vorhandenes Datenset\grqq{} bezeichnet.
 
-\begin{table}[]
+\begin{table}[t]
 \centering
 \caption{Übersicht der berechneten Metriken nach \cite{Moser2008}}
 \label{tab:eval-metrics}
@@ -392,51 +402,51 @@ WEIGHTED\_AGE     & wage               & $Weighted Age = \frac{\sum_{i=1}^N Age(
 }
 \end{table}
 
-\fbox{\parbox{\linewidth}{\textsc{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip\\
 Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der wissenschaftlichen Literatur zurückgegriffen \cite{Moser2008}. Dieses Datenset basiert auf den mittels PyDriller abgerufenen Daten und umfasst 17 Attribute. Zum besseren Vergleich wurde ein weiteres Datenset erstellt, welches nur jene Dateien umfasst, in denen sich Featurecode befindet.}}
 
 \begin{table}
 \centering
-\caption{Konfusionsmatrizen der Evaluation der Klassifikatoren des klassischen Datensets}
+\caption{Konfusionsmatrizen des nicht-featurebasierten Vergleichs}
 \label{tab:class-mat}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\centering\hspace{0pt}}p{0.075\linewidth}>{\hspace{0pt}}p{0.229\linewidth}|>{\centering\hspace{0pt}}p{0.143\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}>{\centering\hspace{0pt}}p{0.079\linewidth}|>{\centering\hspace{0pt}}p{0.145\linewidth}>{\centering\hspace{0pt}}p{0.102\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.112\linewidth}|} 
+\begin{tabular}{|>{\hspace{0pt}}p{0.075\linewidth}>{\hspace{0pt}}p{0.229\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.145\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.1\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.1\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.145\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.102\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.089\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.075\linewidth}}{}            &                                    & \multicolumn{3}{>{\centering\hspace{0pt}}p{0.322\linewidth}|}{\textbf{vorhandenes Datenset}} & \multicolumn{3}{>{\centering\arraybackslash\hspace{0pt}}p{0.359\linewidth}|}{\textbf{Datenset nach \cite{Moser2008}}}  \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.075\linewidth}}{}            &                                    & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.345\linewidth}|}{\textbf{Datenset nach \cite{Moser2008}}} & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.335\linewidth}|}{\textbf{vorhandenes Datenset}}  \\ 
 \cline{2-8}
-\multicolumn{1}{>{\centering\hspace{0pt}}p{0.075\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                                     & \textbf{Fehlerfrei} & \textbf{Defekt} & \textbf{Total}                                                       \\ 
+\multicolumn{1}{>{\Centering\hspace{0pt}}p{0.075\linewidth}|}{} & \textbf{Ermittelt -\textgreater{}} & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                              & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{Total}                                      \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}J48}      & Realität fehlerfrei                & 7085                 & 345              & 7430                                               & 86965               & 1071            & 88036                                                                \\
-                                                                & Realität defekt                    & 723                  & 1325             & 2048                                               & 1691                & 30549           & 32240                                                                \\
-                                                                & Total                              & 7808                 & 1670             & 9478                                               & 88656               & 31620           & 120276                                                               \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}J48}                  & Realität fehlerfrei                & 12.845               & 233              & 13.078                                      & 2.378                & 191              & 2.569                                               \\
+                                                                & Realität defekt                    & 394                  & 5.586            & 5.980                                       & 258                  & 597              & 855                                                 \\
+                                                                & Total                              & 13.239               & 5.819            & 19.058                                      & 2.636                & 788              & 3.424                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}KNN}      & Realität fehlerfrei                & 6946                 & 484              & 7430                                               & 86121               & 1915            & 88036                                                                \\
-                                                                & Realität defekt                    & 850                  & 1198             & 2048                                               & 3867                & 28373           & 32240                                                                \\
-                                                                & Total                              & 7796                 & 1682             & 9478                                               & 89988               & 30288           & 120276                                                               \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}KNN}                  & Realität fehlerfrei                & 12.565               & 513              & 13.078                                      & 1.679                & 154              & 1.833                                               \\
+                                                                & Realität defekt                    & 928                  & 5.052            & 5.980                                       & 242                  & 371              & 613                                                 \\
+                                                                & Total                              & 13.493               & 5.565            & 19.058                                      & 1.921                & 525              & 2.446                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}LR}       & Realität fehlerfrei                & 7349                 & 81               & 7430                                               & 13094               & 134             & 13228                                                                \\
-                                                                & Realität defekt                    & 1946                 & 102              & 2048                                               & 4676                & 137             & 4813                                                                 \\
-                                                                & Total                              & 9295                 & 183              & 9478                                               & 17770               & 271             & 18041                                                                \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}LR}                   & Realität fehlerfrei                & 12.495               & 583              & 13.078                                      & 2.531                & 38               & 2.569                                               \\
+                                                                & Realität defekt                    & 4.934                & 1.046            & 5.980                                       & 785                  & 70               & 855                                                 \\
+                                                                & Total                              & 17.429               & 1.629            & 19.058                                      & 3.316                & 108              & 3.424                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NB}       & Realität fehlerfrei                & 65                   & 1770             & 1835                                               & 7232                & 19102           & 26334                                                                \\
-                                                                & Realität defekt                    & 24                   & 510              & 534                                                & 527                 & 9222            & 9749                                                                 \\
-                                                                & Total                              & 89                   & 2280             & 2369                                               & 7759                & 28324           & 36083                                                                \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}NB}                   & Realität fehlerfrei                & 6.224                & 15.485           & 21.709                                      & 28                   & 1.059            & 1.087                                               \\
+                                                                & Realität defekt                    & 698                  & 9.356            & 10.054                                      & 15                   & 366              & 381                                                 \\
+                                                                & Total                              & 6.922                & 24.841           & 31.763                                      & 43                   & 1.425            & 1.468                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}NN}       & Realität fehlerfrei                & 1110                 & 4                & 1114                                               & 30607               & 153             & 30760                                                                \\
-                                                                & Realität defekt                    & 204                  & 104              & 308                                                & 7646                & 3691            & 11337                                                                \\
-                                                                & Total                              & 1314                 & 108              & 1422                                               & 38253               & 3844            & 42097                                                                \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}NN}                   & Realität fehlerfrei                & 17.364               & 43               & 17.408                                      & 2.099                & 96               & 2.195                                               \\
+                                                                & Realität defekt                    & 3.939                & 4.065            & 8.004                                       & 433                  & 307              & 740                                                 \\
+                                                                & Total                              & 21.303               & 4.108            & 25.411                                      & 2.532                & 403              & 2.935                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}RF}       & Realität fehlerfrei                & 7314                 & 116              & 7430                                               & 87694               & 342             & 88036                                                                \\
-                                                                & Realität defekt                    & 583                  & 1465             & 2048                                               & 936                 & 31277           & 32213                                                                \\
-                                                                & Total                              & 7897                 & 1581             & 9478                                               & 88630               & 31619           & 120249                                                               \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}RF}                   & Realität fehlerfrei                & 17.282               & 125              & 17.407                                      & 1.045                & 42               & 1.087                                               \\
+                                                                & Realität defekt                    & 342                  & 7.662            & 8.004                                       & 79                   & 302              & 381                                                 \\
+                                                                & Total                              & 17.624               & 7.787            & 25.429                                      & 1.124                & 344              & 1.468                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SGD}      & Realität fehlerfrei                & 7429                 & 1                & 7430                                               & 13221               & 7               & 13228                                                                \\
-                                                                & Realität defekt                    & 2043                 & 5                & 2048                                               & 4813                & 0               & 4813                                                                 \\
-                                                                & Total                              & 9472                 & 6                & 9478                                               & 18034               & 7               & 18041                                                                \\ 
+\multirow{3}{0.075\linewidth}{\hspace{0pt}SGD}                  & Realität fehlerfrei                & 29.882               & 660              & 30.542                                      & 2.565                & 4                & 2.569                                               \\
+                                                                & Realität defekt                    & 12.522               & 1.405            & 13.927                                      & 841                  & 14               & 856                                                 \\
+                                                                & Total                              & 42.404               & 2.065            & 44.469                                      & 3.406                & 18               & 3.424                                               \\ 
 \hline
-\multirow{3}{0.075\linewidth}{\hspace{0pt}\Centering{}SVM}      & Realität fehlerfrei                & 1114                 & 0                & 1114                                               & 13228               & 0               & 13228                                                                \\
-                                                                & Realität defekt                    & 308                  & 0                & 308                                                & 4813                & 0               & 4813                                                                 \\
-                                                                & Total                              & 1422                 & 0                & 1422                                               & 18041               & 0               & 18041                                                                \\
+\multirow{3}{0.075\linewidth}{\hspace{0pt}SVM}                  & Realität fehlerfrei                & 30.026               & 516              & 30.542                                      & 1.833                & 0                & 1.833                                               \\
+                                                                & Realität defekt                    & 12.910               & 1.017            & 13.927                                      & 613                  & 0                & 613                                                 \\
+                                                                & Total                              & 42.936               & 1.533            & 44.469                                      & 2.446                & 0                & 2.446                                               \\
 \hline
 \end{tabular}
 }
@@ -446,7 +456,7 @@ Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der 
 \begin{figure}[]
     \centering
     \includegraphics[width=\textwidth]{images/Klasseval}
-    \caption{Übersicht der Accuracies der jeweiligen Klassifikatoren und Datensets\label{fig:class-acc}}
+    \caption{Übersicht der Accuracies des nicht-featurebasierten Vergleichs\label{fig:class-acc}}
 \end{figure}
 
 \begin{figure}
@@ -470,13 +480,13 @@ Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der 
   \subfloat[][NB nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
   \subfloat[][SVM (vorh. Datenset)]{\includegraphics[width=0.25\linewidth]{images/svm_eval_feat}}
   \subfloat[][SVM nach \cite{Moser2008}]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
-  \caption{ROC-Kurven der Klassifikatoren und Datensets}
+  \caption{ROC-Kurven des nicht-featurebasierten Vergleichs}
 \end{figure}
 
 
-\begin{table}
+\begin{table}[t]
 \centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der Konfusionsmatrix}
+\caption{Ergebnisse der Evaluationsmetriken des nicht-featurebasierten Vergleichs (\textbf{ÜBERARBEITEN})}
 \label{tab:class-val}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\centering\hspace{0pt}}p{0.085\linewidth}>{\hspace{0pt}}p{0.168\linewidth}|>{\centering\hspace{0pt}}p{0.152\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\hspace{0pt}}p{0.1\linewidth}|>{\centering\hspace{0pt}}p{0.154\linewidth}>{\centering\hspace{0pt}}p{0.112\linewidth}>{\centering\arraybackslash\hspace{0pt}}p{0.102\linewidth}|} 

@@ -1,9 +1,8 @@
 % !TEX root = ../thesis.tex
 
 \chapter{Erstellung eines featurebasierten Datensets}
-\label{dataset}
+\label{dataset-creation}
 
-\paragraph{Ausblick:}
 Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen der Anlernung der Klassifikatoren dienen. Eine Gliederung der Kapitel kann \autoref{fig:kap3} entnommen werden.
 
 \begin{figure}[H]
@@ -18,35 +17,35 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
-\begin{table}[H]
+\begin{table}[t]
 \centering
 \caption{Übersicht der verwendeten Softwareprojekte\protect\footnotemark{}}
 \label{tab:tools}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|c|c|l|c|c|} 
-\cline{2-3}\cline{5-6}
-\multicolumn{1}{l|}{} & \textbf{Zweck}       & \textbf{Datenquelle}  &                      & \textbf{Zweck}       & \textbf{Datenquelle}     \\ 
-\hline
-\textbf{Blender}      & 3D-Modellierungstool & GitHub-Mirror         & \textbf{libxml2}     & XML-Parser           & GitLab-Repository        \\ 
-\hline
-\textbf{Busybox}      & UNIX-Toolkit         & Git-Repository        & \textbf{lighttpd}    & Webserver            & Git-Repository           \\ 
-\hline
-\textbf{Emacs}        & Texteditor           & GitHub-Mirror         & \textbf{MPSolve}     & Polynomlöser         & GitHub-Repository        \\ 
-\hline
-\textbf{GIMP}         & Bildbearbeitung      & GitLab-Repository     & \textbf{Parrot}      & virtuelle Maschine   & GitHub-Repository        \\ 
-\hline
-\textbf{Gnumeric}     & Tabellenkalkulation  & GitLab-Repository     & \textbf{Vim}         & Texteditor           & GitHub-Repository        \\ 
-\hline
-\textbf{gnuplot}      & Plotting-Tool        & GitHub-Mirror         & \textbf{xfig}        & Grafikeditor         & Sourceforge-Repository~  \\ 
-\hline
-\textbf{Irssi}        & IRC-Client           & GitHub-Repository     & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}     \\
+\begin{tabular}{|l|l|l|l|l|l|l|} 
+\cline{1-3}\cline{5-7}
+\textbf{Projekt}   & \textbf{Zweck}       & \textbf{Datenquelle}  & ~                    & \textbf{Projekt}     & \textbf{Zweck}       & \textbf{Datenquelle}                     \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Blender}   & 3D-Modellierungstool & GitHub-Mirror         & ~                    & \textbf{libxml2}     & XML-Parser           & GitLab-Repository                        \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Busybox}   & UNIX-Toolkit         & Git-Repository        & ~                    & \textbf{lighttpd}    & Webserver            & Git-Repository                           \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Emacs}     & Texteditor           & GitHub-Mirror         & ~                    & \textbf{MPSolve}     & Polynomlöser         & GitHub-Repository                        \\ 
+\cline{1-3}\cline{5-7}
+\textbf{GIMP}      & Bildbearbeitung      & GitLab-Repository     & ~                    & \textbf{Parrot}      & virtuelle Maschine   & GitHub-Repository                        \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Gnumeric}  & Tabellenkalkulation  & GitLab-Repository     & ~                    & \textbf{Vim}         & Texteditor           & GitHub-Repository                        \\ 
+\cline{1-3}\cline{5-7}
+\textbf{gnuplot}   & Plotting-Tool        & GitHub-Mirror         & ~                    & \textbf{xfig}        & Grafikeditor         & Sourceforge-Repository  \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Irssi}     & IRC-Client           & GitHub-Repository     & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                     \\
 \cline{1-3}
 \end{tabular}
 }
 \end{table}
 \footnotetext{Links zu den Websites der Softwareprojekte und deren Repositories können im \hyperref[appendix1]{Anhang} eingesehen werden.}
 
-Zum Erhalt der Commit-Daten der Softwareprojekte wurde die Python-Library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} verwendet \cite{Spadini2018}. Diese ermöglicht eine einfache Datenextraktion aus Git-Repositories zum Erhalt von Commits, Commit-Nachrichten, Entwicklern, Diffs und mehr (im weiteren Verlauf \glqq Metadaten\grqq{} genannt). Ein beispielhafter Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits (Autor, Name der veränderten Dateien, Typ der Veränderung und jeweilige zyklomatische Komplexität der Dateien) ist in \autoref{pydriller} aufgeführt. 
+Um die Commit-Daten der Softwareprojekte zu erhalten wurde die Python-Library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} verwendet \cite{Spadini2018}. Diese ermöglicht eine einfache Datenextraktion aus Git-Repositories zum Erhalt von Commits, Commit-Nachrichten, Entwicklern, Diffs und mehr (im weiteren Verlauf \glqq Metadaten\grqq{} genannt). Ein beispielhafter Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits (Autor, Name der veränderten Dateien, Typ der Veränderung und jeweilige zyklomatische Komplexität der Dateien) ist in \autoref{pydriller} aufgeführt. 
 
 \begin{lstlisting}[language=Python, caption=Beispielhafter PyDriller-Code zur Ausgabe von Metadaten von Commits, frame=single, label=pydriller]
 for commit in RepositoryMining("link_to_repo").traverse_commits(): 
@@ -74,86 +73,52 @@ Als Input der eigens erstellten Python-Scripte zum Erhalt der Commit-Metadaten d
 \item Anzahl der entfernten Zeilen von der Datei
 \item Art der Änderung (ADD, REM, MOD)\footnote{Diese Information fand in der weiteren Erstellung des Datensets keine Verwendung.}
 \item Diff (Changeset) der Veränderung
+\item[\vspace{\fill}]
 \end{itemize}
 \end{multicols}
 
-Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren. Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie der Anzahl der identifizierten Features je Softwareprojekt ist in \autoref{tab:tools-values2} aufgeführt.
+Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren.
 
-\begin{table}[H]
+\begin{table}[t]
 \centering
 \caption{Übersicht der Anzahl der Releases und Commits je Softwareprojekt}
 \label{tab:tools-values1}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|c|c|l|c|c|} 
-\cline{2-3}\cline{5-6}
-\multicolumn{1}{l|}{} & \textbf{\#Releases}  & \textbf{\#Commits}  &                      & \multicolumn{1}{l|}{\textbf{\#Releases}~} & \textbf{\#Commits}~   \\ 
-\hline
-\textbf{Blender}      & 11                   & 19119               & \textbf{libxml2}     & 10                                        & 732                   \\ 
-\hline
-\textbf{Busybox}      & 14                   & 4984                & \textbf{lighttpd}    & 6                                         & 2597                  \\ 
-\hline
-\textbf{Emacs}        & 7                    & 12805               & \textbf{MPSolve}     & 8                                         & 668                   \\ 
-\hline
-\textbf{GIMP}         & 14                   & 7240                & \textbf{Parrot}      & 7                                         & 16245                 \\ 
-\hline
-\textbf{Gnumeric}     & 8                    & 6025                & \textbf{Vim}         & 7                                         & 9849                  \\ 
-\hline
-\textbf{gnuplot}      & 5                    & 6619                & \textbf{xfig}        & 7                                         & 18                    \\ 
-\hline
-\textbf{Irssi}        & 7                    & 253                 & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}  \\
+\begin{tabular}{|>{\hspace{0pt}}p{0.152\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.158\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.156\linewidth}|>{\hspace{0pt}}p{0.029\linewidth}|>{\hspace{0pt}}p{0.139\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.168\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.185\linewidth}|} 
+\cline{1-3}\cline{5-7}
+\textbf{Projekt}   & \textbf{\#Releases}  & \textbf{\#Commits}  & ~                                                     & \textbf{Projekt}                                     & \textbf{\#Releases}~                                 & \textbf{\#Commits}~ ~                                 \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Blender}   & 11                   & 19.119              & ~                                                     & \textbf{libxml2}                                     & 10                                                   & 732                                                   \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Busybox}   & 14                   & 4.984               & ~                                                     & \textbf{lighttpd}                                    & 6                                                    & 2.597                                                 \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Emacs}     & 7                    & 12.805              & ~                                                     & \textbf{MPSolve}                                     & 8                                                    & 668                                                   \\ 
+\cline{1-3}\cline{5-7}
+\textbf{GIMP}      & 14                   & 7.240               & ~                                                     & \textbf{Parrot}                                      & 7                                                    & 16.245                                                \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Gnumeric}  & 8                    & 6.025               & ~                                                     & \textbf{Vim}                                         & 7                                                    & 9.849                                                 \\ 
+\cline{1-3}\cline{5-7}
+\textbf{gnuplot}   & 5                    & 6.619               & ~                                                     & \textbf{xfig}                                        & 7                                                    & 18                                                    \\ 
+\cline{1-3}\cline{5-7}
+\textbf{Irssi}     & 7                    & 253                 & \multicolumn{1}{>{\hspace{0pt}}p{0.029\linewidth}}{~} & \multicolumn{1}{>{\hspace{0pt}}p{0.139\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.168\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.185\linewidth}}{}  \\
 \cline{1-3}
-\end{tabular}
-}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie zur Anzahl der identifizierten Features je Softwareprojekt}
-\label{tab:tools-values2}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\hspace{0pt}}p{0.208\linewidth}|>{\centering\hspace{0pt}}p{0.21\linewidth}|>{\centering\hspace{0pt}}p{0.362\linewidth}|>{\centering\arraybackslash\hspace{0pt}}p{0.212\linewidth}|} 
-\cline{2-4}
-\multicolumn{1}{>{\hspace{0pt}}p{0.208\linewidth}|}{} & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
-\hline
-\textbf{Blender}                                      & 8333                  & 1418                         & 1400                  \\ 
-\hline
-\textbf{Busybox}                                      & 1408                  & 142                          & 628                   \\ 
-\hline
-\textbf{Emacs}                                        & 6959                  & 685                          & 718                   \\ 
-\hline
-\textbf{GIMP}                                         & 1703                  & 272                          & 204                   \\ 
-\hline
-\textbf{Gnumeric}                                     & 1591                  & 136                          & 637                   \\ 
-\hline
-\textbf{gnuplot}                                      & 880                   & 1323                         & 558                   \\ 
-\hline
-\textbf{Irssi}                                        & 77                    & 1                            & 9                     \\ 
-\hline
-\textbf{libxml2}                                      & 409                   & 37                           & 200                   \\ 
-\hline
-\textbf{lighttpd}                                     & 1202                  & 555                          & 230                   \\ 
-\hline
-\textbf{MPSolve}                                      & 158                   & 69                           & 54                    \\ 
-\hline
-\textbf{Parrot}                                       & 3437                  & 824                          & 397                   \\ 
-\hline
-\textbf{Vim}                                          & 1033                  & 2571                         & 1158                  \\ 
-\hline
-\textbf{xfig}                                         & 0                     & 0                            & 137                   \\
-\hline
 \end{tabular}
 }
 \end{table}
 
 Diese \glqq Rohdaten\grqq{} dienen zur weiteren Verarbeitung hinsichtlich der Erstellung des Datensets und der anschließenden Berechnung der Metriken. Eine Erläuterung der weiteren Verarbeitung der Daten folgt im kommenden Abschnitt.
 
-\fbox{\parbox{\linewidth}{\textsc{RQ1a: WELCHE DATEN KOMMEN FÜR DIE ERSTELLUNG DES DATENSETS IN FRAGE?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ1a: WELCHE DATEN KOMMEN FÜR DIE ERSTELLUNG DES DATENSETS IN FRAGE?\medskip\\
 Es kommen die Daten von 13 featurebasierten Softwareprojekten zur Verwendung. Mithilfe der Python-Library PyDriller wurden die Metadaten der Commits, aufgeteilt nach Commits pro Release, aus den Git-Repositories extrahiert und in MySQL-Datenbanken gespeichert. Ausgewählt wurden die Softwareprojekte aufgrund einer vorherigen Verwendung in der wissenschaftlichen Literatur \cite{Hunsen2015,Liebig2010,Queiroz2016}.}}
 
 \section{Konstruktion des Datensets}
 \label{construction}
 
-Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbeitung und -optimierung. Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die Präprozessor-Anweisungen \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die je Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Metadaten der Softwareprojekte. Konnte kein Feature identifiziert werden, wird entsprechend \glqq \texttt{none}\grqq{} gespeichert.
+Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbeitung und -optimierung. Diese werden im folgenden vorgestellt.
+
+\subsection*{Identifikation von Features}
+
+Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die Präprozessor-Anweisungen \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die je Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Metadaten der Softwareprojekte. Für den Fall, dass ein Feature hinter der Direktive \texttt{\#IFNDEF} identifiziert wurde, wird das Feature mit einem vorangestellten \glqq not\grqq{} gespeichert. Es wird somit als eigenständiges Feature, neben seiner nicht-negierten Form, gespeichert. Kombinationen von Features werden in ihrer identifizierten Form gespeichert. Konnte kein Feature identifiziert werden, wird entsprechend \glqq \texttt{none}\grqq{} gespeichert.
 
 Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in \autoref{fig:features} gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven im Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in \autoref{fig:features}). Diese "Header-Features", wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im gesamten Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
 
@@ -165,10 +130,13 @@ Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiz
     \caption{Normalfall und unerwünschte Fälle bei der Identifizierung der Features\label{fig:features}}
 \end{figure}
 
-Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagwörtern \cite{Zimmermann2007}. Bei den Schlagwörtern handelt es sich um \glqq bug\grqq,\glqq bugs\grqq{}, \glqq bugfix\grqq{}, \glqq error\grqq, \glqq fail\grqq{}, \glqq fix\grqq, \glqq fixed\grqq{} und \glqq fixes\grqq. Durchgeführt wurde die Analyse mittels eines Python-Skripts unter Zuhilfenahme von einfachen Formen des Natural Language Processings (NLP). Die Ergebnisse wurden in einer weiteren Spalte der MySQL-Tabellen (true = korrektiv, false = nicht korrektiv) gespeichert.
+\subsection*{Identifikation von korrektiven Commits}
 
+Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrektiven Commits. Eine dafür gängige Methode, die auch in dieser Arbeit Anwendung fand, besteht aus der Analyse der Commit-Nachrichten auf das Vorhandensein von bestimmten Schlagwörtern \cite{Zimmermann2007}. Bei den Schlagwörtern handelt es sich um \glqq bug\grqq,\glqq bugs\grqq{}, \glqq bugfix\grqq{}, \glqq error\grqq, \glqq fail\grqq{}, \glqq fix\grqq, \glqq fixed\grqq{} und \glqq fixes\grqq. Durchgeführt wurde die Analyse mittels eines Python-Skripts unter Zuhilfenahme von einfachen Methoden des Natural Language Processings (NLP). Dabei wurde die Identifizierung auf die jeweils erste Zeile der Commit-Nachrichten beschränkt. Die Ergebnisse wurden in einer weiteren Spalte der MySQL-Tabellen (true = korrektiv, false = nicht korrektiv) gespeichert.
+
+\subsection*{Identifikation fehlereinführender Commits}
 \label{szz-def}
-Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser ursprünglich für CVS-Versionskontrollsysteme entwickelte Algorithmus erlaubt es, in zwei Phasen fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Die erste Phase besteht dabei aus der Identifizierung der korrektiven Commits. Dies kann entweder anhand der zuvor beschriebenen Analyse der Commit-Nachrichten geschehen oder durch die Analyse von Bug-Tracking-Systemen \cite{Borg2019}. Die zweite Phase umfasst die Identifikation der fehlereinführenden Commits auf Basis der zuvor erkannten korrektiven Commits. Diese Phase ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
+Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser Algorithmus erlaubt es fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Dafür setzt er voraus, dass die korrektiven Commits bereits identifiziert wurden, da sie als Eingabemenge des Algorithmus dienen \cite{Borg2019}. Die Identifikation der fehlereinführenden Commits ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
 
 \begin{figure}[H]
     \centering
@@ -176,27 +144,87 @@ Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden C
     \caption{Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite{Borg2019})\label{fig:szz}}
 \end{figure}
 
-Die zweite Phase des SZZ-Algorithmus, die als Input eine Liste der Commit-Hashes der zuvor erkannten korrektiven Commits (a) erhält, beginnt mit der Ausführung eines \texttt{git blame} Befehls (b) zur Identifizierung sämtlicher Commits, in denen Veränderungen an den selben Dateien und Codezeilen vorgenommen wurden wie in den korrektiven Commits \cite{Borg2019}. Daraus resultieren mögliche fehlereinführende Commit-Kandidaten (c). Für jeden dieser Commit-Kandidaten wird dann erörtert, ob er fehlereinführend ist (d). Dazu wird zunächst das Datum des Commit-Kandidaten mit dem zugehörigen korrektiven Commits verglichen. Liegt dieses vor dem Datum des korrektiven Commits, so gilt der Kandidat als tatsächlich fehlereinführend \cite{Borg2019}. Liegt das Datum danach, so kann der Kandidat nur fehlereinführend sein, sofern er teilweise den vorhandenen Fehler löst (teilweiser Fix) oder für einen anderen Fehler verantwortlich ist, der nicht dem korrektiven Commit zugehörig ist (Kandidat ist Fehlerursache eines anderen korrektiven Commits) \cite{Borg2019}. Die Ausgabe ist eine Liste von Commit-Hashes von fehlereinführenden Commits für jede Datei eines korrektiven Commits. Diese neuen Informationen werden in einer zusätzlichen Spalte in den MySQL-Tabellen für jeden Eintrag gespeichert (true = fehlereinführend, false = nicht fehlereinführend). 
+Der SZZ-Algorithmus, der als Input eine Liste der Commit-Hashes der zuvor erkannten korrektiven Commits (a) erhält, beginnt mit der Ausführung eines \texttt{git blame} Befehls (b) zur Identifizierung sämtlicher Commits, in denen Veränderungen an den selben Dateien und Codezeilen vorgenommen wurden wie in den korrektiven Commits \cite{Borg2019}. Daraus resultieren mögliche fehlereinführende Commit-Kandidaten (c). Für jeden dieser Commit-Kandidaten wird dann erörtert, ob er fehlereinführend ist (d). Dazu wird zunächst das Datum des Commit-Kandidaten mit dem zugehörigen korrektiven Commits verglichen. Liegt dieses vor dem Datum des korrektiven Commits, so gilt der Kandidat als tatsächlich fehlereinführend \cite{Borg2019}. Liegt das Datum danach, so kann der Kandidat nur fehlereinführend sein, sofern er teilweise den vorhandenen Fehler löst (teilweiser Fix) oder für einen anderen Fehler verantwortlich ist, der nicht dem korrektiven Commit zugehörig ist (Kandidat ist Fehlerursache eines anderen korrektiven Commits) \cite{Borg2019}. Die Ausgabe ist eine Liste von Commit-Hashes von fehlereinführenden Commits für jede Datei eines korrektiven Commits. Diese neuen Informationen werden in einer zusätzlichen Spalte in den MySQL-Tabellen für jeden Eintrag gespeichert (true = fehlereinführend, false = nicht fehlereinführend). 
 
-Eine Übersicht des Schemas der nun vollständigen initialen MySQL-Tabellen (im folgenden Haupttabellen genannt) ist in \autoref{tab:schema1} aufgeführt. Wie bereits zuvor erwähnt, umfasst diese Tabelle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
+Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie der Anzahl der identifizierten Features je Softwareprojekt ist in \autoref{tab:tools-values2} aufgeführt. Des weiteren ist eine Übersicht des Schemas der nun vollständigen initialen MySQL-Tabellen (im folgenden Haupttabellen genannt) in \autoref{tab:schema1} aufgeführt. Wie bereits zuvor erwähnt, umfasst diese Tabelle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\begin{table}[H]
+\begin{table}[t]
+\centering
+\caption{Anzahl der korrektiven und fehlereinführenden Commits sowie Anzahl der identifizierten Features je Softwareprojekt}
+\label{tab:tools-values2}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.208\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.21\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.362\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.212\linewidth}|} 
+\hline
+\textbf{Projekt}   & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
+\hline
+\textbf{Blender}   & 7.760                 & 3.776                        & 1.400                 \\ 
+\hline
+\textbf{Busybox}   & 1.236                 & 802                          & 628                   \\ 
+\hline
+\textbf{Emacs}     & 4.269                 & 2.532                        & 718                   \\ 
+\hline
+\textbf{GIMP}      & 1.380                 & 854                          & 204                   \\ 
+\hline
+\textbf{Gnumeric}  & 1.498                 & 1.191                        & 637                   \\ 
+\hline
+\textbf{gnuplot}   & 854                   & 1.215                        & 558                   \\ 
+\hline
+\textbf{Irssi}     & 52                    & 22                           & 9                     \\ 
+\hline
+\textbf{libxml2}   & 324                   & 88                           & 200                   \\ 
+\hline
+\textbf{lighttpd}  & 1.078                 & 929                          & 230                   \\ 
+\hline
+\textbf{MPSolve}   & 151                   & 211                          & 54                    \\ 
+\hline
+\textbf{Parrot}    & 3.109                 & 3.072                        & 397                   \\ 
+\hline
+\textbf{Vim}       & 371                   & 696                          & 1.158                 \\ 
+\hline
+\textbf{xfig}      & 0                     & 0                            & 137                   \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[t]
 \centering
 \caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|ll|ll|} 
+\begin{tabular}{|>{\hspace{0pt}}p{0.25\linewidth}|>{\hspace{0pt}}p{0.746\linewidth}|} 
 \hline
-\textbf{Spaltenname}  & \textbf{Beschreibung}                                                                               & \textbf{Spaltenname}  & \textbf{Beschreibung}                                                                             \\ 
+ \textbf{Spaltenname}  & \textbf{Beschreibung}                                     \\ 
 \hline
-name                  & Name des Softwareprojekts                                                                           & lines\_added          & \begin{tabular}[c]{@{}l@{}}Anzahl der hinzugefügten Zeilen\\ zur geänderten Datei \end{tabular}   \\
-release\_number       & \begin{tabular}[c]{@{}l@{}}zugehörige Release-Version\\ basierend auf vergebenen Tags \end{tabular} & lines\_removed        & \begin{tabular}[c]{@{}l@{}}Anzahl der entfernten Zeilen\\ von der geänderten Datei \end{tabular}  \\
-commit\_hash          & \begin{tabular}[c]{@{}l@{}}eindeutiger Bezeichner eines \\ Commits \end{tabular}                    & change\_type          & Art der Änderung (\textit{ohne weitere Verwendung}) \\
-commit\_author        & Autor eines Commits                                                                                 & diff                  & Diff der geänderten Datei                                                                         \\
-commit\_msg           & Nachricht eines Commits                                                                             & corrective            & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlerbehebend war \end{tabular}                \\
-filename              & Name der geänderten Datei                                                                           & bug\_introducing      & \begin{tabular}[c]{@{}l@{}}Indikator, ob Commit\\ fehlereinführend war \end{tabular}              \\
-nloc                  & \begin{tabular}[c]{@{}l@{}} \glqq Lines of code\grqq{} der geänderten\\ Datei \end{tabular}                   & feature               & \begin{tabular}[c]{@{}l@{}}Namen der zugehörigen Features\\ der geänderten Datei \end{tabular}    \\
-cycomplexity          & \begin{tabular}[c]{@{}l@{}}Zyklomatische Komplexität\\ der geänderten Datei \end{tabular}           &                       &                                                                                                   \\
+name                   & Name des Softwareprojekts                                 \\ 
+\hline
+release\_number        & zugehörige Release-Version basierend auf vergebenen Tags  \\ 
+\hline
+commit\_hash           & eindeutiger Bezeichner eines~ Commits                     \\ 
+\hline
+commit\_author         & Autor eines Commits                                       \\ 
+\hline
+commit\_msg            & Nachricht eines Commits                                   \\ 
+\hline
+filename               & Name der geänderten Datei                                 \\ 
+\hline
+nloc                   & \glqq Lines of code\grqq{} der geänderten Datei                      \\ 
+\hline
+cycomplexity           & Zyklomatische Komplexität der geänderten Datei            \\ 
+\hline
+lines\_added           & Anzahl der hinzugefügten Zeilen zur~geänderten Datei      \\ 
+\hline
+lines\_removed         & Anzahl der entfernten Zeilen~von der geänderten Datei     \\ 
+\hline
+change\_type           & Art der Änderung (\textit{ohne weitere Verwendung})       \\ 
+\hline
+diff                   & Diff der geänderten Datei                                 \\ 
+\hline
+corrective             & Indikator, ob Commit~korrektiv war                        \\ 
+\hline
+bug\_introducing~ ~~ ~ & Indikator, ob Commit fehlereinführend war                 \\ 
+\hline
+feature                & Namen der zugehörigen Features~der geänderten Datei~ ~ ~  \\
 \hline
 \end{tabular}
 }
@@ -223,17 +251,21 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 \section{Metriken}
 
-Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, bilden sogenannte Metriken die Attribute zum Training der Machine-Learning-Klassifikatoren. Bei Metriken handelt sich sich um Zahlenwerte, die in Codemetriken und Prozessmetriken aufgeteilt sind und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet werden \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet.
+Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, bilden im in dieser Arbeit betrachteten Szenario sogenannte Metriken die Attribute zum Training der Machine-Learning-Klassifikatoren. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet.
 
-Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In \autoref{fig:dataset} wird die Abgrenzung zwischen feature- und dateibasiertem Datenset anhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im \hyperref[construction]{vorherigen Abschnitt} erläutert wurden (Schritte C - E). Die finalen Datensets (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der 13 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Diese Tabellen werden jeweils zu einer gemeinsamen Tabelle konkateniert. Sollte ein Feature oder eine Datei in einem Release mehrfach bearbeitet worden sein (d.h. es wird in mehreren Commits bearbeitet), so wird der Durchschnittswert der jeweiligen Metriken berechnet und gespeichert. Das Verfahren zur Bestimmung des Labels erfolgt anhand des folgenden Musters:
+Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features, sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In \autoref{fig:dataset} wird die Abgrenzung zwischen feature- und dateibasiertem Datenset anhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im \hyperref[construction]{vorherigen Abschnitt} erläutert wurden (Schritte C - E). Die finalen Datensets (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der 13 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Diese Tabellen werden jeweils zu einer gemeinsamen Tabelle konkateniert. Sollte ein Feature oder eine Datei in einem Release mehrfach bearbeitet worden sein (d.h. es wird in mehreren Commits bearbeitet), so wird der Durchschnittswert der jeweiligen Metriken berechnet und gespeichert. Das Verfahren zur Bestimmung des Labels erfolgt anhand des folgenden Musters:
 
-\begin{itemize}
-\setlength{\itemsep}{-2pt}
-\item fehlereinführend + korrektiv = defekt
-\item fehlereinführend + nicht korrektiv = defekt
-\item nicht fehlereinführend + korrektiv = fehlerfrei
-\item nicht fehlereinführend + nicht korrektiv = fehlerfrei 
-\end{itemize}
+\begin{table}[H]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{>{\hspace{0pt}}p{0.428\linewidth}>{\hspace{0pt}}p{0.046\linewidth}>{\hspace{0pt}}p{0.283\linewidth}>{\hspace{0pt}}p{0.046\linewidth}>{\hspace{0pt}}p{0.187\linewidth}}
+fehlereinführend       & + & korrektiv       & = & defekt      \\
+fehlereinführend       & + & nicht korrektiv & = & defekt      \\
+nicht fehlereinführend & + & korrektiv       & = & fehlerfrei  \\
+nicht fehlereinführend & + & nicht korrektiv & = & fehlerfrei 
+\end{tabular}
+}
+\end{table}
 
 Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Releases bearbeitet sein sollte, erfolgt die Bestimmung des Labels anhand der folgenden Regeln:
 
@@ -252,7 +284,7 @@ Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in \aut
     \caption{Visualisierung des Aufbaus und der Unterscheidung der Datensets\label{fig:dataset}}
 \end{figure}
 
-\begin{table}
+\begin{table}[t]
 \centering
 \caption{Übersicht der berechneten Metriken}
 \label{tab:metrics}
@@ -289,7 +321,7 @@ Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in \aut
 }
 \end{table}
 
-\fbox{\parbox{\linewidth}{\textsc{RQ1b: WIE WEIT MÜSSEN DIE DATEN VORVERARBEITET WERDEN, UM SIE FÜR DAS TRAINING NUTZBAR ZU MACHEN?\medskip}\\
+\fbox{\parbox{\linewidth}{RQ1b: WIE WEIT MÜSSEN DIE DATEN VORVERARBEITET WERDEN, UM SIE FÜR DAS TRAINING NUTZBAR ZU MACHEN?\medskip\\
 Eine umfassende Vorverarbeitung der Daten aus den Repositories ist nicht nötig. Die Verarbeitungsschritte bestanden aus: Extraktion der Features inklusive Bereinigung, Identifizierung von korrektiven Commits mittels Analyse der Commit-Nachrichten, Analyse nach fehlereinführenden Commits unter Zuhilfenahme des SZZ-Algorithmus sowie Berechnung von elf Metriken, welche als Attribute für die Erlernung der Klassifikatoren dienen.}}
 
 \cleardoublepage
