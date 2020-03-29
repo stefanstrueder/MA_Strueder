@@ -1,0 +1,148 @@
+\documentclass[sigconf]{acmart}
+\usepackage{hyperref}
+\usepackage{relsize,xspace}
+\usepackage[framemethod=tikz,
+innerleftmargin=1pt,
+innerrightmargin=1pt,
+innertopmargin=1pt,
+innerbottommargin=1pt,
+skipabove=6pt,
+skipbelow=6pt,
+splittopskip=2pt,
+splitbottomskip=2pt,
+roundcorner = 0pt
+]{mdframed}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{microtype}
+
+\definecolor{light-gray-fork}{gray}{0.925}
+\definecolor{light-gray-mainline}{gray}{0.8}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\lstdefinestyle{all}{
+	basicstyle=\fontsize{11}{11}\selectfont\ttfamily\footnotesize,
+	numbers=none,
+	xleftmargin=0.1cm,
+	xrightmargin=0.1cm,
+	stepnumber=1,
+	showstringspaces=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=false,
+	frame=single,
+	commentstyle=\color{gray}
+}
+
+\lstdefinestyle{result} {
+	frame=none,
+	escapechar=`,
+	language=Java,
+	basicstyle=\fontsize{11}{12}\scriptsize,
+	postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	moredelim=**[is][\color{red}]{@@}{@@},
+}
+
+\lstdefinestyle{dataset} {
+	frame=single,
+	escapechar=`,
+	language=Java,
+	basicstyle=\fontsize{11}{12}\scriptsize,
+	postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+	keywordstyle=\color{javapurple}\bfseries,
+	stringstyle=\color{javared},
+	commentstyle=\color{javagreen},
+	morecomment=[s][\color{javadocblue}]{/**}{*/},
+	moredelim=**[is][\color{red}]{@@}{@@},
+}
+\usepackage{array}
+\newcommand*\rotbf[1]{\rotatebox{90}{\textbf{#1}}}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+\newcommand{\specialcellbold}[2][c]{%
+	\bfseries
+	\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}%
+}
+\newcommand\parhead[1]{\vspace{.26mm}\noindent\textbf{{#1}}.}  
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\Figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\lstref}[1]{Listing~\ref{#1}}
+
+\newcommand{\tb}[1]{{\textsf{TB}[\smaller\sffamily\color{blue} #1}]}
+\newcommand{\rh}[1]{{\textsf{RH}[\smaller\sffamily\color{orange} #1}]}
+\newcommand{\mm}[1]{{\textsf{MM}[\smaller\sffamily\color{green!10!orange!90!} #1}]}
+\newcommand{\wm}[1]{{\textsf{WM}[\smaller\sffamily\color{red} #1}]}
+\newcommand{\es}{ElasticSearch\xspace}
+
+\usepackage{xcolor}
+
+\newcommand{\quotebox}[3]{\vspace{.5em}\noindent\begin{tikzpicture}
+\node[align=center,draw,thin,minimum width=\columnwidth,inner sep=2.2mm] (titlebox)%
+{\parbox{0.95\columnwidth}{\noindent\textit{#2}}};\node[fill=white] (W) at ([xshift=#3]titlebox.south) {\small #1};%
+\end{tikzpicture}}
+
+\newcounter{recommendationno}
+\newcommand{\recommendation}[1]{\refstepcounter{recommendationno}Recommendation \the\numexpr\value{recommendationno}~(\factor{#1})}
+\newcounter{observationno}
+\newcommand{\observation}[1]{\refstepcounter{observationno}Observation \the\numexpr\value{observationno}~(#1)}
+
+
+\setcopyright{acmcopyright}
+\copyrightyear{2020}
+\acmYear{2020}
+\acmDOI{}
+
+\setcopyright{none}
+
+\begin{document}
+\title{Feature Defect Prediction}
+\renewcommand{\shorttitle}{}
+
+\author{}
+\affiliation{Chalmers $|$ University of Gothenburg, Sweden}
+
+\renewcommand{\shortauthors}{}
+
+
+\begin{abstract}
+	
+\end{abstract}
+
+\keywords{}
+
+\maketitle
+
+\input{introduction}
+
+\input{background}
+
+\input{methodology}
+
+%\input{evaluation}
+%
+%\input{validity}
+%
+%\input{related}
+%
+%\input{conclusion}
+
+
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{doc}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+%\appendix
+
+
+\end{document}
+\endinput
