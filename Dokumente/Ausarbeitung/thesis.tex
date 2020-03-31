@@ -84,6 +84,8 @@
     
     % Kurzfassung
     \include{content/note}
+    
+    \include{content/remember}
 
     \tableofcontents
     \cleardoublepage
@@ -148,8 +150,102 @@ xfig & \url{https://sourceforge.net/projects/mcj/} & \url{https://sourceforge.ne
 }
 \end{table}
 
-\chapter{Erweiterte Ergebnisse der Evaluationsmetriken}
+\chapter{Accuracies der Klassifikatoren je Datenset}
 \label{appendix2}
+
+\begin{table}[t]
+\centering
+\caption{Accuracies des featurebasierten Datensets}
+\label{tab:accuracies-feat}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.254\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.412\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.328\linewidth}|} 
+\hline
+\textbf{Klassifikator} & \textbf{Accuracy scikit-learn} & \textbf{Accuracy WEKA}  \\ 
+\hline
+J48 / DT               & 0,88                           & 0,87                    \\ 
+\hline
+KNN                    & 0,86                           & 0,87                    \\ 
+\hline
+LR                     &                                & 0,84                    \\ 
+\hline
+NB                     & 0,65                           & 0,84                    \\ 
+\hline
+NN                     & 0,88                           & 0,85                    \\ 
+\hline
+RC                     & 0,83                           &                         \\ 
+\hline
+RF                     & 0,91                           & 0,91                    \\ 
+\hline
+SGD                    & 0,81                           & 0,83                    \\ 
+\hline
+SVM                    & 0,85                           & 0,81                    \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Accuracies des dateibasierten Datensets}
+\label{tab:accuracies-file}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.254\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.412\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.328\linewidth}|} 
+\hline
+\textbf{Klassifikator} & \textbf{Accuracy scikit-learn} & \textbf{Accuracy WEKA}  \\ 
+\hline
+J48 / DT               & 0,94                           & 0,97                    \\ 
+\hline
+KNN                    & 0,90                           & 0,90                    \\ 
+\hline
+LR                     &                                & 0,65                    \\ 
+\hline
+NB                     & 0,65                           & 0,64                    \\ 
+\hline
+NN                     & 0,88                           & 0,68                    \\ 
+\hline
+RC                     & 0,64                           &                         \\ 
+\hline
+RF                     & 0,98                           & 0,98                    \\ 
+\hline
+SGD                    & 0,58                           & 0,63                    \\ 
+\hline
+SVM                    & 0,63                           & 0,62                    \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Accuracies des nicht-featurebasierten Vergleichs}
+\label{tab:accuracies-eval}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.198\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.368\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.428\linewidth}|} 
+\hline
+\textbf{Klassifikator} & \textbf{Accuracy Datenset nach \cite{Moser2008}} & \textbf{Accuracy~vorhandenes Datenset}  \\ 
+\hline
+J48 / DT               & 0,97                            & 0,87                                 \\ 
+\hline
+KNN                    & 0,92                            & 0,84                                 \\ 
+\hline
+LR                     & 0,71                            & 0,76                                 \\ 
+\hline
+NB                     & 0,49                            & 0,27                                 \\ 
+\hline
+NN                     & 0,84                            & 0,82                                 \\ 
+\hline
+RF                     & 0,98                            & 0,92                                 \\ 
+\hline
+SGD                    & 0,70                            & 0,75                                 \\ 
+\hline
+SVM                    & 0,70                            & 0,75                                 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\chapter{Erweiterte Ergebnisse der Evaluationsmetriken}
+\label{appendix3}
 
 Die nachfolgenden Tabellen enthalten die Ergebnisse der Evaluation mit zusätzlichen Metriken. Die Metrik \glqq PRC-Area\grqq{} ist wie folgt definiert:
 \begin{itemize}
@@ -164,81 +260,81 @@ Die nachfolgenden Tabellen enthalten die Ergebnisse der Evaluation mit zusätzli
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\hspace{0pt}}p{0.083\linewidth}>{\hspace{0pt}}p{0.164\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.158\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.098\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.158\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.1\linewidth}|} 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.083\linewidth}}{} &           & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.368\linewidth}|}{\textbf{scikit-learn} } & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.37\linewidth}|}{\textbf{WEKA} }   \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.083\linewidth}}{}                                         &           & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.368\linewidth}|}{\textbf{scikit-learn} } & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.37\linewidth}|}{\textbf{WEKA} }   \\ 
 \cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.083\linewidth}}{} &           & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}          & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}   \\ 
+\multicolumn{1}{>{\hspace{0pt}}p{0.083\linewidth}}{}                                         &           & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}          & \textbf{Fehlerfrei}  & \textbf{Defekt}  & \textbf{gew.}\par{}\textbf{Mittel}   \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}DT}        & TP-Rate   & 0,93                 & 0,65             & 0,88                                        & 0,95                 & 0,54             & 0,87                                 \\
-                                                     & FP-Rate   & 0,65                 & 0,07             & 0,18                                        & 0,46                 & 0,05             & 0,38                                 \\
-                                                     & Precision & 0,92                 & 0,69             & 0,87                                        & 0,89                 & 0,71             & 0,86                                 \\
-                                                     & Recall    & 0,93                 & 0,65             & 0,88                                        & 0,95                 & 0,54             & 0,87                                 \\
-                                                     & F-Score   & 0,92                 & 0,67             & 0,87                                        & 0,92                 & 0,62             & 0,86                                 \\
-                                                     & ROC-Area  & 0,79                 & 0,79             & 0,79                                        & 0,88                 & 0,88             & 0,88                                 \\
-                                                     & PRC-Area  & 0,77                 & 0,51             & 0,72                                        & 0,96                 & 0,66             & 0,90                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}\begin{tabular}[c]{@{}l@{}}DT /\\J48\end{tabular}} & TP-Rate   & 0,93                 & 0,65             & 0,88                                        & 0,95                 & 0,54             & 0,87                                 \\
+                                                                                             & FP-Rate   & 0,65                 & 0,07             & 0,18                                        & 0,46                 & 0,05             & 0,38                                 \\
+                                                                                             & Precision & 0,92                 & 0,69             & 0,87                                        & 0,89                 & 0,71             & 0,86                                 \\
+                                                                                             & Recall    & 0,93                 & 0,65             & 0,88                                        & 0,95                 & 0,54             & 0,87                                 \\
+                                                                                             & F-Score   & 0,92                 & 0,67             & 0,87                                        & 0,92                 & 0,62             & 0,86                                 \\
+                                                                                             & ROC-Area  & 0,79                 & 0,79             & 0,79                                        & 0,88                 & 0,88             & 0,88                                 \\
+                                                                                             & PRC-Area  & 0,77                 & 0,51             & 0,72                                        & 0,96                 & 0,66             & 0,90                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}KNN}       & TP-Rate   & 0,92                 & 0,62             & 0,86                                        & 0,93                 & 0,60             & 0,87                                 \\
-                                                     & FP-Rate   & 0,62                 & 0,08             & 0,18                                        & 0,40                 & 0,07             & 0,33                                 \\
-                                                     & Precision & 0,91                 & 0,63             & 0,86                                        & 0,91                 & 0,63             & 0,86                                 \\
-                                                     & Recall    & 0,92                 & 0,62             & 0,86                                        & 0,93                 & 0,60             & 0,87                                 \\
-                                                     & F-Score   & 0,92                 & 0,63             & 0,86                                        & 0,92                 & 0,64             & 0,86                                 \\
-                                                     & ROC-Area  & 0,77                 & 0,77             & 0,77                                        & 0,85                 & 0,85             & 0,85                                 \\
-                                                     & PRC-Area  & 0,78                 & 0,46             & 0,72                                        & 0,94                 & 0,55             & 0,87                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}KNN}                                               & TP-Rate   & 0,92                 & 0,62             & 0,86                                        & 0,93                 & 0,60             & 0,87                                 \\
+                                                                                             & FP-Rate   & 0,62                 & 0,08             & 0,18                                        & 0,40                 & 0,07             & 0,33                                 \\
+                                                                                             & Precision & 0,91                 & 0,63             & 0,86                                        & 0,91                 & 0,63             & 0,86                                 \\
+                                                                                             & Recall    & 0,92                 & 0,62             & 0,86                                        & 0,93                 & 0,60             & 0,87                                 \\
+                                                                                             & F-Score   & 0,92                 & 0,63             & 0,86                                        & 0,92                 & 0,64             & 0,86                                 \\
+                                                                                             & ROC-Area  & 0,77                 & 0,77             & 0,77                                        & 0,85                 & 0,85             & 0,85                                 \\
+                                                                                             & PRC-Area  & 0,78                 & 0,46             & 0,72                                        & 0,94                 & 0,55             & 0,87                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}LR}        & TP-Rate   &                      &                  &                                             & 0,98                 & 0,25             & 0,84                                 \\
-                                                     & FP-Rate   &                      &                  &                                             & 0,75                 & 0,02             & 0,60                                 \\
-                                                     & Precision &                      &                  &                                             & 0,84                 & 0,80             & 0,83                                 \\
-                                                     & Recall    &                      &                  &                                             & 0,99                 & 0,25             & 0,84                                 \\
-                                                     & F-Score   &                      &                  &                                             & 0,91                 & 0,39             & 0,81                                 \\
-                                                     & ROC-Area  &                      &                  &                                             & 0,82                 & 0,82             & 0,82                                 \\
-                                                     & PRC-Area  &                      &                  &                                             & 0,95                 & 0,60             & 0,88                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}LR}                                                & TP-Rate   &                      &                  &                                             & 0,98                 & 0,25             & 0,84                                 \\
+                                                                                             & FP-Rate   &                      &                  &                                             & 0,75                 & 0,02             & 0,60                                 \\
+                                                                                             & Precision &                      &                  &                                             & 0,84                 & 0,80             & 0,83                                 \\
+                                                                                             & Recall    &                      &                  &                                             & 0,99                 & 0,25             & 0,84                                 \\
+                                                                                             & F-Score   &                      &                  &                                             & 0,91                 & 0,39             & 0,81                                 \\
+                                                                                             & ROC-Area  &                      &                  &                                             & 0,82                 & 0,82             & 0,82                                 \\
+                                                                                             & PRC-Area  &                      &                  &                                             & 0,95                 & 0,60             & 0,88                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}NB}        & TP-Rate   & 0,79                 & 0,07             & 0,65                                        & 0,98                 & 0,24             & 0,84                                 \\
-                                                     & FP-Rate   & 0,07                 & 0,21             & 0,18                                        & 0,76                 & 0,02             & 0,61                                 \\
-                                                     & Precision & 0,78                 & 0,07             & 0,64                                        & 0,81                 & 0,77             & 0,83                                 \\
-                                                     & Recall    & 0,79                 & 0,07             & 0,65                                        & 0,98                 & 0,24             & 0,84                                 \\
-                                                     & F-Score   & 0,79                 & 0,07             & 0,65                                        & 0,91                 & 0,37             & 0,80                                 \\
-                                                     & ROC-Area  & 0,41                 & 0,41             & 0,41                                        & 0,74                 & 0,74             & 0,74                                 \\
-                                                     & PRC-Area  & 0,83                 & 0,18             & 0,71                                        & 0,92                 & 0,48             & 0,83                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}NB}                                                & TP-Rate   & 0,79                 & 0,07             & 0,65                                        & 0,98                 & 0,24             & 0,84                                 \\
+                                                                                             & FP-Rate   & 0,07                 & 0,21             & 0,18                                        & 0,76                 & 0,02             & 0,61                                 \\
+                                                                                             & Precision & 0,78                 & 0,07             & 0,64                                        & 0,81                 & 0,77             & 0,83                                 \\
+                                                                                             & Recall    & 0,79                 & 0,07             & 0,65                                        & 0,98                 & 0,24             & 0,84                                 \\
+                                                                                             & F-Score   & 0,79                 & 0,07             & 0,65                                        & 0,91                 & 0,37             & 0,80                                 \\
+                                                                                             & ROC-Area  & 0,41                 & 0,41             & 0,41                                        & 0,74                 & 0,74             & 0,74                                 \\
+                                                                                             & PRC-Area  & 0,83                 & 0,18             & 0,71                                        & 0,92                 & 0,48             & 0,83                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}NN}        & TP-Rate   & 0,94                 & 0,57             & 0,88                                        & 0,95                 & 0,46             & 0,85                                 \\
-                                                     & FP-Rate   & 0,57                 & 0,06             & 0,07                                        & 0,54                 & 0,05             & 0,44                                 \\
-                                                     & Precision & 0,91                 & 0,68             & 0,87                                        & 0,87                 & 0,70             & 0,84                                 \\
-                                                     & Recall    & 0,94                 & 0,57             & 0,88                                        & 0,95                 & 0,46             & 0,85                                 \\
-                                                     & F-Score   & 0,93                 & 0,92             & 0,88                                        & 0,91                 & 0,56             & 0,84                                 \\
-                                                     & ROC-Area  & 0,89                 & 0,89             & 0,89                                        & 0,86                 & 0,86             & 0,86                                 \\
-                                                     & PRC-Area  & 0,80                 & 0,46             & 0,71                                        & 0,96                 & 0,67             & 0,90                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}NN}                                                & TP-Rate   & 0,94                 & 0,57             & 0,88                                        & 0,95                 & 0,46             & 0,85                                 \\
+                                                                                             & FP-Rate   & 0,57                 & 0,06             & 0,07                                        & 0,54                 & 0,05             & 0,44                                 \\
+                                                                                             & Precision & 0,91                 & 0,68             & 0,87                                        & 0,87                 & 0,70             & 0,84                                 \\
+                                                                                             & Recall    & 0,94                 & 0,57             & 0,88                                        & 0,95                 & 0,46             & 0,85                                 \\
+                                                                                             & F-Score   & 0,93                 & 0,92             & 0,88                                        & 0,91                 & 0,56             & 0,84                                 \\
+                                                                                             & ROC-Area  & 0,89                 & 0,89             & 0,89                                        & 0,86                 & 0,86             & 0,86                                 \\
+                                                                                             & PRC-Area  & 0,80                 & 0,46             & 0,71                                        & 0,96                 & 0,67             & 0,90                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}RC}        & TP-Rate   & 1,00                 & 0,10             & 0,83                                        &                      &                  &                                      \\
-                                                     & FP-Rate   & 0,10                 & 0,00             & 0,02                                        &                      &                  &                                      \\
-                                                     & Precision & 0,83                 & 0,89             & 0,84                                        &                      &                  &                                      \\
-                                                     & Recall    & 1,00                 & 0,10             & 0,83                                        &                      &                  &                                      \\
-                                                     & F-Score   & 0,91                 & 0,18             & 0,77                                        &                      &                  &                                      \\
-                                                     & ROC-Area  & 0,77                 & 0,77             & 0,77                                        &                      &                  &                                      \\
-                                                     & PRC-Area  & 0,81                 & 0,26             & 0,71                                        &                      &                  &                                      \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}RC}                                                & TP-Rate   & 1,00                 & 0,10             & 0,83                                        &                      &                  &                                      \\
+                                                                                             & FP-Rate   & 0,10                 & 0,00             & 0,02                                        &                      &                  &                                      \\
+                                                                                             & Precision & 0,83                 & 0,89             & 0,84                                        &                      &                  &                                      \\
+                                                                                             & Recall    & 1,00                 & 0,10             & 0,83                                        &                      &                  &                                      \\
+                                                                                             & F-Score   & 0,91                 & 0,18             & 0,77                                        &                      &                  &                                      \\
+                                                                                             & ROC-Area  & 0,77                 & 0,77             & 0,77                                        &                      &                  &                                      \\
+                                                                                             & PRC-Area  & 0,81                 & 0,26             & 0,71                                        &                      &                  &                                      \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}RF}        & TP-Rate   & 0,97                 & 0,67             & 0,91                                        & 0,97                 & 0,67             & 0,91                                 \\
-                                                     & FP-Rate   & 0,67                 & 0,03             & 0,15                                        & 0,33                 & 0,03             & 0,27                                 \\
-                                                     & Precision & 0,93                 & 0,82             & 0,91                                        & 0,92                 & 0,87             & 0,91                                 \\
-                                                     & Recall    & 0,97                 & 0,67             & 0,91                                        & 0,97                 & 0,67             & 0,91                                 \\
-                                                     & F-Score   & 0,95                 & 0,74             & 0,91                                        & 0,95                 & 0,75             & 0,91                                 \\
-                                                     & ROC-Area  & 0,95                 & 0,95             & 0,95                                        & 0,95                 & 0,95             & 0,95                                 \\
-                                                     & PRC-Area  & 0,80                 & 0,61             & 0,76                                        & 0,99                 & 0,97             & 0,96                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}RF}                                                & TP-Rate   & 0,97                 & 0,67             & 0,91                                        & 0,97                 & 0,67             & 0,91                                 \\
+                                                                                             & FP-Rate   & 0,67                 & 0,03             & 0,15                                        & 0,33                 & 0,03             & 0,27                                 \\
+                                                                                             & Precision & 0,93                 & 0,82             & 0,91                                        & 0,92                 & 0,87             & 0,91                                 \\
+                                                                                             & Recall    & 0,97                 & 0,67             & 0,91                                        & 0,97                 & 0,67             & 0,91                                 \\
+                                                                                             & F-Score   & 0,95                 & 0,74             & 0,91                                        & 0,95                 & 0,75             & 0,91                                 \\
+                                                                                             & ROC-Area  & 0,95                 & 0,95             & 0,95                                        & 0,95                 & 0,95             & 0,95                                 \\
+                                                                                             & PRC-Area  & 0,80                 & 0,61             & 0,76                                        & 0,99                 & 0,97             & 0,96                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}SGD}       & TP-Rate   & 0,95                 & 0,23             & 0,81                                        & 0,99                 & 0,15             & 0,93                                 \\
-                                                     & FP-Rate   & 0,23                 & 0,05             & 0,09                                        & 0,85                 & 0,01             & 0,68                                 \\
-                                                     & Precision & 0,84                 & 0,49             & 0,78                                        & 0,83                 & 0,87             & 0,84                                 \\
-                                                     & Recall    & 0,95                 & 0,23             & 0,81                                        & 0,99                 & 0,15             & 0,83                                 \\
-                                                     & F-Score   & 0,89                 & 0,32             & 0,81                                        & 0,90                 & 0,26             & 0,78                                 \\
-                                                     & ROC-Area  & 0,59                 & 0,59             & 0,59                                        & 0,57                 & 0,57             & 0,57                                 \\
-                                                     & PRC-Area  & 0,80                 & 0,26             & 0,70                                        & 0,83                 & 0,30             & 0,72                                 \\ 
+\multirow{7}{0.083\linewidth}{\hspace{0pt}SGD}                                               & TP-Rate   & 0,95                 & 0,23             & 0,81                                        & 0,99                 & 0,15             & 0,93                                 \\
+                                                                                             & FP-Rate   & 0,23                 & 0,05             & 0,09                                        & 0,85                 & 0,01             & 0,68                                 \\
+                                                                                             & Precision & 0,84                 & 0,49             & 0,78                                        & 0,83                 & 0,87             & 0,84                                 \\
+                                                                                             & Recall    & 0,95                 & 0,23             & 0,81                                        & 0,99                 & 0,15             & 0,83                                 \\
+                                                                                             & F-Score   & 0,89                 & 0,32             & 0,81                                        & 0,90                 & 0,26             & 0,78                                 \\
+                                                                                             & ROC-Area  & 0,59                 & 0,59             & 0,59                                        & 0,57                 & 0,57             & 0,57                                 \\
+                                                                                             & PRC-Area  & 0,80                 & 0,26             & 0,70                                        & 0,83                 & 0,30             & 0,72                                 \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}SVM}       & TP-Rate   & 0,99                 & 0,24             & 0,85                                        & 1,00                 & 0,04             & 0,81                                 \\
-                                                     & FP-Rate   & 0,24                 & 0,01             & 0,06                                        & 0,96                 & 0,00             & 0,77                                 \\
-                                                     & Precision & 0,85                 & 0,80             & 0,84                                        & 0,81                 & 0,96             & 0,84                                 \\
-                                                     & Recall    & 0,99                 & 0,24             & 0,85                                        & 1,00                 & 0,04             & 0,81                                 \\
-                                                     & F-Score   & 0,91                 & 0,37             & 0,81                                        & 0,90                 & 0,08             & 0,74                                 \\
-                                                     & ROC-Area  & 0,81                 & 0,81             & 0,81                                        & 0,52                 & 0,52             & 0,52                                 \\
-                                                     & PRC-Area  & 0,80                 & 0,33             & 0,72                                        & 0,81                 & 0,23             & 0,70                                 \\
+\multirow{7}{0.083\linewidth}{\hspace{0pt}SVM}                                               & TP-Rate   & 0,99                 & 0,24             & 0,85                                        & 1,00                 & 0,04             & 0,81                                 \\
+                                                                                             & FP-Rate   & 0,24                 & 0,01             & 0,06                                        & 0,96                 & 0,00             & 0,77                                 \\
+                                                                                             & Precision & 0,85                 & 0,80             & 0,84                                        & 0,81                 & 0,96             & 0,84                                 \\
+                                                                                             & Recall    & 0,99                 & 0,24             & 0,85                                        & 1,00                 & 0,04             & 0,81                                 \\
+                                                                                             & F-Score   & 0,91                 & 0,37             & 0,81                                        & 0,90                 & 0,08             & 0,74                                 \\
+                                                                                             & ROC-Area  & 0,81                 & 0,81             & 0,81                                        & 0,52                 & 0,52             & 0,52                                 \\
+                                                                                             & PRC-Area  & 0,80                 & 0,33             & 0,72                                        & 0,81                 & 0,23             & 0,70                                 \\
 \hline
 \end{tabular}
 }
@@ -255,7 +351,7 @@ Die nachfolgenden Tabellen enthalten die Ergebnisse der Evaluation mit zusätzli
 \cline{3-8}
 \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.085\linewidth}}{}  &            & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}          & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}   \\ 
 \hline
-\multirow{7}{0.085\linewidth}{\hspace{0pt}DT}                   & TP-Rate    & 0,99                 & 0,87             & 0,94                                        & 0,98                 & 0,95             & 0,97                                 \\
+\multirow{7}{0.085\linewidth}{\hspace{0pt}DT /\\J48}                   & TP-Rate    & 0,99                 & 0,87             & 0,94                                        & 0,98                 & 0,95             & 0,97                                 \\
                                                                 & FP-Rate    & 0,87                 & 0,01             & 0,35                                        & 0,05                 & 0,02             & 0,03                                 \\
                                                                 & Precision  & 0,92                 & 0,99             & 0,95                                        & 0,97                 & 0,97             & 0,97                                 \\
                                                                 & Recall     & 0,99                 & 0,87             & 0,94                                        & 0,98                 & 0,95             & 0,97                                 \\
@@ -342,7 +438,7 @@ Die nachfolgenden Tabellen enthalten die Ergebnisse der Evaluation mit zusätzli
 \cline{3-8}
 \multicolumn{1}{>{\Centering\hspace{0pt}}p{0.083\linewidth}}{} &           & \textbf{fehlerfrei}~~ & \textbf{defekt} & \textbf{gew.}\par{}\textbf{Mittel}           & \textbf{fehlerfrei}  & \textbf{defekt}  & \textbf{gew.}\par{}\textbf{Mittel}                  \\ 
 \hline
-\multirow{7}{0.083\linewidth}{\hspace{0pt}DT}                  & TP-Rate   & 0,98                  & 0,93            & 0,97                                         & 0,93                 & 0,70             & 0,87                                                \\
+\multirow{7}{0.083\linewidth}{\hspace{0pt}J48}                  & TP-Rate   & 0,98                  & 0,93            & 0,97                                         & 0,93                 & 0,70             & 0,87                                                \\
                                                                & FP-Rate   & 0,02                  & 0,02            & 0,07                                         & 0,30                 & 0,07             & 0,25                                                \\
                                                                & Precision & 0,97                  & 0,96            & 0,97                                         & 0,90                 & 0,76             & 0,87                                                \\
                                                                & Recall    & 0,98                  & 0,93            & 0,97                                         & 0,93                 & 0,70             & 0,87                                                \\

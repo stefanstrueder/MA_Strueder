@@ -219,6 +219,19 @@
   url          = {https://www.bigdata-insider.de/was-ist-eine-support-vector-machine-a-880134/},
 }
 
+@Article{Medeiros2018,
+  author    = {Flavio Medeiros and Marcio Ribeiro and Rohit Gheyi and Sven Apel and Christian Kastner and Bruno Ferreira and Luiz Carvalho and Baldoino Fonseca},
+  journal   = {{IEEE} Transactions on Software Engineering},
+  title     = {Discipline Matters: Refactoring of Preprocessor Directives in the {\#}ifdef Hell},
+  year      = {2018},
+  month     = {may},
+  number    = {5},
+  pages     = {453--469},
+  volume    = {44},
+  doi       = {10.1109/tse.2017.2688333},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @InProceedings{Moser2008,
   author    = {Raimund Moser and Witold Pedrycz and Giancarlo Succi},
   title     = {A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction},
@@ -285,6 +298,15 @@
   publisher = {Informa {UK} Limited},
 }
 
+@InProceedings{Preschern2019,
+  author    = {Christopher Preschern},
+  booktitle = {Proceedings of the 24th European Conference on Pattern Languages of Programs - {EuroPLop} {\textquotesingle}19},
+  title     = {Patterns to escape the {\#}ifdef hell},
+  year      = {2019},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3361149.3361151},
+}
+
 @InProceedings{Queiroz2016,
   author    = {Rodrigo Queiroz and Thorsten Berger and Krzysztof Czarnecki},
   title     = {Towards predicting feature defects in software product lines},
@@ -292,6 +314,19 @@
   year      = {2016},
   publisher = {{ACM} Press},
   doi       = {10.1145/3001867.3001874},
+}
+
+@Article{Queiroz2015,
+  author    = {Rodrigo Queiroz and Leonardo Passos and Marco Tulio Valente and Claus Hunsen and Sven Apel and Krzysztof Czarnecki},
+  journal   = {Software {\&} Systems Modeling},
+  title     = {The shape of feature code: an analysis of twenty C-preprocessor-based systems},
+  year      = {2015},
+  month     = {jul},
+  number    = {1},
+  pages     = {77--96},
+  volume    = {16},
+  doi       = {10.1007/s10270-015-0483-z},
+  publisher = {Springer Science and Business Media {LLC}},
 }
 
 @InProceedings{Rahman2013,
@@ -458,10 +493,10 @@
 }
 
 @Book{Sammut2017,
-  title     = {Encyclopedia of Machine Learning and Data Mining},
-  publisher = {Springer {US}},
-  year      = {2017},
   editor    = {Claude Sammut and Geoffrey I. Webb},
+  publisher = {Springer {US}},
+  title     = {Encyclopedia of Machine Learning and Data Mining},
+  year      = {2017},
   doi       = {10.1007/978-1-4899-7687-1},
 }
 

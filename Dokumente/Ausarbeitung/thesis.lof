@@ -30,7 +30,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{11}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{12}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{13}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -58,21 +58,23 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{34}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{34}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{37}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{43}{figure.caption.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets\relax }}{38}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{44}{figure.caption.52}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets\relax }}{39}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Vergleich der Accuracies des dateibasierten Datensets\relax }}{44}{figure.caption.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies der featurebasierten Klassifikatoren von scikit-learn und WEKA\relax }}{39}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets \relax }}{45}{figure.caption.58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Vergleich der Accuracies der dateibasierten Klassifikatoren von scikit-learn und WEKA\relax }}{41}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets \relax }}{46}{figure.caption.59}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Übersicht der Accuracies des nicht-featurebasierten Vergleichs\relax }}{41}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Übersicht der Accuracies des nicht-featurebasierten Vergleichs\relax }}{47}{figure.caption.63}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC-Kurven des nicht-featurebasierten Vergleichs\relax }}{42}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC-Kurven des nicht-featurebasierten Vergleichs (v.D. = vorhandenes Datenset)\relax }}{48}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

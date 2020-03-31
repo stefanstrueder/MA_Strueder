@@ -695,6 +695,75 @@
       \verb https://www.bigdata-insider.de/was-ist-eine-support-vector-machine-a-880134/
       \endverb
     \endentry
+    \entry{Medeiros2018}{article}{}
+      \name{author}{8}{}{%
+        {{hash=d01b4ef909d97f5186ad873d203323d2}{%
+           family={Medeiros},
+           familyi={M\bibinitperiod},
+           given={Flavio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ed276d0c2f922e528f9e217a1a64fe13}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={Marcio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=97563880443592de1bb8b6c3e423e1fc}{%
+           family={Gheyi},
+           familyi={G\bibinitperiod},
+           given={Rohit},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a4f57072771b98df56b8f8205f384d00}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=13e9acaffb771a4dec1852c25db6ec54}{%
+           family={Kastner},
+           familyi={K\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9ff3cdc172dcf7c2c6ca7ea5c2146e6a}{%
+           family={Ferreira},
+           familyi={F\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=064d947ee8279b641a36a3910a409e03}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Luiz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3204243485b2b2a34accce32001dc44f}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Baldoino},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers ({IEEE})}%
+      }
+      \strng{namehash}{07928be62b6d421b0998828ecdc8e1df}
+      \strng{fullhash}{c29d6f18eabb010aecf3b86ed278336e}
+      \strng{bibnamehash}{07928be62b6d421b0998828ecdc8e1df}
+      \strng{authorbibnamehash}{07928be62b6d421b0998828ecdc8e1df}
+      \strng{authornamehash}{07928be62b6d421b0998828ecdc8e1df}
+      \strng{authorfullhash}{c29d6f18eabb010aecf3b86ed278336e}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Transactions on Software Engineering}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Discipline Matters: Refactoring of Preprocessor Directives in the {\#}ifdef Hell}
+      \field{volume}{44}
+      \field{year}{2018}
+      \field{pages}{453\bibrangedash 469}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/tse.2017.2688333
+      \endverb
+    \endentry
     \entry{Moser2008}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=46b22c66989257ac974219396cf311d0}{%
@@ -944,6 +1013,34 @@
       \verb 10.1080/00220670209598786
       \endverb
     \endentry
+    \entry{Preschern2019}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=567682e3d90217dcf54258ef9c916dfa}{%
+           family={Preschern},
+           familyi={P\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{ACM} Press}%
+      }
+      \strng{namehash}{567682e3d90217dcf54258ef9c916dfa}
+      \strng{fullhash}{567682e3d90217dcf54258ef9c916dfa}
+      \strng{bibnamehash}{567682e3d90217dcf54258ef9c916dfa}
+      \strng{authorbibnamehash}{567682e3d90217dcf54258ef9c916dfa}
+      \strng{authornamehash}{567682e3d90217dcf54258ef9c916dfa}
+      \strng{authorfullhash}{567682e3d90217dcf54258ef9c916dfa}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 24th European Conference on Pattern Languages of Programs - {EuroPLop} '19}
+      \field{title}{Patterns to escape the {\#}ifdef hell}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1145/3361149.3361151
+      \endverb
+    \endentry
     \entry{Queiroz2016}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=304945f8a31bee8ce53fb8932313282e}{%
@@ -980,6 +1077,65 @@
       \field{year}{2016}
       \verb{doi}
       \verb 10.1145/3001867.3001874
+      \endverb
+    \endentry
+    \entry{Queiroz2015}{article}{}
+      \name{author}{6}{}{%
+        {{hash=304945f8a31bee8ce53fb8932313282e}{%
+           family={Queiroz},
+           familyi={Q\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=4c69830e3b97db0816160cf3076359d3}{%
+           family={Passos},
+           familyi={P\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f324ce400373656751c8c5ec06005410}{%
+           family={Valente},
+           familyi={V\bibinitperiod},
+           given={Marco\bibnamedelima Tulio},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=5fca906a9cd6f1d5d199439684965639}{%
+           family={Hunsen},
+           familyi={H\bibinitperiod},
+           given={Claus},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a4f57072771b98df56b8f8205f384d00}{%
+           family={Apel},
+           familyi={A\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5de6edc81e667d8db9d387e681522a62}{%
+           family={Czarnecki},
+           familyi={C\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{cbf84d3c1ce172fead2e3c9e02bb446a}
+      \strng{fullhash}{54b370a50f78379bd7329f25bd07c238}
+      \strng{bibnamehash}{cbf84d3c1ce172fead2e3c9e02bb446a}
+      \strng{authorbibnamehash}{cbf84d3c1ce172fead2e3c9e02bb446a}
+      \strng{authornamehash}{cbf84d3c1ce172fead2e3c9e02bb446a}
+      \strng{authorfullhash}{54b370a50f78379bd7329f25bd07c238}
+      \field{sortinit}{Q}
+      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software {\&} Systems Modeling}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{The shape of feature code: an analysis of twenty C-preprocessor-based systems}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{pages}{77\bibrangedash 96}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/s10270-015-0483-z
       \endverb
     \endentry
     \entry{Rahman2013}{inproceedings}{}
@@ -1410,6 +1566,64 @@
       \range{pages}{45}
       \verb{doi}
       \verb 10.1145/2580950
+      \endverb
+    \endentry
+    \entry{Wen2019}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=25eac348c54606c27d3a7fa57d9701a6}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Ming},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6c6e6b4f38f23facbfae59c48ff5cc22}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Rongxin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=46dbae95524ea61981fe3555dc9bcc2b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yepang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6b779e61d7282e887958be8e2b1bc595}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yongqiang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=69b869a46fb5e87f0adc2c5f2fe7dcb0}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Xuan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=00990eadf2e5416aef5ce0ba84e48c58}{%
+           family={Cheung},
+           familyi={C\bibinitperiod},
+           given={Shing-Chi},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=3995a0c731177d2aa23cbb3a6126be27}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Zhendong},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{ACM} Press}%
+      }
+      \strng{namehash}{60b7cd82a28454932456d72b78fa87d2}
+      \strng{fullhash}{8384faf5b34db97f4ee842484942c9b5}
+      \strng{bibnamehash}{60b7cd82a28454932456d72b78fa87d2}
+      \strng{authorbibnamehash}{60b7cd82a28454932456d72b78fa87d2}
+      \strng{authornamehash}{60b7cd82a28454932456d72b78fa87d2}
+      \strng{authorfullhash}{8384faf5b34db97f4ee842484942c9b5}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2019 27th {ACM} Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering - {ESEC}/{FSE} 2019}
+      \field{title}{Exploring and exploiting the correlations between bug-inducing and bug-fixing commits}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1145/3338906.3338962
       \endverb
     \endentry
     \entry{Zhang2016}{article}{}
