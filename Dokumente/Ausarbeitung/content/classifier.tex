@@ -81,7 +81,7 @@ Logistische-Regressions-Klassifikatoren (englisch: Logistic Regression) basieren
 
 \[logit(Y) = ln(\frac{\pi}{1-\pi})\]
 
-$Y$ beschreibt dabei die zu klassifizierende Datenmenge, wohingegen $\pi$ die Verhältnisse der Wahrscheinlichkeiten der Werte der Attribute der Eingabemenge bezeichnet. Am besten geeignet ist dieser Klassifikator für eine Kombination aus kategorischen oder kontinuierlichen Eingabedaten und kategorischen Zielklassen \cite{Peng2002}. Der von scikit-learn zur Verfügung stehende Ridge Classifier basiert ebenfalls auf dem Konzept der logistischen Regression.
+$Y$ beschreibt dabei die zu klassifizierende Datenmenge, wohingegen $\pi$ die Verhältnisse der Wahrscheinlichkeiten der Werte der Attribute der Eingabemenge bezeichnet. Am besten geeignet ist dieser Klassifikator für eine Kombination aus kategorialen oder numerischen Eingabedaten und kategorischen Zielklassen \cite{Peng2002}. Der von scikit-learn zur Verfügung stehende Ridge Classifier basiert ebenfalls auf dem Konzept der logistischen Regression.
 
 \textbf{Stochastic Gradient Descent\medskip}\\
 Ein Stochastic-Gradient-Descent-Klassifikator basiert auf dem Gradientenverfahren (englisch: Gradient Descent), welches das Ziel hat, zu einem gegebenen $x$ das minimale $y$ zu finden \cite{Srinivasan2019}. Im Falle der Klassifikation mittels Machine Learning bezeichnet $x$ dabei die zu klassifizierende Eingabemenge und $y$ das erwartete Ergebnis der Klassifikation. Minimiert werden sollen dabei die \glqq Kosten\grqq{}, die sich aus der Ermittlung der Ergebnisse ergeben.

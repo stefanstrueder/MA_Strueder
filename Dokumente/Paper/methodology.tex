@@ -1,5 +1,44 @@
 \section{Methodology}
 
-\subsection{Subject Systems}
+\subsection{Creation of Dataset}
 
-\subsection{Conceptual Structures and Metrics}
+\subsection{Selection of Metrics}
+
+\begin{table*}[ht]
+\centering
+\caption{Overview of used metrics}
+\label{tab:metrics}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.027\linewidth}|>{\hspace{0pt}}p{0.312\linewidth}|>{\hspace{0pt}}p{0.592\linewidth}|>{\hspace{0pt}}p{0.062\linewidth}|} 
+\cline{2-4}
+\multicolumn{1}{>{\hspace{0pt}}p{0.027\linewidth}|}{}  & \textbf{Metric}                                         & \textbf{Description}                                                                                                                                                                                                                                                                              & \textbf{Source}   \\ 
+\hline
+\multirow{7}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits (COMM)                                & Number of commits associated with the feature/file in a release.                                                                                                                                                                                                                                  & \cite{Queiroz2016}              \\ 
+\cline{2-4}
+                                                       & Number of active developers (ADEV)                      & Number of developers who have edited (changed, deleted or added) \par{}the feature / file within a release                                                                                                                                                                                        & \cite{Queiroz2016}              \\ 
+\cline{2-4}
+                                                       & Number of distinct developers (DDEV)                    & Cumultative number of developers who have edited (changed, deleted or added) \par{}the feature / file within a release                                                                                                                                                                            & \cite{Queiroz2016}              \\ 
+\cline{2-4}
+                                                       & Experience of all develepoers (EXP)                     & geometric mean of the experience of all developers who have edited \par{}(changed, deleted or added) the feature / file within a release.\textasciitilde{}\par{}Experience is defined as the sum of the changed, deleted or added \par{}lines in the commits associated with the feature / file.  & \cite{Queiroz2016}              \\ 
+\cline{2-4}
+                                                       & Experience of the most involved developers\par{}(OEXP)  & Experience of the developer who has edited (changed, deleted or added) \par{}the feature / file most often within a release. Experience is defined as the \par{}sum of changed, deleted, or added lines in the commits associated with the \par{}feature/file.                                    & \cite{Queiroz2016}              \\ 
+\cline{2-4}
+                                                       & Degree of modifications (MODD)                          & Number of edits (change, removal, extension) of the feature / file within a release.                                                                                                                                                                                                              & *                 \\ 
+\cline{2-4}
+                                                       & Scope of modifications (MODS)                           & Number of edited features / files within a release (feature or file overlapping value). \par{}Idea: The more features / files have been edited in a release, \par{}the more error-prone they seem to be.                                                                                          & *                 \\ 
+\hline
+\multirow{4}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code (NLOC)                                    & Average number of lines of code of the files associated with the feature /\par{}\textasciitilde{}file within a release.                                                                                                                                                                           & *                 \\ 
+\cline{2-4}
+                                                       & Cyclomatic Complexity (CYCO)                            & Average cyclomatic complexity of the files associated with the feature / \par{}file within a release.                                                                                                                                                                                             & *                 \\ 
+\cline{2-4}
+                                                       & Number of added lines (ADDL)                            & Average number of lines of code added to the files associated with \par{}the feature / file within a release.                                                                                                                                                                                     & *                 \\ 
+\cline{2-4}
+                                                       & Number of removed lines (REML)                          & Average number of lines of code deleted from the files associated \par{}with the feature / from the file within a release                                                                                                                                                                         & *                 \\ 
+\hline
+\multicolumn{4}{|>{\centering\arraybackslash\hspace{0pt}}p{0.993\linewidth}|}{\textit{* These values were calculated based on the metadata obtained with PyDriller.}\par{}\textit{Feature-level metrics were calculated based on the metadata of the underlying files.}}                                                                                                                                                                 \\
+\hline
+\end{tabular}
+}
+\end{table*}
+
+\subsection{Selection of Classifiers}

@@ -9,6 +9,19 @@ Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten 
 
 \section{Herausforderungen und Limitationen}
 
+\subsection*{Identifikation von Features}
+
+Die grundsätzliche Frage, die im Rahmen der Identifikation der Features aufkam, war: \glqq Was wird als Feature gezählt?\grqq. Wie bereits in \hyperref[construction]{Abschnitt 3.2} erwähnt wurde, barg die Identifikation der Features einige Herausforderungen. So gestaltete sich die erste Herausforderung in der Ausfilterung von \glqq Header-Features\grqq{}, die in einigen Programmierparadigmen verwendet werden, um Header-Dateien im Sourcecode einzubinden. Diese Header-Features erzeugen jedoch keine Variabilität im Code, sodass sie unerwünscht sind. Identifizierbar waren die meisten dieser Header-Features an ihren vergebenen Namen, welche ein \texttt{\_h\_} aufwiesen. Auf diesem Weg konnten sie mittels regulärer Ausdrücke schnell ermittelt und ausgefiltert werden. Es besteht jedoch auch die Möglichkeit, dass in einigen Softwareprojekten die Header-Features nicht explizit durch ihre Namensgebung kenntlich gemacht werden. Sie lassen sich somit nur schwer identifizieren, beispielsweise durch eine manuelle Sichtung der Kontexte der Features im Sourcecode. Dies wäre jedoch im vorliegenden Fall aufgrund der großen Menge an Features sehr zeitaufwändig und wurde aus diesem Grund nicht durchgeführt. Die Entfernung der erkennbaren Header-Features zeigte, dass ein erheblicher Teil der zuvor identifizierten Features unerwünscht war. Diese Methode erwies sich somit als effektiv.
+
+
+oder eine automatisierte Analyse des Kontexts des Features im Sourcecode > parsing.
+
+
+falsche features, was ist wirklich feature?, header, keine tools, parsing
+
+\subsection*{Einbindung des Bezugs zu Features}
+features unterliegen den Dateien, ... Keine in-depth Analyse des Codes
+
 \subsection*{Heuristik zur Erkennung von korrektiven Commits}
 manuell
 stichprobe
@@ -28,9 +41,9 @@ coverage\grqq{} der Aussage zwischen fehlereinführenden und korrektiven Commits
 
 Ferner stellten die Autoren der Studie in eigenen durchgeführten Tests fest, dass die Ergebnisse von acht von zehn früheren Studien durch den unpräzisen Algorithmus signifikant beeinflusst wurden \cite{Wen2019}. Dies kann somit auch auf diese Arbeit zutreffen. Es existiert jedoch momentan keine alternative Methode zur Identifizierung von fehlereinführenden Commits. Sollte eine neue Methode oder eine verbesserte Version des SZZ-Algorithmus veröffentlicht werden, so würde es sich anbieten, die Hauptschritte dieser Arbeit unter Berücksichtigung der neuen Methode zu wiederholen, um sie mit den hier vorliegenden Ergebnissen zu vergleichen, um die Einflüsse des SZZ-Algorithmus herauszustellen.
 
-
+\subsection*{Vorhersageziel}
+commits, releases?
 \textbf{absprechen mit Daniel ...}
-\textbf{FEATURE-BEZUG IM KONTEXT VON DATEIEN}
 
 \section{Vergleich der Klassifikatoren}
 
@@ -237,9 +250,13 @@ Eine Erklärung für die unterschiedlichen Streuungen der Ergebnisse zwischen de
 
 \subsubsection*{Weitere Evaluationsmetriken}
 
-Dieser Abschnitt stellt die Ergebnisse der weiteren Evaluationsmetriken TP-Rate / Recall, FP-Rate, Precision und F-Score vor. Diese können in \autoref{tab:met-feat} für das featurebasierte Datenset und in \autoref{tab:met-file} für das dateibasierte Datenset eingesehen werden. Aufgeteilt werden die Ergebnisse nach verwendetem Tool sowie nach den Werten der Zielklasse \glqq fehlerfrei\grqq{} und \glqq defekt\grqq. Zudem wird das gewichtete Mittel angegeben. Dabei handelt es sich um den Mittelwert der Ergebnisse beider Werte der Zielklasse unter Einbezug der Anzahl der korrekten Vorhersagen je Wert. Es zeigt somit die Performanz aggregiert für beide Werte an. 
+Dieser Abschnitt stellt die Ergebnisse der weiteren Evaluationsmetriken TP-Rate / Recall, FP-Rate, Precision und F-Score vor. Diese können in \autoref{tab:met-feat} für das featurebasierte Datenset und in \autoref{tab:met-file} für das dateibasierte Datenset eingesehen werden. Aufgeteilt werden die Ergebnisse nach verwendetem Tool sowie nach den Werten der Zielklasse \glqq fehlerfrei\grqq{} und \glqq defekt\grqq. Zudem wird das gewichtete Mittel angegeben. Dabei handelt es sich um den Mittelwert der Ergebnisse beider Werte der Zielklasse unter Einbezug der Anzahl der korrekten Vorhersagen je Wert. Es zeigt somit die Performanz aggregiert für beide Werte an und liegt im Idealfall bei 1,00. Die vollständigen Tabellen der Ergebnisse der Evaluation, inklusive einer weiteren Metrik, können im \hyperref[appendix3]{Anhang} gefunden werden.
 
-\textbf{HIER}
+Betrachtet man die Ergebnisse der Metriken des featurebasierten Datensets in \autoref{tab:met-feat}, so ergibt sich eine breite Streuung der Werte. Jeder Klassifikator zeigt durch seine Ergebnisse seine individuellen \glqq Stärken\grqq{} und \glqq Schwächen\grqq. In der Gesamtheit der Kombination der Werte betrachtet, 
+
+TOP: RF, KNN, DT (eingeschränkt)
+Mittel: LR, NN
+\textbf{NÄHER BETRACHTEN}
 
 
 \begin{table}[t]
@@ -364,11 +381,13 @@ Dieser Abschnitt stellt die Ergebnisse der weiteren Evaluationsmetriken TP-Rate 
 
 \subsubsection*{ROC-Kurven und ROC-Bereiche}
 
-Die Interpretation der ROC-Kurven und ROC-Bereiche erfolgt anhand der in \hyperref[roc-def]{Abschnitt 5.2.1} vorgestellten Methodik. Die ROC-Kurven samt der Werte der ROC-Bereiche (repräsentiert durch \glqq AUC\grqq) sind in \autoref{fig:roc-feat} (featurebasiertes Datenset) und \autoref{fig:roc-file} dargestellt. Zu sehen sind jeweils die von den Tools scikit-learn und WEKA ausgegebenen und unveränderten Plots. Die in den Plots des Tools WEKA dargestellten Farbverläufe der Kurven verdeutlichen keine für diesen Zweck relevanten Informationen und können somit ignoriert werden.
+Die Interpretation der ROC-Kurven und ROC-Bereiche erfolgt anhand des in \hyperref[roc-def]{Abschnitt 5.2.1} vorgestellten Schemas. Die ROC-Kurven samt der Werte der ROC-Bereiche (repräsentiert durch \glqq AUC\grqq) sind in \autoref{fig:roc-feat} (featurebasiertes Datenset) und \autoref{fig:roc-file} dargestellt. Zu sehen sind jeweils die von den Tools scikit-learn und WEKA ausgegebenen und unveränderten Plots. Die in den Plots des Tools WEKA dargestellten Farbverläufe der Kurven verdeutlichen keine für diesen Zweck relevanten Informationen und können somit ignoriert werden.
 
-Die ROC-Kurven des featurebasierten Datensets in \autoref{fig:roc-feat} zeigen, dass erneut die Ent-scheidungsbaum-basierten Klassifikatoren RF beider Tools nahezu den Idealfall der Performanz widerspiegeln. Dies bezeugen auch die ROC-Bereiche von 0,95. Die Klassifikatoren SGD und SVM (nur WEKA) zeigen hingegen den nahezu schlechtesten Fall mit winkelhalbierenden Kurven und ROC-Bereichen nahe des unerwünschten Wertes von 0,5. Dies zeigt, dass die Klassifikatoren die Werte der Zielklasse nicht unterscheiden können und somit \glqq raten\grqq{} statt präzise vorherzusagen. Eine weitere Besonderheit stellt die ROC-Kurve des NB-Klassifikators von scikit-learn dar. Sie verläuft konvex und besitzt einen ROC-Bereich von 0,41, welcher unter dem unerwünschten Wert liegt. Dies bedeutet, dass der Klassifikator inverse Vorhersagen trifft. Im vorliegenden Fall bedeutet dies, dass statt dem Label \glqq fehlerfrei\grqq{} das inverse, also gegenteilige, Label \glqq defekt\grqq{} vorhersagt. Die weiteren Klassifikatoren besitzen ROC-Kurven, welche den Normalfall mit einer durchschnittlichen oder überdurchschnittlichen Performanz darstellen.
+Die ROC-Kurven des featurebasierten Datensets in \autoref{fig:roc-feat} zeigen, dass erneut der Ent-scheidungsbaum-basierte Klassifikator RF beider Tools nahezu den Idealfall der Performanz widerspiegeln. Dies bezeugen auch die ROC-Bereiche von 0,95. Die Klassifikatoren SGD und SVM (nur WEKA) zeigen hingegen den nahezu schlechtesten Fall mit winkelhalbierenden Kurven und ROC-Bereichen nahe des unerwünschten Wertes von 0,50. Dies zeigt, dass die Klassifikatoren die Werte der Zielklasse nicht unterscheiden können und somit \glqq raten\grqq{} statt präzise vorherzusagen. Eine weitere Besonderheit stellt die ROC-Kurve des NB-Klassifikators von scikit-learn dar. Sie verläuft konvex und besitzt einen ROC-Bereich von 0,41, welcher unter dem unerwünschten Wert liegt. Dies bedeutet, dass der Klassifikator inverse Vorhersagen trifft. Im vorliegenden Fall bedeutet dies, dass statt dem Label \glqq fehlerfrei\grqq{} das inverse, also gegenteilige, Label \glqq defekt\grqq{} vorhersagt wird. Für den Fall eines ROC-Bereiches von 0,00 können somit die Label einfach invertiert werden. Die weiteren Klassifikatoren besitzen ROC-Kurven, welche den Normalfall mit einer durchschnittlichen oder überdurchschnittlichen Performanz darstellen. Der Vergleich zwischen den verwendeten Tools zeigt, dass sich die Kurven und die Werte der Bereiche in den überwiegenden Fällen ähneln. Lediglich die Klassifikatoren NB und SVM weisen signifikante Unterschiede auf. Begründet werden kann dies durch verschiedene Implementierungsansätze der Klassifikationsalgorithmen in den Tools. So ist zum Beispiel nicht ersichtlich, welche Variation des NB-Klassifikators von WEKA verwendet wird. Diese kann somit gegebenenfalls nicht für die zugrundeliegenden Datensets optimiert sein und zu ungenauen oder falschen Ergebnissen führen.
 
-\textbf{HIER}
+Der Blick auf die ROC-Kurven des dateibasierten Datensets in \autoref{fig:roc-file} zeigt, dass die Performanzen, gegenüber des featurebasierten Datensets, für die meisten Klassifikatoren höher ausfallen. Insbesondere die Klassifikatoren, welche in der ersten und zweiten Zeile der Abbildung dargestellt sind, mit Ausnahme des NN-Klassifikators von WEKA, besitzen ROC-Kurven, die nahezu oder vollständig dem Idealfall entsprechen. Die jeweiligen ROC-Bereiche mit Werten von über 0,90 bekräftigen dies. Einbußen in der Performanz können, mit Ausnahme des NB-Klassifikators von scikit-learn, bei den Klassifikatoren der dritten und vierten Zeile festgestellt werden. Keiner der Klassifikatoren konnte einen ROC-Bereich von 0,70 erreichen. Ihre Leistung ist somit auf ein unterdurchschnittliches Niveau gesunden. Die WEKA-Klassifikatoren SGD und SVM zeigen weiterhin den unerwünschten Fall.
+
+Auch die Betrachtung der ROC-Kurven mit ihren zugehörigen Bereichen zeigte erneut, dass die RF-Klassifikatoren die beste Wahl für den in dieser Arbeit vorliegenden Klassifikationsfall darstellen. Sie zeigten in allen Gesichtspunkten der Evaluation die höchste Performanz.
 
 \begin{figure}[t]
   \centering
@@ -418,11 +437,6 @@ Die ROC-Kurven des featurebasierten Datensets in \autoref{fig:roc-feat} zeigen, 
   \caption{ROC-Kurven der Klassifikatoren des dateibasierten Datensets \label{fig:roc-file}}
 \end{figure}
 
-\subsubsection*{Vergleich der verwendeten Tools}
-
-\textbf{HIER}
-
-
 \fbox{\parbox{\linewidth}{RQ3c: WELCHE VOR- UND NACHTEILE BESITZT EIN KLASSIFIKATOR?\medskip\\
 Hier soll mal so viel Text stehen, damit der ganze Text nicht nur in einer Zeile steht sondern in mindestens zwei oder mehr Zeilen, denn andernfalls werden wir nicht sehen können ob der Rahmen nur um die erste Zeile geht, oder wie wir wollen sich um den ganzen Absatz zieht.}}
 
@@ -464,6 +478,8 @@ WEIGHTED\_AGE     & wage               & $Weighted Age = \frac{\sum_{i=1}^N Age(
 
 \fbox{\parbox{\linewidth}{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip\\
 Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der wissenschaftlichen Literatur zurückgegriffen \cite{Moser2008}. Dieses Datenset basiert auf den mittels PyDriller abgerufenen Daten und umfasst 17 Attribute. Zum besseren Vergleich wurde ein weiteres Datenset erstellt, welches nur jene Dateien umfasst, in denen sich Featurecode befindet.}}
+
+\subsubsection*{Konfusionsmatrizen}
 
 \begin{table}[t]
 \centering
@@ -512,6 +528,7 @@ Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der 
 }
 \end{table}
 
+\subsubsection*{Accuracies}
 
 \begin{figure}[t]
     \centering
@@ -519,30 +536,7 @@ Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der 
     \caption{Übersicht der Accuracies des nicht-featurebasierten Vergleichs\label{fig:class-acc}}
 \end{figure}
 
-\begin{figure}[t]
-  \centering
-  \subfloat[][J48 n. \cite{Moser2008}\\AUC = 0,97]{\includegraphics[width=0.25\linewidth]{images/j48_eval}} 
-  \subfloat[][J48 (v. D.)\\AUC = 0,86]{\includegraphics[width=0.25\linewidth]{images/j48_eval_feat}}
-  \subfloat[][NN n. \cite{Moser2008}\\AUC = 0,89]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
-  \subfloat[][NN (v. D.)\\AUC = 0,85]{\includegraphics[width=0.25\linewidth]{images/nn_eval_feat}}
-  \qquad
-  \subfloat[][KNN n. \cite{Moser2008}\\AUC = 0,93]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
-  \subfloat[][KNN (v. D.)\\AUC = 0,77]{\includegraphics[width=0.25\linewidth]{images/knn_eval_feat}}
-  \subfloat[][RF n. \cite{Moser2008}\\AUC = 1,00]{\includegraphics[width=0.25\linewidth]{images/rf_eval}} 
-  \subfloat[][RF (v. D.)\\AUC = 0,97]{\includegraphics[width=0.25\linewidth]{images/rf_eval_feat}} 
-  \qquad
-  \subfloat[][LR n. \cite{Moser2008}\\AUC = 0,77]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
-  \subfloat[][LR (v. D.)\\AUC = 0,73]{\includegraphics[width=0.25\linewidth]{images/lr_eval_feat}}
-  \subfloat[][SGD n. \cite{Moser2008}\\AUC = 0,54]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
-  \subfloat[][SGD (v. D.)\\AUC = 0,51]{\includegraphics[width=0.25\linewidth]{images/sgd_eval_feat}}
-  \qquad
-  \subfloat[][NB n. \cite{Moser2008}\\AUC = 0,73]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
-  \subfloat[][NB (v. D.)\\AUC = 0,61]{\includegraphics[width=0.25\linewidth]{images/nb_eval_feat}}
-  \subfloat[][SVM n. \cite{Moser2008}\\AUC = 0,53]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
-  \subfloat[][SVM (v. D.)\\AUC = 0,50]{\includegraphics[width=0.25\linewidth]{images/svm_eval_feat}}
-  \caption{ROC-Kurven des nicht-featurebasierten Vergleichs\\(v.D. = vorhandenes Datenset)}
-\end{figure}
-
+\subsubsection*{Weitere Evaluationsmetriken}
 
 \begin{table}[t]
 \centering
@@ -598,5 +592,31 @@ Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der 
 \end{tabular}
 }
 \end{table}
+
+\subsubsection*{ROC-Kurven und ROC-Bereiche}
+
+\begin{figure}[t]
+  \centering
+  \subfloat[][J48 n. \cite{Moser2008}\\AUC = 0,97]{\includegraphics[width=0.25\linewidth]{images/j48_eval}} 
+  \subfloat[][J48 (v. D.)\\AUC = 0,86]{\includegraphics[width=0.25\linewidth]{images/j48_eval_feat}}
+  \subfloat[][NN n. \cite{Moser2008}\\AUC = 0,89]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
+  \subfloat[][NN (v. D.)\\AUC = 0,85]{\includegraphics[width=0.25\linewidth]{images/nn_eval_feat}}
+  \qquad
+  \subfloat[][KNN n. \cite{Moser2008}\\AUC = 0,93]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
+  \subfloat[][KNN (v. D.)\\AUC = 0,77]{\includegraphics[width=0.25\linewidth]{images/knn_eval_feat}}
+  \subfloat[][RF n. \cite{Moser2008}\\AUC = 1,00]{\includegraphics[width=0.25\linewidth]{images/rf_eval}} 
+  \subfloat[][RF (v. D.)\\AUC = 0,97]{\includegraphics[width=0.25\linewidth]{images/rf_eval_feat}} 
+  \qquad
+  \subfloat[][LR n. \cite{Moser2008}\\AUC = 0,77]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
+  \subfloat[][LR (v. D.)\\AUC = 0,73]{\includegraphics[width=0.25\linewidth]{images/lr_eval_feat}}
+  \subfloat[][SGD n. \cite{Moser2008}\\AUC = 0,54]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
+  \subfloat[][SGD (v. D.)\\AUC = 0,51]{\includegraphics[width=0.25\linewidth]{images/sgd_eval_feat}}
+  \qquad
+  \subfloat[][NB n. \cite{Moser2008}\\AUC = 0,73]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
+  \subfloat[][NB (v. D.)\\AUC = 0,61]{\includegraphics[width=0.25\linewidth]{images/nb_eval_feat}}
+  \subfloat[][SVM n. \cite{Moser2008}\\AUC = 0,53]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
+  \subfloat[][SVM (v. D.)\\AUC = 0,50]{\includegraphics[width=0.25\linewidth]{images/svm_eval_feat}}
+  \caption{ROC-Kurven des nicht-featurebasierten Vergleichs\\(v.D. = vorhandenes Datenset)}
+\end{figure}
 
 \cleardoublepage
