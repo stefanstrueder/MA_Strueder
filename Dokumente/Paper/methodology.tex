@@ -1,6 +1,67 @@
+% !TEX root = /doc.tex
+
 \section{Methodology}
 
 \subsection{Creation of Dataset}
+
+The data set forms the basis for the training of the machine learning classifiers and is created specifically for this work based on commits from 13 feature-based software projects. The software projects are selected on the basis of previous use in scientific literature \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. The software projects used for this thesis are listed in \autoref{tab:tools} together with their purpose and data sources.
+
+\begin{table}[t]
+\centering
+\caption{Used software projects}
+\label{tab:tools}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|l|} 
+\hline
+ \textbf{Project}  & \textbf{Purpose}  & \textbf{Data source}    \\ 
+\hline
+\textbf{Blender}   & 3D modelling tool & GitHub mirror           \\ 
+\hline
+\textbf{Busybox}   & UNIX toolkit      & Git repository          \\ 
+\hline
+\textbf{Emacs}     & text editor       & GitHub mirror           \\ 
+\hline
+\textbf{GIMP}      & graphics editor   & GitLab repository       \\ 
+\hline
+\textbf{Gnumeric}  & spreadsheet       & GitLab repository       \\ 
+\hline
+\textbf{gnuplot}   & plotting tool     & GitHub mirror           \\ 
+\hline
+\textbf{Irssi}     & IRC client        & GitHub repository       \\ 
+\hline
+\textbf{libxml2}   & XML parser        & GitLab repository       \\ 
+\hline
+\textbf{lighttpd}  & web server        & Git repository          \\ 
+\hline
+\textbf{MPSolve}   & polynom solver    & GitHub repository       \\ 
+\hline
+\textbf{Parrot}    & virtual machine   & GitHub repository       \\ 
+\hline
+\textbf{Vim}       & text editor       & GitHub repository       \\ 
+\hline
+\textbf{xfig}      & graphics editor   & Sourceforge repository  \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+To get the commit data of the software projects the Python library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} was used \cite{Spadini2018}. This allows easy data extraction from Git repositories to obtain commits, commit messages, developers, diffs, and more (called "metadata" in the following). The URLs to the Git repositories of the software projects were used as input for the specially created Python scripts for receiving the commit metadata. Furthermore, the metadata was divided into commits per release. This was made possible by specifying release tags in the PyDriller code, based on the tag structure of Git repositories. For each modified file within a commit and a release, the following metadata was retrieved using PyDriller:
+
+\begin{itemize}
+\item commit hash (unique identifier of a commit)
+\item commit author
+\item commit message
+\item filename
+\item lines of code
+\item cyclomatic complexity
+\item number of added lines
+\item number of removed lines
+\item diff (changeset)
+\end{itemize}
+
+The data obtained in this way was stored in a MySQL database after retrieval. For each software project, a separate table was created in which, in addition to the metadata above, the name of the software project and the release numbers associated with the commits were stored. Each modified file of a commit receives one row of the database tables. The further construction of the data set is divided into several phases of data processing and optimization.
+
+The first phase consists of extracting the features involved in a modified file. This was done by using a Python script to identify the preprocessor statements \texttt{\#IFDEF} and \texttt{\#IFNDEF} in the diffs of the modified files, and then saving the string following the directives as a feature until the end of the line of code. The identification was done using regular expressions. The features identified per file are stored in an additional column in the respective MySQL tables. In case a feature is identified after the \texttt{\#IFNDEF} directive, the feature is stored with a preceding "not". It will be saved as a separate feature, along with its non-negated form. Combinations of features are stored in their identified form. If no feature could be identified, "\texttt{none}" is saved accordingly.
 
 \subsection{Selection of Metrics}
 

@@ -1,3 +1,4 @@
+% Encoding: UTF-8
 @inproceedings{Gaeta:2015:MAS:2791060.2791104,
  author = {Gaeta, Jes\'{u}s Padilla and Czarnecki, Krzysztof},
  title = {Modeling Aerospace Systems Product Lines in SysML},
@@ -1250,13 +1251,13 @@ year = "2007",
 author = {Marco Sinnema and Sybren Deelstra}
 }
 
-@techreport{heymans.ea:2003:sot,
-	title = {{Software Product Line: State of the Art}},
-	year = {2003},
-	institution = {Institut d'Informatique FUNDP, Namur},
-	number	= {EPH3310300R0462 / 215315},
-	note = {Available at \url{http://www.inf.ufpr.br/silvia/topicos/artigostrab10/artigo1-S1e2.pdf}},
-	author = {Heymans, Patrick and Trigauxf, Jean-Christophe }
+@TechReport{heymans.ea:2003:sot,
+  author      = {Heymans, Patrick and Trigauxf, Jean-Christophe},
+  institution = {Institut d'Informatique FUNDP, Namur},
+  title       = {{Software Product Line: State of the Art}},
+  year        = {2003},
+  note        = {Available at \url{http://www.inf.ufpr.br/silvia/topicos/artigostrab10/artigo1-S1e2.pdf}},
+  number      = {EPH3310300R0462 / 215315},
 }
 
 
@@ -1652,12 +1653,12 @@ publisher={University of Berlin},
 year={2008}
 }
 
-@phdthesis{John2010,
-title={Pattern-based Documentation Analysis for Software Product Lines},
-author={Isabel John },
-volume={PhD Theses in Experimental Software Engineering Vol.30},
-publisher={Fraunhofer IESE},
-year={2010}
+@PhdThesis{John2010,
+  author    = {Isabel John},
+  title     = {Pattern-based Documentation Analysis for Software Product Lines},
+  year      = {2010},
+  publisher = {Fraunhofer IESE},
+  volume    = {PhD Theses in Experimental Software Engineering Vol.30},
 }
 
 @Article{rabiser.ea:2016:multi-level,
@@ -1895,3 +1896,49 @@ ONF TR-514
 	pages={239--253},
 	year={2019}
 }
+
+@InProceedings{Queiroz2016,
+  author    = {Rodrigo Queiroz and Thorsten Berger and Krzysztof Czarnecki},
+  booktitle = {Proceedings of the 7th International Workshop on Feature-Oriented Software Development - {FOSD} 2016},
+  title     = {Towards predicting feature defects in software product lines},
+  year      = {2016},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3001867.3001874},
+}
+
+@Article{Hunsen2015,
+  author    = {Claus Hunsen and Bo Zhang and Janet Siegmund and Christian Kästner and Olaf Le{\ss}enich and Martin Becker and Sven Apel},
+  journal   = {Empirical Software Engineering},
+  title     = {Preprocessor-based variability in open-source and industrial software systems: An empirical study},
+  year      = {2015},
+  month     = {apr},
+  number    = {2},
+  pages     = {449--482},
+  volume    = {21},
+  doi       = {10.1007/s10664-015-9360-1},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Queiroz2015,
+  author    = {Rodrigo Queiroz and Leonardo Passos and Marco Tulio Valente and Claus Hunsen and Sven Apel and Krzysztof Czarnecki},
+  journal   = {Software {\&} Systems Modeling},
+  title     = {The shape of feature code: an analysis of twenty C-preprocessor-based systems},
+  year      = {2015},
+  month     = {jul},
+  number    = {1},
+  pages     = {77--96},
+  volume    = {16},
+  doi       = {10.1007/s10270-015-0483-z},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@InProceedings{Liebig2010,
+  author    = {Jörg Liebig and Sven Apel and Christian Lengauer and Christian Kästner and Michael Schulze},
+  booktitle = {Proceedings of the 32nd {ACM}/{IEEE} International Conference on Software Engineering - {ICSE} {\textquotesingle}10},
+  title     = {An analysis of the variability in forty preprocessor-based software product lines},
+  year      = {2010},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/1806799.1806819},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

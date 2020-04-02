@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  1 APR 2020 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  2 APR 2020 13:44
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -1442,9 +1442,9 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count351
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 127.
+(Font)              scaled to size 17.28pt on input line 130.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 127.
+n input line 130.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\t1linuxb
 iolinumt-tlf.fd"
@@ -1452,19 +1452,19 @@ File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 127.
+(Font)              scaled to size 17.28pt on input line 130.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 127.
+(Font)              scaled to size 17.28pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 127.
+(Font)              scaled to size 12.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 127.
+(Font)              scaled to size 10.0pt on input line 130.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 127.
+(Font)              scaled to size 10.0pt on input line 130.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1479,100 +1479,121 @@ fg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 127.
+(Font)              scaled to size 7.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 127.
+(Font)              scaled to size 9.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 127.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 12
-7.
+(Font)              scaled to size 10.95pt on input line 130.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 13
+0.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\t1zi4.
 fd"
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 127.
+(Font)              scaled to size 9.0pt on input line 130.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 127.
+(Font)              scaled to size 8.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 127.
+(Font)              scaled to size 8.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 127.
- (introduction.tex) (relatedwork.tex) (background.tex) (methodology.tex
+(Font)              scaled to size 8.0pt on input line 130.
+ (introduction.tex) (background.tex) (methodology.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 41.
-
-Overfull \hbox (5.6386pt too wide) in paragraph at lines 41--41
-[]|  
- []
-
-
-Overfull \hbox (5.9176pt too wide) in paragraph at lines 41--41
-[]|  
- []
-
-
-Overfull \vbox (16.3659pt too high) detected at line 41
- []
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 41.
-) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              scaled to size 9.0pt on input line 45.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 48.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 48.
+ [1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 154.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 154.
+Overfull \hbox (5.6386pt too wide) in paragraph at lines 102--102
+[]|  
+ []
 
-[2.2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
+
+Overfull \hbox (5.9176pt too wide) in paragraph at lines 102--102
+[]|  
+ []
+
+
+Overfull \vbox (16.3659pt too high) detected at line 102
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 102.
+) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc.bbl
+LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
+ on input line 67.
+
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\ts1linux
+libertinet-tlf.fd"
+File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
+LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 67.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Info: Redefining \tempurl on input line 71.
+LaTeX Info: Redefining \tempurl on input line 87.
+LaTeX Info: Redefining \tempurl on input line 105.
+LaTeX Info: Redefining \tempurl on input line 122.
+)
+
+Class acmart Warning: ACM keywords are mandatory for papers over two pages.
+
+
+Class acmart Warning: CCS concepts are mandatory for papers over two pages.
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 155.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 155.
+[2.2] [3.3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: 3084F3B857F1A562C5C82975BD6F05AB;1524.
+(rerunfilecheck)             Checksum: 408E8FD973D686D45F793025C6D91DDD;1488.
  ) 
 Here is how much of TeX's memory you used:
- 30867 strings out of 481565
- 544841 string characters out of 2914179
- 830795 words of memory out of 3000000
- 45166 multiletter control sequences out of 15000+200000
- 647342 words of font info for 168 fonts, out of 3000000 for 9000
+ 30970 strings out of 481565
+ 547334 string characters out of 2914179
+ 832180 words of memory out of 3000000
+ 45213 multiletter control sequences out of 15000+200000
+ 663046 words of font info for 202 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 79i,15n,100p,1793b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 79i,15n,100p,1787b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/l
-btn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/libertine/lbtn_7grukw.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
-onts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/stefa/AppData/Local/Programs/M
-iKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/stefa/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<C:/Users/stef
-a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata/Inconsolata-
-zi4r.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
-ibertine/LinBiolinumT.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/stefa/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/stefa/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTB.pf
-b><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertin
-e/LinLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/newtx/txsys.pfb>
-Output written on doc.pdf (2 pages, 362977 bytes).
+btn_u7qtuy.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
+s/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/stefa/AppData/Local/Programs
+/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/stefa/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/stef
+a/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<
+C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata
+/Inconsolata-zi4r.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/libertine/LinBiolinumT.pfb><C:/Users/stefa/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/stefa/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/
+Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinL
+ibertineTB.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/libertine/LinLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/newtx/txsys.pfb>
+Output written on doc.pdf (3 pages, 379456 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 44153 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 45681 words of extra memory for PDF output out of 51595 (max. 10000000)
 
