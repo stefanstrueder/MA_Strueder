@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{8}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,6 +36,24 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Borg, Svensson, Berg, and Hansson}{Borg
+  et~al\mbox{.}}{2019}]%
+        {Borg2019}
+\bibfield{author}{\bibinfo{person}{Markus Borg}, \bibinfo{person}{Oscar
+  Svensson}, \bibinfo{person}{Kristian Berg}, {and} \bibinfo{person}{Daniel
+  Hansson}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{SZZ} unleashed: an open implementation of the
+  {SZZ} algorithm - featuring example usage in a study of just-in-time bug
+  prediction for the Jenkins project}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 3rd {ACM} {SIGSOFT} International Workshop on Machine Learning
+  Techniques for Software Quality Evaluation - {MaLTeSQuE} 2019}}.
+  \bibinfo{publisher}{{ACM} Press}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3340482.3342742}
+\showDOI{\tempurl}
+
 
 \bibitem[\protect\citeauthoryear{Hunsen, Zhang, Siegmund, Kästner,
   Le{\ss}enich, Becker, and Apel}{Hunsen et~al\mbox{.}}{2015}]%
@@ -106,6 +124,22 @@
 \showDOI{\tempurl}
 
 
+\bibitem[\protect\citeauthoryear{{\'{S}}liwerski, Zimmermann, and
+  Zeller}{{\'{S}}liwerski et~al\mbox{.}}{2005}]%
+        {Sliwerski2005}
+\bibfield{author}{\bibinfo{person}{Jacek {\'{S}}liwerski},
+  \bibinfo{person}{Thomas Zimmermann}, {and} \bibinfo{person}{Andreas Zeller}.}
+  \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{When do changes induce fixes?}
+\newblock \bibinfo{journal}{\emph{{ACM} {SIGSOFT} Software Engineering Notes}}
+  \bibinfo{volume}{30}, \bibinfo{number}{4} (\bibinfo{date}{jul}
+  \bibinfo{year}{2005}), \bibinfo{pages}{1}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1082983.1083147}
+\showDOI{\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Spadini, Aniche, and Bacchelli}{Spadini
   et~al\mbox{.}}{2018}]%
         {Spadini2018}
@@ -120,6 +154,22 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/3236024.3264598}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zimmermann, Premraj, and Zeller}{Zimmermann
+  et~al\mbox{.}}{2007}]%
+        {Zimmermann2007}
+\bibfield{author}{\bibinfo{person}{Thomas Zimmermann}, \bibinfo{person}{Rahul
+  Premraj}, {and} \bibinfo{person}{Andreas Zeller}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Predicting Defects for Eclipse}. In
+  \bibinfo{booktitle}{\emph{Third International Workshop on Predictor Models in
+  Software Engineering ({PROMISE}{\textquotesingle}07: {ICSE} Workshops
+  2007)}}. \bibinfo{publisher}{{IEEE}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/promise.2007.10}
 \showDOI{\tempurl}
 
 

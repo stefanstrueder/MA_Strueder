@@ -1941,4 +1941,23 @@ ONF TR-514
   doi       = {10.1145/1806799.1806819},
 }
 
+@InProceedings{Spadini2018,
+  author    = {Davide Spadini and Maur{\'{\i}}cio Aniche and Alberto Bacchelli},
+  booktitle = {Proceedings of the 2018 26th {ACM} Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering - {ESEC}/{FSE} 2018},
+  title     = {{PyDriller}: Python framework for mining software repositories},
+  year      = {2018},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3236024.3264598},
+}
+
+@InProceedings{Zimmermann2007,
+  author    = {Thomas Zimmermann and Rahul Premraj and Andreas Zeller},
+  booktitle = {Third International Workshop on Predictor Models in Software Engineering ({PROMISE}{\textquotesingle}07: {ICSE} Workshops 2007)},
+  title     = {Predicting Defects for Eclipse},
+  year      = {2007},
+  month     = {may},
+  publisher = {{IEEE}},
+  doi       = {10.1109/promise.2007.10},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
