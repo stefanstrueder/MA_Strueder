@@ -69,6 +69,49 @@ The next phase of processing consists of identifying corrective commits. A commo
 
 The search for corrective commits is followed by an analysis for commits that introduced bugs. A PyDriller implementation of the SZZ algorithm according to Sliwerski, Zimmermann and Zeller was used \cite{Sliwerski2005,Spadini2018}. This algorithm allows to find commits that introduce bugs in locally stored software repositories \cite{Borg2019}. It requires that the corrective commits have already been identified, as they serve as the algorithm's input \cite{Borg2019}.
 
+An overview of the number of corrective and bug-introducing commits and the number of features identified per software project is given in \autoref{tab:tools-values2}.
+
+\begin{table}[t]
+\centering
+\caption{Number of corrective and bug-introducing commits and number of identified features}
+\label{tab:tools-values2}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|r|r|r|} 
+\hline
+ \textbf{Project} & \textbf{\#corrective} & \textbf{\#bug-introducing} & \textbf{\#features}   \\ 
+\hline
+Blender           & 7.760                 & 3.776                      & 1.400                 \\ 
+\hline
+Busybox           & 1.236                 & 802                        & 628                   \\ 
+\hline
+Emacs             & 4.269                 & 2.532                      & 718                   \\ 
+\hline
+GIMP              & 1.380                 & 854                        & 204                   \\ 
+\hline
+Gnumeric          & 1.498                 & 1.191                      & 637                   \\ 
+\hline
+gnuplot           & 854                   & 1.215                      & 558                   \\ 
+\hline
+Irssi             & 52                    & 22                         & 9                     \\ 
+\hline
+libxml2           & 324                   & 88                         & 200                   \\ 
+\hline
+lighttpd          & 1.078                 & 929                        & 230                   \\ 
+\hline
+MPSolve           & 151                   & 211                        & 54                    \\ 
+\hline
+Parrot            & 3.109                 & 3.072                      & 397                   \\ 
+\hline
+Vim               & 371                   & 696                        & 1.158                 \\ 
+\hline
+xfig              & 0                     & 0                          & 137                   \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\textbf{Here!}
+
 \subsection{Selection of Metrics}
 
 \begin{table*}[ht]
@@ -109,3 +152,38 @@ The search for corrective commits is followed by an analysis for commits that in
 \end{table*}
 
 \subsection{Selection of Classifiers}
+
+By choosing the programming language Python, the decision to select a specific machine learning tool was already foreseeable. The Python library scikit-learn\footnote{\href{https://scikit-learn.org/}{https://scikit-learn.org/}}, which was developed in 2007 by Pedregosa et. al \cite{scikit}, is used. The tool offers a wide range of machine learning algorithms for supervised and unsupervised learning and also allows easy use and easy integration of other Python libraries, such as the Matplotlib for creating mathematical representations \cite{scikit}.
+
+The WEKA Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml/weka/}{https://www.cs.waikato.ac.nz/ml/weka/}} is also used as an additional machine learning tool. The tool (WEKA as acronym for \textbf{W}aikato \textbf{E}nvironment for \textbf{K}nowledge \textbf{A}nalysis) was developed at the University of Waikato in New Zealand and offers a large collection of machine learning algorithms and preprocessing tools for use within a graphical user interface \cite{Weka2016}. There are also interfaces for the Java programming language \cite{Weka2016}.
+
+The use of two machine learning tools allows a comparison of the respective implementations of the classification algorithms used in the subsequent evaluation. An overview of the selected classification algorithms for each tool can be found in \autoref{tab:classifiers}.
+
+\begin{table}[t]
+\centering
+\caption{Classification algorithms}
+\label{tab:classifiers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|} 
+\hline
+ \textbf{scikit-learn}       & \textbf{WEKA}                 \\ 
+\hline
+Artificial neural networks   & Artificial neural networks    \\ 
+\hline
+Decision Trees               & J48-Decision-Trees            \\ 
+\hline
+k-Nearest-Neighbors          & k-Nearest-Neighbors           \\ 
+\hline
+Ridge Classifier             & Logistic Regression           \\ 
+\hline
+Na\"{\i}ve Bayes & Na\"{\i}ve Bayes  \\ 
+\hline
+Random Forest                & Random Forest                 \\ 
+\hline
+Stochastic Gradient Descent  & Stochastic Gradient Descent   \\ 
+\hline
+Support Vector Machines      & Support Vector Machines       \\
+\hline
+\end{tabular}
+}
+\end{table}

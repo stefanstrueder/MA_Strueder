@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  2 APR 2020 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  3 APR 2020 10:32
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -1513,25 +1513,40 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
  [1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Overfull \hbox (5.6386pt too wide) in paragraph at lines 108--108
+Overfull \hbox (5.6386pt too wide) in paragraph at lines 151--151
 []|  
  []
 
 
-Overfull \hbox (5.9176pt too wide) in paragraph at lines 108--108
+Overfull \hbox (5.9176pt too wide) in paragraph at lines 151--151
 []|  
  []
 
 
-Overfull \vbox (16.3659pt too high) detected at line 108
+Overfull \vbox (16.3659pt too high) detected at line 151
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 108.
+(Font)              scaled to size 9.0pt on input line 151.
+
+Overfull \hbox (3.09306pt too wide) in paragraph at lines 158--159
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) learn-ing tool. The tool (WEKA as acronym f
+or \T1/LinuxLibertineT-TLF/b/n/9 W\T1/LinuxLibertineT-TLF/m/n/9 (-20) aikato \T
+1/LinuxLibertineT-TLF/b/n/9 E\T1/LinuxLibertineT-TLF/m/n/9 (-20) nvironment
+ []
+
+
+Overfull \hbox (2.33379pt too wide) in paragraph at lines 158--159
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) for \T1/LinuxLibertineT-TLF/b/n/9 K\T1/Linu
+xLibertineT-TLF/m/n/9 (-20) nowledge \T1/LinuxLibertineT-TLF/b/n/9 A\T1/LinuxLi
+bertineT-TLF/m/n/9 (-20) nalysis) was de-vel-oped at the Uni-ver-sity of Waikat
+o
+ []
+
 ) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc.bbl
-LaTeX Info: Redefining \tempurl on input line 72.
+LaTeX Info: Redefining \tempurl on input line 84.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 85.
+ on input line 97.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\ts1linux
 libertinet-tlf.fd"
@@ -1539,17 +1554,22 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 85.
+(Font)              scaled to size 7.0pt on input line 97.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \tempurl on input line 89.
-LaTeX Info: Redefining \tempurl on input line 105.
-LaTeX Info: Redefining \tempurl on input line 123.
-LaTeX Info: Redefining \tempurl on input line 139.
-LaTeX Info: Redefining \tempurl on input line 156.
-LaTeX Info: Redefining \tempurl on input line 172.
+LaTeX Info: Redefining \tempurl on input line 101.
+LaTeX Info: Redefining \tempurl on input line 135.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 137.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 137.
+ [2.2]
+LaTeX Info: Redefining \tempurl on input line 153.
+LaTeX Info: Redefining \tempurl on input line 169.
+LaTeX Info: Redefining \tempurl on input line 186.
+LaTeX Info: Redefining \tempurl on input line 202.
 )
 
 Class acmart Warning: ACM keywords are mandatory for papers over two pages.
@@ -1561,27 +1581,23 @@ Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 155.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 155.
-[2.2] [3.3]
+[3.3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (doc.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: 408E8FD973D686D45F793025C6D91DDD;1488.
+(rerunfilecheck)             Checksum: 3B9A99E3564A153E082CDDF3345D2782;1488.
  ) 
 Here is how much of TeX's memory you used:
- 31027 strings out of 481565
- 548677 string characters out of 2914179
- 830397 words of memory out of 3000000
- 45222 multiletter control sequences out of 15000+200000
- 667533 words of font info for 232 fonts, out of 3000000 for 9000
+ 31042 strings out of 481565
+ 548920 string characters out of 2914179
+ 836818 words of memory out of 3000000
+ 45231 multiletter control sequences out of 15000+200000
+ 667631 words of font info for 232 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 79i,15n,100p,1787b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 79i,15n,100p,1787b,578s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/l
 btn_u7qtuy.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
 s/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1598,9 +1614,9 @@ Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinL
 ibertineTB.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/libertine/LinLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (3 pages, 389977 bytes).
+Output written on doc.pdf (3 pages, 398279 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
  45681 words of extra memory for PDF output out of 51595 (max. 10000000)
 

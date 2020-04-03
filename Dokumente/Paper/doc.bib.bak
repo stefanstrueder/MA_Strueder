@@ -1960,4 +1960,35 @@ ONF TR-514
   doi       = {10.1109/promise.2007.10},
 }
 
+@InProceedings{Borg2019,
+  author    = {Markus Borg and Oscar Svensson and Kristian Berg and Daniel Hansson},
+  booktitle = {Proceedings of the 3rd {ACM} {SIGSOFT} International Workshop on Machine Learning Techniques for Software Quality Evaluation - {MaLTeSQuE} 2019},
+  title     = {{SZZ} unleashed: an open implementation of the {SZZ} algorithm - featuring example usage in a study of just-in-time bug prediction for the Jenkins project},
+  year      = {2019},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3340482.3342742},
+}
+
+@Article{Sliwerski2005,
+  author    = {Jacek {\'{S}}liwerski and Thomas Zimmermann and Andreas Zeller},
+  journal   = {{ACM} {SIGSOFT} Software Engineering Notes},
+  title     = {When do changes induce fixes?},
+  year      = {2005},
+  month     = {jul},
+  number    = {4},
+  pages     = {1},
+  volume    = {30},
+  doi       = {10.1145/1082983.1083147},
+  publisher = {Association for Computing Machinery ({ACM})},
+}
+
+@Article{scikit,
+  author  = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V. and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P. and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+  journal = {Journal of Machine Learning Research},
+  title   = {Scikit-learn: Machine Learning in {P}ython},
+  year    = {2011},
+  pages   = {2825--2830},
+  volume  = {12},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
