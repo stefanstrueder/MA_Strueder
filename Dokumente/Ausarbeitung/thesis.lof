@@ -26,51 +26,55 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{10}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{11}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{14}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\relax }}{12}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{13}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{15}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{16}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{18}{figure.caption.26}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{19}{figure.caption.29}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{21}{figure.caption.32}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung des Aufbaus und der Unterscheidung der Datensets\relax }}{22}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{17}{figure.caption.23}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{26}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{19}{figure.caption.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\relax }}{27}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{22}{figure.caption.29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{28}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{23}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus auf das dateibasierte Datenset\relax }}{30}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{25}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{31}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung zur Unterscheidung der Datensets\relax }}{27}{figure.caption.37}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{36}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Übersicht der Aufteilung in Trainings- und Testdaten\relax }}{35}{figure.caption.39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{46}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{36}{figure.caption.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{47}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\relax }}{36}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Vergleich der Accuracies des dateibasierten Datensets\relax }}{47}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{36}{figure.caption.43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces ROC-Kurven der Klassifikatoren des featurebasierten Datensets \relax }}{48}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Vergleich der Accuracies je Klassifikator vor und nach der Anwendung des SMOTE-Algorithmus auf das dateibasierte Datenset\relax }}{37}{figure.caption.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces ROC-Kurven der Klassifikatoren des dateibasierten Datensets \relax }}{49}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Vergleich der Klassifikatoren und Werkzeuge im Hinblick auf ihre Accuracies\relax }}{37}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Übersicht der Accuracies des nicht-featurebasierten Vergleichs\relax }}{50}{figure.caption.68}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces ROC-Kurven des nicht-featurebasierten Vergleichs (v.D. = vorhandenes Datenset)\relax }}{52}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{42}{figure.caption.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{49}{figure.caption.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{50}{figure.caption.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces ROC-Kurven des featurebasierten Datensets\relax }}{50}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies der Datensets\relax }}{51}{figure.caption.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces ROC-Kurven der Datensets e.D. = erweitertes Datenset\relax }}{52}{figure.caption.72}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -3,7 +3,7 @@
 \chapter{Hintergrund}
 \label{background}
 
-Zum besseren Verständnis der weiteren Verlaufs dieser Arbeit, dient dieses Kapitel zur Einführung in die zugrundeliegenden Themen. Dazu wird zunächst die featurebasierte Softwareentwicklung erläutert, ehe dann der Themenbereich des Machine Learnings vorgestellt wird. Dazu werden die Klassifikation und die Fehlervorhersage mittels Machine Learning erläutert. Unterstützt werden die Abschnitte von Grafiken zum besseren Verständnis der Zusammenhänge.
+Dieses Kapitel dient zur Einführung in die dieser Arbeit zugrundeliegenden Themen und hat das Ziel, Basiswissen für den weiteren Verlauf der Ausarbeitung aufzubauen. Dazu wird zunächst die featurebasierte Softwareentwicklung erläutert, ehe dann der Themenbereich des Machine Learnings vorgestellt wird. Dazu werden die Klassifikation und die Fehlervorhersage mittels Machine Learning erläutert. Unterstützt werden die Abschnitte von Grafiken zum besseren Verständnis der Zusammenhänge.
 \\
 \hrule
 
@@ -20,7 +20,7 @@ Der zentrale Prozess der Generierung einer Software-Produktlinie ist in \autoref
     \caption{Generierung von Software-Produktlinien nach \cite{Thuem2014}\label{fig:spl}}
 \end{figure}
 
-Die in dieser Arbeit betrachtete Implementierungstechnik von Features basiert auf Anweisungen beziehungsweise Bedingungsdirektiven des C-Präprozessors. Die für diese Arbeit relevanten Direktiven lauten \texttt{\#IFDEF} und \texttt{\#IFNDEF}. Einfache Beispieleinsätze für beide Direktiven sind in \autoref{example1} und \autoref{example2} zu sehen. Sie wurden jeweils aus der wissenschaftlichen Literatur entnommen \cite{Medeiros2018,Preschern2019}. Die Direktive \texttt{\#IFDEF} leitet in \texttt{\#IFDEF} den Code des Features \texttt{\_\_unix\_\_} ein, welcher mit der Anweisung \texttt{\#ENDIF} endet. Der in den Zeilen 2 bis 6 angegebene Codeteil wird genau dann nur ausgeführt, wenn das Feature \texttt{\_\_unix\_\_} im Rahmen der Konfiguration des Softwareproduktes definiert beziehungsweise aktiviert ist \cite{Stallmann2016}. In diesem Fall wird die Bedingung der Direktive erfolgreich erfüllt \cite{Stallmann2016}. Sie schlägt fehl, wenn das Feature nicht definiert beziehungsweise aktiviert ist \cite{Stallmann2016}. Die Direktive \texttt{\#IFNDEF} wird für Code verwendet, der ausgeführt werden soll, wenn ein Feature nicht definiert ist. Im Falle des Beispiels in \autoref{example2} wird der in Zeile 3 angedeutete Code nur ausgeführt, wenn \texttt{NO\_XMALLOC} nicht aktiviert wurde.
+Die in dieser Arbeit betrachtete Implementierungstechnik von Features basiert auf Anweisungen beziehungsweise Bedingungsdirektiven des C-Präprozessors. Die für diese Arbeit relevanten Direktiven lauten \texttt{\#IFDEF} und \texttt{\#IFNDEF}. Einfache Beispieleinsätze für beide Direktiven sind in \autoref{example1} und \autoref{example2} zu sehen. Sie wurden jeweils aus der wissenschaftlichen Literatur entnommen \cite{Medeiros2018,Preschern2019}. Die Direktive \texttt{\#IFDEF} leitet in \autoref{example1} den Code des Features \texttt{\_\_unix\_\_} ein, welcher mit der Anweisung \texttt{\#ENDIF} endet. Der in den Zeilen 2 bis 6 angegebene Codeteil wird genau dann nur ausgeführt, wenn das Feature \texttt{\_\_unix\_\_} im Rahmen der Konfiguration des Softwareproduktes definiert beziehungsweise aktiviert ist \cite{Stallmann2016}. In diesem Fall wird die Bedingung der Direktive erfolgreich erfüllt \cite{Stallmann2016}. Sie schlägt fehl, wenn das Feature nicht definiert beziehungsweise aktiviert ist \cite{Stallmann2016}. Die Direktive \texttt{\#IFNDEF} wird für Code verwendet, der ausgeführt werden soll, wenn ein Feature nicht definiert ist. Im Falle des Beispiels in \autoref{example2} wird der in Zeile 3 angedeutete Code nur ausgeführt, wenn \texttt{NO\_XMALLOC} nicht aktiviert wurde.
 Es besteht zudem die Möglichkeit, Features bzw. ihren Code zu verschachteln. Ein Beispiel dafür ist in \autoref{example3} angegeben. Es ist zu erkennen, dass sich der Code von \texttt{FEAT\_MZSCHEME} innerhalb der bedingten Gruppe von \texttt{USE\_XSMP} befindet. Der in Zeile 5 angedeutete Code kann somit nur ausgeführt werden, wenn \texttt{USE\_XSMP} aktiviert ist. Im Fall von Verschachtelung beendet ein \texttt{\#ENDIF} immer das nächstgelegene \texttt{\#IFDEF} oder \texttt{\#IFNDEF} \cite{Stallmann2016}. Es besteht zudem die Möglichkeit, Direktiven mittels \glqq und\grqq{} (\texttt{\&\&}, \texttt{and}) oder \glqq oder\grqq{} (\texttt{||}, \texttt{or}) zu erweiterten Bedingungen zu verknüpfen, die zudem Negation in Form des \texttt{!}-Operators (anstelle von \texttt{\#IFNDEF}) enthalten können \cite{Stallmann2016,Queiroz2015}. Dargestellt ist dies in \autoref{example4}.
 
 \noindent\begin{minipage}{.45\textwidth}
@@ -89,16 +89,96 @@ Die Abbildung zeigt den Prozess des überwachten Machine Learnings anhand des Be
 
 Der in \autoref{fig:ml} dargestellte Klassifikator stellt einen multinomiellen oder multi-class Klassifikator dar, da er zu drei oder mehr Werten der Zielklasse zuordnen kann \cite{Sammut2017}. Für viele praktische Anwendungen genügt jedoch ein binärer Klassifikator, welcher Vorhersagen zu zwei Werten der Zielklasse trifft. Dies trifft auch auf die Klassifikatoren dieser Arbeit zu.
 
+Nachfolgend wird eine Auswahl an Klassifikationsalgorithmen vorgestellt. Diese zählen zu den meist verwendeten Algorithmen und finden auch in dieser Arbeit ihre Anwendung.
+
+\label{algorithms}
+\textbf{Decision Trees\medskip}\\
+Decision Trees (deutsch: Entscheidungsbäume) zählen zu den meistverwendeten Klassifikatoren im Bereich des supervised Machine Learnings. Studien belegen, dass sie hinsichtlich der Verwendung im Kontext der Fehlererkennung die häufigste Anwendung finden \cite{Son2019}. Decision Trees sind gerichtete und verwurzelte Bäume, die als rekursive Partition der Eingabemenge des Datensets aufgebaut werden \cite{Rokach2005}. Den Ursprung des Baumes bildet die Wurzel, welche keine eingehenden Kanten besitzt - alle weiteren Knoten besitzen jedoch eine eingehende Kante \cite{Rokach2005}. Diese Knoten teilen wiederum die Eingabemenge anhand einer vorgegebenen Funktion in zwei oder mehr Unterräume der Menge auf \cite{Rokach2005}. Meist geschieht dies anhand eines Attributs, sodass die Eingabemenge anhand der Werte des einzelnen Attributs geteilt wird \cite{Rokach2005}. Die Blätter des Baumes bilden die Zielklassen ab. Eine Klassifizierung kann folglich durchgeführt werden, indem man von der Wurzel bis zu einem Blatt den Kanten anhand der entsprechenden Werte der Eingangsmenge folgt. Es existieren verschiedene Algorithmen zur Erstellung von Decision Trees. Bekannte Stellvertreter dieser sind ID3, C4.5 (J48) und CART \cite{Rokach2005}. Der grundlegende Aufbau eines Decision Trees ist in \autoref{fig:dt} dargestellt.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/DT}
+    \caption{Grundsätzlicher Aufbau eines Decision Trees\label{fig:dt}}
+\end{figure}
+
+Eine Besonderheit von Decision Trees stellen sogenannte Random Forests dar. Diese beschreiben eine Lernmethode von Klassifikatoren, bei der mehrere einzelne Decision Trees gleichzeitig erzeugt werden und deren Ergebnisse anschließen aggregiert werden \cite{Alam2013}. Dazu erhält jeder Decision Tree eine Teilmenge der Eingabemenge des Datensets \cite{Alam2013}. Random Forests eigenen sich besonders zur Anwendung, wenn viele Attribute im Datenset vorhanden sind \cite{Alam2013}.
+
+\textbf{k-Nearest-Neighbors\medskip}\\
+Ein k-Nearest-Neighbor-Klassifikator (deutsch: k-nächste-Nachbarn) basiert auf zwei Konzepten \cite{Zhang2016}. Das erste Konzept basiert auf der Abstandsmessung zwischen den Werten der zu klassifizierenden Datenmenge und den Werten der Attribute des Datensets \cite{Zhang2016}. Die Abstandmessung erfolgt in der Regel durch die Berechnung der Euklidischen Distanz $D(p,q)$:
+
+\[D(p,q)=\sqrt{\sum_1^n(p_{n}-q_{n})^{2}}\] 
+
+Die Anzahl der Attribute wird durch den Parameter $n$ wiedergegeben, $p$ und $q$ repräsentieren jeweils die Werte der zu klassifizierenden Datenmenge und die Werte der Attribute des Datensets. Das zweite Konzept bildet der Parameter $k$, der angibt, wie viele nächste Nachbarn zum Vergleich der zuvor berechneten Abstände in Betracht gezogen werden \cite{Zhang2016}. Bei einem $k > 1$ wird diejenige Zielklasse gewählt, deren Auftreten innerhalb der nächsten Nachbarn überwiegt.
+
+\textbf{Künstliche neuronale Netze\medskip}\\
+Künstliche neuronale Netze (englisch: Artificial Neural Networks) verwenden nicht-lineare Funktionen zur schrittweisen Erzeugung von Beziehungen zwischen der Eingabemenge und den Zielklassen durch einen Lernprozess \cite{Linder2004}. Sie sind angelehnt an die Funktionsweise von biologischen Nervensystemen und bestehen aus einer Vielzahl von einander verbundenen Berechnungsknoten, den Neuronen \cite{OShea2015}. Der grundsätzliche Aufbau eines künstlichen neuronalen Netzes kann in \autoref{fig:ann} eingesehen werden. Der Lernprozess besteht aus zwei Phasen - einer Trainingphase und einer Recall-Phase \cite{Linder2004}. In der Trainingsphase werden die Eingabedaten, meist als multidimensionaler Vektor, in den Input-Layer geladen und anschließend an die Hidden-Layer verteilt \cite{OShea2015}. In den Hidden-Layers werden dann Entscheidungen anhand der Beziehungen zwischen den Eingabedaten und Zielklassen sowie die den Verbindungen zuvor zugewiesenen Gewichtsfaktoren getroffen \cite{Linder2004,OShea2015}. Im Rahmen der Recall-Pahse werden die wird die Vorhersage basierend auf der zu klassifizierenden Datenmenge anhand der zuvor getroffenen Entscheidungen der Hidden-Layers getroffen und an die jeweiligen Output-Layer, welche die Werte der Zielklasse repräsentieren, weitergeleitet\cite{Linder2004}. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/ANN}
+    \caption{Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\label{fig:ann}}
+\end{figure}
+
+\textbf{Logistische Regression\medskip}\\
+Logistische-Regressions-Klassifikatoren (englisch: Logistic Regression) basieren auf dem mathematischen Konzept des Logits, welcher den natürlichen Logarithmus eines Chancenverhältnisses beschreibt \cite{Peng2002}. Seine Formel lautet:
+
+\[logit(Y) = ln(\frac{\pi}{1-\pi})\]
+
+$Y$ beschreibt dabei die zu klassifizierende Datenmenge, wohingegen $\pi$ die Verhältnisse der Wahrscheinlichkeiten der Werte der Attribute der Eingabemenge bezeichnet. Am besten geeignet ist dieser Klassifikator für eine Kombination aus kategorialen oder numerischen Eingabedaten und kategorischen Zielklassen \cite{Peng2002}.
+
+\textbf{Na\"{\i}ve Bayes\medskip}\\
+Na\"{\i}ve-Bayes-Klassifikatoren zählen zu den linearen Klassifikatoren und basieren auf dem Satz von Bayes. Die Bezeichnung \glqq naiv\grqq{} erhält der Klassifikator durch die Annahme, dass die Attribute der Eingabemenge unabhängig voneinander sind \cite{Raschka2014}. Diese Annahme wird zwar in der realen Verwendung des Klassifikators häufig verletzt, dennoch erzielt er in der Regel eine hohe Performanz \cite{Raschka2014}. Der Klassifikator gilt als effizient, robust, schnell und einfach implementierbar \cite{Raschka2014}. Die zur Durchführung einer Klassifikation mittels Na\"{\i}ve Bayes benötigte Formel nach Thomas Bayes ist in \autoref{fig:nb} samt Erläuterung der einzelnen Faktoren aufgeführt.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/NB}
+    \caption{Satz von Bayes als Grundlage des Na\"{\i}ve-Bayes-Klassifikators\label{fig:nb}}
+\end{figure}
+
+Es existiert zudem eine Mehrzahl an Varianten des Na\"{\i}ve-Bayes-Klassifikators, die verschiedene Annahmen über die Verteilung der Attribute der Eingabemenge machen. Beispiele dafür sind der Gaußsche-Na\"{\i}ve-Bayes (normalverteilte Attribute), der multinomiale Na\"{\i}ve-Bayes (multinomiale Verteilung der Attribute) sowie der Bernoulli-Na\"{\i}ve-Bayes (unabhängige binäre Attribute).
+
+\textbf{Stochastic Gradient Descent\medskip}\\
+Ein Stochastic-Gradient-Descent-Klassifikator basiert auf dem Gradientenverfahren (englisch: Gradient Descent), welches das Ziel hat, zu einem gegebenen $x$ das minimale $y$ zu finden \cite{Srinivasan2019}. Im Falle der Klassifikation mittels Machine Learning bezeichnet $x$ dabei die zu klassifizierende Eingabemenge und $y$ das erwartete Ergebnis der Klassifikation. Minimiert werden sollen dabei die \glqq Kosten\grqq{}, die sich aus der Ermittlung der Ergebnisse ergeben.
+
+\textbf{Support Vector Machines\medskip}\\
+Support Vector Machines verfolgen das Ziel, eine sogenannte \glqq Hyperplane\grqq{} in einem n-dimen-sionalen Raum (n = Anzahl der Attribute der Eingabemenge) zu finden, welche die Datenpunkte der Eingabemenge eindeutig klassifizieren kann \cite{Gandhi2018}. Die Hyperplane beschreibt eine Trennlinie beziehungsweise Trennfläche, mit deren Hilfe die Daten der zu klassifizierenden Menge den Zielklassen zuordnen lassen \cite{Luber2019}. Dabei gilt es, dass die Trennflächen, welche die Eingangsmenge anhand der Attribute in verschiedene Trennungsebenen unterteilen, einen möglichst großen Abstand ohne Datenpunkte voneinander haben \cite{Luber2019}. Dies funktioniert sowohl für linear als auch nicht-lineare trennbare Mengen.
+
 \section{Fehlervorhersage mittels Machine Learning}
 
-Der Hintergrund der Fehlervorhersage mittels Machine Learning basiert auf dem zuvor vorgestellten Konzept des überwachten Machine Learnings. Als Grundlage dienen dabei meist Daten, die aus Software-Repositories entnommen beziehungsweise extrahiert werden. Viele Studien und wissenschaftliche Arbeit setzen jedoch auch auf vorgefertigte Datensets, wie zum Beispiel von der NASA oder von Eclipse \cite{Son2019}. Die zugehörigen Label der Datensets lauten in der Regel \glqq fehlerfrei\grqq{} und \glqq defekt\grqq{} und können auf verschiedene Weisen ermittelt werden. Eine gängige Methode ist die Identifizierung von korrektiven und fehlereinführenden Commits als Entscheidungsgrundlage für das Label. Die üblichen Vorgehensweisen setzen auf die Einbindung von Bugtracking-Systemen oder die Analyse von Commit-Nachrichten zur Identifizierung der korrektiven Commits \cite{Queiroz2016,Zimmermann2007}. Fehlereinführende Commits können anschließend unter Verwendung von Git-Kommandos oder durch die Anwendung des sogenannten SZZ-Algorithmus ermittelt werden. Dieser Algorithmus wird in dieser Arbeit verwendet und in \hyperref[szz-def]{Abschnitt 3.2} erläutert. Auf Basis dieser Daten werden die Attribute bestimmt. Dabei handelt sich sich in der Regel um Metriken, die entweder die Charakteristika des Sourcecodes (Codemetriken) oder Aktivitäten und Prozesse im Bezug auf Software-Repositories (Prozessmetriken) beschreiben \cite{Son2019,Rahman2013}. Mithilfe dieser Attribute werden die Klassifikatoren erlernt. Eine Studie, welche 156 wissenschaftliche Arbeiten zum Thema der Fehlervorhersage mittels Machine Learning analysierte, ergab, dass besonders Entscheidungsbaum-basierte, Bayessche Verfahren, Regression und künstliche neuronale Netze als Klassifikationsalgorithmen zur Anwendung kommen \cite{Son2019}. Diese Algorithmen wurden unter anderem auch in dieser Arbeit verwendet. Erläuterungen können in \hyperref[algorithms]{Abschnitt 4.1} gefunden werden. Die fertig erlernten Klassifikatoren können dann auf Basis neuer Daten Vorhersagen zum Zustand einer Software treffen. Die Vorhersagen beruhen in der Regel auf defekte Dateien im Umfeld von Commits oder Releases.
+Der Hintergrund der Fehlervorhersage mittels Machine Learning basiert auf dem zuvor vorgestellten Konzept des überwachten Machine Learnings. Als Grundlage dienen dabei meist Daten, die aus Software-Repositories entnommen beziehungsweise extrahiert werden. Viele Studien und wissenschaftliche Arbeit setzen jedoch auch auf vorgefertigte Datensets, wie zum Beispiel von der NASA oder von Eclipse \cite{Son2019}. Die zugehörigen Label der Datensets lauten in der Regel \glqq fehlerfrei\grqq{} und \glqq defekt\grqq{} und können auf verschiedene Weisen ermittelt werden. Eine gängige Methode ist die Identifizierung von korrektiven und fehlereinführenden Commits als Entscheidungsgrundlage für das Label. Die üblichen Vorgehensweisen setzen auf die Einbindung von Bugtracking-Systemen oder die Analyse von Commit-Nachrichten zur Identifizierung der korrektiven Commits \cite{Queiroz2016,Zimmermann2007}. Fehlereinführende Commits können anschließend unter Verwendung von Git-Kommandos oder durch die Anwendung des sogenannten SZZ-Algorithmus ermittelt werden. Dieser Algorithmus wird in dieser Arbeit verwendet und in \hyperref[szz-def]{Abschnitt 3.2} erläutert. Auf Basis dieser Daten werden die Attribute bestimmt. Dabei handelt sich sich in der Regel um Metriken, die entweder die Charakteristika des Sourcecodes (Codemetriken) oder Aktivitäten und Prozesse im Bezug auf Software-Repositories (Prozessmetriken) beschreiben \cite{Son2019,Rahman2013}. Mithilfe dieser Attribute werden die Klassifikatoren erlernt. Eine Studie, welche 156 wissenschaftliche Arbeiten zum Thema der Fehlervorhersage mittels Machine Learning analysierte, ergab, dass besonders Entscheidungsbaum-basierte, Bayessche Verfahren, Regression und künstliche neuronale Netze als Klassifikationsalgorithmen zur Anwendung kommen \cite{Son2019}. Diese Algorithmen wurden unter anderem auch in dieser Arbeit verwendet. Erläuterungen können in \hyperref[algorithms]{Abschnitt 4.1} gefunden werden. Die fertig erlernten Klassifikatoren können dann auf Basis neuer Daten Vorhersagen zum Zustand einer Software treffen. Die Vorhersagen beruhen in der Regel auf defekte Dateien im Kontext von Commits oder Releases.
 
 Als Beispiel für zwei konkrete Anwendungen von Machine Learning gestützter Fehlervorhersage werden im Folgenden zwei wissenschaftliche Arbeiten vorgestellt. Die erste Arbeit \glqq Comparative Analysis of the Efficiency of Change Metrics and Static Code Attributes for Defect Prediction\grqq{} von Moser et al. \cite{Moser2008} stellt eine Methodik zur dateibasierten Fehlervorhersage vor. Die zweite Arbeit \glqq Towards Predicting Feature Defects in Software Product Lines\grqq{} von Queiroz et al. \cite{Queiroz2016} knüpft an den zuvor vorgestellten Ansatz der Software-Features an. Beide Literaturquellen werden im weiteren Verlauf dieser Arbeit eine Rolle spielen, die im jeweiligen Abschnitt erläutert wird.
 
 \subsection*{Dateibasierte Fehlervorhersage}
-Das Beipsiel zur dateibasierten Fehlervorhersage stammt aus einer wissenschaftlichen Arbeit von Moser et al. \cite{Moser2008}. Sie widmet sich einer vergleichenden Analyse von zwei verschiedenen Mengen von Metriken zur dateibasierten Fehlervorhersage mittels Methoden des Machine Learnings. Die Zuordnung erfolgt in \glqq defekt\grqq{} und \glqq defekt-frei\grqq. Als Datenbasis dient ein vorgefertigtes Datenset von Eclipse. Auf Basis dieses Datensets wurden \glqq produktbasierte\grqq{} Metriken (Codemetriken) und Prozessmetriken berechnet. Zur Anwendung kamen die Klassifikationsalgorithmen logistische Regression, Na\"{\i}ve Bayes und Entscheidungsbäume. Die Prozessmetriken stellen eine Besonderheit dieser Arbeit dar, da sie in dieser Arbeit zum ersten Mal näher betrachtet und auf ihre Eignung als Attribute zur Erlernung der Klassifikatoren erörtert wurden. Die Metriken berechneten unter anderem die Anzahl der Änderungen an einer Datei, die Anzahl der Autoren einer Datei, die Anzahl der hinzugefügten oder entfernten Zeilen einer Datei oder das Alter einer Datei. Das Resultat der Arbeit lautet, dass Prozessmetriken effektiver zur Fehlervorhersage genutzt werden können als Codemetriken.
+\label{moser}
 
-Im Rahmen der Evaluation der für diese Arbeit erlernten featurebasierten Klassifikatoren wird ein zusätzliches dateibasiertes Datenset erstellt, welches auf diesen Prozessmtriken basiert und zum Performanzvergleich hinsichtlich der neuen featurebasierten Betrachtung hinzugezogen wird. Die vollständige Liste der Metriken ist in \hyperref[classic-eval]{Abschnitt 5.3} aufgeführt.
+Das Beipsiel zur dateibasierten Fehlervorhersage stammt aus einer wissenschaftlichen Arbeit von Moser et al. \cite{Moser2008}. Sie widmet sich einer vergleichenden Analyse von zwei verschiedenen Mengen von Metriken zur dateibasierten Fehlervorhersage mittels Methoden des Machine Learnings. Die Zuordnung erfolgt in \glqq defekt\grqq{} und \glqq defekt-frei\grqq. Als Datenbasis dient ein vorgefertigtes Datenset von Eclipse. Auf Basis dieses Datensets wurden \glqq produktbasierte\grqq{} Metriken (Codemetriken) und Prozessmetriken berechnet. Zur Anwendung kamen die Klassifikationsalgorithmen logistische Regression, Na\"{\i}ve Bayes und Entscheidungsbäume. Die Prozessmetriken stellen eine Besonderheit dieser Arbeit dar, da sie in dieser Arbeit zum ersten Mal näher betrachtet und auf ihre Eignung als Attribute zur Erlernung der Klassifikatoren erörtert wurden. Die Metriken berechneten unter anderem die Anzahl der Änderungen an einer Datei, die Anzahl der Autoren einer Datei, die Anzahl der hinzugefügten oder entfernten Zeilen einer Datei oder das Alter einer Datei. Das Resultat der Arbeit lautet, dass Prozessmetriken effektiver zur Fehlervorhersage genutzt werden können als Codemetriken. Im Folgenden werden die 17 Prozessmetriken samt ihrer Beschreibungen und Abkürzungen (für diese Arbeit) vorgestellt.
+
+\label{moser-metrics}
+\begin{multicols}{2}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item REVISIONS (REVI)\\Anzahl der Revisionen (Bearbeitungen) der Datei.
+\item REFACTORINGS (REFA)\\Anzahl der Fälle, in denen die Datei in einem Refactoring involviert war. Basierend auf Analyse der Commit-Nachricht auf das Vorhandensein des Begriffs "refactor".
+\item BUGFIXES (BUGF)\\Anzahl der Fälle, in denen die Datei in einer Fehlerbehebung involviert war.
+\item AUTHORS (AUTH)\\Anzahl der verschiedenen Autoren, die die Datei in das Repository eingecheckt haben.
+\item LOC\_ADDED (ADDL)\\Summe der zur Datei hinzugefügten Codezeilen über alle Revisionen.
+\item MAX\_LOC\_ADDED (ADDM)\\Maximale Anzahl von Codezeilen, die für alle Revisionen hinzugefügt wurden.
+\item AVE\_LOC\_ADDED (ADDA)\\Durchschnittlich hinzugefügte Codezeilen pro Revision.
+\item LOC\_DELETED (REML)\\Summe der von der Datei entfernten Codezeilen über alle Revisionen.
+\item MAX\_LOC\_DELETED (REMM)\\Maximale Anzahl von Codezeilen, die für alle Revisionen entfernt wurden.
+\item AVE\_LOC\_DELETED (REMA)\\Durchschnittlich entfernte Codezeilen pro Revision.
+\item CODECHURN (CCHN)\\Summe von (hinzugefügte Codezeilen - entfernte Codezeilen) über alle Revisionen.
+\item MAX\_CODECHURN (CCHM)\\Maximaler CODECHURN für alle Revisionen.
+\item AVE\_CODECHURN (CCHA)\\Durchschnittlicher CODECHURN pro Revision.
+\item MAX\_CHANGESET (MAXC)\\Maximale Anzahl von Dateien, die gemeinsam committed wurden.
+\item AVE\_CHANGESET (AVGC)\\Durchschnittliche Anzahl von Dateien, die gemeinsam committed wurden.
+\item AGE (AAGE)\\Alter der Datei in Wochen (rückwärts zählend bis zu einem bestimmten Release).
+\item WEIGHTED\_AGE (WAGE)\\$Weighted Age = \frac{\sum_{i=1}^N Age(i)*LOC\_ADDED(i)}{\sum_{i=1}^N LOC\_ADDED(i)}$
+\end{itemize}
+\end{multicols}
+
+Im Rahmen der Evaluation (\hyperref[classic-eval]{Abschnitt 5.3}) dienen diese dateibasierten Metriken als Grundlage für den Vergleich, ob die Metriken des für diese Arbeit erstellten featurebasierten Datensets einen Einfluss auf die Ergebnisse der Fehlervorhersage auf Dateiebene hervorrufen. 
 
 \subsection*{Featurebasierte Fehlervorhersage}
 
@@ -119,7 +199,7 @@ Die Datenbasis des Datensets bilden historische Commits des UNIX-Toolkits BusyBo
 
 \subsubsection*{Metriken und Klassifikation}
 
-Die Trainingsdaten werden dann den Klassifikatoren zur Erlernung zur Verfügung gestellt. Als Attribute dienen fünf Prozessmetriken mit spezifischer Betrachtung von Software-Features. Einen Überblick über die Beschreibungen dieser gibt \autoref{tab:metrics-rodrigo}. Als Klassifikationsalgorithmen wurden Na\"{\i}ve Bayes, Random Forest und J48-Entscheidungsbäume gewählt.
+Die Trainingsdaten werden dann den Klassifikatoren zur Erlernung zur Verfügung gestellt. Als Attribute dienen fünf Prozessmetriken mit spezifischer Betrachtung von Software-Features. Einen Überblick über die Beschreibungen dieser gibt \autoref{tab:metrics-rodrigo}. Diese Metriken werden auch für diese Arbeit im Rahmen der Erstellung des featurebasierten Datensets übernommen. Als Klassifikationsalgorithmen wurden Na\"{\i}ve Bayes, Random Forest und J48-Entscheidungsbäume gewählt.
 
 \begin{table}[t]
 \centering
@@ -135,11 +215,11 @@ ADEV & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die das betreffende Fea
 \hline
 DDEV & \begin{tabular}[c]{@{}l@{}}kummulierte Anzahl der Entwickler, die das betreffende Feature\\in einem Release bearbeitet haben. \end{tabular} \\ 
 \hline
-EXP & \begin{tabular}[c]{@{}l@{}}Geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die am \\ betreffenden Feature in einem Release gearbeitet haben. \end{tabular} \\ 
+EXP & \begin{tabular}[c]{@{}l@{}}Geometrisches Mittel der \glqq Erfahrung*\grqq{} aller Entwickler, die am \\ betreffenden Feature in einem Release gearbeitet haben. \end{tabular} \\ 
 \hline
-OEXP & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, der am meisten zum betreffenden \\ Feature in einem Release beigetragen hat. \end{tabular} \\ 
+OEXP & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung*\grqq{} des Entwicklers, der am meisten zum betreffenden \\ Feature in einem Release beigetragen hat. \end{tabular} \\ 
 \hline
-\multicolumn{2}{|c|}{\begin{tabular}[c]{@{}c@{}}Erfahrung ist definiert als Summe der geänderten, gelöschten\\oder hinzugefügten Zeilen im zugehörigen Release. \end{tabular}} \\
+\multicolumn{2}{|c|}{\begin{tabular}[c]{@{}c@{}}*Erfahrung ist definiert als Summe der geänderten, gelöschten\\oder hinzugefügten Zeilen im zugehörigen Release. \end{tabular}} \\
 \hline
 \end{tabular}
 \end{table}
@@ -154,6 +234,6 @@ OEXP & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, der am
 
 Wie in \autoref{fig:ml2} dargestellt ist, wird für jeden Klassifikationsalgorithmus ein Klassifikator erstellt, welcher anschließend getestet und evaluiert wird. Dazu werden die jeweiligen Klassifikatoren auf das Testdatenset angewendet, ohne jedoch die Werte der Zielklassen mit anzugeben. Diese werden im Anschluss an den Klassifikationsvorgang mit den vorhergesagten Werten auf Übereinstimmung verglichen. Anhand dieses Vergleiches können die Genauigkeit sowie weitere Metriken zur Bewertung der Leistung der Klassifikatoren gemessen werden. Eine Übersicht von Evaluationsmetriken kann in \hyperref[eval-metrics]{Abschnitt 5.2.1} gefunden werden.
 
-Die so erstellten Klassifikatoren können dann zur Vorhersage von neuen Daten genutzt werden. Dazu müssen die fünf zuvor genannten Prozessmetriken der neuen Daten berechnet werden. 
+Die so erstellten Klassifikatoren können dann zur Vorhersage von neuen und unbekannten Daten genutzt werden, um defekte Features eines zukünftigen Releases zu identifizieren. Dazu müssen die fünf zuvor genannten Prozessmetriken dieser Daten berechnet werden. 
 
 \cleardoublepage

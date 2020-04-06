@@ -15,7 +15,7 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 \section{Datenauswahl}
 
-Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
+Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
 \begin{table}[t]
 \centering
@@ -120,7 +120,7 @@ Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbei
 
 Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die Präprozessor-Anweisungen \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die je Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Metadaten der Softwareprojekte. Für den Fall, dass ein Feature hinter der Direktive \texttt{\#IFNDEF} identifiziert wurde, wird das Feature mit einem vorangestellten \glqq not\grqq{} gespeichert. Es wird somit als eigenständiges Feature, neben seiner nicht-negierten Form, gespeichert. Kombinationen von Features werden in ihrer identifizierten Form gespeichert. Konnte kein Feature identifiziert werden, wird entsprechend \glqq \texttt{none}\grqq{} gespeichert.
 
-Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in \autoref{fig:features} gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven im Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in \autoref{fig:features}). Diese "Header-Features", wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im gesamten Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
+Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in \autoref{fig:features} gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven im Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in \autoref{fig:features}). Diese \glqq Header-Features\grqq{}, wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im gesamten Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
 
 Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in \autoref{fig:features}). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \glqq \texttt{none}\grqq{} ersetzt.
 
@@ -136,7 +136,7 @@ Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrekti
 
 \subsection*{Identifikation fehlereinführender Commits}
 \label{szz-def}
-Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005}. Dieser Algorithmus erlaubt es fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Dafür setzt er voraus, dass die korrektiven Commits bereits identifiziert wurden, da sie als Eingabemenge des Algorithmus dienen \cite{Borg2019}. Die Identifikation der fehlereinführenden Commits ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
+Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005,Spadini2018}. Dieser Algorithmus erlaubt es fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Dafür setzt er voraus, dass die korrektiven Commits bereits identifiziert wurden, da sie als Eingabemenge des Algorithmus dienen \cite{Borg2019}. Die Identifikation der fehlereinführenden Commits ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
 
 \begin{figure}[t]
     \centering
@@ -148,14 +148,14 @@ Der SZZ-Algorithmus, der als Input eine Liste der Commit-Hashes der zuvor erkann
 
 Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie der Anzahl der identifizierten Features je Softwareprojekt ist in \autoref{tab:tools-values2} aufgeführt. Des weiteren ist eine Übersicht des Schemas der nun vollständigen initialen MySQL-Tabellen (im folgenden Haupttabellen genannt) in \autoref{tab:schema1} aufgeführt. Wie bereits zuvor erwähnt, umfasst diese Tabelle für jede veränderte Datei eines Commits eine Ziele. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\begin{table}[t]
+\begin{table}
 \centering
 \caption{Anzahl der korrektiven und fehlereinführenden Commits sowie Anzahl der identifizierten Features je Softwareprojekt}
 \label{tab:tools-values2}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|>{\hspace{0pt}}p{0.208\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.21\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.362\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.212\linewidth}|} 
 \hline
-\textbf{Projekt}   & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
+ \textbf{Projekt}  & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
 \hline
 \textbf{Blender}   & 7.760                 & 3.776                        & 1.400                 \\ 
 \hline
@@ -181,7 +181,9 @@ Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie
 \hline
 \textbf{Vim}       & 371                   & 696                          & 1.158                 \\ 
 \hline
-\textbf{xfig}      & 0                     & 0                            & 137                   \\
+\textbf{xfig}      & 0*                    & 0*                           & 137                   \\ 
+\hline
+\multicolumn{4}{|>{\Centering\hspace{0pt}}p{0.992\linewidth}|}{* Siehe \hyperref[xfig]{Abschnitt 5.1}}             \\
 \hline
 \end{tabular}
 }
@@ -251,9 +253,58 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 \section{Metriken}
 
-Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen Attribute zur Erlernung der Machine-Learning-Klassifikatoren. Im hier vorliegenden Szenario werden sogenannte Metriken als Attribute verwendet. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet.
+Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen Attribute zur Erlernung der Machine-Learning-Klassifikatoren. Im hier vorliegenden Szenario werden sogenannte Metriken als Attribute verwendet. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf featurebasierte Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet. Eine Auflistung der elf Metriken samt Beschreibungen ist in \autoref{tab:metrics} aufgeführt. Die Berechnung der einzelnen Metriken erfolgte entweder direkt mittels SQL-Abfragen oder kombiniert mittels SQL-Abfragen und Berechnungen durch ein Python-Skript.
 
-Im Hinblick auf die spätere Evaluation der Arbeit wurden die Metriken nicht nur auf Basis von Features, sondern auch auf Basis von Dateien berechnet. Der letztgenannte Ansatz stellt die in der Machine-Learning-gestützten Fehlererkennung üblicherweise verwendete Methodik dar. Diese beiden Ansätze können somit im Rahmen der Evaluation verglichen werden. Für die Berechnung der dateibasierten Metriken mussten die Daten der Haupttabellen nicht weiter verarbeitet werden, da die erforderlichen Metadaten der Dateien bereits mit PyDriller abgerufen wurden, da sie die Grundlage der Identifikation der Features bildeten. In \autoref{fig:dataset} wird die Abgrenzung zwischen feature- und dateibasiertem Datenset anhand des Ablaufs der Verarbeitung der Rohdaten von PyDriller visualisiert. Es ist zu erkennen, dass für die Berechnung der dateibasierten Metriken keine weiteren Verarbeitungsschritte (Schritte A + B) nötig sind. Lediglich zur Herstellung des Featurebezugs sind weitere Schritte nötig, welche bereits im \hyperref[construction]{vorherigen Abschnitt} erläutert wurden (Schritte C - E). Die finalen Datensets (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der 13 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurden (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt anhand des folgenden Musters:
+\begin{table}[t]
+\centering
+\caption{Übersicht der berechneten Metriken des featurebasierten Datensets}
+\label{tab:metrics}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|l|c|} 
+\cline{2-4}
+\multicolumn{1}{l|}{}       & \textbf{Metrik}                                                                                & \textbf{Beschreibung}                                                                                                                                                                                                                                                                                                                              & \textbf{Quelle}   \\ 
+\hline
+\multirow{7}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Prozessmetriken}}}}} & Anzahl der Commits (COMM)                                                                      & Anzahl der Commits, die dem Feature in einem Release zugeordnet sind.                                                                                                                                                                                                                                                                              & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\aktiven Entwickler (ADEV) \end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                                 & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}eindeutige\\Entwickleranzahl (DDEV) \end{tabular}                   & \begin{tabular}[c]{@{}l@{}}kumulierte Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                      & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Erfahrung aller\\Entwickler (EXP) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die innerhalb eines \\Releases das Feature bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \\Erfahrung ist definiert als Summe der geänderten, gelöschten oder\\hinzugefügten~Zeilen in den dem Feature zugeordneten Dateien. \end{tabular} & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Erfahrung des meist \\beteiligten Entwicklers\\(OEXP) \end{tabular} & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, die innerhalb eines Releases das Feature \\am häufigsten bearbeitet (geändert, gelöscht oder hinzugefügt) hat.\\Erfahrung ist definiert als Summe der geänderten, gelöschten oder\\hinzugefügten Zeilen in den dem Feature zugeordneten Dateien. \end{tabular}     & \cite{Rahman2013,Queiroz2016}                  \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Grad der\\Änderungen (MODD) \end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Anzahl der Bearbeitungen (Änderung, Entfernung, Erweiterung) des\\Features innerhalb eines Releases. \end{tabular}                                                                                                                                                                                          & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features innerhalb eines Releases \\(featureübergreifender Wert). Idee: Je mehr Features in einem Release \\ bearbeitet worden sind, desto fehleranfälliger scheinen diese zu sein. \end{tabular}                                                              & *                 \\ 
+\hline
+\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                      & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                  & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL) \end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                      & *                 \\ 
+\cline{2-4}
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML) \end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                   & *                 \\ 
+\hline
+\multicolumn{4}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* Diese Werte wurden auf Basis der mit PyDriller erhaltenen Metadaten berechnet.}\\\textit{Die Berechnung der Metriken auf Feature-Level erfolgte auf Basis der Metadaten der ihnen zugrunde liegenden Dateien.~}\end{tabular}}                                                                                                                                                                                                               \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Im Hinblick auf die im nächsten Kapitel folgende Evaluation des featurebasierten Datensets, wurden zwei weitere Datensets erstellt, um die Auswirkungen der featurebasierten Metriken auf die Vorhersagen der Klassifikatoren vergleichbar zu machen. Beide weiteren Datensets verfolgen einen klassischen dateibasierten Ansatz, wie er in der Machine-Learning-gestützten Fehlererkennung üblich ist und basieren auf die Methodik, die von Moser et al. \cite{Moser2008}, die bereits in \hyperref[moser]{Abschnitt 2.3} vorgestellt wurde. Ebenfalls wurden die 17 Prozessmetriken dieser wissenschaftlichen Arbeit übernommen. Eine Visualisierung zur Unterscheidung der drei Datensets ist in \autoref{fig:dataset} dargestellt.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{images/Dataset}
+    \caption{Visualisierung zur Unterscheidung der Datensets\label{fig:dataset}}
+\end{figure}
+
+Die Abbildung zeigt die Wege der Erstellung des featurebasierten Datensets (Pfad A - G) und der dateibasierten Datensets nach \cite{Moser2008}. Diese unterteilen sich in das \glqq einfache\grqq{} dateibasierte Datenset (Pfad A, B, H, I) und das erweiterte dateibasierte Datenset (Kombination beider Pfade). Die Erstellung des featurebasierten Datensets wurde bereits umfassend bis zu diesem Abschnitt erläutert. Weitere Informationen zur Finalisierung des Datensets folgen im Verlauf dieses Abschnitts.
+
+Die Erstellung der dateibasierten Datensets erfolgt ebenfalls auf Basis der mit PyDriller erhaltenen Rohdaten der Commits der Softwareprojekte und den daraus extrahierten veränderten Dateien (A + B). Es ist somit keine weitere Verarbeitung der Rohdaten nötig. Sie dienen dann als Grundlage zur Berechnung der 17 Metriken (H) nach \cite{Moser2008}. Eine Übersicht der Metriken erfolgte bereits in \hyperref[moser-metrics]{Abschnitt 2.3}. Für die Berechnung der zeitbasierten Metriken \texttt{AAGE} und \texttt{WAGE} mussten die Rohdaten beziehungsweise die in den Rohdaten gelisteten Commits mit ihrem Veröffentlichungsdatum ergänzt werden. Durchgeführt wurde dies ebenfalls mit PyDriller. Als Startpunkt für die Berechnung der vergangenen Wochen wurde jeweils das Datum des ersten Commits eines Releases gewählt.
+
+Das featurebasierte sowie das \glqq einfache\grqq{} Datenset (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der elf beziehungsweise 17 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurden (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt für jede Veränderung eines Features beziehungsweise einer Datei anhand des folgenden Musters:
 
 \begin{table}[H]
 \centering
@@ -267,7 +318,7 @@ nicht fehlereinführend & + & nicht korrektiv & = & fehlerfrei
 }
 \end{table}
 
-Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Releases bearbeitet sein sollte, erfolgt die Bestimmung des Labels anhand der folgenden Regeln:
+Die Informationen zum Status eines Features basieren dabei auf den ihm zugrundliegenden Dateien. Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Releases bearbeitet sein sollte, erfolgt die Bestimmung des Labels anhand der folgenden Regeln:
 
 \begin{itemize}
 \setlength{\itemsep}{-2pt}
@@ -275,50 +326,11 @@ Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Release
 \item im Fall von Dateien wird der jeweils letzte Commit der Dateien im betreffenden Release überprüft. Ist die Datei dort als \glqq fehlerfrei\grqq{} markiert, so wird angenommen, dass sie fehlerfrei ist. Ist sie als \glqq defekt\grqq{} markiert, so wird angenommen, dass sie in diesem Release defekt ist.
 \end{itemize}
 
-Die so erstellten einzelnen Tabellen werden anschließend zu einer gemeinsamen Tabelle konkateniert, sodass eine umfangreiche Auflistung an Metriken inklusive der zugehörigen Labels entsteht. Diese Auflistung gibt an, welche Charakteristika ein Feature beziehungsweise eine Datei aufweisen muss, um als \glqq fehlerfrei\grqq{} oder \glqq defekt\grqq{} eingestuft zu werden und dient als Lerngrundlage der Klassifikatoren für zukünftige Vorhersagen. Eine Übersicht der berechneten Metriken samt Beschreibung befindet sich in \autoref{tab:metrics}. Das Datenset besteht aus der konkatenierten Tabelle mit den Metriken der elf Softwareprojekte und kann zur Erlernung der Klassifikatoren genutzt werden. Dieser Vorgang wird im folgenden Kapitel erläutert.
+Die so erstellten einzelnen Tabellen werden anschließend zu jeweils einer gemeinsamen Tabelle konkateniert, sodass eine umfangreiche Auflistung an Metriken inklusive der zugehörigen Labels entsteht. Diese Auflistung gibt an, welche Charakteristika ein Feature beziehungsweise eine Datei aufweisen muss, um als \glqq fehlerfrei\grqq{} oder \glqq defekt\grqq{} eingestuft zu werden und dient als Lerngrundlage der Klassifikatoren für zukünftige Vorhersagen.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\textwidth]{images/Dataset}
-    \caption{Visualisierung des Aufbaus und der Unterscheidung der Datensets\label{fig:dataset}}
-\end{figure}
+Eine Besonderheit stellt das zweite für den Vergleich im Rahmen der Evaluation erstellte dateibasierte Datenset dar (J). Es basiert auf dem \glqq einfachen\grqq{} Datenset (I) mit den Metriken aus \cite{Moser2008}, umfasst aber zusätzlich die elf Metriken des featurebasierten Datensets (G) aus \autoref{tab:metrics}. Dazu wurden die Werte der featurebasierten Metriken auf Dateiebene \glqq gemapped\grqq{} beziehungsweise übertragen. Dies bedeutetet, dass für jede im dateibasierte Datenset referenzierte Datei eines Releases analysiert wurde, welche Features in der jeweiligen Datei erwähnt wurde. Von diesen Features wurden dann die zugehörigen Metriken des featurebasierten Datensets ermittelt und der Durchschnittswert berechnet um im erteiterten Datenset eingetragen. Sollte in einer Datei keine Features erwähnt worden sein, so wird für die featurebasierten Metriken jeweils der Wert 0 gespeichert. Wie zu Beginn des Abschnitts erwähnt wurde, kann auf diesem Weg das featurebasierte Datenset mit einem klassischen dateibasierten Datenset verglichen werden, da die Bedingungen für den Vergleich geschaffen wurden. Ein direkter Vergleich zwischen den verschiedenen Datensets ist aus den genannten Gründen nicht praktikabel.
 
-\begin{table}[t]
-\centering
-\caption{Übersicht der berechneten Metriken}
-\label{tab:metrics}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|l|l|c|} 
-\cline{2-4}
-\multicolumn{1}{l|}{}       & \textbf{Metrik}                                                                                & \textbf{Beschreibung}                                                                                                                                                                                                                                                                                                                              & \textbf{Quelle}   \\ 
-\hline
-\multirow{7}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Prozessmetriken}}}}} & Anzahl der Commits (COMM)                                                                      & Anzahl der Commits, die dem Feature in einem Release zugeordnet sind.                                                                                                                                                                                                                                                                              & \cite{Rahman2013,Queiroz2016}                  \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\aktiven Entwickler (ADEV) \end{tabular}                 & \begin{tabular}[c]{@{}l@{}}Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                                 & \cite{Rahman2013,Queiroz2016}                  \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}eindeutige\\Entwickleranzahl (DDEV) \end{tabular}                   & \begin{tabular}[c]{@{}l@{}}kumulierte Anzahl der Entwickler, die innerhalb eines Releases das Feature \\bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \end{tabular}                                                                                                                                                                      & \cite{Rahman2013,Queiroz2016}                  \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Erfahrung aller\\Entwickler (EXP) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}geometrisches Mittel der \glqq Erfahrung\grqq{} aller Entwickler, die innerhalb eines \\Releases das Feature bearbeitet (geändert, gelöscht oder hinzugefügt) haben. \\Erfahrung ist definiert als Summe der geänderten, gelöschten oder\\hinzugefügten~Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular} & \cite{Rahman2013,Queiroz2016}                  \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Erfahrung des meist \\beteiligten Entwicklers\\(OEXP) \end{tabular} & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung\grqq{} des Entwicklers, die innerhalb eines Releases das Feature / die Datei \\am häufigsten bearbeitet (geändert, gelöscht oder hinzugefügt) hat.\\Erfahrung ist definiert als Summe der geänderten, gelöschten oder hinzugefügten\\Zeilen in den dem Feature / der Datei zugeordneten Commits. \end{tabular}     & \cite{Rahman2013,Queiroz2016}                  \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Grad der\\Änderungen (MODD) \end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Anzahl der Bearbeitungen (Änderung, Entfernung, Erweiterung) des Features /\\der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                          & *                 \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features / Dateien innerhalb eines Releases \\(feature- bzw. dateiübergreifender Wert). Idee: Je mehr Features / \\Dateien in einem Release bearbeitet worden sind, desto fehleranfälliger scheinen \\diese zu sein. \end{tabular}                                                              & *                 \\ 
-\hline
-\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                      & *                 \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien / der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                                  & *                 \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL) \end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu den dem Feature\\zugeordneten Dateien / zur Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                                      & *                 \\ 
-\cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML) \end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von den dem Feature\\zugeordneten Dateien /\textasciitilde{} von der Datei innerhalb eines Releases. \end{tabular}                                                                                                                                                   & *                 \\ 
-\hline
-\multicolumn{4}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* Diese Werte wurden auf Basis der mit PyDriller erhaltenen Metadaten berechnet.}\\\textit{Die Berechnung der Metriken auf Feature-Level erfolgte auf Basis der Metadaten der ihnen zugrunde liegenden Dateien.~}\end{tabular}}                                                                                                                                                                                                               \\
-\hline
-\end{tabular}
-}
-\end{table}
+Die auf die zuvor beschriebene Weise erstellten Datensets können nun zur Erlernung der Klassifikatoren verwendet werden. Dieser Vorgang wird im kommenden Kapitel erläutert.
 
 \fbox{\parbox{\linewidth}{RQ1b: WIE WEIT MÜSSEN DIE DATEN VORVERARBEITET WERDEN, UM SIE FÜR DAS TRAINING NUTZBAR ZU MACHEN?\medskip\\
 Eine umfassende Vorverarbeitung der Daten aus den Repositories ist nicht nötig. Die Verarbeitungsschritte bestanden aus: Extraktion der Features inklusive Bereinigung, Identifizierung von korrektiven Commits mittels Analyse der Commit-Nachrichten, Analyse nach fehlereinführenden Commits unter Zuhilfenahme des SZZ-Algorithmus sowie Berechnung von elf Metriken, welche als Attribute für die Erlernung der Klassifikatoren dienen.}}

@@ -7,35 +7,67 @@ Dieses Kapitel gibt einen detaillierten Einblick in das Training und den Testpro
 \\
 \hrule
 
-\section{Auswahl der Werkzeuge und der Klassifikationsalgorithmen}
+\textbf{ÜBERARBEITEN!}
 
-Durch die Wahl der Programmiersprache Python war die Entscheidung zur Auswahl eines bestimmten Machine-Learning-Werkzeugs bereits absehbar. Zur Anwendung kommt die Python-Library scikit-learn\footnote{\href{https://scikit-learn.org/}{https://scikit-learn.org/}}, die im Jahr 2007 von Pedregosa et. al entwickelt wurde \cite{scikit}. Das Werkzeug bietet eine große Auswahl an Machine-Learning-Algorithmen für überwachtes und unüberwachtes Lernen und ermöglicht darüber hinaus eine einfache Verwendung sowie eine einfache Einbindung weiterer Python-Libraries, wie beispielsweise die Matplotlib zur Erstellung von mathematischen Darstellungen \cite{scikit}.
+\begin{figure}[t]
+  \centering
+  \subfloat[][Blender\\Split-Ratio: 73:27]{\includegraphics[width=0.5\linewidth]{images/release_blender}}
+  \subfloat[][Busybox\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_busybox}}
+  \qquad
+  \subfloat[][Emacs\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_emacs}}
+  \subfloat[][GIMP\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_gimp}}
+  \qquad
+  \subfloat[][Gnumeric\\Split-Ratio: 75:25]{\includegraphics[width=0.5\linewidth]{images/release_gnumeric}}  
+  \subfloat[][gnuplot\\Split-Ratio: 80:20]{\includegraphics[width=0.5\linewidth]{images/release_gnuplot}}
+  \qquad
+  \subfloat[][Irssi\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_irssi}}
+  \subfloat[][libxml2\\Split-Ratio: 80:20]{\includegraphics[width=0.5\linewidth]{images/release_libxml2}}
+  \qquad
+  \subfloat[][lighttpd\\Split-Ratio: 67:33]{\includegraphics[width=0.5\linewidth]{images/release_lighttpd}}
+  \subfloat[][MPSolve\\Split-Ratio: 75:25]{\includegraphics[width=0.5\linewidth]{images/release_mpsolve}}
+  \qquad
+  \subfloat[][Parrot\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_parrot}}
+  \subfloat[][Vim\\Split-Ratio: 71:29]{\includegraphics[width=0.5\linewidth]{images/release_vim}}
+  \caption{Übersicht der Aufteilung in Trainings- und Testdaten\label{fig:splits}}
+\end{figure}
 
-Ebenfalls wird der WEKA-Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml/weka/}{https://www.cs.waikato.ac.nz/ml/weka/}} als weiteres Machine-Learning-Wekzeug verwendet. Im Rahmen der strukturierten Literaturanalyse zu Beginn der Erarbeitung der Masterarbeit, erwies sich dieses Werkzeug durch zahlreiche Zitierungen in wissenschaftlichen Arbeiten (unter anderem in \cite{Hammouri2018,Queiroz2016,Ratzinger2008}) ebenfalls als geeignet für die zugrundeliegende Aufgabe. Der WEKA-Workbench (WEKA als Akronym für \textbf{W}aikato \textbf{E}nvironment for \textbf{K}nowledge \textbf{A}nalysis) wurde an der University of Waikato in Neuseeland entwickelt und bietet eine große Kollektion an Machine-Learning-Algorithmen und Preprocessing-Tools zur Verwendung innerhalb einer grafischen Benutzeroberfläche \cite{Weka2016}. Es existieren zudem Schnittstellen für die Programmiersprache Java \cite{Weka2016}. 
 
-Die Verwendung von zwei Machine-Learning-Werkzeugen ermöglicht einen Vergleich der jeweiligen Implementierungen der verwendeten Klassifikationsalgorithmen in der anschließenden Evaluation. Eine Übersicht über die ausgewählten Klassifikationsalgorithmen je Werkzeug befindet sich in \autoref{tab:classifiers}. Kurze Erläuterungen der Algorithmen befinden sich im Anschluss.
+\section{Auswahl des Werkzeugs und der Klassifikationsalgorithmen}
 
-\begin{table}[t]
+Obwohl im Rahmen der Erstellung der Datensets oft auf das Programmieren mit der Programmiersprache Python zurückgegriffen wurde, fiel die Wahl eines Machine-Learning-Werkzeugs nicht auf die Library scikit-learn \cite{scikit}, sondern auf eine eigenständige Lösung. Zur Anwendung kommt der WEKA-Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml/weka/}{https://www.cs.waikato.ac.nz/ml/weka/}} als Machine-Learning-Wekzeug. Im Rahmen der strukturierten Literaturanalyse zu Beginn der Erarbeitung der Masterarbeit, erwies sich dieses Werkzeug durch zahlreiche Zitierungen in wissenschaftlichen Arbeiten (unter anderem in \cite{Hammouri2018,Queiroz2016,Ratzinger2008}) als geeignet für die zugrundeliegende Aufgabe. Der WEKA-Workbench (WEKA als Akronym für \textbf{W}aikato \textbf{E}nvironment for \textbf{K}nowledge \textbf{A}nalysis) wurde an der University of Waikato in Neuseeland entwickelt und bietet eine große Kollektion an Machine-Learning-Algorithmen und Preprocessing-Tools zur Verwendung innerhalb einer grafischen Benutzeroberfläche \cite{Weka2016}. Es existieren zudem Schnittstellen für die Programmiersprache Java \cite{Weka2016}.
+
+Eine Übersicht über die ausgewählten Klassifikationsalgorithmen befindet sich in \autoref{tab:classifiers}. Diese umfasst auch die Abkürzungen der Klassifikatoren, die im weiteren Verlauf der Arbeit verwendet werden. Ausführliche Erläuterungen zu den Algorithmen wurden bereits zuvor in \hyperref[algorithms]{Abschnitt 2.1} gegeben.
+
+\begin{table}
 \centering
 \caption{Zum Training verwendete Klassifikationsalgorithmen}
 \label{tab:classifiers}
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\hspace{0pt}}p{0.497\linewidth}|>{\hspace{0pt}}p{0.499\linewidth}|} 
+\begin{tabular}{|>{\hspace{0pt}}p{0.692\linewidth}|>{\hspace{0pt}}p{0.304\linewidth}|} 
 \hline
-\textbf{scikit-learn}  & \textbf{WEKA}  \\ 
+\textbf{Algorithmus}        & \textbf{Abkürzung}  \\ 
 \hline
-Decision Trees & J48-Decision-Trees \\
-k-Nearest-Neighbors & k-Nearest-Neighbors \\
-Ridge Classifier & Logistic Regression \\
-Na\"{\i}ve Bayes & Na\"{\i}ve Bayes \\
-künstliche neuronale Netze & künstliche neuronale Netze \\
-Random Forest & Random Forest \\
-Stochastic Gradient Descent & Stochastic Gradient Descent \\
-Support Vector Machines & Support Vector Machines \\
+J48 Decision Trees          & J48                 \\ 
+\hline
+k-Nearest-Neighbors         & KNN                 \\ 
+\hline
+logistische Regression      & LR                  \\ 
+\hline
+Na\"{\i}ve Bayes                 & NB                  \\ 
+\hline
+künstliche neuronale Netze  & NN                  \\ 
+\hline
+Random Forest               & RF                  \\ 
+\hline
+Stochastic Gradient Descent & SGD                 \\ 
+\hline
+Support Vector Machines     & SVM                 \\
 \hline
 \end{tabular}
 }
 \end{table}
+
+\textbf{HIER!}
 
 \label{algorithms}
 \textbf{Decision Trees\medskip}\\
@@ -89,7 +121,7 @@ Ein Stochastic-Gradient-Descent-Klassifikator basiert auf dem Gradientenverfahre
 \textbf{Support Vector Machines\medskip}\\
 Support Vector Machines verfolgen das Ziel, eine sogenannte \glqq Hyperplane\grqq{} in einem n-dimen-sionalen Raum (n = Anzahl der Attribute der Eingabemenge) zu finden, welche die Datenpunkte der Eingabemenge eindeutig klassifizieren kann \cite{Gandhi2018}. Die Hyperplane beschreibt eine Trennlinie beziehungsweise Trennfläche, mit deren Hilfe die Daten der zu klassifizierenden Menge den Zielklassen zuordnen lassen \cite{Luber2019}. Dabei gilt es, dass die Trennflächen, welche die Eingangsmenge anhand der Attribute in verschiedene Trennungsebenen unterteilen, einen möglichst großen Abstand ohne Datenpunkte voneinander haben \cite{Luber2019}. Dies funktioniert sowohl für linear als auch nicht-lineare trennbare Mengen.
 
-Alle zuvor vorgestellten Klassifikationsalgorithmen sind bereits in den Werkzeugen scikit-learn und WEKA integriert. Sie erhalten als Eingabe das finale Datenset, dessen Erstellung im \hyperref[dataset]{vorherigen Kapitel} erläutert wurde. Die 13 berechneten Metriken bilden dabei die Attribute, wohingegen die Zielklasse durch die Label \glqq defekt\grqq{} und \glqq fehlerfrei\grqq{} abgebildet wird.
+Alle zuvor vorgestellten Klassifikationsalgorithmen sind bereits in den Werkzeugen scikit-learn und WEKA integriert. Sie erhalten als Eingabe das finale Datenset, dessen Erstellung im \hyperref[dataset-creation]{vorherigen Kapitel} erläutert wurde. Die 13 berechneten Metriken bilden dabei die Attribute, wohingegen die Zielklasse durch die Label \glqq defekt\grqq{} und \glqq fehlerfrei\grqq{} abgebildet wird.
 
 \fbox{\parbox{\linewidth}{RQ2: WELCHE MACHINE-LEARNING-KLASSIFIKATOREN KOMMEN FÜR DIE GEGEBENE AUFGABE IN FRAGE?\medskip\\
 Es werden neun verschiedene Klassifikationsalgorithmen zur Anwendung kommen. Sieben Algorithmen werden sowohl mit scikit-learn als auch mit WEKA verwendet (DT / J48, KNN, NB, NN, RF, SGD, SVM). Jeweils ein Algorithmus ist werkzeugspezifisch (scikit-learn: RC, WEKA: LR), jedoch unterliegen beide Algorithmen dem Konzept der Regression. Das Hauptkriterium für die Auswahl sämtlicher Algorithmen war die vorherige Verwendung im Rahmen der wissenschaftlichen Literatur \cite{Son2019}.}}
