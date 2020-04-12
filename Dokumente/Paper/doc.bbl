@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{10}
+\begin{thebibliography}{16}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,6 +37,21 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Alsaeedi and Khan}{Alsaeedi and Khan}{2019}]%
+        {Alsaeedi2019}
+\bibfield{author}{\bibinfo{person}{Abdullah Alsaeedi} {and}
+  \bibinfo{person}{Mohammad~Zubair Khan}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Software Defect Prediction Using Supervised Machine
+  Learning and Ensemble Techniques: A Comparative Study}.
+\newblock \bibinfo{journal}{\emph{Journal of Software Engineering and
+  Applications}} \bibinfo{volume}{12}, \bibinfo{number}{05}
+  (\bibinfo{year}{2019}), \bibinfo{pages}{85--100}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.4236/jsea.2019.125007}
+\showDOI{\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Borg, Svensson, Berg, and Hansson}{Borg
   et~al\mbox{.}}{2019}]%
         {Borg2019}
@@ -55,6 +70,24 @@
 \showDOI{\tempurl}
 
 
+\bibitem[\protect\citeauthoryear{Challagulla, Bastani, Yen, and
+  Paul}{Challagulla et~al\mbox{.}}{2008}]%
+        {Challagulla2008}
+\bibfield{author}{\bibinfo{person}{Venkata Udaya~B. Challagulla},
+  \bibinfo{person}{Farokh~B. Bastani}, \bibinfo{person}{I.~Ling Yen}, {and}
+  \bibinfo{person}{Raymond~A. Paul}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{{Empirical assessment of machine learning based
+  software defect prediction techniques}}.
+\newblock \bibinfo{journal}{\emph{International Journal on Artificial
+  Intelligence Tools}} \bibinfo{volume}{17}, \bibinfo{number}{2}
+  (\bibinfo{year}{2008}), \bibinfo{pages}{389--400}.
+\newblock
+\showISSN{02182130}
+\urldef\tempurl%
+\url{https://doi.org/10.1142/S0218213008003947}
+\showDOI{\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Frank, Hall, and Witten}{Frank
   et~al\mbox{.}}{2016}]%
         {Weka2016}
@@ -65,6 +98,23 @@
   (\bibinfo{edition}{fourth edition} ed.)}.
 \newblock \bibinfo{publisher}{Morgan Kaufmann}.
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Hammouri, Hammad, Alnabhan, and
+  Alsarayrah}{Hammouri et~al\mbox{.}}{2018}]%
+        {Hammouri2018}
+\bibfield{author}{\bibinfo{person}{Awni Hammouri}, \bibinfo{person}{Mustafa
+  Hammad}, \bibinfo{person}{Mohammad Alnabhan}, {and} \bibinfo{person}{Fatima
+  Alsarayrah}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Software Bug Prediction using Machine Learning
+  Approach}.
+\newblock \bibinfo{journal}{\emph{International Journal of Advanced Computer
+  Science and Applications}} \bibinfo{volume}{9}, \bibinfo{number}{2}
+  (\bibinfo{year}{2018}).
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.14569/ijacsa.2018.090212}
+\showDOI{\tempurl}
 
 
 \bibitem[\protect\citeauthoryear{Hunsen, Zhang, Siegmund, Kästner,
@@ -99,6 +149,23 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/1806799.1806819}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Moser, Pedrycz, and Succi}{Moser
+  et~al\mbox{.}}{2008}]%
+        {Moser2008}
+\bibfield{author}{\bibinfo{person}{Raimund Moser}, \bibinfo{person}{Witold
+  Pedrycz}, {and} \bibinfo{person}{Giancarlo Succi}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{A comparative analysis of the efficiency of change
+  metrics and static code attributes for defect prediction}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 13th international conference on
+  Software engineering - {ICSE} {\textquotesingle}08}}.
+  \bibinfo{publisher}{{ACM} Press}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1368088.1368114}
 \showDOI{\tempurl}
 
 
@@ -170,6 +237,24 @@
 \showDOI{\tempurl}
 
 
+\bibitem[\protect\citeauthoryear{Son, Pritam, Khari, Kumar, Phuong, and
+  Thong}{Son et~al\mbox{.}}{2019}]%
+        {Son2019}
+\bibfield{author}{\bibinfo{person}{Le Son}, \bibinfo{person}{Nakul Pritam},
+  \bibinfo{person}{Manju Khari}, \bibinfo{person}{Raghvendra Kumar},
+  \bibinfo{person}{Pham Phuong}, {and} \bibinfo{person}{Pham Thong}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Empirical Study of Software Defect Prediction: A
+  Systematic Mapping}.
+\newblock \bibinfo{journal}{\emph{Symmetry}} \bibinfo{volume}{11},
+  \bibinfo{number}{2} (\bibinfo{date}{feb} \bibinfo{year}{2019}),
+  \bibinfo{pages}{212}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.3390/sym11020212}
+\showDOI{\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Spadini, Aniche, and Bacchelli}{Spadini
   et~al\mbox{.}}{2018}]%
         {Spadini2018}
@@ -184,6 +269,23 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/3236024.3264598}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Thüm, Apel, Kästner, Schaefer, and
+  Saake}{Thüm et~al\mbox{.}}{2014}]%
+        {Thuem2014}
+\bibfield{author}{\bibinfo{person}{Thomas Thüm}, \bibinfo{person}{Sven Apel},
+  \bibinfo{person}{Christian Kästner}, \bibinfo{person}{Ina Schaefer}, {and}
+  \bibinfo{person}{Gunter Saake}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{A Classification and Survey of Analysis Strategies
+  for Software Product Lines}.
+\newblock \bibinfo{journal}{\emph{Comput. Surveys}} \bibinfo{volume}{47},
+  \bibinfo{number}{1} (\bibinfo{date}{jul} \bibinfo{year}{2014}),
+  \bibinfo{pages}{1--45}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/2580950}
 \showDOI{\tempurl}
 
 

@@ -3,12 +3,24 @@
 \chapter{Fazit}
 \label{conclusion}
 
-Das abschließende Kapitel dieser Arbeit dient zur Zusammenfassung der Ergebnisse der vorangegangenen Kapitel sowie zur Erläuterung der daraus gewonnenen Erkenntnisse. Ebenfalls wird ein Ausblick auf eine mögliche Weiterführung dieser Arbeit gegeben.
+Das abschließende Kapitel dieser Arbeit dient zur Zusammenfassung der Ergebnisse der vorangegangenen Kapitel. Ebenfalls wird ein Ausblick auf eine mögliche Weiterführung dieser Arbeit gegeben.
 \\
 \hrule
 
-\section{Zusammenfassung und Erkenntnisse}
+\section{Zusammenfassung}
+Diese Masterarbeit gab einen detaillierten Einblick in die Entwicklung einer Methode zur Vorhersage von Softwarefehlern basierend auf dem Konzept der Software-Features unter Anwendung von Methoden des Machine Learning. Zusätzlich diente diese Arbeit zur Vermittung von Wissen zu den grundlegenden Themenkomplexen \glqq featurebasierte Softwareentwicklung\grqq{}, \glqq Machine-Learning-Klassifikation\grqq{} und \glqq Fehlervorhersage mittels Machine Learning\grqq.
+
+Die Entwicklung der Methode zur Fehlervorhersage gliederte sich dabei in drei Teile: die Erstellung eines featurebasierten Datensets unter der Einbindung von elf Metriken, das Training von Klassifikatoren auf der Basis von acht Klassifikationsalgorithmen und die anschließende Evaluation der Klassifikatoren. Dabei umfasste die Evaluation zudem einen Vergleich zwischen zwei dateibasierten Datensets, deren Metriken aus der wissenschaftlichen Literatur entnommen wurde. Eines dieser Datensets wurde dabei mit den featurebasierten Metriken erweitert, um im direkten Vergleich die Auswirkungen der featurebasierten Metriken auf die Performanz der Vorhersagen zu messen.
+
+Die Ergebnisse der Evaluation zeigten dabei, dass die Klassifikatoren des featurebasierten Datensets eine Treffergenauigkeit von bis zu 84\% erreichten und damit überdurchschnittlich präzise Vorhersagen bezüglich der Testdaten treffen können. Der Vergleich zwischen den dateibasierten Datensets zeigte allerdings, dass der Einfluss der featurebasierten Metriken, welche auf Dateiebene gemapped wurden, äußerst gering ist. 
 
 \section{Ausblick}
+
+Der Ausblick für zukünftige Arbeiten an dem zugrundeliegenden Thema lässt sich an den Erkenntnissen des Abschnitts \glqq Herausforderungen und Limitationen\grqq{} ableiten.
+Zur präziseren Identifikation von Features im Sourcecode wird ein sogenannter \glqq Parser\grqq{} beziehungsweise ein \glqq Parsing-Tool\grqq{} benötigt. Momentan verfügbare Werkzeuge zur Analyse von Featurecode verwenden einen gleichen Ansatz in der Identifikation der Features, so wie er in dieser Arbeit in Form von regulären Ausdrücken zur Anwendung kam. Wie bereits erwähnt, führt diese Methode jedoch dazu, dass viele unerwünschte Features identifiziert werden. Je nach Umfang der umgesetzten Variabilität innerhalb eines Softwareprojekts, kann eine manuelle Ausfilterung der unerwünschten Features einen enormen Aufwand erzeugen. Die Entwicklung einer automatisierten Methode dazu stellt ebenfalls nur eine temporäre Lösung dar, da sie dann nicht universell für weitere Softwareprojekte einsetzbar ist. Ein Parser beziehungsweise ein Parsing-Tool könnte so konfiguriert sein, dass es softwareübergreifend die gewünschten Features korrekt identifizieren kann und unerwünschte Features unbeachtet lässt. Zur Erstellung eines solchen Werkzeugs ist jedoch eine umfangreiche Analyse von featurebasierten Softwareprojekten nötig, um einen Überblick über möglichst viele Implementierungen der Features zu erhalten.
+
+Ein Parsing-Tool kann auch hilfreich für eine bessere Einbindung des Featurebezugs sein. Es könnte verwendet werden, um zu ermitteln, ob die mit einem Commit veröffentliche Veränderung einer Datei tatsächlich im Zusammenhang mit einem Feature steht. Dazu muss in den Diffs analysiert werden, ob ein Feature erwähnt wird (siehe oben) und ob innerhalb des Featurecodes eine Veränderung vorgenommen wurde. Das Pasing-Tool muss somit eine \glqq in-depth\grqq -Analyse der Diffs und gegebenenfalls des Sourcecodes durchführen.
+
+Sollte in der Zukunft ein solches Tool entwickelt werden, so würde es sich anbieten, die zentralen Arbeitsschritte dieser Arbeit unter dessen Zuhilfenahme zu wiederholen, um die verwendete Methodik zu ergänzen und die neuen Ergebnisse mit den Ergebnissen dieser Arbeit zu vergleichen. Gleiches sollte durchgeführt werden, wenn eine Alternative Methodik zur Identifizierung von fehlereinführenden Commits vorgestellt wird. Die bisher genutzte SZZ-Methodik wurde im Rahmen einer wissenschaftlichen Studie als unpräzise \glqq enttarnt\grqq.
 
 \cleardoublepage

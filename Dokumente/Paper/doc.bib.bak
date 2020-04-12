@@ -1991,4 +1991,74 @@ ONF TR-514
   volume  = {12},
 }
 
+@Book{Weka2016,
+  author    = {Eibe Frank and Mark A. Hall and Ian H. Witten},
+  publisher = {Morgan Kaufmann},
+  title     = {The WEKA Workbench. Online Appendix for "Data Mining: Practical Machine Learning Tools and Techniques"},
+  year      = {2016},
+  edition   = {Fourth Edition},
+}
+
+@Article{Challagulla2008,
+  author   = {Challagulla, Venkata Udaya B. and Bastani, Farokh B. and Yen, I. Ling and Paul, Raymond A.},
+  journal  = {International Journal on Artificial Intelligence Tools},
+  title    = {{Empirical assessment of machine learning based software defect prediction techniques}},
+  year     = {2008},
+  issn     = {02182130},
+  number   = {2},
+  pages    = {389--400},
+  volume   = {17},
+  abstract = {Automated reliability assessment is essential for systems that entail dynamic adaptation based on runtime mission-specific requirements. One approach along this direction is to monitor and assess the system using machine learning-based software defect prediction techniques. Due to the dynamic nature of software data collected, Instance-based learning algorithms are proposed for the above purposes. To evaluate the accuracy of these methods, the paper presents an empirical analysis of four different real-time software defect data sets using different predictor models.The results show that a combination of 1R and Instance-based learning along with Consistency-based subset evaluation technique provides a relatively better consistency in achieving accurate predictions as compared with other models. No direct relationship is observed between the skewness present in the data sets and the prediction accuracy of these models. Principal Component Analysis (PCA) does not show a consistent advantage in improving the accuracy of the predictions. While random reduction of attributes gave poor accuracy results, simple Feature Subset Selection methods performed better than PCA for most prediction models. Based on these results, the paper presents a high-level design of an Intelligent Software Defect Analysis tool (ISDAT) for dynamic monitoring and defect assessment of software modules.},
+  doi      = {10.1142/S0218213008003947},
+}
+
+@Article{Alsaeedi2019,
+  author    = {Abdullah Alsaeedi and Mohammad Zubair Khan},
+  journal   = {Journal of Software Engineering and Applications},
+  title     = {Software Defect Prediction Using Supervised Machine Learning and Ensemble Techniques: A Comparative Study},
+  year      = {2019},
+  number    = {05},
+  pages     = {85--100},
+  volume    = {12},
+  doi       = {10.4236/jsea.2019.125007},
+  publisher = {Scientific Research Publishing, Inc.},
+}
+
+@Article{Hammouri2018,
+  author    = {Awni Hammouri and Mustafa Hammad and Mohammad Alnabhan and Fatima Alsarayrah},
+  journal   = {International Journal of Advanced Computer Science and Applications},
+  title     = {Software Bug Prediction using Machine Learning Approach},
+  year      = {2018},
+  number    = {2},
+  volume    = {9},
+  doi       = {10.14569/ijacsa.2018.090212},
+  publisher = {The Science and Information Organization},
+}
+
+@Article{Son2019,
+  author    = {Le Son and Nakul Pritam and Manju Khari and Raghvendra Kumar and Pham Phuong and Pham Thong},
+  journal   = {Symmetry},
+  title     = {Empirical Study of Software Defect Prediction: A Systematic Mapping},
+  year      = {2019},
+  month     = {feb},
+  number    = {2},
+  pages     = {212},
+  volume    = {11},
+  doi       = {10.3390/sym11020212},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Thuem2014,
+  author    = {Thomas Thüm and Sven Apel and Christian Kästner and Ina Schaefer and Gunter Saake},
+  journal   = {{ACM} Computing Surveys},
+  title     = {A Classification and Survey of Analysis Strategies for Software Product Lines},
+  year      = {2014},
+  month     = {jul},
+  number    = {1},
+  pages     = {1--45},
+  volume    = {47},
+  doi       = {10.1145/2580950},
+  publisher = {Association for Computing Machinery ({ACM})},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

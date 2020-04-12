@@ -3,7 +3,7 @@
 \chapter{Erstellung eines featurebasierten Datensets}
 \label{dataset-creation}
 
-Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zur Anlernung der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen der Anlernung der Klassifikatoren dienen. Eine Gliederung der Kapitel kann \autoref{fig:kap3} entnommen werden.
+Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zum Training der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen des Trainings der Klassifikatoren dienen. Eine Gliederung der Kapitel kann \autoref{fig:kap3} entnommen werden.
 
 \begin{figure}[H]
     \centering
@@ -15,7 +15,7 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 \section{Datenauswahl}
 
-Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für die Anlernung der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
+Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für das Training der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commits-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
 \begin{table}[t]
 \centering
@@ -253,7 +253,7 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 \section{Metriken}
 
-Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen Attribute zur Erlernung der Machine-Learning-Klassifikatoren. Im hier vorliegenden Szenario werden sogenannte Metriken als Attribute verwendet. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf featurebasierte Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet. Eine Auflistung der elf Metriken samt Beschreibungen ist in \autoref{tab:metrics} aufgeführt. Die Berechnung der einzelnen Metriken erfolgte entweder direkt mittels SQL-Abfragen oder kombiniert mittels SQL-Abfragen und Berechnungen durch ein Python-Skript.
+Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen Attribute zum Training der Machine-Learning-Klassifikatoren. Im hier vorliegenden Szenario werden sogenannte Metriken als Attribute verwendet. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf featurebasierte Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet. Eine Auflistung der elf Metriken samt Beschreibungen ist in \autoref{tab:metrics} aufgeführt. Die Berechnung der einzelnen Metriken erfolgte entweder direkt mittels SQL-Abfragen oder kombiniert mittels SQL-Abfragen und Berechnungen durch ein Python-Skript.
 
 \begin{table}[t]
 \centering
@@ -292,6 +292,7 @@ Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen A
 }
 \end{table}
 
+\label{new-datasets}
 Im Hinblick auf die im nächsten Kapitel folgende Evaluation des featurebasierten Datensets, wurden zwei weitere Datensets erstellt, um die Auswirkungen der featurebasierten Metriken auf die Vorhersagen der Klassifikatoren vergleichbar zu machen. Beide weiteren Datensets verfolgen einen klassischen dateibasierten Ansatz, wie er in der Machine-Learning-gestützten Fehlererkennung üblich ist und basieren auf die Methodik, die von Moser et al. \cite{Moser2008}, die bereits in \hyperref[moser]{Abschnitt 2.3} vorgestellt wurde. Ebenfalls wurden die 17 Prozessmetriken dieser wissenschaftlichen Arbeit übernommen. Eine Visualisierung zur Unterscheidung der drei Datensets ist in \autoref{fig:dataset} dargestellt.
 
 \begin{figure}[t]
@@ -304,7 +305,7 @@ Die Abbildung zeigt die Wege der Erstellung des featurebasierten Datensets (Pfad
 
 Die Erstellung der dateibasierten Datensets erfolgt ebenfalls auf Basis der mit PyDriller erhaltenen Rohdaten der Commits der Softwareprojekte und den daraus extrahierten veränderten Dateien (A + B). Es ist somit keine weitere Verarbeitung der Rohdaten nötig. Sie dienen dann als Grundlage zur Berechnung der 17 Metriken (H) nach \cite{Moser2008}. Eine Übersicht der Metriken erfolgte bereits in \hyperref[moser-metrics]{Abschnitt 2.3}. Für die Berechnung der zeitbasierten Metriken \texttt{AAGE} und \texttt{WAGE} mussten die Rohdaten beziehungsweise die in den Rohdaten gelisteten Commits mit ihrem Veröffentlichungsdatum ergänzt werden. Durchgeführt wurde dies ebenfalls mit PyDriller. Als Startpunkt für die Berechnung der vergangenen Wochen wurde jeweils das Datum des ersten Commits eines Releases gewählt.
 
-Das featurebasierte sowie das \glqq einfache\grqq{} Datenset (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der elf beziehungsweise 17 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurden (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt für jede Veränderung eines Features beziehungsweise einer Datei anhand des folgenden Musters:
+Das featurebasierte sowie das \glqq einfache\grqq{} dateibasierte Datenset (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der elf beziehungsweise 17 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurden (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt für jede Veränderung eines Features beziehungsweise einer Datei anhand des folgenden Musters:
 
 \begin{table}[H]
 \centering
@@ -326,14 +327,37 @@ Die Informationen zum Status eines Features basieren dabei auf den ihm zugrundli
 \item im Fall von Dateien wird der jeweils letzte Commit der Dateien im betreffenden Release überprüft. Ist die Datei dort als \glqq fehlerfrei\grqq{} markiert, so wird angenommen, dass sie fehlerfrei ist. Ist sie als \glqq defekt\grqq{} markiert, so wird angenommen, dass sie in diesem Release defekt ist.
 \end{itemize}
 
-Die so erstellten einzelnen Tabellen werden anschließend zu jeweils einer gemeinsamen Tabelle konkateniert, sodass eine umfangreiche Auflistung an Metriken inklusive der zugehörigen Labels entsteht. Diese Auflistung gibt an, welche Charakteristika ein Feature beziehungsweise eine Datei aufweisen muss, um als \glqq fehlerfrei\grqq{} oder \glqq defekt\grqq{} eingestuft zu werden und dient als Lerngrundlage der Klassifikatoren für zukünftige Vorhersagen.
+Die so erstellten einzelnen Tabellen werden anschließend zu jeweils einer gemeinsamen Tabelle konkateniert, sodass eine umfangreiche Auflistung an Metriken inklusive der zugehörigen Labels entsteht. Diese Auflistung gibt an, welche Charakteristika ein Feature beziehungsweise eine Datei aufweisen muss, um als \glqq fehlerfrei\grqq{} oder \glqq defekt\grqq{} eingestuft zu werden und dient als Trainingsgrundlage der Klassifikatoren für zukünftige Vorhersagen.
 
-Eine Besonderheit stellt das zweite für den Vergleich im Rahmen der Evaluation erstellte dateibasierte Datenset dar (J). Es basiert auf dem \glqq einfachen\grqq{} Datenset (I) mit den Metriken aus \cite{Moser2008}, umfasst aber zusätzlich die elf Metriken des featurebasierten Datensets (G) aus \autoref{tab:metrics}. Dazu wurden die Werte der featurebasierten Metriken auf Dateiebene \glqq gemapped\grqq{} beziehungsweise übertragen. Dies bedeutetet, dass für jede im dateibasierte Datenset referenzierte Datei eines Releases analysiert wurde, welche Features in der jeweiligen Datei erwähnt wurde. Von diesen Features wurden dann die zugehörigen Metriken des featurebasierten Datensets ermittelt und der Durchschnittswert berechnet um im erteiterten Datenset eingetragen. Sollte in einer Datei keine Features erwähnt worden sein, so wird für die featurebasierten Metriken jeweils der Wert 0 gespeichert. Wie zu Beginn des Abschnitts erwähnt wurde, kann auf diesem Weg das featurebasierte Datenset mit einem klassischen dateibasierten Datenset verglichen werden, da die Bedingungen für den Vergleich geschaffen wurden. Ein direkter Vergleich zwischen den verschiedenen Datensets ist aus den genannten Gründen nicht praktikabel.
+Eine Besonderheit stellt das zweite für den Vergleich im Rahmen der Evaluation erstellte dateibasierte Datenset dar (J). Es basiert auf dem \glqq einfachen\grqq{} dateibasierten Datenset (I) mit den Metriken aus \cite{Moser2008}, umfasst aber zusätzlich die elf Metriken des featurebasierten Datensets (G) aus \autoref{tab:metrics}. Dazu wurden die Werte der featurebasierten Metriken auf Dateiebene \glqq gemapped\grqq{} beziehungsweise übertragen. Dies bedeutetet, dass für jede im dateibasierte Datenset referenzierte Datei eines Releases analysiert wurde, welche Features in der jeweiligen Datei erwähnt wurde. Von diesen Features wurden dann die zugehörigen Metriken des featurebasierten Datensets ermittelt und der Durchschnittswert berechnet um im erteiterten Datenset eingetragen. Sollte in einer Datei keine Features erwähnt worden sein, so wird für die featurebasierten Metriken jeweils der Wert 0 gespeichert. Wie zu Beginn des Abschnitts erwähnt wurde, kann auf diesem Weg das featurebasierte Datenset mit einem klassischen dateibasierten Datenset verglichen werden, da die Bedingungen für den Vergleich geschaffen wurden. Ein direkter Vergleich zwischen den verschiedenen Datensets ist aus den genannten Gründen nicht praktikabel.
 
-Die auf die zuvor beschriebene Weise erstellten Datensets können nun zur Erlernung der Klassifikatoren verwendet werden. Dieser Vorgang wird im kommenden Kapitel erläutert.
+Einige ergänzende Kennzahlen zu den Datensets sind in \autoref{tab:dataset-numbers} aufgeführt. Die Zeile \glqq unique\grqq{} gibt dabei an, wie viele einzigartige Zeilen in den Datensets enthalten sind. Die auf die zuvor beschriebene Weise erstellten Datensets können nun zum Training der Klassifikatoren verwendet werden. Dieser Vorgang wird im kommenden Kapitel erläutert.
+
+\begin{table}[t]
+\centering
+\caption{Kennzahlen der Datensets}
+\label{tab:dataset-numbers}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|>{\hspace{0pt}}p{0.283\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.249\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.285\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.175\linewidth}|} 
+\hline
+                        & \textbf{featurebasiertes}\par{}\textbf{Datenset} & \textbf{einfaches}\par{}\textbf{ dateibasiertes Datenset} & \textbf{erweitertes}\par{}\textbf{dateibasiertes Datenset}  \\ 
+\hline
+Anzahl Attribute        & 11 + Label                                       & 17 + Label                  & 28 + Label                                   \\ 
+\hline
+Anzahl Datensätze       & 14.059                                           & 76.986                      & 76.986                                       \\ 
+\hline
+~ ~ ~- davon defekt     & 2.735                                            & 1.899                       & 1.899                                        \\ 
+\hline
+~ ~ ~- davon fehlerfrei & 11.324                                           & 75.087                      & 75.087                                       \\ 
+\hline
+~ ~ ~- davon \glqq unique\grqq   & 8.447                                            & 52.564                      & 52.783                                       \\
+\hline
+\end{tabular}
+}
+\end{table}
 
 \fbox{\parbox{\linewidth}{RQ1b: WIE WEIT MÜSSEN DIE DATEN VORVERARBEITET WERDEN, UM SIE FÜR DAS TRAINING NUTZBAR ZU MACHEN?\medskip\\
-Eine umfassende Vorverarbeitung der Daten aus den Repositories ist nicht nötig. Die Verarbeitungsschritte bestanden aus: Extraktion der Features inklusive Bereinigung, Identifizierung von korrektiven Commits mittels Analyse der Commit-Nachrichten, Analyse nach fehlereinführenden Commits unter Zuhilfenahme des SZZ-Algorithmus sowie Berechnung von elf Metriken, welche als Attribute für die Erlernung der Klassifikatoren dienen.}}
+Eine umfassende Vorverarbeitung der Daten aus den Repositories ist nicht nötig. Die Verarbeitungsschritte bestanden aus: Extraktion der Features inklusive Bereinigung, Identifizierung von korrektiven Commits mittels Analyse der Commit-Nachrichten, Analyse nach fehlereinführenden Commits unter Zuhilfenahme des SZZ-Algorithmus sowie Berechnung von elf Metriken, welche als Attribute für das Training der Klassifikatoren dienen.}}
 
 \cleardoublepage
 
