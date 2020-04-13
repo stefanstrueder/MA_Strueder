@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  12 APR 2020 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  13 APR 2020 14:30
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -739,6 +739,22 @@ nuxLibertineT-TLF.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 2919.
 )
+("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count297
+\sf@farskip=\skip75
+\sf@captopadj=\dimen188
+\sf@capskip=\skip76
+\sf@nearskip=\skip77
+\c@subfigure=\count298
+\c@subfigure@save=\count299
+\c@lofdepth=\count300
+\c@subtable=\count301
+\c@subtable@save=\count302
+\c@lotdepth=\count303
+\sf@top=\skip78
+\sf@bottom=\skip79
+)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/relsize\relsize.st
 y"
 Package: relsize 2013/03/29 ver 4.1
@@ -761,14 +777,14 @@ Package: expl3 2020-01-31 L3 programming layer (loader)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
 File: l3backend-pdfmode.def 2019-04-06 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count297
+\l__kernel_color_stack_int=\count304
 \l__pdf_internal_box=\box53
 ))
 Package: xparse 2020-01-12 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count298
-\g__xparse_grabber_int=\count299
-\l__xparse_m_args_int=\count300
-\l__xparse_v_nesting_int=\count301
+\l__xparse_current_arg_int=\count305
+\g__xparse_grabber_int=\count306
+\l__xparse_m_args_int=\count307
+\l__xparse_v_nesting_int=\count308
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/zref\zref-abspage.
 sty"
@@ -781,54 +797,54 @@ Package zref Info: New property list: main on input line 763.
 Package zref Info: New property: default on input line 764.
 Package zref Info: New property: page on input line 765.
 )
-\c@abspage=\count302
+\c@abspage=\count309
 Package zref Info: New property: abspage on input line 66.
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/needspace\needspac
 e.sty"
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
-\mdf@templength=\skip75
-\c@mdf@globalstyle@cnt=\count303
-\mdf@skipabove@length=\skip76
-\mdf@skipbelow@length=\skip77
-\mdf@leftmargin@length=\skip78
-\mdf@rightmargin@length=\skip79
-\mdf@innerleftmargin@length=\skip80
-\mdf@innerrightmargin@length=\skip81
-\mdf@innertopmargin@length=\skip82
-\mdf@innerbottommargin@length=\skip83
-\mdf@splittopskip@length=\skip84
-\mdf@splitbottomskip@length=\skip85
-\mdf@outermargin@length=\skip86
-\mdf@innermargin@length=\skip87
-\mdf@linewidth@length=\skip88
-\mdf@innerlinewidth@length=\skip89
-\mdf@middlelinewidth@length=\skip90
-\mdf@outerlinewidth@length=\skip91
-\mdf@roundcorner@length=\skip92
-\mdf@footenotedistance@length=\skip93
-\mdf@userdefinedwidth@length=\skip94
-\mdf@needspace@length=\skip95
-\mdf@frametitleaboveskip@length=\skip96
-\mdf@frametitlebelowskip@length=\skip97
-\mdf@frametitlerulewidth@length=\skip98
-\mdf@frametitleleftmargin@length=\skip99
-\mdf@frametitlerightmargin@length=\skip100
-\mdf@shadowsize@length=\skip101
-\mdf@extratopheight@length=\skip102
-\mdf@subtitleabovelinewidth@length=\skip103
-\mdf@subtitlebelowlinewidth@length=\skip104
-\mdf@subtitleaboveskip@length=\skip105
-\mdf@subtitlebelowskip@length=\skip106
-\mdf@subtitleinneraboveskip@length=\skip107
-\mdf@subtitleinnerbelowskip@length=\skip108
-\mdf@subsubtitleabovelinewidth@length=\skip109
-\mdf@subsubtitlebelowlinewidth@length=\skip110
-\mdf@subsubtitleaboveskip@length=\skip111
-\mdf@subsubtitlebelowskip@length=\skip112
-\mdf@subsubtitleinneraboveskip@length=\skip113
-\mdf@subsubtitleinnerbelowskip@length=\skip114
+\mdf@templength=\skip80
+\c@mdf@globalstyle@cnt=\count310
+\mdf@skipabove@length=\skip81
+\mdf@skipbelow@length=\skip82
+\mdf@leftmargin@length=\skip83
+\mdf@rightmargin@length=\skip84
+\mdf@innerleftmargin@length=\skip85
+\mdf@innerrightmargin@length=\skip86
+\mdf@innertopmargin@length=\skip87
+\mdf@innerbottommargin@length=\skip88
+\mdf@splittopskip@length=\skip89
+\mdf@splitbottomskip@length=\skip90
+\mdf@outermargin@length=\skip91
+\mdf@innermargin@length=\skip92
+\mdf@linewidth@length=\skip93
+\mdf@innerlinewidth@length=\skip94
+\mdf@middlelinewidth@length=\skip95
+\mdf@outerlinewidth@length=\skip96
+\mdf@roundcorner@length=\skip97
+\mdf@footenotedistance@length=\skip98
+\mdf@userdefinedwidth@length=\skip99
+\mdf@needspace@length=\skip100
+\mdf@frametitleaboveskip@length=\skip101
+\mdf@frametitlebelowskip@length=\skip102
+\mdf@frametitlerulewidth@length=\skip103
+\mdf@frametitleleftmargin@length=\skip104
+\mdf@frametitlerightmargin@length=\skip105
+\mdf@shadowsize@length=\skip106
+\mdf@extratopheight@length=\skip107
+\mdf@subtitleabovelinewidth@length=\skip108
+\mdf@subtitlebelowlinewidth@length=\skip109
+\mdf@subtitleaboveskip@length=\skip110
+\mdf@subtitlebelowskip@length=\skip111
+\mdf@subtitleinneraboveskip@length=\skip112
+\mdf@subtitleinnerbelowskip@length=\skip113
+\mdf@subsubtitleabovelinewidth@length=\skip114
+\mdf@subsubtitlebelowlinewidth@length=\skip115
+\mdf@subsubtitleaboveskip@length=\skip116
+\mdf@subsubtitlebelowskip@length=\skip117
+\mdf@subsubtitleinneraboveskip@length=\skip118
+\mdf@subsubtitleinnerbelowskip@length=\skip119
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\
 tikz.sty"
@@ -839,8 +855,8 @@ cs.sty"
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 futil-common.tex"
 \pgfutil@everybye=\toks35
-\pgfutil@tempdima=\dimen188
-\pgfutil@tempdimb=\dimen189
+\pgfutil@tempdima=\dimen189
+\pgfutil@tempdimb=\dimen190
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pg
 futil-common-lists.tex"))
@@ -873,26 +889,26 @@ fkeys.code.tex"
 fkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen190
-\pgf@y=\dimen191
-\pgf@xa=\dimen192
-\pgf@ya=\dimen193
-\pgf@xb=\dimen194
-\pgf@yb=\dimen195
-\pgf@xc=\dimen196
-\pgf@yc=\dimen197
-\pgf@xd=\dimen198
-\pgf@yd=\dimen256
+\pgf@x=\dimen191
+\pgf@y=\dimen192
+\pgf@xa=\dimen193
+\pgf@ya=\dimen194
+\pgf@xb=\dimen195
+\pgf@yb=\dimen196
+\pgf@xc=\dimen197
+\pgf@yc=\dimen198
+\pgf@xd=\dimen256
+\pgf@yd=\dimen257
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count304
-\c@pgf@countb=\count305
-\c@pgf@countc=\count306
-\c@pgf@countd=\count307
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
-\pgf@sys@id@count=\count308
+\pgf@sys@id@count=\count315
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgf.cfg"
@@ -911,8 +927,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count309
-\pgfsyssoftpath@bigbuffer@items=\count310
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\
 pgfsysprotocol.code.tex"
@@ -930,8 +946,8 @@ calc.code.tex"
 util.code.tex")
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 parser.code.tex"
-\pgfmath@dimen=\dimen257
-\pgfmath@count=\count311
+\pgfmath@dimen=\dimen258
+\pgfmath@count=\count318
 \pgfmath@box=\box55
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
@@ -957,39 +973,39 @@ functions.misc.code.tex")
 functions.integerarithmetics.code.tex")))
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 float.code.tex"
-\c@pgfmathroundto@lastzeros=\count312
+\c@pgfmathroundto@lastzeros=\count319
 ))
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.
 code.tex")
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen258
-\pgf@picmaxx=\dimen259
-\pgf@picminy=\dimen260
-\pgf@picmaxy=\dimen261
-\pgf@pathminx=\dimen262
-\pgf@pathmaxx=\dimen263
-\pgf@pathminy=\dimen264
-\pgf@pathmaxy=\dimen265
-\pgf@xx=\dimen266
-\pgf@xy=\dimen267
-\pgf@yx=\dimen268
-\pgf@yy=\dimen269
-\pgf@zx=\dimen270
-\pgf@zy=\dimen271
+\pgf@picminx=\dimen259
+\pgf@picmaxx=\dimen260
+\pgf@picminy=\dimen261
+\pgf@picmaxy=\dimen262
+\pgf@pathminx=\dimen263
+\pgf@pathmaxx=\dimen264
+\pgf@pathminy=\dimen265
+\pgf@pathmaxy=\dimen266
+\pgf@xx=\dimen267
+\pgf@xy=\dimen268
+\pgf@yx=\dimen269
+\pgf@yy=\dimen270
+\pgf@zx=\dimen271
+\pgf@zy=\dimen272
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen272
-\pgf@path@lasty=\dimen273
+\pgf@path@lastx=\dimen273
+\pgf@path@lasty=\dimen274
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen274
-\pgf@shorten@start@additional=\dimen275
+\pgf@shorten@end@additional=\dimen275
+\pgf@shorten@start@additional=\dimen276
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorescopes.code.tex"
@@ -997,19 +1013,19 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count313
+\pgf@picture@serial@count=\count320
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen276
+\pgflinewidth=\dimen277
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen277
-\pgf@pt@y=\dimen278
-\pgf@pt@temp=\dimen279
+\pgf@pt@x=\dimen278
+\pgf@pt@y=\dimen279
+\pgf@pt@temp=\dimen280
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorequick.code.tex"
@@ -1026,14 +1042,14 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen280
+\pgfarrowsep=\dimen281
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen281
-\pgf@sys@shading@range@num=\count314
-\pgf@shadingcount=\count315
+\pgf@max=\dimen282
+\pgf@sys@shading@range@num=\count321
+\pgf@shadingcount=\count322
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\p
 gfcoreimage.code.tex"
@@ -1072,8 +1088,8 @@ File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
 pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen282
-\pgf@nodesepend=\dimen283
+\pgf@nodesepstart=\dimen283
+\pgf@nodesepend=\dimen284
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/compatibility\
 pgfcomp-version-1-18.sty"
@@ -1095,8 +1111,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath
 .code.tex")
-\pgffor@iter=\dimen284
-\pgffor@skip=\dimen285
+\pgffor@iter=\dimen285
+\pgffor@skip=\dimen286
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
 ))
@@ -1107,34 +1123,34 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
 flibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count316
-\pgfplotmarksize=\dimen286
+\pgf@plot@mark@count=\count323
+\pgfplotmarksize=\dimen287
 )
-\tikz@lastx=\dimen287
-\tikz@lasty=\dimen288
-\tikz@lastxsaved=\dimen289
-\tikz@lastysaved=\dimen290
-\tikz@lastmovetox=\dimen291
-\tikz@lastmovetoy=\dimen292
-\tikzleveldistance=\dimen293
-\tikzsiblingdistance=\dimen294
+\tikz@lastx=\dimen288
+\tikz@lasty=\dimen289
+\tikz@lastxsaved=\dimen290
+\tikz@lastysaved=\dimen291
+\tikz@lastmovetox=\dimen292
+\tikz@lastmovetoy=\dimen293
+\tikzleveldistance=\dimen294
+\tikzsiblingdistance=\dimen295
 \tikz@figbox=\box61
 \tikz@figbox@bg=\box62
 \tikz@tempbox=\box63
 \tikz@tempbox@bg=\box64
-\tikztreelevel=\count317
-\tikznumberofchildren=\count318
-\tikznumberofcurrentchild=\count319
-\tikz@fig@count=\count320
+\tikztreelevel=\count324
+\tikznumberofchildren=\count325
+\tikznumberofcurrentchild=\count326
+\tikz@fig@count=\count327
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
 odulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count321
-\pgfmatrixcurrentcolumn=\count322
-\pgf@matrix@numberofcolumns=\count323
+\pgfmatrixcurrentrow=\count328
+\pgfmatrixcurrentcolumn=\count329
+\pgf@matrix@numberofcolumns=\count330
 )
-\tikz@expandcount=\count324
+\tikz@expandcount=\count331
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibrarytopaths.code.tex"
@@ -1149,65 +1165,65 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@splitbox@one=\box67
 \mdf@splitbox@two=\box68
 \mdf@splitbox@save=\box69
-\mdfsplitboxwidth=\skip115
-\mdfsplitboxtotalwidth=\skip116
-\mdfsplitboxheight=\skip117
-\mdfsplitboxdepth=\skip118
-\mdfsplitboxtotalheight=\skip119
-\mdfframetitleboxwidth=\skip120
-\mdfframetitleboxtotalwidth=\skip121
-\mdfframetitleboxheight=\skip122
-\mdfframetitleboxdepth=\skip123
-\mdfframetitleboxtotalheight=\skip124
-\mdffootnoteboxwidth=\skip125
-\mdffootnoteboxtotalwidth=\skip126
-\mdffootnoteboxheight=\skip127
-\mdffootnoteboxdepth=\skip128
-\mdffootnoteboxtotalheight=\skip129
-\mdftotallinewidth=\skip130
-\mdfboundingboxwidth=\skip131
-\mdfboundingboxtotalwidth=\skip132
-\mdfboundingboxheight=\skip133
-\mdfboundingboxdepth=\skip134
-\mdfboundingboxtotalheight=\skip135
-\mdf@freevspace@length=\skip136
-\mdf@horizontalwidthofbox@length=\skip137
-\mdf@verticalmarginwhole@length=\skip138
-\mdf@horizontalspaceofbox=\skip139
-\mdfsubtitleheight=\skip140
-\mdfsubsubtitleheight=\skip141
-\c@mdfcountframes=\count325
+\mdfsplitboxwidth=\skip120
+\mdfsplitboxtotalwidth=\skip121
+\mdfsplitboxheight=\skip122
+\mdfsplitboxdepth=\skip123
+\mdfsplitboxtotalheight=\skip124
+\mdfframetitleboxwidth=\skip125
+\mdfframetitleboxtotalwidth=\skip126
+\mdfframetitleboxheight=\skip127
+\mdfframetitleboxdepth=\skip128
+\mdfframetitleboxtotalheight=\skip129
+\mdffootnoteboxwidth=\skip130
+\mdffootnoteboxtotalwidth=\skip131
+\mdffootnoteboxheight=\skip132
+\mdffootnoteboxdepth=\skip133
+\mdffootnoteboxtotalheight=\skip134
+\mdftotallinewidth=\skip135
+\mdfboundingboxwidth=\skip136
+\mdfboundingboxtotalwidth=\skip137
+\mdfboundingboxheight=\skip138
+\mdfboundingboxdepth=\skip139
+\mdfboundingboxtotalheight=\skip140
+\mdf@freevspace@length=\skip141
+\mdf@horizontalwidthofbox@length=\skip142
+\mdf@verticalmarginwhole@length=\skip143
+\mdf@horizontalspaceofbox=\skip144
+\mdfsubtitleheight=\skip145
+\mdfsubsubtitleheight=\skip146
+\c@mdfcountframes=\count332
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count326
-\c@mdf@env@i=\count327
-\c@mdf@env@ii=\count328
-\c@mdf@zref@counter=\count329
+\mdf@envdepth=\count333
+\c@mdf@env@i=\count334
+\c@mdf@env@ii=\count335
+\c@mdf@zref@counter=\count336
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
 sty"
-\lst@mode=\count330
+\lst@mode=\count337
 \lst@gtempboxa=\box70
 \lst@token=\toks47
-\lst@length=\count331
-\lst@currlwidth=\dimen295
-\lst@column=\count332
-\lst@pos=\count333
-\lst@lostspace=\dimen296
-\lst@width=\dimen297
-\lst@newlines=\count334
-\lst@lineno=\count335
-\lst@maxwidth=\dimen298
+\lst@length=\count338
+\lst@currlwidth=\dimen296
+\lst@column=\count339
+\lst@pos=\count340
+\lst@lostspace=\dimen297
+\lst@width=\dimen298
+\lst@newlines=\count341
+\lst@lineno=\count342
+\lst@maxwidth=\dimen299
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
 ty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count336
-\lst@skipnumbers=\count337
+\c@lstnumber=\count343
+\lst@skipnumbers=\count344
 \lst@framebox=\box71
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
@@ -1219,85 +1235,85 @@ Package: listings 2019/09/10 1.8c (Carsten Heinz)
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multirow.
 sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip142
-\multirow@cntb=\count338
-\multirow@dima=\skip143
-\bigstrutjot=\dimen299
+\multirow@colwidth=\skip147
+\multirow@cntb=\count345
+\multirow@dima=\skip148
+\bigstrutjot=\dimen300
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen300
+\col@sep=\dimen301
 \ar@mcellbox=\box72
-\extrarowheight=\dimen301
+\extrarowheight=\dimen302
 \NC@list=\toks48
-\extratabsurround=\skip144
-\backup@length=\skip145
+\extratabsurround=\skip149
+\backup@length=\skip150
 \ar@cellbox=\box73
 )
-\c@recommendationno=\count339
-\c@observationno=\count340
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 104
+\c@recommendationno=\count346
+\c@observationno=\count347
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 105
 .
-\c@theorem=\count341
+\c@theorem=\count348
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\balance.s
 ty"
 Package: balance 1999/02/23 4.3 (PWD)
-\oldvsize=\dimen302
+\oldvsize=\dimen303
 ) Excluding comment 'screenonly' Include comment 'printonly'
 Include comment 'anonsuppress' (doc.aux)
 \openout1 = `doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 104.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 105.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
- 104.
+ 105.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\omlnxlmi.fd"
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-104.
+105.
  ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\untxexa.fd"
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 104.
+ 105.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\lmsntxsy.fd"
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 105.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 104.
+e 105.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\lmxntxexx.fd
 "
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 104.
+(Font)              scaled to size 7.0pt on input line 105.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 104.
+ on input line 105.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\ot1linux
 libertinet-tlf.fd"
@@ -1305,45 +1321,45 @@ File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 104.
+(Font)              scaled to size 7.3pt on input line 105.
 <<ot1.cmap>>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 104.
+(Font)              scaled to size 5.5pt on input line 105.
 <<oml.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+LaTeX Font Info:    Trying to load font information for U+msa on input line 105
 .
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+LaTeX Font Info:    Trying to load font information for U+msb on input line 105
 .
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-104.
+105.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\untxmia.fd"
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-104.
+105.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\untxsym.fd"
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-104.
+105.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/newtx\untxsyc.fd"
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Info: Redefining \microtypecontext on input line 104.
+LaTeX Info: Redefining \microtypecontext on input line 105.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 104.
+LaTeX Info: Redefining \showhyphens on input line 105.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1353,7 +1369,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring OFF on input line 104.
+Package hyperref Info: Link coloring OFF on input line 105.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1363,11 +1379,11 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 ettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count342
+\c@section@level=\count349
 )
-LaTeX Info: Redefining \ref on input line 104.
-LaTeX Info: Redefining \pageref on input line 104.
-LaTeX Info: Redefining \nameref on input line 104.
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
  (doc.out) (doc.out)
 \@outlinefile=\write5
 \openout5 = `doc.out'.
@@ -1376,16 +1392,16 @@ LaTeX Info: Redefining \nameref on input line 104.
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count343
-\scratchdimen=\dimen303
+\scratchcounter=\count350
+\scratchdimen=\dimen304
 \scratchbox=\box75
-\nofMPsegments=\count344
-\nofMParguments=\count345
+\nofMPsegments=\count351
+\nofMParguments=\count352
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count346
-\MPscratchDim=\dimen304
-\MPnumerator=\count347
-\makeMPintoPDFobject=\count348
+\MPscratchCnt=\count353
+\MPscratchDim=\dimen305
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
 \everyMPtoPDFconversion=\toks50
 )
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
@@ -1428,8 +1444,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count349
-\c@mv@boldtabular=\count350
+\c@mv@tabular=\count356
+\c@mv@boldtabular=\count357
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upquote.st
 y"
@@ -1437,14 +1453,15 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count351
+\c@lstlisting=\count358
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 130.
+(Font)              scaled to size 17.28pt on input line 131.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 130.
+n input line 131.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\t1linuxb
 iolinumt-tlf.fd"
@@ -1452,19 +1469,19 @@ File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 130.
+(Font)              scaled to size 17.28pt on input line 131.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 130.
+(Font)              scaled to size 17.28pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 130.
+(Font)              scaled to size 12.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 130.
+(Font)              scaled to size 10.0pt on input line 131.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 130.
+(Font)              scaled to size 10.0pt on input line 131.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1479,30 +1496,30 @@ fg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 130.
+(Font)              scaled to size 7.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 130.
+(Font)              scaled to size 9.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 130.
+(Font)              scaled to size 10.95pt on input line 131.
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 13
-0.
+1.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\t1zi4.
 fd"
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 130.
+(Font)              scaled to size 9.0pt on input line 131.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 130.
+(Font)              scaled to size 8.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 130.
+(Font)              scaled to size 8.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 130.
+(Font)              scaled to size 8.0pt on input line 131.
  (introduction.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 5.
@@ -1516,51 +1533,114 @@ Underfull \vbox (badness 1867) has occurred while \output is active []
  [1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Overfull \hbox (5.6386pt too wide) in paragraph at lines 147--147
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 114.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 114.
+ [2.2]
+Overfull \hbox (5.6386pt too wide) in paragraph at lines 151--151
 []|  
  []
 
 
-Overfull \hbox (5.9176pt too wide) in paragraph at lines 147--147
+Overfull \hbox (5.9176pt too wide) in paragraph at lines 151--151
 []|  
  []
 
 
-Overfull \vbox (16.3659pt too high) detected at line 147
+Overfull \vbox (16.3659pt too high) detected at line 151
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 147.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 153.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 153.
-[2.2]
-Overfull \hbox (3.09306pt too wide) in paragraph at lines 154--155
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) learn-ing tool. The tool (WEKA as acronym f
-or \T1/LinuxLibertineT-TLF/b/n/9 W\T1/LinuxLibertineT-TLF/m/n/9 (-20) aikato \T
-1/LinuxLibertineT-TLF/b/n/9 E\T1/LinuxLibertineT-TLF/m/n/9 (-20) nvironment
- []
+(Font)              scaled to size 9.0pt on input line 151.
+<Dataset.png, id=133, 1693.82813pt x 514.17094pt>
+File: Dataset.png Graphic file (type png)
+<use Dataset.png>
+Package pdftex.def Info: Dataset.png  used on input line 203.
+(pdftex.def)             Requested size: 506.295pt x 153.68759pt.
 
+Class acmart Warning: A possible image without description on input line 205.
 
-Overfull \hbox (2.33379pt too wide) in paragraph at lines 154--155
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) for \T1/LinuxLibertineT-TLF/b/n/9 K\T1/Linu
-xLibertineT-TLF/m/n/9 (-20) nowledge \T1/LinuxLibertineT-TLF/b/n/9 A\T1/LinuxLi
-bertineT-TLF/m/n/9 (-20) nalysis) was de-vel-oped at the Uni-ver-sity of Waikat
-o
- []
+[3.3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Warning: Reference `tab:classifiers' on page 3 undefined on input line 15
-6.
-
+ [4.4 <./Dataset.png>]
+<release_blender.png, id=167, 962.09438pt x 247.67531pt>
+File: release_blender.png Graphic file (type png)
+<use release_blender.png>
+Package pdftex.def Info: release_blender.png  used on input line 299.
+(pdftex.def)             Requested size: 253.14749pt x 65.1688pt.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 7.0pt on input line 299.
+<release_busybox.png, id=168, 962.09438pt x 246.9225pt>
+File: release_busybox.png Graphic file (type png)
+<use release_busybox.png>
+Package pdftex.def Info: release_busybox.png  used on input line 300.
+(pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
+<release_emacs.png, id=169, 961.34157pt x 246.1697pt>
+File: release_emacs.png Graphic file (type png)
+<use release_emacs.png>
+Package pdftex.def Info: release_emacs.png  used on input line 302.
+(pdftex.def)             Requested size: 253.14749pt x 64.82146pt.
+<release_gimp.png, id=170, 962.09438pt x 246.9225pt>
+File: release_gimp.png Graphic file (type png)
+<use release_gimp.png>
+Package pdftex.def Info: release_gimp.png  used on input line 303.
+(pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
+<release_gnumeric.png, id=171, 961.34157pt x 246.1697pt>
+File: release_gnumeric.png Graphic file (type png)
+<use release_gnumeric.png>
+Package pdftex.def Info: release_gnumeric.png  used on input line 305.
+(pdftex.def)             Requested size: 253.14749pt x 64.82146pt.
+<release_gnuplot.png, id=172, 961.34157pt x 246.9225pt>
+File: release_gnuplot.png Graphic file (type png)
+<use release_gnuplot.png>
+Package pdftex.def Info: release_gnuplot.png  used on input line 306.
+(pdftex.def)             Requested size: 253.14749pt x 65.01968pt.
+<release_irssi.png, id=173, 962.09438pt x 246.9225pt>
+File: release_irssi.png Graphic file (type png)
+<use release_irssi.png>
+Package pdftex.def Info: release_irssi.png  used on input line 308.
+(pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
+<release_libxml2.png, id=174, 962.09438pt x 246.9225pt>
+File: release_libxml2.png Graphic file (type png)
+<use release_libxml2.png>
+Package pdftex.def Info: release_libxml2.png  used on input line 309.
+(pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
+<release_lighttpd.png, id=175, 962.09438pt x 246.9225pt>
+File: release_lighttpd.png Graphic file (type png)
+<use release_lighttpd.png>
+Package pdftex.def Info: release_lighttpd.png  used on input line 311.
+(pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
+<release_mpsolve.png, id=176, 961.34157pt x 245.41687pt>
+File: release_mpsolve.png Graphic file (type png)
+<use release_mpsolve.png>
+Package pdftex.def Info: release_mpsolve.png  used on input line 312.
+(pdftex.def)             Requested size: 253.14749pt x 64.62323pt.
+<release_parrot.png, id=177, 962.09438pt x 245.41687pt>
+File: release_parrot.png Graphic file (type png)
+<use release_parrot.png>
+Package pdftex.def Info: release_parrot.png  used on input line 314.
+(pdftex.def)             Requested size: 253.14749pt x 64.57454pt.
+<release_vim.png, id=178, 962.09438pt x 246.1697pt>
+File: release_vim.png Graphic file (type png)
+<use release_vim.png>
+Package pdftex.def Info: release_vim.png  used on input line 315.
+(pdftex.def)             Requested size: 253.14749pt x 64.77263pt.
 ) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc.bbl
 LaTeX Info: Redefining \tempurl on input line 69.
 LaTeX Info: Redefining \tempurl on input line 87.
-LaTeX Info: Redefining \tempurl on input line 116.
-LaTeX Info: Redefining \tempurl on input line 134.
+LaTeX Info: Redefining \tempurl on input line 104.
+LaTeX Info: Redefining \tempurl on input line 133.
+LaTeX Info: Redefining \tempurl on input line 151.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5.5]
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 147.
+ on input line 164.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\ts1linux
 libertinet-tlf.fd"
@@ -1568,21 +1648,29 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 147.
+(Font)              scaled to size 7.0pt on input line 164.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \tempurl on input line 151.
 LaTeX Info: Redefining \tempurl on input line 168.
-LaTeX Info: Redefining \tempurl on input line 202.
-LaTeX Info: Redefining \tempurl on input line 220.
-LaTeX Info: Redefining \tempurl on input line 236.
-LaTeX Info: Redefining \tempurl on input line 254.
-LaTeX Info: Redefining \tempurl on input line 271.
-LaTeX Info: Redefining \tempurl on input line 288.
-LaTeX Info: Redefining \tempurl on input line 304.
+LaTeX Info: Redefining \tempurl on input line 185.
+LaTeX Info: Redefining \tempurl on input line 219.
+LaTeX Info: Redefining \tempurl on input line 237.
+LaTeX Info: Redefining \tempurl on input line 251.
+LaTeX Info: Redefining \tempurl on input line 267.
+LaTeX Info: Redefining \tempurl on input line 283.
+LaTeX Info: Redefining \tempurl on input line 301.
+LaTeX Info: Redefining \tempurl on input line 318.
+LaTeX Info: Redefining \tempurl on input line 335.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \tempurl on input line 351.
 )
+
+Class acmart Warning: Some images may lack descriptions.
+
 
 Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
@@ -1593,50 +1681,68 @@ Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
-[3.3] [4.4
+[6.6]
 
-] [5.5
+LaTeX Warning: Text page 7 contains only floats.
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.5pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (5.5pt too high) has occurred while \output is active []
+
+ [7.7 <./release_blender.png> <./release_busybox.png> <./release_emacs.png> <./
+release_gimp.png> <./release_gnumeric.png> <./release_gnuplot.png> <./release_i
+rssi.png> <./release_libxml2.png> <./release_lighttpd.png> <./release_mpsolve.p
+ng> <./release_parrot.png> <./release_vim.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: 3B9A99E3564A153E082CDDF3345D2782;1488.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: 0E2A93A1AB723BF0197260C74567347F;1489.
  ) 
 Here is how much of TeX's memory you used:
- 31116 strings out of 481565
- 550480 string characters out of 2914179
- 846534 words of memory out of 3000000
- 45249 multiletter control sequences out of 15000+200000
- 672020 words of font info for 262 fonts, out of 3000000 for 9000
+ 31459 strings out of 481565
+ 556692 string characters out of 2914179
+ 846923 words of memory out of 3000000
+ 45501 multiletter control sequences out of 15000+200000
+ 687680 words of font info for 311 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 79i,15n,100p,2636b,444s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 79i,15n,100p,2636b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/l
 btn_u7qtuy.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
-onts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/stefa/AppData/Local/Programs
-/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/stefa/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{C:/Users/stef
-a/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}<
-C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/inconsolata
-/Inconsolata-zi4r.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/libertine/LinBiolinumT.pfb><C:/Users/stefa/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/libertine/LinBiolinumTB.pfb><C:/Users/stefa/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/
-Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinL
-ibertineTB.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/libertine/LinLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (5 pages, 408296 bytes).
+s/libertine/lbtn_oexx6f.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs
+/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/stefa/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C:/Users/stef
+a/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{
+C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn
+_76gpa5.enc}<C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/inconsolata/Inconsolata-zi4r.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/newtx/LibertineMathMI.pfb><C:/Users/stefa/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/newtx/LibertineMathMI5.pfb><C:/Users/s
+tefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/newtx/LibertineMathMI
+7.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libe
+rtine/LinBiolinumT.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/libertine/LinBiolinumTB.pfb><C:/Users/stefa/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineT.pfb><C:/Users/stefa/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/LinLibertineTB.pfb><
+C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/libertine/L
+inLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/newtx/txexs.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/newtx/txmiaX.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/newtx/txsys.pfb>
+Output written on doc.pdf (7 pages, 884542 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 45681 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 46258 words of extra memory for PDF output out of 51595 (max. 10000000)
 

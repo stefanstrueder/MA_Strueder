@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{16}
+\begin{thebibliography}{19}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -85,6 +85,23 @@
 \showISSN{02182130}
 \urldef\tempurl%
 \url{https://doi.org/10.1142/S0218213008003947}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chawla, Bowyer, Hall, and Kegelmeyer}{Chawla
+  et~al\mbox{.}}{2002}]%
+        {Chawla2002}
+\bibfield{author}{\bibinfo{person}{N.~V. Chawla}, \bibinfo{person}{K.~W.
+  Bowyer}, \bibinfo{person}{L.~O. Hall}, {and} \bibinfo{person}{W.~P.
+  Kegelmeyer}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{{SMOTE}: Synthetic Minority Over-sampling
+  Technique}.
+\newblock \bibinfo{journal}{\emph{Journal of Artificial Intelligence Research}}
+   \bibinfo{volume}{16} (\bibinfo{date}{jun} \bibinfo{year}{2002}),
+  \bibinfo{pages}{321--357}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1613/jair.953}
 \showDOI{\tempurl}
 
 
@@ -218,6 +235,36 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1007/s10270-015-0483-z}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Rahman and Devanbu}{Rahman and
+  Devanbu}{2013}]%
+        {Rahman2013}
+\bibfield{author}{\bibinfo{person}{Foyzur Rahman} {and}
+  \bibinfo{person}{Premkumar Devanbu}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{How, and why, process metrics are better}. In
+  \bibinfo{booktitle}{\emph{2013 35th International Conference on Software
+  Engineering ({ICSE})}}. \bibinfo{publisher}{{IEEE}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/icse.2013.6606589}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Ratzinger, Sigmund, and Gall}{Ratzinger
+  et~al\mbox{.}}{2008}]%
+        {Ratzinger2008}
+\bibfield{author}{\bibinfo{person}{Jacek Ratzinger}, \bibinfo{person}{Thomas
+  Sigmund}, {and} \bibinfo{person}{Harald~C. Gall}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{On the relation of refactorings and software defect
+  prediction}. In \bibinfo{booktitle}{\emph{Proceedings of the 2008
+  international workshop on Mining software repositories - {MSR}
+  {\textquotesingle}08}}. \bibinfo{publisher}{{ACM} Press}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1370750.1370759}
 \showDOI{\tempurl}
 
 
