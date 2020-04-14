@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  13 APR 2020 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  14 APR 2020 10:48
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -1527,118 +1527,126 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 5.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 5.5pt on input line 5.
-) (background.tex) (methodology.tex
-Underfull \vbox (badness 1867) has occurred while \output is active []
-
- [1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+) (background.tex) (methodology.tex [1.1{C:/Users/stefa/AppData/Local/MiKTeX/2.
+9/pdftex/config/pdftex.map}
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<Bug_example_real.png, id=102, 1233.85968pt x 459.21562pt>
+File: Bug_example_real.png Graphic file (type png)
+<use Bug_example_real.png>
+Package pdftex.def Info: Bug_example_real.png  used on input line 113.
+(pdftex.def)             Requested size: 506.295pt x 188.43378pt.
+
+
+Class acmart Warning: A possible image without description on input line 115.
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 114.
+(Font)              scaled to size 9.0pt on input line 115.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 114.
- [2.2]
-Overfull \hbox (5.6386pt too wide) in paragraph at lines 151--151
+(Font)              scaled to size 7.0pt on input line 115.
+[2.2]
+Overfull \hbox (5.6386pt too wide) in paragraph at lines 158--158
 []|  
  []
 
 
-Overfull \hbox (5.9176pt too wide) in paragraph at lines 151--151
+Overfull \hbox (5.9176pt too wide) in paragraph at lines 158--158
 []|  
  []
 
 
-Overfull \vbox (16.3659pt too high) detected at line 151
+Overfull \vbox (16.3659pt too high) detected at line 158
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 151.
-<Dataset.png, id=133, 1693.82813pt x 514.17094pt>
+(Font)              scaled to size 9.0pt on input line 158.
+<Dataset.png, id=136, 1693.82813pt x 514.17094pt>
 File: Dataset.png Graphic file (type png)
 <use Dataset.png>
-Package pdftex.def Info: Dataset.png  used on input line 203.
+Package pdftex.def Info: Dataset.png  used on input line 210.
 (pdftex.def)             Requested size: 506.295pt x 153.68759pt.
 
-Class acmart Warning: A possible image without description on input line 205.
+Class acmart Warning: A possible image without description on input line 212.
 
 [3.3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4.4 <./Dataset.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4.4 <./Bug_example_real.png>]
 <release_blender.png, id=167, 962.09438pt x 247.67531pt>
 File: release_blender.png Graphic file (type png)
 <use release_blender.png>
-Package pdftex.def Info: release_blender.png  used on input line 299.
+Package pdftex.def Info: release_blender.png  used on input line 306.
 (pdftex.def)             Requested size: 253.14749pt x 65.1688pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 7.0pt on input line 299.
+(Font)              scaled to size 7.0pt on input line 306.
 <release_busybox.png, id=168, 962.09438pt x 246.9225pt>
 File: release_busybox.png Graphic file (type png)
 <use release_busybox.png>
-Package pdftex.def Info: release_busybox.png  used on input line 300.
+Package pdftex.def Info: release_busybox.png  used on input line 307.
 (pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
 <release_emacs.png, id=169, 961.34157pt x 246.1697pt>
 File: release_emacs.png Graphic file (type png)
 <use release_emacs.png>
-Package pdftex.def Info: release_emacs.png  used on input line 302.
+Package pdftex.def Info: release_emacs.png  used on input line 309.
 (pdftex.def)             Requested size: 253.14749pt x 64.82146pt.
 <release_gimp.png, id=170, 962.09438pt x 246.9225pt>
 File: release_gimp.png Graphic file (type png)
 <use release_gimp.png>
-Package pdftex.def Info: release_gimp.png  used on input line 303.
+Package pdftex.def Info: release_gimp.png  used on input line 310.
 (pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
 <release_gnumeric.png, id=171, 961.34157pt x 246.1697pt>
 File: release_gnumeric.png Graphic file (type png)
 <use release_gnumeric.png>
-Package pdftex.def Info: release_gnumeric.png  used on input line 305.
+Package pdftex.def Info: release_gnumeric.png  used on input line 312.
 (pdftex.def)             Requested size: 253.14749pt x 64.82146pt.
 <release_gnuplot.png, id=172, 961.34157pt x 246.9225pt>
 File: release_gnuplot.png Graphic file (type png)
 <use release_gnuplot.png>
-Package pdftex.def Info: release_gnuplot.png  used on input line 306.
+Package pdftex.def Info: release_gnuplot.png  used on input line 313.
 (pdftex.def)             Requested size: 253.14749pt x 65.01968pt.
 <release_irssi.png, id=173, 962.09438pt x 246.9225pt>
 File: release_irssi.png Graphic file (type png)
 <use release_irssi.png>
-Package pdftex.def Info: release_irssi.png  used on input line 308.
+Package pdftex.def Info: release_irssi.png  used on input line 315.
 (pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
 <release_libxml2.png, id=174, 962.09438pt x 246.9225pt>
 File: release_libxml2.png Graphic file (type png)
 <use release_libxml2.png>
-Package pdftex.def Info: release_libxml2.png  used on input line 309.
+Package pdftex.def Info: release_libxml2.png  used on input line 316.
 (pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
 <release_lighttpd.png, id=175, 962.09438pt x 246.9225pt>
 File: release_lighttpd.png Graphic file (type png)
 <use release_lighttpd.png>
-Package pdftex.def Info: release_lighttpd.png  used on input line 311.
+Package pdftex.def Info: release_lighttpd.png  used on input line 318.
 (pdftex.def)             Requested size: 253.14749pt x 64.9707pt.
 <release_mpsolve.png, id=176, 961.34157pt x 245.41687pt>
 File: release_mpsolve.png Graphic file (type png)
 <use release_mpsolve.png>
-Package pdftex.def Info: release_mpsolve.png  used on input line 312.
+Package pdftex.def Info: release_mpsolve.png  used on input line 319.
 (pdftex.def)             Requested size: 253.14749pt x 64.62323pt.
 <release_parrot.png, id=177, 962.09438pt x 245.41687pt>
 File: release_parrot.png Graphic file (type png)
 <use release_parrot.png>
-Package pdftex.def Info: release_parrot.png  used on input line 314.
+Package pdftex.def Info: release_parrot.png  used on input line 321.
 (pdftex.def)             Requested size: 253.14749pt x 64.57454pt.
 <release_vim.png, id=178, 962.09438pt x 246.1697pt>
 File: release_vim.png Graphic file (type png)
 <use release_vim.png>
-Package pdftex.def Info: release_vim.png  used on input line 315.
+Package pdftex.def Info: release_vim.png  used on input line 322.
 (pdftex.def)             Requested size: 253.14749pt x 64.77263pt.
-) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5.5 <./Dataset.png>]) (evaluation.tex) (discussion.tex) (conclusion.tex) (doc
+.bbl
 LaTeX Info: Redefining \tempurl on input line 69.
 LaTeX Info: Redefining \tempurl on input line 87.
 LaTeX Info: Redefining \tempurl on input line 104.
 LaTeX Info: Redefining \tempurl on input line 133.
 LaTeX Info: Redefining \tempurl on input line 151.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5.5]
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
  on input line 164.
 
@@ -1663,9 +1671,6 @@ LaTeX Info: Redefining \tempurl on input line 283.
 LaTeX Info: Redefining \tempurl on input line 301.
 LaTeX Info: Redefining \tempurl on input line 318.
 LaTeX Info: Redefining \tempurl on input line 335.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Info: Redefining \tempurl on input line 351.
 )
 
@@ -1700,20 +1705,20 @@ Overfull \vbox (5.5pt too high) has occurred while \output is active []
  [7.7 <./release_blender.png> <./release_busybox.png> <./release_emacs.png> <./
 release_gimp.png> <./release_gnumeric.png> <./release_gnuplot.png> <./release_i
 rssi.png> <./release_libxml2.png> <./release_lighttpd.png> <./release_mpsolve.p
-ng> <./release_parrot.png> <./release_vim.png>]
+ng> <./release_parrot.png> <./release_vim.png>] [8.8]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (doc.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: 0E2A93A1AB723BF0197260C74567347F;1489.
+(rerunfilecheck)             Checksum: 775751456812631C893E1ACCA718F396;1489.
  ) 
 Here is how much of TeX's memory you used:
- 31459 strings out of 481565
- 556692 string characters out of 2914179
- 846923 words of memory out of 3000000
- 45501 multiletter control sequences out of 15000+200000
+ 31469 strings out of 481565
+ 556891 string characters out of 2914179
+ 844030 words of memory out of 3000000
+ 45509 multiletter control sequences out of 15000+200000
  687680 words of font info for 311 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  79i,15n,100p,2636b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1740,9 +1745,9 @@ inLibertineTI.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/newtx/txexs.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/newtx/txmiaX.pfb><C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/newtx/txsys.pfb>
-Output written on doc.pdf (7 pages, 884542 bytes).
+Output written on doc.pdf (8 pages, 937570 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
- 46258 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 46263 words of extra memory for PDF output out of 51595 (max. 10000000)
 

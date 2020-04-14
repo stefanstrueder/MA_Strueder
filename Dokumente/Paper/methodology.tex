@@ -106,7 +106,14 @@ Vim               & 371                   & 696                        & 1.158  
 }
 \end{table}
 
-\textbf{Here!}
+A real example from the data of the Vim software project, showing the diffs of a corrective (A) and a bug-introducing (B) commit to a feature \texttt{FEAT\_TEXT\_PROP}, is shown in \autoref{fig:bug-example}. The section of the diff shows that the method call \texttt{vim\_memset} has been replaced with different arguments. According to the associated commit message, the original method call caused a "memory access error". This commit was identified as corrective because the commit message contains the keyword "error". The corresponding entry in Vim's main table thus gets the value \texttt{true} in the "corrective" column. Using the SZZ algorithm, specifying the commit hash of the corrective commit, the error-initiating commit (B) of the file concerned. In its portion of the diff, you can see that this commit has put the feature \texttt{FEAT\_TEXT\_PROP} in the file with the incorrect method call. As a result, it is assigned the value \texttt{true} in the "bug\_introducing" column in the main table.
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{Bug_example_real}
+    \caption{Real example of a defect with corrective (A) and bug-introducing (B) commit\label{fig:bug-example}}
+\end{figure*}
+
 
 \subsection{Selection of Metrics}
 
