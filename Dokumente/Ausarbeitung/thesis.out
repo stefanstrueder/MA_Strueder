@@ -23,6 +23,7 @@
 \BOOKMARK [1][-]{section.6.1}{Zusammenfassung}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 24
 \BOOKMARK [0][-]{chapter*.70}{Literatur}{}% 25
-\BOOKMARK [0][-]{appendix.A}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 26
-\BOOKMARK [0][-]{appendix.B}{Accuracies der Klassifikatoren je Datenset}{}% 27
-\BOOKMARK [0][-]{appendix.C}{Erweiterte Ergebnisse der Evaluationsmetriken}{}% 28
+\BOOKMARK [0][-]{appendix.A}{PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{}% 26
+\BOOKMARK [0][-]{appendix.B}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 27
+\BOOKMARK [0][-]{appendix.C}{Accuracies der Klassifikatoren je Datenset}{}% 28
+\BOOKMARK [0][-]{appendix.D}{Erweiterte Ergebnisse der Evaluationsmetriken}{}% 29

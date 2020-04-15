@@ -64,8 +64,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Literatur}{55}{chapter*.70}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Links der für die Erstellung des Datensets verwendeten Softwareprojekte}{58}{appendix.A}%
+\contentsline {chapter}{\numberline {A}PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{58}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Accuracies der Klassifikatoren je Datenset}{59}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Links der für die Erstellung des Datensets verwendeten Softwareprojekte}{59}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Erweiterte Ergebnisse der Evaluationsmetriken}{60}{appendix.C}%
+\contentsline {chapter}{\numberline {C}Accuracies der Klassifikatoren je Datenset}{60}{appendix.C}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Erweiterte Ergebnisse der Evaluationsmetriken}{61}{appendix.D}%
