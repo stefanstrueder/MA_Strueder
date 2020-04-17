@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -333,6 +333,24 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/2580950}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wen, Wu, Liu, Tian, Xie, Cheung, and Su}{Wen
+  et~al\mbox{.}}{2019}]%
+        {Wen2019}
+\bibfield{author}{\bibinfo{person}{Ming Wen}, \bibinfo{person}{Rongxin Wu},
+  \bibinfo{person}{Yepang Liu}, \bibinfo{person}{Yongqiang Tian},
+  \bibinfo{person}{Xuan Xie}, \bibinfo{person}{Shing-Chi Cheung}, {and}
+  \bibinfo{person}{Zhendong Su}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Exploring and exploiting the correlations between
+  bug-inducing and bug-fixing commits}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2019 27th {ACM} Joint Meeting on
+  European Software Engineering Conference and Symposium on the Foundations of
+  Software Engineering - {ESEC}/{FSE} 2019}}. \bibinfo{publisher}{{ACM} Press}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3338906.3338962}
 \showDOI{\tempurl}
 
 

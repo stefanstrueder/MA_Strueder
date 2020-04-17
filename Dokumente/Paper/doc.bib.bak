@@ -2091,4 +2091,14 @@ ONF TR-514
   publisher = {{AI} Access Foundation},
 }
 
+@InProceedings{Rahman2013,
+  author    = {Foyzur Rahman and Premkumar Devanbu},
+  booktitle = {2013 35th International Conference on Software Engineering ({ICSE})},
+  title     = {How, and why, process metrics are better},
+  year      = {2013},
+  month     = {may},
+  publisher = {{IEEE}},
+  doi       = {10.1109/icse.2013.6606589},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
