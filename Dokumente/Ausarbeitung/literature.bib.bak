@@ -114,6 +114,19 @@
   publisher = {{AI} Access Foundation},
 }
 
+@Article{Dhiauddin2012,
+  author    = {Muhammad Dhiauddin and Suhaimi Ibrahim},
+  journal   = {International Journal of Soft Computing and Software Engineering},
+  title     = {A Prediction Model for System Testing Defects using Regression Analysis},
+  year      = {2012},
+  month     = {jul},
+  number    = {7},
+  pages     = {55--68},
+  volume    = {2},
+  doi       = {10.7321/jscse.v2.n7.6},
+  publisher = {International Journal of Soft Computing and Software Engineering},
+}
+
 @Article{Dreiseitl2002,
   author    = {Stephan Dreiseitl and Lucila Ohno-Machado},
   title     = {Logistic regression and artificial neural network classification models: a methodology review},
@@ -185,6 +198,16 @@
   year         = {2019},
   comment      = {Zuletzt abgerufen am 20.03.2020.},
   url          = {https://www.youtube.com/watch?v=kWDHmroVWs8},
+}
+
+@InProceedings{Li2017,
+  author    = {Jian Li and Pinjia He and Jieming Zhu and Michael R. Lyu},
+  booktitle = {2017 {IEEE} International Conference on Software Quality, Reliability and Security ({QRS})},
+  title     = {Software Defect Prediction via Convolutional Neural Network},
+  year      = {2017},
+  month     = {jul},
+  publisher = {{IEEE}},
+  doi       = {10.1109/qrs.2017.42},
 }
 
 @InProceedings{Liebig2010,
@@ -459,6 +482,29 @@
   isbn            = {3021077226},
   keywords        = {computational intelligence,machine learning,multi-scale,object oriented classification,remote sensing},
   mendeley-groups = {Masterarbeit/Klassifikatoren},
+}
+
+@Article{Wang2011,
+  author   = {Wang, Huanjing and Khoshgoftaar, Taghi M. and Seliya, Naeem},
+  journal  = {Proceedings of the 24th International Florida Artificial Intelligence Research Society, FLAIRS - 24},
+  title    = {{How many software metrics should be selected for defect prediction?}},
+  year     = {2011},
+  number   = {Mi},
+  pages    = {69--74},
+  abstract = {A software practitioner is interested in the solution to "for a given project, what is the minimum number of software metrics that should be considered for building an effective defect prediction model?" During the development life cycle various software metrics are collected for different reasons. In the case of a metrics-based defect prediction model, an intelligent selection of software metrics prior to building defect predictors is likely to improve model performance. This study utilizes the proposed threshold-based feature selection technique to remove irrelevant and redundant software metrics (a.k.a. features or attributes). A comparative investigation is presented for evaluating the size of the selected feature subsets. The case study is based on software measurement data obtained from a real-world project, and the defect predictors are trained using three commonly used classifiers. The empirical case study results demonstrate that an effective defect predictor can be built with only three metrics; and moreover, model performances improved when over 98.5{\%} of the software metrics were eliminated. Copyright {\textcopyright} 2011, Association for the Advancement of Artificial Intelligence. All rights reserved.},
+  file     = {:D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/Metriken/Wang, Khoshgoftaar, Seliya{\_}How many software metrics should be selected for defect prediction{\_}2011.pdf:pdf},
+  isbn     = {9781577355014},
+  keywords = {General Conference Papers},
+}
+
+@InProceedings{Wang2012,
+  author    = {Jun Wang and Beijun Shen and Yuting Chen},
+  booktitle = {2012 12th International Conference on Quality Software},
+  title     = {Compressed C4.5 Models for Software Defect Prediction},
+  year      = {2012},
+  month     = {aug},
+  publisher = {{IEEE}},
+  doi       = {10.1109/qsic.2012.19},
 }
 
 @InProceedings{Wen2019,

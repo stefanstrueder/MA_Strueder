@@ -1,0 +1,73 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {2.1}{\ignorespaces Übersicht der von \cite {Queiroz2016} verwendeten Prozessmetriken\relax }}{17}{table.caption.23}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.1}{\ignorespaces Übersicht der verwendeten Softwareprojekte\footnotemark {}\relax }}{20}{table.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Übersicht der Anzahl der Releases und Commits je Softwareprojekt\relax }}{20}{table.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.3}{\ignorespaces Anzahl der korrektiven und fehlereinführenden Commits sowie Anzahl der identifizierten Features je Softwareprojekt\relax }}{23}{table.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Übersicht des Schemas der MySQL-Haupttabellen\relax }}{24}{table.caption.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Übersicht der berechneten Metriken des featurebasierten Datensets\relax }}{26}{table.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.6}{\ignorespaces Kennzahlen der Datensets\relax }}{28}{table.caption.40}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Zum Training verwendete Klassifikationsalgorithmen\relax }}{30}{table.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Kennzahlen der Datensets\relax }}{31}{table.caption.43}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Konfusionsmatrizen des featurebasierten Datensets\relax }}{40}{table.caption.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{41}{table.caption.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Konfusionsmatrizen der dateibasierten Datensets\relax }}{43}{table.caption.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der Evaluationsmetriken der dateibasierten Datensets (TPR = TP-Rate)\relax }}{44}{table.caption.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.5}{\ignorespaces Ergebnisse der Evaluationsmetriken auf Basis der 10-fold-cross-validation (TPR = TP-Rate, Rec. = Recall)\relax }}{52}{table.caption.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.6}{\ignorespaces Ergebnisse der Attributsauswahl der Klassifikatoren LR, NB und SGD \relax }}{53}{table.caption.71}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {C.1}{\ignorespaces Accuracies des featurebasierten Datensets\relax }}{63}{table.caption.74}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {C.2}{\ignorespaces Accuracies der Datensets\relax }}{63}{table.caption.75}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {D.1}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{65}{table.caption.76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {D.2}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken der dateibasierten Datensets\relax }}{66}{table.caption.77}%

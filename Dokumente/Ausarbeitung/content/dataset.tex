@@ -17,7 +17,7 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für das Training der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commit-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge zum einen anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Wichtig war zum anderen jedoch auch, dass die Variabilität im Sourcecode der Softwareprojekte mittels den in \hyperref[feat-develop]{in Abschnitt 2.1} vorgestellten Präprozessor-Direktiven umgesetzt wurde und ihre Git-Repositories eine klare \glqq Revision History\grqq{} hinsichtlich von Release-Nummern aufweisen. Ein weiteres hinreichendes Kriterium war die Verwendung einer einheitlichen Sprache. Sämtliche Softwareprojekte entstammen dem englischsprachigen Raum. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
-\begin{table}[t]
+\begin{table}[ht]
 \centering
 \caption{Übersicht der verwendeten Softwareprojekte\protect\footnotemark{}}
 \label{tab:tools}
@@ -68,7 +68,7 @@ Als Input der eigens erstellten Python-Scripte zum Abruf der Commit-Metadaten di
 
 Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren.
 
-\begin{table}[t]
+\begin{table}[ht]
 \centering
 \caption{Übersicht der Anzahl der Releases und Commits je Softwareprojekt}
 \label{tab:tools-values1}
@@ -113,7 +113,7 @@ Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben de
 
 Ebenfalls besteht die Möglichkeit, dass \glqq falsche\grqq{} Features identifiziert werden können. Beispiele dafür können von \texttt{\#IFDEFs} stammen, welche in Kommentaren verwendet wurden (siehe zweiter unerwünschter Fall in \autoref{fig:features}). Solche falschen Features wurden in einer manuellen Sichtung der identifizierten Features entfernt und durch \glqq \texttt{none}\grqq{} ersetzt.
 
-\begin{figure}[t]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{images/Features}
     \caption{Normalfall und unerwünschte Fälle bei der Identifizierung der Features\label{fig:features}}
@@ -127,7 +127,7 @@ Die nächste Phase der Verarbeitung besteht aus der Identifizierung von korrekti
 \label{szz-def}
 Der Suche nach korrektiven Commits folgt eine Analyse nach fehlereinführenden Commits. Dazu wurde eine PyDriller-Implementierung des SZZ-Algorithmus nach Sliwerski, Zimmermann und Zeller verwendet \cite{Sliwerski2005,Spadini2018}. Dieser Algorithmus erlaubt es fehlereinführende Commits in lokal gespeicherten Software-Repositories zu finden \cite{Borg2019}. Dafür setzt er voraus, dass die korrektiven Commits bereits identifiziert wurden, da sie als Eingabemenge des Algorithmus dienen \cite{Borg2019}. Die Identifikation der fehlereinführenden Commits ist in mehrere Schritte unterteilt und wird in \autoref{fig:szz} dargestellt. Die Erläuterungen der mit Buchstaben versehenen Schritte erfolgt im Anschluss. Die für diese Arbeit verwendete PyDriller-Implementierung des Algorithmus folgt dem gezeigten Ablauf.
 
-\begin{figure}[t]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{images/SZZ}
     \caption{Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite{Borg2019})\label{fig:szz}}
@@ -137,7 +137,7 @@ Der SZZ-Algorithmus, der als Input eine Liste der Commit-Hashes der zuvor erkann
 
 Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie der Anzahl der identifizierten Features je Softwareprojekt ist in \autoref{tab:tools-values2} aufgeführt. Des Weiteren ist eine Übersicht des Schemas der nun vollständigen initialen MySQL-Tabellen (im folgenden Haupttabellen genannt) in \autoref{tab:schema1} aufgeführt. Wie bereits zuvor erwähnt, umfasst diese Tabelle für jede veränderte Datei eines Commits eine Zeile. Sollten in einem Diff einer veränderten Datei mehrere Features identifiziert worden sein, so wird für jedes Feature die entsprechende Zeile dupliziert.
 
-\begin{table}
+\begin{table}[ht]
 \centering
 \caption{Anzahl der korrektiven und fehlereinführenden Commits sowie Anzahl der identifizierten Features je Softwareprojekt}
 \label{tab:tools-values2}
@@ -178,7 +178,7 @@ Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie
 }
 \end{table}
 
-\begin{table}[t]
+\begin{table}[ht]
 \centering
 \caption{Übersicht des Schemas der MySQL-Haupttabellen}
 \label{tab:schema1}
@@ -232,7 +232,7 @@ Ein reales Beispiel aus der Haupttabelle des Softwareprojektes Vim, welches die 
 
 Der Ausschnitt des Diffs zeigt zudem, dass der Methodenaufruf \texttt{vim\_memset} mit abweichenden Argumenten ersetzt wurde. Laut zugehöriger Commit-Nachricht führte der ursprüngliche Methodenaufruf zu einem \glqq Memory Access Error\grqq. Dieser Commit wurde als korrektiv identifiziert, da die Commit-Nachricht das Schlagwort \glqq error\grqq enthält. Der entsprechende Eintrag in der Haupttabelle von Vim erhält somit in der Spalte \glqq corrective\grqq{} den Wert \texttt{true}. Mithilfe des SZZ-Algorithmus konnte, unter Angabe des Commit-Hashes des korrektiven Commits, der fehlereinführende Commit\footnote{Link zum Commit im Git-Repository von Vim: \url{https://github.com/vim/vim/commit/33796b39b9f00b42ca57fa00dbbb52316d9d38ff}} (B) der betroffenen Datei ermittelt werden. In dessen Ausschnitt des Diffs ist zu erkennen, dass mit diesem Commit das Feature \texttt{FEAT\_TEXT\_PROP} in der Datei mit dem fehlerhaften Methodenaufruf eingepflegt wurde. Folglich bekommt dieser in der Haupttabelle in der Spalte \glqq bug\_introducing\grqq{} den Wert \texttt{true} zugewiesen.
 
-\begin{figure}[t]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{images/Bug_example_real}
     \caption{Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\label{fig:bug-example}}
@@ -244,7 +244,7 @@ Auf Basis der Daten der Haupttabellen können nun die für das Training der Klas
 
 Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen Attribute zum Training der Machine-Learning-Klassifikatoren. Im hier vorliegenden Szenario werden sogenannte Metriken als Attribute verwendet. Bei Metriken handelt sich sich um Zahlenwerte, die Eigenschaften eines Softwareprojekts quantifizieren. Die Metriken werden im hier vorliegenden Fall in die üblichen Kategorien Codemetriken und Prozessmetriken aufgeteilt und jeweils anhand der vorhandenen Rohdaten der Haupttabellen berechnet \cite{Rahman2013}. Codemetriken werden genutzt um Eigenschaften von Sourcecode, wie zum Beispiel \glqq Größe\grqq{} oder Komplexität, zu messen \cite{Rahman2013}. Prozessmetriken dienen hingegen zur Messung von Eigenschaften, die anhand von Metadaten aus Software-Repositories erörtert werden können \cite{Rahman2013}. Beispiele dafür sind die Anzahl der Veränderungen einer bestimmten Datei oder die Anzahl der aktiven Entwickler an einem Projekt. Für diese Arbeit wurden elf featurebasierte Metriken errechnet, aufgeteilt in sieben Prozess- und vier Codemetriken. Fünf der Prozessmetriken wurden aus wissenschaftlichen Arbeiten \cite{Rahman2013,Queiroz2016} entnommen. Die weiteren sechs Metriken wurden auf Basis der von PyDriller erhaltenen Metadaten der Commits berechnet. Eine Auflistung der elf Metriken samt Beschreibungen ist in \autoref{tab:metrics} aufgeführt. Die Berechnung der einzelnen Metriken erfolgte entweder direkt mittels SQL-Abfragen oder kombiniert mittels SQL-Abfragen und Berechnungen durch ein Python-Skript.
 
-\begin{table}[t]
+\begin{table}[ht]
 \centering
 \caption{Übersicht der berechneten Metriken des featurebasierten Datensets}
 \label{tab:metrics}
@@ -284,7 +284,7 @@ Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen A
 \label{new-datasets}
 Im Hinblick auf die im nächsten Kapitel folgende Evaluation des featurebasierten Datensets, wurden zwei weitere Datensets erstellt, um die Auswirkungen der featurebasierten Metriken auf die Vorhersagen der Klassifikatoren vergleichbar zu machen. Beide weiteren Datensets verfolgen einen klassischen dateibasierten Ansatz, wie er in der Machine-Learning-gestützten Fehlererkennung üblich ist und basieren auf der Methodik, die von Moser et al. \cite{Moser2008}, die bereits in \hyperref[moser]{Abschnitt 2.3} vorgestellt wurde. Ebenfalls wurden die 17 Prozessmetriken dieser wissenschaftlichen Arbeit übernommen. Eine Visualisierung zur Unterscheidung der drei Datensets ist in \autoref{fig:dataset} dargestellt.
 
-\begin{figure}[t]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{images/Dataset}
     \caption{Visualisierung zur Unterscheidung der Datensets\label{fig:dataset}}
@@ -294,7 +294,8 @@ Die Abbildung zeigt die Wege der Erstellung des featurebasierten Datensets (Pfad
 
 Die Erstellung der dateibasierten Datensets erfolgt ebenfalls auf Basis der mit PyDriller erhaltenen Rohdaten der Commits der Softwareprojekte und den daraus extrahierten veränderten Dateien (A + B). Es ist somit keine weitere Verarbeitung der Rohdaten nötig. Sie dienen dann als Grundlage zur Berechnung der 17 Metriken (H) nach \cite{Moser2008}. Eine Übersicht der Metriken erfolgte bereits in \hyperref[moser-metrics]{Abschnitt 2.3}. Für die Berechnung der zeitbasierten Metriken \texttt{AAGE} und \texttt{WAGE} mussten die Rohdaten beziehungsweise die in den Rohdaten gelisteten Commits mit ihrem Veröffentlichungsdatum ergänzt werden. Durchgeführt wurde dies ebenfalls mit PyDriller. Als Startpunkt für die Berechnung der vergangenen Wochen wurde jeweils das Datum des ersten Commits eines Releases gewählt.
 
-Das featurebasierte sowie das \glqq einfache\grqq{} dateibasierte Datenset (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der elf beziehungsweise 17 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurden (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt für jede Veränderung eines Features beziehungsweise einer Datei anhand des folgenden Musters:
+\label{label-explanation}
+Das featurebasierte sowie das \glqq einfache\grqq{} dateibasierte Datenset (G + I) bestehen aus den jeweils berechneten feature- (F) und dateibezogenen (H) Metriken sowie den Labeln der Zielklasse. Berechnet werden die Werte der Metriken für die Daten jedes Softwareprojektes. Die daraus resultierenden Tabellen enthalten als Spalten die Werte der elf beziehungsweise 17 Metriken sowie das Label (Zielklasse) \glqq defekt\grqq{} oder \glqq fehlerfrei\grqq{} und als Zeilen die Features bzw. Dateien aggregiert nach Release. Dies bedeutet, dass für den Fall, dass ein Feature oder eine Datei in einem Release mehrfach bearbeitet wurde (d.h. es wird in mehreren Commits bearbeitet), der Durchschnittswert der jeweiligen Metriken innerhalb des Releases berechnet und gespeichert wird. Das Verfahren zur Bestimmung des Labels erfolgt für jede Veränderung eines Features beziehungsweise einer Datei anhand des folgenden Musters:
 
 \begin{table}[H]
 \centering
@@ -318,11 +319,11 @@ Die Informationen zum Status eines Features basieren dabei auf den ihm zugrundli
 
 Die so erstellten einzelnen Tabellen werden anschließend zu jeweils einer gemeinsamen Tabelle konkateniert, sodass eine umfangreiche Auflistung an Metriken inklusive der zugehörigen Labels entsteht. Diese Auflistung gibt an, welche Charakteristika ein Feature beziehungsweise eine Datei aufweisen muss, um als \glqq fehlerfrei\grqq{} oder \glqq defekt\grqq{} eingestuft zu werden und dient als Trainingsgrundlage der Klassifikatoren für zukünftige Vorhersagen.
 
-Eine Besonderheit stellt das zweite für den Vergleich im Rahmen der Evaluation erstellte dateibasierte Datenset dar (J). Es basiert auf dem \glqq einfachen\grqq{} dateibasierten Datenset (I) mit den Metriken aus \cite{Moser2008}, umfasst aber zusätzlich die elf Metriken des featurebasierten Datensets (G) aus \autoref{tab:metrics}. Dazu wurden die Werte der featurebasierten Metriken auf Dateiebene \glqq gemapped\grqq{} beziehungsweise übertragen. Dies bedeutetet, dass für jede im dateibasierte Datenset referenzierte Datei eines Releases analysiert wurde, welche Features in der jeweiligen Datei erwähnt wurde. Von diesen Features wurden dann die zugehörigen Metriken des featurebasierten Datensets ermittelt und der Durchschnittswert berechnet um im erteiterten Datenset eingetragen. Sollte in einer Datei keine Features erwähnt worden sein, so wird für die featurebasierten Metriken jeweils der Wert 0 gespeichert. Wie zu Beginn des Abschnitts erwähnt wurde, kann auf diesem Weg das featurebasierte Datenset mit einem klassischen dateibasierten Datenset verglichen werden, da die Bedingungen für den Vergleich geschaffen wurden. Ein direkter Vergleich zwischen den verschiedenen Datensets ist aus den genannten Gründen nicht praktikabel.
+Eine Besonderheit stellt das zweite für den Vergleich im Rahmen der Evaluation erstellte dateibasierte Datenset dar (J). Es basiert auf dem \glqq einfachen\grqq{} dateibasierten Datenset (I) mit den Metriken aus \cite{Moser2008}, umfasst aber zusätzlich die elf Metriken des featurebasierten Datensets (G) aus \autoref{tab:metrics}. Dazu wurden die Werte der featurebasierten Metriken auf Dateiebene \glqq gemapped\grqq{} beziehungsweise übertragen. Dies bedeutetet, dass für jede im dateibasierten Datenset referenzierte Datei eines Releases analysiert wurde, welche Features in der jeweiligen Datei erwähnt wurde. Von diesen Features wurden dann die zugehörigen Metriken des featurebasierten Datensets ermittelt und der Durchschnittswert berechnet und im erweiterten Datenset eingetragen. Sollten in einer Datei keine Features erwähnt worden sein, so wird für die featurebasierten Metriken jeweils der Wert 0 gespeichert. Wie zu Beginn des Abschnitts erwähnt wurde, kann auf diesem Weg das featurebasierte Datenset mit einem klassischen dateibasierten Datenset verglichen werden, da die Bedingungen für den Vergleich geschaffen wurden. Ein direkter Vergleich zwischen den verschiedenen Datensets ist aus den genannten Gründen nicht praktikabel.
 
 Einige ergänzende Kennzahlen zu den Datensets sind in \autoref{tab:dataset-numbers} aufgeführt. Die Zeile \glqq unique\grqq{} gibt dabei an, wie viele einzigartige Zeilen in den Datensets enthalten sind. Die auf die zuvor beschriebene Weise erstellten Datensets können nun zum Training der Klassifikatoren verwendet werden. Dieser Vorgang wird im kommenden Kapitel erläutert.
 
-\begin{table}[t]
+\begin{table}[ht]
 \centering
 \caption{Kennzahlen der Datensets}
 \label{tab:dataset-numbers}

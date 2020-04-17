@@ -16,55 +16,55 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces CRISP-DM Prozessmodell nach \cite {Chapman2000}\relax }}{5}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces CRISP-DM Prozessmodell nach \cite {Chapman2000}\relax }}{4}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Phasen des CRISP-DM Prozessmodells nach \cite {Chapman2000} mit Zuordnung der Arbeitsphasen\relax }}{5}{figure.caption.11}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Generierung von Software-Produktlinien nach \cite {Thuem2014}\relax }}{8}{figure.caption.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{10}{figure.caption.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{11}{figure.caption.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\relax }}{12}{figure.caption.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{13}{figure.caption.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{16}{figure.caption.19}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{17}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Phasen des CRISP-DM Prozessmodells nach \cite {Chapman2000} mit Zuordnung der Arbeitsphasen\relax }}{4}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{19}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Generierung von Software-Produktlinien nach \cite {Thuem2014}\relax }}{8}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{22}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{10}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{23}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{11}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{25}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Grundsätzlicher Aufbau eines KNN mit drei Input-Layer-Neuronen, fünf Hidden-Layer-Neuronen und zwei Output-Layer-Neuronen\relax }}{12}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung zur Unterscheidung der Datensets\relax }}{27}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Satz von Bayes als Grundlage des Na\"{\i }ve-Bayes-Klassifikators\relax }}{13}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Teil 1: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{16}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Teil 2: Featurebasierter Prozess des überwachten Machine Learnings nach \cite {Queiroz2016}\relax }}{17}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Übersicht der Aufteilung in Trainings- und Testdaten\relax }}{32}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{19}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{22}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{23}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{25}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung zur Unterscheidung der Datensets\relax }}{27}{figure.caption.38}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{36}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Übersicht der Aufteilung in Trainings- und Testdaten\relax }}{32}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{47}{figure.caption.50}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{48}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{36}{figure.caption.50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces ROC-Kurven des featurebasierten Datensets \relax }}{48}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{48}{figure.caption.51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies der dateibasierten Datensets\relax }}{49}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{49}{figure.caption.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces ROC-Kurven der datenbasierten Datensets \relax }}{50}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces ROC-Kurven des featurebasierten Datensets \relax }}{49}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Vergleich der Accuracies der dateibasierten Datensets\relax }}{50}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces ROC-Kurven der datenbasierten Datensets \relax }}{51}{figure.caption.68}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
