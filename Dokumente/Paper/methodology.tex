@@ -122,7 +122,7 @@ As already mentioned, attributes are used to train the machine learning classifi
 
 In view of the evaluation of the feature-based dataset that follows in the next section, two additional datasets were created to make the impact of the feature-based metrics on the classifiers' predictions comparable. Both further data sets follow a classical file-based approach as it is common in machine learning based error detection and are based on the methodology developed by Moser et al. \cite{Moser2008}. The 17 process metrics of this scientific work were also adopted and are listed in \autoref{tab:metrics-moser}. A visualization to distinguish the three data sets is shown in \autoref{fig:dataset}.
 
-\begin{table*}
+\begin{table*}[ht]
 \centering
 \caption{Overview of used feature-based metrics}
 \label{tab:metrics}
@@ -154,6 +154,43 @@ In view of the evaluation of the feature-based dataset that follows in the next 
                                                        & Number of removed lines                    & average number of lines of code deleted from the files associated \par{}with the feature within a release.                                                                                                                                                         & *                 \\ 
 \hline
 \multicolumn{4}{|>{\centering\arraybackslash\hspace{0pt}}p{0.993\linewidth}|}{\textit{* These values were calculated based on the metadata obtained with PyDriller.}\par{}\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} }                                                                                                                    \\
+\hline
+\end{tabular}
+}
+\end{table*}
+
+\begin{table*}[ht]
+\centering
+\caption{Feature metrics. To apply the metrics to a file, we aggregate the metric values of all features associated to the given file, using the listed aggregation operator.}
+\label{tab:metrics}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|l|l|c|} 
+\cline{2-5}
+\multicolumn{1}{l|}{}        & \textbf{Metric}                            & \textbf{Description}                                                                                                                                                                                                                                                                           & \textbf{Aggregation~operator} & \textbf{Source}   \\ 
+\hline
+\multirow{7}{*}{\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits (FCOMM)                         & number of commits associated with the feature in a release.                                                                                                                                                                                                                                    & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+\cline{2-5}
+                             & Number of active developers (FADEV)              & \begin{tabular}[c]{@{}l@{}}number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                                       & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+\cline{2-5}
+                             & Number of distinct developers (FDDEV)              & \begin{tabular}[c]{@{}l@{}}cumultative number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                           & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+\cline{2-5}
+                             & Experience of all develepoers (FEXP)             & \begin{tabular}[c]{@{}l@{}}geometric mean of the experience of all developers who have edited \\(changed, deleted or added) the feature within a release. Experience is\\defined as the sum of the changed, deleted or added \\lines in the commits associated with the feature. \end{tabular} & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+\cline{2-5}
+                             & Experience of the most involved developers (FOEXP) & \begin{tabular}[c]{@{}l@{}}experience of the developer who has edited (changed, deleted or added) \\the feature most often within a release. Experience is defined as the \\sum of changed, deleted, or added lines in the commits associated with the \\feature. \end{tabular}                & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+\cline{2-5}
+                             & Degree of modifications (FMODD)                    & number of edits (change, removal, extension) of the feature within a release.                                                                                                                                                                                                                  & Mean                          & *                 \\ 
+\cline{2-5}
+                             & Scope of modifications (FMODS)                    & \begin{tabular}[c]{@{}l@{}}number of edited features within a release (feature overlapping value). \\Idea: The more features have been edited in a release, \\the more error-prone they seem to be. \end{tabular}                                                                              & Mean                          & *                 \\ 
+\hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code (FNLOC)                              & \begin{tabular}[c]{@{}l@{}}average number of lines of code of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                           & Mean                          & *                 \\ 
+\cline{2-5}
+                             & Cyclomatic Complexity (FCyCO)                     & \begin{tabular}[c]{@{}l@{}}average cyclomatic complexity of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                             & Mean                          & *                 \\ 
+\cline{2-5}
+                             & Number of added lines (FADDL)                      & \begin{tabular}[c]{@{}l@{}}average number of lines of code added to the files associated with \\the feature within a release. \end{tabular}                                                                                                                                                    & Mean                          & *                 \\ 
+\cline{2-5}
+                             & Number of removed lines (FREML)                   & \begin{tabular}[c]{@{}l@{}}average number of lines of code deleted from the files associated \\with the feature within a release.\end{tabular}                                                                                                                                                 & Mean                          & *                 \\ 
+\hline
+\multicolumn{5}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* These values were calculated based on the metadata obtained with PyDriller.}\\\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} \end{tabular}}                                                                                                                                                                           \\
 \hline
 \end{tabular}
 }
