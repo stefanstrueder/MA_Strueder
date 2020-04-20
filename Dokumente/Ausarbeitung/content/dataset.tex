@@ -3,7 +3,7 @@
 \chapter{Erstellung eines featurebasierten Datensets}
 \label{dataset-creation}
 
-Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zum Training der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen des Trainings der Klassifikatoren dienen. Eine Gliederung der Kapitel kann \autoref{fig:kap3} entnommen werden.
+Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erstellung des featurebasierten Datensets, welches zum Training der Machine-Learning-Klassifikatoren dient. Dazu wird zunächst die Datenauswahl näher beleuchtet. Darauf folgt eine Darlegung der Konstruktion des Datensets sowie der Auswahl und Berechnung der Metriken, welche als Attribute im Rahmen des Trainings der Klassifikatoren dienen. Eine Gliederung der Kapitel kann der nachfolgenden \autoref{fig:kap3} entnommen werden.
 
 \begin{figure}[H]
     \centering
@@ -15,37 +15,36 @@ Dieses Kapitel widmet sich der schrittweisen Erläuterung des Prozesses zur Erst
 
 \section{Datenauswahl}
 
-Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für das Training der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commit-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge zum einen anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Wichtig war zum anderen jedoch auch, dass die Variabilität im Sourcecode der Softwareprojekte mittels den in \hyperref[feat-develop]{in Abschnitt 2.1} vorgestellten Präprozessor-Direktiven umgesetzt wurde und ihre Git-Repositories eine klare \glqq Revision History\grqq{} hinsichtlich von Release-Nummern aufweisen. Ein weiteres hinreichendes Kriterium war die Verwendung einer einheitlichen Sprache. Sämtliche Softwareprojekte entstammen dem englischsprachigen Raum. Die für diese Arbeit verwendeten Softwareprojekte sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
+Wie im vorangegangenen Kapitel bereits erwähnt wurde, bildet das Datenset die Grundlage für das Training der Machine-Learning-Klassifikatoren und wird eigens für diese Arbeit auf Basis von Commit-Daten von 13 featurebasierten Softwareprojekten erstellt. Die Auswahl der Softwareprojekte erfolge zum einen anhand von vorheriger Verwendung in wissenschaftlicher Literatur \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. Wichtig war zum anderen jedoch auch, dass die Variabilität im Sourcecode der Softwareprojekte mittels den in \hyperref[feat-develop]{in Abschnitt 2.1} vorgestellten Präprozessor-Direktiven umgesetzt wurde und ihre Git-Repositories eine klare \glqq Revision History\grqq{} hinsichtlich von Release-Nummern aufweisen. Ein weiteres hinreichendes Kriterium war die Verwendung einer einheitlichen Sprache. Sämtliche Softwareprojekte entstammen dem englischsprachigen Raum. Die für diese Arbeit verwendeten Softwareprojekte\footnote{Die Links zu den Websites der Softwareprojekte und deren Repositories können im \hyperref[appendix1]{Anhang} eingesehen werden.} sind samt ihres Einsatzzweckes und ihrer Datenquellen in \autoref{tab:tools} aufgeführt.
 
 \begin{table}[ht]
 \centering
-\caption{Übersicht der verwendeten Softwareprojekte\protect\footnotemark{}}
+\caption{Übersicht der verwendeten Softwareprojekte}
 \label{tab:tools}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|} 
 \cline{1-3}\cline{5-7}
 \textbf{Projekt}   & \textbf{Zweck}       & \textbf{Datenquelle}  & ~                    & \textbf{Projekt}     & \textbf{Zweck}       & \textbf{Datenquelle}                     \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Blender}   & 3D-Modellierungstool & GitHub-Mirror         & ~                    & \textbf{libxml2}     & XML-Parser           & GitLab-Repository                        \\ 
+Blender   & 3D-Modellierungstool & GitHub-Mirror         & ~                    & libxml2     & XML-Parser           & GitLab-Repository                        \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Busybox}   & UNIX-Toolkit         & Git-Repository        & ~                    & \textbf{lighttpd}    & Webserver            & Git-Repository                           \\ 
+Busybox   & UNIX-Toolkit         & Git-Repository        & ~                    & lighttpd    & Webserver            & Git-Repository                           \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Emacs}     & Texteditor           & GitHub-Mirror         & ~                    & \textbf{MPSolve}     & Polynomlöser         & GitHub-Repository                        \\ 
+Emacs     & Texteditor           & GitHub-Mirror         & ~                    & MPSolve     & Polynomlöser         & GitHub-Repository                        \\ 
 \cline{1-3}\cline{5-7}
-\textbf{GIMP}      & Bildbearbeitung      & GitLab-Repository     & ~                    & \textbf{Parrot}      & virtuelle Maschine   & GitHub-Repository                        \\ 
+GIMP      & Bildbearbeitung      & GitLab-Repository     & ~                    & Parrot      & virtuelle Maschine   & GitHub-Repository                        \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Gnumeric}  & Tabellenkalkulation  & GitLab-Repository     & ~                    & \textbf{Vim}         & Texteditor           & GitHub-Repository                        \\ 
+Gnumeric  & Tabellenkalkulation  & GitLab-Repository     & ~                    & Vim         & Texteditor           & GitHub-Repository                        \\ 
 \cline{1-3}\cline{5-7}
-\textbf{gnuplot}   & Plotting-Tool        & GitHub-Mirror         & ~                    & \textbf{xfig}        & Grafikeditor         & Sourceforge-Repository  \\ 
+gnuplot   & Plotting-Tool        & GitHub-Mirror         & ~                    & xfig        & Grafikeditor         & Sourceforge-Repository  \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Irssi}     & IRC-Client           & GitHub-Repository     & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                     \\
+Irssi     & IRC-Client           & GitHub-Repository     & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                     \\
 \cline{1-3}
 \end{tabular}
 }
 \end{table}
-\footnotetext{Links zu den Websites der Softwareprojekte und deren Repositories können im \hyperref[appendix1]{Anhang} eingesehen werden.}
 
-Um die Commit-Daten der Softwareprojekte zu erhalten wurde die Python-Library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} verwendet \cite{Spadini2018}. Diese ermöglicht eine einfache Datenextraktion aus Git-Repositories zum Erhalt von Commits, Commit-Nachrichten, Entwicklern, Diffs und mehr (im weiteren Verlauf \glqq Metadaten\grqq{} genannt). Ein beispielhafter Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits (Autor, Name der veränderten Dateien, Typ der Veränderung und jeweilige zyklomatische Komplexität der Dateien) kann dem \hyperref[appendix4]{Anhang} entnommen werden.. 
+Um die Commit-Daten der Softwareprojekte zu erhalten, wurde die Python-Library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} verwendet \cite{Spadini2018}. Diese ermöglicht eine einfache Datenextraktion aus Git-Repositories zum Erhalt von Commits, Commit-Nachrichten, Entwicklern, Diffs und mehr (im weiteren Verlauf \glqq Metadaten\grqq{} genannt). Ein beispielhafter Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits (Autor, Name der veränderten Dateien, Typ der Veränderung und jeweilige zyklomatische Komplexität der Dateien) kann dem \hyperref[appendix4]{Anhang} entnommen werden.. 
 
 Als Input der eigens erstellten Python-Scripte zum Abruf der Commit-Metadaten dienten jeweils die URLs zu den Git-Repositories der Softwareprojekte. Weiterhin wurden die Metadaten in Commits je Release aufgeteilt. Ermöglicht wurde dies durch die Angabe von Release-Tags im PyDriller-Code, basierend auf der Tag-Struktur von Git-Repositories. Für jede veränderte Datei innerhalb eines Commits und eines Releases wurden die folgenden Metadaten mit Hilfe von PyDriller abgerufen:
 
@@ -66,7 +65,7 @@ Als Input der eigens erstellten Python-Scripte zum Abruf der Commit-Metadaten di
 \end{itemize}
 \end{multicols}
 
-Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren.
+Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenbank gespeichert. Für jedes Softwareprojekt wurde eine eigene Tabelle erstellt, in welcher neben der oben stehenden Metadaten (aufgeteilt in Spalten) zudem der Name des betreffenden Softwareprojekts und die den Commits zugehörigen Release-Nummern gespeichert wurden. Jede veränderte Datei eines Commits erhält eine Zeile der Datenbank-Tabellen. In \autoref{tab:tools-values1} kann eingesehen werden, wie viele Releases je Softwareprojekt abgerufen wurden und wie viele Commits daraus resultieren.
 
 \begin{table}[ht]
 \centering
@@ -77,19 +76,19 @@ Die auf diese Weise erhaltenen Daten wurden nach dem Abruf in einer MySQL-Datenb
 \cline{1-3}\cline{5-7}
 \textbf{Projekt}   & \textbf{\#Releases}  & \textbf{\#Commits}  & ~                                                     & \textbf{Projekt}                                     & \textbf{\#Releases}~                                 & \textbf{\#Commits}~ ~                                 \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Blender}   & 11                   & 19.119              & ~                                                     & \textbf{libxml2}                                     & 10                                                   & 732                                                   \\ 
+Blender   & $11$                   & $19.119$              & ~                                                     & libxml2                                     & $10$                                                   & $732$                                                   \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Busybox}   & 14                   & 4.984               & ~                                                     & \textbf{lighttpd}                                    & 6                                                    & 2.597                                                 \\ 
+Busybox   & $14$                   & $4.984$               & ~                                                     & lighttpd                                    & $6$                                                    & $2.597$                                                 \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Emacs}     & 7                    & 12.805              & ~                                                     & \textbf{MPSolve}                                     & 8                                                    & 668                                                   \\ 
+Emacs     & $7$                    & $12.805$              & ~                                                     & MPSolve                                     & $8$                                                    & $668$                                                   \\ 
 \cline{1-3}\cline{5-7}
-\textbf{GIMP}      & 14                   & 7.240               & ~                                                     & \textbf{Parrot}                                      & 7                                                    & 16.245                                                \\ 
+GIMP      & $14$                   & $7.240$               & ~                                                     & Parrot                                      & $7$                                                    & $16.245$                                                \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Gnumeric}  & 8                    & 6.025               & ~                                                     & \textbf{Vim}                                         & 7                                                    & 9.849                                                 \\ 
+Gnumeric  & $8$                    & $6.025$               & ~                                                     & Vim                                         & $7$                                                    & $9.849$                                                 \\ 
 \cline{1-3}\cline{5-7}
-\textbf{gnuplot}   & 5                    & 6.619               & ~                                                     & \textbf{xfig}                                        & 7                                                    & 18                                                    \\ 
+gnuplot   & $5$                    & $6.619$               & ~                                                     & xfig                                        & $7$                                                    & $18$                                                    \\ 
 \cline{1-3}\cline{5-7}
-\textbf{Irssi}     & 7                    & 253                 & \multicolumn{1}{>{\hspace{0pt}}p{0.029\linewidth}}{~} & \multicolumn{1}{>{\hspace{0pt}}p{0.139\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.168\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.185\linewidth}}{}  \\
+Irssi     & $7$                    & $253$                 & \multicolumn{1}{>{\hspace{0pt}}p{0.029\linewidth}}{~} & \multicolumn{1}{>{\hspace{0pt}}p{0.139\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.168\linewidth}}{} & \multicolumn{1}{>{\hspace{0pt}}p{0.185\linewidth}}{}  \\
 \cline{1-3}
 \end{tabular}
 }
@@ -103,11 +102,11 @@ Es kommen die Daten von 13 featurebasierten Softwareprojekten zur Verwendung. Mi
 \section{Konstruktion des Datensets}
 \label{construction}
 
-Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbeitung und -optimierung. Diese werden im folgenden vorgestellt.
+Die Konstruktion des Datensets gliedert sich in mehrere Phasen der Datenverarbeitung und -optimierung. Diese werden im Folgenden vorgestellt.
 
 \subsection*{Identifikation von Features}
 
-Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die Präprozessor-Anweisungen \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die je Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Metadaten der Softwareprojekte. Für den Fall, dass ein Feature hinter der Direktive \texttt{\#IFNDEF} identifiziert wurde, wird das Feature mit einem vorangestellten \glqq not\grqq{} gespeichert. Es wird somit als eigenständiges Feature, neben seiner nicht-negierten Form, gespeichert. Kombinationen von Features werden in ihrer identifizierten Form gespeichert. Konnte kein Feature identifiziert werden, wird entsprechend \glqq \texttt{none}\grqq{} gespeichert.
+Die erste Phase besteht aus der Extraktion der involvierten Features einer veränderten Datei. Dazu wurden mithilfe eines Python-Scripts die Präprozessor-Anweisungen \texttt{\#IFDEF} und \texttt{\#IFNDEF} in den Diffs der veränderten Dateien identifiziert und anschließend die den Direktiven folgende Zeichenfolge bis zum Ende der Codezeile als Feature gespeichert. Die Identifizierung erfolgte mittels regulären Ausdrücken. Gespeichert werden die je Datei identifizierten Features in einer zusätzlichen Spalte in den jeweiligen MySQL-Tabellen der Metadaten der Softwareprojekte. Für den Fall, dass ein Feature hinter der Direktive \texttt{\#IFNDEF} identifiziert wurde, wird das Feature mit einem vorangestellten \glqq not\grqq{} gespeichert. Es wird somit als eigenständiges Feature neben seiner nicht-negierten Form gespeichert. Kombinationen von Features werden in ihrer identifizierten Form gespeichert. Konnte kein Feature identifiziert werden, wird entsprechend \glqq \texttt{none}\grqq{} gespeichert.
 
 Dieser Weg der Identifizierung birgt einige Hindernisse. Diese können, neben dem Normalfall, in \autoref{fig:features} gesehen werden. In einigen C-Programmierparadigmen ist es üblich, Header-Dateien mittels Präprozessor-Direktiven im Sourcecode einzubinden, sodass sie wie Features scheinen (siehe erster unerwünschter Fall in \autoref{fig:features}). Diese \glqq Header-Features\grqq{}, wie sie im weiteren Verlauf genannt werden, sollten jedoch ignoriert werden, da sie im gesamten Sourcecode keine Variabilität erzeugen. In der Regel sind diese Header-Features identifizierbar durch ihre Namensgebung in Form eines angehängten \texttt{\_h\_} an den Featurenamen, wie beispielsweise \texttt{featurename\_h\_}. Dieser angehängte Teil erlaubt es, die Header-Features mittels regulärer Ausdrücke zu erkennen und auszufiltern. 
 
@@ -146,31 +145,31 @@ Eine Übersicht der Anzahl der korrektiven und fehlereinführenden Commits sowie
 \hline
  \textbf{Projekt}  & \textbf{\#korrektiv}  & \textbf{\#fehlereinführend}  & \textbf{\#Features}   \\ 
 \hline
-\textbf{Blender}   & 7.760                 & 3.776                        & 1.400                 \\ 
+Blender   & $7.760$                 & $3.776$                        & $1.400$                 \\ 
 \hline
-\textbf{Busybox}   & 1.236                 & 802                          & 628                   \\ 
+Busybox   & $1.236$                 & $802$                          & $628$                   \\ 
 \hline
-\textbf{Emacs}     & 4.269                 & 2.532                        & 718                   \\ 
+Emacs     & $4.269$                 & $2.532$                        & $718$                   \\ 
 \hline
-\textbf{GIMP}      & 1.380                 & 854                          & 204                   \\ 
+GIMP      & $1.380$                 & $854$                          & $204$                   \\ 
 \hline
-\textbf{Gnumeric}  & 1.498                 & 1.191                        & 637                   \\ 
+Gnumeric  & $1.498$                 & $1.191$                        & $637$                   \\ 
 \hline
-\textbf{gnuplot}   & 854                   & 1.215                        & 558                   \\ 
+gnuplot   & $854$                   & $1.215$                        & $558$                   \\ 
 \hline
-\textbf{Irssi}     & 52                    & 22                           & 9                     \\ 
+Irssi     & $52$                    & $22$                           & $9$                     \\ 
 \hline
-\textbf{libxml2}   & 324                   & 88                           & 200                   \\ 
+libxml2   & $324$                   & $88$                           & $200$                   \\ 
 \hline
-\textbf{lighttpd}  & 1.078                 & 929                          & 230                   \\ 
+lighttpd  & $1.078$                 & $929$                          & $230$                   \\ 
 \hline
-\textbf{MPSolve}   & 151                   & 211                          & 54                    \\ 
+MPSolve   & $151$                   & $211$                          & $54$                    \\ 
 \hline
-\textbf{Parrot}    & 3.109                 & 3.072                        & 397                   \\ 
+Parrot    & $3.109$                 & $3.072$                        & $397$                   \\ 
 \hline
-\textbf{Vim}       & 371                   & 696                          & 1.158                 \\ 
+Vim       & $371$                   & $696$                          & $1.158$                 \\ 
 \hline
-\textbf{xfig}      & 0*                    & 0*                           & 137                   \\ 
+xfig      & $0$*                    & $0$*                           & $137$                   \\ 
 \hline
 \multicolumn{4}{|>{\Centering\hspace{0pt}}p{0.992\linewidth}|}{* Siehe \hyperref[xfig]{Abschnitt 5.1}}             \\
 \hline
@@ -201,7 +200,7 @@ filename               & Name der geänderten Datei                             
 \hline
 nloc                   & \glqq Lines of code\grqq{} der geänderten Datei                      \\ 
 \hline
-cycomplexity           & Zyklomatische Komplexität der geänderten Datei            \\ 
+cycomplexity           & zyklomatische Komplexität der geänderten Datei            \\ 
 \hline
 lines\_added           & Anzahl der hinzugefügten Zeilen zur~geänderten Datei      \\ 
 \hline
@@ -267,13 +266,13 @@ Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen A
 \cline{2-4}
                             & \begin{tabular}[c]{@{}l@{}}Umfang der\\Änderungen (MODS) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Anzahl der bearbeiteten Features innerhalb eines Releases \\(featureübergreifender Wert). Idee: Je mehr Features in einem Release \\ bearbeitet worden sind, desto fehleranfälliger scheinen diese zu sein. \end{tabular}                                                              & *                 \\ 
 \hline
-\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                      & *                 \\ 
+\multirow{4}{*}{\textbf{\parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{Codemetriken}}}}} & \begin{tabular}[c]{@{}l@{}}Anzahl der\\Codezeilen (NLOC) \end{tabular}                         & \begin{tabular}[c]{@{}l@{}}durchschnittliche Anzahl der Codezeilen der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                      & *                 \\ 
 \cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Zyklomatische\\Komplexität (CYCO) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}Durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                  & *                 \\ 
+                            & \begin{tabular}[c]{@{}l@{}}zyklomatische\\Komplexität (CYCO) \end{tabular}                     & \begin{tabular}[c]{@{}l@{}}durchschnittliche zyklomatische Komplexität der dem Feature \\zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                                  & *                 \\ 
 \cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL) \end{tabular}               & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der hinzugefügten Codezeilen zu\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                      & *                 \\ 
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\hinzugefügten Zeilen (ADDL) \end{tabular}               & \begin{tabular}[c]{@{}l@{}}durchschnittliche Anzahl der hinzugefügten Codezeilen zu\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                                      & *                 \\ 
 \cline{2-4}
-                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML) \end{tabular}                  & \begin{tabular}[c]{@{}l@{}}Durchschnittliche Anzahl der gelöschten Codezeilen von\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                   & *                 \\ 
+                            & \begin{tabular}[c]{@{}l@{}}Anzahl der\\entfernten Zeilen (REML) \end{tabular}                  & \begin{tabular}[c]{@{}l@{}}durchschnittliche Anzahl der gelöschten Codezeilen von\\den dem Feature zugeordneten Dateien innerhalb eines Releases. \end{tabular}                                                                                                                                                   & *                 \\ 
 \hline
 \multicolumn{4}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* Diese Werte wurden auf Basis der mit PyDriller erhaltenen Metadaten berechnet.}\\\textit{Die Berechnung der Metriken auf Feature-Level erfolgte auf Basis der Metadaten der ihnen zugrunde liegenden Dateien.~}\end{tabular}}                                                                                                                                                                                                               \\
 \hline
@@ -282,7 +281,7 @@ Wie bereits in \hyperref[classification]{Abschnitt 2.2} erwähnt wurde, dienen A
 \end{table}
 
 \label{new-datasets}
-Im Hinblick auf die im nächsten Kapitel folgende Evaluation des featurebasierten Datensets, wurden zwei weitere Datensets erstellt, um die Auswirkungen der featurebasierten Metriken auf die Vorhersagen der Klassifikatoren vergleichbar zu machen. Beide weiteren Datensets verfolgen einen klassischen dateibasierten Ansatz, wie er in der Machine-Learning-gestützten Fehlererkennung üblich ist und basieren auf der Methodik, die von Moser et al. \cite{Moser2008}, die bereits in \hyperref[moser]{Abschnitt 2.3} vorgestellt wurde. Ebenfalls wurden die 17 Prozessmetriken dieser wissenschaftlichen Arbeit übernommen. Eine Visualisierung zur Unterscheidung der drei Datensets ist in \autoref{fig:dataset} dargestellt.
+Im Hinblick auf die im nächsten Kapitel folgende Evaluation des featurebasierten Datensets, wurden zwei weitere Datensets erstellt, um die Auswirkungen der featurebasierten Metriken auf die Vorhersagen der Klassifikatoren vergleichbar zu machen. Die beiden weiteren Datensets verfolgen einen klassischen dateibasierten Ansatz, wie er in der Machine-Learning-gestützten Fehlervorhersage üblich ist und basieren auf der in \hyperref[moser]{Abschnitt 2.3} vorgestellten Methodik von Moser et al. \cite{Moser2008}. Ebenfalls wurden die 17 Prozessmetriken dieser wissenschaftlichen Arbeit übernommen. Eine Visualisierung zur Unterscheidung der drei Datensets ist in \autoref{fig:dataset} dargestellt.
 
 \begin{figure}[ht]
     \centering
@@ -309,7 +308,7 @@ nicht fehlereinführend & + & nicht korrektiv & = & fehlerfrei
 }
 \end{table}
 
-Die Informationen zum Status eines Features basieren dabei auf den ihm zugrundliegenden Dateien. Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Releases bearbeitet sein sollte, erfolgt die Bestimmung des Labels anhand der folgenden Regeln:
+Die Informationen zum Status eines Features basieren dabei auf den ihm zugrundeliegenden Dateien. Für den Fall, dass ein Feature oder eine Datei mehrfach innerhalb eines Releases bearbeitet sein sollte, erfolgt die Bestimmung des Labels anhand der folgenden Regeln:
 
 \begin{itemize}
 \setlength{\itemsep}{-2pt}
@@ -332,15 +331,15 @@ Einige ergänzende Kennzahlen zu den Datensets sind in \autoref{tab:dataset-numb
 \hline
                         & \textbf{featurebasiertes}\par{}\textbf{Datenset} & \textbf{einfaches}\par{}\textbf{ dateibasiertes Datenset} & \textbf{erweitertes}\par{}\textbf{dateibasiertes Datenset}  \\ 
 \hline
-Anzahl Attribute        & 11 + Label                                       & 17 + Label                  & 28 + Label                                   \\ 
+Anzahl Attribute        & $11$ + Label                                       & $17$ + Label                  & $2$8 + Label                                   \\ 
 \hline
-Anzahl Datensätze       & 14.059                                           & 76.986                      & 76.986                                       \\ 
+Anzahl Datensätze       & $14.059$                                           & $76.986$                      & $76.986$                                       \\ 
 \hline
-~ ~ ~- davon defekt     & 2.735                                            & 1.899                       & 1.899                                        \\ 
+~ ~ ~- davon defekt     & $2.735$                                            & $1.899$                       & $1.899$                                        \\ 
 \hline
-~ ~ ~- davon fehlerfrei & 11.324                                           & 75.087                      & 75.087                                       \\ 
+~ ~ ~- davon fehlerfrei & $11.324$                                           & $75.087$                      & $75.087$                                       \\ 
 \hline
-~ ~ ~- davon \glqq unique\grqq   & 8.447                                            & 52.564                      & 52.783                                       \\
+~ ~ ~- davon \glqq unique\grqq   & $8.447$                                            & $52.564$                      & $52.783$                                       \\
 \hline
 \end{tabular}
 }
