@@ -393,3 +393,51 @@ overall split ratio  & 71:29           & 81:19                         & 71:29  
 \end{table*}
 
 The results obtained using the test data, which reflect the performance of the individual classifiers, are presented in the following chapter as part of the evaluation.
+
+
+\setlength{\tymin}{3.5cm}
+\begin{table*}[!t]
+	\fontsize{7}{7}\selectfont
+	\centering
+	\caption{Let $R$ be a release consisting of $q$ commits: $\mathnormal{R = \{c_{1}, c_{2}, . . . c_{q}}\}$, $F$ be the set of all $p$ files changed by commits in $R$: $\mathnormal{F = \{f_{1}, f_{2}, . . . f_{p}}\}$. For each file $f\in F$, let $T$ be the set of all $n$ features (in $f$) affected by changes in $R$: $\mathnormal{T = \{feat_{1}, feat_{2}, . . . feat_{n}}\}$ , and each feature $feat\in T$ has a set $A$ of $m$ files which implement it: $A\subseteq F$: $\mathnormal{A = \{featfile_{1}, featfile_{2}, . . . featfile_{m}}\}$ We define our feature based metric as follows for each file \mformula{f}:}
+	%\vspace{-.2cm}
+	\label{tbl:featuredefects}
+	\begin{threeparttable}
+		\fontfamily{ptm}\selectfont
+		
+		\begin{tabulary}{\textwidth}{p{1cm}p{5cm}p{5cm}p{5cm}}
+			
+			\toprule
+			\theader{metric}&\theader{description}	&	\theader{equation}	&	\theader{supplementary eq.}	\\
+			\midrule
+			$FCOMM$\tnote{1} & Average number of commits associated to the changed features of a file within a release. & $\mathit{FCOMM_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} comm(feat_i,A_i)}$ & $\mathnormal{comm(feat_i,A_i) = \sum_{j=1}^{m} comm(featfile_j) }$ \\
+			$FADEV$\tnote{2} & Average number of developers who changed the features of a files within a release. & $\mathit{FADEV_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} adev(feat_i,A_i)}$ & $\mathnormal{adev(feat_i,A_i) = \sum_{j=1}^{m} adev(featfile_j) }$ \\
+			$FDDEV$\tnote{3} & Average cumulated number of developers who changed the features of a files within a release. & $\mathit{FDDEV_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} ddev(feat_i,A_i)}$ & $\mathnormal{ddev(feat_i,A_i) = \sum_{j=1}^{m} ddev(featfile_j) }$ \\
+			$FEXP$\tnote{4} & Average experience\mtnote{5} of all developers who changed the features of a file within a release. & $\mathit{FEXP_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} exp(feat_i,A_i)}$ & $\mathnormal{exp(feat_i,A_i) = \sum_{j=1}^{m} exp(featfile_j) }$ \\
+			$FOEXP$\tnote{6} & Average experience\mtnote{5} of the developer who changed the features of a file most often within a release. & $\mathit{FOEXP_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} oexp(feat_i,A_i)}$ & $\mathnormal{oexp(feat_i,A_i) = \sum_{j=1}^{m} oexp(featfile_j) }$ \\
+			$FMODD$\tnote{7} & Average number of changes to the features of a file within a release. & $\mathit{FMODD_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} modd(feat_i,A_i)}$ & $\mathnormal{modd(feat_i,A_i) = \sum_{j=1}^{m} modd(featfile_j) }$ \\
+			$FMODS$\tnote{8} & Average number of changed features of a file within a release. & $\mathit{FMODS_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} mods(feat_i,A_i)}$ & $\mathnormal{mods(feat_i,A_i) = \sum_{j=1}^{m} mods(featfile_j) }$ \\
+			$FNLOC$\tnote{9} & Average number of lines of code of the underlying files of the changed features of a file within a release. & $\mathit{FNLOC_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} nloc(feat_i,A_i)}$ & $\mathnormal{nloc(feat_i,A_i) = \sum_{j=1}^{m} nloc(featfile_j) }$ \\
+			$FCYCO$\tnote{10} & Average cyclomatic complexity of the underlying files of the changed features of a file within a release. & $\mathit{FCYCO_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} cyco(feat_i,A_i)}$ & $\mathnormal{cyco(feat_i,A_i) = \sum_{j=1}^{m} nloc(featfile_j) }$ \\								
+			$FADDL$\tnote{11} & Average number of lines of code added to the underlying files of the changed features of a file within a release. & $\mathit{FADDL_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} addl(feat_i,A_i)}$ & $\mathnormal{addl(feat_i,A_i) = \sum_{j=1}^{m} addl(featfile_j) }$ \\
+			$FREML$\tnote{12} & Average number of lines of code deleted from the underlying files of the changed features of a file within a release. & $\mathit{FREML_R\,(f)} = \mathnormal{\dfrac{1}{n}\sum_{i=1}^{n} reml(feat_i,A_i)}$ & $\mathnormal{reml(feat_i,A_i) = \sum_{j=1}^{m} reml(featfile_j) }$ \\						
+			\bottomrule				
+		\end{tabulary}
+		\begin{tablenotes}[para]
+			~\item[1] $comm(featfile_j)$ counts commits in which the file $featfile_j$ was changed.
+			~\item[2] $adev(featfile_j)$ counts the developers who changed the file $featfile_j$.  
+			~\item[3] $ddev(featfile_j)$ cumulates the counts of developers who changed the file over commits $featfile_j$.
+			~\item[4] $exp(featfile_j)$ returns the geometric mean of the experience\mtnote{5} of all developers who changed the file $featfile_j$.
+			~\item[5] Experience is defined as the sum of the changed, deleted or added lines in the commits associated with the files.
+			~\item[6] $oexp(featfile_j)$ returns the experience\mtnote{5} of the developer who changed the file $featfile_j$ most often within a release.
+			~\item[7] $modd(featfile_j)$ returns the number of changes to the file $featfile_j$.
+			~\item[8] $mods(featfile_j)$  returns the number of changed files in the release of the file $featfile_j$.
+			~\item[9] $nloc(featfile_j)$ returns the number of lines of code of the file $featfile_j$.
+			~\item[10] $cyco(featfile_j)$ returns the cyclomatic complexity of the file $featfile_j$.
+			~\item[11] $addl(featfile_j)$ returns the number of added lines of code to the file $featfile_j$.
+			~\item[12] $reml(featfile_j)$ returns the number of removed lines of code from the file $featfile_j$.
+		\end{tablenotes}
+	\end{threeparttable}
+	\vspace{-0.3cm}
+	%	\tbottom
+\end{table*}

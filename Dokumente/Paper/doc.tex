@@ -1,5 +1,7 @@
 \documentclass[sigconf]{acmart}
 \usepackage{subfig}
+\usepackage{tabulary}
+\usepackage{threeparttable}
 \usepackage{hyperref}
 \usepackage{relsize,xspace}
 \usepackage[framemethod=tikz,
@@ -75,6 +77,11 @@ roundcorner = 0pt
 \newcommand{\Figref}[1]{Figure~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
 \newcommand{\lstref}[1]{Listing~\ref{#1}}
+
+\newcommand{\mtnote}[1]{\textsuperscript{\TPTtagStyle{#1}}}
+\newcommand\theader[1]{\textsf{{#1}}}
+\newcommand\featureName[1]{\textit{\textsf{{#1}}}}
+\newcommand\mformula[1]{$\mathnormal{{#1}}$}
 
 \newcommand{\tb}[1]{{\textsf{TB}[\smaller\sffamily\color{blue} #1}]}
 \newcommand{\rh}[1]{{\textsf{RH}[\smaller\sffamily\color{orange} #1}]}

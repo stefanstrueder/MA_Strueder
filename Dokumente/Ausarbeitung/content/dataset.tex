@@ -333,7 +333,7 @@ Einige ergänzende Kennzahlen zu den Datensets sind in \autoref{tab:dataset-numb
 \hline
 Anzahl Attribute        & $11$ + Label                                       & $17$ + Label                  & $2$8 + Label                                   \\ 
 \hline
-Anzahl Datensätze       & $14.059$                                           & $76.986$                      & $76.986$                                       \\ 
+Anzahl Datenpunkte       & $14.059$                                           & $76.986$                      & $76.986$                                       \\ 
 \hline
 ~ ~ ~- davon defekt     & $2.735$                                            & $1.899$                       & $1.899$                                        \\ 
 \hline
@@ -347,6 +347,9 @@ Anzahl Datensätze       & $14.059$                                           & 
 
 \fbox{\parbox{\linewidth}{RQ1b: WIE WEIT MÜSSEN DIE DATEN VORVERARBEITET WERDEN, UM SIE FÜR DAS TRAINING NUTZBAR ZU MACHEN?\medskip\\
 Die Verarbeitungsschritte für die Daten, die aus den Repositories erhalten wurden, bestehen aus: Extraktion der Features inklusive Bereinigung, Identifizierung von korrektiven Commits mittels Analyse der Commit-Nachrichten, Analyse nach fehlereinführenden Commits unter Zuhilfenahme des SZZ-Algorithmus sowie Berechnung von elf Metriken, welche als Attribute für das Training der Klassifikatoren dienen.}}
+
+\fbox{\parbox{\linewidth}{RQ3d: WIE LASSEN SICH DIE KLASSIFIKATOREN MIT WEITEREN VORHERSAGETECHNIKEN, DIE KEINE FEATURES NUTZEN, VERGLEICHEN?\medskip\\
+Es wurde auf eine Methode zur Erstellung eines dateibasierten Datensets aus der wissenschaftlichen Literatur zurückgegriffen \cite{Moser2008}. Dieses Datenset basiert auf den mittels PyDriller abgerufenen Daten und umfasst 17 Prozessmetriken als Attribute. Zum Vergleich wurde ein zusätzliches erweitertes dateibasiertes Datenset erstellt, welches die selben Prozessmetriken, aber auch zusätzlich die featurebasierten Metriken auf Dateiebene gemapped umfasst.}}
 
 \cleardoublepage
 
