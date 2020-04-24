@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {3.1}{\ignorespaces Übersicht der verwendeten Softwareprojekte\relax }}{20}{table.caption.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.2}{\ignorespaces Übersicht der Anzahl der Releases und Commits je Softwareprojekt\relax }}{20}{table.caption.28}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Übersicht der Anzahl der Releases und Commits je Softwareprojekt\relax }}{21}{table.caption.28}%
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {3.3}{\ignorespaces Anzahl der korrektiven und fehlereinführenden Commits sowie Anzahl der identifizierten Features je Softwareprojekt\relax }}{23}{table.caption.34}%
 \defcounter {refsection}{0}\relax 
@@ -42,17 +42,13 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Konfusionsmatrizen des featurebasierten Datensets\relax }}{37}{table.caption.47}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Konfusionsmatrizen des featurebasierten Datensets\relax }}{38}{table.caption.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{38}{table.caption.51}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{40}{table.caption.51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.3}{\ignorespaces Konfusionsmatrizen der dateibasierten Datensets\relax }}{40}{table.caption.56}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Konfusionsmatrizen der dateibasierten Datensets\relax }}{42}{table.caption.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der Evaluationsmetriken der dateibasierten Datensets (TPR = TP-Rate)\relax }}{42}{table.caption.60}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.5}{\ignorespaces Ergebnisse der Evaluationsmetriken auf Basis der 10-fold-cross-validation (TPR = TP-Rate, Rec. = Recall)\relax }}{52}{table.caption.64}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.6}{\ignorespaces Ergebnisse der Attributsauswahl der Klassifikatoren LR, NB und SGD \relax }}{53}{table.caption.65}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Ergebnisse der Evaluationsmetriken der dateibasierten Datensets (TPR = TP-Rate)\relax }}{44}{table.caption.60}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -62,12 +58,12 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {C.1}{\ignorespaces Accuracies des featurebasierten Datensets\relax }}{63}{table.caption.74}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Accuracies des featurebasierten Datensets\relax }}{58}{table.caption.72}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {C.2}{\ignorespaces Accuracies der Datensets\relax }}{63}{table.caption.75}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Accuracies der Datensets\relax }}{58}{table.caption.73}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {D.1}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{65}{table.caption.76}%
+\contentsline {table}{\numberline {D.1}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken des featurebasierten Datensets\relax }}{60}{table.caption.74}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {D.2}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken der dateibasierten Datensets\relax }}{66}{table.caption.77}%
+\contentsline {table}{\numberline {D.2}{\ignorespaces Erweiterte Ergebnisse der Evaluationsmetriken der dateibasierten Datensets\relax }}{61}{table.caption.75}%

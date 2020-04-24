@@ -16,13 +16,13 @@
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 16
 \BOOKMARK [1][-]{section.5.1}{Evaluationsmetriken}{chapter.5}% 17
 \BOOKMARK [1][-]{section.5.2}{Ergebnisse und Diskussion}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.2.1}{Featurebasiertes Datenset}{section.5.2}% 19
-\BOOKMARK [2][-]{subsection.5.2.2}{Dateibasierter Vergleich}{section.5.2}% 20
+\BOOKMARK [2][-]{subsection.5.2.1}{Ergebnisse und Vergleich der featureabsierten Klassifikatoren}{section.5.2}% 19
+\BOOKMARK [2][-]{subsection.5.2.2}{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{section.5.2}% 20
 \BOOKMARK [1][-]{section.5.3}{Herausforderungen und Limitationen}{chapter.5}% 21
 \BOOKMARK [0][-]{chapter.6}{Fazit}{}% 22
 \BOOKMARK [1][-]{section.6.1}{Zusammenfassung}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 24
-\BOOKMARK [0][-]{chapter*.72}{Literatur}{}% 25
+\BOOKMARK [0][-]{chapter*.70}{Literatur}{}% 25
 \BOOKMARK [0][-]{appendix.A}{PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{}% 26
 \BOOKMARK [0][-]{appendix.B}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 27
 \BOOKMARK [0][-]{appendix.C}{Accuracies der Klassifikatoren je Datenset}{}% 28

@@ -1586,47 +1586,6 @@
       \verb 10.1145/2580950
       \endverb
     \endentry
-    \entry{Wang2011}{article}{}
-      \name{author}{3}{}{%
-        {{hash=12d56b78b792344acffae8a914b78fed}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Huanjing},
-           giveni={H\bibinitperiod}}}%
-        {{hash=c7e0de384e7d1be2ca29a338e7f5c047}{%
-           family={Khoshgoftaar},
-           familyi={K\bibinitperiod},
-           given={Taghi\bibnamedelima M.},
-           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=4d4268ba79504e7a9abdca44dc36929b}{%
-           family={Seliya},
-           familyi={S\bibinitperiod},
-           given={Naeem},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{3ddf75c2007703a33f577c84ef238de0}
-      \strng{fullhash}{3ddf75c2007703a33f577c84ef238de0}
-      \strng{bibnamehash}{3ddf75c2007703a33f577c84ef238de0}
-      \strng{authorbibnamehash}{3ddf75c2007703a33f577c84ef238de0}
-      \strng{authornamehash}{3ddf75c2007703a33f577c84ef238de0}
-      \strng{authorfullhash}{3ddf75c2007703a33f577c84ef238de0}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{A software practitioner is interested in the solution to "for a given project, what is the minimum number of software metrics that should be considered for building an effective defect prediction model?" During the development life cycle various software metrics are collected for different reasons. In the case of a metrics-based defect prediction model, an intelligent selection of software metrics prior to building defect predictors is likely to improve model performance. This study utilizes the proposed threshold-based feature selection technique to remove irrelevant and redundant software metrics (a.k.a. features or attributes). A comparative investigation is presented for evaluating the size of the selected feature subsets. The case study is based on software measurement data obtained from a real-world project, and the defect predictors are trained using three commonly used classifiers. The empirical case study results demonstrate that an effective defect predictor can be built with only three metrics; and moreover, model performances improved when over 98.5{\%} of the software metrics were eliminated. Copyright © 2011, Association for the Advancement of Artificial Intelligence. All rights reserved.}
-      \field{isbn}{9781577355014}
-      \field{journaltitle}{Proceedings of the 24th International Florida Artificial Intelligence Research Society, FLAIRS - 24}
-      \field{number}{Mi}
-      \field{title}{{How many software metrics should be selected for defect prediction?}}
-      \field{year}{2011}
-      \field{pages}{69\bibrangedash 74}
-      \range{pages}{6}
-      \verb{file}
-      \verb :D$\backslash$:/OneDrive - Universit{\"{a}}t Koblenz/MA/Literatur/Metriken/Wang, Khoshgoftaar, Seliya{\_}How many software metrics should be selected for defect prediction{\_}2011.pdf:pdf
-      \endverb
-      \keyw{General Conference Papers}
-    \endentry
     \entry{Wang2012}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=2f3ea981fa5a715a69118b48e576a9f5}{%
@@ -1722,33 +1681,6 @@
       \field{year}{2019}
       \verb{doi}
       \verb 10.1145/3338906.3338962
-      \endverb
-    \endentry
-    \entry{IanWitten}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=8a6712e42c49f65d652e34f990c39c46}{%
-           family={Witten},
-           familyi={W\bibinitperiod},
-           given={Ian\bibnamedelima H.},
-           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \strng{namehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{fullhash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{bibnamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authorbibnamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authornamehash}{8a6712e42c49f65d652e34f990c39c46}
-      \strng{authorfullhash}{8a6712e42c49f65d652e34f990c39c46}
-      \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Online-Video. Zuletzt abgerufen am 20.03.2020.}
-      \field{title}{Data Mining with WEKA: Cross-valiadation}
-      \verb{urlraw}
-      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
-      \endverb
-      \verb{url}
-      \verb https://www.futurelearn.com/courses/data-mining-with-weka/0/steps/25384
       \endverb
     \endentry
     \entry{Zhang2016}{article}{}

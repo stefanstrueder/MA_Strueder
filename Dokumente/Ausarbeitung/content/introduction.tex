@@ -5,7 +5,7 @@
 
 Softwarefehler stellen einen erheblichen Auslöser für finanzielle Schäden und Rufschädigungen von Unternehmen dar. Solche Fehler reichen von kleineren \glqq Bugs\grqq{} bis hin zu schwerwiegenden Sicherheitslücken. Aus diesem Grund herrscht ein großes Interesse daran, einen Entwickler zu warnen, wenn er aktualisierten Softwarecode veröffentlicht, der möglicherweise einen oder mehrere Fehler beinhaltet. 
 
-Zu diesem Zweck haben Forscher und Softwareentwickler im vergangenen Jahrzehnt verschiedene Techniken zur Fehlererkennung und Fehlervorhersage entwickelt, die zu einem Großteil auf Methoden und Techniken des Machine Learnings basieren \cite{Challagulla2008}. Diese verwenden in der Regel historische Daten von fehlerhaften und fehlerfreien Änderungen an Softwaresystemen in Kombination mit einer sorgfältig zusammengestellten Menge von Attributen (in der Regel Features genannt\footnote{Um einem missverständlichen und doppeldeutigen Gebrauch des Feature-Begriffes vorzubeugen, wird für die hier verwendete Beschreibung der Charakteristika von Daten auch im weiteren Verlauf dieser Ausarbeitung der Begriff \glqq Attribute\grqq{} verwendet.}), um einen gegebenen Klassifikator zu trainieren \cite{Alsaeedi2019,Hammouri2018}. Dieser kann dann anschließend verwendet werden, um eine akkurate Vorhersage zu erhalten, ob eine neu erfolgte Änderung an einer Software fehlerhaft oder frei von Fehlern ist.
+Zu diesem Zweck haben Forscher und Softwareentwickler im vergangenen Jahrzehnt verschiedene Techniken zur Fehlervorhersage entwickelt, die zu einem Großteil auf Methoden und Techniken des Machine Learnings basieren \cite{Challagulla2008}. Diese verwenden in der Regel historische Daten von fehlerhaften und fehlerfreien Änderungen an Softwaresystemen in Kombination mit einer sorgfältig zusammengestellten Menge von Attributen (in der Regel Features genannt\footnote{Um einem missverständlichen und doppeldeutigen Gebrauch des Feature-Begriffes vorzubeugen, wird für die hier verwendete Beschreibung der Charakteristika von Daten auch im weiteren Verlauf dieser Ausarbeitung der Begriff \glqq Attribute\grqq{} verwendet.}), um einen gegebenen Klassifikator zu trainieren \cite{Alsaeedi2019,Hammouri2018}. Dieser kann dann anschließend verwendet werden, um eine akkurate Vorhersage zu erhalten, ob eine neu erfolgte Änderung an einer Software fehlerhaft oder frei von Fehlern ist.
 
 Die Auswahl an Algorithmen für die Klassifikation ist groß. Studien zeigen, dass aus dem Pool von verfügbaren Algorithmen sowohl Entscheidungsbaum-basierte (zum Beispiel J48, CART oder Random Forest) als auch Bayessche Algorithmen (zum Beispiel Na\"{\i}ve Bayes (NB), Bernoulli-NB oder multinomieller NB) die meistgenutzten sind \cite{Son2019}. Alternative Algorithmen sind beispielsweise Regression, k-Nearest-Neighbors oder künstliche neuronale Netze \cite{Challagulla2008}. Anzumerken ist allerdings, dass es keinen Konsens über den besten verfügbaren Algorithmus gibt, da jeder Algorithmus unterschiedliche Stärken und Schwächen für bestimmte Anwendungsfälle aufweist.
 
@@ -33,7 +33,7 @@ int test() {
  
 Das zuvor genannte Ziel der Arbeit setzt sich aus mehreren Teilzielen zusammen. Dazu zählen die Erstellung eines Datensets unter Einbezug des Feature-Aspekts (\hyperref[dataset-creation]{Kapitel 3}). Dieses Datenset dient wiederum zum Training einer repräsentativen Auswahl an Klassifikatoren (\hyperref[training]{Kapitel 4}) mit anschließender vergleichender Evaluation (\hyperref[evaluation]{Kapitel 5}) dieser. Zusätzlich wird das featurebasierte Datenset mit einem klassischen dateibasierten Datenset (\hyperref[classic-eval]{Abschnitt 5.2}) verglichen, dessen Entwicklung aus einer wissenschaftlichen Arbeit entnommen wurde \cite{Moser2008}. Ein genauer Überblick über die Forschungsziele befindet sich im nächsten Abschnitt.
 
-Sollte sich im Rahmen der Evaluation einer dieser Klassifikatoren als besonders effektiv erweisen, so würde diese Arbeit den Stand der Technik hinsichtlich der Fehlererkennung in Features vorantreiben und Organisationen erlauben, bessere Einblicke in die Fehleranfälligkeit von Änderungen in ihrer durch Variabilität geprägten Codebasis zu erhalten.
+Sollte sich im Rahmen der Evaluation einer dieser Klassifikatoren als besonders effektiv erweisen, so würde diese Arbeit den Stand der Technik hinsichtlich der Fehlervorhersage in Features vorantreiben und Organisationen erlauben, bessere Einblicke in die Fehleranfälligkeit von Änderungen in ihrer durch Variabilität geprägten Codebasis zu erhalten.
 
 \section{Forschungsziele und Forschungsfragen}
 
@@ -58,15 +58,15 @@ Der Prozess der Entwicklung der Vorhersagetechnik ist in drei zu erreichende For
  \item RQ2: Welche Machine-Learning-Klassifikatoren kommen für die gegebene Aufgabe in Frage?
 \end{itemize}}}
 
-\fbox{\parbox{\linewidth}{RO3: Evaluation und Gegenüberstellung der Klassifikatoren sowie Vergleich zu modernen Vorhersagetechniken, die keine Features nutzen
+\fbox{\parbox{\linewidth}{RO3: Evaluation und Gegenüberstellung der Klassifikatoren sowie Vergleich zu einer klassischen Vorhersagetechnik, die keine Features nutzt
 \begin{itemize}
  \renewcommand{\labelitemi}{$\Rightarrow$}
  \setlength{\itemsep}{-2pt}
  \item RQ3a: Welche miteinander vergleichbaren Merkmale besitzen die Klassifikatoren?
  \item RQ3b: Welche Metriken können für den Vergleich verwendet werden?
  \item RQ3c: Welche Ergebnisse können bei der Vorhersage von fehlerhaften oder fehlerfreien Features erzielt werden?
- \item RQ3d: Wie lassen sich die Klassifikatoren mit weiteren Vorhersagetechniken, die keine Features nutzen, vergleichen?
- \item RQ3e: Wie beeinflusst die Verwendung von featurebasierten Metriken die Fehlervorhersage?
+ \item RQ3d: Wie lassen sich die Klassifikatoren mit einer klassischen Vorhersagetechnik, die keine Features nutzt, vergleichen?
+ \item RQ3e: Wie beeinflusst die Verwendung von featurebasierten Metriken die dateibasierte Fehlervorhersage?
 \end{itemize}}}
 
 \label{phases_definition}
@@ -108,7 +108,7 @@ Ferner sind in \autoref{fig:crisp} Rückpfeile zwischen einzelnen Phasen angegeb
 
 \section{Aufbau der Arbeit}
 
-Diese Ausarbeitung ist in sechs Kapitel unterteilt. \hyperref[introduction]{Kapitel 1}, welches mit diesem Abschnitt abgeschlossen wird, diente zur Einführung in das Thema der Masterarbeit. Ebenso stellte es die theoretischen Rahmenbedingungen der Arbeit vor. \hyperref[background]{Kapitel 2} dient zur Vermittlung von Basiswissen zu den grundlegenden Themenkomplexen dieser Ausarbeitung. Dazu wird zunächst die featurebasierte Softwareentwicklung vorgestellt, ehe dann die Machine-Learning-Klassifikation sowie die darauf aufbauende Fehlervorhersage erläutert werden. \hyperref[dataset-creation]{Kapitel 4} und \hyperref[training]{Kapitel 5} widmen sich der Auseinandersetzung des praktischen Teils dieser Masterarbeit in Form der Erstellung des featurebasierten Datensets sowie des Trainings der Machine-Learning-Klassifikatoren. Die Gegenüberstellung und Evaluation dieser Klassifikatoren erfolgt in \hyperref[evaluation]{Kapitel 5} inklusive eines Vergleiches zu einer nicht-featurebasierten klassischen Methode zur Fehlererkennung. Eine abschließende Zusammenfassung sowie ein Ausblick auf weiterführende Projekte, die auf diese Masterarbeit aufbauen können, erfolgen in \hyperref[conclusion]{Kapitel 6}.
+Diese Ausarbeitung ist in sechs Kapitel unterteilt. \hyperref[introduction]{Kapitel 1}, welches mit diesem Abschnitt abgeschlossen wird, diente zur Einführung in das Thema der Masterarbeit. Ebenso stellte es die theoretischen Rahmenbedingungen der Arbeit vor. \hyperref[background]{Kapitel 2} dient zur Vermittlung von Basiswissen zu den grundlegenden Themenkomplexen dieser Ausarbeitung. Dazu wird zunächst die featurebasierte Softwareentwicklung vorgestellt, ehe dann die Machine-Learning-Klassifikation sowie die darauf aufbauende Fehlervorhersage erläutert werden. \hyperref[dataset-creation]{Kapitel 4} und \hyperref[training]{Kapitel 5} widmen sich der Auseinandersetzung des praktischen Teils dieser Masterarbeit in Form der Erstellung des featurebasierten Datensets sowie des Trainings der Machine-Learning-Klassifikatoren. Die Gegenüberstellung und Evaluation dieser Klassifikatoren erfolgt in \hyperref[evaluation]{Kapitel 5} inklusive eines Vergleiches zu einer nicht-featurebasierten klassischen Methode zur Fehlervorhersage. Eine abschließende Zusammenfassung sowie ein Ausblick auf weiterführende Projekte, die auf diese Masterarbeit aufbauen können, erfolgen in \hyperref[conclusion]{Kapitel 6}.
 
 Zusätzlich wird die Ausarbeitung von zahlreichen Abbildungen und Tabellen zur verständlichen Verdeutlichung von Zusammenhängen ergänzt.
 

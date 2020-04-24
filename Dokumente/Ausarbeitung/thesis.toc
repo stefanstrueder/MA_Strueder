@@ -36,7 +36,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Konstruktion des Datensets}{21}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Metriken}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Metriken}{25}{section.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Training der Machine-Learning-Klassifikatoren}{29}{chapter.4}%
 \defcounter {refsection}{0}\relax 
@@ -50,24 +50,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Ergebnisse und Diskussion}{36}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Featurebasiertes Datenset}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Ergebnisse und Vergleich der featureabsierten Klassifikatoren}{36}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Dateibasierter Vergleich}{40}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{42}{subsection.5.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Herausforderungen und Limitationen}{44}{section.5.3}%
+\contentsline {section}{\numberline {5.3}Herausforderungen und Limitationen}{47}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{55}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Fazit}{51}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Zusammenfassung}{55}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Zusammenfassung}{51}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Ausblick}{55}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Ausblick}{51}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{57}{chapter*.72}%
+\contentsline {chapter}{Literatur}{53}{chapter*.70}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{61}{appendix.A}%
+\contentsline {chapter}{\numberline {A}PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{56}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Links der für die Erstellung des Datensets verwendeten Softwareprojekte}{62}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Links der für die Erstellung des Datensets verwendeten Softwareprojekte}{57}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Accuracies der Klassifikatoren je Datenset}{63}{appendix.C}%
+\contentsline {chapter}{\numberline {C}Accuracies der Klassifikatoren je Datenset}{58}{appendix.C}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Erweiterte Ergebnisse der Evaluationsmetriken}{64}{appendix.D}%
+\contentsline {chapter}{\numberline {D}Erweiterte Ergebnisse der Evaluationsmetriken}{59}{appendix.D}%

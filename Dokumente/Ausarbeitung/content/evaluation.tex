@@ -3,11 +3,17 @@
 \chapter{Evaluation}
 \label{evaluation}
 
-Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikatoren. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden und auf Werten von sogenannten Konfusionsmatrizen und ROC-Kurven basieren. Zudem umfasst dieses Kapitel eine Erläuterung von Herausforderungen und Limitationen, die im Laufe der Bearbeitung der Arbeit festgestellt wurden. Erweitert wird dieses Kapitel mit dem Vergleich zwischen dem \glqq einfachen\grqq{} und erweiterten dateibasierten Datenset zur Messung der Einflüsse der featurebasierten Metriken auf die Performanz der Vorhersagen. 
-\\
+Dieses Kapitel dient der Evaluation der im vorangegangenen Kapitel erläuterten Klassifikatoren. Dies geschieht durch verschiedene Evaluationsmetriken, welche in diesem Kapitel vorgestellt werden und auf Werten von sogenannten Konfusionsmatrizen und ROC-Kurven basieren. Erweitert wird dieser Teil der Evaluation mit dem Vergleich zwischen dem \glqq einfachen\grqq{} und erweiterten dateibasierten Datenset zur Messung der Einflüsse der featurebasierten Metriken auf die Performanz der Vorhersagen. Zudem umfasst dieses Kapitel eine Erläuterung von Herausforderungen und Limitationen, die im Laufe der Bearbeitung der Arbeit festgestellt wurden. Es werden somit die Arbeitsschritte erläutert, welche durchgeführt wurden, um das dritte Forschungsziel \glqq Evaluation und Gegenüberstellung der Klassifikatoren sowie Vergleich zu einer klassischen Vorhersagetechnik, die keine Features nutzt\grqq{} abzuschließen. Darüber hinaus werden die folgenden zugehörigen Forschungsfragen beantwortet:
+\vspace{-\topsep}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+ \item RQ3a: Welche miteinander vergleichbaren Merkmale besitzen die Klassifikatoren? (\hyperref[eval-metrics]{Abschnitt 5.1})
+ \item RQ3b: Welche Metriken können für den Vergleich verwendet werden? (\hyperref[eval-metrics]{Abschnitt 5.1})
+ \item RQ3c: Welche Ergebnisse können bei der Vorhersage von fehlerhaften oder fehlerfreien Features erzielt werden? (\hyperref[feat-results]{Abschnitt 5.2.1})
+ \item RQ3e: Wie beeinflusst die Verwendung von featurebasierten Metriken die dateibasierte Fehlervorhersage? (\hyperref[classic-eval]{Abschnitt 5.2.2})
+\end{itemize} 
+\smallskip
 \hrule
-
-
 
 \section{Evaluationsmetriken}
 \label{eval-metrics}
@@ -52,7 +58,7 @@ Eine weitere Metrik, die in Verbindung mit der ROC-Kurve auftritt, ist der ROC-B
 
 Am Beispiel des Schwellenwertes $0,5$ wird nun die Interpretation der ROC-Kurve und des ROC-Bereiches vorgenommen. Unterstützt wird dies durch grafische Beispiele, die in \autoref{fig:curves} gezeigt werden. Der Idealfall ist in (a) und (b) dargestellt. Die Wahrscheinlichkeitskurven der Zielklasse (a) weisen keine Überlappung auf. Die Werte der Zielklasse sind somit allesamt korrekt zugeordnet worden, sodass der Klassifikator korrekt zwischen diesen unterscheiden kann. Die diesem Fall entsprechende ROC-Kurve ist in (b) dargestellt. Der ROC-Bereich beträgt in diesem Fall $1,0$. Ein \glqq Normalfall\grqq{} ist in (c) und (d) dargestellt. Es ist in (c) zu erkennen, dass die Wahrscheinlichkeitskurven überlappen, sodass falsche Zuordnungen getroffen werden. Die entsprechende ROC-Kurve ist in (d) dargestellt. Der entsprechende ROC-Bereich beträgt im hier gezeigten Fall $0,7$. Dies bedeutet, dass $70\%$ der Zuordnungen richtig getroffen werden. Die Werte können verbessert werden, wenn der Schwellenwert verändert wird. Der \glqq Worst Case\grqq{} der bei der Performanzmessung mittels ROC-Kurven auftreten kann, ist in (e) und (f) dargestellt. In (e) ist zu erkennen, dass die Wahrscheinlichkeitskurven identisch sind. Es findet somit eine willkürliche Zuordnung statt. Die zugehörige ROC-Kruve (f) entspricht einer Winkelhalbierenden und der ROC-Bereich beträgt $0,5$. Ein weiterer Fehlerfall ist in (g) und (h) dargestellt. Die Wahrscheinlichkeitskurven in (g) zeigen, dass die Zuordnungen gegenteilig erfolgen und somit jeweils fälschlicherweise dem anderen Wert der Zielklasse zugeordnet werden. Der entsprechende ROC-Bereich beträgt $0$, da, wie in (h) zu sehen ist, keine Fläche unter der Kurve vorhanden ist.
 
-\begin{figure}[ht]
+\begin{figure}[p]
   \centering
   \subfloat[][Idealfall]{\includegraphics[width=0.5\linewidth]{images/roc_ideal_curve}}
   \subfloat[][Idealfall]{\includegraphics[width=0.25\linewidth]{images/roc_ideal}}
@@ -80,17 +86,23 @@ Für den Vergleich der Klassifikatoren werden klassische Evaluationsmetriken ver
 \section{Ergebnisse und Diskussion}
 \label{results}
 
-Dieser Abschnitt umfasst die Ergebnisse und vergleichenden Diskussionen zu den Tests der Klassifikatoren der drei Datensets, aufgeteilt in einen Unterabschnitt für das featurebasierte Datenset und einen Abschnitt für die dateibasierten Datensets. Darüber hinaus sind die jeweiligen Unterabschnitte wie folgt aufgeteilt: Konfusionsmatrizen, Accuracies, weitere Evaluationsmetriken, ROC-Kurven und ROC-Bereiche sowie Zusammenfassung.
+Dieser Abschnitt umfasst die Ergebnisse und vergleichenden Diskussionen zu den Tests der Klassifikatoren der drei Datensets, aufgeteilt in einen Unterabschnitt für das featurebasierte Datenset und einen Unterabschnitt für die dateibasierten Datensets. Darüber hinaus sind die jeweiligen Unterabschnitte wie folgt aufgeteilt: Konfusionsmatrizen, Accuracies, weitere Evaluationsmetriken, ROC-Kurven und ROC-Bereiche sowie Zusammenfassung.
 
-\subsection{Featurebasiertes Datenset}
+\subsection{Ergebnisse und Vergleich der featureabsierten Klassifikatoren}
+\label{feat-results}
 
-Die Präsentation der Ergebnisse beginnt mit denen des featurebasierten Datensets.
+Die Präsentation der Ergebnisse beginnt mit denen der Klassifikatoren des featurebasierten Datensets. Darüber hinaus wird die folgende Forschungsfrage im Fließtext sowie zusammengefasst am Ende des Abschnitts beantwortet:
+\vspace{-\topsep}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+ \item RQ3c: Welche Ergebnisse können bei der Vorhersage von fehlerhaften oder fehlerfreien Features erzielt werden?
+\end{itemize}  
 
 \subsubsection*{Konfusionsmatrizen}
 
 Die Konfusionsmatrizen dienen als Basis der Ergebnisse der Evaluation der Klassifikatoren anhand der zuvor vorgestellten Metriken. Die Matrizen des featurebasierten Datensets sind in \autoref{tab:mat-feat} aufgeführt. Dabei bilden die Spalten die von den Klassifikatoren vorhergesagten Label ab. Die Zeilen bilden wiederum die \glqq ground truth\grqq{}, also die im Rahmen der Erstellung der Datensets ermittelte Realität, ab. Außerdem werden die ermittelten Werte der jeweiligen Klassen in den Spalten \glqq total\grqq zusammengezählt. Da für jeden Klassifikator dasselbe Testset gewählt wurde, sind die Werte der \glqq total\grqq-Spalte identisch. Die für die Klassifikatoren verwendeten Abkürzungen können \autoref{tab:classifiers} entnommen werden.
 
-\begin{table}[ht]
+\begin{table}[h!t]
 \centering
 \caption{Konfusionsmatrizen des featurebasierten Datensets}
 \label{tab:mat-feat}
@@ -139,7 +151,7 @@ Die Konfusionsmatrizen dienen als Basis der Ergebnisse der Evaluation der Klassi
 
 Die erste Metrik die verglichen wird ist die Accuracy. Dargestellt werden die Ergebnisse zum besseren Vergleich als Balkendiagramme. Das Diagramm des feturebasierten Datensets ist in \autoref{fig:final-feat} dargestellt. Die konkreten Zahlenwerte können im \hyperref[appendix2]{Anhang} eingesehen werden.
 
-\begin{figure}[ht]
+\begin{figure}[h!t]
     \centering
     \includegraphics[width=\textwidth]{images/final_feat}
     \caption{Vergleich der Accuracies des featurebasierten Datensets\label{fig:final-feat}}
@@ -151,7 +163,7 @@ Die Ergebnisse zeigen, dass die Accuracies der Klassifikatoren zwischen $66\%$ u
 
 Dieser Abschnitt stellt die Ergebnisse der weiteren Evaluationsmetriken TP-Rate / Recall, FP-Rate, Precision und F-Score vor. Diese können in \autoref{tab:met-results-feat} für das featurebasierte Datenset eingesehen werden. Aufgeteilt werden die Ergebnisse nach den Werten der Zielklasse, \glqq defekt\grqq{} und \glqq fehlerfrei\grqq. Zudem wird der Mittelwert der Ergebnisse beider Werte der Zielklasse angegeben. Er zeigt die Performanz aggregiert für beide Werte an und liegt im Idealfall bei 1,00. Die vollständigen Tabellen der Ergebnisse der Evaluation, inklusive einer weiteren Metrik, können im \hyperref[appendix3]{Anhang} gefunden werden.
 
-\begin{table}[ht]
+\begin{table}[h!t]
 \centering
 \caption{Ergebnisse der Evaluationsmetriken des featurebasierten Datensets}
 \label{tab:met-results-feat}
@@ -212,7 +224,7 @@ Die jeweiligen Mittelwerte können betrachtet werden, um die Gesamtperformanz de
 
 Die Interpretation der ROC-Kurven und ROC-Bereiche erfolgt anhand des in \hyperref[roc-def]{Abschnitt 5.2.1} vorgestellten Schemas. Die ROC-Kurven samt der Werte der ROC-Bereiche (repräsentiert durch \glqq AUC\grqq{}) sind in \autoref{fig:roc-feat}  dargestellt. Zu sehen sind jeweils die von WEKA ausgegebenen und unveränderten Plots. Die dargestellten Farbverläufe der Kurven verdeutlichen keine für diesen Zweck relevanten Informationen und können somit ignoriert werden.
 
-\begin{figure}[ht]
+\begin{figure}[h!t]
   \centering
   \subfloat[][J48\\AUC = $0,77$]{\includegraphics[width=0.25\linewidth]{images/j48_feat}} 
   \subfloat[][LR\\AUC = $0,62$]{\includegraphics[width=0.25\linewidth]{images/lr_feat}}
@@ -233,19 +245,24 @@ In jeder der betrachteten Kategorien von Metriken erwiesen sich die Entscheidung
 Die Klassifikatoren SGD und SVM zeigten für jede Kategorie von Evaluationsmetriken stets die im Vergleich schlechtesten Performanzen. Es wurde zudem festgestellt, dass die Klassifikatoren raten, statt Vorhersagen zu treffen. Das featurebasierte Datenset scheint somit für diese Klassifikationsalgorithmen nicht geeignet zu sein. Gründe dafür können eine zu geringe Anzahl an Instanzen oder eine zu hohe Anzahl an Attributen sein.
 
 \fbox{\parbox{\linewidth}{RQ3c: WELCHE ERGEBNISSE KÖNNEN BEI DER VORHERSAGE VON FEHLERHAFTEN ODER FEHLERFREIEN FEATURES ERZIELT WERDEN?\medskip\\
-Hier einfügen.}}
+Es konnte gezeigt werden, dass die Entscheidungsbaum-basierten Klassifikatoren J48 und RF mit Accuracies von $84\%$ die höchste Performanz der acht Klassifikatoren aufweisen. Die weiteren Evaluationsmetriken bestätigten diese Ergebnisse. Die Klassifikatoren SGD und SVM zeigten die im Vergleich schlechtesten Performanzergebnisse.}}
 
-\subsection{Dateibasierter Vergleich}
+\subsection{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}
 \label{classic-eval}
 
-Dieser Abschnitt dient zur Evaluation und zum Vergleich der dateibasierten Datensets, deren Erstellung in \hyperref[new-datasets]{Abschnitt 3.3} erläutert wurde. Der Grund dieses Vergleiches ist die Messung der Einflüsse der featurebasierten Metriken auf die Vorhersagen einer klassischen dateibasierten Methode, die der wissenschaftlichen Literatur entnommen wurde \cite{Moser2008}. Die Aufteilung dieses Abschnitts ist analog zum vorherigen Abschnitt.
+Dieser Abschnitt dient zur Evaluation und zum Vergleich der Klassifikatoren der dateibasierten Datensets, deren Erstellung in \hyperref[new-datasets]{Abschnitt 3.3} erläutert wurde. Der Grund dieses Vergleiches ist die Messung der Einflüsse der featurebasierten Metriken auf die Vorhersagen einer klassischen dateibasierten Methode, die der wissenschaftlichen Literatur entnommen wurde \cite{Moser2008}. Die Aufteilung dieses Abschnitts ist analog zum vorherigen Abschnitt. Darüber hinaus wird die folgende Forschungsfrage im Fließtext sowie zusammengefasst am Ende des Abschnitts beantwortet:
+\vspace{-\topsep}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+ \item RQ3e: Wie beeinflusst die Verwendung von featurebasierten Metriken die dateibasierte Fehlervorhersage?
+\end{itemize} 
 
 \subsubsection*{Konfusionsmatrizen}
 
 Die Konfusionsmatrizen der dateibasierten Datensets sind in \autoref{tab:mat-eval} aufgeführt. Die übergeordneten Spalten sind dabei in das \glqq einfache\grqq{} und das erweiterte Datenset angeordnet. Beide Datensets umfassen die selbe Anzahl an Datensätzen, somit sind die \glqq total\grqq -Spalten identisch.
 Eine kurze Analyse der \glqq defekt\grqq - \glqq Realität defekt\grqq - Felder zeigt, dass nur sehr wenige tatsächlich defekten Datenpunkte auch wirklich als defekt vorhergesagt wurden. Dies spiegelt sich auch in den weiteren Ergebnissen der Evaluationsmetriken wider.
 
-\begin{table}[ht]
+\begin{table}[h!t]
 \centering
 \caption{Konfusionsmatrizen der dateibasierten Datensets}
 \label{tab:mat-eval}
@@ -296,7 +313,7 @@ Eine kurze Analyse der \glqq defekt\grqq - \glqq Realität defekt\grqq - Felder 
 
 Die Accuracies der Klassifikatoren der dateibasierten Datensets sind in \autoref{fig:final-eval} dargestellt. Die konkreten Zahlenwerte können dem \hyperref[appendix2]{Anhang} entnommen werden.
 
-\begin{figure}[ht]
+\begin{figure}[h!t]
     \centering
     \includegraphics[width=\textwidth]{images/final_eval}
     \caption{Vergleich der Accuracies der dateibasierten Datensets\label{fig:final-eval}}
@@ -309,7 +326,7 @@ Eine Auffälligkeit zeigt der NN-Klassifikator. Es ist ein deutlicher Sprung der
 
 Dieser Abschnitt stellt die Ergebnisse der weiteren Evaluationsmetriken der dateibasierten Datensets in \autoref{tab:met-results} vor. Die übergeordneten Spalten werden erneut durch die beiden Datensets repräsentiert. Die vollständigen Tabellen der Ergebnisse der Evaluation, inklusive einer weiteren Metrik, können im \hyperref[appendix3]{Anhang} gefunden werden.
 
-\begin{table}
+\begin{table}[h!t]
 \centering
 \caption{Ergebnisse der Evaluationsmetriken der dateibasierten Datensets (TPR = TP-Rate)}
 \label{tab:met-results}
@@ -378,7 +395,7 @@ Ein erster Blick auf die ROC-Kurven der Klassifikatoren zeigt ein relativ einhei
 
 Der Vergleich zwischen den NN-Klassifikatoren zeigt, dass der Klassifikator des einfachen Datensets das unerwünschte Verhalten zeigt und gleichzeitig inverse Vorhersagen trifft. Dies bedeutet, dass er in manchen Fällen statt dem Label \glqq fehlerfrei\grqq{} das Label \glqq defekt\grqq{} vorhersagt und umgekehrt. Die Kurve sowie der ROC-Bereich des Klassifikators des erweiterten Datensets zeigen hingegen nur das unerwünschte Verhalten in Form des \glqq Ratens\grqq{} der Vorhersagen. Dies zeigt, dass die in \autoref{fig:final-eval} dargestellten hohen Accuracies der NN-Klassifikatoren wahrscheinlich durch Zufall entstanden sind. In einer weiteren Anwendung der Testdaten hätten die Ergebnisse anders ausfallen können.
 
-\begin{figure}[ht]
+\begin{figure}[h!t]
   \centering
   \subfloat[][J48 einf.\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{images/j48_eval}} 
   \subfloat[][J48 erw.\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{images/j48_eval_feat}}
@@ -403,105 +420,11 @@ Der Vergleich zwischen den NN-Klassifikatoren zeigt, dass der Klassifikator des 
 \end{figure}
 
 \subsubsection*{Zusammenfassung}
-Die Ergebnisse sämtlicher Metriken zeigten ein undifferenziertes und undeutliches Bild der Performanz der Klassifikatoren für beide Datensets. Der Grund für die gezeigten Ergebnisse ist die Unbalanciertheit der jeweiligen Testdatensets mit einem Anteil von \glqq defekt\grqq -Instanzen von $1\%$. Damit für dieses Label gute Ergebnisse erzielt werden können, müssen viele korrekte Vorhersagen der Klassifikatoren getroffen werden. Dies war jedoch für das vorhandene Testdatenset nicht der Fall, sodass viele Vorhersagen fälschlicherweise dem dominierenden Label \glqq fehlerfrei\grqq{} zugeordnet wurden, die dann allerdings infolgedessen hohe FP-Raten aufweisen. Diesen Umstand spiegeln auch die Mittelwerte in \autoref{tab:met-results} wider. Aufgrund der deutlich schwächeren Werte der \glqq defekt\grqq -Spalten, werden die Gesamtwerte, die durch den Mittelwert repräsentiert werden, nach unten beeinflusst. Wie jedoch schon in \hyperref[smote]{Abschnitt 4.2} erläutert wurde, ist es nicht vorgesehen, die Unbalanciertheit der Testdatensets mithilfe des SMOTE-Algorithmus auszugleichen.
+Die Ergebnisse sämtlicher Metriken zeigten ein undifferenziertes und undeutliches Bild der Performanz der Klassifikatoren für beide Datensets. Der Grund für die gezeigten Ergebnisse ist die Unbalanciertheit der jeweiligen Testdatensets mit einem Anteil von \glqq defekt\grqq -Instanzen von nur $1\%$. Damit für dieses Label gute Ergebnisse erzielt werden können, müssen viele korrekte Vorhersagen der Klassifikatoren getroffen werden. Dies war jedoch für das vorhandene Testdatenset nicht der Fall, sodass viele Vorhersagen fälschlicherweise dem dominierenden Label \glqq fehlerfrei\grqq{} zugeordnet wurden, die dann allerdings infolgedessen hohe FP-Raten aufweisen. Diesen Umstand spiegeln auch die Mittelwerte in \autoref{tab:met-results} wider. Aufgrund der deutlich schwächeren Werte der \glqq defekt\grqq -Spalten, werden die Gesamtwerte, die durch den Mittelwert repräsentiert werden, nach unten beeinflusst. Wie jedoch schon in \hyperref[smote]{Abschnitt 4.2} erläutert wurde, ist es nicht vorgesehen, die Unbalanciertheit der Testdatensets mithilfe des SMOTE-Algorithmus auszugleichen.
 
-Um ein differenzierteres Bild der Performanz der Klassifikatoren zu erhalten, wurde eine weitere Testmethode als Alternative zur Aufteilung der Datensets in Training- und Testdaten hinzugezogen. Dabei handelt es sich um die sogenannte \glqq \texttt{n}-fold-cross-validation\grqq. Bei dieser Methode werden die Trainingsdaten in \texttt{n} gleich große Datenmengen (\glqq folds\grqq) aufgeteilt, welche dann jeweils mit einer Split-Ratio von $90:10$ zum Training der einzelnen Klassifikatoren dienen \cite{IanWitten}. Die Ergebnisse der Evaluationsmetriken bilden sich dann aus dem Mittelwert der Einzelergebnisse der \texttt{n} Vorgänge \cite{IanWitten}. Diese Methode findet auch in der wissenschaftlichen Literatur Anwendung (zum Beispiel \cite{Alam2013,Chawla2002,Alsaeedi2019}). Für diesen Fall wird eine 10-fold-cross-validation durchgeführt. Die Ergebnisse der Evaluationsmetriken sind in \autoref{tab:kx} aufgeführt. Ein Überblick über die Ergebnisse zeigt, dass diese wesentlich differenzierter und nachvollziehbarer ausgefallen sind sowie keine signifikanten Unterschiede zwischen den Datensets aufweisen. Es zeigt sich, dass die beiden Entscheidungsbaum-basierten Klassifikatoren J48 und RF die im Vergleich höchste Performanz mit einer Accuracy von $96\%$ beziehungsweise $98\%$ besitzen. Die FP-Rate der Klassifikatoren ist außerdem äußerst gering. Gleiches zeigt sich für den KNN-Klassifikator. Die weiteren Ergebnisse der Metriken bestätigen die hohe Performanz. Die Klassifikatoren SGD und SVM zeigen anhand ihrer ROC-Bereiche (siehe ROC-Area), dass sie unerwünschte Vorhersagen in Form des \glqq Ratens\grqq{} durchführen. Auffällig ist, dass die Werte zwischen den NN-Klassifikatoren beider Datensets nicht mehr abweichen. Beide Klassifikatoren arbeiten wie die weiteren, bisher unerwähnten, Klassifikatoren auf einem durchschnittlichen Niveau.
+Zusammenfassend lässt sich jedoch anhand der Ergebnisse der Tests der Klassifikatoren beider Datensets feststellen, dass der Einbezug der featurebasierten Metriken keinen nennenswert positiven Einfluss auf die Ergebnisse der dateibasierten Fehlervorhersage besitzt. Hinzugefügt werden muss jedoch, dass sie die Ergebnisse auch nicht negativ beeinflussen. Ein Grund dafür ist, dass die Auswahl an Attributen für beide dateibasierten Datensets sehr hoch ist. Das \glqq einfache\grqq{} Datenset umfasst 17 Attribute (+ Label) und das erweiterte Datenset umfasst 28 Attribute (+ Label). Eine Reduzierung der Attribute in Form einer Attributsauswahl könnte dazu beitragen, den Einfluss der featurebasierten näher zu analysieren. Die Attributsauswahl beschreibt einen automatisierten Prozess, welcher dazu dient, die optimale Anzahl und Auswahl von Attributen für das Training eines Klassifikators zu bestimmen. Die Durchführung einer solchen Attributsauswahl würde sich für zukünftige weiterführende Arbeiten anbieten.
 
-\begin{table}[ht]
-\centering
-\caption{Ergebnisse der Evaluationsmetriken auf Basis der 10-fold-cross-validation (TPR = TP-Rate, Rec. = Recall)}
-\label{tab:kx}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\hspace{0pt}}p{0.06\linewidth}>{\hspace{0pt}}p{0.119\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.123\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.17\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.121\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.168\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}|} 
-\cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.06\linewidth}}{} &           & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.405\linewidth}|}{\textbf{\glqq einfaches\grqq{} dateibasiertes Datenset} } & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.401\linewidth}|}{\textbf{erweitertes dateibasiertes Datenset} }  \\ 
-\cline{3-8}
-\multicolumn{1}{>{\hspace{0pt}}p{0.06\linewidth}}{} &           & \textbf{defekt}  & \textbf{fehlerfrei}                                 & \textbf{Mittel}                     & \textbf{defekt}  & \textbf{fehlerfrei}                                 & \textbf{Mittel}                      \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}J48}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,96$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,96$                                 \\
-                                                    & TPR/Rec.  & $0,94$             & $0,97$                                                & $0,96$                                & $0,94$             & $0,97$                                                & $0,96$                                 \\
-                                                    & FP-Rate   & $0,03$             & $0,06$                                                & $0,05$                                & $0,03$             & $0,06$                                                & $0,05$                                 \\
-                                                    & Precision & $0,96$             & $0,96$                                                & $0,96$                                & $0,96$             & $0,96$                                                & $0,86$                                 \\
-                                                    & F-Score   & $0,95$             & $0,97$                                                & $0,96$                                & $0,95$             & $0,96$                                                & $0,96$                                 \\
-                                                    & ROC-Area  & $0,97$             & $0,97$                                                & $0,97$                                & $0,97$             & $0,97$                                                & $0,97$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}KNN}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,91$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,91$                                 \\
-                                                    & TPR/Rec.  & $0,87$             & $0,94$                                                & $0,91$                                & $0,87$             & $0,94$                                                & $0,91$                                 \\
-                                                    & FP-Rate   & $0,06$             & $0,13$                                                & $0,10$                                & $0,06$             & $0,13$                                                & $0,10$                                 \\
-                                                    & Precision & $0,92$             & $0,91$                                                & $0,92$                                & $0,91$             & $0,91$                                                & $0,91$                                 \\
-                                                    & F-Score   & $0,89$             & $0,93$                                                & $0,91$                                & $0,89$             & $0,92$                                                & $0,91$                                 \\
-                                                    & ROC-Area  & $0,93$             & $0,93$                                                & $0,93$                                & $0,93$             & $0,93$                                                & $0,93$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}LR}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,65$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,65$                                 \\
-                                                    & TPR/Rec.  & $0,34$             & $0,88$                                                & $0,61$                                & $0,35$             & $0,87$                                                & $0,61$                                 \\
-                                                    & FP-Rate   & $0,12$             & $0,66$                                                & $0,39$                                & $0,13$             & $0,65$                                                & $0,39$                                 \\
-                                                    & Precision & $0,66$             & $0,65$                                                & $0,66$                                & $0,66$             & $0,66$                                                & $0,66$                                 \\
-                                                    & F-Score   & $0,45$             & $0,75$                                                & $0,60$                                & $0,46$             & $0,75$                                                & $0,61$                                 \\
-                                                    & ROC-Area  & $0,74$             & $0,74$                                                & $0,74$                                & $0,74$             & $0,74$                                                & $0,74$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}NB}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,52$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,52$                                 \\
-                                                    & TPR/Rec.  & $0,93$             & $0,23$                                                & $0,58$                                & $0,94$             & $0,22$                                                & $0,58$                                 \\
-                                                    & FP-Rate   & $0,77$             & $0,07$                                                & $0,42$                                & $0,78$             & $0,06$                                                & $0,42$                                 \\
-                                                    & Precision & $0,46$             & $0,83$                                                & $0,65$                                & $0,46$             & $0,84$                                                & $0,65$                                 \\
-                                                    & F-Score   & $0,62$             & $0,36$                                                & $0,49$                                & $0,62$             & $0,35$                                                & $0,49$                                 \\
-                                                    & ROC-Area  & $0,65$             & $0,65$                                                & $0,65$                                & $0,65$             & $0,65$                                                & $0,65$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}NN}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,71$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,70$                                 \\
-                                                    & TPR/Rec.  & $0,55$             & $0,82$                                                & $0,69$                                & $0,54$             & $0,82$                                                & $0,68$                                 \\
-                                                    & FP-Rate   & $0,18$             & $0,45$                                                & $0,32$                                & $0,18$             & $0,46$                                                & $0,32$                                 \\
-                                                    & Precision & $0,69$             & $0,72$                                                & $0,71$                                & $0,68$             & $0,72$                                                & $0,70$                                 \\
-                                                    & F-Score   & $0,71$             & $0,77$                                                & $0,74$                                & $0,60$             & $0,76$                                                & $0,68$                                 \\
-                                                    & ROC-Area  & $0,78$             & $0,78$                                                & $0,78$                                & $0,79$             & $0,79$                                                & $0,79$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}RF}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,98$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,98$                                 \\
-                                                    & TPR/Rec.  & $0,97$             & $0,99$                                                & $0,98$                                & $0,97$             & $0,99$                                                & $0,98$                                 \\
-                                                    & FP-Rate   & $0,01$             & $0,04$                                                & $0,03$                                & $0,01$             & $0,03$                                                & $0,02$                                  \\
-                                                    & Precision & $0,98$             & $0,98$                                                & $0,98$                                & $0,98$             & $0,98$                                                & $0,98$                                 \\
-                                                    & F-Score   & $0,97$             & $0,98$                                                & $0,98$                                & $0,97$             & $0,98$                                                & $0,98$                                 \\
-                                                    & ROC-Area  & $0,99$             & $0,99$                                                & $0,99$                                & $1,00$             & $1,00$                                                & $1,00$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}SGD}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,63$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,63$                                 \\
-                                                    & TPR/Rec.  & $0,19$             & $0,94$                                                & $0,57$                                & $0,18$             & $0,94$                                                & $0,56$                                 \\
-                                                    & FP-Rate   & $0,06$             & $0,81$                                                & $0,44$                                & $0,06$             & $0,82$                                                & $0,44$                                 \\
-                                                    & Precision & $0,69$             & $0,62$                                                & $0,66$                                & $0,69$             & $0,62$                                                & $0,66$                                 \\
-                                                    & F-Score   & $0,30$             & $0,75$                                                & $0,53$                                & $0,29$             & $0,75$                                                & $0,52$                                 \\
-                                                    & ROC-Area  & $0,57$             & $0,57$                                                & $0,57$                                & $0,56$             & $0,56$                                                & $0,56$                                 \\ 
-\hline
-\multirow{6}{0.06\linewidth}{\hspace{0pt}SVM}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,62$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,62$                                 \\
-                                                    & TPR/Rec.  & $0,16$             & $0,95$                                                & $0,56$                                & $0,15$             & $0,95$                                                & $0,55$                                 \\
-                                                    & FP-Rate   & $0,05$             & $0,84$                                                & $0,45$                                & $0,05$             & $0,85$                                                & $0,46$                                 \\
-                                                    & Precision & $0,69$             & $0,62$                                                & $0,66$                                & $0,69$             & $0,61$                                                & $0,66$                                 \\
-                                                    & F-Score   & $0,26$             & $0,75$                                                & $0,51$                                & $0,25$             & $0,75$                                                & $0,50$                                 \\
-                                                    & ROC-Area  & $0,55$             & $0,55$                                                & $0,55$                                & $0,55$             & $0,55$                                                & $0,55$                                 \\
-\hline
-\end{tabular}
-}
-\end{table}
-
-Zusammenfassend lässt sich anhand der Ergebnisse beider Tests feststellen, dass der Einbezug der featurebasierten Metriken keinen nennenswert positiven Einfluss auf die Ergebnisse der dateibasierten Fehlervorhersage besitzt. Hinzugefügt werden muss jedoch, dass sie die Ergebnisse auch nicht negativ beeinflussen. Ein Grund dafür ist, dass die Auswahl an Attributen für beide dateibasierten Datensets sehr hoch ist. Das \glqq einfache\grqq{} Datenset umfasst 17 Attribute (+ Label) und das erweiterte Datenset umfasst 28 Attribute (+ Label). Eine Reduzierung der Attribute in Form einer Attributsauswahl könnte dazu beitragen, den Einfluss der featurebasierten näher zu analysieren. Die Attributsauswahl beschreibt einen automatisierten Prozess, welcher dazu dient, die optimale Anzahl und Auswahl von Attributen für das Training eines Klassifikators zu bestimmen. Eine solche Funktion bietet das für die Arbeit verwendete Werkzeug WEKA. Die Autoren einer wissenschaftlichen Arbeit, die sich mit Codemetriken als Attributen zur Fehlervorhersage beschäftigte, kamen zu dem Resultat, dass bereits drei Attribute ausreichend seien \cite{Wang2011}. Eine exemplarisch durchgeführte Attributsauswahl der Klassifikatoren LR, NB und SGD des erweiterten dateibasierten Datensets in der WEKA Workbench\footnote{Eine Attributsauswahl der weiteren Klassifikatoren des erweiterten dateibasierten Datensets wurde eingeleitet, konnte jedoch auch nach über zwölf Stunden Laufzeit nicht abgeschlossen werden und wurde daraufhin abgebrochen und nicht weiter nachverfolgt.} kam zu dem Ergebnis, welches in \autoref{tab:attribute-selection} aufgeführt sind. Die fettgedruckten Attribute der Spalte der ausgewählten Attribute entstammen dabei dem featurebasierten Datenset. Anhand dessen ist zu erkennen, dass nur höchstens $25\%$ der Attribute dieses Datensets ausgewählt wurden. Dies zeigt ebenfalls, dass die featurebasierten Metriken, die das \glqq einfache\grqq{} dateibasierte Datenset erweitern, nur einen geringen Einfluss auf die Vorhersagen aufweisen.
-
-\begin{table}[ht]
-\centering
-\caption{Ergebnisse der Attributsauswahl der Klassifikatoren LR, NB und SGD }
-\label{tab:attribute-selection}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|l|l|} 
-\hline
-\textbf{Klassifikator} & \textbf{ausgewählte Attribute}                                                                                                    & \textbf{abgelehnte Attribute}                                                                                                                                                                         \\ 
-\hline
-LR                     & \begin{tabular}[c]{@{}l@{}} \texttt{\textbf{MODS}}, \texttt{\textbf{FADDL}}*, \texttt{\textbf{FREML}}*, \texttt{BUGF},\\\texttt{AUTH}, \texttt{ADDL}, \texttt{REML}, \texttt{CCHL},\\\texttt{CCHM}, \texttt{CCHA}, \texttt{AVGC}, \texttt{WAGE}\\(12 von 28)\end{tabular} & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{REVI}, \texttt{REFA}, \texttt{ADDM}, \texttt{ADDA},\\\texttt{REMM}, \texttt{REMA}, \texttt{MAXC}, \texttt{AAGE}\\(16 von 28)\end{tabular}                                                 \\ 
-\hline
-NB                     & \begin{tabular}[c]{@{}l@{}}\texttt{\textbf{MODS}}, \texttt{BUGF}, \texttt{AUTH}, \texttt{CCHM},\\\texttt{WAGE} (5 von 28)\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{FADDL}*, \texttt{FREML}*, \texttt{REVI}, \texttt{REFA},\\\texttt{ADDL}, \texttt{ADDM}, \texttt{ADDA}, \texttt{REML},\\\texttt{REMM}, \texttt{REMA}, \texttt{CCHL}, \texttt{CCHA},\\\texttt{MAXC}, \texttt{AVGC}, \texttt{AAGE} (23 von 28)\end{tabular}  \\ 
-\hline
-SGD                    & \begin{tabular}[c]{@{}l@{}}\texttt{\textbf{MODS}}, \texttt{\textbf{FREML}}*, \texttt{REVI}, \texttt{REFA}\\\texttt{BUGF}, \texttt{AUTH}, \texttt{CCHM}, \texttt{CCHA},\\\texttt{AVGC}, \texttt{AAGE}, \texttt{WAGE} (11 von 28)\end{tabular}           & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{FADDL}*, \texttt{ADDL}, \texttt{ADDM}, \texttt{ADDA},\\\texttt{REML}, \texttt{REMM}, \texttt{REMA}, \texttt{CCHL},\\\texttt{MAXC} (17 von 28)\end{tabular}                                         \\ 
-\hline
-\multicolumn{3}{|c|}{* ADDL- und REML-Metriken des featurebasierten Datensets}                                                                                                                                                                                                                                                                                      \\
-\hline
-\end{tabular}
-}
-\end{table}
-
-\fbox{\parbox{\linewidth}{RQ3e: WIE BEEINFLUSST DIE VERWENDUNG VON FEATUREBASIERTEN METRIKEN DIE FEHLERVORHERSAGE?\medskip\\
+\fbox{\parbox{\linewidth}{RQ3e: WIE BEEINFLUSST DIE VERWENDUNG VON FEATUREBASIERTEN METRIKEN DIE DATEIBASIERTE FEHLERVORHERSAGE?\medskip\\
 Die Auswirkungen des Einbezugs der featurebasierten Metriken sind kaum messbar. Sowohl die Klassifikatoren des \glqq einfachen\grqq{} dateibasierten Datensets als auch die des erweiterten dateibasierten Datensets, erzielen die selben Ergebnisse mit geringen Abweichungen. Sie sind somit jeweils gleich performant bezüglich der Vorhersagen.}}
 
 \section{Herausforderungen und Limitationen}
@@ -557,3 +480,97 @@ Eine Literaturrecherche in früheren wissenschaftlichen Arbeiten zum Thema der F
 Die Aggregation der Metriken auf Release-Level bietet zudem den Vorteil, dass so wesentlich aussagekräftigere Werte erreicht werden können, ala auf Commit-Level \cite{Zimmermann2007}. Ein Beispiel dafür ist die Metrik \texttt{ADEV} des featurebasierten Datensets, welches die Anzahl der beteiligten Entwickler an einem Feature beziehungsweise an einer Datei angibt. Auf Commit-Level wäre dieser Wert stets 1, da das Versionierungssystem Git nur einen Commit-Autor zulässt. Eine Aggregation über mehrere Commits eines Releases liefert wesentlich differenzierte und aussagekräftigere Werte.
 
 \cleardoublepage
+
+%Um ein differenzierteres Bild der Performanz der Klassifikatoren zu erhalten, wurde eine weitere Testmethode als Alternative zur Aufteilung der Datensets in Training- und Testdaten hinzugezogen. Dabei handelt es sich um die sogenannte \glqq \texttt{n}-fold-cross-validation\grqq. Bei dieser Methode werden die Trainingsdaten in \texttt{n} gleich große Datenmengen (\glqq folds\grqq) aufgeteilt, welche dann jeweils mit einer Split-Ratio von $90:10$ zum Training der einzelnen Klassifikatoren dienen \cite{IanWitten}. Die Ergebnisse der Evaluationsmetriken bilden sich dann aus dem Mittelwert der Einzelergebnisse der \texttt{n} Vorgänge \cite{IanWitten}. Diese Methode findet auch in der wissenschaftlichen Literatur Anwendung (zum Beispiel \cite{Alam2013,Chawla2002,Alsaeedi2019}). Für diesen Fall wird eine 10-fold-cross-validation durchgeführt. Die Ergebnisse der Evaluationsmetriken sind in \autoref{tab:kx} aufgeführt. Ein Überblick über die Ergebnisse zeigt, dass diese wesentlich differenzierter und nachvollziehbarer ausgefallen sind sowie keine signifikanten Unterschiede zwischen den Datensets aufweisen. Es zeigt sich, dass die beiden Entscheidungsbaum-basierten Klassifikatoren J48 und RF die im Vergleich höchste Performanz mit einer Accuracy von $96\%$ beziehungsweise $98\%$ besitzen. Die FP-Rate der Klassifikatoren ist außerdem äußerst gering. Gleiches zeigt sich für den KNN-Klassifikator. Die weiteren Ergebnisse der Metriken bestätigen die hohe Performanz. Die Klassifikatoren SGD und SVM zeigen anhand ihrer ROC-Bereiche (siehe ROC-Area), dass sie unerwünschte Vorhersagen in Form des \glqq Ratens\grqq{} durchführen. Auffällig ist, dass die Werte zwischen den NN-Klassifikatoren beider Datensets nicht mehr abweichen. Beide Klassifikatoren arbeiten wie die weiteren, bisher unerwähnten, Klassifikatoren auf einem durchschnittlichen Niveau.
+%
+%\begin{table}[ht]
+%\centering
+%\caption{Ergebnisse der Evaluationsmetriken auf Basis der 10-fold-cross-validation (TPR = TP-Rate, Rec. = Recall)}
+%\label{tab:kx}
+%\resizebox{\linewidth}{!}{%
+%\begin{tabular}{|>{\hspace{0pt}}p{0.06\linewidth}>{\hspace{0pt}}p{0.119\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.123\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.17\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}|>{\RaggedLeft\hspace{0pt}}p{0.121\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.168\linewidth}>{\RaggedLeft\hspace{0pt}}p{0.112\linewidth}|} 
+%\cline{3-8}
+%\multicolumn{1}{>{\hspace{0pt}}p{0.06\linewidth}}{} &           & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.405\linewidth}|}{\textbf{\glqq einfaches\grqq{} dateibasiertes Datenset} } & \multicolumn{3}{>{\Centering\hspace{0pt}}p{0.401\linewidth}|}{\textbf{erweitertes dateibasiertes Datenset} }  \\ 
+%\cline{3-8}
+%\multicolumn{1}{>{\hspace{0pt}}p{0.06\linewidth}}{} &           & \textbf{defekt}  & \textbf{fehlerfrei}                                 & \textbf{Mittel}                     & \textbf{defekt}  & \textbf{fehlerfrei}                                 & \textbf{Mittel}                      \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}J48}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,96$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,96$                                 \\
+%                                                    & TPR/Rec.  & $0,94$             & $0,97$                                                & $0,96$                                & $0,94$             & $0,97$                                                & $0,96$                                 \\
+%                                                    & FP-Rate   & $0,03$             & $0,06$                                                & $0,05$                                & $0,03$             & $0,06$                                                & $0,05$                                 \\
+%                                                    & Precision & $0,96$             & $0,96$                                                & $0,96$                                & $0,96$             & $0,96$                                                & $0,86$                                 \\
+%                                                    & F-Score   & $0,95$             & $0,97$                                                & $0,96$                                & $0,95$             & $0,96$                                                & $0,96$                                 \\
+%                                                    & ROC-Area  & $0,97$             & $0,97$                                                & $0,97$                                & $0,97$             & $0,97$                                                & $0,97$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}KNN}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,91$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,91$                                 \\
+%                                                    & TPR/Rec.  & $0,87$             & $0,94$                                                & $0,91$                                & $0,87$             & $0,94$                                                & $0,91$                                 \\
+%                                                    & FP-Rate   & $0,06$             & $0,13$                                                & $0,10$                                & $0,06$             & $0,13$                                                & $0,10$                                 \\
+%                                                    & Precision & $0,92$             & $0,91$                                                & $0,92$                                & $0,91$             & $0,91$                                                & $0,91$                                 \\
+%                                                    & F-Score   & $0,89$             & $0,93$                                                & $0,91$                                & $0,89$             & $0,92$                                                & $0,91$                                 \\
+%                                                    & ROC-Area  & $0,93$             & $0,93$                                                & $0,93$                                & $0,93$             & $0,93$                                                & $0,93$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}LR}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,65$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,65$                                 \\
+%                                                    & TPR/Rec.  & $0,34$             & $0,88$                                                & $0,61$                                & $0,35$             & $0,87$                                                & $0,61$                                 \\
+%                                                    & FP-Rate   & $0,12$             & $0,66$                                                & $0,39$                                & $0,13$             & $0,65$                                                & $0,39$                                 \\
+%                                                    & Precision & $0,66$             & $0,65$                                                & $0,66$                                & $0,66$             & $0,66$                                                & $0,66$                                 \\
+%                                                    & F-Score   & $0,45$             & $0,75$                                                & $0,60$                                & $0,46$             & $0,75$                                                & $0,61$                                 \\
+%                                                    & ROC-Area  & $0,74$             & $0,74$                                                & $0,74$                                & $0,74$             & $0,74$                                                & $0,74$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}NB}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,52$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,52$                                 \\
+%                                                    & TPR/Rec.  & $0,93$             & $0,23$                                                & $0,58$                                & $0,94$             & $0,22$                                                & $0,58$                                 \\
+%                                                    & FP-Rate   & $0,77$             & $0,07$                                                & $0,42$                                & $0,78$             & $0,06$                                                & $0,42$                                 \\
+%                                                    & Precision & $0,46$             & $0,83$                                                & $0,65$                                & $0,46$             & $0,84$                                                & $0,65$                                 \\
+%                                                    & F-Score   & $0,62$             & $0,36$                                                & $0,49$                                & $0,62$             & $0,35$                                                & $0,49$                                 \\
+%                                                    & ROC-Area  & $0,65$             & $0,65$                                                & $0,65$                                & $0,65$             & $0,65$                                                & $0,65$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}NN}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,71$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,70$                                 \\
+%                                                    & TPR/Rec.  & $0,55$             & $0,82$                                                & $0,69$                                & $0,54$             & $0,82$                                                & $0,68$                                 \\
+%                                                    & FP-Rate   & $0,18$             & $0,45$                                                & $0,32$                                & $0,18$             & $0,46$                                                & $0,32$                                 \\
+%                                                    & Precision & $0,69$             & $0,72$                                                & $0,71$                                & $0,68$             & $0,72$                                                & $0,70$                                 \\
+%                                                    & F-Score   & $0,71$             & $0,77$                                                & $0,74$                                & $0,60$             & $0,76$                                                & $0,68$                                 \\
+%                                                    & ROC-Area  & $0,78$             & $0,78$                                                & $0,78$                                & $0,79$             & $0,79$                                                & $0,79$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}RF}        & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,98$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,98$                                 \\
+%                                                    & TPR/Rec.  & $0,97$             & $0,99$                                                & $0,98$                                & $0,97$             & $0,99$                                                & $0,98$                                 \\
+%                                                    & FP-Rate   & $0,01$             & $0,04$                                                & $0,03$                                & $0,01$             & $0,03$                                                & $0,02$                                  \\
+%                                                    & Precision & $0,98$             & $0,98$                                                & $0,98$                                & $0,98$             & $0,98$                                                & $0,98$                                 \\
+%                                                    & F-Score   & $0,97$             & $0,98$                                                & $0,98$                                & $0,97$             & $0,98$                                                & $0,98$                                 \\
+%                                                    & ROC-Area  & $0,99$             & $0,99$                                                & $0,99$                                & $1,00$             & $1,00$                                                & $1,00$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}SGD}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,63$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,63$                                 \\
+%                                                    & TPR/Rec.  & $0,19$             & $0,94$                                                & $0,57$                                & $0,18$             & $0,94$                                                & $0,56$                                 \\
+%                                                    & FP-Rate   & $0,06$             & $0,81$                                                & $0,44$                                & $0,06$             & $0,82$                                                & $0,44$                                 \\
+%                                                    & Precision & $0,69$             & $0,62$                                                & $0,66$                                & $0,69$             & $0,62$                                                & $0,66$                                 \\
+%                                                    & F-Score   & $0,30$             & $0,75$                                                & $0,53$                                & $0,29$             & $0,75$                                                & $0,52$                                 \\
+%                                                    & ROC-Area  & $0,57$             & $0,57$                                                & $0,57$                                & $0,56$             & $0,56$                                                & $0,56$                                 \\ 
+%\hline
+%\multirow{6}{0.06\linewidth}{\hspace{0pt}SVM}       & Accuracy  & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.293\linewidth}}{gesamt:} & $0,62$                                & \multicolumn{2}{>{\RaggedLeft\hspace{0pt}}p{0.289\linewidth}}{gesamt:} & $0,62$                                 \\
+%                                                    & TPR/Rec.  & $0,16$             & $0,95$                                                & $0,56$                                & $0,15$             & $0,95$                                                & $0,55$                                 \\
+%                                                    & FP-Rate   & $0,05$             & $0,84$                                                & $0,45$                                & $0,05$             & $0,85$                                                & $0,46$                                 \\
+%                                                    & Precision & $0,69$             & $0,62$                                                & $0,66$                                & $0,69$             & $0,61$                                                & $0,66$                                 \\
+%                                                    & F-Score   & $0,26$             & $0,75$                                                & $0,51$                                & $0,25$             & $0,75$                                                & $0,50$                                 \\
+%                                                    & ROC-Area  & $0,55$             & $0,55$                                                & $0,55$                                & $0,55$             & $0,55$                                                & $0,55$                                 \\
+%\hline
+%\end{tabular}
+%}
+%\end{table}
+
+%\begin{table}[ht]
+%\centering
+%\caption{Ergebnisse der Attributsauswahl der Klassifikatoren LR, NB und SGD }
+%\label{tab:attribute-selection}
+%\resizebox{\linewidth}{!}{%
+%\begin{tabular}{|l|l|l|} 
+%\hline
+%\textbf{Klassifikator} & \textbf{ausgewählte Attribute}                                                                                                    & \textbf{abgelehnte Attribute}                                                                                                                                                                         \\ 
+%\hline
+%LR                     & \begin{tabular}[c]{@{}l@{}} \texttt{\textbf{MODS}}, \texttt{\textbf{FADDL}}*, \texttt{\textbf{FREML}}*, \texttt{BUGF},\\\texttt{AUTH}, \texttt{ADDL}, \texttt{REML}, \texttt{CCHL},\\\texttt{CCHM}, \texttt{CCHA}, \texttt{AVGC}, \texttt{WAGE}\\(12 von 28)\end{tabular} & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{REVI}, \texttt{REFA}, \texttt{ADDM}, \texttt{ADDA},\\\texttt{REMM}, \texttt{REMA}, \texttt{MAXC}, \texttt{AAGE}\\(16 von 28)\end{tabular}                                                 \\ 
+%\hline
+%NB                     & \begin{tabular}[c]{@{}l@{}}\texttt{\textbf{MODS}}, \texttt{BUGF}, \texttt{AUTH}, \texttt{CCHM},\\\texttt{WAGE} (5 von 28)\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{FADDL}*, \texttt{FREML}*, \texttt{REVI}, \texttt{REFA},\\\texttt{ADDL}, \texttt{ADDM}, \texttt{ADDA}, \texttt{REML},\\\texttt{REMM}, \texttt{REMA}, \texttt{CCHL}, \texttt{CCHA},\\\texttt{MAXC}, \texttt{AVGC}, \texttt{AAGE} (23 von 28)\end{tabular}  \\ 
+%\hline
+%SGD                    & \begin{tabular}[c]{@{}l@{}}\texttt{\textbf{MODS}}, \texttt{\textbf{FREML}}*, \texttt{REVI}, \texttt{REFA}\\\texttt{BUGF}, \texttt{AUTH}, \texttt{CCHM}, \texttt{CCHA},\\\texttt{AVGC}, \texttt{AAGE}, \texttt{WAGE} (11 von 28)\end{tabular}           & \begin{tabular}[c]{@{}l@{}}\texttt{COMM}, \texttt{ADEV}, \texttt{DDEV}, \texttt{EXP},\\\texttt{OEXP}, \texttt{MODD}, \texttt{NLOC}, \texttt{CYCO},\\\texttt{FADDL}*, \texttt{ADDL}, \texttt{ADDM}, \texttt{ADDA},\\\texttt{REML}, \texttt{REMM}, \texttt{REMA}, \texttt{CCHL},\\\texttt{MAXC} (17 von 28)\end{tabular}                                         \\ 
+%\hline
+%\multicolumn{3}{|c|}{* ADDL- und REML-Metriken des featurebasierten Datensets}                                                                                                                                                                                                                                                                                      \\
+%\hline
+%\end{tabular}
+%}
+%\end{table}
