@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_message_feat_train
+Instances:    9668
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+       -11.9072 (normalized) comm
+ +     -23.56   (normalized) adev
+ +      -0.9405 (normalized) ddev
+ +      -6.357  (normalized) exp
+ +     -16.4276 (normalized) oexp
+ +      -8.9574 (normalized) modd
+ +       0.3361 (normalized) mods
+ +      -0.6023 (normalized) nloc
+ +       0.24   (normalized) cyco
+ +       6.5834 (normalized) addl
+ +       9.7942 (normalized) reml
+ +       1.02  
+
+Time taken to build model: 0.55 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.03 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        2938               66.9096 %
+Incorrectly Classified Instances      1453               33.0904 %
+Kappa statistic                          0.0566
+Mean absolute error                      0.3309
+Root mean squared error                  0.5752
+Relative absolute error                107.7539 %
+Root relative squared error            151.1325 %
+Total Number of Instances             4391     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,328    0,259    0,211      0,328    0,257      0,059    0,534     0,186     defective
+                 0,741    0,672    0,839      0,741    0,787      0,059    0,534     0,836     clean
+Weighted Avg.    0,669    0,600    0,730      0,669    0,695      0,059    0,534     0,722     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  251  515 |    a = defective
+  938 2687 |    b = clean
+

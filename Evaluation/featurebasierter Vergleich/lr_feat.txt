@@ -1,0 +1,88 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     dataset_message_feat_train
+Instances:    9668
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                 Class
+Variable     defective
+======================
+comm            0.2345
+adev            0.6797
+ddev            0.0201
+exp                  0
+oexp            0.0004
+modd            0.0055
+mods           -0.0008
+nloc            0.0001
+cyco           -0.0004
+addl           -0.0006
+reml           -0.0008
+Intercept      -2.3786
+
+
+Odds Ratios...
+                 Class
+Variable     defective
+======================
+comm            1.2643
+adev            1.9732
+ddev            1.0203
+exp                  1
+oexp            1.0004
+modd            1.0055
+mods            0.9992
+nloc            1.0001
+cyco            0.9996
+addl            0.9994
+reml            0.9992
+
+
+Time taken to build model: 0.4 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        2914               66.363  %
+Incorrectly Classified Instances      1477               33.637  %
+Kappa statistic                          0.0946
+Mean absolute error                      0.4123
+Root mean squared error                  0.5502
+Relative absolute error                134.2502 %
+Root relative squared error            144.5431 %
+Total Number of Instances             4391     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,403    0,281    0,233      0,403    0,295      0,101    0,618     0,248     defective
+                 0,719    0,597    0,851      0,719    0,779      0,101    0,618     0,889     clean
+Weighted Avg.    0,664    0,542    0,743      0,664    0,695      0,101    0,618     0,777     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  309  457 |    a = defective
+ 1020 2605 |    b = clean
+

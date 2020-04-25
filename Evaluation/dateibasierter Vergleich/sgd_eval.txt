@@ -1,0 +1,81 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_evaluation_message_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   18
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        11.493  (normalized) revi
+ +      -1.3911 (normalized) refa
+ +     -65.6915 (normalized) bugf
+ +      -7.1961 (normalized) auth
+ +       8.9804 (normalized) addl
+ +     -27.7806 (normalized) addm
+ +     -30.413  (normalized) adda
+ +       8.3252 (normalized) reml
+ +      12.0123 (normalized) remm
+ +       7.6381 (normalized) rema
+ +       7.6791 (normalized) cchl
+ +       2.8142 (normalized) cchm
+ +     -14.2961 (normalized) ccha
+ +       0.129  (normalized) maxc
+ +       0.8267 (normalized) avgc
+ +       0.7282 (normalized) aage
+ +      -0.3807 (normalized) wage
+ +       7.4   
+
+Time taken to build model: 9.78 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.11 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       20596               93.8443 %
+Incorrectly Classified Instances      1351                6.1557 %
+Kappa statistic                          0.0223
+Mean absolute error                      0.0616
+Root mean squared error                  0.2481
+Relative absolute error                 14.8638 %
+Root relative squared error             59.8817 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,195    0,058    0,017      0,195    0,032      0,042    0,568     0,007     defective
+                 0,942    0,805    0,996      0,942    0,968      0,042    0,568     0,996     clean
+Weighted Avg.    0,938    0,801    0,991      0,938    0,963      0,042    0,568     0,990     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+    22    91 |     a = defective
+  1260 20574 |     b = clean
+

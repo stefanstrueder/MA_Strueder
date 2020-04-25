@@ -1,0 +1,501 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     dataset_message_feat_train
+Instances:    9668
+Attributes:   12
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              addl
+              reml
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+comm <= 2
+|   nloc <= 111
+|   |   nloc <= 4: clean (905.0/4.0)
+|   |   nloc > 4
+|   |   |   oexp <= 126: clean (681.0/19.0)
+|   |   |   oexp > 126
+|   |   |   |   modd <= 2
+|   |   |   |   |   exp <= 6875
+|   |   |   |   |   |   addl <= 184
+|   |   |   |   |   |   |   cyco <= 23
+|   |   |   |   |   |   |   |   exp <= 145: clean (19.0/1.0)
+|   |   |   |   |   |   |   |   exp > 145
+|   |   |   |   |   |   |   |   |   addl <= 21: clean (8.0)
+|   |   |   |   |   |   |   |   |   addl > 21
+|   |   |   |   |   |   |   |   |   |   mods <= 142: clean (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   mods > 142
+|   |   |   |   |   |   |   |   |   |   |   mods <= 375: defective (11.0)
+|   |   |   |   |   |   |   |   |   |   |   mods > 375
+|   |   |   |   |   |   |   |   |   |   |   |   modd <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 175
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 158: defective (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 158: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   exp > 175: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   modd > 1: clean (3.0/1.0)
+|   |   |   |   |   |   |   cyco > 23: clean (14.0)
+|   |   |   |   |   |   addl > 184: clean (26.0/1.0)
+|   |   |   |   |   exp > 6875: clean (31.0)
+|   |   |   |   modd > 2: clean (20.0)
+|   nloc > 111
+|   |   cyco <= 3476
+|   |   |   reml <= 1851
+|   |   |   |   addl <= 35
+|   |   |   |   |   adev <= 1
+|   |   |   |   |   |   modd <= 3
+|   |   |   |   |   |   |   mods <= 42: clean (217.0/11.0)
+|   |   |   |   |   |   |   mods > 42
+|   |   |   |   |   |   |   |   mods <= 78
+|   |   |   |   |   |   |   |   |   reml <= 26
+|   |   |   |   |   |   |   |   |   |   addl <= 21: clean (143.0/23.0)
+|   |   |   |   |   |   |   |   |   |   addl > 21: defective (16.0/2.0)
+|   |   |   |   |   |   |   |   |   reml > 26: clean (20.0)
+|   |   |   |   |   |   |   |   mods > 78: clean (1677.0/139.0)
+|   |   |   |   |   |   modd > 3
+|   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   exp <= 371: clean (26.0/1.0)
+|   |   |   |   |   |   |   |   exp > 371
+|   |   |   |   |   |   |   |   |   ddev <= 1: defective (2.0)
+|   |   |   |   |   |   |   |   |   ddev > 1: clean (4.0)
+|   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   nloc <= 2241
+|   |   |   |   |   |   |   |   |   reml <= 21
+|   |   |   |   |   |   |   |   |   |   reml <= 3: defective (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   reml > 3
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 239: clean (8.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 239: defective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   reml > 21: defective (8.0)
+|   |   |   |   |   |   |   |   nloc > 2241: clean (11.0)
+|   |   |   |   |   adev > 1
+|   |   |   |   |   |   modd <= 3
+|   |   |   |   |   |   |   addl <= 11: clean (83.0/13.0)
+|   |   |   |   |   |   |   addl > 11
+|   |   |   |   |   |   |   |   oexp <= 59
+|   |   |   |   |   |   |   |   |   ddev <= 2
+|   |   |   |   |   |   |   |   |   |   mods <= 223: defective (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   mods > 223: clean (5.0/1.0)
+|   |   |   |   |   |   |   |   |   ddev > 2
+|   |   |   |   |   |   |   |   |   |   modd <= 2
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 875: defective (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 875
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 169: clean (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 169: defective (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   modd > 2: clean (3.0)
+|   |   |   |   |   |   |   |   oexp > 59: clean (14.0/1.0)
+|   |   |   |   |   |   modd > 3
+|   |   |   |   |   |   |   mods <= 153: clean (2.0)
+|   |   |   |   |   |   |   mods > 153: defective (10.0/1.0)
+|   |   |   |   addl > 35
+|   |   |   |   |   exp <= 397814
+|   |   |   |   |   |   cyco <= 7
+|   |   |   |   |   |   |   ddev <= 2
+|   |   |   |   |   |   |   |   mods <= 83: clean (71.0)
+|   |   |   |   |   |   |   |   mods > 83
+|   |   |   |   |   |   |   |   |   mods <= 266
+|   |   |   |   |   |   |   |   |   |   nloc <= 227: clean (6.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 227
+|   |   |   |   |   |   |   |   |   |   |   ddev <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 1224: defective (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 1224: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ddev > 1: clean (5.0/1.0)
+|   |   |   |   |   |   |   |   |   mods > 266: clean (635.0)
+|   |   |   |   |   |   |   ddev > 2
+|   |   |   |   |   |   |   |   mods <= 192: defective (5.0/1.0)
+|   |   |   |   |   |   |   |   mods > 192: clean (7.0)
+|   |   |   |   |   |   cyco > 7
+|   |   |   |   |   |   |   oexp <= 536
+|   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   mods <= 65
+|   |   |   |   |   |   |   |   |   |   mods <= 50
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 23: defective (9.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 23
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 2715: clean (100.0/31.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 2715: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   mods > 50
+|   |   |   |   |   |   |   |   |   |   |   mods <= 55: defective (25.0)
+|   |   |   |   |   |   |   |   |   |   |   mods > 55
+|   |   |   |   |   |   |   |   |   |   |   |   nloc <= 414: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   nloc > 414: defective (4.0)
+|   |   |   |   |   |   |   |   |   mods > 65
+|   |   |   |   |   |   |   |   |   |   reml <= 104
+|   |   |   |   |   |   |   |   |   |   |   oexp <= 176
+|   |   |   |   |   |   |   |   |   |   |   |   mods <= 108: clean (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mods > 108
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 1259
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 166
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   reml <= 59
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ddev <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 59: clean (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 59: defective (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ddev > 1: defective (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   reml > 59: clean (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 166: clean (225.0/48.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 1259: clean (65.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   oexp > 176
+|   |   |   |   |   |   |   |   |   |   |   |   ddev <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 466
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 192
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 18952
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 7308: clean (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 7308
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 112: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 112: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 177: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 177
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 181: defective (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 181
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 400: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 400: defective (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 18952: clean (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 192
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 178: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 178: clean (86.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 466: clean (25.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ddev > 1: defective (38.0/12.0)
+|   |   |   |   |   |   |   |   |   |   reml > 104
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 908: clean (125.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 908
+|   |   |   |   |   |   |   |   |   |   |   |   cyco <= 167: defective (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cyco > 167
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 4059
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 563: clean (30.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 563
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 223: defective (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 223: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 4059: clean (25.0/2.0)
+|   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   addl <= 79
+|   |   |   |   |   |   |   |   |   |   mods <= 266
+|   |   |   |   |   |   |   |   |   |   |   reml <= 45: clean (70.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |   reml > 45: defective (29.0/6.0)
+|   |   |   |   |   |   |   |   |   |   mods > 266: clean (41.0/6.0)
+|   |   |   |   |   |   |   |   |   addl > 79
+|   |   |   |   |   |   |   |   |   |   adev <= 1
+|   |   |   |   |   |   |   |   |   |   |   ddev <= 2: defective (46.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   ddev > 2
+|   |   |   |   |   |   |   |   |   |   |   |   exp <= 525: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   exp > 525: defective (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   adev > 1
+|   |   |   |   |   |   |   |   |   |   |   reml <= 50: defective (32.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   reml > 50
+|   |   |   |   |   |   |   |   |   |   |   |   addl <= 122
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 402: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 402
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 94
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 1680: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 1680: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 94: clean (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   addl > 122: defective (18.0/4.0)
+|   |   |   |   |   |   |   oexp > 536
+|   |   |   |   |   |   |   |   addl <= 1796
+|   |   |   |   |   |   |   |   |   exp <= 763
+|   |   |   |   |   |   |   |   |   |   adev <= 1
+|   |   |   |   |   |   |   |   |   |   |   mods <= 1272
+|   |   |   |   |   |   |   |   |   |   |   |   mods <= 41: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mods > 41
+|   |   |   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 130: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 130: defective (92.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   modd <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   modd <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 992
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 315: defective (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   addl > 315: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 992: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   modd > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 192: defective (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 192: clean (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   modd > 3: defective (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   mods > 1272: clean (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   adev > 1: defective (6.0)
+|   |   |   |   |   |   |   |   |   exp > 763
+|   |   |   |   |   |   |   |   |   |   addl <= 1344
+|   |   |   |   |   |   |   |   |   |   |   cyco <= 2015
+|   |   |   |   |   |   |   |   |   |   |   |   comm <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco <= 63: clean (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cyco > 63
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 395
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 34665: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 34665: defective (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 395
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ddev <= 3: clean (103.0/40.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ddev > 3: defective (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   comm > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   addl <= 90: clean (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   addl > 90
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adev <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 186: defective (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 186
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 213: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 213
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp <= 17955: defective (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   exp > 17955
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 541
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 266: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 266: defective (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 541: clean (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   adev > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods <= 142: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   mods > 142
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc <= 3620: clean (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   nloc > 3620: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   cyco > 2015: defective (21.0/1.0)
+|   |   |   |   |   |   |   |   |   |   addl > 1344: defective (30.0/1.0)
+|   |   |   |   |   |   |   |   addl > 1796
+|   |   |   |   |   |   |   |   |   exp <= 2368: clean (31.0/1.0)
+|   |   |   |   |   |   |   |   |   exp > 2368: defective (9.0/1.0)
+|   |   |   |   |   exp > 397814
+|   |   |   |   |   |   nloc <= 742
+|   |   |   |   |   |   |   cyco <= 115: defective (5.0)
+|   |   |   |   |   |   |   cyco > 115: clean (13.0)
+|   |   |   |   |   |   nloc > 742: clean (254.0/1.0)
+|   |   |   reml > 1851
+|   |   |   |   adev <= 1
+|   |   |   |   |   nloc <= 1237: clean (4.0)
+|   |   |   |   |   nloc > 1237: defective (75.0)
+|   |   |   |   adev > 1: clean (5.0)
+|   |   cyco > 3476
+|   |   |   nloc <= 15844: clean (1490.0)
+|   |   |   nloc > 15844
+|   |   |   |   cyco <= 5551: clean (24.0/1.0)
+|   |   |   |   cyco > 5551: defective (2.0)
+comm > 2
+|   oexp <= 2956
+|   |   comm <= 6
+|   |   |   addl <= 18
+|   |   |   |   modd <= 6
+|   |   |   |   |   adev <= 1: clean (131.0/26.0)
+|   |   |   |   |   adev > 1
+|   |   |   |   |   |   exp <= 166
+|   |   |   |   |   |   |   modd <= 4: clean (73.0/12.0)
+|   |   |   |   |   |   |   modd > 4
+|   |   |   |   |   |   |   |   cyco <= 106: clean (12.0/1.0)
+|   |   |   |   |   |   |   |   cyco > 106
+|   |   |   |   |   |   |   |   |   adev <= 2
+|   |   |   |   |   |   |   |   |   |   exp <= 6: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   exp > 6: clean (9.0/2.0)
+|   |   |   |   |   |   |   |   |   adev > 2
+|   |   |   |   |   |   |   |   |   |   modd <= 5: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   modd > 5
+|   |   |   |   |   |   |   |   |   |   |   ddev <= 11: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   ddev > 11: defective (2.0)
+|   |   |   |   |   |   exp > 166: defective (6.0/1.0)
+|   |   |   |   modd > 6
+|   |   |   |   |   addl <= 6
+|   |   |   |   |   |   oexp <= 112: clean (11.0)
+|   |   |   |   |   |   oexp > 112: defective (4.0/1.0)
+|   |   |   |   |   addl > 6
+|   |   |   |   |   |   oexp <= 127
+|   |   |   |   |   |   |   nloc <= 299: clean (2.0)
+|   |   |   |   |   |   |   nloc > 299: defective (16.0)
+|   |   |   |   |   |   oexp > 127
+|   |   |   |   |   |   |   comm <= 3: clean (5.0)
+|   |   |   |   |   |   |   comm > 3
+|   |   |   |   |   |   |   |   adev <= 1
+|   |   |   |   |   |   |   |   |   exp <= 9: defective (5.0/1.0)
+|   |   |   |   |   |   |   |   |   exp > 9: clean (7.0/1.0)
+|   |   |   |   |   |   |   |   adev > 1
+|   |   |   |   |   |   |   |   |   addl <= 14: defective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   addl > 14: clean (2.0)
+|   |   |   addl > 18
+|   |   |   |   adev <= 1
+|   |   |   |   |   addl <= 63
+|   |   |   |   |   |   cyco <= 1707
+|   |   |   |   |   |   |   mods <= 35: clean (7.0)
+|   |   |   |   |   |   |   mods > 35
+|   |   |   |   |   |   |   |   mods <= 357
+|   |   |   |   |   |   |   |   |   oexp <= 263: clean (40.0/13.0)
+|   |   |   |   |   |   |   |   |   oexp > 263
+|   |   |   |   |   |   |   |   |   |   reml <= 43: defective (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   reml > 43
+|   |   |   |   |   |   |   |   |   |   |   addl <= 47
+|   |   |   |   |   |   |   |   |   |   |   |   comm <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 606: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 606: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   comm > 4: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   |   addl > 47: defective (2.0)
+|   |   |   |   |   |   |   |   mods > 357
+|   |   |   |   |   |   |   |   |   reml <= 29
+|   |   |   |   |   |   |   |   |   |   mods <= 539
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 6235: clean (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 6235: defective (2.0)
+|   |   |   |   |   |   |   |   |   |   mods > 539
+|   |   |   |   |   |   |   |   |   |   |   nloc <= 2789: defective (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   nloc > 2789: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   reml > 29: clean (20.0/1.0)
+|   |   |   |   |   |   cyco > 1707: clean (17.0)
+|   |   |   |   |   addl > 63
+|   |   |   |   |   |   mods <= 357: defective (78.0/15.0)
+|   |   |   |   |   |   mods > 357
+|   |   |   |   |   |   |   mods <= 588
+|   |   |   |   |   |   |   |   ddev <= 4
+|   |   |   |   |   |   |   |   |   comm <= 3: clean (18.0/3.0)
+|   |   |   |   |   |   |   |   |   comm > 3
+|   |   |   |   |   |   |   |   |   |   addl <= 286: clean (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   addl > 286: defective (4.0)
+|   |   |   |   |   |   |   |   ddev > 4: defective (3.0)
+|   |   |   |   |   |   |   mods > 588: defective (5.0)
+|   |   |   |   adev > 1
+|   |   |   |   |   comm <= 3
+|   |   |   |   |   |   nloc <= 4121
+|   |   |   |   |   |   |   modd <= 3
+|   |   |   |   |   |   |   |   adev <= 2: clean (55.0/25.0)
+|   |   |   |   |   |   |   |   adev > 2
+|   |   |   |   |   |   |   |   |   mods <= 223
+|   |   |   |   |   |   |   |   |   |   reml <= 11: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   reml > 11: defective (9.0)
+|   |   |   |   |   |   |   |   |   mods > 223: clean (5.0)
+|   |   |   |   |   |   |   modd > 3
+|   |   |   |   |   |   |   |   cyco <= 10: clean (8.0)
+|   |   |   |   |   |   |   |   cyco > 10
+|   |   |   |   |   |   |   |   |   addl <= 115: defective (31.0/6.0)
+|   |   |   |   |   |   |   |   |   addl > 115
+|   |   |   |   |   |   |   |   |   |   nloc <= 527: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   nloc > 527: defective (11.0/2.0)
+|   |   |   |   |   |   nloc > 4121: defective (13.0)
+|   |   |   |   |   comm > 3
+|   |   |   |   |   |   modd <= 7
+|   |   |   |   |   |   |   mods <= 192
+|   |   |   |   |   |   |   |   comm <= 5
+|   |   |   |   |   |   |   |   |   mods <= 172
+|   |   |   |   |   |   |   |   |   |   addl <= 25: clean (3.0)
+|   |   |   |   |   |   |   |   |   |   addl > 25
+|   |   |   |   |   |   |   |   |   |   |   modd <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   mods <= 161: defective (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   mods > 161
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp <= 264: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   oexp > 264: clean (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   modd > 5
+|   |   |   |   |   |   |   |   |   |   |   |   reml <= 27: clean (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   reml > 27: defective (3.0)
+|   |   |   |   |   |   |   |   |   mods > 172: defective (28.0/1.0)
+|   |   |   |   |   |   |   |   comm > 5: defective (9.0)
+|   |   |   |   |   |   |   mods > 192
+|   |   |   |   |   |   |   |   comm <= 4: defective (38.0/16.0)
+|   |   |   |   |   |   |   |   comm > 4
+|   |   |   |   |   |   |   |   |   nloc <= 1308
+|   |   |   |   |   |   |   |   |   |   exp <= 49
+|   |   |   |   |   |   |   |   |   |   |   modd <= 6: defective (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   modd > 6: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   exp > 49: defective (19.0)
+|   |   |   |   |   |   |   |   |   nloc > 1308
+|   |   |   |   |   |   |   |   |   |   oexp <= 52: defective (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   oexp > 52: clean (6.0)
+|   |   |   |   |   |   modd > 7
+|   |   |   |   |   |   |   nloc <= 164: clean (3.0/1.0)
+|   |   |   |   |   |   |   nloc > 164: defective (36.0/1.0)
+|   |   comm > 6
+|   |   |   adev <= 1
+|   |   |   |   ddev <= 3
+|   |   |   |   |   addl <= 39
+|   |   |   |   |   |   cyco <= 1534
+|   |   |   |   |   |   |   reml <= 30
+|   |   |   |   |   |   |   |   nloc <= 2579: defective (8.0)
+|   |   |   |   |   |   |   |   nloc > 2579
+|   |   |   |   |   |   |   |   |   ddev <= 1
+|   |   |   |   |   |   |   |   |   |   mods <= 223
+|   |   |   |   |   |   |   |   |   |   |   exp <= 68: defective (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   exp > 68: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   mods > 223: clean (2.0)
+|   |   |   |   |   |   |   |   |   ddev > 1
+|   |   |   |   |   |   |   |   |   |   addl <= 17: clean (2.0)
+|   |   |   |   |   |   |   |   |   |   addl > 17: defective (6.0)
+|   |   |   |   |   |   |   reml > 30: clean (3.0)
+|   |   |   |   |   |   cyco > 1534: clean (4.0)
+|   |   |   |   |   addl > 39
+|   |   |   |   |   |   mods <= 186
+|   |   |   |   |   |   |   mods <= 161: defective (3.0)
+|   |   |   |   |   |   |   mods > 161: clean (2.0)
+|   |   |   |   |   |   mods > 186: defective (29.0/1.0)
+|   |   |   |   ddev > 3
+|   |   |   |   |   cyco <= 1382
+|   |   |   |   |   |   mods <= 541: defective (8.0/1.0)
+|   |   |   |   |   |   mods > 541: clean (3.0)
+|   |   |   |   |   cyco > 1382: clean (10.0)
+|   |   |   adev > 1
+|   |   |   |   modd <= 14
+|   |   |   |   |   mods <= 588
+|   |   |   |   |   |   addl <= 22
+|   |   |   |   |   |   |   comm <= 8
+|   |   |   |   |   |   |   |   modd <= 10
+|   |   |   |   |   |   |   |   |   exp <= 44
+|   |   |   |   |   |   |   |   |   |   addl <= 6: defective (3.0)
+|   |   |   |   |   |   |   |   |   |   addl > 6: clean (8.0/1.0)
+|   |   |   |   |   |   |   |   |   exp > 44: defective (6.0)
+|   |   |   |   |   |   |   |   modd > 10: clean (2.0)
+|   |   |   |   |   |   |   comm > 8: defective (9.0/1.0)
+|   |   |   |   |   |   addl > 22
+|   |   |   |   |   |   |   reml <= 276: defective (52.0/1.0)
+|   |   |   |   |   |   |   reml > 276: clean (3.0/1.0)
+|   |   |   |   |   mods > 588
+|   |   |   |   |   |   reml <= 10: defective (3.0)
+|   |   |   |   |   |   reml > 10
+|   |   |   |   |   |   |   comm <= 9: clean (4.0)
+|   |   |   |   |   |   |   comm > 9
+|   |   |   |   |   |   |   |   ddev <= 18: defective (2.0)
+|   |   |   |   |   |   |   |   ddev > 18: clean (2.0)
+|   |   |   |   modd > 14: defective (105.0/2.0)
+|   oexp > 2956
+|   |   cyco <= 92
+|   |   |   nloc <= 1516
+|   |   |   |   exp <= 18: clean (2.0)
+|   |   |   |   exp > 18: defective (7.0)
+|   |   |   nloc > 1516: clean (4.0)
+|   |   cyco > 92
+|   |   |   addl <= 52
+|   |   |   |   comm <= 8: clean (4.0)
+|   |   |   |   comm > 8: defective (7.0)
+|   |   |   addl > 52: defective (208.0/3.0)
+
+Number of Leaves  : 	221
+
+Size of the tree : 	441
+
+
+Time taken to build model: 0.41 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.09 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3588               81.7126 %
+Incorrectly Classified Instances       803               18.2874 %
+Kappa statistic                          0.4142
+Mean absolute error                      0.2198
+Root mean squared error                  0.4014
+Relative absolute error                 71.5793 %
+Root relative squared error            105.455  %
+Total Number of Instances             4391     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,582    0,133    0,480      0,582    0,526      0,417    0,772     0,389     defective
+                 0,867    0,418    0,908      0,867    0,887      0,417    0,772     0,927     clean
+Weighted Avg.    0,817    0,368    0,833      0,817    0,824      0,417    0,772     0,833     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+  446  320 |    a = defective
+  483 3142 |    b = clean
+
