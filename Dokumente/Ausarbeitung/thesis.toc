@@ -50,9 +50,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Ergebnisse und Diskussion}{36}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Ergebnisse und Vergleich der featureabsierten Klassifikatoren}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Ergebnisse und Vergleich der featureabsierten Klassifikatoren}{38}{subsection.5.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Konfusionsmatrizen}{38}{section*.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Accuracies}{38}{section*.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{TP-Rate / Recall, FP-Rate, Precision, F-Score}{39}{section*.50}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ROC-Kurven und -Bereiche}{40}{section*.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Zusammenfassung}{41}{section*.54}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{42}{subsection.5.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Konfusionsmatrizen}{42}{section*.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Accuracies}{43}{section*.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{TP-Rate / Recall, FP-Rate, Precision, F-Score}{43}{section*.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ROC-Kurven und -Bereiche}{45}{section*.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Zusammenfassung}{45}{section*.63}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Herausforderungen und Limitationen}{47}{section.5.3}%
 \defcounter {refsection}{0}\relax 
