@@ -1,1 +1,0 @@
-## Dieser Ordner wird schon bald mit allen relevanten Daten, die das neue Datenset betreffen, befüllt. Die Daten des alten Datensets befinden sich im Ordner "Backup".

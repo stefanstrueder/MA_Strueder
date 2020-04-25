@@ -1,5 +1,7 @@
 # Featurebasierte Fehlererkennung mittels Methoden des Machine Learnings
 
+# REPO WIRD BIS ZUR ABGABE AKTUALISIERT
+
 ## Ordner  
 - Backup
   - Datenset

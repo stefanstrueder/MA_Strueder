@@ -1,1 +1,0 @@
-## Ein Snapshot der zur Erstellung der Datensets verwendeten Repositories der hier gefunden werden: https://liveunikoblenz-my.sharepoint.com/:f:/g/personal/stefanstrueder_live_uni-koblenz_de/EgToq7zu4qpIqpgQ7WJOu0IBjf5qvqLfY2rKcnTGFqkrCw?e=7IlVM3

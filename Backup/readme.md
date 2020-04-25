@@ -1,1 +1,0 @@
-## Dieser Ordner enthält die zugehörigen Dateien des alten Datensets mit h-Features sowie des Datensets mit alter Heuristik zur Erkennung von Bug-Fixes.
