@@ -15,36 +15,36 @@ import re
 #########################
 
 # MySQL-Database information #
-host = "localhost"
-user = "root"
-password = "Bifi3131@"
-database = "dataset"
+host = "ENTER_HERE"
+user = "ENTER_HERE"
+password = "ENTER_HERE"
+database = "ENTER_HERE"
 
 # Data extraction #
-software = "blender"
-access = "local" # "local" or "extern"
-path = "blender" # path to git directory
-repo = "https://github.com/sobotka/blender.git" # URL to git repository
-release = "2.81" # Selected release number
-from_tag = "v2.81" # From release-tag
-to_tag = "v2.82" # Until release-tag
+software = "ENTER_HERE"
+access = "ENTER_HERE" # "local" or "extern"
+path = "ENTER_HERE" # path to git directory
+repo = "ENTER_HERE" # URL to git repository
+release = "ENTER_HERE" # Selected release number
+from_tag = "ENTER_HERE" # From release-tag
+to_tag = "ENTER_HERE" # Until release-tag
 
 # Metrics calculation #
-t = datetime(2019, 10, 12, 9, 45, 20) # First date + time of first commit of release (YYYY, MM, DD, HH, MM, SS)
+t = datetime(YYYY, MM, DD, HH, MM, SS) # First date + time of first commit of release (YYYY, MM, DD, HH, MM, SS)
 
 # Aggregation for feature-based metrics #
 # Chose between "mean", "median", "min", "max" and "sum"
-comm_selection = "mean"
-adev_selection = "mean"
-ddev_selection = "mean"
-exp_selection = "mean"
-oexp_selection = "mean"
-modd_selection = "mean"
-mods_selection = "mean"
-nloc_selection = "mean"
-cyco_selection = "mean"
-addl_selection = "mean"
-reml_selection = "mean"
+comm_selection = "ENTER_HERE"
+adev_selection = "ENTER_HERE"
+ddev_selection = "ENTER_HERE"
+exp_selection = "ENTER_HERE"
+oexp_selection = "ENTER_HERE"
+modd_selection = "ENTER_HERE"
+mods_selection = "ENTER_HERE"
+nloc_selection = "ENTER_HERE"
+cyco_selection = "ENTER_HERE"
+addl_selection = "ENTER_HERE"
+reml_selection = "ENTER_HERE"
 
 #########################
 #########################

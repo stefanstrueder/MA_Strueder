@@ -1,53 +1,28 @@
 # Featurebasierte Fehlererkennung mittels Methoden des Machine Learnings
 
-# REPO WIRD BIS ZUR ABGABE AKTUALISIERT
-
 ## Ordner  
-- Backup
-  - Datenset
-  - Erste Analyse
-  - Finale Analyse
-  - Klassifikatoren
-  - Skripte
 - Datenset
   - Finale Tabellen
   - Haupttabellen
   - Metrics-Tabellen
-  - Repositories
   - SZZ-Tabellen
 - Dokumente
+  - Abschlusspräsentation
   - Ausarbeitung
   - Einführungspräsentation
+  - Paper
   - Proposal
   - Zwischenbericht
-- Erste Analyse
-  - scikit
-  - Weka
 - Evaluation
-  - Datenset
-  - Ergebnisse
-  - Skripte
-- Finale Analyse
-  - Feat
-  - File_smoted
+  - dateibasierter Vergleich
+  - featurebasierter Vergleich
 - Klassifikatoren
-  - Feat
-  - File_smoted
+  - dateibasierte Datensets
+  - featurebasiertes Datenset
 - Literatur
-  - Fehlervorhersage
-  - GitHub Mining
-  - Klassifikatoren
-  - Methodik
-  - Metriken
-  - ML
-  - SPL allgemein
-  - Text Mining Programmcode
-  - Variabilität
+  - Papers
+  - Webquellen
 - Skripte
-  - Datenset
-  - ML
-- Webquellen
-  - GitHub Mining
-  - Metriken
-  - ML
-  - Software
+  - dateibasierte Datensets
+  - Datenabruf und -verarbeitung
+  - featurebasiertes Datenset
