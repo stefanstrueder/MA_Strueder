@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{20}
+\begin{thebibliography}{22}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -36,6 +36,18 @@
 \providecommand\bibinfo[2]{#2}
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Alpaydin}{Alpaydin}{2010}]%
+        {Alpaydin2010}
+\bibfield{author}{\bibinfo{person}{Ethem Alpaydin}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Introduction to Machine Learning}}
+  (\bibinfo{edition}{second edi} ed.)}.
+\newblock \bibinfo{publisher}{The MIT Press}, \bibinfo{address}{Cambridge,
+  Massachusetts}.
+\newblock
+\showISBNx{9780262012430}
+
 
 \bibitem[\protect\citeauthoryear{Alsaeedi and Khan}{Alsaeedi and Khan}{2019}]%
         {Alsaeedi2019}
@@ -265,6 +277,19 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1145/1370750.1370759}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Sammut and Webb}{Sammut and Webb}{2017}]%
+        {Sammut2017}
+\bibfield{editor}{\bibinfo{person}{Claude Sammut} {and}
+  \bibinfo{person}{Geoffrey~I. Webb}} (Eds.). \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Encyclopedia of Machine Learning and Data
+  Mining}}.
+\newblock \bibinfo{publisher}{Springer {US}}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-1-4899-7687-1}
 \showDOI{\tempurl}
 
 

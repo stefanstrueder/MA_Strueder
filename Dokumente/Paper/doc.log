@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  23 APR 2020 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.13)  26 APR 2020 17:38
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -1534,6 +1534,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 138.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 138.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -1541,8 +1543,6 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 138.
  (introduction.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 5.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -1556,7 +1556,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 110.
  [2.2]
-<Bug_example_real.png, id=130, 1233.85968pt x 459.21562pt>
+<Bug_example_real.png, id=131, 1233.85968pt x 459.21562pt>
 File: Bug_example_real.png Graphic file (type png)
 <use Bug_example_real.png>
 Package pdftex.def Info: Bug_example_real.png  used on input line 113.
@@ -1581,7 +1581,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 Overfull \vbox (4.3659pt too high) detected at line 196
  []
 
-<Dataset.png, id=163, 1328.71407pt x 453.94594pt>
+<Dataset.png, id=164, 1328.71407pt x 453.94594pt>
 File: Dataset.png Graphic file (type png)
 <use Dataset.png>
 Package pdftex.def Info: Dataset.png  used on input line 248.
@@ -1596,64 +1596,64 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5.5 <./Dataset.png>]
-<release_blender.png, id=203, 960.58875pt x 246.9225pt>
+<release_blender.png, id=205, 960.58875pt x 246.9225pt>
 File: release_blender.png Graphic file (type png)
 <use release_blender.png>
 Package pdftex.def Info: release_blender.png  used on input line 345.
 (pdftex.def)             Requested size: 253.14749pt x 65.07243pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 7.0pt on input line 345.
-<release_busybox.png, id=204, 961.34157pt x 247.67531pt>
+<release_busybox.png, id=206, 961.34157pt x 247.67531pt>
 File: release_busybox.png Graphic file (type png)
 <use release_busybox.png>
 Package pdftex.def Info: release_busybox.png  used on input line 346.
 (pdftex.def)             Requested size: 253.14749pt x 65.21793pt.
-<release_emacs.png, id=205, 961.34157pt x 246.9225pt>
+<release_emacs.png, id=207, 961.34157pt x 246.9225pt>
 File: release_emacs.png Graphic file (type png)
 <use release_emacs.png>
 Package pdftex.def Info: release_emacs.png  used on input line 348.
 (pdftex.def)             Requested size: 253.14749pt x 65.01968pt.
-<release_gimp.png, id=206, 962.09438pt x 247.67531pt>
+<release_gimp.png, id=208, 962.09438pt x 247.67531pt>
 File: release_gimp.png Graphic file (type png)
 <use release_gimp.png>
 Package pdftex.def Info: release_gimp.png  used on input line 349.
 (pdftex.def)             Requested size: 253.14749pt x 65.1688pt.
-<release_gnumeric.png, id=207, 962.09438pt x 247.67531pt>
+<release_gnumeric.png, id=209, 962.09438pt x 247.67531pt>
 File: release_gnumeric.png Graphic file (type png)
 <use release_gnumeric.png>
 Package pdftex.def Info: release_gnumeric.png  used on input line 351.
 (pdftex.def)             Requested size: 253.14749pt x 65.1688pt.
-<release_gnuplot.png, id=208, 961.34157pt x 246.1697pt>
+<release_gnuplot.png, id=210, 961.34157pt x 246.1697pt>
 File: release_gnuplot.png Graphic file (type png)
 <use release_gnuplot.png>
 Package pdftex.def Info: release_gnuplot.png  used on input line 352.
 (pdftex.def)             Requested size: 253.14749pt x 64.82146pt.
-<release_irssi.png, id=209, 961.34157pt x 245.41687pt>
+<release_irssi.png, id=211, 961.34157pt x 245.41687pt>
 File: release_irssi.png Graphic file (type png)
 <use release_irssi.png>
 Package pdftex.def Info: release_irssi.png  used on input line 354.
 (pdftex.def)             Requested size: 253.14749pt x 64.62323pt.
-<release_libxml2.png, id=210, 960.58875pt x 246.1697pt>
+<release_libxml2.png, id=212, 960.58875pt x 246.1697pt>
 File: release_libxml2.png Graphic file (type png)
 <use release_libxml2.png>
 Package pdftex.def Info: release_libxml2.png  used on input line 355.
 (pdftex.def)             Requested size: 253.14749pt x 64.87405pt.
-<release_lighttpd.png, id=211, 962.84718pt x 245.41687pt>
+<release_lighttpd.png, id=213, 962.84718pt x 245.41687pt>
 File: release_lighttpd.png Graphic file (type png)
 <use release_lighttpd.png>
 Package pdftex.def Info: release_lighttpd.png  used on input line 357.
 (pdftex.def)             Requested size: 253.14749pt x 64.52213pt.
-<release_mpsolve.png, id=212, 961.34157pt x 246.9225pt>
+<release_mpsolve.png, id=214, 961.34157pt x 246.9225pt>
 File: release_mpsolve.png Graphic file (type png)
 <use release_mpsolve.png>
 Package pdftex.def Info: release_mpsolve.png  used on input line 358.
 (pdftex.def)             Requested size: 253.14749pt x 65.01968pt.
-<release_parrot.png, id=213, 960.58875pt x 247.67531pt>
+<release_parrot.png, id=215, 960.58875pt x 247.67531pt>
 File: release_parrot.png Graphic file (type png)
 <use release_parrot.png>
 Package pdftex.def Info: release_parrot.png  used on input line 360.
 (pdftex.def)             Requested size: 253.14749pt x 65.27083pt.
-<release_vim.png, id=214, 962.84718pt x 246.9225pt>
+<release_vim.png, id=216, 962.84718pt x 246.9225pt>
 File: release_vim.png Graphic file (type png)
 <use release_vim.png>
 Package pdftex.def Info: release_vim.png  used on input line 361.
@@ -1732,9 +1732,19 @@ Underfull \hbox (badness 7379) in paragraph at lines 425--425
  []
 
 ) (evaluation.tex
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 15.
-) (discussion.tex [6.6]
+<Confusion.png, id=225, 485.56406pt x 312.41719pt>
+File: Confusion.png Graphic file (type png)
+<use Confusion.png>
+Package pdftex.def Info: Confusion.png  used on input line 11.
+(pdftex.def)             Requested size: 202.51491pt x 130.29903pt.
+
+
+Class acmart Warning: A possible image without description on input line 13.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6.6]
 
 LaTeX Warning: Text page 7 contains only floats.
 
@@ -1767,17 +1777,43 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 release_gimp.png> <./release_gnumeric.png> <./release_gnuplot.png> <./release_i
 rssi.png> <./release_libxml2.png> <./release_lighttpd.png> <./release_mpsolve.p
 ng> <./release_parrot.png> <./release_vim.png>]
-Underfull \vbox (badness 2073) has occurred while \output is active []
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 18.
 
-)
-(conclusion.tex) (doc.bbl
-LaTeX Info: Redefining \tempurl on input line 69.
-LaTeX Info: Redefining \tempurl on input line 87.
-LaTeX Info: Redefining \tempurl on input line 104.
-LaTeX Info: Redefining \tempurl on input line 133.
-LaTeX Info: Redefining \tempurl on input line 151.
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 49.
+) (discussion.tex [9.9 <./Confusion.png>]) (conclusion.tex) (doc.bbl
+LaTeX Info: Redefining \tempurl on input line 81.
+LaTeX Info: Redefining \tempurl on input line 99.
+LaTeX Info: Redefining \tempurl on input line 116.
+LaTeX Info: Redefining \tempurl on input line 145.
+LaTeX Info: Redefining \tempurl on input line 163.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 164.
+ on input line 176.
 
 ("C:\Users\stefa\AppData\Local\Programs\MiKTeX 2.9\tex/latex/libertine\ts1linux
 libertinet-tlf.fd"
@@ -1785,25 +1821,29 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 164.
+(Font)              scaled to size 7.0pt on input line 176.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \tempurl on input line 168.
-LaTeX Info: Redefining \tempurl on input line 185.
-LaTeX Info: Redefining \tempurl on input line 219.
- [9.9]
-LaTeX Info: Redefining \tempurl on input line 237.
-LaTeX Info: Redefining \tempurl on input line 251.
-LaTeX Info: Redefining \tempurl on input line 267.
-LaTeX Info: Redefining \tempurl on input line 283.
-LaTeX Info: Redefining \tempurl on input line 301.
-LaTeX Info: Redefining \tempurl on input line 318.
-LaTeX Info: Redefining \tempurl on input line 335.
-LaTeX Info: Redefining \tempurl on input line 353.
-LaTeX Info: Redefining \tempurl on input line 369.
+LaTeX Info: Redefining \tempurl on input line 180.
+ [10.10]
+LaTeX Info: Redefining \tempurl on input line 197.
+LaTeX Info: Redefining \tempurl on input line 231.
+LaTeX Info: Redefining \tempurl on input line 249.
+LaTeX Info: Redefining \tempurl on input line 263.
+LaTeX Info: Redefining \tempurl on input line 279.
+LaTeX Info: Redefining \tempurl on input line 292.
+LaTeX Info: Redefining \tempurl on input line 308.
+LaTeX Info: Redefining \tempurl on input line 326.
+LaTeX Info: Redefining \tempurl on input line 343.
+LaTeX Info: Redefining \tempurl on input line 360.
+LaTeX Info: Redefining \tempurl on input line 378.
+LaTeX Info: Redefining \tempurl on input line 394.
 )
+
+Class acmart Warning: Some images may lack descriptions.
+
 
 Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 
@@ -1811,37 +1851,37 @@ Class acmart Warning: ACM keywords are mandatory for papers over two pages.
 Class acmart Warning: CCS concepts are mandatory for papers over two pages.
 
 
-Overfull \vbox (1.152pt too high) has occurred while \output is active []
+Overfull \vbox (1.16599pt too high) has occurred while \output is active []
 
- [10.10]
+
+[11.11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
-
-(doc.aux)
+ (doc.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `doc.out' has not changed.
-(rerunfilecheck)             Checksum: CE3897A157A2C9FB046320E235A133E6;1996.
+(rerunfilecheck)             Checksum: 791B0DBA98E60A2D7831417121459120;1996.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31744 strings out of 481565
- 561636 string characters out of 2914179
- 870089 words of memory out of 3000000
- 45717 multiletter control sequences out of 15000+200000
- 705554 words of font info for 338 fonts, out of 3000000 for 9000
+ 31788 strings out of 481565
+ 562601 string characters out of 2914179
+ 870231 words of memory out of 3000000
+ 45735 multiletter control sequences out of 15000+200000
+ 709337 words of font info for 353 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  79i,17n,100p,2636b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/l
 btn_u7qtuy.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
-s/libertine/lbtn_kijugd.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
-onts/enc/dvips/base/8r.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/enc/dvips/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/
-MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{C:/Users/stefa/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/ste
+s/libertine/lbtn_25tcsq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/libertine/lbtn_kijugd.enc}{C:/Users/stefa/AppData/Local/Programs
+/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Users/stefa/AppData/Local/Programs/
+MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{C:/Users/stefa/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{C:/Users/ste
 fa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{C
 :/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/libertine/lbtn_
 nh77jq.enc}{C:/Users/stefa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/li
@@ -1862,9 +1902,9 @@ rograms/MiKTeX 2.9/fonts/type1/public/newtx/txexs.pfb><C:/Users/stefa/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/newtx/txmiaX.pfb><C:/Users/stefa/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/newtx/txsys.pfb><C:/Users/st
 efa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on doc.pdf (10 pages, 1067568 bytes).
+Output written on doc.pdf (11 pages, 1089518 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 52431 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 432 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 56532 words of extra memory for PDF output out of 61914 (max. 10000000)
 

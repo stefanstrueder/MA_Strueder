@@ -50,7 +50,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Ergebnisse und Diskussion}{36}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Ergebnisse und Vergleich der featureabsierten Klassifikatoren}{38}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Ergebnisse und Vergleich der featurebasierten Klassifikatoren}{38}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Konfusionsmatrizen}{38}{section*.46}%
 \defcounter {refsection}{0}\relax 

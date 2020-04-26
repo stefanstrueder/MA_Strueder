@@ -78,29 +78,29 @@ An overview of the number of corrective and bug-introducing commits and the numb
 \hline
  \textbf{Project} & \textbf{\#corrective} & \textbf{\#bug-introducing} & \textbf{\#features}   \\ 
 \hline
-Blender           & 7.760                 & 3.776                      & 1.400                 \\ 
+Blender           & $7.760$                 & $3.776$                      & $1.400$                 \\ 
 \hline
-Busybox           & 1.236                 & 802                        & 628                   \\ 
+Busybox           & $1.236$                 & $802$                        & $628$                   \\ 
 \hline
-Emacs             & 4.269                 & 2.532                      & 718                   \\ 
+Emacs             & $4.269$                 & $2.532$                      & $718$                   \\ 
 \hline
-GIMP              & 1.380                 & 854                        & 204                   \\ 
+GIMP              & $1.380$                 & $854$                        & $204$                   \\ 
 \hline
-Gnumeric          & 1.498                 & 1.191                      & 637                   \\ 
+Gnumeric          & $1.498$                 & $1.191$                      & $637$                   \\ 
 \hline
-gnuplot           & 854                   & 1.215                      & 558                   \\ 
+gnuplot           & $854$                   & $1.215$                      & $558$                   \\ 
 \hline
-Irssi             & 52                    & 22                         & 9                     \\ 
+Irssi             & $52$                    & $22$                         & $9$                     \\ 
 \hline
-libxml2           & 324                   & 88                         & 200                   \\ 
+libxml2           & $324$                   & $88$                         & $200$                   \\ 
 \hline
-lighttpd          & 1.078                 & 929                        & 230                   \\ 
+lighttpd          & $1.078$                 & $929$                        & $230$                   \\ 
 \hline
-MPSolve           & 151                   & 211                        & 54                    \\ 
+MPSolve           & $151$                   & $211$                        & $54$                    \\ 
 \hline
-Parrot            & 3.109                 & 3.072                      & 397                   \\ 
+Parrot            & $3.109$                 & $3.072$                      & $397$                   \\ 
 \hline
-Vim               & 371                   & 696                        & 1.158                 \\ 
+Vim               & $371$                   & $696$                        & $1.158$                 \\ 
 \hline
 \end{tabular}
 }
@@ -278,7 +278,7 @@ The information on the status of a feature is based on the files on which it is 
 
 The individual tables created in this way are then concatenated into a common table, resulting in a comprehensive listing of metrics including the associated labels. This list specifies the characteristics a feature or file must have in order to be classified as "defective" or "clean" and serves as a training basis for classifiers for future predictions.
 
-A special feature is the second file-based data set created for the comparison within the evaluation (J). It is based on the "simple" file-based dataset (I) with the metrics from \cite{Moser2008}, but additionally includes the eleven metrics of the feature-based dataset (G) from \autoref{tab:metrics}. For this purpose, the values of the feature-based metrics were mapped or transferred at file level. This means that for each file of a release referenced in the file-based dataset, it was analyzed which features were mentioned in the respective file. From these features, the corresponding metrics of the feature-based dataset were determined and the average value was calculated and entered into the entered dataset. If no features were mentioned in a file, the value 0 is stored for the feature-based metrics. As mentioned at the beginning of this section, this way the feature-based dataset can be compared with a classical file-based dataset, because the conditions for the comparison have been created. A direct comparison between the different datasets is not practical for the reasons mentioned above.
+A special case is the second file-based data set created for the comparison within the evaluation (J). It is based on the "simple" file-based dataset (I) with the metrics from \cite{Moser2008}, but additionally includes the eleven metrics of the feature-based dataset (G) from \autoref{tab:metrics}. For this purpose, the values of the feature-based metrics were mapped or transferred at file level. This means that for each file of a release referenced in the file-based dataset, it was analyzed which features were mentioned in the respective file. From these features, the corresponding metrics of the feature-based dataset were determined and the average value was calculated and entered into the entered dataset. If no features were mentioned in a file, the value $0$ is stored for the feature-based metrics. As mentioned at the beginning of this section, this way the feature-based dataset can be compared with a classical file-based dataset, because the conditions for the comparison have been created. A direct comparison between the different datasets is not practical for the reasons mentioned above.
 
 Some supplementary key figures for the datasets are listed in \autoref{tab:dataset-numbers}. The row "unique" indicates how many unique rows are contained in the datasets. The datasets created in the manner described above can now be used to train the classifiers. This process will be explained in the next section.
 
@@ -291,15 +291,15 @@ Some supplementary key figures for the datasets are listed in \autoref{tab:datas
 \hline
                      & \begin{tabular}[c]{@{}r@{}}\textbf{feature-based}\\\textbf{data set}\end{tabular} & \begin{tabular}[c]{@{}r@{}}\textbf{"simple" file-}\\\textbf{based data set}\end{tabular} & \begin{tabular}[c]{@{}r@{}}\textbf{"extended" file-}\\\textbf{based data set}\end{tabular}  \\ 
 \hline
-\#attributes         & 11 + label                                                                        & 17 + label                                                                               & 28 + label                                                                                  \\ 
+\#attributes         & $11$ + label                                                                        & $17$ + label                                                                               & $28$ + label                                                                                  \\ 
 \hline
-\#data records       & 14.059                                                                            & 76.986                                                                                   & 76.986                                                                                      \\ 
+\#data records       & $14.059$                                                                            & $76.986$                                                                                   & $76.986$                                                                                      \\ 
 \hline
-~ ~thereof defective & 2.735                                                                             & 1.899                                                                                    & 1.899                                                                                       \\ 
+~ ~thereof defective & $2.735$                                                                             & $1.899$                                                                                    & $1.899$                                                                                       \\ 
 \hline
-~ ~thereof clean     & 11.324                                                                            & 75.087                                                                                   & 75.087                                                                                      \\ 
+~ ~thereof clean     & $11.324$                                                                            & $75.087$                                                                                   & $75.087$                                                                                      \\ 
 \hline
-~ ~thereof unique    & 8.447                                                                             & 52.564                                                                                   & 52.783                                                                                      \\
+~ ~thereof unique    & $8.447$                                                                             & $52.564$                                                                                   & $52.783$                                                                                      \\
 \hline
 \end{tabular}
 }
@@ -338,34 +338,34 @@ Support Vector Machines     & SVM                     \\
 
 All classification algorithms presented above are already integrated in the WEKA tool. It receives as input the final data sets in a proprietary file format. The 13 calculated metrics form the attributes, whereas the target class is represented by the labels "defective" and "clean".
 
-The training process of the classifiers took place within the graphical user interface of WEKA. Before the training, the split ratios for the division of the data sets into training data and test data were determined. It was determined individually for each of the software projects used and is based on the number of releases available in each case. However, care was always taken to approximate the commonly used split ratios of 80:20 and 75:25 as well as 70:30. The training data ranges from 67\% to 80\% of the data records of the data sets. The earlier releases were assigned to the training data. The training data contains the data records of the later releases. An overview of the division into training and test data per software project is shown in \autoref{fig:splits}. The resulting split ratios for the entire data sets are: 69:31 (feature-based data set) and 71:29 ("simple" and extended file-based data set).
+The training process of the classifiers took place within the graphical user interface of WEKA. Before the training, the split ratios for the division of the data sets into training data and test data were determined. It was determined individually for each of the software projects used and is based on the number of releases available in each case. However, care was always taken to approximate the commonly used split ratios of 80:20 and 75:25 as well as $70:30$. The training data ranges from $67\%$ to $80\%$ of the data records of the data sets. The earlier releases were assigned to the training data. The training data contains the data records of the later releases. An overview of the division into training and test data per software project is shown in \autoref{fig:splits}. The resulting split ratios for the entire data sets are: $69:31$ (feature-based data set) and $71:29$ ("simple" and extended file-based data set).
 
 \begin{figure*}[ht]
   \centering
-  \subfloat[][Blender\\split ratio: 73:27]{\includegraphics[width=0.5\linewidth]{release_blender}}
-  \subfloat[][Busybox\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_busybox}}
+  \subfloat[][Blender\\split ratio: $73:27$]{\includegraphics[width=0.5\linewidth]{release_blender}}
+  \subfloat[][Busybox\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_busybox}}
   \qquad
-  \subfloat[][Emacs\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_emacs}}
-  \subfloat[][GIMP\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_gimp}}
+  \subfloat[][Emacs\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_emacs}}
+  \subfloat[][GIMP\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_gimp}}
   \qquad
-  \subfloat[][Gnumeric\\split ratio: 75:25]{\includegraphics[width=0.5\linewidth]{release_gnumeric}}  
-  \subfloat[][gnuplot\\split ratio: 80:20]{\includegraphics[width=0.5\linewidth]{release_gnuplot}}
+  \subfloat[][Gnumeric\\split ratio: $75:25$]{\includegraphics[width=0.5\linewidth]{release_gnumeric}}  
+  \subfloat[][gnuplot\\split ratio: $80:20$]{\includegraphics[width=0.5\linewidth]{release_gnuplot}}
   \qquad
-  \subfloat[][Irssi\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_irssi}}
-  \subfloat[][libxml2\\split ratio: 80:20]{\includegraphics[width=0.5\linewidth]{release_libxml2}}
+  \subfloat[][Irssi\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_irssi}}
+  \subfloat[][libxml2\\split ratio: $80:20$]{\includegraphics[width=0.5\linewidth]{release_libxml2}}
   \qquad
-  \subfloat[][lighttpd\\split ratio: 67:33]{\includegraphics[width=0.5\linewidth]{release_lighttpd}}
-  \subfloat[][MPSolve\\split ratio: 75:25]{\includegraphics[width=0.5\linewidth]{release_mpsolve}}
+  \subfloat[][lighttpd\\split ratio: $67:33$]{\includegraphics[width=0.5\linewidth]{release_lighttpd}}
+  \subfloat[][MPSolve\\split ratio: $75:25$]{\includegraphics[width=0.5\linewidth]{release_mpsolve}}
   \qquad
-  \subfloat[][Parrot\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_parrot}}
-  \subfloat[][Vim\\split ratio: 71:29]{\includegraphics[width=0.5\linewidth]{release_vim}}
+  \subfloat[][Parrot\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_parrot}}
+  \subfloat[][Vim\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_vim}}
   \Description{Overview of the division into training and test data.}
   \caption{Overview of the division into training and test data\label{fig:splits}}
 \end{figure*}
 
-The training of the classifiers in WEKA was carried out for each classification algorithm with the respective standard settings. Only for the algorithms NN and RF further configurations were made. For the RF-algorithm a number of instances of 200 was defined. This means that 200 decision trees perform parallel processing at the same time. There are no clear recommendations on how many instances should be selected. The selected value of 200 was therefore determined independently, taking into account the scope of the data sets and the high number of attributes. For the NN algorithm an independently determined hidden layer structure of \texttt{(13,13,13} was chosen. This means that the artificial neural network has three hidden layer layers of 13 hidden layer neurons each. This allows them to process the large number of attributes more efficiently. Furthermore, no validation data was generated, since it is not intended to perform attribute selection or to adjust further classifier settings.
+The training of the classifiers in WEKA was carried out for each classification algorithm with the respective standard settings. Only for the algorithms NN and RF further configurations were made. For the RF-algorithm a number of instances of $200$ was defined. This means that 200 decision trees perform parallel processing at the same time. There are no clear recommendations on how many instances should be selected. The selected value of $200$ was therefore determined independently, taking into account the scope of the data sets and the high number of attributes. For the NN algorithm an independently determined hidden layer structure of \texttt{(13,13,13} was chosen. This means that the artificial neural network has three hidden layer layers of 13 hidden layer neurons each. This allows them to process the large number of attributes more efficiently. Furthermore, no validation data was generated, since it is not intended to perform attribute selection or to adjust further classifier settings.
 
-An analysis of the training process also showed that the file-based data sets are highly unbalanced with regard to the target class. With a value of about 97\%, there are far more entries assigned to the label "clean". Balancedness, i.e. a balanced ratio (50:50 is not mandatory in the binary case) within the target classes, is however a prerequisite for the correct training of most classifiers. Ignoring this problem can lead to misleading accuracy, since most records are correctly assigned to the over-represented class and is a fundamental problem of accuracy metrics. To solve this problem, the SMOTE algorithm was applied to the file-based datasets \cite{Chawla2002}. The algorithm, whose acronym stands for \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique, performs an oversampling of the underrepresented class \cite{Chawla2002}. Using next-neighbor calculations based on the Euclidean distance between the attribute values of each dataset's datasets, new synthetic datasets are added (oversampling) so that the number of datasets of the relevant class increases \cite{Chawla2002}. In this case, the percentage of synthetic records generated is 2000, so for each existing record of the underrepresented class, 20 additional synthetic records are generated. Thus, the percentage of records with the label "defective" was increased to about 41\%. At the same time the number of records grew by about 60\%. The algorithm was only applied to the training data \cite{Chawla2002} . It is not intended to be applied to the test data so that the "ground truth" is not distorted or falsified. As a result, the metrics of the file-based datasets also changed. These are shown in \autoref{tab:dataset-numbers-new}.
+An analysis of the training process also showed that the file-based data sets are highly unbalanced with regard to the target class. With a value of about $97\%$, there are far more entries assigned to the label "clean". Balancedness, i.e. a balanced ratio ($50:50$ is not mandatory in the binary case) within the target classes, is however a prerequisite for the correct training of most classifiers. Ignoring this problem can lead to misleading accuracy, since most records are correctly assigned to the over-represented class and is a fundamental problem of accuracy metrics. To solve this problem, the SMOTE algorithm was applied to the file-based datasets \cite{Chawla2002}. The algorithm, whose acronym stands for \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique, performs an oversampling of the underrepresented class \cite{Chawla2002}. Using next-neighbor calculations based on the Euclidean distance between the attribute values of each dataset's datasets, new synthetic datasets are added (oversampling) so that the number of datasets of the relevant class increases \cite{Chawla2002}. In this case, the percentage of synthetic records generated is 2000, so for each existing record of the underrepresented class, 20 additional synthetic records are generated. Thus, the percentage of records with the label "defective" was increased to about $41\%$. At the same time the number of records grew by about $60\%$. The algorithm was only applied to the training data \cite{Chawla2002} . It is not intended to be applied to the test data so that the "ground truth" is not distorted or falsified. As a result, the metrics of the file-based datasets also changed. These are shown in \autoref{tab:dataset-numbers-new}.
 
 \begin{table*}[ht]
 \centering
@@ -377,17 +377,17 @@ An analysis of the training process also showed that the file-based data sets ar
 \cline{2-5}
                      & \textbf{before} & \textbf{after}                & \textbf{before} & \textbf{after}                 \\ 
 \hline
-\#attributes         & 17 + label      & 17 + label                    & 28 + label      & 28 + label                     \\ 
+\#attributes         & $17$ + label      & $17$ + label                    & $28$ + label      & $28$ + label                     \\ 
 \hline
-\#data records       & 76.986          & 111.706                       & 76.986          & 112.706                        \\ 
+\#data records       & $76.986$          & $111.706$                       & $76.986$          & $112.706$                        \\ 
 \hline
-~ ~thereof defective & 1.899           & 37.619                        & 1.899           & 37.619                         \\ 
+~ ~thereof defective & $1.899$           & $37.619$                        & $1.899$           & $37.619$                         \\ 
 \hline
-~ ~thereof clean     & 75.087          & 75.087                        & 75.087          & 75.087                         \\ 
+~ ~thereof clean     & $75.087$          & $75.087$                        & $75.087$          & $75.087$                         \\ 
 \hline
-~ ~thereof unique    & 52.564          & 86.155                        & 52.783          & 86.381                         \\ 
+~ ~thereof unique    & $52.564$          & $86.155$                        & $52.783$          & $86.381$                         \\ 
 \hline
-overall split ratio  & 71:29           & 81:19                         & 71:29           & 81:19                          \\
+overall split ratio  & $71:29$           & $81:19$                         & $71:29$           & $81:19$                          \\
 \hline
 \end{tabular}
 \end{table*}
