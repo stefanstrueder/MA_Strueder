@@ -1,0 +1,245 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     dataset_feat_evaluation_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   29
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              faddl
+              freml
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                   Class
+Attribute      defective     clean
+                  (0.41)    (0.59)
+===================================
+comm
+  mean             5.0047    2.4323
+  std. dev.       45.3154   33.7221
+  weight sum        37506     53253
+  precision        0.1744    0.1744
+
+adev
+  mean             0.3587    0.2103
+  std. dev.        2.2732    1.6509
+  weight sum        37506     53253
+  precision        0.0101    0.0101
+
+ddev
+  mean             0.7803    0.5695
+  std. dev.        5.1354    4.6943
+  weight sum        37506     53253
+  precision        0.0281    0.0281
+
+exp
+  mean           532.0251  1475.683
+  std. dev.     9557.9573115631.3288
+  weight sum        37506     53253
+  precision     2819.1766 2819.1766
+
+oexp
+  mean            53.5753   73.3583
+  std. dev.      412.1277 1003.1416
+  weight sum        37506     53253
+  precision        6.1793    6.1793
+
+modd
+  mean              9.214    4.4659
+  std. dev.        83.668   61.4257
+  weight sum        37506     53253
+  precision        0.3121    0.3121
+
+mods
+  mean            21.1129   21.7477
+  std. dev.      107.9247  121.6417
+  weight sum        37506     53253
+  precision        0.2684    0.2684
+
+nloc
+  mean            86.0722   60.3998
+  std. dev.      358.0883  386.0665
+  weight sum        37506     53253
+  precision        2.9399    2.9399
+
+cyco
+  mean             19.009   14.0357
+  std. dev.       83.9295   98.6511
+  weight sum        37506     53253
+  precision        1.0648    1.0648
+
+faddl
+  mean               9.92    7.3627
+  std. dev.       58.6799  154.2474
+  weight sum        37506     53253
+  precision        3.8492    3.8492
+
+freml
+  mean             3.9501    5.4168
+  std. dev.       24.5961   78.2064
+  weight sum        37506     53253
+  precision        1.4155    1.4155
+
+revi
+  mean              5.217    3.4539
+  std. dev.        9.4337    17.969
+  weight sum        37506     53253
+  precision        0.1232    0.1232
+
+refa
+  mean             0.0554    0.0333
+  std. dev.        0.2356     0.274
+  weight sum        37506     53253
+  precision        0.0057    0.0057
+
+bugf
+  mean             1.3279    0.5856
+  std. dev.         2.499    3.0836
+  weight sum        37506     53253
+  precision        0.0132    0.0132
+
+auth
+  mean              2.012    1.5437
+  std. dev.        1.7351     1.476
+  weight sum        37506     53253
+  precision         0.003     0.003
+
+addl
+  mean           724.1238   751.357
+  std. dev.     4907.126779569.0473
+  weight sum        37506     53253
+  precision      521.8868  521.8868
+
+addm
+  mean           163.0636    31.844
+  std. dev.      801.0263  359.6449
+  weight sum        37506     53253
+  precision         1.212     1.212
+
+adda
+  mean           159.1453   31.1485
+  std. dev.      729.4694  354.3158
+  weight sum        37506     53253
+  precision        1.1942    1.1942
+
+reml
+  mean           544.2805  272.2841
+  std. dev.     4600.872414898.9358
+  weight sum        37506     53253
+  precision       86.7564   86.7564
+
+remm
+  mean            95.5856   27.4774
+  std. dev.      633.2897  435.7073
+  weight sum        37506     53253
+  precision         3.055     3.055
+
+rema
+  mean            89.1079   23.6917
+  std. dev.      478.6464  254.4951
+  weight sum        37506     53253
+  precision         1.557     1.557
+
+cchl
+  mean           186.0044  484.1944
+  std. dev.     1345.553679752.9311
+  weight sum        37506     53253
+  precision      605.6325  605.6325
+
+cchm
+  mean           130.4345   36.3593
+  std. dev.      591.9973  543.1243
+  weight sum        37506     53253
+  precision         1.329     1.329
+
+ccha
+  mean            69.6818    7.5132
+  std. dev.      443.8472  387.1359
+  weight sum        37506     53253
+  precision        2.6511    2.6511
+
+maxc
+  mean           178.7631  569.4263
+  std. dev.      489.2028  995.6523
+  weight sum        37506     53253
+  precision        0.1217    0.1217
+
+avgc
+  mean            69.7786  463.2621
+  std. dev.      195.1147   908.601
+  weight sum        37506     53253
+  precision        0.1116    0.1116
+
+aage
+  mean            18.7885   21.1509
+  std. dev.       19.2021   28.1293
+  weight sum        37506     53253
+  precision        0.0047    0.0047
+
+wage
+  mean             18.718   21.1771
+  std. dev.       19.1254   28.1102
+  weight sum        37506     53253
+  precision        0.0047    0.0047
+
+
+
+Time taken to build model: 0.87 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.65 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        3167               14.4302 %
+Incorrectly Classified Instances     18780               85.5698 %
+Kappa statistic                         -0.0015
+Mean absolute error                      0.8545
+Root mean squared error                  0.9223
+Relative absolute error                206.3346 %
+Root relative squared error            222.5906 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,735    0,859    0,004      0,735    0,009      -0,025   0,465     0,007     defective
+                 0,141    0,265    0,990      0,141    0,247      -0,025   0,465     0,994     clean
+Weighted Avg.    0,144    0,269    0,985      0,144    0,246      -0,025   0,465     0,989     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+    83    30 |     a = defective
+ 18750  3084 |     b = clean
+

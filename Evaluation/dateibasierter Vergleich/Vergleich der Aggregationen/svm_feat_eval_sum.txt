@@ -1,0 +1,114 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     dataset_feat_evaluation_sum_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   29
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              faddl
+              freml
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: defective, clean
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.7167 * (normalized) comm
+ +      -2.2078 * (normalized) adev
+ +       2.8501 * (normalized) ddev
+ +       0.3976 * (normalized) exp
+ +       0.9473 * (normalized) oexp
+ +       0.7077 * (normalized) modd
+ +       1.9925 * (normalized) mods
+ +       0.6495 * (normalized) nloc
+ +       0.6927 * (normalized) cyco
+ +       1.4558 * (normalized) faddl
+ +       0.5487 * (normalized) freml
+ +      -0.0419 * (normalized) revi
+ +      -1.3851 * (normalized) refa
+ +     -25.8659 * (normalized) bugf
+ +     -11.2933 * (normalized) auth
+ +       1.6376 * (normalized) addl
+ +     -16.9424 * (normalized) addm
+ +     -20.5574 * (normalized) adda
+ +       1.0854 * (normalized) reml
+ +       0.9137 * (normalized) remm
+ +      -5.3035 * (normalized) rema
+ +       1.2958 * (normalized) cchl
+ +      -5.8677 * (normalized) cchm
+ +      -6.9349 * (normalized) ccha
+ +       0.3787 * (normalized) maxc
+ +      -0.0701 * (normalized) avgc
+ +      -1.8687 * (normalized) aage
+ +       1.9308 * (normalized) wage
+ +       5.0541
+
+Number of kernel evaluations: 387941576 (50.076% cached)
+
+
+
+Time taken to build model: 447.59 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.62 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       20883               95.152  %
+Incorrectly Classified Instances      1064                4.848  %
+Kappa statistic                          0.0255
+Mean absolute error                      0.0485
+Root mean squared error                  0.2202
+Relative absolute error                 11.7062 %
+Root relative squared error             53.1419 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,168    0,044    0,019      0,168    0,034      0,043    0,562     0,008     defective
+                 0,956    0,832    0,996      0,956    0,975      0,043    0,562     0,995     clean
+Weighted Avg.    0,952    0,828    0,990      0,952    0,970      0,043    0,562     0,990     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+    19    94 |     a = defective
+   970 20864 |     b = clean
+

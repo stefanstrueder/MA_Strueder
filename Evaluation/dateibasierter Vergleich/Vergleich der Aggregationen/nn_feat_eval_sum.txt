@@ -1,0 +1,928 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H "13, 13, 13"
+Relation:     dataset_feat_evaluation_sum_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   29
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              faddl
+              freml
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -0.536382971854082
+    Node 28    -1.7325904127117913
+    Node 29    -1.4531750426800596
+    Node 30    -2.76185306252221
+    Node 31    0.4554359798911061
+    Node 32    -0.8464408831688286
+    Node 33    -1.5638527501294357
+    Node 34    -5.985906357671164
+    Node 35    3.978417380183197
+    Node 36    3.197574607548359
+    Node 37    -1.3589191958549451
+    Node 38    -1.5792872309327104
+    Node 39    1.2342138188704537
+    Node 40    -0.9941899501741217
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    0.5363829718540821
+    Node 28    1.7325904127117917
+    Node 29    1.4531750426800587
+    Node 30    2.7618530625222095
+    Node 31    -0.45543597989110607
+    Node 32    0.8464408831688284
+    Node 33    1.5638527501294355
+    Node 34    5.9859063576711655
+    Node 35    -3.978417380183198
+    Node 36    -3.1975746075483595
+    Node 37    1.3589191958549451
+    Node 38    1.5792872309327102
+    Node 39    -1.2342138188704537
+    Node 40    0.9941899501741215
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -3.2996890228556097
+    Attrib comm    3.9610859710913515
+    Attrib adev    4.278033316584335
+    Attrib ddev    3.045569696600886
+    Attrib exp    3.0984778960741326
+    Attrib oexp    3.2003503313010304
+    Attrib modd    3.9210751946218028
+    Attrib mods    3.384566218099271
+    Attrib nloc    3.111466212495141
+    Attrib cyco    3.1204862444624926
+    Attrib faddl    3.237463585596679
+    Attrib freml    3.126169304815899
+    Attrib revi    2.8198978596717814
+    Attrib refa    5.961021553811595
+    Attrib bugf    10.29917927400324
+    Attrib auth    -3.143162129981501
+    Attrib addl    3.2595715031986576
+    Attrib addm    8.361883835407452
+    Attrib adda    7.565470260475834
+    Attrib reml    3.017960387452917
+    Attrib remm    3.0192106493484157
+    Attrib rema    2.2512507126786825
+    Attrib cchl    2.4722812230848614
+    Attrib cchm    6.374116623546732
+    Attrib ccha    2.3439609855185815
+    Attrib maxc    -7.5702675395786745
+    Attrib avgc    -7.491288777088173
+    Attrib aage    -26.140834600078758
+    Attrib wage    -26.700274353330087
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    6.584249492141002
+    Attrib comm    6.288674421055864
+    Attrib adev    10.349651113762372
+    Attrib ddev    1.3051301566966815
+    Attrib exp    -6.711023767733496
+    Attrib oexp    -6.713108004995232
+    Attrib modd    6.348190825091533
+    Attrib mods    -7.020830495029637
+    Attrib nloc    -4.924954031593718
+    Attrib cyco    -5.8439226376985935
+    Attrib faddl    -6.733235230835185
+    Attrib freml    -6.919386444633165
+    Attrib revi    -6.75782282600702
+    Attrib refa    0.7686579763136308
+    Attrib bugf    18.395130515001306
+    Attrib auth    21.67369274528661
+    Attrib addl    -6.623559219968802
+    Attrib addm    33.13670780974382
+    Attrib adda    34.27979450526246
+    Attrib reml    -6.055691740591214
+    Attrib remm    -3.039118314588363
+    Attrib rema    4.349440527385988
+    Attrib cchl    -5.035992986017316
+    Attrib cchm    19.389682443326308
+    Attrib ccha    13.663473057477589
+    Attrib maxc    -37.85492039475959
+    Attrib avgc    -39.426912059294494
+    Attrib aage    28.119881133716937
+    Attrib wage    22.519484887091867
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    5.02770970147502
+    Attrib comm    4.832838434978688
+    Attrib adev    7.27020919073069
+    Attrib ddev    -3.343710316749558
+    Attrib exp    -5.195510279440627
+    Attrib oexp    -5.166943520478134
+    Attrib modd    5.2187810161709765
+    Attrib mods    -5.34177885432213
+    Attrib nloc    -4.581734885540932
+    Attrib cyco    -4.7774211154708315
+    Attrib faddl    -5.051089877245341
+    Attrib freml    -5.2697456997099925
+    Attrib revi    -3.543016886902299
+    Attrib refa    -3.71959653548319
+    Attrib bugf    23.331856865046813
+    Attrib auth    12.925603533264825
+    Attrib addl    -4.932440408376756
+    Attrib addm    19.049308121393235
+    Attrib adda    17.68415189357941
+    Attrib reml    -4.764640431555204
+    Attrib remm    -4.433323618130837
+    Attrib rema    -1.8169903621624026
+    Attrib cchl    -3.7836439224471716
+    Attrib cchm    15.203182999599628
+    Attrib ccha    9.67843103023635
+    Attrib maxc    -15.545168926003349
+    Attrib avgc    -30.707173703983685
+    Attrib aage    29.125243874623788
+    Attrib wage    12.216707786386964
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    2.793933102437357
+    Attrib comm    0.9623787188164615
+    Attrib adev    2.5940890906712393
+    Attrib ddev    -2.440157807539069
+    Attrib exp    -2.862188477014377
+    Attrib oexp    -3.5067920516817566
+    Attrib modd    2.1812249891371938
+    Attrib mods    -4.022148076569582
+    Attrib nloc    -5.425644392882959
+    Attrib cyco    -4.268073959681716
+    Attrib faddl    -2.745637632631273
+    Attrib freml    -3.2609987071280244
+    Attrib revi    5.455050300727518
+    Attrib refa    8.851150789618398
+    Attrib bugf    24.602969923406082
+    Attrib auth    25.77137439610696
+    Attrib addl    -2.363936277226904
+    Attrib addm    -8.142713082432037
+    Attrib adda    -7.468080036919618
+    Attrib reml    -1.8820331785836586
+    Attrib remm    -1.7431293040939044
+    Attrib rema    -3.1138938111119323
+    Attrib cchl    -1.8829520747261341
+    Attrib cchm    28.948804411798324
+    Attrib ccha    -1.786100000582165
+    Attrib maxc    -11.62068591752463
+    Attrib avgc    -28.59803153836621
+    Attrib aage    2.1986377028467827
+    Attrib wage    52.2091979740477
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    5.994150405060171
+    Attrib comm    1.7235716553272722
+    Attrib adev    -2.8875895339834985
+    Attrib ddev    -8.241537187444282
+    Attrib exp    -7.132188937142535
+    Attrib oexp    -5.2027970372478825
+    Attrib modd    6.4306837572783975
+    Attrib mods    -10.710073047855584
+    Attrib nloc    -5.554622852305199
+    Attrib cyco    -6.171363153574249
+    Attrib faddl    -8.032877675043885
+    Attrib freml    -8.12226045532077
+    Attrib revi    -10.025200673812803
+    Attrib refa    -0.7325446937977266
+    Attrib bugf    53.395427820973126
+    Attrib auth    3.8360764062899775
+    Attrib addl    -7.7253261843669705
+    Attrib addm    31.521531442116995
+    Attrib adda    55.21359199910447
+    Attrib reml    -6.5638806939698755
+    Attrib remm    -15.499278759444842
+    Attrib rema    -3.938855603102767
+    Attrib cchl    -5.9675736040318785
+    Attrib cchm    15.59875868680774
+    Attrib ccha    28.154009345281107
+    Attrib maxc    10.162794499894064
+    Attrib avgc    -55.038762225239154
+    Attrib aage    261.6441353813333
+    Attrib wage    -259.8342784572098
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    7.352138969478819
+    Attrib comm    -1.3266764634020412
+    Attrib adev    -9.987419037264743
+    Attrib ddev    -1.9494896932322408
+    Attrib exp    -8.267489319020147
+    Attrib oexp    -0.7462636394955031
+    Attrib modd    4.893027419869603
+    Attrib mods    -5.590366061508929
+    Attrib nloc    -3.997041635393189
+    Attrib cyco    -5.064561353162214
+    Attrib faddl    -8.088078657301935
+    Attrib freml    -8.02259737240723
+    Attrib revi    -2.5842282239452095
+    Attrib refa    9.068250267300648
+    Attrib bugf    20.389302368778242
+    Attrib auth    -1.5775168443686978
+    Attrib addl    -7.6075125587544425
+    Attrib addm    12.925289993776376
+    Attrib adda    37.00054393450171
+    Attrib reml    -5.627540960804077
+    Attrib remm    -14.412639354570103
+    Attrib rema    7.440827111577044
+    Attrib cchl    -6.0186344693421105
+    Attrib cchm    3.71746634286453
+    Attrib ccha    13.187667396038734
+    Attrib maxc    2.2616992808844594
+    Attrib avgc    -7.2719132333734935
+    Attrib aage    290.226885128423
+    Attrib wage    -285.84714896086393
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    12.53239990887713
+    Attrib comm    3.0958270611642336
+    Attrib adev    12.378571644390965
+    Attrib ddev    -7.926966374164468
+    Attrib exp    -12.952285269204026
+    Attrib oexp    -12.54565435851874
+    Attrib modd    2.2362314319857886
+    Attrib mods    -10.451984401258095
+    Attrib nloc    -11.351774093600472
+    Attrib cyco    -12.032596370665582
+    Attrib faddl    -12.731074438542672
+    Attrib freml    -13.142751873993396
+    Attrib revi    -7.29668814022588
+    Attrib refa    0.35771340007257973
+    Attrib bugf    25.929009276378032
+    Attrib auth    9.431688811363246
+    Attrib addl    -12.41010711602446
+    Attrib addm    27.84390117214889
+    Attrib adda    32.64806370303577
+    Attrib reml    -11.295612296199558
+    Attrib remm    -6.021111530547799
+    Attrib rema    7.453222547364206
+    Attrib cchl    -9.50904153333152
+    Attrib cchm    9.766786722804605
+    Attrib ccha    11.501948797005973
+    Attrib maxc    34.38021338803208
+    Attrib avgc    -33.65944570572221
+    Attrib aage    0.24026793704620003
+    Attrib wage    -7.622287979884682
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    2.4639358230970996
+    Attrib comm    -7.5328035384023515
+    Attrib adev    -12.285078894988752
+    Attrib ddev    -2.227841126220424
+    Attrib exp    -2.5541904424601904
+    Attrib oexp    -2.1586560842817955
+    Attrib modd    -2.649522770411348
+    Attrib mods    -3.0512250020873375
+    Attrib nloc    -2.7042114198006
+    Attrib cyco    -2.5670545599001033
+    Attrib faddl    -2.527782712837171
+    Attrib freml    -2.650666757011099
+    Attrib revi    2.639897962291769
+    Attrib refa    5.556344916729003
+    Attrib bugf    17.613594213161917
+    Attrib auth    22.507986789332875
+    Attrib addl    -2.5255033768305095
+    Attrib addm    6.256122756082185
+    Attrib adda    6.361658263572378
+    Attrib reml    -2.389601172855831
+    Attrib remm    -2.3193421531522818
+    Attrib rema    -0.31209777377993164
+    Attrib cchl    -1.8931773699268901
+    Attrib cchm    6.533795091000538
+    Attrib ccha    3.042109494326873
+    Attrib maxc    -5.743391215955602
+    Attrib avgc    -24.74019977520947
+    Attrib aage    23.037320933741597
+    Attrib wage    42.63485775843458
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    5.744942070816656
+    Attrib comm    -4.3142273828586735
+    Attrib adev    -0.042678409063297285
+    Attrib ddev    -7.599454785980372
+    Attrib exp    -5.740453933586696
+    Attrib oexp    -5.75959258172766
+    Attrib modd    -2.7191507232100958
+    Attrib mods    -5.990740706371128
+    Attrib nloc    -5.553781358410119
+    Attrib cyco    -5.615070031087281
+    Attrib faddl    -5.8594240276255976
+    Attrib freml    -5.876772826795541
+    Attrib revi    -3.9124398679997956
+    Attrib refa    0.42931067675520546
+    Attrib bugf    13.124563399212338
+    Attrib auth    17.739452705338962
+    Attrib addl    -5.773976005971546
+    Attrib addm    8.784236649739919
+    Attrib adda    9.856706134133313
+    Attrib reml    -5.668220876021089
+    Attrib remm    -5.4301137813598634
+    Attrib rema    -4.106598991274178
+    Attrib cchl    -4.415219113321763
+    Attrib cchm    9.60459453439163
+    Attrib ccha    6.851980361182135
+    Attrib maxc    -6.004052181723802
+    Attrib avgc    -25.033093921369215
+    Attrib aage    -46.96292256192993
+    Attrib wage    58.66330842305199
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    3.565437287365205
+    Attrib comm    0.0484726899058988
+    Attrib adev    -3.308447860022082
+    Attrib ddev    1.408349887642594
+    Attrib exp    -4.704156138836476
+    Attrib oexp    2.8919751766087898
+    Attrib modd    10.069330440569237
+    Attrib mods    -1.082239252497928
+    Attrib nloc    2.495307864811716
+    Attrib cyco    -0.09340128696913541
+    Attrib faddl    -4.004681148527558
+    Attrib freml    -4.350036787211462
+    Attrib revi    -1.6189150787903224
+    Attrib refa    2.1481487568609925
+    Attrib bugf    11.591039226357346
+    Attrib auth    0.8739926341577279
+    Attrib addl    -3.697610422237885
+    Attrib addm    27.917517395879567
+    Attrib adda    42.25066757116127
+    Attrib reml    -2.3730265168655618
+    Attrib remm    -12.62565744292472
+    Attrib rema    -1.0928778942725166
+    Attrib cchl    -2.93043502530644
+    Attrib cchm    -7.671796383412269
+    Attrib ccha    20.149428206402906
+    Attrib maxc    2.3970944316210723
+    Attrib avgc    1.8129194199833316
+    Attrib aage    350.95238973443134
+    Attrib wage    -347.28533531995015
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    9.841156304874218
+    Attrib comm    -7.751481863266853
+    Attrib adev    -6.5434206926652525
+    Attrib ddev    -7.409055756332225
+    Attrib exp    -9.849031879404535
+    Attrib oexp    -9.666687608960427
+    Attrib modd    -7.404318935422848
+    Attrib mods    -9.467291218199328
+    Attrib nloc    -9.433476994882115
+    Attrib cyco    -9.565651701148811
+    Attrib faddl    -9.871912626546377
+    Attrib freml    -9.87057084218033
+    Attrib revi    -2.712969514030842
+    Attrib refa    -2.769500102427969
+    Attrib bugf    -8.398232311180639
+    Attrib auth    54.045219561348944
+    Attrib addl    -9.810832378632181
+    Attrib addm    -6.820035269838545
+    Attrib adda    -0.31276630836741354
+    Attrib reml    -9.06009673824699
+    Attrib remm    -5.043711763349208
+    Attrib rema    1.1921644351265213
+    Attrib cchl    -7.506371620539751
+    Attrib cchm    -1.0351990848255677
+    Attrib ccha    -0.8089544096903787
+    Attrib maxc    -2.7558806008057553
+    Attrib avgc    7.071075884815205
+    Attrib aage    71.16951548800786
+    Attrib wage    69.88703882677375
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -0.3253564496389129
+    Attrib comm    -1.4565113214496617
+    Attrib adev    0.11990756769097506
+    Attrib ddev    -9.31934627106121
+    Attrib exp    1.411199854356656
+    Attrib oexp    -7.555313753598788
+    Attrib modd    -3.7938517251319075
+    Attrib mods    -4.859412856805481
+    Attrib nloc    -5.386670507886933
+    Attrib cyco    -4.034418876540947
+    Attrib faddl    -1.649238580193539
+    Attrib freml    0.015619899461164773
+    Attrib revi    -19.005669903398687
+    Attrib refa    6.782876274217583
+    Attrib bugf    79.25226771541544
+    Attrib auth    1.4819529724424891
+    Attrib addl    -2.301811573075402
+    Attrib addm    19.629056981360804
+    Attrib adda    -1.243268315182784
+    Attrib reml    -3.7300049978738046
+    Attrib remm    -14.531911448290938
+    Attrib rema    -42.52042199576185
+    Attrib cchl    -1.5046012096718888
+    Attrib cchm    47.09537981761621
+    Attrib ccha    22.432394012718568
+    Attrib maxc    7.770749316649966
+    Attrib avgc    -33.770574983211496
+    Attrib aage    -333.1212383252011
+    Attrib wage    343.19189788511204
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    6.629708055679127
+    Attrib comm    -5.961905350780337
+    Attrib adev    -1.8165201719852213
+    Attrib ddev    -14.669531081616897
+    Attrib exp    -6.579951409374755
+    Attrib oexp    -7.780982120351454
+    Attrib modd    -4.168994002398959
+    Attrib mods    -7.67619839365117
+    Attrib nloc    -6.523680238458731
+    Attrib cyco    -6.857295872177543
+    Attrib faddl    -6.246839008893582
+    Attrib freml    -7.063604409950101
+    Attrib revi    -3.684331659687107
+    Attrib refa    5.638365168063126
+    Attrib bugf    55.07726135665175
+    Attrib auth    60.27758540154896
+    Attrib addl    -6.072540498267849
+    Attrib addm    17.975567238505274
+    Attrib adda    15.35629735482996
+    Attrib reml    -7.403389934018499
+    Attrib remm    -11.124813881223146
+    Attrib rema    -15.094837253993061
+    Attrib cchl    -4.410275793161335
+    Attrib cchm    27.070643079289727
+    Attrib ccha    15.761933545777321
+    Attrib maxc    24.552642233188287
+    Attrib avgc    -71.20542840407752
+    Attrib aage    -66.67368962143303
+    Attrib wage    97.24952115228689
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -7.955233064270607
+    Node 2    3.718984192098271
+    Node 3    0.9873044866722134
+    Node 4    -0.36289114812267415
+    Node 5    -2.6922823300187613
+    Node 6    1.1193075915423136
+    Node 7    0.4987062603936811
+    Node 8    0.4197820654370779
+    Node 9    -2.6461318719650313
+    Node 10    5.4053217504977615
+    Node 11    -1.4337689235453672
+    Node 12    0.5365396663904843
+    Node 13    55.79477342247793
+    Node 14    1.5603464303022414
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -8.02475137868976
+    Node 2    0.6066703499642392
+    Node 3    -2.2605467755586948
+    Node 4    7.265320300376432
+    Node 5    -1.5263076506893352
+    Node 6    9.085031688059166
+    Node 7    9.030863862797618
+    Node 8    -0.029370524098579265
+    Node 9    -3.402284757325918
+    Node 10    4.432701271607504
+    Node 11    7.169606527946846
+    Node 12    -7.161290041621628
+    Node 13    -6.701782088317277
+    Node 14    -0.5372671656239123
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -13.368002256666756
+    Node 2    -3.2813566343677274
+    Node 3    6.324468211464233
+    Node 4    -0.185890354120788
+    Node 5    -2.4485752641871144
+    Node 6    -3.3968926159999757
+    Node 7    -10.848736912508794
+    Node 8    7.263067836789766
+    Node 9    -2.2679706607766015
+    Node 10    -0.14351150101480525
+    Node 11    -8.039707587795961
+    Node 12    -7.7365232147455
+    Node 13    16.264291421564902
+    Node 14    3.386151634667171
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -26.541016837198853
+    Node 2    1.9036236032727367
+    Node 3    5.159580537495651
+    Node 4    -2.0867681286444024
+    Node 5    -3.95839935953496
+    Node 6    3.2002731520700523
+    Node 7    3.5745668808539763
+    Node 8    -3.093399995345515
+    Node 9    -0.9552239007253217
+    Node 10    -22.51507214792167
+    Node 11    39.38098303298906
+    Node 12    -2.694141752801393
+    Node 13    -4.751382001131455
+    Node 14    -0.7027549380530809
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -0.2019324519296603
+    Node 2    4.160400671289673
+    Node 3    4.563483450608293
+    Node 4    -3.2851970514128457
+    Node 5    1.91926306975158
+    Node 6    -17.470251295682562
+    Node 7    -7.472888554434262
+    Node 8    -7.495540412305385
+    Node 9    0.4231978179369368
+    Node 10    14.356244885215263
+    Node 11    -10.916070634069195
+    Node 12    -17.347685550605995
+    Node 13    15.200919689845929
+    Node 14    -1.4535381354203336
+Sigmoid Node 20
+    Inputs    Weights
+    Threshold    -15.714113101608545
+    Node 2    -0.6066506356614094
+    Node 3    2.108348534456015
+    Node 4    -0.8826173336347218
+    Node 5    -3.838126731261934
+    Node 6    3.499452010469181
+    Node 7    21.61964874411649
+    Node 8    -3.450845963564073
+    Node 9    -0.485034966705445
+    Node 10    -4.086336760394214
+    Node 11    3.2720309714383053
+    Node 12    0.4229589940575097
+    Node 13    -19.341116257686938
+    Node 14    2.265737065528372
+Sigmoid Node 21
+    Inputs    Weights
+    Threshold    -25.74221002565876
+    Node 2    1.298623623283552
+    Node 3    3.049974810763046
+    Node 4    1.289012513340696
+    Node 5    1.153867433721096
+    Node 6    44.11295184997384
+    Node 7    4.007810412796212
+    Node 8    -3.160388945909774
+    Node 9    -3.122282558813559
+    Node 10    -16.51107969501181
+    Node 11    1.4427592174530284
+    Node 12    -0.8396436495177452
+    Node 13    -2.45228726761385
+    Node 14    2.06935331409834
+Sigmoid Node 22
+    Inputs    Weights
+    Threshold    -11.390741682640767
+    Node 2    5.109436440218956
+    Node 3    2.8590239033871025
+    Node 4    -0.9034979791539264
+    Node 5    -3.75334685199648
+    Node 6    -1.4022133766769675
+    Node 7    -11.930943674286661
+    Node 8    0.492329120493959
+    Node 9    2.1171478176261957
+    Node 10    2.2483668152424245
+    Node 11    -41.766039386217635
+    Node 12    0.7611800801038977
+    Node 13    8.615520379168778
+    Node 14    1.09818802650776
+Sigmoid Node 23
+    Inputs    Weights
+    Threshold    -29.37605488262458
+    Node 2    5.393495616666506
+    Node 3    0.12285318831481845
+    Node 4    1.056849479147648
+    Node 5    6.018276740110015
+    Node 6    -1.8361405034962166
+    Node 7    -2.187345082443724
+    Node 8    -4.075007698310057
+    Node 9    -2.360989502543052
+    Node 10    -15.612702778877955
+    Node 11    1.5110569755800163
+    Node 12    -0.5555906995744854
+    Node 13    52.194463490060556
+    Node 14    1.723458201072298
+Sigmoid Node 24
+    Inputs    Weights
+    Threshold    -14.389361212690531
+    Node 2    8.65333751678604
+    Node 3    4.4401166779897565
+    Node 4    -3.234922179905723
+    Node 5    -3.5649128995669703
+    Node 6    13.558595104164779
+    Node 7    14.541944784513662
+    Node 8    3.8243311781434928
+    Node 9    -3.957664011558311
+    Node 10    -2.9976130307410824
+    Node 11    10.4767514400221
+    Node 12    -14.261265550798203
+    Node 13    -10.819288812115843
+    Node 14    1.6892254377463245
+Sigmoid Node 25
+    Inputs    Weights
+    Threshold    -8.767628453323672
+    Node 2    1.234870441635068
+    Node 3    -5.8187922930363145
+    Node 4    3.4736921554536417
+    Node 5    -2.6559044535888185
+    Node 6    -3.5506580307765128
+    Node 7    -15.881585263382762
+    Node 8    3.222852722600567
+    Node 9    -11.106881483205841
+    Node 10    6.827647319402802
+    Node 11    -8.037917679934882
+    Node 12    -3.2393609448138556
+    Node 13    15.239937153829857
+    Node 14    4.601839073517082
+Sigmoid Node 26
+    Inputs    Weights
+    Threshold    -13.256591693018855
+    Node 2    0.0017555256747544018
+    Node 3    15.78133899038841
+    Node 4    7.369227803121372
+    Node 5    -12.316598825405215
+    Node 6    6.597892965752641
+    Node 7    13.363564750958512
+    Node 8    1.0211859938369174
+    Node 9    -3.8707705411682345
+    Node 10    -4.092979663027705
+    Node 11    9.495586488465513
+    Node 12    -4.40164917675476
+    Node 13    -4.211636350290219
+    Node 14    0.2184673355583497
+Sigmoid Node 27
+    Inputs    Weights
+    Threshold    -10.006891810538955
+    Node 2    2.463325253435408
+    Node 3    3.5146441903801535
+    Node 4    1.6191690345268765
+    Node 5    0.5829249475337744
+    Node 6    12.712221910450003
+    Node 7    4.342971476756189
+    Node 8    -0.5936052813572976
+    Node 9    -3.875364489047372
+    Node 10    -3.8963013680283836
+    Node 11    13.489307445222622
+    Node 12    -10.955457522375692
+    Node 13    -12.862496792418167
+    Node 14    -2.7227560880672743
+Sigmoid Node 28
+    Inputs    Weights
+    Threshold    -2.267956465032422
+    Node 15    0.592504767007317
+    Node 16    -1.5829507817229491
+    Node 17    -0.04566872715750282
+    Node 18    -1.0206373922738794
+    Node 19    -0.4093090586227223
+    Node 20    -4.52617161575784
+    Node 21    -3.2252822348184114
+    Node 22    1.3327711394560375
+    Node 23    4.25755416891301
+    Node 24    0.2900404631374277
+    Node 25    -14.817518470503364
+    Node 26    -1.7827149028959575
+    Node 27    -5.821672568459455
+Sigmoid Node 29
+    Inputs    Weights
+    Threshold    -4.03202056912128
+    Node 15    0.614837395937923
+    Node 16    1.7383707695831634
+    Node 17    -3.376927501557412
+    Node 18    -9.57330248391425
+    Node 19    -0.686742226708659
+    Node 20    -3.205811422518257
+    Node 21    -7.632714526529052
+    Node 22    -4.225166732419034
+    Node 23    -3.85937961523307
+    Node 24    -4.009075428213191
+    Node 25    -2.581887034810975
+    Node 26    -5.7260955970219625
+    Node 27    2.8406280417105245
+Sigmoid Node 30
+    Inputs    Weights
+    Threshold    -2.4731634740998136
+    Node 15    -1.0779522113537967
+    Node 16    -1.1028788691989284
+    Node 17    -8.272026002286598
+    Node 18    -3.1294323366195433
+    Node 19    0.7498849519028234
+    Node 20    -2.615441062982624
+    Node 21    -2.1974854223916047
+    Node 22    -1.4363168374736035
+    Node 23    6.747202837573818
+    Node 24    -2.461926498337106
+    Node 25    -3.1785927546493506
+    Node 26    1.5522149897007436
+    Node 27    -0.21476610009216496
+Sigmoid Node 31
+    Inputs    Weights
+    Threshold    -5.012809581800101
+    Node 15    -1.6913677656841588
+    Node 16    4.333461679149727
+    Node 17    0.43398401493762034
+    Node 18    2.5535371857457263
+    Node 19    -6.730584727126802
+    Node 20    6.279296574400824
+    Node 21    6.12141488259022
+    Node 22    -0.8563766076262963
+    Node 23    -8.639368318563383
+    Node 24    1.2742828740726513
+    Node 25    -8.057085323667362
+    Node 26    3.873985914421672
+    Node 27    2.306252969384551
+Sigmoid Node 32
+    Inputs    Weights
+    Threshold    -10.728493381742606
+    Node 15    -0.13301264494530424
+    Node 16    5.368103667665435
+    Node 17    3.0766375649429376
+    Node 18    -4.69261357963836
+    Node 19    -1.293865130317919
+    Node 20    -2.9716163478591935
+    Node 21    0.5581775466545783
+    Node 22    -0.2031567386099657
+    Node 23    -3.801027792411771
+    Node 24    2.514518130287612
+    Node 25    3.300810702825788
+    Node 26    0.8262969719214694
+    Node 27    -5.789259776580294
+Sigmoid Node 33
+    Inputs    Weights
+    Threshold    2.8132583553417616
+    Node 15    -0.8198834545741794
+    Node 16    -3.8952476198598878
+    Node 17    -7.4138196972127925
+    Node 18    -4.3702987945836815
+    Node 19    -5.328102373741492
+    Node 20    -2.027557603329762
+    Node 21    -2.381287107257672
+    Node 22    0.6516575595171783
+    Node 23    -12.050669967389343
+    Node 24    -5.035875403130513
+    Node 25    -0.6141572619674052
+    Node 26    -5.457250547097283
+    Node 27    2.278682770419734
+Sigmoid Node 34
+    Inputs    Weights
+    Threshold    -0.17088678223777592
+    Node 15    -7.583240392834921
+    Node 16    -10.786146962237227
+    Node 17    -1.1040490047221496
+    Node 18    0.2757533010179714
+    Node 19    -4.326872820492147
+    Node 20    -9.222525461758606
+    Node 21    -2.562840340283324
+    Node 22    -2.7133461467930586
+    Node 23    -4.992835069161665
+    Node 24    -2.667560506666056
+    Node 25    4.579614590589085
+    Node 26    -4.949300390512628
+    Node 27    5.291640624165836
+Sigmoid Node 35
+    Inputs    Weights
+    Threshold    -11.78348013956648
+    Node 15    2.070417582734956
+    Node 16    -1.8128544272316514
+    Node 17    2.2833113803239726
+    Node 18    -4.285702152604271
+    Node 19    1.2868810959915178
+    Node 20    -2.063648873960119
+    Node 21    -2.482975326429064
+    Node 22    3.8956776853453747
+    Node 23    5.541191792967782
+    Node 24    -3.684382860072128
+    Node 25    2.9809459967091843
+    Node 26    5.077465591331515
+    Node 27    -1.2116184576272964
+Sigmoid Node 36
+    Inputs    Weights
+    Threshold    -2.8248170814297042
+    Node 15    -3.7360707638854866
+    Node 16    1.4717817394940973
+    Node 17    2.3332682979770905
+    Node 18    -17.33329291791861
+    Node 19    -4.5308725247822625
+    Node 20    2.542262422287791
+    Node 21    4.269412758885455
+    Node 22    -2.9088747489014897
+    Node 23    -4.15334092066995
+    Node 24    -0.7441884983436698
+    Node 25    -7.451073363718343
+    Node 26    1.644598236427178
+    Node 27    0.745698630088992
+Sigmoid Node 37
+    Inputs    Weights
+    Threshold    -5.521844611308094
+    Node 15    0.03185989706246829
+    Node 16    3.668116163370696
+    Node 17    -3.097329339260008
+    Node 18    -6.009439342664198
+    Node 19    0.43532888652291796
+    Node 20    -2.480225870907102
+    Node 21    -4.830713395364938
+    Node 22    -1.5907250935649386
+    Node 23    -5.031361937664936
+    Node 24    -1.8485915357044453
+    Node 25    -1.3462354109398402
+    Node 26    0.533887837288083
+    Node 27    -2.191624589300584
+Sigmoid Node 38
+    Inputs    Weights
+    Threshold    -2.9522952606812587
+    Node 15    -0.6440810677543947
+    Node 16    0.792493642043551
+    Node 17    -6.575150516439694
+    Node 18    -3.5953045325789175
+    Node 19    -0.3398027685655685
+    Node 20    -0.9938008846542106
+    Node 21    -2.08971953647076
+    Node 22    -1.282579150888033
+    Node 23    -5.170944275574289
+    Node 24    -1.68600389447733
+    Node 25    -1.0250626260471583
+    Node 26    -2.509563952510672
+    Node 27    -0.8973609871433159
+Sigmoid Node 39
+    Inputs    Weights
+    Threshold    -12.157804596203524
+    Node 15    8.15612450847538
+    Node 16    -0.4631754607421235
+    Node 17    2.3839140817856763
+    Node 18    -7.096466742030747
+    Node 19    2.9443958204407954
+    Node 20    -7.773530027991599
+    Node 21    -7.609541225182396
+    Node 22    4.794099853740663
+    Node 23    7.903768135858958
+    Node 24    -4.283066093531912
+    Node 25    0.25156533208446685
+    Node 26    -4.626667624526457
+    Node 27    -1.4385924598384137
+Sigmoid Node 40
+    Inputs    Weights
+    Threshold    -3.9283774111263305
+    Node 15    -4.672750815223057
+    Node 16    0.5335391305246056
+    Node 17    -8.125115013831307
+    Node 18    2.527865413775876
+    Node 19    4.362836011856774
+    Node 20    -8.51715731279991
+    Node 21    -0.7570594952850689
+    Node 22    -0.8851177117852047
+    Node 23    -3.329410713640047
+    Node 24    1.7219777166322126
+    Node 25    -0.10699369772531798
+    Node 26    -3.388655496819922
+    Node 27    -8.310940915022286
+Class defective
+    Input
+    Node 0
+Class clean
+    Input
+    Node 1
+
+
+Time taken to build model: 1757.6 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.67 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       21317               97.1294 %
+Incorrectly Classified Instances       630                2.8706 %
+Kappa statistic                         -0.0022
+Mean absolute error                      0.2958
+Root mean squared error                  0.3348
+Relative absolute error                 71.4213 %
+Root relative squared error             80.8045 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,018    0,024    0,004      0,018    0,006      -0,003   0,463     0,005     defective
+                 0,976    0,982    0,995      0,976    0,985      -0,003   0,463     0,995     clean
+Weighted Avg.    0,971    0,977    0,990      0,971    0,980      -0,003   0,463     0,990     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+     2   111 |     a = defective
+   519 21315 |     b = clean
+

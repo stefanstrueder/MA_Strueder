@@ -1,0 +1,103 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     dataset_feat_evaluation_sum_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   29
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              faddl
+              freml
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+label = 
+
+        -0.0794 (normalized) comm
+ +      -4.4412 (normalized) adev
+ +       6.4932 (normalized) ddev
+ +       2.1781 (normalized) exp
+ +       2.6194 (normalized) oexp
+ +       1.974  (normalized) modd
+ +       7.9997 (normalized) mods
+ +       2.0082 (normalized) nloc
+ +       1.263  (normalized) cyco
+ +       4.3963 (normalized) faddl
+ +       3.0554 (normalized) freml
+ +      10.2577 (normalized) revi
+ +      -1.037  (normalized) refa
+ +     -69.4949 (normalized) bugf
+ +      -6.476  (normalized) auth
+ +       5.8337 (normalized) addl
+ +     -27.9152 (normalized) addm
+ +     -29.3367 (normalized) adda
+ +       7.0103 (normalized) reml
+ +      12.1865 (normalized) remm
+ +       6.5832 (normalized) rema
+ +       5.1718 (normalized) cchl
+ +       3.032  (normalized) cchm
+ +     -14.5948 (normalized) ccha
+ +       0.0511 (normalized) maxc
+ +       0.936  (normalized) avgc
+ +      -1.8937 (normalized) aage
+ +       2.2201 (normalized) wage
+ +       7.84  
+
+Time taken to build model: 17.85 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.19 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       20618               93.9445 %
+Incorrectly Classified Instances      1329                6.0555 %
+Kappa statistic                          0.0214
+Mean absolute error                      0.0606
+Root mean squared error                  0.2461
+Relative absolute error                 14.6217 %
+Root relative squared error             59.3921 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,186    0,057    0,017      0,186    0,031      0,040    0,565     0,007     defective
+                 0,943    0,814    0,996      0,943    0,969      0,040    0,565     0,996     clean
+Weighted Avg.    0,939    0,810    0,991      0,939    0,964      0,040    0,565     0,990     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+    21    92 |     a = defective
+  1237 20597 |     b = clean
+

@@ -1,0 +1,139 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     dataset_feat_evaluation_train-weka.filters.supervised.instance.SMOTE-C0-K5-P2000.0-S1
+Instances:    90759
+Attributes:   29
+              comm
+              adev
+              ddev
+              exp
+              oexp
+              modd
+              mods
+              nloc
+              cyco
+              faddl
+              freml
+              revi
+              refa
+              bugf
+              auth
+              addl
+              addm
+              adda
+              reml
+              remm
+              rema
+              cchl
+              cchm
+              ccha
+              maxc
+              avgc
+              aage
+              wage
+              label
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                 Class
+Variable     defective
+======================
+comm            0.0014
+adev            0.0495
+ddev           -0.0203
+exp                 -0
+oexp                 0
+modd           -0.0001
+mods           -0.0004
+nloc                 0
+cyco            0.0002
+faddl           0.0002
+freml          -0.0003
+revi           -0.0291
+refa            0.0583
+bugf            0.1951
+auth            0.1068
+addl                -0
+addm            0.0003
+adda             0.001
+reml                -0
+remm           -0.0004
+rema            0.0003
+cchl                -0
+cchm           -0.0004
+ccha            0.0014
+maxc            0.0005
+avgc           -0.0023
+aage            0.0013
+wage             -0.01
+Intercept      -0.2483
+
+
+Odds Ratios...
+                 Class
+Variable     defective
+======================
+comm            1.0014
+adev            1.0507
+ddev            0.9799
+exp                  1
+oexp                 1
+modd            0.9999
+mods            0.9996
+nloc                 1
+cyco            1.0002
+faddl           1.0002
+freml           0.9997
+revi            0.9713
+refa              1.06
+bugf            1.2155
+auth            1.1127
+addl                 1
+addm            1.0003
+adda             1.001
+reml                 1
+remm            0.9996
+rema            1.0003
+cchl                 1
+cchm            0.9996
+ccha            1.0014
+maxc            1.0005
+avgc            0.9978
+aage            1.0013
+wage            0.9901
+
+
+Time taken to build model: 5.07 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.16 seconds
+
+=== Summary ===
+
+Correctly Classified Instances       19288               87.8844 %
+Incorrectly Classified Instances      2659               12.1156 %
+Kappa statistic                          0.0138
+Mean absolute error                      0.3819
+Root mean squared error                  0.4093
+Relative absolute error                 92.2063 %
+Root relative squared error             98.7915 %
+Total Number of Instances            21947     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,283    0,118    0,012      0,283    0,024      0,037    0,615     0,014     defective
+                 0,882    0,717    0,996      0,882    0,935      0,037    0,615     0,996     clean
+Weighted Avg.    0,879    0,714    0,991      0,879    0,931      0,037    0,615     0,991     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+    32    81 |     a = defective
+  2578 19256 |     b = clean
+
