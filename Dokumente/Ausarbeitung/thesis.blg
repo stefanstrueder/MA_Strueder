@@ -1,35 +1,35 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'thesis.blg'
-[138] biber-MSWIN64:322> INFO - === 
-[205] Biber.pm:415> INFO - Reading 'thesis.bcf'
-[474] Biber.pm:943> INFO - Found 42 citekeys in bib section 0
-[506] Biber.pm:4256> INFO - Processing section 0
-[507] Utils.pm:75> INFO - Globbing data source 'literature.bib'
-[540] Utils.pm:91> INFO - Globbed data source 'literature.bib' to literature.bib
-[564] Biber.pm:4455> INFO - Looking for bibtex format file 'literature.bib' for section 0
-[571] bibtex.pm:1653> INFO - LaTeX decoding ...
-[774] bibtex.pm:1471> INFO - Found BibTeX data source 'literature.bib'
-[900] Utils.pm:304> WARN - month field 'feb' in entry 'Son2019' is not an integer - this will probably not sort properly.
-[930] Utils.pm:304> WARN - month field 'jun' in entry 'Thuem2014' is not an integer - this will probably not sort properly.
-[1025] Utils.pm:304> WARN - month field 'may' in entry 'Medeiros2018' is not an integer - this will probably not sort properly.
-[1054] Utils.pm:304> WARN - month field 'jul' in entry 'Queiroz2015' is not an integer - this will probably not sort properly.
-[1082] Utils.pm:304> WARN - month field 'aug' in entry 'Alam2013' is not an integer - this will probably not sort properly.
-[1087] Utils.pm:304> WARN - month field 'jun' in entry 'Zhang2016' is not an integer - this will probably not sort properly.
-[1098] Utils.pm:304> WARN - month field 'jul' in entry 'Linder2004' is not an integer - this will probably not sort properly.
-[1116] Utils.pm:304> WARN - month field 'sep' in entry 'Peng2002' is not an integer - this will probably not sort properly.
-[1150] Utils.pm:304> WARN - month field 'June' in entry 'Gandhi2018' is not an integer - this will probably not sort properly.
-[1179] Utils.pm:304> WARN - month field 'may' in entry 'Zimmermann2007' is not an integer - this will probably not sort properly.
-[1188] Utils.pm:304> WARN - month field 'may' in entry 'Rahman2013' is not an integer - this will probably not sort properly.
-[1199] Utils.pm:304> WARN - month field 'jul' in entry 'Sliwerski2005' is not an integer - this will probably not sort properly.
-[1221] Utils.pm:304> WARN - month field 'apr' in entry 'Hunsen2015' is not an integer - this will probably not sort properly.
-[1295] Utils.pm:304> WARN - month field 'jun' in entry 'Chawla2002' is not an integer - this will probably not sort properly.
-[1334] Utils.pm:304> WARN - month field 'jul' in entry 'Dhiauddin2012' is not an integer - this will probably not sort properly.
-[1346] Utils.pm:304> WARN - month field 'aug' in entry 'Wang2012' is not an integer - this will probably not sort properly.
-[1359] Utils.pm:304> WARN - month field 'jul' in entry 'Li2017' is not an integer - this will probably not sort properly.
-[1540] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1540] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1541] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[1541] Biber.pm:4090> INFO - No sort tailoring available for locale 'de-DE'
-[1655] bbl.pm:652> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[1707] bbl.pm:755> INFO - Output to thesis.bbl
-[1708] Biber.pm:128> INFO - WARNINGS: 17
+[1] Config.pm:307> INFO - Logfile is 'thesis.blg'
+[125] biber-MSWIN64:322> INFO - === 
+[154] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[378] Biber.pm:943> INFO - Found 42 citekeys in bib section 0
+[409] Biber.pm:4256> INFO - Processing section 0
+[410] Utils.pm:75> INFO - Globbing data source 'literature.bib'
+[426] Utils.pm:91> INFO - Globbed data source 'literature.bib' to literature.bib
+[450] Biber.pm:4455> INFO - Looking for bibtex format file 'literature.bib' for section 0
+[457] bibtex.pm:1653> INFO - LaTeX decoding ...
+[627] bibtex.pm:1471> INFO - Found BibTeX data source 'literature.bib'
+[733] Utils.pm:304> WARN - month field 'feb' in entry 'Son2019' is not an integer - this will probably not sort properly.
+[747] Utils.pm:304> WARN - month field 'jun' in entry 'Thuem2014' is not an integer - this will probably not sort properly.
+[813] Utils.pm:304> WARN - month field 'may' in entry 'Medeiros2018' is not an integer - this will probably not sort properly.
+[842] Utils.pm:304> WARN - month field 'jul' in entry 'Queiroz2015' is not an integer - this will probably not sort properly.
+[870] Utils.pm:304> WARN - month field 'aug' in entry 'Alam2013' is not an integer - this will probably not sort properly.
+[875] Utils.pm:304> WARN - month field 'jun' in entry 'Zhang2016' is not an integer - this will probably not sort properly.
+[885] Utils.pm:304> WARN - month field 'jul' in entry 'Linder2004' is not an integer - this will probably not sort properly.
+[905] Utils.pm:304> WARN - month field 'sep' in entry 'Peng2002' is not an integer - this will probably not sort properly.
+[927] Utils.pm:304> WARN - month field 'June' in entry 'Gandhi2018' is not an integer - this will probably not sort properly.
+[944] Utils.pm:304> WARN - month field 'may' in entry 'Zimmermann2007' is not an integer - this will probably not sort properly.
+[952] Utils.pm:304> WARN - month field 'may' in entry 'Rahman2013' is not an integer - this will probably not sort properly.
+[962] Utils.pm:304> WARN - month field 'jul' in entry 'Sliwerski2005' is not an integer - this will probably not sort properly.
+[992] Utils.pm:304> WARN - month field 'apr' in entry 'Hunsen2015' is not an integer - this will probably not sort properly.
+[1056] Utils.pm:304> WARN - month field 'jun' in entry 'Chawla2002' is not an integer - this will probably not sort properly.
+[1080] Utils.pm:304> WARN - month field 'jul' in entry 'Dhiauddin2012' is not an integer - this will probably not sort properly.
+[1090] Utils.pm:304> WARN - month field 'aug' in entry 'Wang2012' is not an integer - this will probably not sort properly.
+[1101] Utils.pm:304> WARN - month field 'jul' in entry 'Li2017' is not an integer - this will probably not sort properly.
+[1201] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1201] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1201] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[1202] Biber.pm:4090> INFO - No sort tailoring available for locale 'de-DE'
+[1292] bbl.pm:652> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[1341] bbl.pm:755> INFO - Output to thesis.bbl
+[1341] Biber.pm:128> INFO - WARNINGS: 17

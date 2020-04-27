@@ -3,7 +3,7 @@
 \chapter{Hintergrund}
 \label{background}
 
-Dieses Kapitel dient zur Einführung in die dieser Arbeit zugrundeliegenden Themen und hat das Ziel, Basiswissen für den weiteren Verlauf der Ausarbeitung aufzubauen. Dazu wird zunächst die featurebasierte Softwareentwicklung erläutert, ehe dann der Themenbereich des Machine Learnings vorgestellt wird. Dazu werden die Klassifikation und die Fehlervorhersage mittels Machine Learning erläutert.
+Dieses Kapitel dient zur Einführung in die dieser Arbeit zugrundeliegenden Themen und hat das Ziel, Basiswissen für den weiteren Verlauf der Ausarbeitung aufzubauen. Dazu wird zunächst die featurebasierte Softwareentwicklung erläutert, ehe dann der Themenbereich des Machine Learnings vorgestellt wird. Dazu werden die Klassifikation und die Fehlervorhersage mittels Machine Learning erläutert. Abgeschlossen wird das Kapitel mit einer Übersicht über Metriken, anhand welcher die Performanz von Klassifikatoren gemessen werden kann.
 \smallskip
 \hrule
 
@@ -236,5 +236,65 @@ OEXP & \begin{tabular}[c]{@{}l@{}}\glqq Erfahrung*\grqq{} des Entwicklers, der a
 Wie in \autoref{fig:ml2} dargestellt ist, wird für jeden Klassifikationsalgorithmus ein Klassifikator erstellt, welcher anschließend getestet und evaluiert wird. Dazu werden die jeweiligen Klassifikatoren auf das Testdatenset angewendet, ohne jedoch die Werte der Zielklassen mit anzugeben. Diese werden im Anschluss an den Klassifikationsvorgang mit den vorhergesagten Werten auf Übereinstimmung verglichen. Anhand dieses Vergleiches können die Genauigkeit sowie weitere Metriken zur Bewertung der Leistung der Klassifikatoren gemessen werden. Eine Übersicht von Evaluationsmetriken kann in \hyperref[eval-metrics]{Abschnitt 5.2.1} gefunden werden.
 
 Die so erstellten Klassifikatoren können dann zur Vorhersage von neuen und unbekannten Daten genutzt werden, um defekte Features eines zukünftigen Releases zu identifizieren. Dazu müssen die fünf zuvor genannten Prozessmetriken dieser Daten berechnet werden. 
+
+\section{Metriken zur Evaluation von Klassifikatoren}
+\label{eval-metrics}
+
+Eine klassische Methode zur Evaluation und zum Vergleich von Klassifikatoren, sogenannte Evaluationsmetriken, entstammen dem Themengebiet des Information Retrieval und gelten als Standardmesswerte für ihren Einsatzzweck \cite{Sammut2017}. Die meisten dieser Metriken lassen sich anhand von Werten einer sogenannten Konfusionsmatrix berechnen und messen allesamt die Performanz der Vorhersagen von Klassifikatoren unter verschiedenen Betrachtungsweisen. Im Falle einer binären Klassifikation, wie sie auch dieser Arbeit zugrunde liegt, besteht diese Matrix aus vier Gruppen, deren Werte angeben, ob der jeweilige Klassifikator ein Objekt korrekt oder falsch einer der beiden Zielklassen zuordnen konnte \cite{Sammut2017}. Im Zusammenhang mit solchen Matrizen werden die beiden Zielklassen \glqq positiv\grqq{} und \glqq negativ\grqq{} genannt. Für diese Arbeit werden die positive Klasse dem Label \glqq defekt\grqq und die negative Klasse dem Label \glqq fehlerfrei\grqq{} zugeordnet. Die Form einer allgemeinen Konfusionsmatrix ist in \autoref{fig:confu} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/Confusion}
+    \caption{allgemeine Konfusionsmatrix\label{fig:confu}}
+\end{figure}
+
+Anhand der Werte der Zuordnungen zu den zuvor genannten Gruppen können unter anderem die folgenden Evaluationsmetriken berechnet werden, welche auch in dieser Arbeit zur Anwendung kommen:
+
+\begin{itemize}
+\item Treffergenauigkeit (Accuracy)
+\\Dieser Wert misst die Treffergenauigkeit der Vorhersagen des Klassifikators und gibt an, inwieweit dessen Vorhersagen mit der modellierten Realität übereinstimmen \cite{Sammut2017}. Die Formel zur Berechnung der Accuracy lautet:
+\\\[\text{Accuracy} = \frac{TP+TN}{TP+TN+FP+FN}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. $100\%$ stellen damit die bestmögliche Accuracy dar. In diesem Fall werden alle Vorhersagen korrekt, mit der Realität übereinstimmend, getroffen.
+\item Echt-Positiv-Rate / Trefferquote (TP-Rate / Recall)
+\\Dieser Wert gibt den Anteil der korrekt als positiv gewerteten Vorhersagen sämtlicher als positiv gewerteter Vorhersagen an \cite{Alpaydin2010}. Die Formel zur Berechnung der TP-Rate bzw. des Recalls lautet:
+\\\[\text{TP-Rate} = \frac{TP}{TP+FN}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. $100\%$ stellen damit die bestmögliche TP-Rate bzw. den bestmöglichen Recall dar. In diesem Fall werden alle positiven Vorhersagen korrekt getroffen. Beide Begriffe werden parallel für die Berechnung der gezeigten Formel verwendet.
+\item Positiver Vorhersagewert (Precision)
+\\ Dieser Wert gibt die Anzahl der positiven Vorhersagen an, die auch tatsächlich zur positiven Klasse gehören \cite{Sammut2017}. Die Formel zur Bestimmung der Precision lautet:
+\\\[\text{Precision} = \frac{TP}{TP+FP}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. $100\%$ stellen damit die bestmögliche Precision dar. In diesem Fall werden nur korrekte positive Vorhersagen getroffen.
+\item F-Maß (F-Score)
+\\ Dieser Wert berechnet das harmonische Mittel der Werte Precision und Recall und liegt somit zwischen diesen beiden Werten, jedoch näher am kleineren Wert \cite{Sammut2017}. Die Formel zur Berechnung des F-Scores lautet:
+\\\[\text{F-Score} = \frac{2TP}{2TP+FP+FN}\]
+Das Ergebnis der Berechnung ist ein prozentualer Wert. $100\%$ stellen damit den bestmöglichen F-Score dar. In diesem Fall wurden alle positiven Vorhersagen korrekt getroffen.
+\end{itemize}
+
+\label{roc-def}
+Um eine weiteren Messwert für die Vorhersageperformanz und die Qualität der Vorhersagen zu erhalten, können die sogenannten ROC-Kurven (englisch: ROC curves, ROC = Receiver Operating Characteristic, deutsch: Betriebsverhalten des Empfängers) der einzelnen Klassifikatoren ermittelt werden. Diese besitzen den Vorteil, dass sie einfach und verständlich die Performanz der Klassifikatoren abbilden und die Qualität der Vorhersagen \glqq sichtbar\grqq{} machen. Dazu genügt es lediglich, Standardverläufe der Kurven zu kennen, die im weiteren Verlauf exemplarisch anhand eines Beispiels dargestellt werden.
+Bei den ROC-Kurven handelt es sich um Wahrscheinlichkeitsverteilungen, die das Verhältnis zwischen der TP-Rate (y-Achse) und der Falsch-Positiv-Rate (x-Achse) beschreiben \cite{Sammut2017,Narkhede2018}. Die Falsch-Positiv-Rate (FP-Rate) gibt dabei den Anteil der fälschlicherweise als positiv gewerteten Vorhersagen an \cite{Alpaydin2010}. Sie wird mittels folgender Formel berechnet:
+\\\[\text{FP-Rate} = \frac{FP}{FP+TN}\]
+
+Wie bei allen Metriken ist das Ergebnis der FP-Rate ein prozentualer Wert. Im Gegensatz zu den vorherigen Metriken, sollte dieses Ergebnis bestenfalls möglichst gering ausfallen. Sowohl die TP-Rate als auch die FP-Rate geben nur singuläre Werte an, aus welchen sich keine Graphen herleiten lassen. Jeder Klassifikator errechnet jedoch im Rahmen der Vorhersage eines Datenpunktes Wahrscheinlichkeiten, die die Zugehörigkeit zu den Werten der Zielklasse darstellen \cite{KNIMETV2019}. In der Regel wird ein Datenpunkt der positiven Klasse zugeordnet, wenn die Wahrscheinlichkeit einen Schwellenwert von $0,5$ übersteigt - Datenpunkte, die diesen Schwellenwert unterschreiten werden hingegen der negativen Klasse zugeordnet \cite{KNIMETV2019}. Wird der Schwellenwert erhöht, so werden weniger Datenpunkte der positiven Klasse zugeordnet, wohingegen im Falle einer Absenkung des Schwellenwertes mehr Datenpunkte der positiven Klasse zugeordnet werden \cite{KNIMETV2019}. Für die Erstellung der ROC-Kurven werden somit die Werte der TP-Rate und der FP-Rate unter der Berücksichtigung der Schwellenwerte im Bereich von $0,0$ bis $1,0$ gegenübergestellt.
+
+Eine weitere Metrik, die in Verbindung mit der ROC-Kurve auftritt, ist der ROC-Bereich (ROC area). Dieser Wert, der anhand der ROC-Kurve berechnet wird und auch AUC-Bereich (AUC = Area Under Curve, deutsch: Bereich unter der Kurve) genannt wird, gibt an, inwieweit ein Klassifikator in der Lage ist, zwischen den Werten der Zielklassen zu unterscheiden \cite{Narkhede2018}. Je höher dieser Wert ist ($1,0$ ist das Maximum), desto besser trifft der Klassifikator korrekte Vorhersagen \cite{Narkhede2018}. Er spiegelt somit die Qualität der Vorhersagen wider.
+
+Am Beispiel des Schwellenwertes $0,5$ wird nun die Interpretation der ROC-Kurve und des ROC-Bereiches vorgenommen. Unterstützt wird dies durch grafische Beispiele, die in \autoref{fig:curves} gezeigt werden. Der Idealfall ist in (a) und (b) dargestellt. Die Wahrscheinlichkeitskurven der Zielklasse (a) weisen keine Überlappung auf. Die Werte der Zielklasse sind somit allesamt korrekt zugeordnet worden, sodass der Klassifikator korrekt zwischen diesen unterscheiden kann. Die diesem Fall entsprechende ROC-Kurve ist in (b) dargestellt. Der ROC-Bereich beträgt in diesem Fall $1,0$. Ein \glqq Normalfall\grqq{} ist in (c) und (d) dargestellt. Es ist in (c) zu erkennen, dass die Wahrscheinlichkeitskurven überlappen, sodass falsche Zuordnungen getroffen werden. Die entsprechende ROC-Kurve ist in (d) dargestellt. Der entsprechende ROC-Bereich beträgt im hier gezeigten Fall $0,7$. Dies bedeutet, dass $70\%$ der Zuordnungen richtig getroffen werden. Die Werte können verbessert werden, wenn der Schwellenwert verändert wird. Der \glqq Worst Case\grqq{} der bei der Performanzmessung mittels ROC-Kurven auftreten kann, ist in (e) und (f) dargestellt. In (e) ist zu erkennen, dass die Wahrscheinlichkeitskurven identisch sind. Es findet somit eine willkürliche Zuordnung statt. Die zugehörige ROC-Kruve (f) entspricht einer Winkelhalbierenden und der ROC-Bereich beträgt $0,5$. Ein weiterer Fehlerfall ist in (g) und (h) dargestellt. Die Wahrscheinlichkeitskurven in (g) zeigen, dass die Zuordnungen gegenteilig erfolgen und somit jeweils fälschlicherweise dem anderen Wert der Zielklasse zugeordnet werden. Der entsprechende ROC-Bereich beträgt $0$, da, wie in (h) zu sehen ist, keine Fläche unter der Kurve vorhanden ist.
+
+\begin{figure}[p]
+  \centering
+  \subfloat[][Idealfall]{\includegraphics[width=0.5\linewidth]{images/roc_ideal_curve}}
+  \subfloat[][Idealfall]{\includegraphics[width=0.25\linewidth]{images/roc_ideal}}
+  \qquad
+  \subfloat[][\glqq Normalfall\grqq]{\includegraphics[width=0.5\linewidth]{images/roc_normal_curve}}
+  \subfloat[][\glqq Normalfall\grqq]{\includegraphics[width=0.25\linewidth]{images/roc_normal}}
+  \qquad
+  \subfloat[][\glqq Worst Case\grqq]{\includegraphics[width=0.3\linewidth]{images/roc_worst_curve}}
+  \subfloat[][\glqq Worst Case\grqq]{\includegraphics[width=0.25\linewidth]{images/roc_worst}}
+  \qquad
+  \subfloat[][Fehlerfall]{\includegraphics[width=0.5\linewidth]{images/roc_neg_curve}}
+  \subfloat[][Fehlerfall]{\includegraphics[width=0.25\linewidth]{images/roc_neg}}
+  \caption{Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite{Narkhede2018}
+\label{fig:curves}}
+\end{figure}
 
 \cleardoublepage

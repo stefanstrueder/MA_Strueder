@@ -6,22 +6,22 @@
 \BOOKMARK [1][-]{section.2.1}{Featurebasierte Softwareentwicklung}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{Machine-Learning-Klassifikation}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.3}{Fehlervorhersage mittels Machine Learning}{chapter.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Erstellung eines featurebasierten Datensets}{}% 9
-\BOOKMARK [1][-]{section.3.1}{Datenauswahl}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{Konstruktion des Datensets}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{Metriken}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{Training der Machine-Learning-Klassifikatoren}{}% 13
-\BOOKMARK [1][-]{section.4.1}{Auswahl des Werkzeugs und der Klassifikationsalgorithmen}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.2}{Trainingsprozess der Klassifikatoren}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Evaluationsmetriken}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{Ergebnisse und Diskussion}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.2.1}{Ergebnisse und Vergleich der featurebasierten Klassifikatoren}{section.5.2}% 19
-\BOOKMARK [2][-]{subsection.5.2.2}{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{section.5.2}% 20
-\BOOKMARK [1][-]{section.5.3}{Herausforderungen und Limitationen}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{Fazit}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Zusammenfassung}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.2}{Ausblick}{chapter.6}% 24
+\BOOKMARK [1][-]{section.2.4}{Metriken zur Evaluation von Klassifikatoren}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Erstellung eines featurebasierten Datensets}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Datenauswahl}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Konstruktion des Datensets}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Metriken}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Training der Machine-Learning-Klassifikatoren}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Auswahl des Werkzeugs und der Klassifikationsalgorithmen}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{Trainingsprozess der Klassifikatoren}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Ergebnisse und Diskussion}{chapter.5}% 18
+\BOOKMARK [2][-]{subsection.5.1.1}{Ergebnisse und Vergleich der featurebasierten Klassifikatoren}{section.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.1.2}{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{section.5.1}% 20
+\BOOKMARK [0][-]{chapter.6}{Herausforderungen und Limitationen}{}% 21
+\BOOKMARK [0][-]{chapter.7}{Fazit}{}% 22
+\BOOKMARK [1][-]{section.7.1}{Zusammenfassung}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.2}{Ausblick}{chapter.7}% 24
 \BOOKMARK [0][-]{chapter*.70}{Literatur}{}% 25
 \BOOKMARK [0][-]{appendix.A}{PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{}% 26
 \BOOKMARK [0][-]{appendix.B}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 27

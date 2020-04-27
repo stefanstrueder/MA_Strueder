@@ -1,0 +1,56 @@
+% !TEX root = ../thesis.tex
+
+\chapter{Herausforderungen und Limitationen}
+\label{challenges-list}
+
+Dieses Kapitel umfasst eine Auflistung und Erläuterung einer Reihe von Herausforderungen und Limitationen, die im Rahmen der Erarbeitung der drei Forschungsziele auffällig wurden.
+
+\subsection*{Identifikation von Features}
+
+Die grundsätzliche Fragestellung, die im Rahmen der Identifikation der Features aufkam, war, was genau als Feature gezählt wird. Wie bereits in \hyperref[construction]{Abschnitt 3.2} erwähnt wurde, barg die Identifikation der Features einige Herausforderungen. So gestaltete sich die erste Herausforderung in der Ausfilterung von \glqq Header-Features\grqq{}, die in einigen Programmierparadigmen verwendet werden, um Header-Dateien im Sourcecode einzubinden. Diese Header-Features erzeugen jedoch keine Variabilität im Code, sodass sie unerwünscht sind. Identifizierbar waren die meisten dieser Header-Features an ihren vergebenen Namen, welche ein \texttt{\_h\_} aufwiesen. Auf diese Weise konnten sie mittels regulärer Ausdrücke schnell ermittelt und ausgefiltert werden. Es besteht jedoch auch die Möglichkeit, dass in einigen Softwareprojekten die Header-Features nicht explizit durch ihre Namensgebung kenntlich gemacht werden. Sie lassen sich somit nur schwer identifizieren, beispielsweise durch eine manuelle Sichtung der Kontexte der Features im Sourcecode. Dies wäre jedoch im vorliegenden Fall aufgrund der großen Menge an Features zeitaufwändig und wurde aus diesem Grund nicht durchgeführt. Die Entfernung der erkennbaren Header-Features zeigte, dass ein erheblicher Teil der zuvor identifizierten Features unerwünscht war. Diese Methode erwies sich somit als effektiv.
+Eine Lösung, die zu dem genannten Problem beitragen könnte, wäre ein Tool zum Parsen von Sourcecode zur korrekten Identifikation von Features mittels automatisierter Analyse des Kontextes des Features. So würden auch die erwähnten \glqq falschen\grqq{} Features ermittelt werden. Ein solches Tool existiert momentan jedoch nicht. Verfügbare Tools zur Identifikation von Features verwenden reguläre Ausdrücke, die auch in dieser Arbeit verwendet wurden.
+
+\subsection*{Einbindung des Bezugs zu Features}
+Wie in \hyperref[dataset-creation]{Kapitel 3} festgestellt wurde, basiert der Bezug zu den Features auf den ihnen zugrundeliegenden Dateien. Dazu wurden die Diffs der veränderten Dateien analysiert. Ein Feature gilt somit als relevant, wenn es in einem Diff Erwähnung findet. Es kann jedoch auch vorkommen, dass der enthaltene Featurecode nicht an der im Diff beschriebenen Veränderung beteiligt war, sondern nur im als \glqq Hunk\grqq{} bezeichneten Teil des Diffs erwähnt wurde. Dieser bezeichnet einen Überhang des eigentlichen Kontexts der beschriebenen Veränderungen in Form von weiteren Codezeilen, die dieser Veränderung folgen. Es findet somit keine \glqq in-depth\grqq -Analyse des Sourcecodes statt. Dieser Weg wurde jedoch auch von der dieser Arbeit zugrundeliegenden wissenschaftlichen Arbeit gewählt \cite{Queiroz2016}. Ebenfalls werden die Metriken der Features auf Basis der Metadaten der zugrundeliegenden Dateien berechnet. Es findet somit eine Überapproximierung statt.
+
+\subsection*{Heuristik zur Erkennung von korrektiven Commits}
+\label{heuristic}
+
+Die Heuristik zur Erkennung von korrektiven Commits wurde im Verlauf der Erarbeitung der Arbeit geändert. Zunächst wurde die gesamte Commit-Nachricht auf das Vorhandensein der Schlagworte analysiert. Dies führte jedoch dazu, dass einige Commits fälschlicherweise als korrektiv identifiziert wurden. Der Grund dafür war, dass die Commit-Nachrichten in einigen der verwendeten Softwareprojekte sehr umfangreich in der Anzahl der Wörter waren. In diesen Nachrichten wurden ausnahmslos alle Veränderungen, die mit den Commits vorgenommen wurden, erwähnt. Dabei handelte es sich jedoch meist um für diesen Zweck irrelevante Veränderungen. Es wurde festgestellt, dass sich die der Hauptgrund des Commits in der ersten Zeile der Commit-Nachricht befindet. Die Heuristik wurde daraufhin entsprechend angepasst, sodass nur noch die erste Zeile der Commit-Nachrichten betrachtet wurde. Eine Stichprobe von korrektiven Commits vor und nach der Anpassung der Heuristik zeigte, dass die Veränderung dazu führte, dass tatsächlich irrelevante korrektive Commits entfernt wurden.
+
+\subsection*{Unpräzisiertheit des SZZ-Algorithmus}
+
+Eine Limitation, die im Laufe der Erstellung des Datensets durch Literaturrecherchen festgestellt wurde, bezieht sich auf den SZZ-Algorithmus. Dieser wurde genutzt, um fehlereinführende Commits auf Basis der Commit-Hashes der korrektiven Commits zu identifizieren. Analysen des Algorithmus ergaben, dass momentan verfügbare Implementationen und somit auch die des verwendeten Python-Tools PyDriller lediglich etwa 69\% der tatsächlich existierenden fehlereinführenden Commits identifizieren können \cite{Wen2019}. Darüber hinaus wurde herausgefunden, dass etwa $64\%$ der identifizierten Commits falsch ermittelt wurden \cite{Wen2019}. Der Algorithmus gilt somit als unpräzise \cite{Wen2019}. Die Begründung dafür lautet wie folgt:
+
+\begin{quotation}
+The reason is that the implicit assumptions of the SZZ algorithm
+are violated by the insufficient file coverage and statement direct
+coverage between bug-inducing and bug-fixing commits. - \cite{Wen2019}
+\medskip \\
+\textit{Der Grund dafür ist, dass die impliziten Annahmen des SZZ-Algorithmus durch die unzureichende \glqq file coverage\grqq{} und die unzureichende \glqq statement direct
+coverage\grqq{} der Aussage zwischen fehlereinführenden und korrektiven Commits verletzt werden.}
+\end{quotation}
+
+Ferner stellten die Autoren der Studie in eigenen durchgeführten Tests fest, dass die Ergebnisse von acht aus zehn früheren Studien durch den unpräzisen Algorithmus signifikant beeinflusst wurden \cite{Wen2019}. Dies kann somit auch auf diese Arbeit zutreffen, wurde jedoch nicht weiter analysiert. Es existiert jedoch momentan keine alternative Methode zur Identifizierung von fehlereinführenden Commits. Sollte eine neue Methode oder eine verbesserte Version des SZZ-Algorithmus veröffentlicht werden, so würde es sich anbieten, die Hauptschritte dieser Arbeit unter Berücksichtigung der neuen Methode zu wiederholen, um sie mit den hier vorliegenden Ergebnissen zu vergleichen. So könnten die Einflüsse des neuen SZZ-Algorithmus herausgestellt werden.
+
+\subsection*{Unzureichende Metadaten von xfig}
+\label{xfig}
+Im Rahmen der Identifizierung der korrektiven Commits wurde festgestellt, dass für das Softwareprojekt \glqq xfig\grqq{} keine Ergebnisse erzielt werden konnten. Folglich konnten keine fehlereinführenden Commits festgestellt werden. Zu sehen ist dies auch in \autoref{tab:tools-values2}. Der Grund für die fehlende Identifizierung der korrektiven Commits ist, dass die Commit-Nachrichten des Softwareprojekts keines der festgelegten Schlagworte enthalten. Sie bestehen lediglich aus der Angabe der Nummer des mit dem Commit freigegebenen Releases. Beispiele dafür sind:
+
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item Commit: \texttt{af30126616c5c5a8db3ba017dedbcbdf48fbc528}\\Nachricht: \texttt{xfig-3.2.7b}
+\item Commit: \texttt{a444a8ae7995dbfd2ebce4696ed2cca7ad33b6e1}\\Nachricht: \texttt{xfig-3.2.6.tar.xz}
+\item Commit: \texttt{f3706bcafe9049247eee1a88d64f9f8b4e98c076}\\Nachricht: \texttt{xfig.3.0.tar.gz}
+\end{itemize}
+
+Der Umstand, dass weder korrektive noch fehlereinführende Commits identifiziert wurden, führt dazu, dass jedes Feature und jede Datei automatisch als \glqq fehlerfrei\grqq{} eingestuft wird. Dabei finden jedoch einige Zuordnungen inkorrekt statt. In Anbetracht dieser Tatsache wurde entschieden, \glqq xfig\grqq{} bei der Zusammenstellung der finalen Datensets nicht mit einzubinden.
+
+\subsection*{Vorhersageziel}
+Die Festlegung des Vorhersageziels war bis zum Ende der sechsmonatigen Bearbeitungszeit dieser Arbeit stets ein Diskussionsthema zwischen den beteiligten Personen. Wie im Kapitel zur Erstellung der Datensets bereits gezeigt wurde, sind die Werte der Metriken der Features und Dateien für jedes Datenset nach Releases in Form des Mittelwertes aggregiert. Somit läge es auch nahe, zukünftige Releases als den Input neuer Daten zur Vorhersage zu verwenden. Es werden dann also defekte Features oder Dateien in einem Release vorhergesagt. Eine weitere Möglichkeit liegt in der Betrachtung von Commits. Dazu müssen jedoch die Metriken vom Release-Level auf ein Commit-Level abstrahiert werden.
+
+Eine Literaturrecherche in früheren wissenschaftlichen Arbeiten zum Thema der Fehlervorhersage zeigte, dass die Vorhersage auf Release-Level die überwiegend genutzte Option ist (siehe \cite{Queiroz2016,Zimmermann2007,Moser2008,Dhiauddin2012,Wang2012,Li2017}). Die Vorhersage auf Release-Level gilt infolgedessen als valide Methode und wird somit auch für diese Arbeit übernommen. Je nach Kontext werden somit defekte oder fehlerfreie Features beziehungsweise Dateien auf \emph{Release-Level} vorhergesagt. Anzumerken ist, dass die Vorhersage auf Post-Release-Level stattfindet, da die Festlegung, ob eine Datei oder ein Feature defekt oder fehlerfrei ist, auf Basis der letzten Commits eines Releases geschieht (siehe Anmerkungen in \hyperref[label-explanation]{Abschnitt 3.3}).
+
+Die Aggregation der Metriken auf Release-Level bietet zudem den Vorteil, dass so wesentlich aussagekräftigere Werte erreicht werden können, ala auf Commit-Level \cite{Zimmermann2007}. Ein Beispiel dafür ist die Metrik \texttt{ADEV} des featurebasierten Datensets, welches die Anzahl der beteiligten Entwickler an einem Feature beziehungsweise an einer Datei angibt. Auf Commit-Level wäre dieser Wert stets 1, da das Versionierungssystem Git nur einen Commit-Autor zulässt. Eine Aggregation über mehrere Commits eines Releases liefert wesentlich differenzierte und aussagekräftigere Werte.
+
+\cleardoublepage
