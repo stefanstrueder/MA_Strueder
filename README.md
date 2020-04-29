@@ -10,7 +10,6 @@
   - Abschlusspräsentation
   - Ausarbeitung
   - Einführungspräsentation
-  - Paper
   - Proposal
   - Zwischenbericht
 - Evaluation
