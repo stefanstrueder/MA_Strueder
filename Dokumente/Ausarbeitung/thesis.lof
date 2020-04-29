@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Generierung von Software-Produktlinien nach \cite {Thuem2014}\relax }}{8}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels (vereinfacht)\relax }}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Allgemeiner Prozess des überwachten Machine Learnings dargestellt anhand eines Beispiels\relax }}{10}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Grundsätzlicher Aufbau eines Decision Trees\relax }}{11}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
@@ -38,31 +38,31 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.8}{\ignorespaces allgemeine Konfusionsmatrix\relax }}{18}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches (TPR = TP-Rate, FPR = FP-Rate, Threshold = Schwellenwert) \cite {Narkhede2018} \relax }}{21}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Beispiel zur Interpretation der ROC-Kurve und des ROC-Bereiches \cite {Narkhede2018} \relax }}{21}{figure.caption.29}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Übersicht zur Gliederung des dritten Kapitels\relax }}{23}{figure.caption.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Normalfall und unerwünschte Fälle bei der Identifizierung der Features\relax }}{26}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ablauf der zweiten Phase des SZZ-Algorithmus (übersetzt, \cite {Borg2019})\relax }}{27}{figure.caption.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{29}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Reales Beispiel eines Fehlers mit korrektivem (A) und fehlereinführendem (B) Commit\relax }}{29}{figure.caption.40}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung zur Unterscheidung der Datensets\relax }}{31}{figure.caption.40}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Übersicht der Aufteilung in Trainings- und Testdaten\relax }}{36}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Visualisierung zur Unterscheidung der Datensets\relax }}{31}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{39}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Übersicht der Aufteilung in Trainings- und Testdaten nach der Anzahl der Releases\relax }}{36}{figure.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ROC-Kurven des featurebasierten Datensets \relax }}{41}{figure.caption.53}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies der dateibasierten Datensets\relax }}{43}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Vergleich der Accuracies des featurebasierten Datensets\relax }}{39}{figure.caption.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ROC-Kurven des featurebasierten Datensets \relax }}{41}{figure.caption.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergleich der Accuracies der dateibasierten Datensets\relax }}{43}{figure.caption.59}%
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces ROC-Kurven der datenbasierten Datensets \relax }}{46}{figure.caption.62}%
 \defcounter {refsection}{0}\relax 

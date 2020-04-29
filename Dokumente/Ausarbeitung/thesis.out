@@ -14,16 +14,15 @@
 \BOOKMARK [0][-]{chapter.4}{Training der Machine-Learning-Klassifikatoren}{}% 14
 \BOOKMARK [1][-]{section.4.1}{Auswahl des Werkzeugs und der Klassifikationsalgorithmen}{chapter.4}% 15
 \BOOKMARK [1][-]{section.4.2}{Trainingsprozess der Klassifikatoren}{chapter.4}% 16
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 17
-\BOOKMARK [1][-]{section.5.1}{Ergebnisse und Diskussion}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.1.1}{Ergebnisse und Vergleich der featurebasierten Klassifikatoren}{section.5.1}% 19
-\BOOKMARK [2][-]{subsection.5.1.2}{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{section.5.1}% 20
-\BOOKMARK [0][-]{chapter.6}{Herausforderungen und Limitationen}{}% 21
-\BOOKMARK [0][-]{chapter.7}{Fazit}{}% 22
-\BOOKMARK [1][-]{section.7.1}{Zusammenfassung}{chapter.7}% 23
-\BOOKMARK [1][-]{section.7.2}{Ausblick}{chapter.7}% 24
-\BOOKMARK [0][-]{chapter*.70}{Literatur}{}% 25
-\BOOKMARK [0][-]{appendix.A}{PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{}% 26
-\BOOKMARK [0][-]{appendix.B}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 27
-\BOOKMARK [0][-]{appendix.C}{Accuracies der Klassifikatoren je Datenset}{}% 28
-\BOOKMARK [0][-]{appendix.D}{Erweiterte Ergebnisse der Evaluationsmetriken}{}% 29
+\BOOKMARK [0][-]{chapter.5}{Ergebnisse und Diskussion der Evaluation der Klassifikatoren}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Ergebnisse und Vergleich der featurebasierten Klassifikatoren}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.2}{Ergebnisse und Vergleich der dateibasierten Klassifikatoren}{chapter.5}% 19
+\BOOKMARK [0][-]{chapter.6}{Herausforderungen und Limitationen}{}% 20
+\BOOKMARK [0][-]{chapter.7}{Fazit}{}% 21
+\BOOKMARK [1][-]{section.7.1}{Zusammenfassung}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.2}{Ausblick}{chapter.7}% 23
+\BOOKMARK [0][-]{chapter*.70}{Literatur}{}% 24
+\BOOKMARK [0][-]{appendix.A}{PyDriller-Sourcecode-Ausschnitt zur Konsolenausgabe von Metadaten eines Commits}{}% 25
+\BOOKMARK [0][-]{appendix.B}{Links der f\374r die Erstellung des Datensets verwendeten Softwareprojekte}{}% 26
+\BOOKMARK [0][-]{appendix.C}{Accuracies der Klassifikatoren je Datenset}{}% 27
+\BOOKMARK [0][-]{appendix.D}{Erweiterte Ergebnisse der Evaluationsmetriken}{}% 28
