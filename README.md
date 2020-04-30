@@ -1,5 +1,7 @@
 # Featurebasierte Fehlererkennung mittels Methoden des Machine Learnings
 
+Das Repo wird nur noch zur Aktualisierung von Dokumenten genutzt.
+
 ## Ordner  
 - Datenset
   - Finale Tabellen

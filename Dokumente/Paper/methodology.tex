@@ -6,30 +6,26 @@
 
 The data set forms the basis for the training of the Machine Learning Classifiers and is created specifically for this work using commit data from 13 feature-based software projects. The software projects are selected based on previous use in scientific literature \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. However, it was also important that the variability in the source code of the software projects was implemented by means of preprocessor directives and that their git repositories had a clear "revision history" regarding release numbers. Another sufficient criterion was the use of a common language. All software projects originate from the English-speaking world. The software projects used for this work are listed in \autoref{tab:tools} together with their purpose and data sources.
 
-\begin{table}[t]
+\begin{table}[]
 \centering
-\caption{Subject systems \tb{type of data source is not so important here, rather the earliest and latest release used; also the links to the repos would be better (having a reference for each probably takes least space, see \cite{blender:online} as an example)}\tb{changed style to booktabs; also use for other tables}}
-\label{tab:tools}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lll} 
+\caption{Subject systems}
+\label{tab:systems}
+\begin{tabular}{@{}lll@{}}
 \toprule
- \textsf{project}  & \textsf{purpose}  & \textsf{data source}    \\ 
-\midrule
-\textbf{Blender}   & 3D modelling tool & GitHub mirror           \\ 
-\textbf{Busybox}   & UNIX toolkit      & Git repository          \\ 
-\textbf{Emacs}     & text editor       & GitHub mirror           \\ 
-\textbf{GIMP}      & graphics editor   & GitLab repository       \\ 
-\textbf{Gnumeric}  & spreadsheet       & GitLab repository       \\ 
-\textbf{gnuplot}   & plotting tool     & GitHub mirror           \\ 
-\textbf{Irssi}     & IRC client        & GitHub repository       \\ 
-\textbf{libxml2}   & XML parser        & GitLab repository       \\ 
-\textbf{lighttpd}  & web server        & Git repository          \\ 
-\textbf{MPSolve}   & polynom solver    & GitHub repository       \\ 
-\textbf{Parrot}    & virtual machine   & GitHub repository       \\ 
-\textbf{Vim}       & text editor       & GitHub repository       \\ 
-\bottomrule
+project           & purpose          & repository \\ \midrule
+\textbf{Blender}  & 3D nodeling tool & \cite{blender:online}          \\
+\textbf{Busybox}  & UNIX toolkit     & \cite{busybox:online}          \\
+\textbf{Emacs}    & text editor      & \cite{emacs:online}          \\
+\textbf{GIMP}     & graphics editor  & \cite{gimp:online}          \\
+\textbf{Gnumeric} & spreadsheet      & \cite{gnumeric:online}          \\
+\textbf{gnuplot}  & plotting tool    & \cite{gnuplot:online}          \\
+\textbf{Irssi}    & IRC client       & \cite{irssi:online}          \\
+\textbf{libxml2}  & XML parser       & \cite{libxml2:online}          \\
+\textbf{lighttpd} & web server       & \cite{lighttpd:online}          \\
+\textbf{MPSolve}  & polynom solver   & \cite{mpsolve:online}         \\
+\textbf{Parrot}   & virtual machine  & \cite{parrot:online}         \\
+\textbf{Vim}      & text editor      & \cite{vim:online}         \\ \bottomrule
 \end{tabular}
-}
 \end{table}
 
 To retrieve the commit data of the software projects the Python library PyDriller\footnote{\href{https://github.com/ishepard/pydriller}{https://github.com/ishepard/pydriller}} was used \cite{Spadini2018}. This allows easy data extraction from Git repositories to obtain commits, commit messages, developers, diffs, and more (called "metadata" in the following). The URLs to the Git repositories of the software projects were used as input for the specially created Python scripts for receiving the commit metadata. Furthermore, the metadata was divided into commits per release. This was made possible by specifying release tags in the PyDriller code, based on the tag structure of Git repositories. For each modified file within a commit and a release, the following metadata was retrieved using PyDriller:
@@ -58,41 +54,26 @@ The search for corrective commits is followed by an analysis for commits that in
 
 An overview of the number of corrective and bug-introducing commits and the number of features identified per software project is given in \autoref{tab:tools-values2}.
 
-\begin{table}[ht]
+\begin{table}[t]
 \centering
 \caption{Number of corrective and bug-introducing commits and number of identified features}
 \label{tab:tools-values2}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|r|r|r|} 
-\hline
- \textbf{Project} & \textbf{\#corrective} & \textbf{\#bug-introducing} & \textbf{\#features}   \\ 
-\hline
-Blender           & $7.760$                 & $3.776$                      & $1.400$                 \\ 
-\hline
-Busybox           & $1.236$                 & $802$                        & $628$                   \\ 
-\hline
-Emacs             & $4.269$                 & $2.532$                      & $718$                   \\ 
-\hline
-GIMP              & $1.380$                 & $854$                        & $204$                   \\ 
-\hline
-Gnumeric          & $1.498$                 & $1.191$                      & $637$                   \\ 
-\hline
-gnuplot           & $854$                   & $1.215$                      & $558$                   \\ 
-\hline
-Irssi             & $52$                    & $22$                         & $9$                     \\ 
-\hline
-libxml2           & $324$                   & $88$                         & $200$                   \\ 
-\hline
-lighttpd          & $1.078$                 & $929$                        & $230$                   \\ 
-\hline
-MPSolve           & $151$                   & $211$                        & $54$                    \\ 
-\hline
-Parrot            & $3.109$                 & $3.072$                      & $397$                   \\ 
-\hline
-Vim               & $371$                   & $696$                        & $1.158$                 \\ 
-\hline
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+project           & \#corrective & \#bug-introducing & \#features \\ \midrule
+\textbf{Blender}  & $7.760$      & $3.776$           & $1.400$    \\
+\textbf{Busybox}  & $1.236$      & $802$             & $628$      \\
+\textbf{Emacs}    & $4.269$      & $2.532$           & $718$      \\
+\textbf{GIMP}     & $1.380$      & $854$             & $204$      \\
+\textbf{Gnumeric} & $1.498$      & $1.191$           & $637$      \\
+\textbf{gnuplot}  & $854$        & $1.215$           & $558$      \\
+\textbf{Irssi}    & $52$         & $22$              & $9$        \\
+\textbf{libxml2}  & $324$        & $88$              & $200$      \\
+\textbf{lighttpd} & $1.078$      & $929$             & $230$      \\
+\textbf{MPSolve}  & $151$        & $211$             & $54$       \\
+\textbf{Parrot}   & $3.109$      & $3.072$           & $397$      \\
+\textbf{Vim}      & $371$        & $696$             & $1.158$    \\ \bottomrule
 \end{tabular}
-}
 \end{table}
 
 A real example from the data of the Vim software project, showing the diffs of a corrective (A) and a bug-introducing (B) commit to a feature \texttt{FEAT\_TEXT\_PROP}, is shown in \autoref{fig:bug-example}. The section of the diff shows that the method call \texttt{vim\_memset} has been replaced with different arguments. According to the associated commit message, the original method call caused a "memory access error". This commit was identified as corrective because the commit message contains the keyword "error". The corresponding entry in Vim's main table thus gets the value \texttt{true} in the "corrective" column. Using the SZZ algorithm, specifying the commit hash of the corrective commit, the error-initiating commit (B) of the file concerned. In its portion of the diff, you can see that this commit has put the feature \texttt{FEAT\_TEXT\_PROP} in the file with the incorrect method call. As a result, it is assigned the value \texttt{true} in the "bug\_introducing" column in the main table.
@@ -111,79 +92,79 @@ As already mentioned, attributes are used to train the machine learning classifi
 
 In view of the evaluation of the feature-based dataset that follows in the next section, two additional datasets were created to make the impact of the feature-based metrics on the classifiers' predictions comparable. Both further data sets follow a classical file-based approach as it is common in machine learning based error detection and are based on the methodology developed by Moser et al. \cite{Moser2008}. The 17 process metrics of this scientific work were also adopted and are listed in \autoref{tab:metrics-moser}. A visualization to distinguish the three data sets is shown in \autoref{fig:dataset}.
 
-\begin{table*}[ht]
-\centering
-\caption{Overview of used feature-based metrics}
-\label{tab:metrics}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|>{\hspace{0pt}}p{0.027\linewidth}|>{\hspace{0pt}}p{0.318\linewidth}|>{\hspace{0pt}}p{0.584\linewidth}|>{\centering\arraybackslash\hspace{0pt}}p{0.064\linewidth}|} 
-\cline{2-4}
-\multicolumn{1}{>{\hspace{0pt}}p{0.027\linewidth}|}{}  & \textbf{Metric}                            & \textbf{Description}                                                                                                                                                                                                                                               & \textbf{Source}   \\ 
-\hline
-\multirow{7}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits                          & number of commits associated with the feature in a release.                                                                                                                                                                                                        & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-4}
-                                                       & Number of active developers                & number of developers who have edited (changed, deleted or added) \par{}the feature within a release.                                                                                                                                                               & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-4}
-                                                       & Number of distinct developers              & cumultative number of developers who have edited (changed, deleted or added) \par{}the feature within a release.                                                                                                                                                   & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-4}
-                                                       & Experience of all develepoers              & geometric mean of the experience of all developers who have edited \par{}(changed, deleted or added) the feature within a release. Experience is\par{}defined as the sum of the changed, deleted or added \par{}lines in the commits associated with the feature.  & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-4}
-                                                       & Experience of the most involved developers & experience of the developer who has edited (changed, deleted or added) \par{}the feature most often within a release. Experience is defined as the \par{}sum of changed, deleted, or added lines in the commits associated with the \par{}feature.                 & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-4}
-                                                       & Degree of modifications                    & number of edits (change, removal, extension) of the feature within a release.                                                                                                                                                                                      & *                 \\ 
-\cline{2-4}
-                                                       & Scope of modifications                     & number of edited features within a release (feature overlapping value). \par{}Idea: The more features have been edited in a release, \par{}the more error-prone they seem to be.                                                                                   & *                 \\ 
-\hline
-\multirow{4}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code                              & average number of lines of code of the files associated with the feature\par{}within a release.                                                                                                                                                                    & *                 \\ 
-\cline{2-4}
-                                                       & Cyclomatic Complexity                      & average cyclomatic complexity of the files associated with the feature\par{}within a release.                                                                                                                                                                      & *                 \\ 
-\cline{2-4}
-                                                       & Number of added lines                      & average number of lines of code added to the files associated with \par{}the feature within a release.                                                                                                                                                             & *                 \\ 
-\cline{2-4}
-                                                       & Number of removed lines                    & average number of lines of code deleted from the files associated \par{}with the feature within a release.                                                                                                                                                         & *                 \\ 
-\hline
-\multicolumn{4}{|>{\centering\arraybackslash\hspace{0pt}}p{0.993\linewidth}|}{\textit{* These values were calculated based on the metadata obtained with PyDriller.}\par{}\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} }                                                                                                                    \\
-\hline
-\end{tabular}
-}
-\end{table*}
-
-\begin{table*}[ht]
-\centering
-\caption{Feature metrics. To apply the metrics to a file, we aggregate the metric values of all features associated to the given file, using the listed aggregation operator.}
-\label{tab:metrics}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|l|l|l|c|} 
-\cline{2-5}
-\multicolumn{1}{l|}{}        & \textbf{Metric}                            & \textbf{Description}                                                                                                                                                                                                                                                                           & \textbf{Aggregation~operator} & \textbf{Source}   \\ 
-\hline
-\multirow{7}{*}{\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits (FCOMM)                         & number of commits associated with the feature in a release.                                                                                                                                                                                                                                    & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-5}
-                             & Number of active developers (FADEV)              & \begin{tabular}[c]{@{}l@{}}number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                                       & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-5}
-                             & Number of distinct developers (FDDEV)              & \begin{tabular}[c]{@{}l@{}}cumultative number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                           & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-5}
-                             & Experience of all develepoers (FEXP)             & \begin{tabular}[c]{@{}l@{}}geometric mean of the experience of all developers who have edited \\(changed, deleted or added) the feature within a release. Experience is\\defined as the sum of the changed, deleted or added \\lines in the commits associated with the feature. \end{tabular} & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-5}
-                             & Experience of the most involved developers (FOEXP) & \begin{tabular}[c]{@{}l@{}}experience of the developer who has edited (changed, deleted or added) \\the feature most often within a release. Experience is defined as the \\sum of changed, deleted, or added lines in the commits associated with the \\feature. \end{tabular}                & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
-\cline{2-5}
-                             & Degree of modifications (FMODD)                    & number of edits (change, removal, extension) of the feature within a release.                                                                                                                                                                                                                  & Mean                          & *                 \\ 
-\cline{2-5}
-                             & Scope of modifications (FMODS)                    & \begin{tabular}[c]{@{}l@{}}number of edited features within a release (feature overlapping value). \\Idea: The more features have been edited in a release, \\the more error-prone they seem to be. \end{tabular}                                                                              & Mean                          & *                 \\ 
-\hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code (FNLOC)                              & \begin{tabular}[c]{@{}l@{}}average number of lines of code of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                           & Mean                          & *                 \\ 
-\cline{2-5}
-                             & Cyclomatic Complexity (FCyCO)                     & \begin{tabular}[c]{@{}l@{}}average cyclomatic complexity of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                             & Mean                          & *                 \\ 
-\cline{2-5}
-                             & Number of added lines (FADDL)                      & \begin{tabular}[c]{@{}l@{}}average number of lines of code added to the files associated with \\the feature within a release. \end{tabular}                                                                                                                                                    & Mean                          & *                 \\ 
-\cline{2-5}
-                             & Number of removed lines (FREML)                   & \begin{tabular}[c]{@{}l@{}}average number of lines of code deleted from the files associated \\with the feature within a release.\end{tabular}                                                                                                                                                 & Mean                          & *                 \\ 
-\hline
-\multicolumn{5}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* These values were calculated based on the metadata obtained with PyDriller.}\\\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} \end{tabular}}                                                                                                                                                                           \\
-\hline
-\end{tabular}
-}
-\end{table*}
+%\begin{table*}[ht]
+%\centering
+%\caption{Overview of used feature-based metrics}
+%\label{tab:metrics}
+%\resizebox{\linewidth}{!}{%
+%\begin{tabular}{|>{\hspace{0pt}}p{0.027\linewidth}|>{\hspace{0pt}}p{0.318\linewidth}|>{\hspace{0pt}}p{0.584\linewidth}|>{\centering\arraybackslash\hspace{0pt}}p{0.064\linewidth}|} 
+%\cline{2-4}
+%\multicolumn{1}{>{\hspace{0pt}}p{0.027\linewidth}|}{}  & \textbf{Metric}                            & \textbf{Description}                                                                                                                                                                                                                                               & \textbf{Source}   \\ 
+%\hline
+%\multirow{7}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits                          & number of commits associated with the feature in a release.                                                                                                                                                                                                        & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-4}
+%                                                       & Number of active developers                & number of developers who have edited (changed, deleted or added) \par{}the feature within a release.                                                                                                                                                               & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-4}
+%                                                       & Number of distinct developers              & cumultative number of developers who have edited (changed, deleted or added) \par{}the feature within a release.                                                                                                                                                   & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-4}
+%                                                       & Experience of all develepoers              & geometric mean of the experience of all developers who have edited \par{}(changed, deleted or added) the feature within a release. Experience is\par{}defined as the sum of the changed, deleted or added \par{}lines in the commits associated with the feature.  & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-4}
+%                                                       & Experience of the most involved developers & experience of the developer who has edited (changed, deleted or added) \par{}the feature most often within a release. Experience is defined as the \par{}sum of changed, deleted, or added lines in the commits associated with the \par{}feature.                 & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-4}
+%                                                       & Degree of modifications                    & number of edits (change, removal, extension) of the feature within a release.                                                                                                                                                                                      & *                 \\ 
+%\cline{2-4}
+%                                                       & Scope of modifications                     & number of edited features within a release (feature overlapping value). \par{}Idea: The more features have been edited in a release, \par{}the more error-prone they seem to be.                                                                                   & *                 \\ 
+%\hline
+%\multirow{4}{0.027\linewidth}{\hspace{0pt}\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code                              & average number of lines of code of the files associated with the feature\par{}within a release.                                                                                                                                                                    & *                 \\ 
+%\cline{2-4}
+%                                                       & Cyclomatic Complexity                      & average cyclomatic complexity of the files associated with the feature\par{}within a release.                                                                                                                                                                      & *                 \\ 
+%\cline{2-4}
+%                                                       & Number of added lines                      & average number of lines of code added to the files associated with \par{}the feature within a release.                                                                                                                                                             & *                 \\ 
+%\cline{2-4}
+%                                                       & Number of removed lines                    & average number of lines of code deleted from the files associated \par{}with the feature within a release.                                                                                                                                                         & *                 \\ 
+%\hline
+%\multicolumn{4}{|>{\centering\arraybackslash\hspace{0pt}}p{0.993\linewidth}|}{\textit{* These values were calculated based on the metadata obtained with PyDriller.}\par{}\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} }                                                                                                                    \\
+%\hline
+%\end{tabular}
+%}
+%\end{table*}
+%
+%\begin{table*}[ht]
+%\centering
+%\caption{Feature metrics. To apply the metrics to a file, we aggregate the metric values of all features associated to the given file, using the listed aggregation operator.}
+%\label{tab:metrics}
+%\resizebox{\linewidth}{!}{%
+%\begin{tabular}{|l|l|l|l|c|} 
+%\cline{2-5}
+%\multicolumn{1}{l|}{}        & \textbf{Metric}                            & \textbf{Description}                                                                                                                                                                                                                                                                           & \textbf{Aggregation~operator} & \textbf{Source}   \\ 
+%\hline
+%\multirow{7}{*}{\rotatebox[origin=c]{90}{Process metrics}\textbf{}} & Number of commits (FCOMM)                         & number of commits associated with the feature in a release.                                                                                                                                                                                                                                    & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-5}
+%                             & Number of active developers (FADEV)              & \begin{tabular}[c]{@{}l@{}}number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                                       & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-5}
+%                             & Number of distinct developers (FDDEV)              & \begin{tabular}[c]{@{}l@{}}cumultative number of developers who have edited (changed, deleted or added) \\the feature within a release.\end{tabular}                                                                                                                                           & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-5}
+%                             & Experience of all develepoers (FEXP)             & \begin{tabular}[c]{@{}l@{}}geometric mean of the experience of all developers who have edited \\(changed, deleted or added) the feature within a release. Experience is\\defined as the sum of the changed, deleted or added \\lines in the commits associated with the feature. \end{tabular} & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-5}
+%                             & Experience of the most involved developers (FOEXP) & \begin{tabular}[c]{@{}l@{}}experience of the developer who has edited (changed, deleted or added) \\the feature most often within a release. Experience is defined as the \\sum of changed, deleted, or added lines in the commits associated with the \\feature. \end{tabular}                & Mean                          & \cite{Queiroz2016,Rahman2013}              \\ 
+%\cline{2-5}
+%                             & Degree of modifications (FMODD)                    & number of edits (change, removal, extension) of the feature within a release.                                                                                                                                                                                                                  & Mean                          & *                 \\ 
+%\cline{2-5}
+%                             & Scope of modifications (FMODS)                    & \begin{tabular}[c]{@{}l@{}}number of edited features within a release (feature overlapping value). \\Idea: The more features have been edited in a release, \\the more error-prone they seem to be. \end{tabular}                                                                              & Mean                          & *                 \\ 
+%\hline
+%\multirow{4}{*}{\rotatebox[origin=c]{90}{Code metrics}\textbf{}} & Lines of code (FNLOC)                              & \begin{tabular}[c]{@{}l@{}}average number of lines of code of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                           & Mean                          & *                 \\ 
+%\cline{2-5}
+%                             & Cyclomatic Complexity (FCyCO)                     & \begin{tabular}[c]{@{}l@{}}average cyclomatic complexity of the files associated with the feature\\within a release. \end{tabular}                                                                                                                                                             & Mean                          & *                 \\ 
+%\cline{2-5}
+%                             & Number of added lines (FADDL)                      & \begin{tabular}[c]{@{}l@{}}average number of lines of code added to the files associated with \\the feature within a release. \end{tabular}                                                                                                                                                    & Mean                          & *                 \\ 
+%\cline{2-5}
+%                             & Number of removed lines (FREML)                   & \begin{tabular}[c]{@{}l@{}}average number of lines of code deleted from the files associated \\with the feature within a release.\end{tabular}                                                                                                                                                 & Mean                          & *                 \\ 
+%\hline
+%\multicolumn{5}{|c|}{\begin{tabular}[c]{@{}c@{}}\textit{* These values were calculated based on the metadata obtained with PyDriller.}\\\textit{Feature-level metrics were calculated based on the metadata of the underlying files.} \end{tabular}}                                                                                                                                                                           \\
+%\hline
+%\end{tabular}
+%}
+%\end{table*}
 
 \begin{table}
 \centering
@@ -271,113 +252,87 @@ A special case is the second file-based data set created for the comparison with
 
 Some supplementary key figures for the datasets are listed in \autoref{tab:dataset-numbers}. The row "unique" indicates how many unique rows are contained in the datasets. The datasets created in the manner described above can now be used to train the classifiers. This process will be explained in the next section.
 
-\begin{table}[ht]
+\begin{table}[t]
 \centering
 \caption{Key figures of the data sets}
 \label{tab:dataset-numbers}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|r|r|r|} 
-\hline
-                     & \begin{tabular}[c]{@{}r@{}}\textbf{feature-based}\\\textbf{data set}\end{tabular} & \begin{tabular}[c]{@{}r@{}}\textbf{"simple" file-}\\\textbf{based data set}\end{tabular} & \begin{tabular}[c]{@{}r@{}}\textbf{"extended" file-}\\\textbf{based data set}\end{tabular}  \\ 
-\hline
-\#attributes         & $11$ + label                                                                        & $17$ + label                                                                               & $28$ + label                                                                                  \\ 
-\hline
-\#data records       & $14.059$                                                                            & $76.986$                                                                                   & $76.986$                                                                                      \\ 
-\hline
-~ ~thereof defective & $2.735$                                                                             & $1.899$                                                                                    & $1.899$                                                                                       \\ 
-\hline
-~ ~thereof clean     & $11.324$                                                                            & $75.087$                                                                                   & $75.087$                                                                                      \\ 
-\hline
-~ ~thereof unique    & $8.447$                                                                             & $52.564$                                                                                   & $52.783$                                                                                      \\
-\hline
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+characteristic    & \begin{tabular}[c]{@{}r@{}}feature-based\\ data set\end{tabular} & \begin{tabular}[c]{@{}r@{}}"simple" file-\\ based data set\end{tabular} & \begin{tabular}[c]{@{}r@{}}extended file-\\ based data set\end{tabular} \\ \midrule
+\#attributes      & $11$ + label                                                     & $17$ + label                                                            & $28$ + label                                                            \\
+\#data records    & $14.059$                                                         & $76.986$                                                                & $76.986$                                                                \\
+thereof defective & $2.735$                                                          & $1.899$                                                                 & $1.899$                                                                 \\
+thereof clean     & $11.324$                                                         & $75.087$                                                                & $75.087$                                                                \\
+thereof unique    & $8.447$                                                          & $52.564$                                                                & $52.783$                                                                \\ \bottomrule
 \end{tabular}
-}
 \end{table}
 
 \subsection{Selection of Classifiers}
 
 Although programming with the Python programming language was often used to create the data sets, the choice of a machine learning tool was not the library scikit-learn \cite{scikit}, but an independent solution. The WEKA-Workbench\footnote{\href{https://www.cs.waikato.ac.nz/ml/weka/}{https://www.cs.waikato.ac.nz/ml/weka/}} is used as a machine learning tool. This tool proved to be suitable for the underlying task by numerous citations in scientific papers (among others in \cite{Hammouri2018,Queiroz2016,Ratzinger2008}). The WEKA-Workbench (WEKA as acronym for \textbf{W}aikato \textbf{E}nvironment for \textbf{K}nowledge \textbf{A}nalysis) was developed at the University of Waikato in New Zealand and offers a large collection of machine learning algorithms and preprocessing tools for use within a graphical user interface \cite{Weka2016}. There are also interfaces for the Java programming language \cite{Weka2016}. An overview of the selected classification algorithms can be found in \autoref{tab:classifiers}. This also includes the abbreviations of the classifiers that will be used in the following.
 
-\begin{table*}[ht]
+\begin{table}[t]
 \centering
 \caption{Selection of classification algorithms}
 \label{tab:classifiers}
-\begin{tabular}{|l|l|} 
-\hline
- \textbf{Algorithm}         & \textbf{Abbreviation}   \\ 
-\hline
-J48 Decision Trees          & J48                     \\ 
-\hline
-k-Nearest-Neighbors         & KNN                     \\ 
-\hline
-Logistic Regression         & LR                      \\ 
-\hline
-Na\"{\i}ve Bayes                  & NB                      \\ 
-\hline
-Artificial Neural Networks  & NN                      \\ 
-\hline
-Random Forest               & RF                      \\ 
-\hline
-Stochastic Gradient Descent & SGD                     \\ 
-\hline
-Support Vector Machines     & SVM                     \\
-\hline
+\begin{tabular}{@{}ll@{}}
+\toprule
+algorithm                                        & abbreviation \\ \midrule
+J48 Decision Trees                               & J48          \\
+k-Nearest-Neighbors                              & KNN          \\
+Logistic Regression                              & LR           \\
+Na\"{\i}ve Bayes Bayes & NB           \\
+Artificial Neural Networks                       & NN           \\
+Random Forest                                    & RF           \\
+Stochastic Gradient Descent                      & SGD          \\
+Support Vector Machines                          & SVM          \\ \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 
 All classification algorithms presented above are already integrated in the WEKA tool. It receives as input the final data sets in a proprietary file format. The 13 calculated metrics form the attributes, whereas the target class is represented by the labels "defective" and "clean".
 
-The training process of the classifiers took place within the graphical user interface of WEKA. Before the training, the split ratios for the division of the data sets into training data and test data were determined. It was determined individually for each of the software projects used and is based on the number of releases available in each case. However, care was always taken to approximate the commonly used split ratios of 80:20 and 75:25 as well as $70:30$. The training data ranges from $67\%$ to $80\%$ of the data records of the data sets. The earlier releases were assigned to the training data. The training data contains the data records of the later releases. An overview of the division into training and test data per software project is shown in \autoref{fig:splits}. The resulting split ratios for the entire data sets are: $69:31$ (feature-based data set) and $71:29$ ("simple" and extended file-based data set).
+The training process of the classifiers took place within the graphical user interface of WEKA. Before the training, the split ratios for the division of the data sets into training data and test data were determined. It was determined individually for each of the software projects used and is based on the number of releases available in each case. However, care was always taken to approximate the commonly used split ratios of 80:20 and 75:25 as well as $70:30$. The training data ranges from $67\%$ to $80\%$ of the data records of the data sets. The earlier releases were assigned to the training data. The training data contains the data records of the later releases. An overview of the division into training and test data per software project is shown in \autoref{tab:splits}. The resulting split ratios for the entire data sets are: $69:31$ (feature-based data set) and $71:29$ ("simple" and extended file-based data set).
 
-\begin{figure*}[ht]
-  \centering
-  \subfloat[][Blender\\split ratio: $73:27$]{\includegraphics[width=0.5\linewidth]{release_blender}}
-  \subfloat[][Busybox\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_busybox}}
-  \qquad
-  \subfloat[][Emacs\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_emacs}}
-  \subfloat[][GIMP\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_gimp}}
-  \qquad
-  \subfloat[][Gnumeric\\split ratio: $75:25$]{\includegraphics[width=0.5\linewidth]{release_gnumeric}}  
-  \subfloat[][gnuplot\\split ratio: $80:20$]{\includegraphics[width=0.5\linewidth]{release_gnuplot}}
-  \qquad
-  \subfloat[][Irssi\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_irssi}}
-  \subfloat[][libxml2\\split ratio: $80:20$]{\includegraphics[width=0.5\linewidth]{release_libxml2}}
-  \qquad
-  \subfloat[][lighttpd\\split ratio: $67:33$]{\includegraphics[width=0.5\linewidth]{release_lighttpd}}
-  \subfloat[][MPSolve\\split ratio: $75:25$]{\includegraphics[width=0.5\linewidth]{release_mpsolve}}
-  \qquad
-  \subfloat[][Parrot\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_parrot}}
-  \subfloat[][Vim\\split ratio: $71:29$]{\includegraphics[width=0.5\linewidth]{release_vim}}
-  \Description{Overview of the division into training and test data.}
-  \caption{Overview of the division into training and test data\label{fig:splits}}
-\end{figure*}
+\begin{table}[t]
+\centering
+\caption{}
+\label{tab:my-table}
+\begin{tabular}{lrrr}
+\hline
+project           & \begin{tabular}[c]{@{}r@{}}releases fort\\ raining set\end{tabular} & \begin{tabular}[c]{@{}r@{}}releases for\\ test set\end{tabular} & \begin{tabular}[c]{@{}r@{}}split\\ ratio\end{tabular} \\ \hline
+\textbf{Blender}  & 2.70 - 2.77                                                         & 2.78 - 2.80                                                     & $73:27$                                               \\
+\textbf{Busybox}  & 1\_16\_0 - 1\_25\_0                                                 & 1\_26\_0 - 1\_30\_0                                             & $71:29$                                               \\
+\textbf{Emacs}    & 25.0 - 26.0                                                         & 26.1 - 26.2                                                     & $71:29$                                               \\
+\textbf{GIMP}     & 2\_8\_2 - 2\_10\_4                                                  & 2\_10\_6 - 2\_10\_12                                            & $71:29$                                               \\
+\textbf{Gnumeric} & 1\_10\_0 - 1\_12\_10                                                & 1\_12\_20 - 1\_12\_30                                           & $75:25$                                               \\
+\textbf{gnuplot}  & 4.0.0 - 4.6.0                                                       & 5.0.0                                                           & $80:20$                                               \\
+\textbf{Irssi}    & 1.0.0 - 1.0.4                                                       & 1.0.5 - 1.0.6                                                   & $71:29$                                               \\
+\textbf{libxml2}  & 2.9.0 - 2.9.7                                                       & 2.9.8 - 2.9.9                                                   & $80:20$                                               \\
+\textbf{lighttpd} & 1.3.10 - 1.4.20                                                     & 1.4.30 - 1.4.40                                                 & $67:33$                                               \\
+\textbf{MPSolve}  & 3.0.1 - 3.1.5                                                       & 3.1.6 - 3.1.7                                                   & $75:25$                                               \\
+\textbf{Parrot}   & 1\_0\_0 - 5\_0\_0                                                   & 6\_0\_0 - 7\_0\_0                                               & $71:29$                                               \\
+\textbf{Vim}      & 7.0 - 7.4                                                           & 8.0 - 8.1                                                       & $71:29$                                               \\ \hline
+\end{tabular}
+\end{table}
 
 The training of the classifiers in WEKA was carried out for each classification algorithm with the respective standard settings. Only for the algorithms NN and RF further configurations were made. For the RF-algorithm a number of instances of $200$ was defined. This means that 200 decision trees perform parallel processing at the same time. There are no clear recommendations on how many instances should be selected. The selected value of $200$ was therefore determined independently, taking into account the scope of the data sets and the high number of attributes. For the NN algorithm an independently determined hidden layer structure of \texttt{(13,13,13} was chosen. This means that the artificial neural network has three hidden layer layers of 13 hidden layer neurons each. This allows them to process the large number of attributes more efficiently. Furthermore, no validation data was generated, since it is not intended to perform attribute selection or to adjust further classifier settings.
 
 An analysis of the training process also showed that the file-based data sets are highly unbalanced with regard to the target class. With a value of about $97\%$, there are far more entries assigned to the label "clean". Balancedness, i.e. a balanced ratio ($50:50$ is not mandatory in the binary case) within the target classes, is however a prerequisite for the correct training of most classifiers. Ignoring this problem can lead to misleading accuracy, since most records are correctly assigned to the over-represented class and is a fundamental problem of accuracy metrics. To solve this problem, the SMOTE algorithm was applied to the file-based datasets \cite{Chawla2002}. The algorithm, whose acronym stands for \textbf{S}ynthetic \textbf{M}inority \textbf{O}ver-sampling \textbf{Te}chnique, performs an oversampling of the underrepresented class \cite{Chawla2002}. Using next-neighbor calculations based on the Euclidean distance between the attribute values of each dataset's datasets, new synthetic datasets are added (oversampling) so that the number of datasets of the relevant class increases \cite{Chawla2002}. In this case, the percentage of synthetic records generated is 2000, so for each existing record of the underrepresented class, 20 additional synthetic records are generated. Thus, the percentage of records with the label "defective" was increased to about $41\%$. At the same time the number of records grew by about $60\%$. The algorithm was only applied to the training data \cite{Chawla2002} . It is not intended to be applied to the test data so that the "ground truth" is not distorted or falsified. As a result, the metrics of the file-based datasets also changed. These are shown in \autoref{tab:dataset-numbers-new}.
 
-\begin{table*}[ht]
+\begin{table*}[t]
 \centering
-\caption{Key figures of the data sets}
+\caption{Updates key figures of the data sets}
 \label{tab:dataset-numbers-new}
-\begin{tabular}{|l|r|r|r|r|} 
-\hline
-\multirow{2}{*}{}    & \multicolumn{2}{c|}{\textbf{"simple" data set}} & \multicolumn{2}{c|}{\textbf{extended data set}}  \\ 
-\cline{2-5}
-                     & \textbf{before} & \textbf{after}                & \textbf{before} & \textbf{after}                 \\ 
-\hline
-\#attributes         & $17$ + label      & $17$ + label                    & $28$ + label      & $28$ + label                     \\ 
-\hline
-\#data records       & $76.986$          & $111.706$                       & $76.986$          & $112.706$                        \\ 
-\hline
-~ ~thereof defective & $1.899$           & $37.619$                        & $1.899$           & $37.619$                         \\ 
-\hline
-~ ~thereof clean     & $75.087$          & $75.087$                        & $75.087$          & $75.087$                         \\ 
-\hline
-~ ~thereof unique    & $52.564$          & $86.155$                        & $52.783$          & $86.381$                         \\ 
-\hline
-overall split ratio  & $71:29$           & $81:19$                         & $71:29$           & $81:19$                          \\
-\hline
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\multirow{2}{*}{}   & \multicolumn{2}{c}{"simple" data set} & \multicolumn{2}{c}{extended data set} \\ \cmidrule(l){2-5} 
+                    & before            & after             & before            & after             \\ \midrule
+\#attributes        & $17$ + label      & $17$ + label      & $28$ + label      & $28$ + label      \\
+\#data records      & $76.986$          & $111.706$         & $76.986$          & $112.706$         \\
+thereof defective   & $1.899$           & $37.619$          & $1.899$           & $37.619$          \\
+thereof clean       & $75.087$          & $75.087$          & $75.087$          & $75.087$          \\
+thereof unique      & $52.564$          & $86.155$          & $52.783$          & $86.381$          \\
+overall split ratio & $71:29$           & $81:19$           & $71:29$           & $81:19$           \\ \bottomrule
 \end{tabular}
 \end{table*}
 
