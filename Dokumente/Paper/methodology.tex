@@ -4,7 +4,7 @@
 
 \subsection{Creation of Dataset}
 
-The data set forms the basis for the training of the Machine Learning Classifiers and is created specifically for this work using commit data from 13 feature-based software projects. The software projects are selected based on previous use in scientific literature \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. However, it was also important that the variability in the source code of the software projects was implemented by means of preprocessor directives and that their git repositories had a clear "revision history" regarding release numbers. Another sufficient criterion was the use of a common language. All software projects originate from the English-speaking world. The software projects used for this work are listed in \autoref{tab:tools} together with their purpose and data sources.
+The data set forms the basis for the training of the Machine Learning Classifiers and is created specifically for this work using commit data from 13 feature-based software projects. The software projects are selected based on previous use in scientific literature \cite{Hunsen2015,Liebig2010,Queiroz2015,Queiroz2016}. However, it was also important that the variability in the source code of the software projects was implemented by means of preprocessor directives and that their git repositories had a clear "revision history" regarding release numbers. Another sufficient criterion was the use of a common language. All software projects originate from the English-speaking world. The software projects used for this work are listed in \autoref{tab:systems} together with their purpose and repository sources.
 
 \begin{table}[]
 \centering
@@ -80,7 +80,7 @@ A real example from the data of the Vim software project, showing the diffs of a
 
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=\textwidth]{Bug_example_real}
+    \includegraphics[width=\textwidth]{images/Bug_example_real}
     \Description{Real example of a defect.}
     \caption{Real example of a defect with corrective (A) and bug-introducing (B) commit\label{fig:bug-example}}
 \end{figure*}
@@ -195,7 +195,7 @@ WEIGHTED\_AGE     & $Weighted Age = \frac{\sum_{i=1}^N Age(i)*LOC\_ADDED(i)}{\su
 
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=\textwidth]{Dataset}
+    \includegraphics[width=\textwidth]{images/Dataset}
     \Description{Visualization to distinguish the three data sets.}
     \caption{Visualization to distinguish the three data sets\label{fig:dataset}}
 \end{figure*}
@@ -276,7 +276,7 @@ The training process of the classifiers took place within the graphical user int
 \begin{table}[t]
 \centering
 \caption{}
-\label{tab:my-table}
+\label{tab:splits}
 \begin{tabular}{lrrr}
 \hline
 project           & \begin{tabular}[c]{@{}r@{}}releases fort\\ raining set\end{tabular} & \begin{tabular}[c]{@{}r@{}}releases for\\ test set\end{tabular} & \begin{tabular}[c]{@{}r@{}}split\\ ratio\end{tabular} \\ \hline

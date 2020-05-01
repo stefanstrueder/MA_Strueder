@@ -8,8 +8,9 @@ The evaluation metrics collected to compare the classifiers come from the field 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{Confusion}
-    \caption{general confusion matrix\label{fig:confu}}
+    \includegraphics[width=0.4\textwidth]{images/Confusion}
+    \Description{General confusion matrix.}
+    \caption{General confusion matrix\label{fig:confu}}
 \end{figure}
 
 The WEKA tool used for training the classifiers has the option of outputting confusion matrices for the tests performed on the classifiers. Based on the values of the assignments to the groups mentioned above, the following evaluation metrics were calculated:
@@ -151,15 +152,16 @@ The interpretation of the ROC curves and ROC ranges is based on the presented sc
 
 \begin{figure*}[t]
   \centering
-  \subfloat[][J48\\AUC = $0,77$]{\includegraphics[width=0.25\linewidth]{j48_feat}} 
-  \subfloat[][LR\\AUC = $0,62$]{\includegraphics[width=0.25\linewidth]{lr_feat}}
-  \subfloat[][NN\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{nn_feat}}
-  \subfloat[][SGD\\AUC = $0,53$]{\includegraphics[width=0.25\linewidth]{sgd_feat}}
+  \subfloat[][J48\\AUC = $0,77$]{\includegraphics[width=0.25\linewidth]{images/j48_feat}} 
+  \subfloat[][LR\\AUC = $0,62$]{\includegraphics[width=0.25\linewidth]{images/lr_feat}}
+  \subfloat[][NN\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{images/nn_feat}}
+  \subfloat[][SGD\\AUC = $0,53$]{\includegraphics[width=0.25\linewidth]{images/sgd_feat}}
   \qquad
-  \subfloat[][KNN\\AUC = $0,73$]{\includegraphics[width=0.25\linewidth]{knn_feat}}
-  \subfloat[][NB\\AUC = $0,80$]{\includegraphics[width=0.25\linewidth]{nb_feat}}
-  \subfloat[][RF\\AUC = $0,84$]{\includegraphics[width=0.25\linewidth]{rf_feat}} 
-  \subfloat[][SVM\\AUC = $0,49$]{\includegraphics[width=0.25\linewidth]{svm_feat}}
+  \subfloat[][KNN\\AUC = $0,73$]{\includegraphics[width=0.25\linewidth]{images/knn_feat}}
+  \subfloat[][NB\\AUC = $0,80$]{\includegraphics[width=0.25\linewidth]{images/nb_feat}}
+  \subfloat[][RF\\AUC = $0,84$]{\includegraphics[width=0.25\linewidth]{images/rf_feat}} 
+  \subfloat[][SVM\\AUC = $0,49$]{\includegraphics[width=0.25\linewidth]{images/svm_feat}}
+  \Description{ROC curves of the feature-based data set.}
   \caption{ROC curves of the feature-based data set \label{fig:roc-feat}}
 \end{figure*}
 
@@ -312,25 +314,26 @@ The comparison between the NN classifiers shows that the classifier of the simpl
 
 \begin{figure*}[t]
   \centering
-  \subfloat[][J48 "simple"\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{j48_eval}} 
-  \subfloat[][J48 extended\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{j48_eval_feat}}
-  \subfloat[][NN "simple"\\AUC = $0,37$]{\includegraphics[width=0.25\linewidth]{nn_eval}}
-  \subfloat[][NN extended\\AUC = $0,54$]{\includegraphics[width=0.25\linewidth]{nn_eval_feat}}
+  \subfloat[][J48 "simple"\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{images/j48_eval}} 
+  \subfloat[][J48 extended\\AUC = $0,61$]{\includegraphics[width=0.25\linewidth]{images/j48_eval_feat}}
+  \subfloat[][NN "simple"\\AUC = $0,37$]{\includegraphics[width=0.25\linewidth]{images/nn_eval}}
+  \subfloat[][NN extended\\AUC = $0,54$]{\includegraphics[width=0.25\linewidth]{images/nn_eval_feat}}
   \qquad
-  \subfloat[][KNN "simple"\\AUC = $0,55$]{\includegraphics[width=0.25\linewidth]{knn_eval}}
-  \subfloat[][KNN extended\\AUC = $0,52$]{\includegraphics[width=0.25\linewidth]{knn_eval_feat}}
-  \subfloat[][RF "simple"\\AUC = $0,71$]{\includegraphics[width=0.25\linewidth]{rf_eval}} 
-  \subfloat[][RF extended\\AUC = $0,71$]{\includegraphics[width=0.25\linewidth]{rf_eval_feat}} 
+  \subfloat[][KNN "simple"\\AUC = $0,55$]{\includegraphics[width=0.25\linewidth]{images/knn_eval}}
+  \subfloat[][KNN extended\\AUC = $0,52$]{\includegraphics[width=0.25\linewidth]{images/knn_eval_feat}}
+  \subfloat[][RF "simple"\\AUC = $0,71$]{\includegraphics[width=0.25\linewidth]{images/rf_eval}} 
+  \subfloat[][RF extended\\AUC = $0,71$]{\includegraphics[width=0.25\linewidth]{images/rf_eval_feat}} 
   \qquad
-  \subfloat[][LR "simple"\\AUC = $0,65$]{\includegraphics[width=0.25\linewidth]{lr_eval}}
-  \subfloat[][LR extended\\AUC = $0,62$]{\includegraphics[width=0.25\linewidth]{lr_eval_feat}}
-  \subfloat[][SGD "simple"\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{sgd_eval}}
-  \subfloat[][SGD extended\\AUC = $0,56$]{\includegraphics[width=0.25\linewidth]{sgd_eval_feat}}
+  \subfloat[][LR "simple"\\AUC = $0,65$]{\includegraphics[width=0.25\linewidth]{images/lr_eval}}
+  \subfloat[][LR extended\\AUC = $0,62$]{\includegraphics[width=0.25\linewidth]{images/lr_eval_feat}}
+  \subfloat[][SGD "simple"\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{images/sgd_eval}}
+  \subfloat[][SGD extended\\AUC = $0,56$]{\includegraphics[width=0.25\linewidth]{images/sgd_eval_feat}}
   \qquad
-  \subfloat[][NB "simple"\\AUC = $0,48$]{\includegraphics[width=0.25\linewidth]{nb_eval}}
-  \subfloat[][NB extended\\AUC = $0,47$]{\includegraphics[width=0.25\linewidth]{nb_eval_feat}}
-  \subfloat[][SVM "simple"\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{svm_eval}}
-  \subfloat[][SVM extended\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{svm_eval_feat}}
+  \subfloat[][NB "simple"\\AUC = $0,48$]{\includegraphics[width=0.25\linewidth]{images/nb_eval}}
+  \subfloat[][NB extended\\AUC = $0,47$]{\includegraphics[width=0.25\linewidth]{images/nb_eval_feat}}
+  \subfloat[][SVM "simple"\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{images/svm_eval}}
+  \subfloat[][SVM extended\\AUC = $0,57$]{\includegraphics[width=0.25\linewidth]{images/svm_eval_feat}}
+  \Description{ROC curves of the file-based data sets.}
   \caption{ROC curves of the file-based data sets \label{roc-file}}
 \end{figure*}
 
