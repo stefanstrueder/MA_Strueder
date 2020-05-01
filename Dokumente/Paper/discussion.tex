@@ -3,7 +3,7 @@
 \section{Discussion}
 
 \subsection{Challenges and limitations}
-Lorem ipsum.
+\st{Lorem ipsum.}
 
 \subsubsection*{Identification of features}
 The basic question that arose in the process of identifying the features was: "What is counted as a feature? As mentioned above, the identification of features presented some challenges. The first challenge was the filtering out of "header features", which are used in some programming paradigms to include header files in the source code. However, these header features do not create variability in the code, so they are undesirable. Most of these header features were identifiable by their assigned names, which had a \texttt{\_h\_}. This way they could be quickly identified and filtered out using regular expressions. However, it is possible that in some software projects the header features are not explicitly identified by their names. This makes it difficult to identify them, for example by manually viewing the contexts of the features in the source code. In this case, however, this would be very time-consuming due to the large number of features and was therefore not performed. The removal of the recognizable header features showed that a considerable part of the previously identified features was undesirable. This method therefore proved to be effective. A solution that could contribute to the above problem would be a tool for parsing source code to correctly identify features by means of automated analysis of the context of the feature. This would also detect the "wrong" features mentioned above. Such a tool does not exist at the moment. Available feature identification tools use a similar approach as used in this thesis (regular expressions).

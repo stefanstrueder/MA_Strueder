@@ -166,52 +166,32 @@ In view of the evaluation of the feature-based dataset that follows in the next 
 %}
 %\end{table*}
 
-\begin{table}
+\begin{table*}[t]
 \centering
 \caption{Process metrics according to \cite{Moser2008}}
 \label{tab:metrics-moser}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{|l|l|} 
-\hline
-\textbf{Metric}   & \textbf{Description}                                                      \\ 
-\hline
-REVISIONS         & Number of revisions of a file.                                            \\ 
-\hline
-REFACTORINGS      & Number of times a file has been refactored.                               \\ 
-\hline
-BUGFIXES          & Number of times a file was involved in bug-fixing.                        \\ 
-\hline
-AUTHORS           & Number of distinct authors that checked a file into the repository.       \\ 
-\hline
-LOC\_ADDED        & Sum over all revisions of the lines of code added to a file.              \\ 
-\hline
-MAX\_LOC\_ADDED   & Maximum number of lines of code added for all revisions.                  \\ 
-\hline
-AVE\_LOC\_ADDED   & Average lines of code added per revision.                                 \\ 
-\hline
-LOC\_DELETED      & Sum over all revisions of the lines of code deleted from a file.          \\ 
-\hline
-MAX\_LOC\_DELETED & Maximum number of lines of code deleted for all revisions.                \\ 
-\hline
-AVE\_LOC\_DELETED & Average lines of code deleted per revision.                               \\ 
-\hline
-CODECHURN         & Sum of (added lines of code – deleted lines of code) over all revisions.  \\ 
-\hline
-MAX\_CODECHURN    & Maximum CODECHURN for all revisions.                                      \\ 
-\hline
-AVE\_CODECHURN    & Average CODECHURN per revision.                                           \\ 
-\hline
-MAX\_CHANGESET    & Maximum number of files committed together to the repository.             \\ 
-\hline
-AVE\_CHANGESET    & Average number of files committed together to the repository.             \\ 
-\hline
-AGE               & Age of a file in weeks (counting backwards from a specific release).      \\ 
-\hline
-WEIGHTED\_AGE     & $Weighted Age = \frac{\sum_{i=1}^N Age(i)*LOC\_ADDED(i)}{\sum_{i=1}^N LOC\_ADDED(i)}$                                                                    \\
-\hline
+\begin{tabular}{@{}ll@{}}
+\toprule
+Metric            & Description                                                                           \\ \midrule
+REVISIONS         & Number of revisions of a file.                                                        \\
+REFACTORINGS      & Number of times a file has been refactored.                                           \\
+BUGFIXES          & Number of times a file was involved in bug-fixing.                                    \\
+AUTHORS           & Number of distinct authors that checked a file into the repository.                   \\
+LOC\_ADDED        & Sum over all revisions of the lines of code added to a file.                          \\
+MAX\_LOC\_ADDED   & Maximum number of lines of code added for all revisions.                              \\
+AVE\_LOC\_ADDED   & Average lines of code added per revision.                                             \\
+LOC\_DELETED      & Sum over all revisions of the lines of code deleted from a file.                      \\
+MAX\_LOC\_DELETED & Maximum number of lines of code deleted for all revisions.                            \\
+AVE\_LOC\_DELETED & Average lines of code deleted per revision.                                           \\
+CODECHURN         & Sum of (added lines of code – deleted lines of code) over all revisions.              \\
+MAX\_CODECHURN    & Maximum CODECHURN for all revisions.                                                  \\
+AVE\_CODECHURN    & Average CODECHURN per revision.                                                       \\
+MAX\_CHANGESET    & Maximum number of files committed together to the repository.                         \\
+AVE\_CHANGESET    & Average number of files committed together to the repository.                         \\
+AGE               & Age of a file in weeks (counting backwards from a specific release).                  \\
+WEIGHTED\_AGE     & $Weighted Age = \frac{\sum_{i=1}^N Age(i)*LOC\_ADDED(i)}{\sum_{i=1}^N LOC\_ADDED(i)}$ \\ \bottomrule
 \end{tabular}
-}
-\end{table}
+\end{table*}
 
 \begin{figure*}[ht]
     \centering
